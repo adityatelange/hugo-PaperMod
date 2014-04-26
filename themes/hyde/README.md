@@ -8,7 +8,6 @@ It pairs a prominent sidebar with uncomplicated content.
 
 ## Contents
 
-- [Usage](#usage)
 - [Options](#options)
   - [Sidebar menu](#sidebar-menu)
   - [Sticky sidebar content](#sticky-sidebar-content)
@@ -16,6 +15,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Reverse layout](#reverse-layout)
 - [Development](#development)
 - [Author](#author)
+- [Ported by](#ported-by)
 - [License](#license)
 
 
