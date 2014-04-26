@@ -19,5 +19,6 @@ To use hugo themes clone the repository to your machine.
 # Current Themes
 
 * Hyde (by mdo, ported from Jekyll)
+* Herring Cove (by arnp, ported from Jekyll)
 
 

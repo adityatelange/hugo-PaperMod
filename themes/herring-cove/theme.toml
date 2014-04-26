@@ -1,0 +1,8 @@
+name = "Herring Cove"
+license = "MIT"
+source_repo = ""
+author = "spf13"
+original_author = "arnp"
+ported_from = "http://www.github.com/arnp/herring-cove"
+description = "Herring Cove is ported from the jekyll theme of the same name"
+tags = ["blog", "company"]
