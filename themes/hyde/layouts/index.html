@@ -1,0 +1,26 @@
+{{ template "theme/chrome/head.html" . }}
+<body>
+
+{{ template "theme/chrome/sidebar.html" . }}
+
+    <div class="content container">
+<div class="posts">
+
+      {{ range .Data.Pages }}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">
+        {{ .Title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+    {{ .Content }}
+  </div>
+  {{ end }}
+</div>
+
+
+  </body>
+</html>

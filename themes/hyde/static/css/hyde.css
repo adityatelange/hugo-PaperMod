@@ -1,0 +1,499 @@
+/*
+ __                  __
+/\ \                /\ \
+\ \ \___   __  __   \_\ \     __
+ \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+  \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+   \ \_\ \_\/`____ \ \___,_\ \____\
+    \/_/\/_/`/___/> \/__,_ /\/____/
+               /\___/
+               \/__/
+
+Hyde is an elegant, open source, mobile first theme for Jekyll.  It includes
+lightweight styles and placeholder content to get you up and running with a
+simple blog in no time.
+
+Designed, built, and released under MIT license by @mdo.
+
+Learn more at http://andhyde.com or https://github.com/mdo/hyde.
+
+*/
+
+
+/*
+ * Contents
+ *
+ * Body resets
+ * Custom type
+ * Links
+ * Masthead
+ * Container
+ * Posts
+ * Error page
+ * Pagination
+ * Themes
+ */
+
+
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #454441;
+  background-color: #fff;
+}
+@media (min-width: 990px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+h3 {
+  margin-top: 24px;
+  font-size: 24px;
+}
+h4, h5, h6 {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+ul, ol {
+  margin-bottom: 15px;
+}
+
+hr {
+  position: relative;
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+strong {
+  color: #222;
+}
+
+abbr {
+  background-color: #eee;
+  display: inline-block;
+  padding: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin: 0 0 14px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+.highlight {
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 5px 30px 5px 25px;
+  margin: 15px 0;
+  border-left: 5px solid #eee;
+}
+blockquote p {
+  margin-bottom: 0;
+  color: #7a7a7a;
+  text-indent: -0.4em;
+}
+blockquote p:before {
+  content: '\201C';
+}
+blockquote p:after {
+  content: '\201D';
+}
+
+img {
+  display: block;
+  margin: 0 0 15px;
+  border-radius: 5px;
+}
+
+
+/*
+ * Custom type
+ *
+ * Extend paragraphs with `.lead` for larger introductory text.
+ */
+
+.lead {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media (min-width: 990px) {
+  .lead {
+    font-size: 24px;
+  }
+}
+
+
+/*
+ * Links
+ *
+ * No `:visited` state is required by default (browsers will use `a`). `:focus`
+ * is linked to `:hover` for basic accessibility.
+ */
+
+a {
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+/*
+ * Masthead
+ *
+ * Sidebar banner for housing site name, intro, and colophon (footer).
+ */
+
+/* Sidebar masthead */
+.masthead {
+  color: #fff;
+  background-color: #2a2a2a;
+}
+.masthead-inner {
+  padding: 20px;
+}
+
+/* Masthead content */
+.masthead h1 {
+  margin-top: 0;
+  font-family: "Abril Fatface";
+}
+.masthead .lead {
+  margin-bottom: 0;
+}
+.masthead a {
+  color: #fff;
+}
+
+/* Footer area of masthead */
+.colophon {
+  margin-top: 20px;
+  color: rgba(255,255,255,.5);
+}
+.colophon-links {
+  padding-left: 0;
+  list-style: none;
+}
+.colophon-links li {
+  color: inherit;
+}
+
+/* Responsive masthead */
+@media (min-width: 768px) {
+  .masthead-inner {
+    padding: 40px;
+  }
+}
+@media (min-width: 990px) {
+  /* Fix the masthead to the side for impact and awesomeness */
+  .masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    margin-bottom: 0;
+  }
+  .masthead-inner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .masthead h1 {
+    font-size: 64px;
+  }
+  .colophon {
+    margin-top: 40px;
+  }
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.masthead`.
+ */
+
+.content {
+  padding: 40px 20px;
+}
+
+/* Center container in available real estate */
+@media (min-width: 990px) {
+  .content {
+    padding: 60px 0;
+  }
+  .container {
+    width: 55%;
+    margin-left: 35%;
+    margin-right: 10%;
+  }
+}
+
+
+/*
+ * Posts
+ *
+ * Each post is wrapped in `.post`. Used on default and post layouts.
+ */
+
+/* Single post */
+.post {
+  margin-bottom: 40px;
+}
+@media (min-width: 990px) {
+  .post {
+    margin-bottom: 60px;
+  }
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin: -10px 0 10px;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-top: 40px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+/* Pagination should float when space is plentiful */
+@media (min-width: 990px) {
+  .pagination {
+    margin-bottom: 60px;
+    border: 1px solid #eee;
+  }
+}
+
+.pagination a,
+.pagination span {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+.pagination a:first-child,
+.pagination span:first-child {
+  border-right: 1px solid #eee;
+}
+.pagination a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.masthead` on the right.
+ */
+
+@media (min-width: 990px) {
+  .layout-reverse .masthead {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .container {
+    margin-left: 10%;
+    margin-right: 35%;
+  }
+}
+
+
+/*
+ * Themes
+ *
+ * As of v1.1, Hyde includes optional themes to color the sidebar and links
+ * within blog posts. To use, add the class of your choosing to the `body`.
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* Red */
+.theme-base-08 .masthead {
+  background-color: #ac4142;
+}
+.theme-base-08 .container a,
+.theme-base-08 .related-posts li a:hover {
+  color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .masthead {
+  background-color: #d28445;
+}
+.theme-base-09 .container a,
+.theme-base-09 .related-posts li a:hover {
+  color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a .masthead {
+  background-color: #f4bf75;
+}
+.theme-base-0a .container a,
+.theme-base-0a .related-posts li a:hover {
+  color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .masthead {
+  background-color: #90a959;
+}
+.theme-base-0b .container a,
+.theme-base-0b .related-posts li a:hover {
+  color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .masthead {
+  background-color: #75b5aa;
+}
+.theme-base-0c .container a,
+.theme-base-0c .related-posts li a:hover {
+  color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .masthead {
+  background-color: #6a9fb5;
+}
+.theme-base-0d .container a,
+.theme-base-0d .related-posts li a:hover {
+  color: #6a9fb5;
+}
+
+/* Magenta */
+.theme-base-0e .masthead {
+  background-color: #aa759f;
+}
+.theme-base-0e .container a,
+.theme-base-0e .related-posts li a:hover {
+  color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .masthead {
+  background-color: #8f5536;
+}
+.theme-base-0f .container a,
+.theme-base-0f .related-posts li a:hover {
+  color: #8f5536;
+}
