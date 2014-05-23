@@ -1,24 +1,22 @@
-hugoThemes
+hugoBasicExample
 ==========
 
-Themes for Hugo
+This is an example site for Hugo.
 
-Very much a work in progress and requires the v0.11-pre version of [hugo](http://hugo.spf13.com).
+It is indented to be a demo site for the [hugo themes](http://github.com/spf13/hugoThemes).
+
 
 # Using
 
-To use hugo themes clone the repository to your machine.
+1. First [install Hugo](http://hugo.spf13.com/overview/installing).
+2. Then clone this repository.
+3. Clone the hugo themes
+4. Run Hugo and select the theme of your choosing
+
 
 ```
-    git clone https://github.com/spf13/hugoThemes.git
-    cd hugoThemes
+    git clone https://github.com/spf13/HugoBasicExample.git
+    cd HugoBasicExample
+    git clone --recursive https://github.com/spf13/hugoThemes.git themes
     hugo server -t `themename`
-
 ```
-
-# Current Themes
-
-* Hyde (by mdo, ported from Jekyll)
-* Herring Cove (by arnp, ported from Jekyll)
-
-
