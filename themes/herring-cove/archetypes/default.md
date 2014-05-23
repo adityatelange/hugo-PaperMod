@@ -1,5 +1,0 @@
-+++
-Description = ""
-Tags = []
-Categories = []
-+++
