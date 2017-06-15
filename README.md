@@ -14,7 +14,7 @@ It is intended to be a demo site for the various [Hugo themes][].
 
 In other words:
 
-<pre><code>git clone https://github.com/gohugio/HugoBasicExample.git
+<pre><code>git clone https://github.com/gohugoio/HugoBasicExample.git
 cd HugoBasicExample
 git clone --recursive https://github.com/gohugoio/hugoThemes.git themes
 hugo server -t <em>themename</em>
