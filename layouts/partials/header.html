@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Title -->
+  <title>
+    {{- if not .IsHome }}
+    {{- if eq .Kind "page" }}{{ .Title }}
+    {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
+    {{- else }}Posts
+    {{- end }} - {{ end }}
+    {{- .Site.Title -}}
+  </title>
+  <!-- Meta -->
+  {{- if eq .Kind "page" }}
+  <meta name="description" content="{{ .Summary }}">
+  <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+  {{ else }}
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  {{ end -}}
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <!-- Generator -->
+  <meta name="generator" content="Hugo {{ .Hugo.Version }}">
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="{{ .Site.Title }}">
+</head>
+<body class="{{if eq .Kind `page` }}single{{else}}list{{end}}">
+<header class="header">
+  {{ if .IsHome }}
+  <h1 class="title"><a href="{{ `/` | absURL }}"><span>🍱</span>{{ .Site.Title }}</a></h1>
+  {{ else }}
+  <p class="title"><a href="{{ `/` | absURL }}"><span>🍱</span>{{ .Site.Title }}</a></p>
+  {{ end }}
+  <button class="menu-toggle" type="button"></button>
+  <nav class="menu">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+<main class="main">

@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<article class="post post-view">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <p class="post-meta">
+      {{- if or .Params.author .Site.Params.author -}}
+      {{ .Params.author | default .Site.Params.author }} · {{ end }}
+      {{- .Date.Format "2006.1.2" -}}
+    </p>
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+  <footer class="post-footer">
+    {{ if .Params.tags }}
+    <ul class="post-tags">
+      {{ range .Params.tags }}
+      <li><a href="{{ `/tags/` | absURL }}{{ . | urlize }}/">{{ . }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </footer>
+  <!-- Comments system area -->
+</article>
+{{ partial "footer.html" . }}

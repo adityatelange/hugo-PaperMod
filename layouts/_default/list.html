@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+{{ if not .IsHome }}
+<header class="list-header">
+  {{ if eq .Data.Singular "tag" }}<span>Tagged in</span>
+  <h1 class="list-title">{{ .Data.Term }}</h1>
+  {{ else }}<h1 class="list-title">Posts</h1>
+  {{ end }}
+</header>
+{{ end }}
+{{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }}
+{{ if gt $paginator.TotalPages 0 }}
+{{ range $index, $page := $paginator.Pages }}
+{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}
+{{ .Scratch.Set "postClass" "first-entry" }}
+{{ .Scratch.Set "firstEmoji" "<span class=\"welcome-emoji\">👉</span>" }}
+{{ else }}
+{{ .Scratch.Set "postClass" "post-entry" }}
+{{ end }}
+<article class="post {{ .Scratch.Get `postClass` }}">
+  <header class="post-header">
+    {{ safeHTML (.Scratch.Get `firstEmoji`) }}
+    <h2 class="post-title">{{ .Title }}</h2>
+  </header>
+  <p class="post-summary">{{ .Summary | plainify | htmlUnescape }}...</p>
+  <footer class="post-footer">
+    <p class="post-meta">{{ .Date.Format "2006.1.2" }}</p>
+  </footer>
+  <a class="post-link" href="{{ .Permalink }}"></a>
+</article>
+{{ end }}
+{{ end }}
+{{ if gt $paginator.TotalPages 1 }}
+<footer class="list-footer">
+  <nav class="pagination">
+    {{ if $paginator.HasPrev }}
+    <a class="pagination-prev" href="{{ $paginator.Prev.URL }}">← 上一页</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <a class="pagination-next" href="{{ $paginator.Next.URL }}">下一页 →</a>
+    {{ end }}
+  </nav>
+</footer>
+{{ end }}
+{{ partial "footer.html" . }}
