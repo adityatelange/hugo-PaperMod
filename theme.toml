@@ -3,7 +3,7 @@
 
 name = "Hugo Paper"
 license = "MIT"
-licenselink = "https://github.com/nanxiaobei/hugo-paper/blob/master/LICENSE.md"
+licenselink = "https://github.com/nanxiaobei/hugo-paper/blob/master/LICENSE"
 description = "A simple & clean hugo theme"
 homepage = "https://github.com/nanxiaobei/hugo-paper/"
 tags = ["Responsive", "Simple", "Clean", "Light", "White", Blog"]
