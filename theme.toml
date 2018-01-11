@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/nanxiaobei/hugo-paper/blob/master/LICENSE"
 description = "A simple & clean hugo theme"
 homepage = "https://github.com/nanxiaobei/hugo-paper/"
-tags = ["Responsive", "Simple", "Clean", "Light", "White", Blog"]
+tags = ["Responsive", "Simple", "Clean", "Light", "White", "Blog"]
 features = ["Responsive", "One Column", "Blog"]
 min_version = "1.0.0"
 
@@ -19,4 +19,3 @@ min_version = "1.0.0"
   name = ""
   homepage = ""
   repo = ""
-
