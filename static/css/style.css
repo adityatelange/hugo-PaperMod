@@ -67,14 +67,13 @@ pre, code {
 /* Header
 ============================================================= */
 .header {
+  display: flex;
+  justify-content: space-between;
   height: 65px;
   padding-left: 30px;
   padding-right: 30px;
   line-height: 65px;
   background: #fff;
-}
-.title {
-  float: left;
 }
 .title a {
   display: block;
@@ -91,9 +90,6 @@ pre, code {
 .menu-toggle {
   display: none;
 }
-.menu {
-  float: right;
-}
 .menu li {
   display: inline-block;
   margin-left: 20px;
@@ -105,7 +101,7 @@ pre, code {
   display: block;
   font-size: 15px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .noscroll {
     overflow: hidden;
   }
@@ -189,7 +185,7 @@ pre, code {
   margin-right: auto;
 }
 .list .main {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .list-header,
 .list-footer {
@@ -205,7 +201,7 @@ pre, code {
 }
 .single .main {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .post-view {
   width: 640px;
@@ -446,17 +442,15 @@ pre, code {
 /* List footer
 ------------------------------ */
 .pagination {
+  display: flex;
   overflow: hidden;
 }
 .pagination a {
   display: block;
   line-height: 30px;
 }
-.pagination-prev {
-  float: left;
-}
 .pagination-next {
-  float: right;
+  margin-left: auto;
 }
 /* 404
 ------------------------------ */
@@ -473,7 +467,6 @@ pre, code {
   font-size: 13px;
   line-height: 25px;
   text-align: center;
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, .05);
 }
 .footer span {
   margin-left: 2px;
