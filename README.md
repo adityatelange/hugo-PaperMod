@@ -3,7 +3,9 @@ Hugo Paper
 
 Hugo Paper is a responsive simple & clean hugo theme.
 
+>
 > Demo: https://nanxiaobei.github.io/hugo-paper/
+>
 
 <kbd>![Hugo Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)</kbd>
 
