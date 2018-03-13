@@ -37,9 +37,9 @@
 <body class="{{if eq .Kind `page` }}single{{else}}list{{end}}">
   <header class="header">
     {{ if .IsHome }}
-    <h1 class="title"><a href="{{ `./` | absURL }}"><span>🍱</span>{{ .Site.Title }}</a></h1>
+    <h1 class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></h1>
     {{ else }}
-    <p class="title"><a href="{{ `./` | absURL }}"><span>🍱</span>{{ .Site.Title }}</a></p>
+    <p class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></p>
     {{ end }}
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
