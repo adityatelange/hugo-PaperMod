@@ -7,6 +7,13 @@ Paper is a responsive simple & clean hugo theme.
 
 <kbd>![Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)</kbd>
 
+
+## Features
+
+* ⚡️ Blazing fast
+* ✉️ Just simple
+* 🖋 Paper clean
+
 ## Installation
 
 Inside the folder of your Hugo site run:
