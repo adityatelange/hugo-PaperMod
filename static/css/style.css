@@ -1,8 +1,8 @@
 /*
- * Paper v1.0.0
+ * Paper v1.1
  * A simple & clean hugo theme
  * Designed by 21beats (http://21beats.com)
- * Updated in 2018.1.8
+ * Updated in 2018.5.5
  */
 
 /* Reset
@@ -22,7 +22,7 @@ body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
   color: rgba(0, 0, 0, .8);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -77,7 +77,7 @@ pre, code {
 }
 .title a {
   display: block;
-  margin-top: 17px;
+  margin-top: 18px;
   font-size: 28px;
   font-weight: 700;
   line-height: 35px;
@@ -204,7 +204,7 @@ pre, code {
   padding-bottom: 30px;
 }
 .post-view {
-  width: 640px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -293,7 +293,7 @@ pre, code {
 }
 /* Post view */
 .post-view .post-title {
-  font-size: 40px;
+  font-size: 45px;
 }
 .post-content {
   padding-top: 30px;
@@ -330,7 +330,7 @@ pre, code {
   font-size: 20px;
 }
 .post-content h6 {
-  font-size: 17px;
+  font-size: 18px;
 }
 .post-content a {
   border-bottom: 1px solid rgba(0, 0, 0, .8);
@@ -389,8 +389,13 @@ pre, code {
 .post-content th {
   text-align: left;
 }
-.post-content pre code {
+.post-content pre {
   padding: 20px;
+  background: rgba(0, 0, 0, .05);
+}
+.post-content pre code {
+  padding: 0;
+  background: transparent;
 }
 .post-content code {
   padding: 3px 6px;
@@ -464,7 +469,7 @@ pre, code {
 ======================================================================= */
 .footer {
   padding: 20px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 25px;
   text-align: center;
 }
