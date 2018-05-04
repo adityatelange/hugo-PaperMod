@@ -3,16 +3,18 @@ Paper
 
 Paper is a responsive simple & clean hugo theme.
 
+Current version: [1.0](https://github.com/nanxiaobei/hugo-paper/releases)
+
 > Demo: https://nanxiaobei.github.io/hugo-paper/
 
-<kbd>![Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)</kbd>
+![Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
 
 
 ## Features
 
-* ⚡️ Blazing fast
-* ✉️ Just simple
-* 🖋 Paper clean
+⚡️ Blazing fast
+✉️ Just simple
+🖋 Paper clean
 
 ## Installation
 
