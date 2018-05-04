@@ -15,11 +15,11 @@ Paper is a responsive simple & clean Hugo theme.
 
 ## Features
 
-⚡️ Blazing fast
+* ⚡️ Blazing fast
 
-✉️ Just simple
+* ✉️ Just simple
 
-🖋 Paper clean
+* 🖋 Paper clean
 
 
 ## Installation
