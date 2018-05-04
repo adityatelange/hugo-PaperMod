@@ -16,9 +16,7 @@ Paper is a responsive simple & clean Hugo theme.
 ## Features
 
 * ⚡️ Blazing fast
-
 * ✉️ Just simple
-
 * 🖋 Paper clean
 
 
