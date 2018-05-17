@@ -1,8 +1,7 @@
-baseurl = "http://hugo.spf13.com/"
+baseurl = "https://gohugo.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
 canonifyurls = true
 paginate = 3
-
 
