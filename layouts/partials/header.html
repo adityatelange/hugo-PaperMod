@@ -34,12 +34,12 @@
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" href="/index.xml" title="{{ .Site.Title }}">
 </head>
-<body class="{{if eq .Kind `page` }}single{{else}}list{{end}}">
+<body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
   <header class="header">
     {{ if .IsHome }}
-    <h1 class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></h1>
+    <h1 class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></h1>
     {{ else }}
-    <p class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></p>
+    <p class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></p>
     {{ end }}
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">

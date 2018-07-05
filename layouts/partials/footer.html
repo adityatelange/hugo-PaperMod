@@ -1,29 +1,26 @@
 </main>
 <footer class="footer">
-  <span>&copy; {{ if eq now.Year 2017 }}2017{{ else }}2017-{{ now.Year }}{{ end }} {{ .Site.Title }} 🎉</span>
+  <span>&copy; {{ now.Year }} {{ .Site.Title }} 🎉</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo️️</a> ❤️</span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats️</a> ⚡️</span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
 <script data-no-instant>
   hljs.initHighlightingOnLoad();
-  menuToggle();
+  addMenuListener();
   InstantClick.on('change', function() {
     var blocks = document.querySelectorAll('pre code');
     for (var i = 0; i < blocks.length; i++) {
       hljs.highlightBlock(blocks[i]);
     }
-    menuToggle();
+    addMenuListener();
   });
-  function menuToggle() {
+  function addMenuListener() {
     var $toggle = document.querySelector('.menu-toggle');
-    if (!$toggle.offsetParent) {
-      return;
-    }
     var $body = document.querySelector('body');
     $toggle.addEventListener('click', function() {
       $body.classList.toggle('noscroll');

@@ -1,12 +1,12 @@
 Paper
 ========
 
-Current version: [1.0](https://github.com/nanxiaobei/hugo-paper/releases)
+Current version: [1.2](https://github.com/nanxiaobei/hugo-paper/releases)
 
 
 ## Waht's Paper?
 
-Paper is a responsive simple & clean Hugo theme.
+Paper is a responsive simple, clean, flex Hugo theme.
 
 > Demo: https://nanxiaobei.github.io/hugo-paper/
 
