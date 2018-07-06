@@ -1,7 +1,7 @@
 Paper
 ========
 
-Paper is a responsive simple, clean, flexible Hugo theme.
+Paper is a simple, clean, flexible Hugo theme.
 
 Current version: [1.2](https://github.com/nanxiaobei/hugo-paper/releases)
 
