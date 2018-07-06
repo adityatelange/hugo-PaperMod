@@ -5,11 +5,11 @@ Paper is a responsive simple, clean, flexible Hugo theme.
 
 Current version: [1.2](https://github.com/nanxiaobei/hugo-paper/releases)
 
-## Take A Look
+## Overview
 
-> Hugo Themes: https://themes.gohugo.io/hugo-paper/
->
 > Demo: https://nanxiaobei.github.io/hugo-paper/
+>
+> On Hugo Themes: https://themes.gohugo.io/hugo-paper/
 
 ![Paper Theme Screenshot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
 
