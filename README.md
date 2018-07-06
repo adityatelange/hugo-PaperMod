@@ -1,4 +1,4 @@
-🐣Paper
+Paper
 ========
 
 Current version: [1.2](https://github.com/nanxiaobei/hugo-paper/releases)
