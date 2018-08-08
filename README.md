@@ -1,25 +1,26 @@
-hugoBasicExample
-==========
+# hugoBasicExample
 
 This is an example site for [Hugo](https://gohugo.io/).
 
-It is intended to be a demo site for the various [Hugo themes][].
+It is intended to be a demo site for the various [Hugo themes](https://themes.gohugo.io/).
 
 # Using
 
-1. First, [install Hugo](https://gohugo.io/overview/installing/);
-2. Then, clone this repository;
-3. Clone the [Hugo themes][];
-4. Run Hugo and select the theme of your choosing.
-
-In other words:
-
-<pre><code>git clone https://github.com/gohugoio/HugoBasicExample.git
-cd HugoBasicExample
+1. [Install Hugo](https://gohugo.io/overview/installing/)
+2. Clone this repository
+```bash
+git clone https://github.com/gohugoio/hugoBasicExample.git
+cd hugoBasicExample
+```
+3. Clone the repository you want to test. If you want to test all hugo themes, you can clone [the full list](https://github.com/gohugoio/hugoThemes)
+```bash
+git clone --recursive https://URL/OF/YOUR/THEME themes/YOURTHEME
+```
+or
+```bash
 git clone --recursive https://github.com/gohugoio/hugoThemes.git themes
-hugo server -t <em>themename</em>
-</code></pre>
-
-Enjoy!
-
-[Hugo themes]: https://github.com/gohugoio/hugoThemes
+```
+4. Run Hugo and select the theme of your choosing
+```bash
+hugo server -t YOURTHEME
+```
