@@ -31,10 +31,10 @@ article, aside, figcaption, figure, footer, header, main, nav, section {
 }
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: rgba(0, 0, 0, .8);
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.6;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -78,7 +78,7 @@ pre, code {
 /* Body
 ============================================================= */
 .list {
-  background: #fafafa;
+  background: #f9f9f9;
 }
 /* Header
 ============================================================= */
@@ -118,7 +118,7 @@ pre, code {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: #000;
 }
@@ -126,7 +126,7 @@ pre, code {
   transform: translate3d(-50%, -5px, 0);
 }
 .menu-toggle::after {
-  transform: translate3d(-50%, 4px, 0);
+  transform: translate3d(-50%, 5px, 0);
 }
 .noscroll .menu-toggle::before {
   transform: translate3d(-50%, -1px, 0) rotateZ(45deg);
@@ -226,17 +226,17 @@ pre, code {
 /* Post
 ------------------------------ */
 .post-meta {
-  margin-top: 5px;
+  margin-top: 8px;
   color: rgba(0, 0, 0, .4);
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: .5px;
 }
 /* First entry */
 .first-entry {
-  position: relative;
-  margin-bottom: 40px;
-  padding-top: 60px;
-  padding-bottom: 120px;
+  min-height: calc(100vh - 65px - 80px);
+  margin-bottom: 80px;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
   background: #fff;
 }
 .welcome-emoji {
@@ -245,10 +245,20 @@ pre, code {
 }
 .first-entry .post-title {
   font-size: 50px;
+  transform: translateX(-3px);
+}
+.first-entry .post-summary {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+.post-title {
+  transform: translateX(-2px);
 }
 .post-summary {
   margin-top: 10px;
   color: rgba(0, 0, 0, .4);
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   .first-entry {
@@ -301,16 +311,18 @@ pre, code {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  color: rgba(0, 0, 0, .4);
-  font-weight: 400;
   margin-bottom: 10px;
 }
+.post-content h5,
+.post-content h6 {
+  font-weight: 400;
+}
 .post-content h1 {
-  font-size: 40px;
+  font-size: 45px;
   margin-top: 50px;
 }
 .post-content h2 {
-  font-size: 34px;
+  font-size: 32px;
   margin-top: 40px;
 }
 .post-content h3 {
@@ -327,7 +339,8 @@ pre, code {
   font-size: 18px;
 }
 .post-content a {
-  border-bottom: 1px solid rgba(0, 0, 0, .8);
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid rgba(0, 0, 0, .8);
 }
 .post-content p,
 .post-content ul,
@@ -383,20 +396,14 @@ pre, code {
 .post-content th {
   text-align: left;
 }
-.post-content pre {
-  padding: 20px;
-  background: #fafafa;
-  border-radius: 6px;
-}
 .post-content pre code {
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
+  padding: 20px;
+  border-radius: 6px;
 }
 .post-content code {
   padding: 3px 6px;
-  font-size: 15px;
-  background: #fafafa;
+  font-size: 0.75em;
+  white-space: pre-wrap;
   border-radius: 3px;
 }
 .post-content blockquote {
@@ -466,7 +473,7 @@ pre, code {
 ======================================================================= */
 .footer {
   padding: 20px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 25px;
   text-align: center;
 }
