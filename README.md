@@ -3,7 +3,7 @@ Paper
 
 Paper is a simple, clean, flexible Hugo theme.
 
-Current version: [1.2](https://github.com/nanxiaobei/hugo-paper/releases)
+Current version: [v2.0](https://github.com/nanxiaobei/hugo-paper/releases)
 
 ## Overview
 
