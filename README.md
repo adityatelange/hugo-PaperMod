@@ -1,4 +1,4 @@
-Paper
+🥛 Paper
 ========
 
 Paper is a simple, clean, flexible Hugo theme.
