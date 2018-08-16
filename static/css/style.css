@@ -118,7 +118,7 @@ pre, code {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 22px;
+  width: 20px;
   height: 2px;
   background: #000;
 }
@@ -233,6 +233,7 @@ pre, code {
 }
 /* First entry */
 .first-entry {
+  position: relative;
   min-height: calc(100vh - 65px - 80px);
   margin-bottom: 80px;
   padding-top: 12vh;
@@ -259,11 +260,6 @@ pre, code {
   margin-top: 10px;
   color: rgba(0, 0, 0, .4);
   font-size: 18px;
-}
-@media (max-width: 767px) {
-  .first-entry {
-    margin-bottom: 25px;
-  }
 }
 /* Post entry */
 .post-entry {
@@ -488,7 +484,7 @@ pre, code {
   .footer span:last-child {
     display: block;
   }
-  .footer span:nth-child(2n) {
+  .footer span:nth-child(4) {
     display: none;
   }
 }
