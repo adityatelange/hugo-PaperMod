@@ -1,7 +1,7 @@
 Paper
 ========
 
-🥛 Paper is a simple, clean, flexible Hugo theme.
+🥛 A simple, clean, flexible Hugo theme.
 
 Current version: [v2.0](https://github.com/nanxiaobei/hugo-paper/releases)
 
