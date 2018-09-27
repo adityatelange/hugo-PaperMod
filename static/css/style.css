@@ -511,3 +511,6 @@ pre, code {
 .highlight div {
   border-radius: 6px;
 }
+.post-content table code {
+  white-space: pre;
+}
