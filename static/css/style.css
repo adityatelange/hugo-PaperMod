@@ -514,6 +514,9 @@ pre, code {
 .post-content table code {
   white-space: pre;
 }
+.highlight td:nth-child(2) {
+  width: 100%;
+}
 
 /* Unflavored code fences
 ------------------------------ */
