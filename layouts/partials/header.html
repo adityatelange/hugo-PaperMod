@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" href="{{.Site.BaseURL}}img/apple-touch-icon.png">
   <link rel="icon" href="{{.Site.BaseURL}}img/favicon.ico">
   <!-- Generator -->
-  <meta name="generator" content="Hugo {{ .Hugo.Version }}">
+  {{ .Hugo.Generator }}
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" href="{{.Site.BaseURL}}index.xml" title="{{ .Site.Title }}">
   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
