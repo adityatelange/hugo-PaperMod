@@ -488,3 +488,43 @@ pre, code {
     display: none;
   }
 }
+
+/* Highlight
+------------------------------ */
+.post-content pre code {
+  display: block;
+}
+.post-content table code {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.post-content pre {
+  margin: 30px 0px;
+  border-radius: 6px;
+}
+.post-content table pre {
+  margin: 20px 0px;
+}
+.highlight table {
+  margin: 30px 0 !important; 
+}
+.highlight div {
+  border-radius: 6px;
+}
+.post-content table code {
+  white-space: pre;
+}
+.highlight td:nth-child(2) {
+  width: 100%;
+}
+
+/* Unflavored code fences
+------------------------------ */
+code {
+  padding: 20px;
+}
+pre {
+  border-radius: 6px;
+  background-color: #272822;
+  color: white;
+}
