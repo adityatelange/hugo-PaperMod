@@ -4,4 +4,15 @@ author = "Steve Francia"
 copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
 canonifyurls = true
 paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
 
+[languages.en]
+languageName = "English"
+weight = 1
+title = "Hugo Themes"
+
+[languages.fr]
+languageName = "Français"
+weight = 2
+title = "Thèmes Hugo"
