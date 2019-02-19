@@ -6,6 +6,7 @@ canonifyurls = true
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
+disableLanguages = ["fr"]
 
 [languages.en]
 languageName = "English"
