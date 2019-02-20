@@ -17,3 +17,11 @@ title = "Hugo Themes"
 languageName = "Français"
 weight = 2
 title = "Thèmes Hugo"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "tutorials"
+    name = "Tutorials"
+    url = "/post/"
+    weight = 5

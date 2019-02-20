@@ -12,7 +12,6 @@ categories = [
     "Development",
     "golang",
 ]
-menu = "main"
 series = ["Hugo 101"]
 +++
 
