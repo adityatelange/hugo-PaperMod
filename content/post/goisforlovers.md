@@ -14,6 +14,7 @@ categories = [
     "golang",
 ]
 menu = "main"
+series = ["Hugo 101"]
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

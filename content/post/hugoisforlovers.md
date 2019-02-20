@@ -13,6 +13,7 @@ categories = [
     "golang",
 ]
 menu = "main"
+series = ["Hugo 101"]
 +++
 
 ## Step 1. Install Hugo
