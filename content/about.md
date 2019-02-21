@@ -1,7 +1,7 @@
 +++
-title = "About Hugo"
+title = "About"
 date = "2014-04-09"
-menu = "main"
+aliases = ["about-us","about-hugo"]
 +++
 
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.
