@@ -5,6 +5,8 @@ title: Migrate to Hugo from Jekyll
 weight: 10
 series:
 - Hugo 101
+aliases:
+- /blog/migrate-from-jekyll/
 ---
 
 ## Move static content to `static`

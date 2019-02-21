@@ -1,3 +1,3 @@
 +++
-aliases = ["posts","articles"]
+aliases = ["posts","articles","blog","showcase"]
 +++
