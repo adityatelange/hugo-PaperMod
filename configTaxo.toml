@@ -1,3 +1,17 @@
+languageCode = "en"
+DefaultContentLanguage = "en"
+disableLanguages = ["fr"]
+
+[languages.en]
+languageName = "English"
+weight = 1
+title = "Hugo Themes"
+
+[languages.fr]
+languageName = "Français"
+weight = 2
+title = "Thèmes Hugo"
+
 [taxonomies]
 category = "categories"
 tag = "tags"
