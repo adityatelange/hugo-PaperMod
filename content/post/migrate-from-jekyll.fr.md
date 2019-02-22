@@ -9,7 +9,7 @@ featuredpath = ""
 linktitle = ""
 slug = "Migrer vers Hugo depuis Jekyll"
 title = "Migrer vers Hugo depuis Jekyll"
-type = "post"
+type = "posts"
 
 +++
 

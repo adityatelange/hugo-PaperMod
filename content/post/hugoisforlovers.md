@@ -1,6 +1,7 @@
 +++
 title = "Getting Started with Hugo"
 description = ""
+type = "posts"
 tags = [
     "go",
     "golang",
