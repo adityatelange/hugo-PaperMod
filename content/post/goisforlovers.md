@@ -1,7 +1,7 @@
 +++
 title = "(Hu)go Template Primer"
 description = ""
-type = "posts"
+type = ["posts","post"]
 tags = [
     "go",
     "golang",
@@ -15,6 +15,8 @@ categories = [
     "golang",
 ]
 series = ["Hugo 101"]
+[ author ]
+  name = "Hugo Authors"
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

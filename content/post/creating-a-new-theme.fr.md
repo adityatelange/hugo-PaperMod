@@ -1,5 +1,4 @@
 +++
-author = "Auteur du thème"
 categories = ["Hugo"]
 date = "2014-09-28"
 description = "Apprenez comment créer un thème Hugo"
@@ -10,7 +9,6 @@ linktitle = ""
 title = "Création d'un nouveau thème"
 slug = "Creation d'un nouveau theme"
 type = "post"
-
 +++
 
 ## Introduction

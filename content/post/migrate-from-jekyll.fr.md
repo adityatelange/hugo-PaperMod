@@ -1,5 +1,4 @@
 +++
-author = "Auteur de migration"
 categories = ["Hugo", "Jekyll"]
 date = "2014-03-10"
 description = ""
@@ -9,8 +8,9 @@ featuredpath = ""
 linktitle = ""
 slug = "Migrer vers Hugo depuis Jekyll"
 title = "Migrer vers Hugo depuis Jekyll"
-type = "posts"
-
+type = ["posts","post"]
+[ author ]
+  name = "Hugo Authors"
 +++
 
 ## Déplacez le contenu statique vers `static`

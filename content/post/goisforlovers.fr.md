@@ -1,5 +1,4 @@
 +++
-author = "Auteur inconnu"
 categories = ["Go"]
 date = "2014-04-02"
 description = ""
@@ -9,8 +8,9 @@ featuredpath = "date"
 linktitle = ""
 slug = "Introduction aux modeles Hugo"
 title = "Introduction aux modèles (Hu)go"
-type = "post"
-
+type = ["posts","post"]
+[ author ]
+  name = "Michael Henderson"
 +++
 
 Hugo utilise l'excellente librairie [go][] [html/template][gohtmltemplate] pour

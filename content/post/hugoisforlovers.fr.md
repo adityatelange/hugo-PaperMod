@@ -1,5 +1,4 @@
 +++
-author = "Auteur Hugo"
 categories = ["Hugo"]
 date = "2014-04-02"
 description = ""
@@ -10,7 +9,8 @@ linktitle = ""
 slug = "Debuter avec Hugo"
 title = "Débuter avec Hugo"
 type = "post"
-
+[ author ]
+  name = "Hugo Authors"
 +++
 
 ## Étape 1. Installer Hugo
