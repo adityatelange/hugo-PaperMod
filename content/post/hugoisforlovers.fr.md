@@ -9,8 +9,7 @@ linktitle = ""
 slug = "Debuter avec Hugo"
 title = "Débuter avec Hugo"
 type = "post"
-[ author ]
-  name = "Hugo Authors"
+author = "Hugo Auteurs"
 +++
 
 ## Étape 1. Installer Hugo

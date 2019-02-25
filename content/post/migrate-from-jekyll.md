@@ -1,6 +1,5 @@
 ---
-author:
-  name: "Hugo Authors"
+author: "Hugo Authors"
 date: 2014-03-10
 linktitle: Migrating from Jekyll
 title: Migrate to Hugo from Jekyll

@@ -15,8 +15,7 @@ categories = [
     "golang",
 ]
 series = ["Hugo 101"]
-[ author ]
-  name = "Hugo Authors"
+author = "Hugo Authors"
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

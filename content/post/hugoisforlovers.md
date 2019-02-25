@@ -14,8 +14,7 @@ categories = [
     "golang",
 ]
 series = ["Hugo 101"]
-[ author ]
-  name = "Hugo Authors"
+author = "Hugo Authors"
 +++
 
 ## Step 1. Install Hugo

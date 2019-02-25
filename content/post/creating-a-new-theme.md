@@ -1,6 +1,5 @@
 ---
-author:
-  name: "Michael Henderson"
+author: "Hugo Authors"
 date: 2014-09-28
 linktitle: Creating a New Theme
 type:

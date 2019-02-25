@@ -9,8 +9,7 @@ linktitle = ""
 slug = "Introduction aux modeles Hugo"
 title = "Introduction aux modèles (Hu)go"
 type = ["posts","post"]
-[ author ]
-  name = "Michael Henderson"
+author = "Hugo Auteurs"
 +++
 
 Hugo utilise l'excellente librairie [go][] [html/template][gohtmltemplate] pour
