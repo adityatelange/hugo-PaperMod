@@ -1,11 +1,11 @@
-baseurl = "https://gohugo.io/"
+ignoreFiles = ["content/posts/\\.*","content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*","content/en/\\.*","content/fr/\\.*"]
+baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
-ignoreFiles = ["content/posts/\\.*","content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*","content/en/\\.*","content/fr/\\.*"]
 
 [menu]
 
@@ -14,4 +14,29 @@ ignoreFiles = ["content/posts/\\.*","content/portfolio/\\.*","content/product/\\
     name = "About"
     url = "about/"
     weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+disableInlineCSS = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
 
