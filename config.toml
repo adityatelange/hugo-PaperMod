@@ -6,13 +6,14 @@ copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all r
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
+enableInlineShortcodes = true
 
 [menu]
 
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "about/"
+    url = "/about/"
     weight = 10
 
 [taxonomies]
@@ -22,21 +23,28 @@ series = "series"
 
 [privacy]
 
-[privacy.vimeo]
-disabled = false
-simple = true
+  [privacy.vimeo]
+    disabled = false
+    simple = true
 
-[privacy.twitter]
-disabled = false
-enableDNT = true
-simple = true
-disableInlineCSS = true
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
 
-[privacy.instagram]
-disabled = false
-simple = true
+  [privacy.instagram]
+    disabled = false
+    simple = true
 
-[privacy.youtube]
-disabled = false
-privacyEnhanced = true
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
 

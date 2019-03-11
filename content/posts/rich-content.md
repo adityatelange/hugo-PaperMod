@@ -1,0 +1,1 @@
+../post/rich-content.md
