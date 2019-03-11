@@ -7,6 +7,7 @@ paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
 
 [menu]
 

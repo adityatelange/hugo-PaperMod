@@ -1,3 +1,5 @@
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
 
 [taxonomies]
 category = "categories"
