@@ -10,15 +10,22 @@
 <script data-no-instant>InstantClick.init();</script>
 <script src="{{.Site.BaseURL}}js/highlight.min.js" data-no-instant></script>
 <script data-no-instant>
-  addMenuListener();
+  hljs.initHighlightingOnLoad();
+  setMenuListener();
+
   InstantClick.on('change', function() {
-    addMenuListener();
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+
+    setMenuListener();
   });
-  function addMenuListener() {
-    var $toggle = document.querySelector('.menu-toggle');
-    var $body = document.querySelector('body');
-    $toggle.addEventListener('click', function() {
-      $body.classList.toggle('noscroll');
+  function setMenuListener() {
+    var menuToggle = document.querySelector('.menu-toggle');
+    var body = document.querySelector('body');
+
+    menuToggle.addEventListener('click', function() {
+      body.classList.toggle('no-scroll');
     }, false);
   }
 </script>
