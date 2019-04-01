@@ -15,7 +15,7 @@
 
 {{ if gt $paginator.TotalPages 0 }}
 {{ range $index, $page := $paginator.Pages }}
-<article class="post-entry">
+<article class="{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
@@ -34,10 +34,10 @@
 <footer class="page-footer">
   <nav class="pagination">
     {{ if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL }}">← {{ i18n "prevPage" }}</a>
+    <a class="prev" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
     {{ end }}
     {{ if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL }}">{{ i18n "nextPage" }} →</a>
+    <a class="next" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
     {{ end }}
   </nav>
 </footer>

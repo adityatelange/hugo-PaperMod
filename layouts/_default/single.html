@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
@@ -18,13 +19,13 @@
     </ul>
     {{ end }}
   </footer>
-  <!-- Comments system area start -->
+  <!-- Comments area start -->
   {{ if not (eq .Params.comments false) }}
   {{ if .Site.DisqusShortname }}
   <div id="disqus_thread"></div>
   <script>
     var disqus_shortname = '{{ .Site.DisqusShortname }}';
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function() {
       var d = document, s = d.createElement('script');
       s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
@@ -35,8 +36,9 @@
     Please enable JavaScript to view the
     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
   </noscript>
-  <!-- Comments system area end -->
+  <!-- Comments area end -->
   {{ end }}
   {{ end }}
 </article>
+
 {{ partial "footer.html" . }}
