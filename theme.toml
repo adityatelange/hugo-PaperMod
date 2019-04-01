@@ -8,11 +8,11 @@ description = "A simple, clean, flexible Hugo theme"
 homepage = "https://github.com/nanxiaobei/hugo-paper/"
 tags = ["Responsive", "Simple", "Clean", "Light", "White", "Blog"]
 features = ["Responsive", "One Column", "Blog"]
-min_version = "0.1"
+min_version = 0.1
 
 [author]
-  name = "21beats"
-  homepage = "http://21beats.com/"
+  name = "nanxiaobei"
+  homepage = "https://mrlee.me/"
 
 # If porting an existing theme
 [original]
