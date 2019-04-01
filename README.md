@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="./images/logo.png" height="400" width="400" alt="Paper">
+<img src="./images/paper.png" height="120" width="120" alt="Paper">
+
+# Paper
 
 A simple, clean, flexible Hugo theme.
 
-</div>
+Version: [3.0](https://github.com/nanxiaobei/hugo-paper/releases)
 
-Version: [v3.0](https://github.com/nanxiaobei/hugo-paper/releases)
+</div>
 
 ## Overview
 
