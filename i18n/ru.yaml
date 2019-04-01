@@ -1,5 +1,5 @@
-- id: nextPage
-  translation: "Туда"
+- id: prev_page
+  translation: 'Сюда'
 
-- id: prevPage
-  translation: "Сюда"
+- id: next_page
+  translation: 'Туда'
