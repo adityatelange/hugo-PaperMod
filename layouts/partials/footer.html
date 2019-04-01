@@ -17,13 +17,12 @@
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block);
     });
-
     setMenuListener();
   });
+
   function setMenuListener() {
     var menuToggle = document.querySelector('.menu-toggle');
     var body = document.querySelector('body');
-
     menuToggle.addEventListener('click', function() {
       body.classList.toggle('no-scroll');
     }, false);
