@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./images/paper.png" height="120" width="120" alt="Paper">
+<img src="./images/logo.png" height="120" width="120" alt="Paper">
 
 # Paper
 
@@ -14,7 +14,7 @@ Version: [3.0](https://github.com/nanxiaobei/hugo-paper/releases)
 
 Demo: https://nanxiaobei.github.io/hugo-paper/
 
-Link: https://themes.gohugo.io/hugo-paper/
+Hugo: https://themes.gohugo.io/hugo-paper/
 
 ![Screen shot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
 
