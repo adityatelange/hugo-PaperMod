@@ -103,11 +103,9 @@ img {
 -------------------------------------------------- */
 .header {
   height: 65px;
-  line-height: 65px;
 }
 .header .wrap {
   display: flex;
-  justify-content: space-between;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -121,10 +119,13 @@ img {
   display: block;
   font-size: 24px;
   font-weight: 700;
+  line-height: 65px;
 }
 .menu-toggle {
   position: relative;
   width: 68px;
+  height: 65px;
+  margin-left: auto;
   outline: 0;
 }
 .menu-toggle::before,
@@ -145,17 +146,6 @@ img {
   transform: translate3d(-50%, 5px, 0);
 }
 
-.no-scroll .header {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.9);
-}
-.no-scroll .logo a {
-  color: #888;
-}
 .no-scroll .menu-toggle::before,
 .no-scroll .menu-toggle::after {
   background: #888;
@@ -166,12 +156,23 @@ img {
 .no-scroll .menu-toggle::after {
   transform: translate3d(-50%, -1px, 0) rotateZ(-135deg);
 }
-.no-scroll .menu {
-  display: flex;
+.no-scroll .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.84);
+}
+.no-scroll .logo {
+  display: none;
 }
 .no-scroll .main,
 .no-scroll .footer {
   filter: blur(12px);
+}
+.no-scroll .menu {
+  display: flex;
 }
 
 .menu {
@@ -186,7 +187,7 @@ img {
   flex-direction: column;
   padding-bottom: 130px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.84);
 }
 .menu li + li {
   margin-top: 12px;
@@ -194,7 +195,7 @@ img {
 .menu a {
   color: #fff;
   font-size: 48px;
-  letter-spacing: 1px;
+  font-weight: 700;
 }
 /* Main
 -------------------------------------------------- */
@@ -207,7 +208,7 @@ img {
   padding: 24px;
 }
 .page-header {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 .page-header .tagged {
   margin-bottom: 2px;
@@ -219,19 +220,17 @@ img {
   transform-origin: left center;
 }
 .page-header h1 {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 32px;
 }
 .pagination {
   display: flex;
 }
 .pagination a {
-  height: 34px;
   color: #fff;
   font-size: 13px;
-  line-height: 33px;
+  line-height: 34px;
   background: rgba(0, 0, 0, 0.9);
-  border-radius: 36px;
+  border-radius: 34px;
 }
 .pagination .prev {
   padding-left: 16px;
@@ -497,11 +496,14 @@ img {
   margin-right: 1px;
 }
 .footer a {
+  display: inline-flex;
+  align-items: center;
   color: inherit;
 }
 .footer a:hover {
   color: rgba(0, 0, 0, 0.9);
 }
+
 /* 404
 -------------------------------------------------- */
 .not-found {
