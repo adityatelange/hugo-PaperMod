@@ -162,7 +162,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.84);
+  background: rgba(0, 0, 0, 0.88);
 }
 .no-scroll .logo {
   display: none;
@@ -187,7 +187,7 @@ img {
   flex-direction: column;
   padding-bottom: 130px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.84);
+  background: rgba(0, 0, 0, 0.88);
 }
 .menu li + li {
   margin-top: 12px;
@@ -216,7 +216,7 @@ img {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  transform: scale(0.9);
+  transform: scale(0.84);
   transform-origin: left center;
 }
 .page-header h1 {
