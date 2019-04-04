@@ -1,8 +1,8 @@
 /*
- * Paper v3.0
+ * Paper v3.1
  * A simple, clean, flexible Hugo theme.
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.4.1
+ * Updated in 2019.4.5
  */
 
 /* Reset
@@ -428,8 +428,32 @@ img {
   margin-left: 0;
   margin-right: 0;
   padding: 20px 22px;
-  line-height: 1.6;
+  line-height: 1.7;
   border-radius: 2px;
+}
+.post-content .highlight table {
+  padding: 20px 22px;
+}
+.post-content .highlight table td {
+  padding: 0;
+  border-bottom: 0;
+}
+.post-content .highlight table td pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.post-content .highlight table td:first-child pre code {
+  padding-right: 0;
+  color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px 0 0 2px;
+}
+.post-content .highlight table td:last-child pre code {
+  padding-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+.post-content .highlight .ln {
+  margin-right: 24px;
+  color: rgba(0, 0, 0, 0.2);
 }
 .post-content blockquote {
   margin: 0 0 0 -24px;
