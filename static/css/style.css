@@ -1,8 +1,8 @@
 /*
- * Paper v3.1
+ * Paper v3.2
  * A simple, clean, flexible Hugo theme.
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.4.5
+ * Updated in 2019.4.22
  */
 
 /* Reset
@@ -249,16 +249,22 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 320px;
-  margin-bottom: 24px;
-  padding-bottom: 40px;
+  margin-bottom: 64px;
+  overflow: hidden;
 }
 .first-entry .entry-header h2 {
   font-size: 40px;
 }
 .first-entry .entry-content {
+  max-height: 81px;
   margin-top: 12px;
   margin-bottom: 20px;
   font-size: 16px;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
 }
 .first-entry .entry-footer {
   font-size: 14px;
@@ -365,6 +371,10 @@ img {
 .post-content dl {
   margin-bottom: 24px;
 }
+.post-content pre,
+.post-content table {
+  margin-bottom: 32px;
+}
 .post-content ul,
 .post-content ol {
   padding-left: 20px;
@@ -393,11 +403,6 @@ img {
 .post-content dd ~ dd {
   margin-top: 10px;
 }
-.post-content pre,
-.post-content table {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
 .post-content table {
   width: 100%;
   border-collapse: collapse;
@@ -412,6 +417,17 @@ img {
   font-size: 14px;
   text-align: left;
 }
+.post-content pre {
+  margin-top: 0;
+  background: transparent !important;
+  line-height: 1.7;
+}
+.post-content pre code {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px 22px;
+  white-space: inherit;
+}
 .post-content code {
   margin-left: 4px;
   margin-right: 4px;
@@ -421,40 +437,38 @@ img {
   white-space: pre-wrap;
   background: rgba(0, 0, 0, 0.04);
 }
-.post-content pre {
-  background: transparent !important;
+
+.post-content .highlight {
+  margin-bottom: 32px;
+  background: rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
 }
-.post-content pre code {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 20px 22px;
-  line-height: 1.7;
-  border-radius: 2px;
+.post-content .highlight table,
+.post-content .highlight pre {
+  margin-bottom: 0;
+}
+.post-content .highlight code {
+  background: transparent;
 }
 .post-content .highlight table {
-  padding: 20px 22px;
+  width: auto;
 }
 .post-content .highlight table td {
   padding: 0;
   border-bottom: 0;
 }
-.post-content .highlight table td pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .post-content .highlight table td:first-child pre code {
-  padding-right: 0;
   color: rgba(0, 0, 0, 0.2);
-  border-radius: 2px 0 0 2px;
+  text-align: right;
 }
 .post-content .highlight table td:last-child pre code {
   padding-left: 0;
-  border-radius: 0 2px 2px 0;
 }
 .post-content .highlight .ln {
-  margin-right: 24px;
+  margin-right: 22px;
   color: rgba(0, 0, 0, 0.2);
 }
+
 .post-content blockquote {
   margin: 0 0 0 -24px;
   padding: 0 0 0 21px;
