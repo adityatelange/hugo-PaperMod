@@ -4,7 +4,7 @@
 
 A simple, clean, flexible Hugo theme.
 
-Version: [3.2](https://github.com/nanxiaobei/hugo-paper/releases)
+Version: [3.3](https://github.com/nanxiaobei/hugo-paper/releases)
 
 </div>
 
