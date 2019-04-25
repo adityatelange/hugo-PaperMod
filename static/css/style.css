@@ -1,8 +1,8 @@
 /*
- * Paper v3.2
+ * Paper v3.3
  * A simple, clean, flexible Hugo theme.
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.4.22
+ * Updated in 2019.4.26
  */
 
 /* Reset
@@ -146,9 +146,16 @@ img {
   transform: translate3d(-50%, 5px, 0);
 }
 
-.no-scroll .menu-toggle::before,
-.no-scroll .menu-toggle::after {
-  background: #888;
+.no-scroll .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.no-scroll .logo {
+  display: none;
 }
 .no-scroll .menu-toggle::before {
   transform: translate3d(-50%, -1px, 0) rotateZ(135deg);
@@ -156,23 +163,11 @@ img {
 .no-scroll .menu-toggle::after {
   transform: translate3d(-50%, -1px, 0) rotateZ(-135deg);
 }
-.no-scroll .header {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.88);
-}
-.no-scroll .logo {
-  display: none;
-}
-.no-scroll .main,
-.no-scroll .footer {
-  filter: blur(12px);
-}
 .no-scroll .menu {
   display: flex;
+}
+.no-scroll .main {
+  margin-top: 65px;
 }
 
 .menu {
@@ -187,13 +182,12 @@ img {
   flex-direction: column;
   padding-bottom: 130px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.88);
+  background: #fff;
 }
 .menu li + li {
   margin-top: 12px;
 }
 .menu a {
-  color: #fff;
   font-size: 48px;
   font-weight: 700;
 }
