@@ -2,12 +2,9 @@
 
 {{ if not .IsHome }}
 <header class="page-header">
-  {{ if eq .Data.Singular "tag" }}
-  <div class="tagged">Tagged in</div>
-  <h1>{{ .Data.Term }}</h1>
-  {{ else }}
-  <h1>Posts</h1>
-  {{ end }}
+  <h1>
+  {{ if eq .Data.Singular "tag" }}{{ .Data.Term }}{{ else }}Posts{{ end }}
+  </h1>
 </header>
 {{ end }}
 
