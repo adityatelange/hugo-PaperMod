@@ -4,7 +4,7 @@
 
 A simple, clean, flexible Hugo theme.
 
-Version: [3.3](https://github.com/nanxiaobei/hugo-paper/releases)
+v3.4
 
 </div>
 
@@ -24,11 +24,11 @@ Hugo: https://themes.gohugo.io/hugo-paper/
 
 ## Install
 
-Inside the folder of your Hugo site run:
+Inside the folder of your Hugo site, run:
 
 ```bash
 $ cd themes
 $ git clone https://github.com/nanxiaobei/hugo-paper
 ```
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+For more information read the official [guide](https://gohugo.io/themes/installing-and-using-themes/) of Hugo.
