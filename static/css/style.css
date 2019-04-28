@@ -1,8 +1,8 @@
 /*
- * Paper v3.3
+ * Paper
  * A simple, clean, flexible Hugo theme.
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.4.26
+ * Updated in 2019.4.28
  */
 
 /* Reset
@@ -180,7 +180,7 @@ img {
   right: 0;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 130px;
+  padding-bottom: 180px;
   text-align: center;
   background: #fff;
 }
@@ -204,17 +204,9 @@ img {
 .page-header {
   margin-bottom: 40px;
 }
-.page-header .tagged {
-  margin-bottom: 2px;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transform: scale(0.84);
-  transform-origin: left center;
-}
 .page-header h1 {
   font-size: 32px;
+  font-weight: 400;
 }
 .pagination {
   display: flex;
@@ -419,7 +411,7 @@ img {
 .post-content pre code {
   margin-left: 0;
   margin-right: 0;
-  padding: 20px 22px;
+  padding: 20px;
   white-space: inherit;
 }
 .post-content code {
@@ -427,7 +419,7 @@ img {
   margin-right: 4px;
   padding: 4px;
   font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
-  font-size: 0.8em;
+  font-size: 0.82em;
   white-space: pre-wrap;
   background: rgba(0, 0, 0, 0.04);
 }
@@ -452,6 +444,7 @@ img {
   border-bottom: 0;
 }
 .post-content .highlight table td:first-child pre code {
+  padding-right: 16px;
   color: rgba(0, 0, 0, 0.2);
   text-align: right;
 }
@@ -459,7 +452,7 @@ img {
   padding-left: 0;
 }
 .post-content .highlight .ln {
-  margin-right: 22px;
+  margin-right: 16px;
   color: rgba(0, 0, 0, 0.2);
 }
 
