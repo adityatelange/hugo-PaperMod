@@ -20,7 +20,7 @@
    <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
   <footer class="entry-footer">
-    <time >{{ .Date.Format "2006.1.2" }}</time>
+    <time>{{ .Date.Format (.Site.Params.dateFormat | default "2006.1.2") }}</time>
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>
