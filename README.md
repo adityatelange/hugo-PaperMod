@@ -4,7 +4,7 @@
 
 A simple, clean, flexible Hugo theme.
 
-v3.4
+Version: 3.4
 
 </div>
 
