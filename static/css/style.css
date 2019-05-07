@@ -183,6 +183,7 @@ img {
   padding-bottom: 180px;
   text-align: center;
   background: #fff;
+  list-style: none;
 }
 .menu li + li {
   margin-top: 12px;
