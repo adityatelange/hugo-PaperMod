@@ -44,19 +44,20 @@
         {{ else }}
         <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
         {{ end }}
-        {{ if (isset .Site.Menus "main") }}
+        {{ if .Site.Menus.main }}
         <button class="menu-toggle" type="button"></button>
         {{ end }}
       </div>
     </header>
+    {{ if .Site.Menus.main }}
     <nav class="nav">
-    <ul class="menu">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
+      <ul class="menu">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
     </nav>
+    {{ end }}
     <main class="main">
