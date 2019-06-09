@@ -4,7 +4,7 @@
 
 A simple, clean, flexible Hugo theme.
 
-Version: 3.4
+Version: 4.0
 
 </div>
 
@@ -19,8 +19,8 @@ Hugo: https://themes.gohugo.io/hugo-paper/
 ## Features
 
 - Blazing fast
-- Just simple
-- Paper clean
+- Perfect look
+- Clear inside
 
 ## Install
 
