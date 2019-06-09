@@ -40,9 +40,9 @@
     <header class="header">
       <div class="wrap">
         {{ if .IsHome }}
-        <h1 class="logo"><a href="{{ "/" | absURL }}">{{ .Site.Title }} </a></h1>
+        <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
         {{ else }}
-        <p class="logo"><a href="{{ "/" | absURL }}">{{ .Site.Title }} </a></p>
+        <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
         {{ end }}
         {{ if (isset .Site.Menus "main") }}
         <button class="menu-toggle" type="button"></button>
