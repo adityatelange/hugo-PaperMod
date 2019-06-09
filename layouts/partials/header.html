@@ -22,15 +22,15 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ end -}}
     <!-- Styles -->
-    <link href="{{.Site.BaseURL}}css/github-gist.min.css" rel="stylesheet">
-    <link href="{{.Site.BaseURL}}css/style.css" rel="stylesheet">
+    <link href="{{ "css/github-gist.min.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "css/style.css" | absURL }}" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{.Site.BaseURL}}img/apple-touch-icon.png">
-    <link rel="icon" href="{{.Site.BaseURL}}img/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | absURL }}">
+    <link rel="icon" href="{{ "img/favicon.ico" | absURL }}">
     <!-- Generator -->
     {{ .Hugo.Generator }}
     <!-- RSS -->
-    <link rel="alternate" type="application/atom+xml" href="{{.Site.BaseURL}}index.xml" title="{{ .Site.Title }}">
+    <link rel="alternate" type="application/atom+xml" href="{{ "index.xml" | absURL }}" title="{{ .Site.Title }}">
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
@@ -40,9 +40,9 @@
     <header class="header">
       <div class="wrap">
         {{ if .IsHome }}
-        <h1 class="logo"><a href="{{.Site.BaseURL}}">{{ .Site.Title }} </a></h1>
+        <h1 class="logo"><a href="{{ "/" | absURL }}">{{ .Site.Title }} </a></h1>
         {{ else }}
-        <p class="logo"><a href="{{.Site.BaseURL}}">{{ .Site.Title }} </a></p>
+        <p class="logo"><a href="{{ "/" | absURL }}">{{ .Site.Title }} </a></p>
         {{ end }}
         <button class="menu-toggle" type="button"></button>
       </div>
