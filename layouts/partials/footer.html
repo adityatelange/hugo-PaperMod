@@ -6,27 +6,29 @@
   <span>&middot;</span>
   <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
 </footer>
-<script src="{{.Site.BaseURL}}js/instantclick.min.js" data-no-instant></script>
+<script src="{{ "js/instantclick.min.js" | absURL }}" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
-<script src="{{.Site.BaseURL}}js/highlight.min.js" data-no-instant></script>
+<script src="{{ "js/highlight.min.js" | absURL }}" data-no-instant></script>
 <script data-no-instant>
-  hljs.initHighlightingOnLoad();
-  setMenuListener();
+  let body;
+  function menuToggleListener() {
+    body.classList.toggle('no-scroll');
+  }
+  function setMenuToggleListener() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    body = document.querySelector('body');
+    menuToggle.addEventListener('click', menuToggleListener);
+  }
 
-  InstantClick.on('change', function() {
+  hljs.initHighlightingOnLoad();
+  setMenuToggleListener();
+
+  InstantClick.on('change', function () {
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block);
     });
-    setMenuListener();
+    setMenuToggleListener();
   });
-
-  function setMenuListener() {
-    var menuToggle = document.querySelector('.menu-toggle');
-    var body = document.querySelector('body');
-    menuToggle.addEventListener('click', function() {
-      body.classList.toggle('no-scroll');
-    }, false);
-  }
 </script>
 </body>
 </html>
