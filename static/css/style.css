@@ -1,16 +1,21 @@
 /*
  * Paper
- * A simple, clean, flexible Hugo theme.
+ * A simple, clean, flexible Hugo theme
+ * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.6.10
+ * Updated in 2019.6.11
  */
 
 /* Variables
 -------------------------------------------------- */
 :root {
+  --gap: 24px;
+  --header-height: 64px;
+  --footer-height: 60px;
   --primary: rgba(0, 0, 0, 0.88);
-  --secondary: rgba(0, 0, 0, 0.64);
+  --secondary: rgba(0, 0, 0, 0.56);
   --tertiary: rgba(0, 0, 0, 0.16);
+  --background: linear-gradient(120deg, #f0efee, #efeee6, #edeceb, #ebded7, #e0d5cf);
 }
 /* Reset
 -------------------------------------------------- */
@@ -104,29 +109,29 @@ img {
 /* Header
 -------------------------------------------------- */
 .header {
-  height: 64px;
+  height: var(--header-height);
 }
 .header .wrap {
   display: flex;
-  max-width: calc(1024px + 24px * 2);
+  max-width: calc(1024px + var(--gap) * 2);
   margin-left: auto;
   margin-right: auto;
 }
 .logo a,
 .menu-toggle {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
 }
 .logo a {
   display: block;
   font-size: 24px;
   font-weight: 700;
-  line-height: 64px;
+  line-height: var(--header-height);
 }
 .menu-toggle {
   position: relative;
   width: 68px;
-  height: 64px;
+  height: var(--header-height);
   margin-left: auto;
   outline: 0;
 }
@@ -148,60 +153,64 @@ img {
   transform: translate3d(-50%, 5px, 0);
 }
 
-.no-scroll .header {
+.blur .header {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
 }
-.no-scroll .logo {
-  display: none;
-}
-.no-scroll .menu-toggle::before {
+.blur .menu-toggle::before {
   transform: translate3d(-50%, -1px, 0) rotateZ(135deg);
 }
-.no-scroll .menu-toggle::after {
+.blur .menu-toggle::after {
   transform: translate3d(-50%, -1px, 0) rotateZ(-135deg);
 }
-.no-scroll .menu {
-  display: flex;
+.blur .menu {
+  top: 0;
 }
-.no-scroll .main {
-  margin-top: 64px;
+.blur .logo,
+.blur .main,
+.blur .footer {
+  filter: blur(32px);
+}
+.blur .main {
+  margin-top: var(--header-height);
 }
 
 .menu {
-  display: none;
   position: fixed;
   z-index: 10;
-  top: 64px;
-  bottom: 0;
+  top: -100vh;
   left: 0;
-  right: 0;
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 180px;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: var(--header-height);
   text-align: center;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
   list-style: none;
-}
-.menu li + li {
-  margin-top: 12px;
 }
 .menu a {
   font-size: 48px;
+  line-height: 80px;
+}
+/* Body
+-------------------------------------------------- */
+.list {
+  background: var(--background);
 }
 /* Main
 -------------------------------------------------- */
 .main {
   position: relative;
-  min-height: calc(100vh - 64px - 60px);
-  max-width: calc(640px + 24px * 2);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(640px + var(--gap) * 2);
   margin-left: auto;
   margin-right: auto;
-  padding: 24px;
+  padding: var(--gap);
 }
 .page-header {
   margin-top: 8px;
@@ -219,7 +228,7 @@ img {
   font-size: 13px;
   line-height: 34px;
   background: var(--primary);
-  border-radius: 34px;
+  border-radius: calc(34px / 2);
 }
 .pagination .prev {
   padding-left: 16px;
@@ -238,7 +247,7 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 320px;
-  margin-bottom: 64px;
+  margin-bottom: var(--header-height);
   overflow: hidden;
 }
 .first-entry .entry-header h2 {
@@ -247,7 +256,7 @@ img {
 .first-entry .entry-content {
   max-height: 81px;
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-size: 16px;
   overflow: hidden;
   -webkit-line-clamp: 3;
@@ -260,14 +269,14 @@ img {
 }
 .post-entry {
   position: relative;
-  margin-bottom: 24px;
-  padding: 24px;
-  box-shadow: 0 8px 80px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: #fff;
+  box-shadow: 0 12px 0 -4px rgba(255, 255, 255, 0.4);
   border-radius: 8px;
-  transition: box-shadow 0.2s;
   overflow: hidden;
+  transition: box-shadow 0.2s;
 }
-
 .post-entry:active {
   transform: scale(0.96);
   transition: transform 0.1s;
@@ -277,13 +286,15 @@ img {
 }
 .entry-content {
   margin-top: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--secondary);
   font-size: 14px;
   line-height: 1.7;
 }
 .entry-footer {
+  color: var(--secondary);
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 .entry-link {
@@ -300,25 +311,26 @@ img {
   margin-bottom: 40px;
 }
 .post-title {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 40px;
   transform: translateX(-1px);
 }
 .post-meta {
   color: var(--secondary);
   font-size: 14px;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 .post-content {
   font-size: 18px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 .post-content h1 {
-  margin-top: 48px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 32px;
 }
 .post-content h2 {
-  margin-top: 40px;
+  margin-top: 32px;
   margin-bottom: 24px;
 }
 .post-content h3,
@@ -349,6 +361,12 @@ img {
 .post-content a {
   box-shadow: 0 1px 0 var(--primary);
 }
+.post-content a code {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  box-shadow: 0 -1px 0 var(--primary) inset;
+}
 .post-content del {
   text-decoration: none;
   background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
@@ -357,7 +375,7 @@ img {
 .post-content ul,
 .post-content ol,
 .post-content dl {
-  margin-bottom: 24px;
+  margin-bottom: var(--gap);
 }
 .post-content pre,
 .post-content table {
@@ -419,16 +437,18 @@ img {
 .post-content code {
   margin-left: 4px;
   margin-right: 4px;
-  padding: 4px;
+  padding: 4px 6px;
   font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
   font-size: 0.8em;
   white-space: pre-wrap;
-  background: #f8f8f8;
+  background: #f7f7f8;
+  border-radius: 2px;
 }
 
 .post-content .highlight {
   margin-bottom: 32px;
-  background: #f8f8f8;
+  background: #f7f7f8;
+  border-radius: 2px;
   overflow-x: auto;
 }
 .post-content .highlight table,
@@ -452,6 +472,7 @@ img {
 }
 .post-content .highlight table td:last-child pre code {
   padding-left: 0;
+  overflow: hidden;
 }
 .post-content .highlight .ln {
   margin-right: 16px;
@@ -459,7 +480,7 @@ img {
 }
 
 .post-content blockquote {
-  margin: 0 0 0 -24px;
+  margin: 0 0 0 calc(var(--gap) * -1);
   padding: 0 0 0 21px;
   font-style: italic;
   border-left: 3px solid var(--primary);
@@ -475,7 +496,7 @@ img {
 .post-content hr::before {
   content: '...';
   display: inline-block;
-  color: var(--primary);
+  color: var(--secondary);
   font-size: 32px;
   letter-spacing: 20px;
   transform: translate(10px, -40px);
@@ -499,7 +520,7 @@ img {
   color: var(--secondary);
   font-size: 14px;
   line-height: 32px;
-  background: #f8f8f8;
+  background: #f7f7f8;
   border-radius: 2px;
 }
 .post-tags a:hover {
@@ -508,10 +529,10 @@ img {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  max-width: calc(640px + 24px * 2);
+  max-width: calc(640px + var(--gap) * 2);
   margin-left: auto;
   margin-right: auto;
-  padding: calc((60px - 24px) / 2) 24px;
+  padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
   color: var(--secondary);
   font-size: 12px;
   text-align: center;
