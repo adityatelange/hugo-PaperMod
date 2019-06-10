@@ -19,8 +19,8 @@ Hugo: https://themes.gohugo.io/hugo-paper/
 ## Features
 
 - Blazing fast
-- Perfect look
-- Clear inside
+- Fluent design
+- Smooth taste
 
 ## Install
 
