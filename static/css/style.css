@@ -265,6 +265,7 @@ img {
   box-shadow: 0 8px 80px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: box-shadow 0.2s;
+  overflow: hidden;
 }
 
 .post-entry:active {
