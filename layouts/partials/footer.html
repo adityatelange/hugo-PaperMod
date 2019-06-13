@@ -16,6 +16,7 @@
   }
   function setMenuToggleListener() {
     const menuToggle = document.querySelector('.menu-toggle');
+    if (!menuToggle) return;
     body = document.querySelector('body');
     menuToggle.addEventListener('click', menuToggleListener);
   }
