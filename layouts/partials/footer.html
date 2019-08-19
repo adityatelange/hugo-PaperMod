@@ -6,30 +6,7 @@
   <span>&middot;</span>
   <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
 </footer>
-<script src="{{ "js/instantclick.min.js" | absURL }}" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
-<script src="{{ "js/highlight.min.js" | absURL }}" data-no-instant></script>
-<script data-no-instant>
-  let body;
-  function menuToggleListener() {
-    body.classList.toggle('blur');
-  }
-  function setMenuToggleListener() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    if (!menuToggle) return;
-    body = document.querySelector('body');
-    menuToggle.addEventListener('click', menuToggleListener);
-  }
-
-  hljs.initHighlightingOnLoad();
-  setMenuToggleListener();
-
-  InstantClick.on('change', function () {
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block);
-    });
-    setMenuToggleListener();
-  });
-</script>
+<script src="{{ "highlight.min.js" | absURL }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
