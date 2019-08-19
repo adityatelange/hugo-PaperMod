@@ -1,34 +1,35 @@
-<h1 align="center">Paper</h1>
-
-<div align="center">
+# Paper <sup><sup><sub><sub>v4.1</sub></sub></sup></sup>
 
 A simple, clean, flexible Hugo theme.
 
-Version: 4.0
+☄️ Fast | 💅 Fluent | 🍧 Smooth
 
-</div>
+---
 
 ## Overview
 
 Demo: https://nanxiaobei.github.io/hugo-paper/
 
-Hugo: https://themes.gohugo.io/hugo-paper/
+<p>
+<kbd>
+  <img src="https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png" alt="paper">
+</kbd>
+</p>
 
-![Screen shot](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png)
-
-## Features
-
-- Blazing fast
-- Fluent design
-- Smooth taste
+Hugo themes: https://themes.gohugo.io/hugo-paper/
 
 ## Install
 
 Inside the folder of your Hugo site, run:
 
 ```bash
-$ cd themes
-$ git clone https://github.com/nanxiaobei/hugo-paper
+git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+```
+
+Then change `theme` in `config.toml`:
+
+```toml
+theme = "paper"
 ```
 
 For more information read the official [guide](https://gohugo.io/themes/installing-and-using-themes/) of Hugo.
