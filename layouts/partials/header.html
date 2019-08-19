@@ -22,11 +22,11 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ end -}}
     <!-- Styles -->
-    <link href="{{ "css/github-gist.min.css" | absURL }}" rel="stylesheet">
-    <link href="{{ "css/style.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "an-old-hope.min.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "style.css" | absURL }}" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | absURL }}">
-    <link rel="icon" href="{{ "img/favicon.ico" | absURL }}">
+    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+    <link rel="icon" href="{{ "favicon.ico" | absURL }}">
     <!-- Generator -->
     {{ hugo.Generator }}
     <!-- RSS -->
@@ -35,30 +35,24 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-    {{ partial "header-include.html" . }}
   </head>
   <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
     <header class="header">
-      <div class="wrap">
+      <nav class="nav">
         {{ if .IsHome }}
         <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
         {{ else }}
         <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
         {{ end }}
         {{ if .Site.Menus.main }}
-        <button class="menu-toggle" type="button"></button>
+        <ul class="menu">
+          {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </div>
+      </nav>
     </header>
-    {{ if .Site.Menus.main }}
-    <nav class="nav">
-      <ul class="menu">
-        {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-    {{ end }}
     <main class="main">

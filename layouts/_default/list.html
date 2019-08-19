@@ -8,7 +8,7 @@
 </header>
 {{ end }}
 
-{{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 
 {{ if gt $paginator.TotalPages 0 }}
 {{ range $index, $page := $paginator.Pages }}
@@ -20,7 +20,7 @@
    <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
   <footer class="entry-footer">
-    <time>{{ .Date.Format (.Site.Params.dateFormat | default "2006.1.2") }}</time>
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>

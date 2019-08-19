@@ -6,19 +6,19 @@
     <div class="post-meta">
       {{- if or .Params.author .Site.Params.author -}}
       {{ .Params.author | default .Site.Params.author }} · {{ end }}
-      {{- .Date.Format (.Site.Params.dateFormat | default "2006.1.2") -}}
+      {{- .Date.Format "January 2, 2006" -}}
     </div>
   </header>
   <div class="post-content">{{ .Content }}</div>
+  {{ if .Params.tags }}
   <footer class="post-footer">
-    {{ if .Params.tags }}
     <ul class="post-tags">
       {{ range .Params.tags }}
       <li><a href="{{ "tags/" | absURL }}{{ . | urlize }}/">{{ . }}</a></li>
       {{ end }}
     </ul>
-    {{ end }}
   </footer>
+  {{ end }}
   <!-- Comments area start -->
   {{ if not (eq .Params.comments false) }}
   {{ if .Site.DisqusShortname }}
