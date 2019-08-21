@@ -1,8 +1,8 @@
-# Paper <sup><sup><sub><sub>v4.1</sub></sub></sup></sup>
+# Paper <sup><sup><sub>v4.2</sub></sup></sup>
 
 A simple, clean, flexible Hugo theme.
 
-☄️ Fast | 💅 Fluent | 🍧 Smooth
+☄️ Fast | ☁️ Fluent | 🌙 Smooth
 
 ---
 

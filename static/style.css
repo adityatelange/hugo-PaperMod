@@ -3,7 +3,7 @@
  * A simple, clean, flexible Hugo theme
  * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.8.20
+ * Updated in 2019.8.21
  */
 
 /* Variables
@@ -152,10 +152,13 @@ img {
 .menu li + li {
   margin-left: var(--gap);
 }
+.menu a {
+  font-size: 16px;
+}
 /* Body
 -------------------------------------------------- */
 .list {
-  background: linear-gradient(135deg, #ccc, #ddd, #eee, #ddd, #eee);
+  background: linear-gradient(135deg, #e2e2e2, #e5e5e5, #f8f8f8, #e2e2e2, #ddd);
 }
 .list::before {
   content: "";
@@ -177,12 +180,12 @@ img {
   padding: var(--gap);
 }
 .page-header {
-  margin-top: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 .page-header h1 {
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .pagination {
   display: flex;
@@ -231,13 +234,12 @@ img {
   position: relative;
   margin-bottom: var(--gap);
   padding: var(--gap);
-  background: rgba(255, 255, 255, 0.72);
+  background: #fff;
   border-radius: var(--radius);
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
 .post-entry:active {
-  background: rgba(255, 255, 255, 0.96);
   transform: scale(0.96);
   transition: 0.1s;
 }
@@ -272,12 +274,12 @@ img {
 -------------------------------------------------- */
 .post-header {
   margin-top: 24px;
-  margin-bottom: 48px;
+  margin-bottom: var(--content-gap);
 }
 .post-title {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   font-size: 40px;
-  transform: translateX(-1px);
+  transform: translateX(-2px);
 }
 .post-meta {
   color: var(--secondary);
@@ -448,8 +450,8 @@ img {
 }
 .post-content hr {
   height: 1px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 56px;
+  margin-bottom: 56px;
   background: var(--tertiary);
   border-top: 0;
   border-bottom: 0;
