@@ -26,7 +26,7 @@ Inside the folder of your Hugo site, run:
 git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
 ```
 
-Then change `theme` in `config.toml`:
+Open `config.toml`, change `theme`:
 
 ```toml
 theme = "paper"

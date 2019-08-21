@@ -181,11 +181,10 @@ img {
 }
 .page-header {
   margin-bottom: 24px;
+  overflow: hidden;
 }
 .page-header h1 {
-  font-size: 64px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 40px;
 }
 .pagination {
   display: flex;
