@@ -14,7 +14,8 @@
   <footer class="post-footer">
     <ul class="post-tags">
       {{ range .Params.tags }}
-      <li><a href="{{ "tags/" | absURL }}{{ . | urlize }}/">{{ . }}</a></li>
+      {{ $href := print (absURL "tags/") (urlize .) }}
+      <li><a href="{{ $href }}">{{ . }}</a></li>
       {{ end }}
     </ul>
   </footer>
