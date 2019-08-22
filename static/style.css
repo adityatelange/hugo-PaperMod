@@ -157,7 +157,7 @@ img {
 /* Body
 -------------------------------------------------- */
 .list {
-  background: linear-gradient(135deg, #e2e2e2, #e5e5e5, #f8f8f8, #e2e2e2, #ddd);
+  background: linear-gradient(135deg, #e2e2e2, #f8f8f8, #ddd);
 }
 .list::before {
   content: "";
