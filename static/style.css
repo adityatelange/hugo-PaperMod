@@ -3,7 +3,7 @@
  * A simple, clean, flexible Hugo theme
  * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.8.21
+ * Updated in 2019.8.23
  */
 
 /* Variables
@@ -22,8 +22,8 @@
   --secondary: rgba(0, 0, 0, 0.56);
   --tertiary: rgba(0, 0, 0, 0.16);
 
-  --hljs: #1c1d21;
-  --code: #f5f5f5;
+  --hljs-bg: #1c1d21;
+  --code-bg: #f5f5f5;
   --border: #eee;
 }
 /* Reset
@@ -43,6 +43,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   line-height: 1.8;
+  word-break: break-word;
 }
 article,
 aside,
@@ -86,6 +87,7 @@ figure {
   margin: 0;
 }
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -136,10 +138,6 @@ img {
   margin-left: var(--gap);
   margin-right: var(--gap);
 }
-.nav .logo:only-child {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
 .logo a {
   font-size: 24px;
   font-weight: 700;
@@ -147,6 +145,7 @@ img {
 .menu {
   display: flex;
   list-style: none;
+  word-break: keep-all;
   overflow-x: auto;
 }
 .menu li + li {
@@ -181,7 +180,6 @@ img {
 }
 .page-header {
   margin-bottom: 24px;
-  overflow: hidden;
 }
 .page-header h1 {
   font-size: 40px;
@@ -214,13 +212,17 @@ img {
   justify-content: center;
   height: 320px;
   margin-bottom: var(--header-height);
+}
+.first-entry .entry-header {
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .first-entry .entry-header h2 {
   font-size: 40px;
 }
 .first-entry .entry-content {
-  max-height: 75px;
   margin-top: 14px;
   margin-bottom: 14px;
   font-size: 16px;
@@ -235,25 +237,21 @@ img {
   padding: var(--gap);
   background: #fff;
   border-radius: var(--radius);
-  overflow: hidden;
-  transition: box-shadow 0.2s;
+  transition: transform 0.1s;
 }
 .post-entry:active {
   transform: scale(0.96);
-  transition: 0.1s;
 }
 .entry-header h2 {
   font-size: 24px;
 }
 .entry-content {
-  max-height: 44px;
   margin-top: 8px;
   margin-bottom: 8px;
   color: var(--secondary);
   font-size: 14px;
   line-height: 1.6;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -366,40 +364,58 @@ img {
   margin-top: 10px;
 }
 .post-content table {
-  width: 100%;
   margin-bottom: 32px;
-  border-collapse: collapse;
-  border-spacing: 0;
 }
-.post-content th,
-.post-content td {
+.post-content table th,
+.post-content table:not(.highlighttable) td {
   min-width: 80px;
   padding: 12px 8px;
   line-height: 1.5;
-  word-break: break-word;
   border-bottom: 1px solid var(--border);
 }
-.post-content th {
+.post-content table th {
   font-size: 14px;
   text-align: left;
 }
-.post-content td code:only-child {
+.post-content table:not(.highlighttable) td code:only-child {
   margin-left: 0;
   margin-right: 0;
 }
-.post-content pre,
-.post-content .highlight {
-  margin: 0 calc(var(--gap) * -1) 32px;
-  background: var(--hljs) !important;
+.post-content .highlight,
+.post-content pre {
+  margin-left: calc(var(--gap) * -1);
+  margin-right: calc(var(--gap) * -1);
+  margin-bottom: 32px;
+  background: var(--hljs-bg) !important;
   border-radius: var(--radius);
 }
-.post-content pre code {
+.post-content .highlight pre {
   margin-left: 0;
   margin-right: 0;
-  padding: var(--gap);
-  white-space: inherit;
-  background: transparent;
+  margin-bottom: 0;
 }
+/* table */
+.post-content .highlighttable {
+  table-layout: fixed;
+}
+.post-content .highlighttable td:first-child {
+  width: 40px;
+}
+.post-content .highlighttable td .linenodiv {
+  padding-right: 0 !important;
+}
+.post-content .highlighttable td .linenodiv pre,
+.post-content .highlighttable td .highlight {
+  margin-bottom: 0;
+}
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+  display: none;
+}
+/* inline */
+.post-content .highlight span {
+  background: transparent !important;
+}
+
 .post-content code {
   margin-left: 4px;
   margin-right: 4px;
@@ -407,41 +423,18 @@ img {
   font-family: Menlo, Monaco, "Courier New", Courier, monospace;
   font-size: 0.78em;
   line-height: 1.5;
-  white-space: pre-wrap;
-  background: var(--code);
+  background: var(--code-bg);
   border-radius: 2px;
 }
-
-.post-content .highlight table,
-.post-content .highlight pre {
-  margin-bottom: 0;
-}
-.post-content .highlight table {
-  width: auto;
-}
-.post-content .highlight pre {
+.post-content pre code {
+  display: block;
   margin-left: 0;
   margin-right: 0;
+  padding: var(--gap);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border-radius: 0;
 }
-.post-content .highlight table td {
-  min-width: auto;
-  padding: 0;
-  border-bottom: 0;
-}
-.post-content .highlight table td:first-child pre code {
-  padding-right: 16px;
-  color: var(--tertiary);
-  text-align: right;
-}
-.post-content .highlight table td:last-child pre code {
-  padding-left: 0;
-  overflow: hidden;
-}
-.post-content .highlight .ln {
-  margin-right: 16px;
-  color: var(--tertiary);
-}
-
 .post-content blockquote {
   margin: 0 0 0 calc(var(--gap) * -1);
   padding: 0 0 0 21px;
@@ -474,7 +467,7 @@ img {
   color: var(--secondary);
   font-size: 14px;
   line-height: 34px;
-  background: var(--code);
+  background: var(--code-bg);
   border-radius: 2px;
 }
 .post-tags a:hover {
