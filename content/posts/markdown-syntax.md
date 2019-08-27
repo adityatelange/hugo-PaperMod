@@ -1,1 +1,0 @@
-../post/markdown-syntax.md

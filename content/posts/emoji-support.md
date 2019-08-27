@@ -1,1 +1,0 @@
-../post/emoji-support.md
