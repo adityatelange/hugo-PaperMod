@@ -35,6 +35,7 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
+    {{ template "_internal/opengraph.html" . }}
   </head>
   <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
     <header class="header">
