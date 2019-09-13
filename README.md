@@ -23,10 +23,10 @@ Hugo themes: https://themes.gohugo.io/hugo-paper/
 Inside the folder of your Hugo site, run:
 
 ```bash
-git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+git clone https://github.com/nanxiaobei/hugo-paper themes/paper
 ```
 
-Open `config.toml`, change `theme` to:
+Then change in `config.toml`:
 
 ```toml
 theme = "paper"
