@@ -389,6 +389,9 @@ img {
   background: var(--hljs-bg) !important;
   border-radius: var(--radius);
 }
+.post-content ul pre {
+  margin-left: calc(var(--gap) * -2);
+}
 .post-content .highlight pre {
   margin-left: 0;
   margin-right: 0;
