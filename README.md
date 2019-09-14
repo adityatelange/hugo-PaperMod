@@ -1,4 +1,4 @@
-# Paper <sup><sup><sub>v4.2</sub></sup></sup>
+# Paper <sup><sup><sub>v4.3</sub></sup></sup>
 
 A simple, clean, flexible Hugo theme.
 
