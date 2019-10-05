@@ -1,4 +1,3 @@
-ignoreFiles = ["content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*"]
 baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
