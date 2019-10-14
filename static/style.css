@@ -3,10 +3,10 @@
  * A simple, clean, flexible Hugo theme
  * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.9.15
+ * Updated in 2019.10.15
  */
 
-/* Variables
+/* Theme
 -------------------------------------------------- */
 :root {
   --gap: 24px;
@@ -17,6 +17,7 @@
   --footer-height: 60px;
   --radius: 8px;
 
+  --theme: #fff;
   --primary: rgba(0, 0, 0, 0.88);
   --secondary: rgba(0, 0, 0, 0.56);
   --tertiary: rgba(0, 0, 0, 0.16);
@@ -24,6 +25,22 @@
   --hljs-bg: #1c1d21;
   --code-bg: #f5f5f5;
   --border: #eee;
+}
+.dark {
+  --theme: #3c3c3c;
+  --primary: rgba(255, 255, 255, 0.88);
+  --secondary: rgba(255, 255, 255, 0.56);
+  --tertiary: rgba(255, 255, 255, 0.16);
+
+  --hljs-bg: #2a2a2a;
+  --code-bg: #4f4f4f;
+  --border: #5f5f5f;
+}
+.list {
+  background: linear-gradient(135deg, #e2e2e2, #f8f8f8, #ddd);
+}
+.dark.list {
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a, #000);
 }
 /* Reset
 -------------------------------------------------- */
@@ -43,6 +60,7 @@ body {
   font-size: 18px;
   line-height: 1.8;
   word-break: break-word;
+  background: var(--theme);
 }
 article,
 aside,
@@ -112,7 +130,7 @@ textarea {
 }
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  box-shadow: 0 0 0 50px #fff inset;
+  box-shadow: 0 0 0 50px var(--theme) inset;
 }
 img {
   display: block;
@@ -153,22 +171,6 @@ img {
 .menu a {
   font-size: 16px;
 }
-/* Body
--------------------------------------------------- */
-.list {
-  position: relative;
-  background: linear-gradient(135deg, #e2e2e2, #f8f8f8, #ddd);
-}
-.list-bg {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.24);
-  opacity: 0;
-}
 /* Main
 -------------------------------------------------- */
 .main {
@@ -189,7 +191,7 @@ img {
   display: flex;
 }
 .pagination a {
-  color: #fff;
+  color: var(--theme);
   font-size: 13px;
   line-height: 36px;
   background: var(--primary);
@@ -236,7 +238,7 @@ img {
   position: relative;
   margin-bottom: var(--gap);
   padding: var(--gap);
-  background: #fff;
+  background: var(--theme);
   border-radius: var(--radius);
   transition: transform 0.1s;
 }

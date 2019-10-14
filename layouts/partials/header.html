@@ -38,9 +38,6 @@
     {{ end }}
   </head>
   <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
-    {{if ne .Kind `page` }}
-    <div class="list-bg"></div>
-    {{end}}
     <header class="header">
       <nav class="nav">
         {{ if .IsHome }}
