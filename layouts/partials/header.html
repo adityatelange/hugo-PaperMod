@@ -36,8 +36,51 @@
     {{ template "_internal/google_analytics_async.html" . }}
     {{ template "_internal/opengraph.html" . }}
     {{ end }}
+    <!-- Script -->
+    <script>
+      function setTheme() {
+        const now = Date.now();
+        const prev = Number(localStorage.getItem('time'));
+
+        function setBodyClass(sunrise, sunset) {
+          if (now > sunrise && now < sunset) return;
+          const body = document.querySelector('body');
+          body.classList.add('dark');
+        }
+
+        if (now - prev > 24 * 60 * 60 * 10000) {
+          let light;
+          let dark;
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then(res => res.json())
+            .then(data => {
+              light = data.sunrise.split(':');
+              dark = data.sunset.split(':');
+            })
+            .catch(() => {
+              light = [7, 0];
+              dark = [19, 0];
+            })
+            .finally(() => {
+              const sunrise = new Date().setHours(light[0], light[1], 0);
+              const sunset = new Date().setHours(dark[0], dark[1], 0);
+              setBodyClass(sunrise, sunset);
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('time', now);
+        } else {
+          const sunrise = Number(localStorage.getItem('sunrise'));
+          const sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass(sunrise, sunset);
+        }
+      }
+    </script>
   </head>
   <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
+    <script>
+      setTheme();
+    </script>
     <header class="header">
       <nav class="nav">
         {{ if .IsHome }}
