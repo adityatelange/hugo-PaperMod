@@ -1,4 +1,4 @@
-# Paper <sup><sup><sub>v4.4 (dark mode)</sub></sup></sup>
+# Paper <sup><sup><sub>v4.4 (Dark Mode)</sub></sup></sup>
 
 A simple, clean, flexible Hugo theme.
 
@@ -18,7 +18,7 @@ Demo: https://nanxiaobei.github.io/hugo-paper/
 
 <p>
 <kbd>
-  <img src="https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot_dark.png" alt="Paper dark mode">
+  <img src="https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot_dark.png" alt="Paper Dark Mode">
 </kbd>
 </p>
 
