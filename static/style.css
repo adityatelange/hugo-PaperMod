@@ -3,7 +3,7 @@
  * A simple, clean, flexible Hugo theme
  * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.10.15
+ * Updated in 2019.10.17
  */
 
 /* Theme
@@ -37,7 +37,7 @@
   --border: #5f5f5f;
 }
 .list {
-  background: linear-gradient(135deg, #e2e2e2, #f8f8f8, #ddd);
+  background: linear-gradient(135deg, #ddd, #f5f5f5, #d5d5d5);
 }
 .dark.list {
   background: linear-gradient(135deg, #1c1c1c, #2a2a2a, #000);
