@@ -38,4 +38,4 @@ Then change in `config.toml`:
 theme = "paper"
 ```
 
-For more information read the official [guide](https://gohugo.io/themes/installing-and-using-themes/) of Hugo.
+For more information read the official [guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
