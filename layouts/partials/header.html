@@ -39,17 +39,21 @@
     <!-- Script -->
     <script>
       function setTheme() {
-        const prev = Number(localStorage.getItem('time'));
-        const now = Date.now();
+        const time = new Date();
+
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth()) + '.' + String(time.getDate());
+
+        const now = time.getTime();
         let sunrise;
         let sunset;
 
         function setBodyClass() {
           if (now > sunrise && now < sunset) return;
-          document.body.classList.add('sunset');
+          document.body.classList.add('dark');
         }
 
-        if (now - prev > 24 * 60 * 60 * 10000) {
+        if (date !== prev) {
           fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
             .then(res => res.json())
             .then(data => {
@@ -61,13 +65,13 @@
               sunset = [19, 0];
             })
             .finally(() => {
-              sunrise = new Date().setHours(sunrise[0], sunrise[1], 0);
-              sunset = new Date().setHours(sunset[0], sunset[1], 0);
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
               setBodyClass();
               localStorage.setItem('sunrise', sunrise);
               localStorage.setItem('sunset', sunset);
             });
-          localStorage.setItem('time', now);
+          localStorage.setItem('date', date);
         } else {
           sunrise = Number(localStorage.getItem('sunrise'));
           sunset = Number(localStorage.getItem('sunset'));
