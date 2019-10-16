@@ -39,40 +39,39 @@
     <!-- Script -->
     <script>
       function setTheme() {
-        const now = Date.now();
         const prev = Number(localStorage.getItem('time'));
+        const now = Date.now();
+        let sunrise;
+        let sunset;
 
-        function setBodyClass(sunrise, sunset) {
+        function setBodyClass() {
           if (now > sunrise && now < sunset) return;
-          const body = document.querySelector('body');
-          body.classList.add('dark');
+          document.body.classList.add('sunset');
         }
 
         if (now - prev > 24 * 60 * 60 * 10000) {
-          let light;
-          let dark;
           fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
             .then(res => res.json())
             .then(data => {
-              light = data.sunrise.split(':');
-              dark = data.sunset.split(':');
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
             })
             .catch(() => {
-              light = [7, 0];
-              dark = [19, 0];
+              sunrise = [7, 0];
+              sunset = [19, 0];
             })
             .finally(() => {
-              const sunrise = new Date().setHours(light[0], light[1], 0);
-              const sunset = new Date().setHours(dark[0], dark[1], 0);
-              setBodyClass(sunrise, sunset);
+              sunrise = new Date().setHours(sunrise[0], sunrise[1], 0);
+              sunset = new Date().setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
               localStorage.setItem('sunrise', sunrise);
               localStorage.setItem('sunset', sunset);
             });
           localStorage.setItem('time', now);
         } else {
-          const sunrise = Number(localStorage.getItem('sunrise'));
-          const sunset = Number(localStorage.getItem('sunset'));
-          setBodyClass(sunrise, sunset);
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
         }
       }
     </script>
