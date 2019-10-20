@@ -42,7 +42,7 @@
         const time = new Date();
 
         const prev = localStorage.getItem('date');
-        const date = String(time.getMonth()) + '.' + String(time.getDate());
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
 
         const now = time.getTime();
         let sunrise;
