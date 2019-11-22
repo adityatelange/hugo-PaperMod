@@ -1,3 +1,4 @@
+timeout = 30000
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
