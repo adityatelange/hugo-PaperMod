@@ -10,7 +10,7 @@ Written in Go, Hugo is an open source static site generator available under the 
 
 Hugo makes use of a variety of open source projects including:
 
-* https://github.com/russross/blackfriday
+* https://github.com/yuin/goldmark
 * https://github.com/alecthomas/chroma
 * https://github.com/muesli/smartcrop
 * https://github.com/spf13/cobra
