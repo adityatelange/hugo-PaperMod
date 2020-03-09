@@ -245,6 +245,10 @@ img {
 .post-entry:active {
   transform: scale(0.96);
 }
+.tag-entry .entry-content,
+.tag-entry .entry-footer {
+  display: none;
+}
 .entry-header h2 {
   font-size: 24px;
 }
