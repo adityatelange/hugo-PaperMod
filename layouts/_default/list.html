@@ -1,16 +1,25 @@
-{{ partial "header.html" . }}
+{{- partial "header.html" . }}
 
-
-{{ if not .IsHome }}
+{{- $scope := . }}
+{{- if .IsHome }}
+{{- $scope = .Site }}
+{{- else }}
 <header class="page-header">
-  <h1>{{ if eq .Data.Singular "tag" }}{{ .Data.Term }}{{ else }}Posts{{ end }}</h1>
+  <h1>{{ if .Data.Term }}{{ .Data.Term }}{{ else }}Tags{{ end }}</h1>
 </header>
-{{ end }}
+{{- end }}
 
-{{ $paginator := .Paginate (where .Site.RegularPages ".Params.type" "!=" "page") }}
+{{- $paginator := .Paginate (where $scope.RegularPages ".Params.type" "!=" "page") }}
 
-{{ range $index, $page := $paginator.Pages }}
-<article class="{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
+{{- range $index, $page := $paginator.Pages }}
+
+{{- $entryClass := "post-entry" }}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
+{{- $entryClass = "first-entry" }}
+{{- else if .Data.Term }}
+{{- $entryClass = "post-entry tag-entry" }}
+{{- end }}
+<article class="{{ $entryClass }}">
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
@@ -22,19 +31,19 @@
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>
-{{ end }}
+{{- end }}
 
-{{ if gt $paginator.TotalPages 1 }}
+{{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination">
-    {{ if $paginator.HasPrev }}
+    {{- if $paginator.HasPrev }}
     <a class="prev" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
-    {{ end }}
-    {{ if $paginator.HasNext }}
+    {{- end }}
+    {{- if $paginator.HasNext }}
     <a class="next" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
-    {{ end }}
+    {{- end }}
   </nav>
 </footer>
-{{ end }}
+{{- end }}
 
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . }}
