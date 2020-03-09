@@ -1,4 +1,4 @@
-# Paper <sup><sup><sub>v4.5 (Dark Mode)</sub></sup></sup>
+# Paper <sup><sup><sub>v4.6 (Dark Mode)</sub></sup></sup>
 
 A simple, clean, flexible Hugo theme.
 
