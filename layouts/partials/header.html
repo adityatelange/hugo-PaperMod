@@ -5,14 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>
-      {{- if not .IsHome }}
-      {{- if eq .Kind "page" }}{{ .Title }}{{ else if .Data.Term }}{{ .Data.Term }}{{ else }}Tags{{ end }}
-      {{- print " - " }}
-      {{- end }}
-
-      {{- .Site.Title -}}
-    </title>
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
     <!-- Meta -->
     {{- if eq .Kind "page" }}
     <meta name="description" content="{{ .Summary }}">

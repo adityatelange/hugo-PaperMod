@@ -1,25 +1,21 @@
 {{- partial "header.html" . }}
 
-{{- $scope := . }}
-{{- if .IsHome }}
-{{- $scope = .Site }}
-{{- else }}
-<header class="page-header">
-  <h1>{{ if .Data.Term }}{{ .Data.Term }}{{ else }}Tags{{ end }}</h1>
-</header>
-{{- end }}
+{{- $scope := .Site }}
+{{- if .Title }}
+<header class="page-header"><h1>{{ .Title }}</h1></header>{{ $scope = . }}
+{{ end }}
 
 {{- $paginator := .Paginate (where $scope.RegularPages ".Params.type" "!=" "page") }}
 
 {{- range $index, $page := $paginator.Pages }}
 
-{{- $entryClass := "post-entry" }}
+{{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
-{{- $entryClass = "first-entry" }}
+{{- $class = "first-entry" }}
 {{- else if .Data.Term }}
-{{- $entryClass = "post-entry tag-entry" }}
+{{- $class = "post-entry tag-entry" }}
 {{- end }}
-<article class="{{ $entryClass }}">
+<article class="{{ $class }}">
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
