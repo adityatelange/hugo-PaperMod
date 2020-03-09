@@ -7,20 +7,20 @@
     <!-- Title -->
     <title>
       {{- if not .IsHome }}
-      {{- if eq .Kind "page" }}{{ .Title }}
-      {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
-      {{- else }}Posts
-      {{- end }} - {{ end }}
+      {{- if eq .Kind "page" }}{{ .Title }}{{ else if .Data.Term }}{{ .Data.Term }}{{ else }}Tags{{ end }}
+      {{- print " - " }}
+      {{- end }}
+
       {{- .Site.Title -}}
     </title>
     <!-- Meta -->
     {{- if eq .Kind "page" }}
     <meta name="description" content="{{ .Summary }}">
     <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
-    {{ else }}
+    {{- else }}
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
-    {{ end -}}
+    {{- end }}
     <!-- Styles -->
     <link href="{{ "an-old-hope.min.css" | absURL }}" rel="stylesheet">
     <link href="{{ "style.css" | absURL }}" rel="stylesheet">
@@ -28,14 +28,14 @@
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
     <link rel="icon" href="{{ "favicon.ico" | absURL }}">
     <!-- Generator -->
-    {{ hugo.Generator }}
+    {{- hugo.Generator }}
     <!-- RSS -->
     <link rel="alternate" type="application/atom+xml" href="{{ "index.xml" | absURL }}" title="{{ .Site.Title }}">
     <!-- Misc -->
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-    {{ template "_internal/google_analytics_async.html" . }}
-    {{ template "_internal/opengraph.html" . }}
-    {{ end }}
+    {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+    {{- template "_internal/google_analytics_async.html" . }}
+    {{- template "_internal/opengraph.html" . }}
+    {{- end }}
     <!-- Script -->
     <script>
       function setTheme() {
@@ -80,26 +80,26 @@
       }
     </script>
   </head>
-  <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
+  <body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
     <script>
       setTheme();
     </script>
     <header class="header">
       <nav class="nav">
-        {{ if .IsHome }}
+        {{- if .IsHome }}
         <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
-        {{ else }}
+        {{- else }}
         <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
-        {{ end }}
-        {{ if .Site.Menus.main }}
+        {{- end }}
+        {{- if .Site.Menus.main }}
         <ul class="menu">
-          {{ range .Site.Menus.main }}
+          {{- range .Site.Menus.main }}
           <li>
             <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
-          {{ end }}
+          {{- end }}
         </ul>
-        {{ end }}
+        {{- end }}
       </nav>
     </header>
     <main class="main">
