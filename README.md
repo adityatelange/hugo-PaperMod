@@ -39,3 +39,7 @@ theme = "paper"
 ```
 
 For more information read the official [guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
+
+## Dark Mode
+
+It's automatic, according to the natural time of day and night.
