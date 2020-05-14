@@ -3,7 +3,7 @@
  * A simple, clean, flexible Hugo theme
  * https://github.com/nanxiaobei/hugo-paper
  * Designed by MR.LEE (https://mrlee.me/)
- * Updated in 2019.10.17
+ * Updated in 2020.5.15
  */
 
 /* Theme
@@ -18,29 +18,33 @@
   --radius: 8px;
 
   --theme: #fff;
+  --entry: #fff;
   --primary: rgba(0, 0, 0, 0.88);
   --secondary: rgba(0, 0, 0, 0.56);
   --tertiary: rgba(0, 0, 0, 0.16);
+  --content: rgba(0, 0, 0, 0.88);
 
   --hljs-bg: #1c1d21;
   --code-bg: #f5f5f5;
   --border: #eee;
 }
 .dark {
-  --theme: #3c3c3c;
-  --primary: rgba(255, 255, 255, 0.88);
+  --theme: #1d1d1d;
+  --entry: #333;
+  --primary: rgba(255, 255, 255, 0.8);
   --secondary: rgba(255, 255, 255, 0.56);
   --tertiary: rgba(255, 255, 255, 0.16);
+  --content: rgba(255, 255, 255, 0.64);
 
   --hljs-bg: #2a2a2a;
-  --code-bg: #4f4f4f;
+  --code-bg: #333;
   --border: #5f5f5f;
 }
 .list {
   background: linear-gradient(135deg, #ddd, #f5f5f5, #d5d5d5);
 }
 .dark.list {
-  background: linear-gradient(135deg, #1c1c1c, #2a2a2a, #000);
+  background: linear-gradient(135deg, #1b1b1b, #252525, #000);
 }
 /* Reset
 -------------------------------------------------- */
@@ -56,7 +60,7 @@ body {
   margin: 0;
   color: var(--primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 18px;
   line-height: 1.8;
   word-break: break-word;
@@ -82,6 +86,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--primary);
   line-height: 1.2;
 }
 p {
@@ -238,7 +243,7 @@ img {
   position: relative;
   margin-bottom: var(--gap);
   padding: var(--gap);
-  background: var(--theme);
+  background: var(--entry);
   border-radius: var(--radius);
   transition: transform 0.1s;
 }
@@ -288,6 +293,9 @@ img {
 .post-meta {
   color: var(--secondary);
   font-size: 14px;
+}
+.post-content {
+  color: var(--content);
 }
 .post-content h1 {
   margin-top: 40px;
