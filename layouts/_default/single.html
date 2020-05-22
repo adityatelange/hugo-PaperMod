@@ -1,28 +1,28 @@
-{{ partial "header.html" . }}
+{{- partial "header.html" . }}
 
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
     <div class="post-meta">
-      {{- if or .Params.author .Site.Params.author -}}
-      {{ .Params.author | default .Site.Params.author }} · {{ end }}
+      {{- if or .Params.author .Site.Params.author }}
+      {{- .Params.author | default .Site.Params.author }} · {{ end }}
       {{- .Date.Format "January 2, 2006" -}}
     </div>
   </header>
   <div class="post-content">{{ .Content }}</div>
-  {{ if .Params.tags }}
+  {{- if .Params.tags }}
   <footer class="post-footer">
     <ul class="post-tags">
-      {{ range .Params.tags }}
-      {{ $href := print (absURL "tags/") (urlize .) }}
+      {{- range .Params.tags }}
+      {{- $href := print (absURL "tags/") (urlize .) }}
       <li><a href="{{ $href }}">{{ . }}</a></li>
-      {{ end }}
+      {{- end }}
     </ul>
   </footer>
-  {{ end }}
+  {{- end }}
   <!-- Comments area start -->
-  {{ if not (eq .Params.comments false) }}
-  {{ if .Site.DisqusShortname }}
+  {{- if not (eq .Params.comments false) }}
+  {{- if .Site.DisqusShortname }}
   <div id="disqus_thread"></div>
   <script>
     var disqus_shortname = '{{ .Site.DisqusShortname }}';
@@ -38,8 +38,8 @@
     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
   </noscript>
   <!-- Comments area end -->
-  {{ end }}
-  {{ end }}
+  {{- end }}
+  {{- end }}
 </article>
 
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . }}
