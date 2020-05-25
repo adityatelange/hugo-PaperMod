@@ -24,7 +24,9 @@
     <!-- Generator -->
     {{- hugo.Generator }}
     <!-- RSS -->
-    <link rel="alternate" type="application/atom+xml" href="{{ "index.xml" | absURL }}" title="{{ .Site.Title }}">
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     <!-- Misc -->
     {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
     {{- template "_internal/google_analytics_async.html" . }}
