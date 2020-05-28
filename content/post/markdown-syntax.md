@@ -129,9 +129,13 @@ html
 
 #### Nested list
 
-* Item
-1. First Sub-item
-2. Second Sub-item
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+* Dairy
+  * Milk
+  * Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
