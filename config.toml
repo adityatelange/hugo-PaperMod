@@ -6,7 +6,6 @@ paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
-footnoteReturnLinkContents = "^"
 
 [menu]
 
@@ -47,4 +46,3 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
-
