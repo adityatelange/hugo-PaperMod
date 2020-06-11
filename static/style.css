@@ -29,22 +29,22 @@
   --border: #eee;
 }
 .dark {
-  --theme: #2c2c2c;
-  --entry: #414141;
-  --primary: rgba(255, 255, 255, 0.8);
+  --theme: #1d1e20;
+  --entry: #2e2e33;
+  --primary: rgba(255, 255, 255, 0.84);
   --secondary: rgba(255, 255, 255, 0.56);
   --tertiary: rgba(255, 255, 255, 0.16);
   --content: rgba(255, 255, 255, 0.64);
 
-  --hljs-bg: #383838;
-  --code-bg: #414141;
-  --border: #5f5f5f;
+  --hljs-bg: #2e2e33;
+  --code-bg: #37383e;
+  --border: #5b5d67;
 }
 .list {
-  background: linear-gradient(135deg, #ddd, #f5f5f5, #d5d5d5);
+  background: var(--code-bg);
 }
 .dark.list {
-  background: linear-gradient(135deg, #1f1f1f, #2c2c2c, #1a1a1a);
+  background: var(--theme);
 }
 /* Reset
 -------------------------------------------------- */
