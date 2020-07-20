@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Title -->
+<title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+<!-- Meta -->
+{{- if eq .Kind "page" }}
+<meta name="description" content="{{ .Summary }}">
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+{{- else }}
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{- end }}
+<!-- Styles -->
+{{ $anoldhope := resources.Get "an-old-hope.min.css" | minify }}
+{{ $style := resources.Get "style.css" | minify }}
+{{ $stylesheet := slice $anoldhope $style | resources.Concat "stylesheet.css" | minify }}
+<link href="{{ $stylesheet.Permalink }}" rel="stylesheet">
+<link href="{{ "custom.css" | absURL }}" rel="stylesheet">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+<!-- Generator -->
+{{- hugo.Generator }}
+<!-- RSS -->
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+<!-- Misc -->
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+{{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/opengraph.html" . }}
+{{- end }}
+<!-- Script -->
+{{ $settheme := resources.Get "set-theme.js" | minify }}
+<script src="{{ $settheme.Permalink }}"></script>
