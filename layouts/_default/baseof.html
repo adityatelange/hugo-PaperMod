@@ -6,9 +6,11 @@
 </head>
 
 <body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
+    {{- if $.Site.Params.SetThemeAuto -}}
     <script>
         setTheme();
     </script>
+    {{- end -}}
     <header class="header">
         {{- partial "header.html" . }}
     </header>
