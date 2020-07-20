@@ -6,9 +6,11 @@
   <span>&middot;</span>
   <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
 </footer>
-<script src="{{ "highlight.min.js" | absURL }}"></script>
+{{ $highlight := resources.Get "highlight.min.js" | minify }}
+<script src="{{ $highlight.Permalink }}"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 </body>
+
 </html>
