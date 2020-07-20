@@ -1,30 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-<head>
-    {{- partial "head.html" . }}
-</head>
-
-<body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
-    <script>
-        setTheme();
-    </script>
-    <header class="header">
-        <nav class="nav">
-            {{- if .IsHome }}
-            <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
-            {{- else }}
-            <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
-            {{- end }}
-            {{- if .Site.Menus.main }}
-            <ul class="menu">
-                {{- range .Site.Menus.main }}
-                <li>
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{- end }}
-            </ul>
-            {{- end }}
-        </nav>
-    </header>
-    <main class="main">
+<nav class="nav">
+    {{- if .IsHome }}
+    <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
+    {{- else }}
+    <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
+    {{- end }}
+    {{- if .Site.Menus.main }}
+    <ul class="menu">
+        {{- range .Site.Menus.main }}
+        <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
+    </ul>
+    {{- end }}
+</nav>

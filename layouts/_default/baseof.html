@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
+    <script>
+        setTheme();
+    </script>
+    <header class="header">
+        {{- partial "header.html" . }}
+    </header>
+
+    <main class="main">
+        {{- block "main" . }}
+        {{end }}
+    </main>
+
+    <footer class="footer">
+        {{- partial "footer.html" . }}
+    </footer>
+    {{ $highlight := resources.Get "highlight.min.js" | minify }}
+    <script src="{{ $highlight.Permalink }}"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>
