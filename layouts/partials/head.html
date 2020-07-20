@@ -14,8 +14,8 @@
 <!-- Styles -->
 {{ $anoldhope := resources.Get "an-old-hope.min.css" | minify }}
 {{ $style := resources.Get "style.css" | minify }}
-{{ $stylesheet := slice $anoldhope $style | resources.Concat "stylesheet.css" | minify }}
-<link href="{{ $stylesheet.Permalink }}" rel="stylesheet">
+{{ $stylesheet := slice $anoldhope $style | resources.Concat "stylesheet.css" | minify | fingerprint }}
+<link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="stylesheet">
 <link href="{{ "custom.css" | absURL }}" rel="stylesheet">
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">

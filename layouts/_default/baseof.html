@@ -23,8 +23,8 @@
     <footer class="footer">
         {{- partial "footer.html" . }}
     </footer>
-    {{ $highlight := resources.Get "highlight.min.js" | minify }}
-    <script src="{{ $highlight.Permalink }}"></script>
+    {{ $highlight := resources.Get "highlight.min.js" | minify | fingerprint}}
+    <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
