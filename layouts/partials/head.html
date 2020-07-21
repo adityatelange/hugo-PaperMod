@@ -13,7 +13,15 @@
 {{- end }}
 <!-- Styles -->
 {{ $anoldhope := resources.Get "an-old-hope.min.css" | minify }}
-{{ $style := resources.Get "style.css" | minify }}
+{{ $theme := resources.Get "css/theme-vars.css" | minify }}
+{{ $reset := resources.Get "css/reset.css" | minify }}
+{{ $header := resources.Get "css/header.css" | minify }}
+{{ $main := resources.Get "css/main.css" | minify }}
+{{ $postentry := resources.Get "css/post-entry.css" | minify }}
+{{ $postsingle := resources.Get "css/post-single.css" | minify }}
+{{ $footer := resources.Get "css/footer.css" | minify }}
+{{ $404 := resources.Get "css/404.css" | minify }}
+{{ $style := slice $theme $reset $header $main $postentry $postsingle $footer $404 | resources.Concat "stylesheet.css" | minify }}
 {{ $stylesheet := slice $anoldhope $style | resources.Concat "stylesheet.css" | minify | fingerprint }}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="stylesheet">
 <link href="{{ "custom.css" | absURL }}" rel="stylesheet">

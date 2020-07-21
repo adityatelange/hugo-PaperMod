@@ -1,0 +1,26 @@
+/* Footer
+-------------------------------------------------- */
+.footer {
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    color: var(--secondary);
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.footer span {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.footer a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}

@@ -1,0 +1,79 @@
+/* Post entry
+-------------------------------------------------- */
+.first-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 320px;
+    margin-bottom: var(--header-height);
+}
+
+.first-entry .entry-header {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.first-entry .entry-header h2 {
+    font-size: 40px;
+}
+
+.first-entry .entry-content {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+}
+
+.first-entry .entry-footer {
+    font-size: 14px;
+}
+
+.post-entry {
+    position: relative;
+    margin-bottom: var(--gap);
+    padding: var(--gap);
+    background: var(--entry);
+    border-radius: var(--radius);
+    transition: transform 0.1s;
+}
+
+.post-entry:active {
+    transform: scale(0.96);
+}
+
+.tag-entry .entry-content,
+.tag-entry .entry-footer {
+    display: none;
+}
+
+.entry-header h2 {
+    font-size: 24px;
+}
+
+.entry-content {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.entry-footer {
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+.entry-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

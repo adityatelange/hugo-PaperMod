@@ -1,0 +1,256 @@
+/* Post single
+-------------------------------------------------- */
+.post-header {
+    margin-top: 24px;
+    margin-bottom: var(--content-gap);
+}
+
+.post-title {
+    margin-bottom: 2px;
+    font-size: 40px;
+    transform: translateX(-2px);
+}
+
+.post-meta {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.post-content {
+    color: var(--content);
+}
+
+.post-content h1 {
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.post-content h2 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.post-content h1 {
+    font-size: 40px;
+}
+
+.post-content h2 {
+    font-size: 32px;
+}
+
+.post-content h3 {
+    font-size: 24px;
+}
+
+.post-content h4 {
+    font-size: 16px;
+}
+
+.post-content h5 {
+    font-size: 14px;
+}
+
+.post-content h6 {
+    font-size: 12px;
+}
+
+.post-content a {
+    box-shadow: 0 1px 0 var(--primary);
+}
+
+.post-content a code {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    box-shadow: 0 -1px 0 var(--primary) inset;
+}
+
+.post-content del {
+    text-decoration: none;
+    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content dl {
+    margin-bottom: var(--content-gap);
+}
+
+.post-content ul,
+.post-content ol {
+    padding-left: 20px;
+}
+
+.post-content li {
+    margin-top: 5px;
+}
+
+.post-content li p {
+    margin-bottom: 0;
+}
+
+.post-content dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.post-content dt {
+    width: 25%;
+    font-weight: 700;
+}
+
+.post-content dd {
+    width: 75%;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+.post-content dt~dt,
+.post-content dd~dd {
+    margin-top: 10px;
+}
+
+.post-content table {
+    margin-bottom: 32px;
+}
+
+.post-content table th,
+.post-content table:not(.highlighttable) td {
+    min-width: 80px;
+    padding: 12px 8px;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content table th {
+    font-size: 14px;
+    text-align: left;
+}
+
+.post-content table:not(.highlighttable) td code:only-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post-content .highlight,
+.post-content pre {
+    margin-left: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+    margin-bottom: 32px;
+    background: var(--hljs-bg) !important;
+    border-radius: var(--radius);
+}
+
+.post-content ul pre {
+    margin-left: calc(var(--gap) * -2);
+}
+
+.post-content .highlight pre {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* table */
+.post-content .highlighttable {
+    table-layout: fixed;
+}
+
+.post-content .highlighttable td:first-child {
+    width: 40px;
+}
+
+.post-content .highlighttable td .linenodiv {
+    padding-right: 0 !important;
+}
+
+.post-content .highlighttable td .linenodiv pre,
+.post-content .highlighttable td .highlight {
+    margin-bottom: 0;
+}
+
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+    display: none;
+}
+
+/* inline */
+.post-content .highlight span {
+    background: transparent !important;
+}
+
+.post-content code {
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 4px 6px;
+    font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
+    font-size: 0.78em;
+    line-height: 1.5;
+    background: var(--code-bg);
+    border-radius: 2px;
+}
+
+.post-content pre code {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: var(--gap);
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border-radius: 0;
+}
+
+.post-content blockquote {
+    margin: 0 0 0 calc(var(--gap) * -1);
+    padding: 0 0 0 21px;
+    border-left: 3px solid var(--primary);
+}
+
+.post-content hr {
+    height: 1px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    background: var(--tertiary);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.post-content iframe {
+    max-width: 100%;
+}
+
+.post-footer {
+    margin-top: 56px;
+}
+
+.post-tags li {
+    display: inline-block;
+}
+
+.post-tags li+li {
+    margin-left: 3px;
+}
+
+.post-tags a {
+    display: block;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 34px;
+    background: var(--code-bg);
+    border-radius: 4px;
+}
+
+.post-tags a:hover {
+    background: var(--border);
+}
