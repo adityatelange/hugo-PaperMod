@@ -1,5 +1,13 @@
-<span>&copy; {{ now.Year }} <a href="{{ "" | absURL }}">{{ .Site.Title }}</a></span>
-<span>&middot;</span>
-<span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
-<span>&middot;</span>
-<span>Theme️ <a href="https://github.com/adityatelange/hugo-PaperMod" rel="noopener" target="_blank">PaperMod</a></span>
+<footer class="footer">
+    <span>&copy; {{ now.Year }} <a href="{{ "" | absURL }}">{{ .Site.Title }}</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+    <span>&middot;</span>
+    <span>Theme️ <a href="https://github.com/adityatelange/hugo-PaperMod" rel="noopener"
+            target="_blank">PaperMod</a></span>
+</footer>
+{{ $highlight := resources.Get "js/highlight.min.js" | minify | fingerprint}}
+<script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>

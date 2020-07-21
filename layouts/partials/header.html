@@ -1,16 +1,28 @@
-<nav class="nav">
-    {{- if .IsHome }}
-    <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
-    {{- else }}
-    <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
-    {{- end }}
-    {{- if .Site.Menus.main }}
-    <ul class="menu">
-        {{- range .Site.Menus.main }}
-        <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+{{- if $.Site.Params.SetThemeAuto -}}
+<script>
+    setTheme();
+</script>
+{{- end -}}
+<header class="header">
+    {{- if $.Site.Params.SetThemeAuto -}}
+    <script>
+        setTheme();
+    </script>
+    {{- end -}}
+    <nav class="nav">
+        {{- if .IsHome }}
+        <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
+        {{- else }}
+        <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
         {{- end }}
-    </ul>
-    {{- end }}
-</nav>
+        {{- if .Site.Menus.main }}
+        <ul class="menu">
+            {{- range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </nav>
+</header>

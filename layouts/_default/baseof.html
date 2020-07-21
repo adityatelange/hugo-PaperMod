@@ -6,28 +6,12 @@
 </head>
 
 <body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
-    {{- if $.Site.Params.SetThemeAuto -}}
-    <script>
-        setTheme();
-    </script>
-    {{- end -}}
-    <header class="header">
-        {{- partial "header.html" . }}
-    </header>
-
+    {{- partial "header.html" . }}
     <main class="main">
         {{- block "main" . }}
         {{end }}
     </main>
-
-    <footer class="footer">
-        {{- partial "footer.html" . }}
-    </footer>
-    {{ $highlight := resources.Get "js/highlight.min.js" | minify | fingerprint}}
-    <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
+    {{- partial "footer.html" . }}
 </body>
 
 </html>
