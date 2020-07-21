@@ -12,7 +12,7 @@
 <meta name="author" content="{{ .Site.Params.author }}">
 {{- end }}
 <!-- Styles -->
-{{ $anoldhope := resources.Get "an-old-hope.min.css" | minify }}
+{{ $anoldhope := resources.Get "css/an-old-hope.min.css" | minify }}
 {{ $theme := resources.Get "css/theme-vars.css" | minify }}
 {{ $reset := resources.Get "css/reset.css" | minify }}
 {{ $header := resources.Get "css/header.css" | minify }}
@@ -22,7 +22,7 @@
 {{ $footer := resources.Get "css/footer.css" | minify }}
 {{ $404 := resources.Get "css/404.css" | minify }}
 {{ $style := slice $theme $reset $header $main $postentry $postsingle $footer $404 | resources.Concat "stylesheet.css" | minify }}
-{{ $stylesheet := slice $anoldhope $style | resources.Concat "stylesheet.css" | minify | fingerprint }}
+{{ $stylesheet := slice $anoldhope $style | resources.Concat "css/stylesheet.css" | minify | fingerprint }}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="stylesheet">
 <link href="{{ "custom.css" | absURL }}" rel="stylesheet">
 <!-- Favicons -->
@@ -41,6 +41,6 @@
 {{- end }}
 <!-- Script -->
 {{- if $.Site.Params.SetThemeAuto -}}
-{{ $settheme := resources.Get "set-theme.js" | minify }}
+{{ $settheme := resources.Get "js/set-theme.js" | minify }}
 <script src="{{ $settheme.Permalink }}"></script>
 {{- end -}}
