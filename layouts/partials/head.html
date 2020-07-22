@@ -19,9 +19,10 @@
 {{ $main := resources.Get "css/main.css" | minify }}
 {{ $postentry := resources.Get "css/post-entry.css" | minify }}
 {{ $postsingle := resources.Get "css/post-single.css" | minify }}
+{{ $archive := resources.Get "css/archive.css" | minify }}
 {{ $footer := resources.Get "css/footer.css" | minify }}
 {{ $404 := resources.Get "css/404.css" | minify }}
-{{ $style := slice $theme $reset $header $main $postentry $postsingle $footer $404 | resources.Concat "stylesheet.css" | minify }}
+{{ $style := slice $theme $reset $header $main $postentry $postsingle $archive $footer $404 | resources.Concat "stylesheet.css" | minify }}
 {{ $stylesheet := slice $anoldhope $style | resources.Concat "css/stylesheet.css" | minify | fingerprint }}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="stylesheet">
 <link href="{{ "custom.css" | absURL }}" rel="stylesheet">
