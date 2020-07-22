@@ -13,7 +13,7 @@ jobs:
           ref: exampleSite
 
       - name: Update theme
-        run: git submodule update --init --recursive
+        run: git submodule update --remote --merge
 
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
