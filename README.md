@@ -1,4 +1,4 @@
-# Paper <sup><sup><sub>v4.9 (Dark Mode)</sub></sup></sup>
+# hugo-PaperMod
 
 A simple, clean, flexible Hugo theme.
 
@@ -8,38 +8,20 @@ A simple, clean, flexible Hugo theme.
 
 ## Overview
 
-Demo: https://nanxiaobei.github.io/hugo-paper/
-
-<p>
-<kbd>
-  <img src="https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot.png" alt="Paper">
-</kbd>
-</p>
-
-<p>
-<kbd>
-  <img src="https://raw.githubusercontent.com/nanxiaobei/hugo-paper/master/images/screenshot_dark.png" alt="Paper Dark Mode">
-</kbd>
-</p>
-
-Hugo themes: https://themes.gohugo.io/hugo-paper/
+Demo: https://adityatelange.github.io/hugo-PaperMod/
 
 ## Install
 
 Inside the folder of your Hugo site, run:
 
 ```bash
-git clone https://github.com/nanxiaobei/hugo-paper themes/paper
+git clone https://github.com/adityatelange/hugo-PaperMod themes/hugo-PaperMod
 ```
 
 Then change in `config.toml`:
 
 ```toml
-theme = "paper"
+theme = "hugo-PaperMod"
 ```
 
 For more information read the official [guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
-
-## Dark Mode
-
-It's automatic, according to the natural time of day and night.
