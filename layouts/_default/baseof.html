@@ -5,9 +5,10 @@
     {{- partial "head.html" . }}
 </head>
 
-<body class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home{{ end }}{{ end }}">
+<body
+    class="{{ if eq .Kind `page` }}single{{ else }}list{{ if .IsHome }} home {{ end }}{{ end }}{{ if eq $.Site.Params.defaultTheme `dark` }} dark {{ end }}">
     {{- partial "header.html" . }}
-    <main class="main">
+    <main class=" main">
         {{- block "main" . }}
         {{end }}
     </main>
