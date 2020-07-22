@@ -23,5 +23,4 @@ _testmain.go
 *.test
 
 /public
-/themes
 .DS_Store

@@ -1,4 +1,4 @@
-baseURL = "https://gohugo.io"
+baseURL = "https://adityatelange.github.io/hugo-PaperMod/"
 title = "Hugo Themes"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
@@ -6,6 +6,7 @@ paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
+theme = "hugo-PaperMod"
 
 [menu]
 
