@@ -8,10 +8,14 @@
 {{ end }}
 {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
+{{- if (and $.IsHome (eq $.Site.Params.homeInfoParams.enabled true)) }}
+{{- partial "homeInfo.html" . }}
+{{ end }}
+
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (ne $.Site.Params.homeInfoParams.enabled true)) }}
 {{- $class = "first-entry" }}
 {{- else if .Data.Term }}
 {{- $class = "post-entry tag-entry" }}
