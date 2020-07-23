@@ -1,5 +1,5 @@
 baseURL = "https://adityatelange.github.io/hugo-PaperMod/"
-title = "Hugo Themes"
+title = "PaperMod"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 3
@@ -11,10 +11,9 @@ theme = "hugo-PaperMod"
 [menu]
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
+    name = "Archives"
+    url = "/archives/"
+    weight = 5
 
 [taxonomies]
 category = "categories"
