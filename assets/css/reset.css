@@ -108,3 +108,9 @@ img {
     display: block;
     max-width: 100%;
 }
+
+blockquote {
+    border-left: 2px solid;
+    margin: 20px;
+    padding: 10px 40px;
+}
