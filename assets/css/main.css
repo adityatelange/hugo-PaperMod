@@ -45,3 +45,9 @@
     padding-left: 18px;
     padding-right: 16px;
 }
+
+.toc {
+    border-bottom: 1px solid var(--border);
+    font-size: 20px;
+    font-weight: 500;
+}
