@@ -13,10 +13,16 @@
     </div>
   </header>
   {{ if .Params.ShowToc }}
-  <blockquote>
-    <div class="toc">Table of Contents</div>
-    {{ .TableOfContents }}
-  </blockquote>
+  <div class="toc">
+    <details>
+      <summary>
+        <div class="details">Table of Contents</div>
+      </summary>
+      <blockquote>
+        {{ .TableOfContents }}
+      </blockquote>
+    </details>
+  </div>
   {{ end }}
   <div class="post-content">{{ .Content }}</div>
   {{- if .Params.tags }}

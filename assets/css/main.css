@@ -47,7 +47,13 @@
 }
 
 .toc {
-    border-bottom: 1px solid var(--border);
-    font-size: 20px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .5em;
+}
+
+.toc .details {
+    display: inline;
     font-weight: 500;
 }
