@@ -8,6 +8,12 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 theme = "hugo-PaperMod"
 
+[params]
+  [params.homeInfoParams]
+    enabled = true
+    Title = "Hi there 👋"
+    Content = "This is Content !! Can be Info, links, social-icons..."
+
 [menu]
 
   [[menu.main]]
