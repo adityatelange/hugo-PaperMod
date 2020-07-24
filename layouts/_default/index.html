@@ -22,7 +22,10 @@
 {{- end }}
 <article class="{{ $class }}">
   <header class="entry-header">
-    <h2>{{ .Title }}</h2>
+    <h2>
+      {{ .Title }}
+      <div class="entry-isdraft">{{- if .Draft }}<sup>[draft]</sup>{{- end }}</div>
+    </h2>
   </header>
   <section class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>

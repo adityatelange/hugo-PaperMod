@@ -77,3 +77,9 @@
     top: 0;
     bottom: 0;
 }
+
+.entry-isdraft {
+    display: inline;
+    color: var(--secondary);
+    font-size: 14px;
+}

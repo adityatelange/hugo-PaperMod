@@ -2,7 +2,10 @@
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
+    <h1 class="post-title">
+      {{ .Title }}
+      <div class="entry-isdraft">{{- if .Draft }}<sup>[draft]</sup>{{- end }}</div>
+    </h1>
     <div class="post-meta">
       {{- if or .Params.author .Site.Params.author }}
       {{- .Params.author | default .Site.Params.author }} · {{ end }}
