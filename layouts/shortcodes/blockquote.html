@@ -1,0 +1,72 @@
+
+<!-- Author: Parsia Hakimian https://github.com/parsiya/Hugo-Shortcodes -->
+<!-- port of Octopress blockquote plugin http://octopress.org/docs/plugins/blockquote/ to Hugo
+     see readme for usage -->
+
+<!-- reset scratch variables at the start -->
+{{ $.Scratch.Set "bl_author" false }}
+{{ $.Scratch.Set "bl_source" false }}
+{{ $.Scratch.Set "bl_link" false }}
+{{ $.Scratch.Set "bl_title" false }}
+
+{{ if .IsNamedParams }}
+  {{ $.Scratch.Set "bl_author" (.Get "author") }}
+  {{ $.Scratch.Set "bl_source" (.Get "source") }}
+  {{ $.Scratch.Set "bl_link" (.Get "link") }}
+  {{ $.Scratch.Set "bl_title" (.Get "title") }}
+{{ else }}
+  <!-- for the positional version if any -->
+{{ end }}
+
+<!-- if title is not set explicitly then we need to beautify the link
+     if length of link is more than 32 chars, we will cut it off by 32 and
+     then drop everything after the last / if any and put it in into title -->
+
+{{ with $.Scratch.Get "bl_title" }}
+  <!-- do nothing -->
+{{ else }}
+  {{ with $.Scratch.Get "bl_link" }}    <!-- if link is given -->
+    {{ range last 1 (split ($.Scratch.Get "bl_link" ) "://") }}  <!-- split by :// and then only take the items after it to remove protocol:// -->
+      {{ $.Scratch.Set "title_without_protocol" . }}
+    {{ end }}
+    {{ range last 1 (split ($.Scratch.Get "title_without_protocol" ) "www.")  }} <!-- also remove the www. at the start if any. we are using a second split because all URLS may not start with it -->
+      {{ $.Scratch.Set "title_without_protocol" . }}
+    {{ end }}
+    {{ $.Scratch.Set "bl_title" ($.Scratch.Get "title_without_protocol") }}
+
+    <!-- if link is longer than 32 bytes we should trim it -->
+    {{ if (gt (len ($.Scratch.Get "title_without_protocol") ) 32) }}
+      {{ $title := (slicestr ($.Scratch.Get "title_without_protocol") 0 32) }}   <!-- get the first 32 characters of title_without_protocol -->
+      {{ $split_by_fw_slash := split $title "/" }}   <!-- now split on / because we want to stop after the last forward slash -->
+      {{ $count := (sub (len $split_by_fw_slash) 1) }}   <!-- we want everything but the last part so we adjust the count accordingly -->
+
+      {{ $.Scratch.Set "tempstring" "" }}   <!-- temp variable to hold the concatinated string -->
+      {{ range first $count $split_by_fw_slash  }}  <!-- loop through all parts except last and concat them (add / between halves) -->
+        {{ $.Scratch.Set "tempstring" ( . | printf "%s%s/" ($.Scratch.Get "tempstring") | printf "%s" ) }}
+      {{ end }}
+      {{ $.Scratch.Set "bl_title" ( printf "%s..." ($.Scratch.Get "tempstring") | printf "%s" ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<blockquote>
+  <p>{{ .Inner | markdownify }}</p>
+  <footer>
+    <strong>{{ with $.Scratch.Get "bl_author" }}{{ . }}{{ end }}</strong>
+    {{ with $.Scratch.Get "bl_source" }}
+      <cite>{{ . }}</cite>
+    {{ else }}
+      {{ with $.Scratch.Get "bl_link" }}
+        <cite>
+          <a href="{{ . }}" title="{{ . }}">{{ $.Scratch.Get "bl_title" }}</a> <!-- can't have new lines here -->
+        </cite>
+      {{ else }}
+        {{ with $.Scratch.Get "bl_title" }}
+          <cite>
+            {{ $.Scratch.Get "bl_title" }}</a>
+          </cite>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </footer>
+</blockquote>
