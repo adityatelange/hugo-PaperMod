@@ -1,3 +1,5 @@
+![Build GH-Pages](https://github.com/adityatelange/hugo-PaperMod/workflows/Build%20GH-Pages/badge.svg)  ![GitHub](https://img.shields.io/github/license/adityatelange/hugo-PaperMod)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
+
 # hugo-PaperMod
 
 A simple, clean, flexible Hugo theme.
