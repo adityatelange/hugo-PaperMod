@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{- $scope := .Site }}
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+{{ $scope = . }}
+{{ end }}
+
+<ul class="terms-tags">
+    {{ $type := .Type }}
+    {{ range $key, $value := .Data.Terms.Alphabetical }}
+    {{ $name := .Name }}
+    {{ $count := .Count }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><b><sup>{{ $count }}</sup></b></sup> </a>
+    </li>
+    {{ end }}
+    {{ end }}
+</ul>
+
+{{ end  }}{{/* end main */}}

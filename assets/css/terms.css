@@ -1,0 +1,17 @@
+.terms-tags li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 5px 14px;
+    color: var(--secondary);
+    background: var(--border);
+    border-radius: var(--radius);
+}
+
+.terms-tags a:hover {
+    background: var(--tertiary);
+}
