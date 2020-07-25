@@ -21,6 +21,12 @@
     --border: #eee;
 }
 
+@media screen and (max-width: 600px) {
+    :root {
+        --gap: 14px;
+    }
+}
+
 .dark {
     --theme: #1d1e20;
     --entry: #2e2e33;

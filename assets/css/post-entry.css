@@ -9,6 +9,12 @@
     margin-bottom: var(--header-height);
 }
 
+@media screen and (max-width: 600px) {
+    .first-entry {
+        height: 240px;
+    }
+}
+
 .first-entry .entry-header {
     overflow: hidden;
     display: -webkit-box;
