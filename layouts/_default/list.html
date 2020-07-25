@@ -1,6 +1,9 @@
 {{ define "main" }}
 
 {{- $scope := .Site }}
+{{- if .Title }}
+<header class="page-header"><h1>{{ .Title }}</h1></header>{{ $scope = . }}
+{{ end }}
 
 {{- $paginator := .Paginate (where $scope.RegularPages ".Params.type" "!=" "page") }}
 
