@@ -9,12 +9,6 @@
     font-size: 16px;
 }
 
-.archive-title {
-    margin-bottom: 2px;
-    font-size: 40px;
-    transform: translateX(-2px);
-}
-
 .archive-posts {
     width: 100%
 }

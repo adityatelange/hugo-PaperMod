@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="archive">
-  <h1 class="archive-title">{{ .Title }}</h1>
+  <header class="page-header"><h1>{{ .Title }}</h1></header>
 
   {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
   {{ if ne .Key "0001" }}
