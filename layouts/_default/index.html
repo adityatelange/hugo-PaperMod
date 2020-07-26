@@ -34,6 +34,7 @@
     <time>{{ .Date.Format "January 2, 2006" }}</time>
     {{ if $.Site.Params.ShowReadingTime }} .
     {{ .ReadingTime }}{{ $.Site.Params.MinuteReadingTime | default "min read" }}{{ end }}
+    {{ if or .Params.author .Site.Params.author }} . {{ .Params.author | default .Site.Params.author }}{{ end }}
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>
