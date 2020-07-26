@@ -27,6 +27,8 @@
   </section>
   <footer class="entry-footer">
     <time>{{ .Date.Format "January 2, 2006" }}</time>
+    {{ if $.Site.Params.ShowReadingTime }} .
+    {{ .ReadingTime }}{{ $.Site.Params.MinuteReadingTime | default "min read" }}{{ end }}
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>
