@@ -7,7 +7,7 @@
 .terms-tags a {
     display: block;
     padding: 5px 14px;
-    color: var(--secondary);
+    color: var(--primary);
     background: var(--border);
     border-radius: var(--radius);
 }
