@@ -24,3 +24,23 @@
     color: var(--primary);
     border-bottom: 1px solid var(--primary);
 }
+
+.top-link {
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    z-index: 99;
+    background: var(--tertiary);
+    width: 42px;
+    height: 42px;
+    padding: 12px;
+    color: var(--primary);
+    border-radius: 64px;
+    fill: currentColor;
+    fill-opacity: 80%;
+    transition: visibility 0.5s,
+        opacity 0.8s linear;
+}
