@@ -9,6 +9,8 @@ enableInlineShortcodes = true
 theme = "hugo-PaperMod"
 
 [params]
+    ShowReadingTime = true
+    ShowShareButtons = true
   [params.homeInfoParams]
     enabled = true
     Title = "Hi there 👋"
