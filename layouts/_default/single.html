@@ -33,6 +33,9 @@
       <li><a href="{{ $href }}">{{ . }}</a></li>
       {{- end }}
     </ul>
+    {{ if .Site.Params.ShowShareButtons }}
+    {{ partial "share-icons.html" . }}
+    {{ end }}
   </footer>
   {{- end }}
 
