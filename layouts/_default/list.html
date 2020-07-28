@@ -19,7 +19,7 @@
   <header class="entry-header">
     <h2>
       {{ .Title }}
-      <div class="entry-isdraft">{{- if .Draft }}<sup>&nbsp&nbsp[draft]</sup>{{- end }}</div>
+      {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp&nbsp[draft]</sup></div>{{- end }}
     </h2>
   </header>
   <section class="entry-content">
