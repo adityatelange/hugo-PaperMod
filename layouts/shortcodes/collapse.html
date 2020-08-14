@@ -1,0 +1,12 @@
+{{ if .Get "content" }}
+{{ if .Get "summary" }}
+{{ else }}
+{{ warnf "missing value for param 'summary': %s" .Position }}
+{{ end }}
+{{ else }}
+{{ errorf "missing value for param 'content': %s" .Position }}
+{{ end }}
+<p><details {{ if (eq (.Get "openByDefault") true) }} open=true {{ end }}>
+  <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
+    {{ .Get "content" | markdownify }}
+</details></p>
