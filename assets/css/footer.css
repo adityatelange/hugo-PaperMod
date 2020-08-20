@@ -18,6 +18,7 @@
 
 .footer a {
     color: inherit;
+    border-bottom: 1px solid var(--secondary);
 }
 
 .footer a:hover {
