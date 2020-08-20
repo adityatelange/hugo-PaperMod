@@ -11,6 +11,9 @@
 <meta name="description" content="{{ .Site.Params.description }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 {{- end }}
+{{ if .Site.Params.analytics.google.SiteVerificationTag }}
+<meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
+{{end}}
 <!-- Styles -->
 {{ $anoldhope := resources.Get "css/an-old-hope.min.css" | minify }}
 {{ $theme := resources.Get "css/theme-vars.css" | minify }}
