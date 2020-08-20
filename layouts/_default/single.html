@@ -6,11 +6,13 @@
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h1>
+    {{ if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
       {{- if or .Params.author .Site.Params.author }}
       {{- .Params.author | default .Site.Params.author }} · {{ end }}
       {{- .Date.Format "January 2, 2006" -}}
     </div>
+    {{end}}
   </header>
   {{ if .Params.ShowToc }}
   <div class="toc">
