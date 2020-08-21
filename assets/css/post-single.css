@@ -256,7 +256,6 @@
 }
 
 .share-buttons {
-    fill: currentColor;
     margin: 4px 0;
     text-align: center;
     background: var(--code-bg);
@@ -269,4 +268,8 @@
     height: 30px;
     width: 30px;
     margin: 0 10px;
+}
+
+.share-button-single:hover svg {
+    opacity: 0.9;
 }
