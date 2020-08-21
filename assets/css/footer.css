@@ -38,10 +38,15 @@
     width: 42px;
     height: 42px;
     padding: 12px;
-    color: var(--primary);
+    color: var(--secondary);
     border-radius: 64px;
     fill: currentColor;
     fill-opacity: 80%;
     transition: visibility 0.5s,
         opacity 0.8s linear;
+}
+
+.top-link:hover {
+    color: var(--primary);
+    background: var(--code-bg);
 }
