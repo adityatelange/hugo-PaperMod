@@ -6,9 +6,10 @@
 </head>
 
 <body
-    class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list{{ if .IsHome }} home {{ end }}{{ end }}{{ if eq $.Site.Params.defaultTheme `dark` }} dark {{ end }}">
+    class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list{{ if .IsHome }} home {{ end }}{{ end }}{{ if eq $.Site.Params.defaultTheme `dark` }} dark {{ end }}"
+    id="top">
     {{- partial "header.html" . }}
-    <main class="main" id="top">
+    <main class="main">
         {{- block "main" . }}
         {{end }}
     </main>
