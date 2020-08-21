@@ -11,7 +11,7 @@
         <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
         {{- end }}
         {{- if .Site.Menus.main }}
-        <ul class="menu">
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
             <li>
                 <a href="{{ .URL }}">{{ .Name }}</a>
