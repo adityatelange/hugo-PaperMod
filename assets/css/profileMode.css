@@ -1,0 +1,29 @@
+.main {
+    text-align: center;
+    display: table;
+}
+
+.main>.profile {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.main>.profile>.profile_inner {
+    transform: translate(0, -20%);
+}
+
+img {
+    display: inline-block;
+    width: 200px;
+    border-radius: 50%;
+    pointer-events: none;
+    margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 150px;
+    }
+
+}

@@ -30,6 +30,11 @@
 {{ $stylesheet := slice $anoldhope $style | resources.Concat "css/stylesheet.css" | minify | fingerprint }}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
+{{ if (and (.Site.Params.profileMode) (.IsHome)) }}
+{{ $profileMode := resources.Get "css/profileMode.css" | minify | fingerprint }}
+<link href="{{ $profileMode.Permalink }}" integrity="{{ $profileMode.Data.Integrity }}" rel="preload stylesheet"
+    as="style">
+{{end}}
 <link href="{{ "custom.css" | absURL }}" rel="stylesheet">
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
