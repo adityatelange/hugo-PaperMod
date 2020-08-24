@@ -31,7 +31,7 @@
     {{- if .Params.tags }}
     <ul class="post-tags">
       {{- range .Params.tags }}
-      {{- $href := print (absURL "tags/") (urlize .) }}
+      {{- $href := print (absLangURL "tags/") (urlize .) }}
       <li><a href="{{ $href }}">{{ . }}</a></li>
       {{- end }}
     </ul>

@@ -6,15 +6,15 @@
     {{- end -}}
     <nav class="nav">
         {{- if .IsHome }}
-        <h1 class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>
+        <h1 class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
         {{- else }}
-        <p class="logo"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></p>
+        <p class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></p>
         {{- end }}
         {{- if .Site.Menus.main }}
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
             <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL | absLangURL}}">{{ .Name }}</a>
             </li>
             {{- end }}
         </ul>
