@@ -151,6 +151,10 @@
     border-radius: var(--radius);
 }
 
+.post-content li>.highlight {
+    margin-right: 0
+}
+
 .post-content ul pre {
     margin-left: calc(var(--gap) * -2);
 }
