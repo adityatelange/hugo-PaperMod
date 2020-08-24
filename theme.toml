@@ -12,7 +12,7 @@ min_version = "0.57.1"
 
 [author]
   name = "Aditya Telange"
-  homepage = "https://adityatelange.now.sh/"
+  homepage = "https://github.com/adityatelange/"
 
 # If porting an existing theme
 [original]
