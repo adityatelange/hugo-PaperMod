@@ -1,21 +1,7 @@
 {{ define "main" }}
 
 {{ if .Site.Params.profileMode }}
-<div class="profile">
-  <div class="profile_inner">
-    {{if .Site.Params.profileMode.imageUrl}}
-    <div>
-      <img src="{{ .Site.Params.profileMode.imageUrl}}" alt="{{ .Site.Params.profileMode.imageTitle}}" />
-    </div>
-    {{end}}
-    <h1>{{ if .Site.Params.profileMode.title }}{{.Site.Params.profileMode.title}}{{ else }}{{ .Site.Title }}{{end}}</h1>
-    {{- with .Site.Params.profileMode.socialIcons }}
-    <div class="social-icons">
-      {{ partial "social-icons.html" . }}
-    </div>
-    {{- end }}
-  </div>
-</div>
+{{- partial "indexProfile.html" . }}
 {{else}} {{/* if not profileMode */}}
 
 {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
