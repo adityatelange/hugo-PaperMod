@@ -89,3 +89,9 @@
     color: var(--secondary);
     font-size: 14px;
 }
+
+.social-icons a {
+    margin: 2px;
+    padding: 6px;
+    font-size: 1.4em;
+}

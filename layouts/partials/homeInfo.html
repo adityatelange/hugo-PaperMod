@@ -6,5 +6,10 @@
     <section class="entry-content">
         <p>{{ .Content | plainify | htmlUnescape }}</p>
     </section>
+    {{- with $.Site.Params.socialIcons }}
+    <div class="social-icons">
+        {{ partial "social-icons.html" . }}
+    </div>
+    {{- end }}
 </article>
 {{end}}
