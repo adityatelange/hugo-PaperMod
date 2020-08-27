@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ if (and .Site.Params.profileMode .IsHome) }}
+{{ if (and .Site.Params.profileMode.enabled .IsHome) }}
 {{- partial "indexProfile.html" . }}
 {{else}} {{/* if not profileMode */}}
 
