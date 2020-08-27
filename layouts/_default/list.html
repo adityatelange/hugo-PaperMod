@@ -23,7 +23,7 @@
 
 {{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
-{{- if (eq $.Site.Params.homeInfoParams.enabled true) }}
+{{- if .Site.Params.homeInfoParams }}
 {{- partial "homeInfo.html" . }}
 {{else}}
 {{- $class = "first-entry" }}
