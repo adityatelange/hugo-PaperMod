@@ -1,17 +1,33 @@
 {{ define "main" }}
 
-{{- $scope := .Site }}
-{{- if .Title }}
-<header class="page-header"><h1>{{ .Title }}</h1></header>{{ $scope = . }}
-{{ end }}
+{{ if (and .Site.Params.profileMode .IsHome) }}
+{{- partial "indexProfile.html" . }}
+{{else}} {{/* if not profileMode */}}
 
-{{- $paginator := .Paginate (where $scope.RegularPages ".Params.type" "!=" "page") }}
+{{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+{{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+
+{{ $PageContext := . }}
+{{ if .IsHome }}
+{{ $PageContext = .Site }}
+{{else}}
+{{- if .Title }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+{{ end }}
+{{ end }}
+{{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
+{{- if (eq $.Site.Params.homeInfoParams.enabled true) }}
+{{- partial "homeInfo.html" . }}
+{{else}}
 {{- $class = "first-entry" }}
+{{ end }}
 {{- else if .Data.Term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
@@ -47,5 +63,5 @@
   </nav>
 </footer>
 {{- end }}
-
+{{end}}{{/* end profileMode */}}
 {{ end  }}{{/* end main */}}
