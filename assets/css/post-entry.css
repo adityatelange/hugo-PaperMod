@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     height: 320px;
-    margin-bottom: var(--header-height);
+    margin-bottom: var(--gap);
 }
 
 @media screen and (max-width: 600px) {
