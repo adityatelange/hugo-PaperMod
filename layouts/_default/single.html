@@ -36,7 +36,7 @@
       {{- end }}
     </ul>
     {{- end }}
-    {{ if .Site.Params.ShowShareButtons }}
+    {{ if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
     {{ partial "share-icons.html" . }}
     {{ end }}
   </footer>
