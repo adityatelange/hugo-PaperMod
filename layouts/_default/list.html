@@ -38,9 +38,11 @@
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp&nbsp[draft]</sup></div>{{- end }}
     </h2>
   </header>
+  {{if (ne .Site.Params.hideSummary true)}}
   <section class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
+  {{ end }}
   <footer class="entry-footer">
     <time>{{ .Date.Format "January 2, 2006" }}</time>
     {{ if $.Site.Params.ShowReadingTime }} .
