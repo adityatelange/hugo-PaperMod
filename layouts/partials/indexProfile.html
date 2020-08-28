@@ -12,5 +12,10 @@
             {{ partial "social-icons.html" . }}
         </div>
         {{- end }}
+        {{- with .Site.Params.profileMode.buttons }}
+        <div class="buttons">
+            {{ partial "indexProfileButtons.html" . }}
+        </div>
+        {{- end }}
     </div>
 </div>

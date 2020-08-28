@@ -10,7 +10,11 @@
 }
 
 .main>.profile>.profile_inner {
-    transform: translate(0, -20%);
+    transform: translate(0, -10%);
+}
+
+.profile_inner h1 {
+    padding: 8px;
 }
 
 img {
@@ -30,4 +34,20 @@ img {
 
 .social-icons {
     padding: 16px;
+}
+
+.buttons {
+    max-width: 300px;
+    line-height: 2.8;
+}
+
+.button {
+    background: var(--tertiary);
+    border-radius: var(--radius);
+    margin: 8px;
+    padding: 8px;
+}
+
+.button-inner {
+    padding: 10px;
 }
