@@ -8,12 +8,12 @@
 <body
     class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list{{ if .IsHome }} home {{ end }}{{ end }}{{ if eq $.Site.Params.defaultTheme `dark` }} dark {{ end }}"
     id="top">
-    {{- partial "header.html" . }}
+    {{- partialCached "header.html" . }}
     <main class="main">
         {{- block "main" . }}
         {{end }}
     </main>
-    {{- partial "footer.html" . }}
+    {{- partialCached "footer.html" . }}
 </body>
 
 </html>
