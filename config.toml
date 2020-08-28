@@ -21,6 +21,14 @@ theme = "hugo-PaperMod"
   imageUrl = "#"
   imageTitle = "my image"
 
+  [[params.profileMode.buttons]]
+  name = "Archives"
+  url = "archives"
+
+  [[params.profileMode.buttons]]
+  name = "Tags"
+  url = "tags"
+
   [params.homeInfoParams]
     Title = "Hi there 👋"
     Content = "Welcome to my blog"
