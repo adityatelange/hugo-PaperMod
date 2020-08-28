@@ -9,13 +9,41 @@ enableInlineShortcodes = true
 theme = "hugo-PaperMod"
 
 [params]
-    ShowReadingTime = true
-    ShowShareButtons = true
-  [params.homeInfoParams]
-    enabled = true
-    Title = "Hi there 👋"
-    Content = "This is Content !! Can be Info, links, social-icons..."
+  ShowReadingTime = true
+  SetThemeAuto = true
+  contentTypeName = "posts"
+  defaultTheme = "auto"
+  ShowShareButtons = true
 
+  [params.profileMode]
+  enabled = false
+  title = "PaperMod"
+  imageUrl = "#"
+  imageTitle = "my image"
+
+  [params.homeInfoParams]
+    Title = "Hi there 👋"
+    Content = "Welcome to my blog"
+
+  [[params.socialIcons]]
+  name = "twitter"
+  url = "#"
+
+  [[params.socialIcons]]
+  name = "stackoverflow"
+  url = "#"
+
+  [[params.socialIcons]]
+  name = "codepen"
+  url = "#"
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "#"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "#"
 [menu]
 
   [[menu.main]]
