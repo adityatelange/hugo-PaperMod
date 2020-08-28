@@ -1,3 +1,24 @@
+{{- else if (eq .name "123rf") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path style="font-variation-settings:normal"
+        d="M7.48 3.826c-.702 0-1.345.388-1.675 1.008l-.711 1.334a4.214 4.214 0 0 1-1.614 1.67l-.388.224a2.207 2.207 0 0 0-1.104 1.913v8.607c0 .878.712 1.592 1.59 1.592h1.186c.468 0 .916-.19 1.244-.524l1.478-1.504c.266-.27.628-.421 1.006-.421h7.04c.378 0 .74.151 1.005.421l1.478 1.504c.329.334.778.524 1.247.524h1.183c.879 0 1.592-.714 1.592-1.592V9.975c0-.79-.422-1.518-1.106-1.912l-.388-.225a4.214 4.214 0 0 1-1.613-1.67l-.711-1.334a1.899 1.899 0 0 0-1.676-1.008z"
+        stroke-linejoin="miter" />
+    <circle cx="12" cy="12.467" r="2.723" /></svg>
+{{- else if (eq .name "adobestock") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path style="font-variation-settings:normal" d="M2.235 2.235h19.53v19.53H2.235z" />
+    <path style="font-variation-settings:normal"
+        d="M6.165 16.659s3.16 1.2 4.602-.17c1.37-1.3.787-3.163-.754-4.05-1.68-.969-3.284-1.788-3.036-3.536.446-3.138 4.386-1.851 4.386-1.851M15.792 7.794v7.774c0 1.023.635 1.766 2.043 1.624M17.826 10.04h-3.582" />
+</svg>
+{{- else if (eq .name "behance") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path paint-order="stroke fill markers" stroke-linejoin="miter" stroke-width="2"
+        style="font-variation-settings:normal"
+        d="M1.774 18.063V5.466h5.51c1.978 0 3.116 1.326 3.055 2.806-.043 1.049-.711 2.988-2.643 2.988h-5.93H7.73c1.224 0 3.532 1.13 3.532 3.532 0 2.4-1.873 3.27-3.318 3.27zm12.57-4.459h7.89s.012-4.18-4.167-4.18c-5.237 0-5.277 9.11-.3 9.11 3.06 0 3.935-1.806 3.935-1.806M15.526 5.823h4.987" />
+</svg>
 {{- if (eq .name "codepen") -}}
 <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -7,11 +28,43 @@
     <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
     <line x1="12" y1="2" x2="12" y2="8.5"></line>
 </svg>
+{{- else if (eq .name "dreamstime") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M19.834 20.994s4.824-4.08 2.044-12.03C19.252 1.456 6.822-1.223 2.508 7.566c-3.936 8.023 2.18 14.46 7.88 14.374 4.889-.075 8.475-3.226 7.813-8.604-.76-6.18-6.73-6.816-9.275-4.184-2.256 2.334-1.816 7.034.873 7.823 2.241.844 4.661-1.265 3.161-3.215"
+        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="bevel"
+        paint-order="stroke fill markers" /></svg>
+{{- else if (eq .name "dribbble") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle style="font-variation-settings:normal" cx="12.004" cy="12" r="9.39" paint-order="stroke fill markers" />
+    <path style="font-variation-settings:normal"
+        d="M5.858 19.136s2.343-5.79 8.161-6.422c5.818-.633 7.442.479 7.442.479M2.68 10.839s4.91.752 10.112-1.11c5.202-1.863 5.887-4.601 5.887-4.601" />
+    <path style="font-variation-settings:normal"
+        d="M8.533 3.208s2.888 2.73 5.339 9.235c2.451 6.505 2.344 8.4 2.344 8.4" /></svg>
+{{- else if (eq .name "email") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
 {{- else if (eq .name "facebook") -}}
 <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
 </svg>
+{{- else if (eq .name "freepik") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M5.737 17.28s3.423.84 7.61.162c4.188-.676 6.862-2.57 6.862-2.57s.28 3.943-4.967 5.33c-5.248 1.388-8.543.657-9.506-2.923zm-.62-3.104s4.491 1.361 8.728.344c4.237-1.016 5.94-2.568 5.94-2.568s-1.81-6.448-7.405-5.648c-5.597.8-8.061 4.414-7.263 7.872z"
+        style="font-variation-settings:normal" stroke-linejoin="round" />
+    <path
+        d="M1.265 12.607c.159-1.98.561-3.898 2.08-5.701m5.148-3.29c2.006-.66 3.968-1.157 6.446-.844m5.202 2.98c1.192 1.275 1.963 2.163 2.594 3.815"
+        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="round" />
+    <circle r=".989" cy="10.404" cx="14.746" fill="currentColor" stroke="none" />
+    <circle cx="9.637" cy="11.305" r="1.477" fill="currentColor" stroke="none" /></svg>
 {{- else if (eq .name "github") -}}
 <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -40,6 +93,25 @@
     <rect x="2" y="9" width="4" height="12"></rect>
     <circle cx="4" cy="4" r="2"></circle>
 </svg>
+{{- else if (eq .name "paypal") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M7.144 19.532l1.049-5.751c.11-.606.691-1.002 1.304-.948 2.155.192 6.877.1 8.818-4.002 2.554-5.397-.59-7.769-6.295-7.769H7.43a1.97 1.97 0 0 0-1.944 1.655L2.77 19.507a.857.857 0 0 0 .846.994h2.368a1.18 1.18 0 0 0 1.161-.969zM7.967 22.522a.74.74 0 0 0 .666.416h2.313c.492 0 .923-.351 1.003-.837l.759-4.601c.095-.523.597-.866 1.127-.819 1.86.166 5.567-.118 6.85-3.821.554-1.6.705-2.954.408-4.018"
+        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="miter" /></svg>
+{{- else if (eq .name "qq") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path transform="scale(0.04) translate(75 40)" stroke-width="50"
+        d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z">
+    </path>
+</svg>
+{{- else if (eq .name "shutterstock") -}}
+<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect ry="5" rx="5" height="20" width="20" y="2" x="2" />
+    <path d="M7.728 11.725V9.032c0-1.025.824-1.85 1.849-1.85h2.815m3.88 5.093v2.693a1.845 1.845 0 0 1-1.849 1.85h-2.815"
+        stroke-linecap="square" stroke-linejoin="miter" /></svg>
 {{- else if (eq .name "slack") -}}
 <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -81,79 +153,7 @@
     </path>
     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
 </svg>
-{{- else if (eq .name "email") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-</svg>
-{{- else if (eq .name "dribbble") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle style="font-variation-settings:normal" cx="12.004" cy="12" r="9.39" paint-order="stroke fill markers" />
-    <path style="font-variation-settings:normal"
-        d="M5.858 19.136s2.343-5.79 8.161-6.422c5.818-.633 7.442.479 7.442.479M2.68 10.839s4.91.752 10.112-1.11c5.202-1.863 5.887-4.601 5.887-4.601" />
-    <path style="font-variation-settings:normal"
-        d="M8.533 3.208s2.888 2.73 5.339 9.235c2.451 6.505 2.344 8.4 2.344 8.4" /></svg>
-{{- else if (eq .name "behance") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path paint-order="stroke fill markers" stroke-linejoin="miter" stroke-width="2"
-        style="font-variation-settings:normal"
-        d="M1.774 18.063V5.466h5.51c1.978 0 3.116 1.326 3.055 2.806-.043 1.049-.711 2.988-2.643 2.988h-5.93H7.73c1.224 0 3.532 1.13 3.532 3.532 0 2.4-1.873 3.27-3.318 3.27zm12.57-4.459h7.89s.012-4.18-4.167-4.18c-5.237 0-5.277 9.11-.3 9.11 3.06 0 3.935-1.806 3.935-1.806M15.526 5.823h4.987" />
-</svg>
-{{- else if (eq .name "freepik") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M5.737 17.28s3.423.84 7.61.162c4.188-.676 6.862-2.57 6.862-2.57s.28 3.943-4.967 5.33c-5.248 1.388-8.543.657-9.506-2.923zm-.62-3.104s4.491 1.361 8.728.344c4.237-1.016 5.94-2.568 5.94-2.568s-1.81-6.448-7.405-5.648c-5.597.8-8.061 4.414-7.263 7.872z"
-        style="font-variation-settings:normal" stroke-linejoin="round" />
-    <path
-        d="M1.265 12.607c.159-1.98.561-3.898 2.08-5.701m5.148-3.29c2.006-.66 3.968-1.157 6.446-.844m5.202 2.98c1.192 1.275 1.963 2.163 2.594 3.815"
-        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="round" />
-    <circle r=".989" cy="10.404" cx="14.746" fill="currentColor" stroke="none" />
-    <circle cx="9.637" cy="11.305" r="1.477" fill="currentColor" stroke="none" /></svg>
-{{- else if (eq .name "adobestock") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path style="font-variation-settings:normal" d="M2.235 2.235h19.53v19.53H2.235z" />
-    <path style="font-variation-settings:normal"
-        d="M6.165 16.659s3.16 1.2 4.602-.17c1.37-1.3.787-3.163-.754-4.05-1.68-.969-3.284-1.788-3.036-3.536.446-3.138 4.386-1.851 4.386-1.851M15.792 7.794v7.774c0 1.023.635 1.766 2.043 1.624M17.826 10.04h-3.582" />
-</svg>
-{{- else if (eq .name "shutterstock") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect ry="5" rx="5" height="20" width="20" y="2" x="2" />
-    <path d="M7.728 11.725V9.032c0-1.025.824-1.85 1.849-1.85h2.815m3.88 5.093v2.693a1.845 1.845 0 0 1-1.849 1.85h-2.815"
-        stroke-linecap="square" stroke-linejoin="miter" /></svg>
-{{- else if (eq .name "123rf") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path style="font-variation-settings:normal"
-        d="M7.48 3.826c-.702 0-1.345.388-1.675 1.008l-.711 1.334a4.214 4.214 0 0 1-1.614 1.67l-.388.224a2.207 2.207 0 0 0-1.104 1.913v8.607c0 .878.712 1.592 1.59 1.592h1.186c.468 0 .916-.19 1.244-.524l1.478-1.504c.266-.27.628-.421 1.006-.421h7.04c.378 0 .74.151 1.005.421l1.478 1.504c.329.334.778.524 1.247.524h1.183c.879 0 1.592-.714 1.592-1.592V9.975c0-.79-.422-1.518-1.106-1.912l-.388-.225a4.214 4.214 0 0 1-1.613-1.67l-.711-1.334a1.899 1.899 0 0 0-1.676-1.008z"
-        stroke-linejoin="miter" />
-    <circle cx="12" cy="12.467" r="2.723" /></svg>
-{{- else if (eq .name "dreamstime") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M19.834 20.994s4.824-4.08 2.044-12.03C19.252 1.456 6.822-1.223 2.508 7.566c-3.936 8.023 2.18 14.46 7.88 14.374 4.889-.075 8.475-3.226 7.813-8.604-.76-6.18-6.73-6.816-9.275-4.184-2.256 2.334-1.816 7.034.873 7.823 2.241.844 4.661-1.265 3.161-3.215"
-        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="bevel"
-        paint-order="stroke fill markers" /></svg>
-{{- else if (eq .name "paypal") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M7.144 19.532l1.049-5.751c.11-.606.691-1.002 1.304-.948 2.155.192 6.877.1 8.818-4.002 2.554-5.397-.59-7.769-6.295-7.769H7.43a1.97 1.97 0 0 0-1.944 1.655L2.77 19.507a.857.857 0 0 0 .846.994h2.368a1.18 1.18 0 0 0 1.161-.969zM7.967 22.522a.74.74 0 0 0 .666.416h2.313c.492 0 .923-.351 1.003-.837l.759-4.601c.095-.523.597-.866 1.127-.819 1.86.166 5.567-.118 6.85-3.821.554-1.6.705-2.954.408-4.018"
-        style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="miter" /></svg>
-{{- else if (eq .name "qq") -}}
-<svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path transform="scale(0.04) translate(75 40)" stroke-width="50"
-        d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z">
-    </path>
-</svg>
-{{- else -}}
+{{- else if .name -}}
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
