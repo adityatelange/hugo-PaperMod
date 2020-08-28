@@ -4,7 +4,7 @@
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin-left: auto;
     margin-right: auto;
-    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    padding: calc((var(--footer-height) - (var(--gap)) - 10px)/ 2) var(--gap);
     color: var(--secondary);
     font-size: 12px;
     text-align: center;
