@@ -37,17 +37,24 @@ img {
 }
 
 .buttons {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 300px;
-    line-height: 2.8;
+    justify-content: center;
 }
 
 .button {
     background: var(--tertiary);
     border-radius: var(--radius);
     margin: 8px;
-    padding: 8px;
+    padding: 6px;
+    transition: transform 0.1s;
 }
 
 .button-inner {
-    padding: 10px;
+    padding: 0 8px;
+}
+
+.button:active, .social-icons>a>svg:active{
+    transform: scale(0.96);
 }
