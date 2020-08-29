@@ -18,8 +18,8 @@
 }
 
 img {
-    display: inline-block;
-    width: 200px;
+    display: inline-table;
+    width: 180px;
     border-radius: 50%;
     pointer-events: none;
     margin: 5px;
@@ -27,9 +27,8 @@ img {
 
 @media screen and (max-width: 600px) {
     img {
-        width: 150px;
+        width: 130px;
     }
-
 }
 
 .social-icons {
@@ -39,7 +38,6 @@ img {
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    max-width: 300px;
     justify-content: center;
 }
 
