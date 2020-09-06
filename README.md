@@ -9,7 +9,7 @@ A simple, clean, flexible and responsive Hugo theme.
 
 ---
 
-![](https://i.ibb.co/GvspqCX/HomeInfo.png)
+<kbd><img src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
 
 ---
 
@@ -33,4 +33,4 @@ Read Wiki => [hugo-PaperMod - Features](https://github.com/adityatelange/hugo-Pa
 
 ## LightHouse
 
-[![](https://i.ibb.co/y6RwCzb/lighthouse.png)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
+<kbd><a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F"><img src="https://i.ibb.co/y6RwCzb/lighthouse.png" alt="LightHouse" /></a></kbd>
