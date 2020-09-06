@@ -28,3 +28,9 @@ Read Wiki => [hugo-PaperMod - Installation](https://github.com/adityatelange/hug
 ## Features/Mods
 
 Read Wiki => [hugo-PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)
+
+---
+
+## LightHouse
+
+[![](https://i.ibb.co/y6RwCzb/lighthouse.png)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
