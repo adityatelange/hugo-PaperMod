@@ -6,7 +6,6 @@
 .main>.profile {
     display: table-cell;
     vertical-align: middle;
-
 }
 
 .main>.profile>.profile_inner {
@@ -14,7 +13,7 @@
 }
 
 .profile_inner h1 {
-    padding: 8px;
+    padding: 12px 0;
 }
 
 img {
@@ -22,23 +21,27 @@ img {
     width: 180px;
     border-radius: 50%;
     pointer-events: none;
-    margin: 5px;
 }
 
 @media screen and (max-width: 600px) {
     img {
-        width: 130px;
+        width: 150px;
+    }
+    .main>.profile>.profile_inner {
+        transform: translate(0, 0);
     }
 }
 
 .social-icons {
-    padding: 16px;
+    padding: 12px 0;
 }
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .button {
@@ -53,6 +56,6 @@ img {
     padding: 0 8px;
 }
 
-.button:active, .social-icons>a>svg:active{
+.button:active, .social-icons>a>svg:hover{
     transform: scale(0.96);
 }

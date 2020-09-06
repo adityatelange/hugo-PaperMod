@@ -1,21 +1,18 @@
 <div class="profile">
+    {{ with .Site.Params.profileMode }}
     <div class="profile_inner">
-        {{if .Site.Params.profileMode.imageUrl}}
-        <div>
-            <img src="{{ .Site.Params.profileMode.imageUrl}}" alt="{{ .Site.Params.profileMode.imageTitle}}" />
-        </div>
-        {{end}}
-        <h1>{{ if .Site.Params.profileMode.title }}{{.Site.Params.profileMode.title}}{{ else }}{{ .Site.Title }}{{end}}
-        </h1>
-        {{- with .Site.Params.socialIcons }}
+        {{if .imageUrl}}<img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />{{end}}
+        <h1>{{ .title | default $.Site.Title }}</h1>
+        {{- with $.Site.Params.socialIcons }}
         <div class="social-icons">
             {{ partial "social-icons.html" . }}
         </div>
         {{- end }}
-        {{- with .Site.Params.profileMode.buttons }}
+        {{- with .buttons }}
         <div class="buttons">
             {{ partial "indexProfileButtons.html" . }}
         </div>
         {{- end }}
     </div>
+    {{end}}
 </div>
