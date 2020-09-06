@@ -10,8 +10,10 @@
     color: var(--primary);
     background: var(--border);
     border-radius: var(--radius);
+    transition: transform 0.1s;
 }
 
 .terms-tags a:hover {
     background: var(--tertiary);
+    transform: scale(0.96);
 }
