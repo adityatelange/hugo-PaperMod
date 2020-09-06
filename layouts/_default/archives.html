@@ -24,7 +24,7 @@
             · {{ end }}
             {{- .Date.Format "January 2, 2006" -}}
           </div>
-          <a class="entry-link" href="{{ .Permalink }}"></a>
+          <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
         </div>
         {{ end }}
         {{ end }}

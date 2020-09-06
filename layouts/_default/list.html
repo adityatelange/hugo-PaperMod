@@ -49,7 +49,7 @@
     {{ .ReadingTime }}{{ i18n "read_time" | default "min read" }}{{ end }}
     {{ if or .Params.author .Site.Params.author }} . {{ .Params.author | default .Site.Params.author }}{{ end }}
   </footer>
-  <a class="entry-link" href="{{ .Permalink }}"></a>
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
 
