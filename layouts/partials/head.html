@@ -8,7 +8,7 @@
 <meta name="description" content="{{ .Summary }}">
 <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
 {{- else }}
-<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }}{{end}}">
 <meta name="author" content="{{ .Site.Params.author }}">
 {{- end }}
 {{ if .Site.Params.analytics.google.SiteVerificationTag }}
