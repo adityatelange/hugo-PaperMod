@@ -1,9 +1,4 @@
 <header class="header">
-    {{- if $.Site.Params.SetThemeAuto -}}
-    <script>
-        setTheme();
-    </script>
-    {{- end -}}
     <nav class="nav">
         {{- if .IsHome }}
         <h1 class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>

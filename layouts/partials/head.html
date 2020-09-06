@@ -50,8 +50,3 @@
 {{- template "_internal/google_analytics_async.html" . }}
 {{- template "_internal/opengraph.html" . }}
 {{- end }}
-<!-- Script -->
-{{- if $.Site.Params.SetThemeAuto -}}
-{{ $settheme := resources.Get "js/set-theme.js" | minify }}
-<script src="{{ $settheme.Permalink }}"></script>
-{{- end -}}
