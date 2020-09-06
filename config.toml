@@ -9,6 +9,8 @@ enableInlineShortcodes = true
 theme = "hugo-PaperMod"
 
 [params]
+  description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author = "Theme PaperMod"
   ShowReadingTime = true
   SetThemeAuto = true
   contentTypeName = "posts"
