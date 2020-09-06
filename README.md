@@ -9,19 +9,7 @@ A simple, clean, flexible and responsive Hugo theme.
 
 ---
 
-![](images/HomeInfo.png)
-
-<details>
-
-![IndexProfile](images/IndexProfile.png)
-
-![Regular](images/Regular.png)
-
-![Archive](images/Archive.png)
-
-![Taxonomy](images/Taxonomy.png)
-
-</details>
+![](https://i.ibb.co/GvspqCX/HomeInfo.png)
 
 ---
 
