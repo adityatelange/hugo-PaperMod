@@ -2,8 +2,8 @@
 
 <div class="archive">
   <header class="page-header"><h1>{{ .Title }}</h1></header>
-
-  {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range $pages.GroupByPublishDate "2006" }}
   {{ if ne .Key "0001" }}
   <div class="archive-year">
     <h2 class="archive-year-header">{{ replace .Key "0001" "" }}</h2>
