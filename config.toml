@@ -54,26 +54,27 @@ theme = "hugo-PaperMod"
   [[params.socialIcons]]
   name = "github"
   url = "#"
+
 [menu]
 
   [[menu.main]]
     name = "Archives"
-    url = "/archives/"
+    url = "archives/"
     weight = 5
 
   [[menu.main]]
     name = "Tags"
-    url = "/tags/"
+    url = "tags/"
     weight = 10
 
   [[menu.main]]
     name = "Series"
-    url = "/series/"
+    url = "series/"
     weight = 15
 
   [[menu.main]]
     name = "Categories"
-    url = "/categories/"
+    url = "categories/"
     weight = 20
 
 [taxonomies]
