@@ -14,6 +14,11 @@
     </div>
     {{end}}
   </header>
+  {{ if .Params.cover }}
+  <figure class="entry-cover">
+    <img src="{{ .Params.cover | absURL }}" alt="cover image for {{ .Title | plainify }}">
+  </figure>
+  {{ end }}
   {{ if .Params.ShowToc }}
   <div class="toc">
     <details>

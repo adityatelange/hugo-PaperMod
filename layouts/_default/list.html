@@ -32,6 +32,11 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 <article class="{{ $class }}">
+  {{ if .Params.cover }}
+  <figure class="entry-cover">
+    <img src="{{ .Params.cover | absURL }}" alt="cover image for {{ .Title }}">
+  </figure>
+  {{ end }}
   <header class="entry-header">
     <h2>
       {{ .Title }}

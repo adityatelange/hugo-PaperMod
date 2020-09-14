@@ -90,6 +90,13 @@
     font-size: 14px;
 }
 
+.entry-cover img {
+    border-radius: var(--radius);
+    margin-bottom: var(--gap);
+    pointer-events: none;
+    width: 100%;
+}
+
 .social-icons a {
     margin: 2px;
     padding: 6px;
