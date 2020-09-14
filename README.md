@@ -31,13 +31,17 @@ Read Wiki => [hugo-PaperMod - Features](https://github.com/adityatelange/hugo-Pa
 
 ---
 
+### Social-Icons
+
+Read Wiki => [Social-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons#social-icons)
+
+---
+
 ## LightHouse
 
 <kbd><a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F"><img src="https://i.ibb.co/y6RwCzb/lighthouse.png" alt="LightHouse" /></a></kbd>
 
-### Social-Icons
-
-Read Wiki => [Social-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons#social-icons)
+---
 
 ### Credits
 
