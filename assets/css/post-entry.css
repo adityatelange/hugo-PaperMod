@@ -5,13 +5,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 320px;
-    margin-bottom: var(--gap);
+    min-height: 320px;
+    margin-bottom: calc( var(--gap) * 2);
+    margin-top: var(--gap);
 }
 
 @media screen and (max-width: 600px) {
     .first-entry {
-        height: 260px;
+        min-height: 260px;
     }
 }
 
