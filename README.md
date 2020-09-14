@@ -38,3 +38,7 @@ Read Wiki => [hugo-PaperMod - Features](https://github.com/adityatelange/hugo-Pa
 ### Social-Icons
 
 Read Wiki => [Social-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons#social-icons)
+
+### Credits
+
+Inspired from [hugo-paper](https://github.com/nanxiaobei/hugo-paper) :)
