@@ -8,9 +8,9 @@
     </h1>
     {{ if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
-      {{- if or .Params.author .Site.Params.author }}
-      {{- .Params.author | default .Site.Params.author }} · {{ end }}
-      {{- .Date.Format "January 2, 2006" -}}
+      <time>{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if or .Params.author .Site.Params.author }} . {{ .Params.author | default .Site.Params.author }}{{ end }}
+      {{ if $.Site.Params.ShowReadingTime }} . {{ .ReadingTime }}{{ i18n "read_time" | default "min read" }}{{ end }}
     </div>
     {{end}}
   </header>
