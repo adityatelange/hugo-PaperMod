@@ -132,3 +132,7 @@ blockquote {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
+*:focus {
+    outline:none;
+}
