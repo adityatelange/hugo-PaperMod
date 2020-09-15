@@ -53,6 +53,14 @@
     padding: .5em;
 }
 
+.toc details summary {
+    cursor: zoom-in;
+}
+
+.toc details[open] summary {
+    cursor: zoom-out;
+}
+
 .toc .details {
     display: inline;
     font-weight: 500;
