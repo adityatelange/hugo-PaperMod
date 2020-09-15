@@ -1,15 +1,14 @@
 .terms-tags li {
     display: inline-block;
     margin: 10px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .terms-tags a {
     display: block;
-    padding: 5px 14px;
-    color: var(--primary);
-    background: var(--border);
-    border-radius: var(--radius);
+    padding: 3px 10px;
+    background: var(--tertiary);
+    border-radius: 6px;
     transition: transform 0.1s;
 }
 
