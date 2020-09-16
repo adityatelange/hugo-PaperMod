@@ -21,7 +21,7 @@
   {{ end }}
   {{ if .Params.ShowToc }}
   <div class="toc">
-    <details>
+    <details {{if .Params.TocOpen }} open{{ end }}>
       <summary>
         <div class="details">Table of Contents</div>
       </summary>
