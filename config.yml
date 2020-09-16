@@ -15,9 +15,8 @@ params:
   description: 'Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod'
   author: Theme PaperMod
   ShowReadingTime: true
-  SetThemeAuto: true
   contentTypeName: posts
-  defaultTheme: auto
+  defaultTheme: dark
   ShowShareButtons: true
   profileMode:
     enabled: false
@@ -45,6 +44,12 @@ params:
       url: '#'
     - name: github
       url: '#'
+
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 1
 
 menu:
   main:
