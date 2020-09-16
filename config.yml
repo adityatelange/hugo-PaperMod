@@ -1,0 +1,91 @@
+baseURL: 'https://adityatelange.github.io/hugo-PaperMod/'
+title: PaperMod
+author: Steve Francia
+copyright: >-
+  Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights
+  reserved.
+
+paginate: 3
+languageCode: en
+DefaultContentLanguage: en
+enableInlineShortcodes: true
+theme: hugo-PaperMod
+
+params:
+  description: 'Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod'
+  author: Theme PaperMod
+  ShowReadingTime: true
+  SetThemeAuto: true
+  contentTypeName: posts
+  defaultTheme: auto
+  ShowShareButtons: true
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: '#'
+    imageTitle: my image
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: twitter
+      url: '#'
+    - name: stackoverflow
+      url: '#'
+    - name: codepen
+      url: '#'
+    - name: linkedin
+      url: '#'
+    - name: github
+      url: '#'
+
+menu:
+  main:
+    - name: Archives
+      url: archives/
+      weight: 5
+    - name: Tags
+      url: tags/
+      weight: 10
+    - name: Series
+      url: series/
+      weight: 15
+    - name: Categories
+      url: categories/
+      weight: 20
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+
+  instagram:
+    disabled: false
+    simple: true
+
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
