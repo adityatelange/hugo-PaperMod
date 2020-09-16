@@ -207,16 +207,16 @@
     display: block;
     margin-left: 0;
     margin-right: 0;
-    padding: var(--gap);
+    padding: 10px;
     color: rgba(255, 255, 255, 0.8);
     background: transparent;
     border-radius: 0;
 }
 
 .post-content blockquote {
-    margin: 0 0 0 calc(var(--gap) * -1);
-    padding: 0 0 0 21px;
-    border-left: 3px solid var(--primary);
+    margin: 0 calc(var(--gap) * -1);
+    padding: 0 32px;
+    border-left: 2px solid var(--primary);
 }
 
 .post-content hr {
@@ -276,4 +276,11 @@
 
 .share-button-single:hover svg {
     opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .post-content blockquote {
+        margin: 0 calc(var(--gap) * -1);
+        padding: 0 21px;
+    }
 }
