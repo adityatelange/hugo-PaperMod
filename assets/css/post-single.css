@@ -220,9 +220,8 @@
 }
 
 .post-content hr {
-    height: 1px;
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin: 30px calc(var(--gap) * -1);
+    height: 2px;
     background: var(--tertiary);
     border-top: 0;
     border-bottom: 0;
