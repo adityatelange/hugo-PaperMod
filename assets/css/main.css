@@ -65,3 +65,9 @@
     display: inline;
     font-weight: 500;
 }
+
+.toc blockquote {
+    border-left: 2px solid;
+    margin: 20px;
+    padding: 10px 40px;
+}
