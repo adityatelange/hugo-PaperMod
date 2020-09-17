@@ -4,8 +4,6 @@ date: 2020-09-15T11:30:03+05:30
 series: ["PaperMod"]
 weight: 1
 hidemeta: true
-showToc: true
-TocOpen: true
 aliases: ['/papermod-installation']
 tags: ['PaperMod']
 author: "Aditya Telange"
@@ -48,6 +46,6 @@ Example Site Structure is present here: [exampleSite](https://github.com/adityat
 
 ---
 
-###  [Papermod - Features](/papermod-features)
-###  [Papermod - How to Guide](/papermod-how-to-guide)
-###  [Papermod - Icons](/papermod-icons)
+###  [Papermod - Features](../papermod-features)
+###  [Papermod - How to Guide](../papermod-how-to-guide)
+###  [Papermod - Icons](../papermod-icons)
