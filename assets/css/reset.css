@@ -107,7 +107,6 @@ textarea:-webkit-autofill {
 img {
     display: block;
     max-width: 100%;
-    border-radius: var(--radius);
 }
 
 ::-webkit-scrollbar {

@@ -231,6 +231,10 @@
     max-width: 100%;
 }
 
+.post-content img {
+    border-radius: var(--radius);
+}
+
 .post-footer {
     margin-top: 56px;
 }
