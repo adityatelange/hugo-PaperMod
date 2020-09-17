@@ -4,13 +4,14 @@
 <!-- Title -->
 <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} - {{ end }}{{end}}{{ .Site.Title }}</title>
 <!-- Meta -->
-{{- if eq .Kind "page" }}
+{{- if in site.Params.mainSections .Type }}
 <meta name="description" content="{{ .Summary }}">
-<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
 {{- else }}
-<meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }}{{end}}">
-<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="description"
+    content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }} - {{ .Site.Title }}{{end}}">
 {{- end }}
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}" />
 {{ if .Site.Params.analytics.google.SiteVerificationTag }}
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{end}}
@@ -48,4 +49,6 @@
 {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics_async.html" . }}
 {{- template "_internal/opengraph.html" . }}
+{{- template "_internal/twitter_cards.html" . }}
+{{- template "_internal/schema.html" . }}
 {{- end }}
