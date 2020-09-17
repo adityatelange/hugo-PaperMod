@@ -4,7 +4,7 @@
         <h2>{{ .Title }}</h2>
     </header>
     <section class="entry-content">
-        <p>{{ .Content | plainify | htmlUnescape }}</p>
+        <p>{{ .Content | markdownify }}</p>
     </section>
     <footer class="entry-footer">
         {{- with $.Site.Params.socialIcons }}
