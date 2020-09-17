@@ -62,9 +62,6 @@ menu:
     - name: Series
       url: series/
       weight: 15
-    - name: Categories
-      url: categories/
-      weight: 20
 
 taxonomies:
   category: categories
