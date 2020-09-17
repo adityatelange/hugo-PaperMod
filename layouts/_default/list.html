@@ -10,11 +10,14 @@
 </header>
 {{ end }}
 
-
 {{ $pages := .RegularPages }}
 
 {{ if .IsHome }}
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if .Site.Params.homeInfoParams }}
+{{- partial "homeInfo.html" . }}
+{{- end }}
 {{end}}
 
 {{ $paginator := .Paginate $pages }}
@@ -23,11 +26,9 @@
 
 {{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
-{{- if .Site.Params.homeInfoParams | or .Site.Params.disableSpecial1stPost}}
-{{- partial "homeInfo.html" . }}
-{{else}}
+{{- if not .Site.Params.homeInfoParams | or .Site.Params.disableSpecial1stPost}}
 {{- $class = "first-entry" }}
-{{ end }}
+{{- end }}
 {{- else if .Data.Term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
