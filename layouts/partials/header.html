@@ -1,3 +1,10 @@
+{{ if eq .Site.Params.defaultTheme "auto" }}
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+{{ end }}
 <header class="header">
     <nav class="nav">
         {{- if .IsHome }}
