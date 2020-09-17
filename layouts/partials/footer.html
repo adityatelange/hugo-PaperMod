@@ -22,7 +22,9 @@
             document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
         }
     }
+    {{if in site.Params.mainSections .Type }}
     hljs.initHighlightingOnLoad();
+    {{end }}
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
