@@ -3,6 +3,7 @@
 <div class="share-buttons">
     <p>Share On</p>
     <a class="share-button-single" target="_blank" rel="noopener" name="twitter"
+        aria-label="share {{ $title | plainify }} on twitter"
         href="https://twitter.com/intent/tweet/?text={{ $title }}&amp;url={{ $pageurl }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve">
@@ -11,6 +12,7 @@
         </svg>
     </a>
     <a class="share-button-single" target="_blank" rel="noopener" name="linkedin"
+        aria-label="share {{ $title | plainify }} on linkedin"
         href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $pageurl }}&amp;title={{ $title }}&amp;summary={{ $title }}&amp;source={{ $pageurl }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve">
@@ -19,6 +21,7 @@
         </svg>
     </a>
     <a class="share-button-single" target="_blank" rel="noopener" name="reddit"
+        aria-label="share {{ $title | plainify }} on reddit"
         href="https://reddit.com/submit?url={{ $pageurl }}&title={{ $title }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve">
@@ -27,6 +30,7 @@
         </svg>
     </a>
     <a class="share-button-single" target="_blank" rel="noopener" name="facebook"
+        aria-label="share {{ $title | plainify }} on facebook"
         href="https://facebook.com/sharer/sharer.php?u={{ $pageurl }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve">
@@ -35,6 +39,7 @@
         </svg>
     </a>
     <a class="share-button-single" target="_blank" rel="noopener" name="whatsapp"
+        aria-label="share {{ $title | plainify }} on whatsapp"
         href="whatsapp://send?text={{ $title }}%20-%20{{ $pageurl }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve">
@@ -43,6 +48,7 @@
         </svg>
     </a>
     <a class="share-button-single" target="_blank" rel="noopener" name="telegram"
+        aria-label="share {{ $title | plainify }} on telegram"
         href="https://telegram.me/share/url?text={{ $title }}&amp;url={{ $pageurl }}">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
             version="1.1" width="100%" xml:space="preserve" viewBox="2 2 28 28">
