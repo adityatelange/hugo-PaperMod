@@ -211,6 +211,7 @@
     color: rgba(255, 255, 255, 0.8);
     background: transparent;
     border-radius: 0;
+    overflow-x: auto;
 }
 
 .post-content blockquote {
