@@ -16,7 +16,7 @@ params:
   author: Theme PaperMod
   ShowReadingTime: true
   contentTypeName: posts
-  defaultTheme: dark
+  defaultTheme: auto
   ShowShareButtons: true
   profileMode:
     enabled: false
