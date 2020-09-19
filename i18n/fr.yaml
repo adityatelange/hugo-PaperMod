@@ -1,0 +1,5 @@
+- id: prev_page
+  translation: "Page Précédente"
+
+- id: next_page
+  translation: "Page Suivante"
