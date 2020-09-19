@@ -71,3 +71,7 @@
     margin: 20px;
     padding: 10px 40px;
 }
+
+.toc li ul {
+    margin-left: var(--gap);
+}
