@@ -32,17 +32,11 @@
     line-height: 36px;
     background: var(--primary);
     border-radius: calc(36px / 2);
-}
-
-.pagination .prev {
-    padding-left: 16px;
-    padding-right: 18px;
+    padding: 0 16px;
 }
 
 .pagination .next {
     margin-left: auto;
-    padding-left: 18px;
-    padding-right: 16px;
 }
 
 .toc {
