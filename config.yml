@@ -54,13 +54,13 @@ markup:
 menu:
   main:
     - name: Archives
-      url: archives/
+      url: /archives/
       weight: 5
     - name: Tags
-      url: tags/
+      url: /tags/
       weight: 10
     - name: Series
-      url: series/
+      url: /series/
       weight: 15
 
 taxonomies:
