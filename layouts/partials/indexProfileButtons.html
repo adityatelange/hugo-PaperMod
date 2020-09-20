@@ -1,7 +1,5 @@
 {{ range . -}}
-<div class="button">
-    <a href="{{ .url }}" rel="noopener" title="{{ .name | humanize }}">
-        <span class="button-inner">{{ .name }}</span>
-    </a>
-</div>
+<a class="button" href="{{ .url }}" rel="noopener" title="{{ .name | humanize }}">
+    <span class="button-inner">{{ .name }}</span>
+</a>
 {{- end -}}
