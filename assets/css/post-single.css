@@ -1,8 +1,7 @@
 /* Post single
 -------------------------------------------------- */
 .post-header {
-    margin-top: 24px;
-    margin-bottom: var(--content-gap);
+    margin: 24px auto var(--content-gap) auto
 }
 
 .post-title {
@@ -21,13 +20,11 @@
 }
 
 .post-content h1 {
-    margin-top: 40px;
-    margin-bottom: 32px;
+    margin: 40px auto 32px auto
 }
 
 .post-content h2 {
-    margin-top: 32px;
-    margin-bottom: 24px;
+    margin: 32px auto 24px auto;
 }
 
 .post-content h3,
@@ -36,6 +33,7 @@
 .post-content h6 {
     margin-top: 24px;
     margin-bottom: 16px;
+    margin: 24px auto 16px auto;
 }
 
 .post-content h1 {
@@ -67,8 +65,7 @@
 }
 
 .post-content a code {
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0;
     border-radius: 0;
     box-shadow: 0 -1px 0 var(--primary) inset;
 }
@@ -138,15 +135,12 @@
 }
 
 .post-content table:not(.highlighttable) td code:only-child {
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0;
 }
 
 .post-content .highlight,
 .post-content pre {
-    margin-left: calc(var(--gap) * -1);
-    margin-right: calc(var(--gap) * -1);
-    margin-bottom: 32px;
+    margin: auto calc(var(--gap) * -1) 32px calc(var(--gap) * -1);
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
 }
@@ -160,9 +154,7 @@
 }
 
 .post-content .highlight pre {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 /* table */
@@ -193,8 +185,7 @@
 }
 
 .post-content code {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin: auto 4px;
     padding: 4px 6px;
     font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
     font-size: 0.78em;
@@ -205,8 +196,7 @@
 
 .post-content pre code {
     display: block;
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0;
     padding: 10px;
     color: rgba(255, 255, 255, 0.8);
     background: transparent;

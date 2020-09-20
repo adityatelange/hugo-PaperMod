@@ -16,8 +16,7 @@
 
 .logo,
 .menu {
-    margin-left: var(--gap);
-    margin-right: var(--gap);
+    margin: auto var(--gap);
 }
 
 .logo a {

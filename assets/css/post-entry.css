@@ -6,8 +6,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 320px;
-    margin-bottom: calc( var(--gap) * 2);
-    margin-top: var(--gap);
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -28,8 +27,7 @@
 }
 
 .first-entry .entry-content {
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin: 14px 0;
     font-size: 16px;
     -webkit-line-clamp: 3;
 }
@@ -61,8 +59,7 @@
 }
 
 .entry-content {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
     color: var(--secondary);
     font-size: 14px;
     line-height: 1.6;
