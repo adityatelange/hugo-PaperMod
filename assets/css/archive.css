@@ -1,13 +1,8 @@
 /* Archive
 -------------------------------------------------- */
-.archive {
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-}
-
 .archive-posts {
-    width: 100%
+    width: 100%;
+    font-size: 16px;
 }
 
 .archive-year {
@@ -15,17 +10,17 @@
 }
 
 .archive-year-header:not(:last-of-type) {
-    border-bottom: 1px solid var(--border)
+    border-bottom: 1px solid var(--border);
 }
 
 .archive-year:not(:last-of-type) {
-    border-bottom: 1px solid var(--border)
+    border-bottom: 1px solid var(--border);
 }
 
 .archive-month {
     display: flex;
     align-items: flex-start;
-    padding: 10px 0
+    padding: 10px 0;
 }
 
 .archive-month-header {
@@ -34,7 +29,7 @@
 }
 
 .archive-month:not(:last-of-type) {
-    border-bottom: 1px solid var(--border)
+    border-bottom: 1px solid var(--border);
 }
 
 .archive-entry {
@@ -44,7 +39,8 @@
 }
 
 .archive-entry-title {
-    margin: 5px 0
+    margin: 5px 0;
+    font-weight: 400;
 }
 
 .archive-meta {
@@ -54,10 +50,10 @@
 
 @media (max-width: 800px) {
     .archive-month {
-        flex-direction: column
+        flex-direction: column;
     }
 
     .archive-year {
-        margin-top: 20px
+        margin-top: 20px;
     }
 }
