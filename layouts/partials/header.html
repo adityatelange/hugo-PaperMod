@@ -12,14 +12,19 @@
         {{- else }}
         <p class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></p>
         {{- end }}
-        {{- if .Site.Menus.main }}
+        {{ $currentPage := . }}
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
+            {{ $menu_item_url := .URL | relLangURL }}
+            {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
             <li>
-                <a href="{{ .URL | absLangURL}}">{{ .Name }}</a>
+                <a href="{{ .URL | absLangURL }}">
+                    <span {{ if eq $menu_item_url $page_url }}
+                        {{/* the menu item links to the current page (with relLangURL) */}} class="active"
+                        {{ end }}>{{ .Name }}</span>
+                </a>
             </li>
             {{- end }}
         </ul>
-        {{- end }}
     </nav>
 </header>

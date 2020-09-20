@@ -8,7 +8,7 @@
 <body
     class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list{{ if .IsHome }} home {{ end }}{{ end }}{{ if eq $.Site.Params.defaultTheme `dark` }} dark {{ end }}"
     id="top">
-    {{- partialCached "header.html" . }}
+    {{- partialCached "header.html" . .Page}}
     <main class="main">
         {{- block "main" . }}
         {{end }}
