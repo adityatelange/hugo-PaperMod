@@ -31,9 +31,7 @@
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
-    margin: 24px auto 16px auto;
+    margin: 24px 0 16px 0;
 }
 
 .post-content h1 {
