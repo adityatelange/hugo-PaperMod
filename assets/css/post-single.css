@@ -19,14 +19,6 @@
     color: var(--content);
 }
 
-.post-content h1 {
-    margin: 40px auto 32px auto
-}
-
-.post-content h2 {
-    margin: 32px auto 24px auto;
-}
-
 .post-content h3,
 .post-content h4,
 .post-content h5,
@@ -35,10 +27,12 @@
 }
 
 .post-content h1 {
+    margin: 40px auto 32px auto;
     font-size: 40px;
 }
 
 .post-content h2 {
+    margin: 32px auto 24px auto;
     font-size: 32px;
 }
 
