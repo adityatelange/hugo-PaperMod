@@ -2,6 +2,7 @@
 ![GitHub](https://img.shields.io/github/license/adityatelange/hugo-PaperMod)
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/hugo-papermod/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
+![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
 
 # hugo-PaperMod
 
