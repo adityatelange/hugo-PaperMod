@@ -3,3 +3,11 @@
 
 - id: next_page
   translation: "अगला पृष्ठ"
+
+- id: read_time
+  translation:
+    one : "एक मिनट"
+    other: "{{ .Count }} मिनट"
+
+- id: toc
+  translation: "विषय - सूची"
