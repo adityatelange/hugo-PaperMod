@@ -3,3 +3,11 @@
 
 - id: next_page
   translation: "Next Page"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: toc
+  translation: "Table of Contents"
