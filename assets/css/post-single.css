@@ -13,6 +13,15 @@
 .post-meta {
     color: var(--secondary);
     font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-meta .i18n_list li {
+    display: inline-flex;
+    list-style: none;
+    margin: auto 3px;
+    box-shadow: 0 1px 0 var(--secondary);
 }
 
 .post-content {
