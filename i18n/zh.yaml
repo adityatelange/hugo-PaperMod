@@ -3,3 +3,14 @@
 
 - id: next_page
   translation: "下一页"
+
+- id: read_time
+  translation:
+    one : "1 分钟"
+    other: "{{ .Count }} 分钟"
+
+- id: toc
+  translation: "目录"
+
+- id: translations
+  translation: "语言"
