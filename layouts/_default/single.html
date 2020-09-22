@@ -9,10 +9,10 @@
     {{ if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
       <time>{{ .Date.Format "January 2, 2006" }}</time>
-      {{ if or .Params.author .Site.Params.author }} . {{ .Params.author | default .Site.Params.author }}{{ end }}
       {{ if $.Site.Params.ShowReadingTime }} .
       {{ $default_txt := print .ReadingTime " " "min" }}
       {{ i18n "read_time" .ReadingTime | default  $default_txt  }}{{ end }}
+      {{ if or .Params.author .Site.Params.author }} . {{ .Params.author | default .Site.Params.author }}{{ end }}
     </div>
     {{end}}
   </header>
