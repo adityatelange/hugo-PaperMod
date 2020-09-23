@@ -1,7 +1,7 @@
 {{- define "main" }}
 
 {{- if (and .Site.Params.profileMode.enabled .IsHome) }}
-{{- partial "indexProfile.html" . }}
+{{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
@@ -23,7 +23,7 @@
 {{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
 {{- if .Site.Params.homeInfoParams | or .Site.Params.disableSpecial1stPost}}
-{{- partial "homeInfo.html" . }}
+{{- partial "home_info.html" . }}
 {{- else}}
 {{- $class = "first-entry" }}
 {{- end }}

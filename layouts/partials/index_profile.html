@@ -5,7 +5,7 @@
         <h1>{{ .title | default $.Site.Title }}</h1>
         {{- with $.Site.Params.socialIcons }}
         <div class="social-icons">
-            {{ partial "social-icons.html" . }}
+            {{ partial "social_icons.html" . }}
         </div>
         {{- end }}
         {{- with .buttons }}
