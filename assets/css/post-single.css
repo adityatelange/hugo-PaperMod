@@ -236,7 +236,7 @@
 }
 
 .post-tags li+li {
-    margin-left: 3px;
+    margin-bottom: 3px;
 }
 
 .post-tags a {
