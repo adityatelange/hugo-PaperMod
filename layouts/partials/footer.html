@@ -14,6 +14,7 @@
 {{if in site.Params.mainSections .Type }}
 {{ $highlight := resources.Get "js/highlight.min.js" | minify | fingerprint}}
 <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {{end }}
 <script>
     window.onload = function () {
@@ -21,9 +22,6 @@
             document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
         }
     }
-    {{if in site.Params.mainSections .Type }}
-    hljs.initHighlightingOnLoad();
-    {{end }}
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
