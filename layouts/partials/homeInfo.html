@@ -1,17 +1,17 @@
-{{ with $.Site.Params.homeInfoParams }}
+{{- with $.Site.Params.homeInfoParams }}
 <article class="first-entry">
     <header class="entry-header">
-        <h2>{{ .Title }}</h2>
+        <h2>{{- .Title }}</h2>
     </header>
     <section class="entry-content">
-        <p>{{ .Content | markdownify }}</p>
+        <p>{{- .Content | markdownify }}</p>
     </section>
     <footer class="entry-footer">
         {{- with $.Site.Params.socialIcons }}
         <div class="social-icons">
-            {{ partial "social-icons.html" . }}
+            {{- partial "social-icons.html" . }}
         </div>
         {{- end }}
     </footer>
 </article>
-{{end}}
+{{- end}}

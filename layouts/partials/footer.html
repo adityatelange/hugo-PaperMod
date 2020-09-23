@@ -11,11 +11,11 @@
             <path d="M12 6H0l6-6z" /></svg>
     </button>
 </a>
-{{if in site.Params.mainSections .Type }}
-{{ $highlight := resources.Get "js/highlight.min.js" | minify | fingerprint}}
+{{- if in site.Params.mainSections .Type }}
+{{- $highlight := resources.Get "js/highlight.min.js" | minify | fingerprint}}
 <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-{{end }}
+{{- end }}
 <script>
     window.onload = function () {
         if (localStorage.getItem("menu-scroll-position")) {

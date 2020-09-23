@@ -1,21 +1,20 @@
-{{ define "main" }}
+{{- define "main" }}
 
-{{ if (and .Site.Params.profileMode.enabled .IsHome) }}
+{{- if (and .Site.Params.profileMode.enabled .IsHome) }}
 {{- partial "indexProfile.html" . }}
-{{else}} {{/* if not profileMode */}}
+{{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   <h1>{{ .Title }}</h1>
 </header>
-{{ end }}
+{{- end }}
 
+{{- $pages := .RegularPages }}
 
-{{ $pages := .RegularPages }}
-
-{{ if .IsHome }}
-{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{end}}
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- end}}
 
 {{ $paginator := .Paginate $pages }}
 
@@ -25,29 +24,29 @@
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
 {{- if .Site.Params.homeInfoParams | or .Site.Params.disableSpecial1stPost}}
 {{- partial "homeInfo.html" . }}
-{{else}}
+{{- else}}
 {{- $class = "first-entry" }}
-{{ end }}
+{{- end }}
 {{- else if .Data.Term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 <article class="{{ $class }}">
-  {{ if .Params.cover }}
+  {{- if .Params.cover }}
   <figure class="entry-cover">
     <img src="{{ .Params.cover | absURL }}" alt="cover image for {{ .Title }}">
   </figure>
-  {{ end }}
+  {{- end }}
   <header class="entry-header">
     <h2>
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h2>
   </header>
-  {{if (ne .Site.Params.hideSummary true)}}
+  {{- if (ne .Site.Params.hideSummary true)}}
   <section class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
-  {{ end }}
+  {{- end }}
   <footer class="entry-footer">
     <time>{{ .Date.Format "January 2, 2006" }}</time>
     {{- if $.Site.Params.ShowReadingTime }}&nbsp;.&nbsp;
@@ -72,4 +71,4 @@
 </footer>
 {{- end }}
 {{end}}{{/* end profileMode */}}
-{{ end  }}{{/* end main */}}
+{{- end  }}{{- /* end main */ -}}

@@ -1,39 +1,41 @@
-{{ define "main" }}
+{{- define "main" }}
 
 <header class="page-header">
   <h1>{{ .Title }}</h1>
 </header>
-{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{ range $pages.GroupByPublishDate "2006" }}
-{{ if ne .Key "0001" }}
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- range $pages.GroupByPublishDate "2006" }}
+{{- if ne .Key "0001" }}
 <div class="archive-year">
-  <h2 class="archive-year-header">{{ replace .Key "0001" "" }}</h2>
-  {{ range .Pages.GroupByDate "January" }}
+  <h2 class="archive-year-header">{{- replace .Key "0001" "" }}</h2>
+  {{- range .Pages.GroupByDate "January" }}
   <div class="archive-month">
-    <h3 class="archive-month-header">{{ .Key }}</h3>
+    <h3 class="archive-month-header">{{- .Key }}</h3>
     <div class="archive-posts">
-      {{ range .Pages  }}
-      {{ if eq .Kind "page" }}
+      {{- range .Pages  }}
+      {{- if eq .Kind "page" }}
       <div class="archive-entry">
         <h3 class="archive-entry-title">
-          {{ .Title | markdownify }}
+          {{- .Title | markdownify }}
         </h3>
         <div class="archive-meta">
-          {{- if or .Params.author .Site.Params.author }}{{- .Params.author | default .Site.Params.author }} ·
-          {{ end }}
-          {{ if $.Site.Params.ShowReadingTime }}{{ .ReadingTime }}{{ i18n "read_time" | default "min read" }}
-          · {{ end }}
+          {{- if or .Params.author .Site.Params.author }}
+          {{- .Params.author | default .Site.Params.author }} ·
+          {{- end }}
+          {{- if $.Site.Params.ShowReadingTime }}
+          {{ .ReadingTime }}{{ i18n "read_time" | default "min read" }}&nbsp;·&nbsp;{{ end }}
           {{- .Date.Format "January 2, 2006" -}}
         </div>
         <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </div>
-      {{ end }}
-      {{ end }}
+      {{- end }}
+      {{- end }}
     </div>
   </div>
-  {{ end }}
+  {{- end }}
 </div>
-{{ end }}
-{{ end }}
+{{- end }}
+{{- end }}
 
-{{ end  }}{{/* end main */}}
+{{- end  }}{{/* end main */}}

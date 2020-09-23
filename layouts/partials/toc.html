@@ -24,10 +24,10 @@
         {{- $headerLevel := len (seq $headerLevel) -}}
 
         {{/* get id="xyz" */}}
-        {{ $id := index (findRE "(id=\"(.*?)\")" $header 9) 0 }}
+        {{- $id := index (findRE "(id=\"(.*?)\")" $header 9) 0 }}
 
-        {{/* strip id="" to leave xyz (no way to get regex capturing groups in hugo :( */}}
-        {{ $cleanedID := replace (replace $id "id=\"" "") "\"" "" }}
+        {{- /* strip id="" to leave xyz, no way to get regex capturing groups in hugo */ -}}
+        {{- $cleanedID := replace (replace $id "id=\"" "") "\"" "" }}
         {{- $header := replaceRE "<h[1-4].*?>((.|\n])+?)</h[1-4]>" "$1" $header -}}
 
         {{- if ne $i 0 -}}
@@ -69,7 +69,7 @@
         {{- end -}}
         {{- end -}}
         <!-- {{- $firstHeaderLevel := len (seq (index (findRE "[1-4]" (index $headers 0) 1) 0)) -}} -->
-        {{ $firstHeaderLevel := $largest }}
+        {{- $firstHeaderLevel := $largest }}
         {{- $lastHeaderLevel := len (seq (index (findRE "[1-4]" (index $headers (sub (len $headers) 1)) 1) 0)) -}}
     </li>
     {{- range seq (sub $lastHeaderLevel $firstHeaderLevel) -}}

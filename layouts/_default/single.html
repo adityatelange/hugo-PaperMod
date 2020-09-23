@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{- define "main" }}
 
 <article class="post-single">
   <header class="post-header">
@@ -6,7 +6,7 @@
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h1>
-    {{ if .Params.hideMeta }}{{ else }}
+    {{- if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
       <time>{{ .Date.Format "January 2, 2006" }}</time>
       {{- if $.Site.Params.ShowReadingTime -}}&nbsp;.&nbsp;
@@ -15,34 +15,34 @@
       {{- if or .Params.author .Site.Params.author }}&nbsp;.&nbsp;{{- .Params.author | default .Site.Params.author }}{{ end }}
       {{- if .IsTranslated -}}&nbsp;|&nbsp;
       <ul class="i18n_list">
-        {{ i18n "translations" | default "Translations"}}:
-        {{ range .Translations }}
+        {{- i18n "translations" | default "Translations"}}:
+        {{- range .Translations }}
         <li>
           <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
         </li>
-        {{ end }}
+        {{- end }}
       </ul>
-      {{ end }}
+      {{- end }}
     </div>
-    {{end}}
+    {{- end}}
   </header>
-  {{ if .Params.cover }}
+  {{- if .Params.cover }}
   <figure class="entry-cover">
     <img src="{{ .Params.cover | absURL }}" alt="cover image for {{ .Title | plainify }}">
   </figure>
-  {{ end }}
-  {{ if .Params.ShowToc }}
+  {{- end }}
+  {{- if .Params.ShowToc }}
   <div class="toc">
     <details {{if .Params.TocOpen }} open{{ end }}>
       <summary>
-        <div class="details">{{ i18n "toc" | default "Table of Contents" }}</div>
+        <div class="details">{{- i18n "toc" | default "Table of Contents" }}</div>
       </summary>
       <blockquote>
-        {{ partial "toc.html" . }}
+        {{- partial "toc.html" . }}
       </blockquote>
     </details>
   </div>
-  {{ end }}
+  {{- end }}
   <div class="post-content">{{ .Content }}</div>
   <footer class="post-footer">
     {{- if .Params.tags }}
@@ -53,9 +53,9 @@
       {{- end }}
     </ul>
     {{- end }}
-    {{ if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
-    {{ partial "share-icons.html" . }}
-    {{ end }}
+    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
+    {{- partial "share-icons.html" . }}
+    {{- end }}
   </footer>
 
   {{- if $.Site.Params.comments }}
@@ -63,4 +63,4 @@
   {{- end }}
 </article>
 
-{{ end  }}{{/* end main */}}
+{{- end  }}{{/* end main */}}

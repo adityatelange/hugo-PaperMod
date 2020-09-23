@@ -1,7 +1,7 @@
 <div class="profile">
-    {{ with .Site.Params.profileMode }}
+    {{- with .Site.Params.profileMode }}
     <div class="profile_inner">
-        {{if .imageUrl}}<img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />{{end}}
+        {{- if .imageUrl}}<img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />{{- end}}
         <h1>{{ .title | default $.Site.Title }}</h1>
         {{- with $.Site.Params.socialIcons }}
         <div class="social-icons">
@@ -10,9 +10,9 @@
         {{- end }}
         {{- with .buttons }}
         <div class="buttons">
-            {{ partial "indexProfileButtons.html" . }}
+            {{- partial "indexProfileButtons.html" . }}
         </div>
         {{- end }}
     </div>
-    {{end}}
+    {{- end}}
 </div>
