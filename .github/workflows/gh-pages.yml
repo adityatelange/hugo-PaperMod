@@ -1,7 +1,12 @@
 name: Build GH-Pages
 
 on:
+  push:
+    branches:
+      - master
+      - exampleSite
   workflow_dispatch:
+    # manual run
 
 jobs:
   deploy:
