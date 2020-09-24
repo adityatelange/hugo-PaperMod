@@ -43,7 +43,7 @@ params:
     - name: linkedin
       url: '#'
     - name: github
-      url: '#'
+      url: 'https://github.com/adityatelange/hugo-PaperMod'
 
 markup:
   tableOfContents:

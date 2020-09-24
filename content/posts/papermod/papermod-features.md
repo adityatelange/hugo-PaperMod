@@ -2,13 +2,11 @@
 title: "Papermod - Features"
 date: 2020-09-16T11:30:03+05:30
 showToc: true
-TocOpen: true
 weight: 2
 aliases: ['/papermod-features']
 tags: ['PaperMod']
 author: "Aditya Telange"
-ShowToc: true
-TocOpen: true
+tocopen: true
 ---
 
 ## Assets (js/css)
@@ -121,13 +119,18 @@ adds `[draft]` mark to indicate draft pages.
 In post's page-variables add :
 
 ```yml
-cover = "<absolute image url>" # can also paste direct link from external site ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+cover = "<absolute image url>"
+# can also paste direct link from external site
+# ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
 ```
 
 ![](https://user-images.githubusercontent.com/21258296/93084795-3579ae80-f6b2-11ea-98c1-eee4061eb836.png)
 
-## Scroll-to-Top Button
-    Displays a Scroll-to-Top button in right-bottom corner
+---
+
+## Scroll-to-Top Button (by default)
+
+Displays a Scroll-to-Top button in right-bottom corner
 
 ---
 
@@ -157,7 +160,7 @@ Params:
 
 ---
 
-## Show Table of Contents on blog post
+## Show Table of Contents (Toc) on blog post
 
 Displays ToC on blog-pages
 
@@ -166,7 +169,7 @@ To show ToC add following to page-variables
 ShowToc: true
 ```
 
-To keep Toc Open by default on a post add following to page-variables:
+To keep Toc Open **by default** on a post add following to page-variables:
 ```yml
 TocOpen: true
 ```
@@ -182,17 +185,18 @@ to add comments, create a html file
 and paste code provided by your comments provider
 
 also in config add this
+
 ```yml
 params:
     comments: true
 ```
 
-more : read [this](https://gohugo.io/content-management/comments/)
+read more about this [here](https://gohugo.io/content-management/comments/)
 
 ---
 
-### Scroll-Bar themed
+## Scroll-Bar themed (by default)
 
 ---
 
-### Smooth Scroll between in-page links
+## Smooth Scroll between in-page links (by default)
