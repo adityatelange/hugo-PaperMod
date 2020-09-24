@@ -2,12 +2,13 @@
 title: "Papermod - Features"
 date: 2020-09-16T11:30:03+05:30
 showToc: true
-hidemeta: true
 TocOpen: true
 weight: 2
 aliases: ['/papermod-features']
 tags: ['PaperMod']
 author: "Aditya Telange"
+ShowToc: true
+TocOpen: true
 ---
 
 ## Assets (js/css)

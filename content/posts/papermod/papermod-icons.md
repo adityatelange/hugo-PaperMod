@@ -3,12 +3,13 @@ title: "Papermod - Icons"
 date: 2020-09-17T11:30:03+05:30
 showToc: true
 TocOpen: true
-hidemeta: true
 weight: 3
 aliases: ['/papermod-icons']
 tags: ['PaperMod']
 author: "Aditya Telange"
 ---
+
+## Social Icons
 Usage :
 
 ```
@@ -57,7 +58,7 @@ socialIcons: # optional
 
 ---
 
-# Share Icons
+## Share Icons
 
 | No. | Platform |
 | --- | -------- |

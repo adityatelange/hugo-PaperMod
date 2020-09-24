@@ -3,7 +3,6 @@ title: "Papermod - Installation"
 date: 2020-09-15T11:30:03+05:30
 series: ["PaperMod"]
 weight: 1
-hidemeta: true
 aliases: ['/papermod-installation']
 tags: ['PaperMod']
 author: "Aditya Telange"
