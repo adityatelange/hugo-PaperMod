@@ -2,6 +2,10 @@ name: Build GH-Pages
 
 on:
   push:
+    paths-ignore:
+      - 'images/**'
+      - 'LICENSE'
+      - 'README.md'
     branches:
       - master
       - exampleSite
