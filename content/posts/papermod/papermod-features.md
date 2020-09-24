@@ -31,6 +31,15 @@ or
 params:
     defaultTheme: dark
 ```
+
+or
+
+```yml
+params:
+    defaultTheme: auto # to switch between dark or light according to browser theme
+```
+</details>
+
 ---
 
 ## Archives Layout
@@ -106,6 +115,16 @@ adds `[draft]` mark to indicate draft pages.
 
 ---
 
+## Cover for a Post
+
+In post's page-variables add :
+
+```yml
+cover = "<absolute image url>" # can also paste direct link from external site ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+```
+
+![](https://user-images.githubusercontent.com/21258296/93084795-3579ae80-f6b2-11ea-98c1-eee4061eb836.png)
+
 ## Scroll-to-Top Button
     Displays a Scroll-to-Top button in right-bottom corner
 
@@ -144,6 +163,11 @@ Displays ToC on blog-pages
 To show ToC add following to page-variables
 ```yml
 ShowToc: true
+```
+
+To keep Toc Open by default on a post add following to page-variables:
+```yml
+TocOpen: true
 ```
 
 ---
