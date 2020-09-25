@@ -17,8 +17,8 @@ The [demo site](https://adityatelange.github.io/hugo-PaperMod/) includes a lot o
 ---
 
 <p align="center">
-  <kbd><img height=300px src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
-  <kbd><img height=300px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
+  <kbd><img width=600px src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
+  <kbd><img width=153px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
 </p>
 
 ---
