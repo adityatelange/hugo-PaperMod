@@ -4,48 +4,59 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
 ![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
 
-# hugo-PaperMod
-
-A simple, clean, flexible and responsive Hugo theme.
+# hugo-PaperMod | [Demo](https://adityatelange.github.io/hugo-PaperMod/)
 
 ☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive
 
+Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
+
+The goal of this project is add more Features and customization to the og theme.
+
+The [demo site](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
+
 ---
 
-<kbd><img src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
-
----
-
-## Overview
-
-Demo Site : https://adityatelange.github.io/hugo-PaperMod/
+<p align="center">
+  <kbd><img height=300px src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
+  <kbd><img height=300px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
+</p>
 
 ---
 
 ## Install
 
-Read Wiki => [hugo-PaperMod - Installation](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)
+Read this post For More Details => [hugo-PaperMod - Installation](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)
 
 ---
 
 ## Features/Mods
 
-Read Wiki => [hugo-PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)
+- Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
+- 3 Modes:
+    - Regular Mode.
+    - [Home-Info Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#home-info-mode)
+    - [Profile Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#profile-mode)
+- Table of Content Generation (newer implementation).
+- Archive of posts
+- Social-Media Share buttons on post.
+- Menu location indicator.
+- Multilingual support.
+- Cover image for each post
+- Light/Dark theme ( automatic theme switch a/c to browser theme)
+- No webpack, nodejs and other depedencies required to edit the theme :)
+
+Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
+
+Release ChangeLog has info about stuff added: [Releases](https://github.com/adityatelange/hugo-PaperMod/releases)
 
 ---
 
 ### Social-Icons
 
-Read Wiki => [Social-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons#social-icons)
+Read this post For More Details => [Social-Icons](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/)
 
 ---
 
-## LightHouse
+## LightHouse Report
 
 <kbd><a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F"><img src="https://i.ibb.co/y6RwCzb/lighthouse.png" alt="LightHouse" /></a></kbd>
-
----
-
-### Credits
-
-Inspired from [hugo-paper](https://github.com/nanxiaobei/hugo-paper) :)
