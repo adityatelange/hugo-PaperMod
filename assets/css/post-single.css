@@ -233,10 +233,8 @@
 
 .post-tags li {
     display: inline-block;
-}
-
-.post-tags li+li {
-    margin-bottom: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
 }
 
 .post-tags a {
