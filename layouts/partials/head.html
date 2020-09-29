@@ -32,7 +32,7 @@
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
 {{- if (and (.Site.Params.profileMode.enabled) (.IsHome)) }}
-{{- $profileMode := resources.Get "css/profileMode.css" | minify | fingerprint }}
+{{- $profileMode := resources.Get "css/profile-mode.css" | minify | fingerprint }}
 <link href="{{ $profileMode.Permalink }}" integrity="{{ $profileMode.Data.Integrity }}" rel="preload stylesheet"
     as="style">
 {{- end }}
