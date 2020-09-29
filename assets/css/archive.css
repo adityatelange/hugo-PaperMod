@@ -9,12 +9,8 @@
     margin-top: 40px;
 }
 
-.archive-year-header:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
-}
-
 .archive-year:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--border);
 }
 
 .archive-month {
@@ -44,6 +40,11 @@
 }
 
 .archive-meta {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.archive-count {
     color: var(--secondary);
     font-size: 14px;
 }
