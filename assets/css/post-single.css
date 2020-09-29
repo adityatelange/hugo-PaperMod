@@ -224,7 +224,7 @@
 }
 
 .post-content img {
-    border-radius: var(--radius);
+    border-radius: 4px;
 }
 
 .post-footer {
