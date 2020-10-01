@@ -236,6 +236,7 @@
 
 .toc details summary {
     cursor: zoom-in;
+    margin-left: 20px;
 }
 
 .toc details[open] summary {
@@ -248,9 +249,8 @@
 }
 
 .toc blockquote {
-    border-left: 2px solid;
-    margin: 20px;
-    padding: 10px 40px;
+    margin: 0 20px;
+    padding: 10px 20px;
 }
 
 .toc li ul {
