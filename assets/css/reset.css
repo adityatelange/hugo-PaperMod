@@ -113,8 +113,8 @@ img {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 3px;
+    width: 10px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
