@@ -58,7 +58,7 @@
     {{- end }}
   </footer>
 
-  {{- if $.Site.Params.comments }}
+  {{- if and ($.Site.Params.comments) (ne .Params.comments false) }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
