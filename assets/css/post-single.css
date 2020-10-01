@@ -253,22 +253,31 @@
 }
 
 .share-buttons {
-    margin: 4px 0;
-    text-align: center;
-    background: var(--code-bg);
+    margin-top: var(--gap);
+    border: 1px solid var(--tertiary);
+    padding: var(--radius);
     border-radius: var(--radius);
-    margin-top: 24px;
+    display: flex;
+    overflow-x: auto;
 }
 
-.share-button-single svg {
-    fill: currentColor;
+.share-buttons a {
+    margin-top: 10px;
+}
+
+.share-buttons a:not(:last-of-type) {
+    margin-right: 12px;
+}
+
+.share-buttons a svg {
     height: 30px;
     width: 30px;
-    margin: 0 10px;
+    fill: currentColor;
+    transition: transform 0.1s;
 }
 
-.share-button-single:hover svg {
-    opacity: 0.9;
+.share-buttons svg:hover {
+    transform: scale(0.96);
 }
 
 @media screen and (max-width: 600px) {
