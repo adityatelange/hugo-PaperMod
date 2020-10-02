@@ -52,6 +52,6 @@ img {
     padding: 0 8px;
 }
 
-.button:active, .social-icons>a>svg:hover{
+.button:active {
     transform: scale(0.96);
 }
