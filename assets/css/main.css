@@ -43,8 +43,11 @@
     padding: 12px 0;
 }
 
-.social-icons a {
-    margin: 2px;
-    padding: 6px;
-    font-size: 1.4em;
+.social-icons a:not(:last-of-type) {
+    margin-right: 12px;
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
 }
