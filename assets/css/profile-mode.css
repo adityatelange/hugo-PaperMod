@@ -16,6 +16,11 @@
     padding: 12px 0;
 }
 
+.profile_inner span {
+    padding: 10px 0;
+    font-size: 18px;
+}
+
 img {
     display: inline-table;
     width: 180px;
