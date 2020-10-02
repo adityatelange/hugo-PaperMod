@@ -32,10 +32,6 @@ img {
     }
 }
 
-.social-icons {
-    padding: 12px 0;
-}
-
 .buttons {
     display: flex;
     flex-wrap: wrap;

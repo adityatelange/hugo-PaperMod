@@ -38,3 +38,13 @@
 .pagination .next {
     margin-left: auto;
 }
+
+.social-icons {
+    padding: 12px 0;
+}
+
+.social-icons a {
+    margin: 2px;
+    padding: 6px;
+    font-size: 1.4em;
+}
