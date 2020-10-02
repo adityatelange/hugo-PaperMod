@@ -7,11 +7,7 @@
         <p>{{- .Content | markdownify }}</p>
     </section>
     <footer class="entry-footer">
-        {{- with $.Site.Params.socialIcons }}
-        <div class="social-icons">
-            {{- partial "social_icons.html" . }}
-        </div>
-        {{- end }}
+        {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
     </footer>
 </article>
 {{- end}}

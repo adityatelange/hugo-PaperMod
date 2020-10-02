@@ -1,4 +1,6 @@
-{{- range . -}}
-<a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-    title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a>
-{{- end -}}
+<div class="social-icons">
+    {{- range . -}}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+        title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a>
+    {{- end -}}
+</div>

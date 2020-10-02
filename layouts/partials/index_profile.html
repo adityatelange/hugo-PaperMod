@@ -2,12 +2,10 @@
     {{- with .Site.Params.profileMode }}
     <div class="profile_inner">
         {{- if .imageUrl}}<img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />{{- end}}
-        <h1>{{ .title | default $.Site.Title }}</h1>
-        {{- with $.Site.Params.socialIcons }}
-        <div class="social-icons">
-            {{ partial "social_icons.html" . }}
-        </div>
-        {{- end }}
+        <h1>{{- .title | default $.Site.Title -}}</h1>
+
+        {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
+
         {{- with .buttons }}
         <div class="buttons">
             {{- range . -}}
