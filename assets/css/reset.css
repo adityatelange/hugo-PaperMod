@@ -112,22 +112,29 @@ img {
     max-width: 100%;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 10px;
     height: 6px;
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: var(--theme);
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border-radius: var(--radius);
 }
 
-::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
+}
+
+@media screen and (max-width: 800px) {
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 2px;
+    }
 }
 
 *:focus {
