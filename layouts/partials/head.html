@@ -6,6 +6,7 @@
 <!-- Meta -->
 {{- if in site.Params.mainSections .Type }}
 <meta name="description" content="{{ .Summary }}">
+<meta name="keywords" content={{ delimit .Keywords ", " }} />
 {{- else }}
 <meta name="description"
     content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }} - {{ .Site.Title }}{{end}}">
@@ -28,14 +29,14 @@
 {{- $footer := resources.Get "css/footer.css" | minify }}
 {{- $404 := resources.Get "css/404.css" | minify }}
 {{- $style := slice $theme $reset $header $main $postentry $postsingle $terms $archive $footer $404 | resources.Concat "stylesheet.css" | minify }}
-{{- $stylesheet := slice $anoldhope $style | resources.Concat "css/stylesheet.css" | minify | fingerprint }}
+{{- $stylesheet := slice $anoldhope $style | resources.Concat "css/stylesheet.css" | minify | fingerprint -}}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
 {{- if (and (.Site.Params.profileMode.enabled) (.IsHome)) }}
 {{- $profileMode := resources.Get "css/profile-mode.css" | minify | fingerprint }}
 <link href="{{ $profileMode.Permalink }}" integrity="{{ $profileMode.Data.Integrity }}" rel="preload stylesheet"
     as="style">
-{{- end }}
+{{- end -}}
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
 <link rel="icon" href="{{ "favicon.ico" | absURL }}">
