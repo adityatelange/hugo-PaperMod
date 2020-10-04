@@ -39,7 +39,7 @@
 {{- end -}}
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
-<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <!-- Generator -->
 {{- hugo.Generator }}
 <!-- RSS -->
