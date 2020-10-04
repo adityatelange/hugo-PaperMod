@@ -33,6 +33,7 @@
     {{- else}}
     <img src="{{ .Permalink -}} {{- .Params.cover.image }}" alt="{{ .Params.cover.alt | plainify }}">
     {{- end}}
+    <p>{{.Params.cover.caption}}</p>
   </figure>
   {{- end }}
   {{- if .Params.ShowToc }}
