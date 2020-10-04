@@ -53,7 +53,7 @@ Release ChangeLog has info about stuff added: [Releases](https://github.com/adit
 
 ---
 
-### Social-Icons
+## Social-Icons
 
 Read this post For More Details => [Social-Icons](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/)
 
@@ -62,3 +62,15 @@ Read this post For More Details => [Social-Icons](https://adityatelange.github.i
 ## LightHouse Report
 
 <kbd><a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F"><img src="https://i.ibb.co/y6RwCzb/lighthouse.png" alt="LightHouse" /></a></kbd>
+
+---
+
+## Found a bug?
+
+If you spot any bugs, please use [Issue Tracker](https://github.com/adityatelange/hugo-PaperMod/issues) and/or
+create a new [Pull Request](https://github.com/adityatelange/hugo-PaperMod/pulls) to fix the issue.
+
+![GitHub issues](https://img.shields.io/github/issues-raw/adityatelange/hugo-papermod)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/adityatelange/hugo-PaperMod)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/adityatelange/hugo-papermod)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/adityatelange/hugo-papermod)
