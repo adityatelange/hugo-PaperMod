@@ -16,6 +16,7 @@
 
 .logo,
 .menu {
+    display: flex;
     margin: auto var(--gap);
 }
 
@@ -24,8 +25,21 @@
     font-weight: 700;
 }
 
+.theme-toggle svg{
+    height: 18px;
+    margin: 0 10px;
+}
+
+body.dark #moon{
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
 .menu {
-    display: flex;
     list-style: none;
     word-break: keep-all;
     overflow-x: auto;

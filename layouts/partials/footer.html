@@ -45,3 +45,21 @@
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 </script>
+{{- if not .Site.Params.disableThemeToggle }}
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+{{- else -}}
+<!-- case where owner disables theme button after deployment, this resets the stored theme -->
+<script>
+    localStorage.removeItem("pref-theme");
+</script>
+{{- end }}
