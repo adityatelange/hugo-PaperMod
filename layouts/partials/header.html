@@ -7,11 +7,8 @@
 {{- end }}
 <header class="header">
     <nav class="nav">
-        {{- if .IsHome }}
-        <h1 class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
-        {{- else }}
         <p class="logo"><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></p>
-        {{- end }}
+
         {{- $currentPage := . }}
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
