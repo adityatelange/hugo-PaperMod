@@ -1,10 +1,5 @@
 baseURL: 'https://adityatelange.github.io/hugo-PaperMod/'
 title: PaperMod
-author: Steve Francia
-copyright: >-
-  Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights
-  reserved.
-
 paginate: 5
 languageCode: en
 DefaultContentLanguage: en
@@ -59,9 +54,6 @@ menu:
     - name: Tags
       url: /tags/
       weight: 10
-    - name: Series
-      url: /series/
-      weight: 15
 
 taxonomies:
   category: categories
