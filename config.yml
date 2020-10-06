@@ -1,16 +1,12 @@
 baseURL: 'https://adityatelange.github.io/hugo-PaperMod/'
 title: PaperMod
 paginate: 5
-languageCode: en
-DefaultContentLanguage: en
-enableInlineShortcodes: true
 theme: hugo-PaperMod
 
 params:
   description: 'Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod'
   author: Theme PaperMod
   ShowReadingTime: true
-  contentTypeName: posts
   defaultTheme: auto
   ShowShareButtons: true
   profileMode:
@@ -39,12 +35,6 @@ params:
       url: '#'
     - name: github
       url: 'https://github.com/adityatelange/hugo-PaperMod'
-
-markup:
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 1
 
 menu:
   main:
