@@ -4,11 +4,38 @@
 name = "PaperMod"
 license = "MIT"
 licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
-description = "A simple, clean, flexible Hugo theme"
+description = "A fast, clean, responsive Hugo theme"
 homepage = "https://github.com/adityatelange/hugo-PaperMod"
-tags = ["Responsive", "Simple", "Clean", "Light", "White", "Dark", "Blog", "PaperMod"]
-features = ["Responsive", "One Column", "Blog"]
-min_version = "0.57.1"
+tags = [
+  "responsive",
+  "simple",
+  "clean",
+  "light",
+  "dark",
+  "blog",
+  "minimalist",
+  "highlight.js"
+]
+features = [
+  "responsive",
+  "single-column",
+  "blog",
+  "cover-image",
+  "table-of-contents",
+  "opengraph",
+  "highlight.js",
+  "favicon",
+  "archive",
+  "share-icons",
+  "cover",
+  "multilingual",
+  "social-icons",
+  "minified-assets",
+  "theme-toggle",
+  "menu-location-indicator",
+  "scroll-to-top"
+]
+min_version = "0.74.0"
 
 [author]
   name = "Aditya Telange"
