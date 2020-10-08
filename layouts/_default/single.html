@@ -31,7 +31,7 @@
     {{- if (or (fileExists (path.Join "static" .Params.cover.image)) (hasPrefix .Params.cover.image "http://") (hasPrefix .Params.cover.image "https://")) }}
     <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
     {{- else}}
-    <img src="{{ .Permalink -}} {{- .Params.cover.image }}" alt="{{ .Params.cover.alt | plainify }}">
+    <img src="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
     {{- end}}
     <p>{{.Params.cover.caption | markdownify }}</p>
   </figure>
