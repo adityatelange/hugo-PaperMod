@@ -36,6 +36,10 @@
     font-size: 14px;
 }
 
+.home-info .entry-content {
+    -webkit-line-clamp: 5;
+}
+
 .post-entry {
     position: relative;
     margin-bottom: var(--gap);
