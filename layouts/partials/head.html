@@ -7,6 +7,26 @@
 {{- if in site.Params.mainSections .Type }}
 <meta name="description" content="{{ .Summary }}">
 <meta name="keywords" content={{ delimit .Keywords ", " }} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Summary }}">
+{{- if .Params.cover.image }}
+<meta property="og:image" content="{{ .Params.cover.image }}">
+{{- end }}
+<!-- Twitter -->
+{{- if .Params.cover.image}}
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="{{ .Params.cover.image }}">
+{{- else }}
+<meta property="twitter:card" content="summary">
+{{- end }}
+<meta property="twitter:url" content="{{ .Permalink }}">
+<meta property="twitter:title" content="{{ .Title }}">
+<meta property="twitter:description" content="{{ .Summary }}">
+
 {{- else }}
 <meta name="description"
     content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }} - {{ .Site.Title }}{{end}}">
