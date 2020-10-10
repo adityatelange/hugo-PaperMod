@@ -17,7 +17,7 @@
 {{- end}}
 
 {{ $paginator := .Paginate $pages }}
-
+{{ $term := .Data.Term}}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
@@ -27,7 +27,7 @@
 {{- else}}
 {{- $class = "first-entry" }}
 {{- end }}
-{{- else if .Data.Term }}
+{{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 <article class="{{ $class }}">
