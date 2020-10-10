@@ -276,6 +276,7 @@
     line-height: 34px;
     background: var(--code-bg);
     border-radius: 4px;
+    border: 1px solid var(--tertiary);
 }
 
 .post-tags a:hover {
