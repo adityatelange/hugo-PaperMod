@@ -28,7 +28,7 @@
   </header>
   {{- if .Params.cover.image }}
   <figure class="entry-cover">
-    {{- if (or (fileExists (path.Join "static" .Params.cover.image)) (hasPrefix .Params.cover.image "http://") (hasPrefix .Params.cover.image "https://")) }}
+    {{- if (ne .Params.cover.relative true) }}
     <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
     {{- else}}
     <img src="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
