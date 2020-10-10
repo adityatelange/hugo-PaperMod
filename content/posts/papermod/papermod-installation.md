@@ -33,6 +33,7 @@ Inside the folder of your Hugo site, run:
 >
 > ```console
 > git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod
+> git submodule update --init --recursive
 > ```
 > > Updating theme with submodule :
 > > ```console
@@ -135,6 +136,7 @@ cover:
   image: '<image path/url>'
   alt: '<alt text>'
   caption: '<text>'
+  relative: false
 comments: false
 ---
 ```
