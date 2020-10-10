@@ -53,8 +53,7 @@
     transform: scale(0.96);
 }
 
-.tag-entry .entry-content,
-.tag-entry .entry-footer {
+.tag-entry .entry-cover {
     display: none;
 }
 
