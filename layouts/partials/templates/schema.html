@@ -5,6 +5,13 @@
 <meta itemprop="datePublished" {{ .PublishDate.Format $ISO8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
 {{ if not .Lastmod.IsZero }}<meta itemprop="dateModified" {{ .Lastmod.Format $ISO8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
 <meta itemprop="wordCount" content="{{ .WordCount }}">
+{{- if .Params.cover.image -}}
+{{- if (ne .Params.cover.relative true) }}
+<meta itemprop="image" content="{{ .Params.cover.image | absURL }}" />
+{{- else}}
+<meta itemprop="image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
+{{- end}}
+{{- end }}
 {{ with $.Params.images }}{{ range first 6 . -}}
 <meta itemprop="image" content="{{ . | absURL }}">
 {{ end }}{{ else -}}
