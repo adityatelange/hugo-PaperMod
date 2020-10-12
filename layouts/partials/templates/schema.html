@@ -11,7 +11,7 @@
 {{- else}}
 <meta itemprop="image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
 {{- end}}
-{{- end }}
+{{- else }}
 {{ with $.Params.images }}{{ range first 6 . -}}
 <meta itemprop="image" content="{{ . | absURL }}">
 {{ end }}{{ else -}}
@@ -24,6 +24,7 @@
 {{- with $.Site.Params.images -}}
 <meta itemprop="image" content="{{ index . 0 | absURL }}"/>
 {{ end }}{{ end }}{{ end }}
+{{- end }}
 
 <!-- Output all taxonomies as schema.org keywords -->
 <meta itemprop="keywords" content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}" />

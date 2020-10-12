@@ -5,7 +5,7 @@
 {{- else }}
 <meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
 {{- end}}
-{{ end }}
+{{- else }}
 {{- with $.Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
@@ -24,6 +24,7 @@
 <meta name="twitter:card" content="summary"/>
 {{- end -}}
 {{- end -}}
+{{- end }}
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>

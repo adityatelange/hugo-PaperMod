@@ -8,7 +8,7 @@
 {{- else}}
 <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
 {{- end}}
-{{- end }}
+{{- else }}
 {{ with $.Params.images }}{{ range first 6 . -}}
 <meta property="og:image" content="{{ . | absURL }}" />
 {{ end }}{{ else -}}
@@ -21,6 +21,7 @@
 {{- with $.Site.Params.images -}}
 <meta property="og:image" content="{{ index . 0 | absURL }}"/>
 {{ end }}{{ end }}{{ end }}
+{{- end }}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 {{- if .IsPage }}
