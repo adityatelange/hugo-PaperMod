@@ -26,14 +26,15 @@
 {{ end }}
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": {{ .Site.Params.header }},
+  "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
+  "name": {{ .Site.Params.title }},
   "url": {{ .Site.BaseURL }},
   "sameAs": [
-    "https://www.facebook.com/{{ .Site.Params.facebook }}",
-    "https://www.instagram.com/{{ .Site.Params.instagram }}",
-    "https://twitter.com/{{ .Site.Params.twitter }}",
-    "https://github.com/{{ .Site.Params.github }}"
+    {{- if .Site.Params.schema.sameAs }}
+      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else}}
+      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url }}{{ end }}
+    {{- end}}
   ]
 }
 </script>
