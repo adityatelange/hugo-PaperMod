@@ -29,11 +29,11 @@
   },
   "mainEntityOfPage": { "@type": "WebPage" },
    "publisher": {
-    "@type": "Organization",
-    "name": {{ .Site.Params.header }},
+    "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
+    "name": {{ .Site.Params.title }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ .Site.Params.logo }}
+      "url": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}
     }
   },
   "description": {{ .Summary | plainify | safeHTML }},
