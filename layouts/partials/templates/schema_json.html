@@ -3,8 +3,10 @@
 {
   "@context": "https://schema.org",
   "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
-  "name": {{ .Site.Params.title }},
+  "name": {{ .Site.Title }},
   "url": {{ .Site.BaseURL }},
+  "description": {{ .Site.Params.description | plainify | safeHTML }},
+  "thumbnailUrl": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }},
   "sameAs": [
     {{- if .Site.Params.schema.sameAs }}
       {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
@@ -29,6 +31,8 @@
     {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
     {{- end }}
   ],
+  "wordCount" : "{{ .WordCount }}",
+  "inLanguage": {{ .Language.Lang | default "en-us" }},
   {{ if .Params.cover.image -}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}
@@ -48,7 +52,7 @@
   },
   "publisher": {
     "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
-    "name": {{ .Site.Params.title }},
+    "name": {{ .Site.Title }},
     "logo": {
       "@type": "ImageObject",
       "url": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}
