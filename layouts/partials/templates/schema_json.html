@@ -1,5 +1,21 @@
+{{ if .IsHome }}
 <script type="application/ld+json">
-{{ if eq .Section "posts" }}
+{
+  "@context": "https://schema.org",
+  "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
+  "name": {{ .Site.Params.title }},
+  "url": {{ .Site.BaseURL }},
+  "sameAs": [
+    {{- if .Site.Params.schema.sameAs }}
+      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else}}
+      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url }}{{ end }}
+    {{- end}}
+  ]
+}
+</script>
+{{- else }}
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -23,18 +39,5 @@
   "description": {{ .Summary | plainify | safeHTML }},
   "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
 }
-{{ end }}
-{
-  "@context": "https://schema.org",
-  "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
-  "name": {{ .Site.Params.title }},
-  "url": {{ .Site.BaseURL }},
-  "sameAs": [
-    {{- if .Site.Params.schema.sameAs }}
-      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
-    {{- else}}
-      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url }}{{ end }}
-    {{- end}}
-  ]
-}
 </script>
+{{ end }}
