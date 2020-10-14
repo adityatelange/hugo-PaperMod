@@ -43,7 +43,11 @@
     }
   },
   "description": {{ .Summary | plainify | safeHTML }},
+  {{- if .Params.keywords }}
+  "keywords": [{{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
+  {{- else }}
   "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
+  {{- end }}
 }
 </script>
 {{ end }}
