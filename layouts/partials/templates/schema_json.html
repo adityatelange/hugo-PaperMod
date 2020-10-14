@@ -20,7 +20,13 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": {{ .Title }},
-  "image": {{ .Params.featuredImage | absURL }},
+  {{- if .Params.cover.image -}}
+    {{- if (ne .Params.cover.relative true) }}
+      "image": {{ .Params.cover.image | absURL }},
+    {{- else}}
+    "image": {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
+    {{- end}}
+  {{- end}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
   "author": {
