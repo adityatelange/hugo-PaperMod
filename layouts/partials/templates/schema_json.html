@@ -5,7 +5,7 @@
   "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
   "name": {{ .Site.Title }},
   "url": {{ .Site.BaseURL }},
-  "description": {{ .Site.Params.description | plainify | safeHTML }},
+  "description": {{ .Site.Params.description | plainify | truncate 180 | safeHTML }},
   "thumbnailUrl": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }},
   "sameAs": [
     {{- if .Site.Params.schema.sameAs }}
@@ -23,7 +23,7 @@
   "@type": "BlogPosting",
   "headline": {{ .Title | plainify}},
   "name": "{{ .Title | plainify }}",
-  "description": {{ .Summary | plainify | safeHTML }},
+  "description": {{ .Summary | plainify | truncate 180 | safeHTML }},
   "keywords": [
     {{- if .Params.keywords }}
     {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
