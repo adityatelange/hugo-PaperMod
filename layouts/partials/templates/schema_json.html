@@ -48,7 +48,8 @@
     "name": {{ .Params.author | default .Site.Params.author }}
   },
   "mainEntityOfPage": {
-    "@type": "WebPage"
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
   },
   "publisher": {
     "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
