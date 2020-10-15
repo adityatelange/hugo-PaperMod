@@ -4,6 +4,7 @@ paginate: 5
 theme: hugo-PaperMod
 
 params:
+  env: production
   description: 'Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod'
   author: Theme PaperMod
   ShowReadingTime: true
