@@ -1,0 +1,65 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
+  "name": {{ .Site.Title }},
+  "url": {{ .Site.BaseURL }},
+  "description": {{ .Site.Params.description | plainify | truncate 180 | safeHTML }},
+  "thumbnailUrl": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  "sameAs": [
+    {{- if .Site.Params.schema.sameAs }}
+      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else}}
+      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url }}{{ end }}
+    {{- end}}
+  ]
+}
+</script>
+{{- else if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | plainify}},
+  "name": "{{ .Title | plainify }}",
+  "description": {{ .Summary | plainify | truncate 180 | safeHTML }},
+  "keywords": [
+    {{- if .Params.keywords }}
+    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else }}
+    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- end }}
+  ],
+  "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
+  "wordCount" : "{{ .WordCount }}",
+  "inLanguage": {{ .Language.Lang | default "en-us" }},
+  {{ if .Params.cover.image -}}
+  "image":
+    {{- if (ne .Params.cover.relative true) -}}
+    {{ .Params.cover.image | absURL }},
+    {{- else -}}
+    {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
+    {{- end}}
+  {{- end}}
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Params.author | default .Site.Params.author }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
+  },
+  "publisher": {
+    "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",
+    "name": {{ .Site.Title }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}
+    }
+  }
+}
+</script>
+{{ end }}
