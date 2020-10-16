@@ -84,6 +84,14 @@ params:
   disableThemeToggle : false
   disableSpecial1stPost : false
 
+  assets:
+    favicon: '<path / external url>'
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
