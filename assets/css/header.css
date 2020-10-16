@@ -25,6 +25,15 @@
     font-weight: 700;
 }
 
+.logo a img {
+    display: inline;
+    vertical-align: middle;
+    pointer-events: none;
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
 .theme-toggle svg{
     height: 18px;
     margin: 0 10px;

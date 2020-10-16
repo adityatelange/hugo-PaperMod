@@ -30,7 +30,13 @@
 <header class="header">
     <nav class="nav">
         <p class="logo">
-            <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+            <a href="{{ "" | absLangURL }}">
+                {{- if .Site.Params.label.icon }}
+                <img src="{{- .Site.Params.label.icon -}}"
+                    height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
+                {{- end -}}
+                {{- .Site.Params.label.text | default .Site.Title -}}
+            </a>
             {{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
             <span class="theme-toggle">
                 <a id="theme-toggle">
