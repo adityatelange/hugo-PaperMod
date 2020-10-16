@@ -32,7 +32,7 @@
         <p class="logo">
             <a href="{{ "" | absLangURL }}">
                 {{- if .Site.Params.label.icon }}
-                <img src="{{- .Site.Params.label.icon -}}"
+                <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
                 {{- end -}}
                 {{- .Site.Params.label.text | default .Site.Title -}}
