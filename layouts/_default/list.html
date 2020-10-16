@@ -52,7 +52,7 @@
   </section>
   {{- end }}
   <footer class="entry-footer">
-    <time>{{ .Date.Format "January 2, 2006" }}</time>
+    <time>{{ .Date.Format (default "January 2, 2006" .Site.Params.DateFormat) }}</time>
     {{- if $.Site.Params.ShowReadingTime }}&nbsp;·&nbsp;
     {{- $default_txt := print .ReadingTime " " "min" }}
     {{- i18n "read_time" .ReadingTime | default  $default_txt  }}{{ end }}
