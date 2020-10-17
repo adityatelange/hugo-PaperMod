@@ -26,16 +26,7 @@
     </div>
     {{- end}}
   </header>
-  {{- if .Params.cover.image }}
-  <figure class="entry-cover">
-    {{- if (ne .Params.cover.relative true) }}
-    <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
-    {{- else}}
-    <img src="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
-    {{- end}}
-    <p>{{.Params.cover.caption | markdownify }}</p>
-  </figure>
-  {{- end }}
+  {{- partial "cover.html" (dict "cxt" . "caption" true) }}
   {{- if .Params.ShowToc }}
   <div class="toc">
     <details {{if .Params.TocOpen }} open{{ end }}>

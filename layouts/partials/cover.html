@@ -1,0 +1,17 @@
+{{ $caption := .caption }}
+
+{{with .cxt}} {{/* Apply proper context from dict */}}
+{{- if .Params.cover.image }}
+
+{{ $src := cond .Params.cover.relative (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) }}
+{{ $src = $src | absURL }}
+
+<figure class="entry-cover">  
+    <img src="{{ $src }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
+{{- if $caption }}
+  <p>{{.Params.cover.caption | markdownify }}</p>
+{{- end }}
+</figure>
+
+{{- end }}{{/* End image */}}
+{{- end }}{{/* End context */}}

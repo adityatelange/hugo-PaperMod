@@ -31,15 +31,7 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 <article class="{{ $class }}">
-  {{- if .Params.cover.image }}
-  <figure class="entry-cover">
-    {{- if (ne .Params.cover.relative true) }}
-    <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
-    {{- else}}
-    <img src="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" alt="{{ .Params.cover.alt | plainify }}">
-    {{- end}}
-  </figure>
-  {{- end }}
+  {{- partial "cover.html" (dict "cxt" . "caption" false) }}
   <header class="entry-header">
     <h2>
       {{ .Title }}
