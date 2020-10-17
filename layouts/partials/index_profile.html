@@ -2,8 +2,8 @@
     {{- with .Site.Params.profileMode }}
     <div class="profile_inner">
         {{- if .imageUrl}}<img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />{{- end}}
-        <h1>{{- .title | default $.Site.Title -}}</h1>
-        <span>{{- .subtitle -}}</span>
+        <h1>{{- .title | default $.Site.Title | markdownify -}}</h1>
+        <span>{{- .subtitle | markdownify -}}</span>
         {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
 
         {{- with .buttons }}
