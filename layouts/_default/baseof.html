@@ -3,6 +3,7 @@
 
 <head>
     {{- partial "head.html" . }}
+    {{- partial "head_custom_content.html" -}}
 </head>
 
 <body class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list
