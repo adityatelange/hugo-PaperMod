@@ -4,13 +4,12 @@
 <!-- Title -->
 <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} - {{ end }}{{end}}{{ .Site.Title }}</title>
 <!-- Meta -->
-{{- if in site.Params.mainSections .Type }}
-<meta name="description" content="{{ .Summary }}">
-<meta name="keywords" content={{ delimit .Keywords ", " }} />
-{{- else }}
-<meta name="description"
-    content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Title }} - {{ .Site.Title }}{{end}}">
-{{- end }}
+<meta name="keywords" content="{{ if .Params.keywords -}}
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
+    {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
+    {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
 <link rel="canonical" href="{{ .Permalink }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
