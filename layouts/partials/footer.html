@@ -15,6 +15,7 @@
             <path d="M12 6H0l6-6z" /></svg>
     </button>
 </a>
+{{- partial "extend_footer.html" . -}}
 {{ if in site.Params.mainSections .Type }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint -}}
 <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
