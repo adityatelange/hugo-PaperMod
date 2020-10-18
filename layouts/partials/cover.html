@@ -1,17 +1,30 @@
-{{ $caption := .caption }}
+{{- $IsHome := .IsHome }}
 
-{{with .cxt}} {{/* Apply proper context from dict */}}
+{{- with .cxt}} {{/* Apply proper context from dict */}}
 {{- if .Params.cover.image }}
 
-{{ $src := cond .Params.cover.relative (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) }}
-{{ $src = $src | absURL }}
+{{- $sizes := (slice "480" "720" "1080" "1500") }}
+
+{{- $src := .Page.Resources.GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- $fallback := cond .Params.cover.relative (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
 
 <figure class="entry-cover">  
-    <img src="{{ $src }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
-{{- if $caption }}
-  <p>{{.Params.cover.caption | markdownify }}</p>
+{{- if not $IsHome -}}<a href="{{ $fallback }}" target="_blank" title="Original image">{{- end -}}
+{{- if $src -}}
+    <img sizes="(min-width: 768px) 720px, 100vw"
+    srcset='{{- range $sizes -}}
+        {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink }} {{ (printf "%sw" .) }},{{ end }}
+    {{- end -}}'
+    {{- if ge $src.Width "720" }}src="{{ ($src.Resize "720x").RelPermalink }}"
+    {{- else }}src="{{ $src.RelPermalink }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}{{ end }}>
+{{- else }}{{/* Fall back to full image */}}
+    <img src="{{ $fallback | absURL }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
+{{- end }}
+
+{{- if not $IsHome }}
+  <p>{{.Params.cover.caption | markdownify }}</p></a>
 {{- end }}
 </figure>
 
 {{- end }}{{/* End image */}}
-{{- end }}{{/* End context */}}
+{{- end -}}{{/* End context */}}

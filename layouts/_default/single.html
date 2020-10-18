@@ -26,7 +26,7 @@
     </div>
     {{- end}}
   </header>
-  {{- partial "cover.html" (dict "cxt" . "caption" true) }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false) }}
   {{- if .Params.ShowToc }}
   <div class="toc">
     <details {{if .Params.TocOpen }} open{{ end }}>
