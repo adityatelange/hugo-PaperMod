@@ -13,7 +13,7 @@ TocOpen: true
 ## Guide
 
 Follow [this](https://gohugo.io/getting-started/quick-start/) guide to setup hugo and create a new site.
-Make sure you install latest version of `hugo`(>=0.57.1).
+Make sure you install latest version of `hugo`(>=0.74.0).
 
 After you have created a new site, at [Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) follow the steps:
 
