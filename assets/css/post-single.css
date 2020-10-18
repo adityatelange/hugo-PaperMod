@@ -85,7 +85,7 @@
 
 .post-content ul,
 .post-content ol {
-    padding-left: 20px;
+    padding-inline-start: 20px;
 }
 
 .post-content li {
@@ -109,8 +109,8 @@
 
 .post-content dd {
     width: 75%;
-    margin-left: 0;
-    padding-left: 10px;
+    margin-inline-start: 0;
+    padding-inline-start: 10px;
 }
 
 .post-content dt~dt,
@@ -147,11 +147,11 @@
 }
 
 .post-content li>.highlight {
-    margin-right: 0
+    margin-inline-end: 0
 }
 
 .post-content ul pre {
-    margin-left: calc(var(--gap) * -2);
+    margin-inline-start: calc(var(--gap) * -2);
 }
 
 .post-content .highlight pre {
@@ -168,7 +168,7 @@
 }
 
 .post-content .highlighttable td .linenodiv {
-    padding-right: 0 !important;
+    padding-inline-end: 0 !important;
 }
 
 .post-content .highlighttable td .linenodiv pre,
@@ -236,7 +236,7 @@
 
 .toc details summary {
     cursor: zoom-in;
-    margin-left: 20px;
+    margin-inline-start: 20px;
 }
 
 .toc details[open] summary {
@@ -254,7 +254,7 @@
 }
 
 .toc li ul {
-    margin-left: var(--gap);
+    margin-inline-start: var(--gap);
 }
 
 .post-footer {
@@ -263,14 +263,14 @@
 
 .post-tags li {
     display: inline-block;
-    margin-right: 3px;
+    margin-inline-end: 3px;
     margin-bottom: 5px;
 }
 
 .post-tags a {
     display: block;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-inline-start: 14px;
+    padding-inline-end: 14px;
     color: var(--secondary);
     font-size: 14px;
     line-height: 34px;
@@ -297,7 +297,7 @@
 }
 
 .share-buttons a:not(:last-of-type) {
-    margin-right: 12px;
+    margin-inline-end: 12px;
 }
 
 .share-buttons a svg {

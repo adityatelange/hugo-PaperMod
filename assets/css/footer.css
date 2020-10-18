@@ -11,8 +11,8 @@
 }
 
 .footer span {
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
 }
 
 .footer a {

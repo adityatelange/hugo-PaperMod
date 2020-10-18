@@ -36,7 +36,7 @@
 }
 
 .pagination .next {
-    margin-left: auto;
+    margin-inline-start: auto;
 }
 
 .social-icons {
@@ -44,10 +44,22 @@
 }
 
 .social-icons a:not(:last-of-type) {
-    margin-right: 12px;
+    margin-inline-end: 12px;
 }
 
 .social-icons a svg {
     height: 26px;
     width: 26px;
+}
+
+.direction-rtl {
+    direction: rtl;
+}
+
+.direction-ltr {
+    direction: ltr;
+}
+
+code {
+    direction: ltr;
 }
