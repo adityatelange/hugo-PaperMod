@@ -14,3 +14,39 @@
 
 - id: translations
   translation: "Translations"
+
+- id: January
+  translation: "January"
+
+- id: February
+  translation: "February"
+
+- id: March
+  translation: "March"
+
+- id: April
+  translation: "April"
+
+- id: May
+  translation: "May"
+
+- id: June
+  translation: "June"
+
+- id: July
+  translation: "July"
+
+- id: August
+  translation: "August"
+
+- id: September
+  translation: "September"
+
+- id: October
+  translation: "October"
+
+- id: November
+  translation: "November"
+
+- id: December
+  translation: "December"
