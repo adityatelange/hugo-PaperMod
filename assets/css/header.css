@@ -5,8 +5,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 
 .nav a {
@@ -31,7 +31,7 @@
     pointer-events: none;
     transform: translate(0, -10%);
     border-radius: 6px;
-    margin-right: 8px;
+    margin-inline-end: 8px;
 }
 
 .theme-toggle svg{
@@ -56,7 +56,7 @@ body:not(.dark) #sun {
 }
 
 .menu li+li {
-    margin-left: var(--gap);
+    margin-inline-start: var(--gap);
 }
 
 .menu a {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}">
+<html lang="{{ .Site.Language }}" class="direction-{{ .Language.LanguageDirection | default "ltr" }}">
 
 <head>
     {{- partial "head.html" . }}
