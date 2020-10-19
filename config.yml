@@ -1,12 +1,12 @@
-baseURL: 'https://adityatelange.github.io/hugo-PaperMod/'
+baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
 title: PaperMod
-paginate: 5
+paginate: 8
 theme: hugo-PaperMod
 enableInlineShortcodes: true
 
 params:
   env: production
-  description: 'Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod'
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   author: Theme PaperMod
   ShowReadingTime: true
   defaultTheme: auto
@@ -14,7 +14,7 @@ params:
   profileMode:
     enabled: false
     title: PaperMod
-    imageUrl: '#'
+    imageUrl: "#"
     imageTitle: my image
     buttons:
       - name: Archives
@@ -28,15 +28,15 @@ params:
 
   socialIcons:
     - name: twitter
-      url: '#'
+      url: "#"
     - name: stackoverflow
-      url: '#'
+      url: "#"
     - name: codepen
-      url: '#'
+      url: "#"
     - name: linkedin
-      url: '#'
+      url: "#"
     - name: github
-      url: 'https://github.com/adityatelange/hugo-PaperMod'
+      url: "https://github.com/adityatelange/hugo-PaperMod"
 
 menu:
   main:
