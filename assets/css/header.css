@@ -7,11 +7,11 @@
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin-inline-start: auto;
     margin-inline-end: auto;
+    line-height: var(--header-height);
 }
 
 .nav a {
     display: block;
-    line-height: var(--header-height);
 }
 
 .logo,
@@ -67,4 +67,19 @@ body:not(.dark) #sun {
 .menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor;
+}
+
+.lang-switch {
+    margin-inline-start: var(--gap);
+}
+
+.lang-switch li,
+.lang-switch li + li {
+    margin-inline-start: 8px;
+    display: inline-flex;
+}
+
+.lang-switch svg {
+    margin: 0 2px;
+    height: 15px;
 }
