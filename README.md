@@ -45,6 +45,7 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
 - Multilingual support.
 - Cover image for each post
 - Light/Dark theme ( automatic theme switch a/c to browser theme)
+- SEO Friendly
 - No webpack, nodejs and other depedencies required to edit the theme :)
 
 Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
@@ -65,12 +66,22 @@ Read this post For More Details => [Social-Icons](https://adityatelange.github.i
 
 ---
 
+### Sponsoring
+
+If you like my work and if you think this project is worth to support it, you can
+
+<a href="https://www.buymeacoffee.com/adityatelange" target="_blank">
+<img height=40 width=150 src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee"/>
+</a>
+
+---
+
 ## Found a bug?
 
 If you spot any bugs, please use [Issue Tracker](https://github.com/adityatelange/hugo-PaperMod/issues) and/or
 create a new [Pull Request](https://github.com/adityatelange/hugo-PaperMod/pulls) to fix the issue.
 
-![GitHub issues](https://img.shields.io/github/issues-raw/adityatelange/hugo-papermod)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/adityatelange/hugo-PaperMod)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/adityatelange/hugo-papermod)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/adityatelange/hugo-papermod)
+[![GitHub issues](https://img.shields.io/github/issues-raw/adityatelange/hugo-papermod)](https://github.com/adityatelange/hugo-PaperMod/issues?q=is%3Aopen)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/adityatelange/hugo-PaperMod)](https://github.com/adityatelange/hugo-PaperMod/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/adityatelange/hugo-papermod)](https://github.com/adityatelange/hugo-PaperMod/pulls?q=is%3Aopen+is%3Apr)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/adityatelange/hugo-papermod)](https://github.com/adityatelange/hugo-PaperMod/pulls?q=is%3Apr+is%3Aclosed)
