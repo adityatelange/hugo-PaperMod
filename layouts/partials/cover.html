@@ -18,7 +18,7 @@
         {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink }} {{ (printf "%sw" .) }},{{ end }}
     {{- end -}} {{$src.RelPermalink}} {{printf "%dw" ($src.Width)}}'
     {{- if ge $src.Width "720" }}src="{{ ($src.Resize "720x").RelPermalink }}"
-    {{- else }}src="{{ $src.RelPermalink }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}{{ end }}>
+    {{- else }}src="{{ $src.RelPermalink }}" {{ end }}{{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
     
 {{- else }}{{/* Fall back to full image */}}
     {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" title="Original image">{{ end }}
