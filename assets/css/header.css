@@ -34,9 +34,10 @@
     margin-inline-end: 8px;
 }
 
-.theme-toggle svg{
+.theme-toggle svg {
     height: 18px;
     margin: 0 10px;
+    user-select: none;
 }
 
 body.dark #moon{
