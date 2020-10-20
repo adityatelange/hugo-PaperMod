@@ -5,13 +5,14 @@
 
 {{- $sizes := (slice "480" "720" "1080" "1500") }}
 
-{{- $src := .Page.Resources.GetMatch (printf "*%s*" (.Params.cover.image)) }}
-{{- $fallback := cond .Params.cover.relative (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
+{{- $src := cond (default true .Site.Params.responsiveImages) (.Page.Resources.GetMatch (printf "*%s*" (.Params.cover.image))) false }}
+{{- $fallback := cond (default false .Params.cover.relative) (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
 
 {{- $addLink := and (not $IsHome) (default true .Site.Params.linkFullImages) -}}
+{{- $responsiveImg := and $src (default false .Params.cover.relative) -}}
 
 <figure class="entry-cover">  
-{{- if and $src .Params.cover.relative -}}
+{{- if $responsiveImg -}}
     {{- if $addLink }}<a href="{{ $src.RelPermalink }}" target="_blank" title="Original image">{{ end }}
     <img sizes="(min-width: 768px) 720px, 100vw"
     srcset='{{- range $sizes -}}
