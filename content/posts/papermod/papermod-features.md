@@ -129,6 +129,12 @@ cover:
 
 When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/) and `relative` is set to _true_, multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
 
+Responsive images are enabled by default. Disable using
+```yml
+params:
+    responsiveImages: false
+```
+
 To enable hyperlinks to the full image size on post pages, use
 ```yml
 params:

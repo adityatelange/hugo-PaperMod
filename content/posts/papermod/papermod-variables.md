@@ -18,6 +18,7 @@ Below are variables used with this theme...
 | defaultTheme | string | light \| dark \| auto |
 | ShowShareButtons | boolean | true \| false |
 | linkFullImages | boolean | true \| false |
+| responsiveImages | boolean | true \| false |
 
 ### Page Variables
 
