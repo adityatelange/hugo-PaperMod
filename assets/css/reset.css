@@ -140,3 +140,13 @@ img {
 *:focus {
     outline:none;
 }
+
+*::-moz-selection {
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
+*::selection {
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
