@@ -44,11 +44,7 @@
   </section>
   {{- end }}
   <footer class="entry-footer">
-    <time>{{ .Date.Format (default "January 2, 2006" .Site.Params.DateFormat) }}</time>
-    {{- if $.Site.Params.ShowReadingTime }}&nbsp;·&nbsp;
-    {{- $default_txt := print .ReadingTime " " "min" }}
-    {{- i18n "read_time" .ReadingTime | default  $default_txt  }}{{ end }}
-    {{- if or .Params.author .Site.Params.author }}&nbsp;·&nbsp;{{- .Params.author | default .Site.Params.author }}{{ end }}
+    {{- partial "post_meta.html" . -}}
   </footer>
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
