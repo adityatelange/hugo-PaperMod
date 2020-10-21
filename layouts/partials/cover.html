@@ -5,7 +5,10 @@
 
 {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
 
-{{- $src := cond (default true .Site.Params.responsiveImages) (.Page.Resources.GetMatch (printf "*%s*" (.Params.cover.image))) false }}
+{{- $file := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- if not (isset $file "Width") }}{{ $file = false }}{{ end }} {{/* Exception for non-supported images */}}
+
+{{- $src := cond (default true .Site.Params.responsiveImages) $file false }}
 {{- $fallback := cond (default false .Params.cover.relative) (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
 
 {{- $addLink := and (not $IsHome) (default true .Site.Params.linkFullImages) -}}
