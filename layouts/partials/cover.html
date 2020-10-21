@@ -3,7 +3,7 @@
 {{- with .cxt}} {{/* Apply proper context from dict */}}
 {{- if .Params.cover.image }}
 
-{{- $sizes := (slice "480" "720" "1080" "1500") }}
+{{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
 
 {{- $src := cond (default true .Site.Params.responsiveImages) (.Page.Resources.GetMatch (printf "*%s*" (.Params.cover.image))) false }}
 {{- $fallback := cond (default false .Params.cover.relative) (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
