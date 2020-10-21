@@ -13,7 +13,9 @@
 
 <figure class="entry-cover">  
 {{- if $responsiveImg -}}
-    {{- if $addLink }}<a href="{{ $src.RelPermalink | absURL }}" target="_blank" title="Original image">{{ end }}
+    {{- if $addLink }}<a href="{{ $src.RelPermalink | absURL }}" target="_blank" 
+        {{- with .Params.cover.caption }}title="{{ . | plainify }}"{{ else }}{{ with .Params.cover.alt }}title="{{ . | plainify }}"{{ end }}{{ end }}>
+    {{- end }}
     <img sizes="(min-width: 768px) 720px, 100vw"
     srcset='{{- range $sizes -}}
         {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink | absURL }} {{ (printf "%sw" .) }},{{ end }}
@@ -22,7 +24,9 @@
     {{- else }}src="{{ $src.RelPermalink | absURL }}" {{ end }}{{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
     
 {{- else }}{{/* Fall back to full image */}}
-    {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" title="Original image">{{ end }}
+    {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" 
+        {{- with .Params.cover.caption }}title="{{ . | plainify }}"{{ else }}{{ with .Params.cover.alt }}title="{{ . | plainify }}"{{ end }}{{ end }}>
+    {{- end }}
     <img src="{{ $fallback | absURL }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
 {{- end }}
 
