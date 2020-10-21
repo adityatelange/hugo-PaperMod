@@ -14,3 +14,6 @@
 
 - id: translations
   translation: "Translations"
+
+- id: full_image
+  translation: "Original image"

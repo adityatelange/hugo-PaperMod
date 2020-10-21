@@ -13,7 +13,7 @@
 
 <figure class="entry-cover">  
 {{- if $responsiveImg -}}
-    {{- if $addLink }}<a href="{{ $src.RelPermalink }}" target="_blank" title="Original image">{{ end }}
+    {{- if $addLink }}<a href="{{ $src.RelPermalink }}" target="_blank" title="{{- i18n "full_image" | default "Original image" }}">{{ end }}
     <img sizes="(min-width: 768px) 720px, 100vw"
     srcset='{{- range $sizes -}}
         {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink }} {{ (printf "%sw" .) }},{{ end }}
@@ -22,7 +22,7 @@
     {{- else }}src="{{ $src.RelPermalink }}" {{ end }}{{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
     
 {{- else }}{{/* Fall back to full image */}}
-    {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" title="Original image">{{ end }}
+    {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" title="{{- i18n "full_image" | default "Original image" }}">{{ end }}
     <img src="{{ $fallback | absURL }}" {{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
 {{- end }}
 
