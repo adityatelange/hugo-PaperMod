@@ -13,13 +13,13 @@
 
 <figure class="entry-cover">  
 {{- if $responsiveImg -}}
-    {{- if $addLink }}<a href="{{ $src.RelPermalink }}" target="_blank" title="{{- i18n "full_image" | default "Original image" }}">{{ end }}
+    {{- if $addLink }}<a href="{{ $src.RelPermalink | absURL }}" target="_blank" title="{{- i18n "full_image" | default "Original image" }}">{{ end }}
     <img sizes="(min-width: 768px) 720px, 100vw"
     srcset='{{- range $sizes -}}
-        {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink }} {{ (printf "%sw" .) }},{{ end }}
-    {{- end -}} {{$src.RelPermalink}} {{printf "%dw" ($src.Width)}}'
-    {{- if ge $src.Width "720" }}src="{{ ($src.Resize "720x").RelPermalink }}"
-    {{- else }}src="{{ $src.RelPermalink }}" {{ end }}{{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
+        {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).RelPermalink | absURL }} {{ (printf "%sw" .) }},{{ end }}
+    {{- end -}} {{$src.RelPermalink | absURL }} {{printf "%dw" ($src.Width)}}'
+    {{- if ge $src.Width "720" }}src="{{ ($src.Resize "720x").RelPermalink | absURL }}"
+    {{- else }}src="{{ $src.RelPermalink | absURL }}" {{ end }}{{ with .Params.cover.alt }} alt="{{ . | plainify }}"{{ end }}>
     
 {{- else }}{{/* Fall back to full image */}}
     {{- if $addLink }}<a href="{{ $fallback | absURL }}" target="_blank" title="{{- i18n "full_image" | default "Original image" }}">{{ end }}
