@@ -4,9 +4,10 @@
 {{- if .Params.cover.image }}
 
 {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
+{{- $processableFormats := (slice "jpg" "png" "tif" "bmp" "gif") }}
 
 {{- $file := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
-{{- if not (isset $file "Width") }}{{ $file = false }}{{ end }} {{/* Exception for non-supported images */}}
+{{- with $file }} {{ if not (in $processableFormats .MediaType.SubType) }} {{ $file = false }} {{ end }}{{ end }}
 
 {{- $src := cond (default true .Site.Params.responsiveImages) $file false }}
 {{- $fallback := cond (default false .Params.cover.relative) (path.Join .RelPermalink .Params.cover.image) (.Params.cover.image) -}}
