@@ -1,0 +1,32 @@
+{{- with .cxt}} {{/* Apply proper context from dict */}}
+{{- if .Params.cover.image }}
+{{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
+<figure class="entry-cover">
+    {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
+    {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+    {{- if $cover -}}{{/* i.e it is present in page bundle */}}
+        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank">{{ end -}}
+        {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
+        {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
+        {{- if (and (in $processableFormats $cover.MediaType.SubType) (ne .Site.Params.cover.responsiveImages false)) }}
+        <img srcset="{{- range $size := $sizes -}}
+                        {{- if (ge $cover.Width $size) -}}
+                        {{ printf "%s %s" (($cover.Resize (printf "%sx q100" $size)).Permalink) (printf "%sw ," $size) -}}
+                        {{ end }}
+                    {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}"
+            sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}" />
+        {{- else }}{{/* Unprocessable image or responsive images disabled */}}
+        <img src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
+        {{- end }}
+    {{- else }}{{/* For absolute urls and external links, no img processing here */}}
+        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank">{{ end -}}
+            <img src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+    {{- end }}
+    {{- if $addLink }}</a>{{ end -}}
+    {{/*  Display Caption  */}}
+    {{- if not $.IsHome }}
+        {{ with .Params.cover.caption }}<p>{{ . | markdownify }}</p>{{- end }}
+    {{- end }}
+</figure>
+{{- end }}{{/* End image */}}
+{{- end -}}{{/* End context */}}
