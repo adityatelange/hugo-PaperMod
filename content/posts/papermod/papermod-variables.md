@@ -28,6 +28,5 @@ Below are variables used with this theme...
 | tocopen | boolean | true \| false |
 | hidemeta | boolean | true \| false |
 | cover.image | string | `'featured.jpg'` |
-| cover.relative | boolean | true \| false |
 | cover.caption | string | `'<text>'` |
 | cover.alt | string | `'<alt text>'` |

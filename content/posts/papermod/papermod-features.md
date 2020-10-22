@@ -122,18 +122,17 @@ cover:
   image: '<image path/url>'
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-  relative: true # whether you entered a relative or absolute URL
   alt: '<alt text>'
   caption: '<text>'
 ```
 
-When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/) and `relative` is set to _true_, multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
+When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/), multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
 
-Responsive images are enabled by default. Disable using
+To reduce generation time and size of the site, you can disable this feature using
 ```yml
 params:
 - cover:
-    responsiveImages: false # (default)
+    responsiveImages: false 
 ```
 
 To enable hyperlinks to the full image size on post pages, use
