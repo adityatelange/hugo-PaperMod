@@ -126,6 +126,22 @@ cover:
   caption: '<text>'
 ```
 
+When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/), multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
+
+To reduce generation time and size of the site, you can disable this feature using
+```yml
+params:
+  cover:
+    responsiveImages: false 
+```
+
+To enable hyperlinks to the full image size on post pages, use
+```yml
+params:
+  cover:
+    linkFullImages: true
+```
+
 ---
 
 ### Share Buttons on post

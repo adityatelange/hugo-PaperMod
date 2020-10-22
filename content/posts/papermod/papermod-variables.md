@@ -17,6 +17,8 @@ Below are variables used with this theme...
 | ShowReadingTime | boolean | true \| false |
 | defaultTheme | string | light \| dark \| auto |
 | ShowShareButtons | boolean | true \| false |
+| cover.linkFullImages | boolean | true \| false |
+| cover.responsiveImages | boolean | true \| false |
 
 ### Page Variables
 
@@ -25,3 +27,6 @@ Below are variables used with this theme...
 | showtoc | boolean | true \| false |
 | tocopen | boolean | true \| false |
 | hidemeta | boolean | true \| false |
+| cover.image | string | `'featured.jpg'` |
+| cover.caption | string | `'<text>'` |
+| cover.alt | string | `'<alt text>'` |
