@@ -131,14 +131,14 @@ When you include images in the [Page Bundle](https://gohugo.io/content-managemen
 To reduce generation time and size of the site, you can disable this feature using
 ```yml
 params:
-- cover:
+  cover:
     responsiveImages: false 
 ```
 
 To enable hyperlinks to the full image size on post pages, use
 ```yml
 params:
-- cover:
+  cover:
     linkFullImages: true
 ```
 
