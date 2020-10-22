@@ -132,13 +132,15 @@ When you include images in the [Page Bundle](https://gohugo.io/content-managemen
 Responsive images are enabled by default. Disable using
 ```yml
 params:
-    responsiveImages: false
+- cover:
+    responsiveImages: false # (default)
 ```
 
 To enable hyperlinks to the full image size on post pages, use
 ```yml
 params:
-    linkFullImages: true # (default)
+- cover:
+    linkFullImages: true
 ```
 
 ---
