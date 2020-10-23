@@ -8,7 +8,8 @@
         {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank">{{ end -}}
         {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
-        {{- if (and (in $processableFormats $cover.MediaType.SubType) (ne .Site.Params.cover.responsiveImages false)) }}
+        {{- $prod := (eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")) }}
+        {{- if (and (in $processableFormats $cover.MediaType.SubType) (ne .Site.Params.cover.responsiveImages false) (eq $prod true)) }}
         <img srcset="{{- range $size := $sizes -}}
                         {{- if (ge $cover.Width $size) -}}
                         {{ printf "%s %s" (($cover.Resize (printf "%sx q100" $size)).Permalink) (printf "%sw ," $size) -}}
