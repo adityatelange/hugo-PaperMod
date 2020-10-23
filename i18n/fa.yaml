@@ -1,0 +1,16 @@
+- id: prev_page
+  translation: "صفحهٔ قبل"
+
+- id: next_page
+  translation: "صفحهٔ بعد"
+
+- id: read_time
+  translation:
+    one : "1 دقیقه"
+    other: "{{ .Count }} دقیقه"
+
+- id: toc
+  translation: "فهرست مطالب"
+
+- id: translations
+  translation: "ترجمه‌ها"
