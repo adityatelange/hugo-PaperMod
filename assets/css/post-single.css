@@ -132,7 +132,7 @@
 
 .post-content table th {
     font-size: 14px;
-    text-align: left;
+    text-align: start;
 }
 
 .post-content table:not(.highlighttable) td code:only-child {
@@ -208,7 +208,7 @@
 .post-content blockquote {
     margin: 0 calc(var(--gap) * -1);
     padding: 0 32px;
-    border-left: 2px solid var(--primary);
+    border-inline-start: 2px solid var(--primary);
 }
 
 .post-content hr {
