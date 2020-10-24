@@ -1,0 +1,16 @@
+- id: prev_page
+  translation: "Предишна страница"
+
+- id: next_page
+  translation: "Следваща страница"
+
+- id: read_time
+  translation:
+    one : "1 мин"
+    other: "{{ .Count }} мин"
+
+- id: toc
+  translation: "Съдържание"
+
+- id: translations
+  translation: "Преводи"
