@@ -46,7 +46,7 @@
   "dateModified": {{ .Lastmod }},
   {{- with (.Params.author | default .Site.Params.author) }}
   "author":
-    {{- if (eq (printf "%T" .) "[]string") -}}
+    {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
   [{{- range $i, $v := . -}}
   {{- if $i }}, {{end -}}
   {
