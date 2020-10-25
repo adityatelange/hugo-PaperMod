@@ -10,6 +10,7 @@
             document.body.classList.add('dark');
         }
     }
+
 </script>
 {{- end }}
 {{- if (and (.Site.Params.disableThemeToggle) (eq .Site.Params.defaultTheme "auto")) }}
@@ -17,6 +18,7 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
+
 </script>
 {{- end }}
 <noscript>
@@ -30,7 +32,7 @@
 </noscript>
 <header class="header">
     <nav class="nav">
-        <p class="logo">
+        <div class="logo">
             <a href="{{ "" | absLangURL }}">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
@@ -62,7 +64,7 @@
                 </a>
             </span>
             {{- end}}
-        </p>
+        </div>
         {{- $currentPage := . }}
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
