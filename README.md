@@ -39,13 +39,14 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
     - [Home-Info Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#home-info-mode)
     - [Profile Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#profile-mode)
 - Table of Content Generation (newer implementation).
-- Archive of posts
+- Archive of posts.
 - Social-Media Share buttons on post.
 - Menu location indicator.
 - Multilingual support.
-- Cover image for each post
-- Light/Dark theme ( automatic theme switch a/c to browser theme)
-- SEO Friendly
+- Cover image for each post (with Responsive image support).
+- Light/Dark theme ( automatic theme switch a/c to browser theme).
+- SEO Friendly.
+- Muliple Author support.
 - No webpack, nodejs and other depedencies required to edit the theme :)
 
 Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
