@@ -69,6 +69,10 @@ body:not(.dark) #sun {
     border-bottom: 2px solid currentColor;
 }
 
+.lang-switch ul {
+    display: inline;
+}
+
 .lang-switch a {
     font-size: 16px;
     font-weight: 500;

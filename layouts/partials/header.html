@@ -68,20 +68,22 @@
             {{- with $.Site.Home.AllTranslations }}
             <span class="lang-switch">
                 <span>|</span>
-                {{- range . -}}
-                {{- if ne $lang .Lang }}
-                <li>
-                    <a href="{{- .Permalink -}}" title="{{ .Language.LanguageName | default .Lang | humanize }}"
-                        aria-label="{{ .Language.LanguageName | default .Lang | humanize }}">
-                        {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-                        {{- .Language.LanguageName | humanize -}}
-                        {{- else }}
-                        {{- .Lang | humanize -}}
-                        {{- end -}}
-                    </a>
-                </li>
-                {{- end -}}
-                {{- end}}
+                <ul>
+                    {{- range . -}}
+                    {{- if ne $lang .Lang }}
+                    <li>
+                        <a href="{{- .Permalink -}}" title="{{ .Language.LanguageName | default .Lang | humanize }}"
+                            aria-label="{{ .Language.LanguageName | default .Lang | humanize }}">
+                            {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                            {{- .Language.LanguageName | humanize -}}
+                            {{- else }}
+                            {{- .Lang | humanize -}}
+                            {{- end -}}
+                        </a>
+                    </li>
+                    {{- end -}}
+                    {{- end}}
+                </ul>
             </span>
             {{- end }}
         </div>
