@@ -10,7 +10,7 @@
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
-<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+<meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ .Permalink }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />

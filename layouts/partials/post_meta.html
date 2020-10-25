@@ -8,9 +8,9 @@
 {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%s min" .ReadingTime))) }}
 {{- end -}}
 
-{{- if or .Params.author .Site.Params.author }}
-{{- $scratch.Add "meta" (slice (.Params.author | default .Site.Params.author)) }}
-{{- end -}}
+{{ with (partial "author.html" . ) }}
+{{ $scratch.Add "meta" (slice .)}}
+{{end}}
 
 {{- with ($scratch.Get "meta")}}
 {{- delimit . "&nbsp;·&nbsp;"}}
