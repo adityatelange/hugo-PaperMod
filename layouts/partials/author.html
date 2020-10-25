@@ -1,0 +1,9 @@
+{{- if or .Params.author .Site.Params.author }}
+{{- $author := (.Params.author | default .Site.Params.author)}}
+{{- $author_type := (printf "%T" $author) }}
+{{- if (eq $author_type "[]string") }}
+{{- (delimit $author ", " ) }}
+{{- else }}
+{{- $author }}
+{{- end }}
+{{- end -}}
