@@ -69,19 +69,13 @@ body:not(.dark) #sun {
     border-bottom: 2px solid currentColor;
 }
 
-.lang-switch {
-    margin-inline-start: var(--gap);
+.lang-switch a {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .lang-switch li,
 .lang-switch li+li {
     margin-inline-start: 8px;
     display: inline-flex;
-}
-
-.lang-switch svg {
-    margin: 0 2px;
-    height: 15px;
-    user-select: none;
-    cursor: not-allowed;
 }
