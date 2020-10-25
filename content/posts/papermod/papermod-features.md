@@ -132,7 +132,7 @@ To reduce generation time and size of the site, you can disable this feature usi
 ```yml
 params:
   cover:
-    responsiveImages: false 
+    responsiveImages: false
 ```
 
 To enable hyperlinks to the full image size on post pages, use
@@ -180,6 +180,26 @@ ShowToc: true
 To keep Toc Open **by default** on a post add following to page-variables:
 ```yml
 TocOpen: true
+```
+
+---
+
+### Multiple Authors
+
+To Use multiple authors for a post, in post-variables:
+
+```yml
+---
+author: ["Me", "You"]
+---
+```
+
+To use Multiple Authors Site-wide, in `config.yml`:
+
+
+```yml
+params:
+    author: ["Me", "You"]
 ```
 
 ---

@@ -74,6 +74,7 @@ params:
   title: ExampleSite
   description: 'ExampleSite's description'
   author: Me
+  # author: ["Me", "You"] # multiple authors
 
   images: "<link or path of image for opengraph, twitter-cards>"
 
@@ -135,6 +136,7 @@ weight: 1
 aliases: ['/first']
 tags: ['first']
 author: "Me"
+# author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
