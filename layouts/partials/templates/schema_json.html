@@ -41,13 +41,26 @@
     {{- else -}}
     {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
     {{- end}}
-  {{- end}}
+  {{- end -}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
-  "author": {
+  {{- with (.Params.author | default .Site.Params.author) }}
+  "author":
+    {{- if (eq (printf "%T" .) "[]string") -}}
+  [{{- range $i, $v := . -}}
+  {{- if $i }}, {{end -}}
+  {
     "@type": "Person",
-    "name": {{ .Params.author | default .Site.Params.author }}
+    "name": {{ $v }}
+  }
+  {{- end }}],
+    {{- else -}}
+  {
+    "@type": "Person",
+    "name": {{ . }}
   },
+    {{- end -}}
+  {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
