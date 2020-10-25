@@ -40,7 +40,7 @@
     user-select: none;
 }
 
-body.dark #moon{
+body.dark #moon {
     vertical-align: middle;
     display: none;
 }
@@ -74,7 +74,7 @@ body:not(.dark) #sun {
 }
 
 .lang-switch li,
-.lang-switch li + li {
+.lang-switch li+li {
     margin-inline-start: 8px;
     display: inline-flex;
 }
@@ -82,4 +82,6 @@ body:not(.dark) #sun {
 .lang-switch svg {
     margin: 0 2px;
     height: 15px;
+    user-select: none;
+    cursor: not-allowed;
 }
