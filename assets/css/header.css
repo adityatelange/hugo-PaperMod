@@ -18,6 +18,7 @@
 .menu {
     display: flex;
     margin: auto var(--gap);
+    flex-wrap: inherit;
 }
 
 .logo a {
@@ -70,16 +71,15 @@ body:not(.dark) #sun {
 }
 
 .lang-switch ul {
-    display: inline;
+    display: inline-flex;
 }
 
 .lang-switch a {
     font-size: 16px;
     font-weight: 500;
+    margin: 0 8px;
 }
 
-.lang-switch li,
-.lang-switch li+li {
-    margin-inline-start: 8px;
+.lang-switch li {
     display: inline-flex;
 }
