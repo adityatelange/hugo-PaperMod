@@ -2,7 +2,7 @@
 
 {{- if .Title }}
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
+    <h1>{{ default .Title (i18n .Title) }}</h1>
 </header>
 {{- end }}
 
