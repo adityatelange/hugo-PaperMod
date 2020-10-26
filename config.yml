@@ -11,6 +11,44 @@ minify:
   disableXML: true
   minifyOutput: true
 
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Archives
+          url: /archives/
+          weight: 5
+        - name: Tags
+          url: /tags/
+          weight: 10
+
+  l2:
+    languageName: "Lang2"
+    weight: 2
+    title: PaperModL2
+    profileMode:
+      enabled: true
+      title: PaperMod
+      # imageUrl: "#"
+      # imageTitle: my image
+      subtitle: Profile Mode
+      buttons:
+        - name: Blog
+          url: posts
+        - name: Tags
+          url: tags
+
+  l3:
+    languageName: "Langrtl"
+    languagedirection: rtl
+    weight: 3
+    title: PaperMod RTL
+    homeInfoParams:
+      Title: "Hi there \U0001F44B"
+      Content: Welcome to RTL layout
+
 params:
   env: production
   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
@@ -19,7 +57,7 @@ params:
   ShowReadingTime: true
   defaultTheme: auto
   ShowShareButtons: true
-
+  displayFullLangName: true
   # images: ""
   # assets:
   #   favicon: '<path / external url>'
@@ -50,15 +88,6 @@ params:
       url: "#"
     - name: github
       url: "https://github.com/adityatelange/hugo-PaperMod"
-
-menu:
-  main:
-    - name: Archives
-      url: /archives/
-      weight: 5
-    - name: Tags
-      url: /tags/
-      weight: 10
 
 taxonomies:
   category: categories
