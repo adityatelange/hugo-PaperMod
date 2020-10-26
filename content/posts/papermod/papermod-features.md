@@ -43,12 +43,19 @@ disableThemeToggle : true
 
 ### Archives Layout
 
-Create a page with `archive.md`
-Add vars below to its page-variables
+Create a page with `archive.md` in `content` directory with following content
 
 ```yml
-layout: "archives"
+---
+title: "Archive" # in any language you want
+layout: "archives" # is necessary
+url: "/archive"
+summary: "archive"
+---
 ```
+
+**Note:** Archives Layout does not support Multilingual Month Translations.
+
 ex: [archives.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/archives.md)
 
 ---
