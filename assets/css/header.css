@@ -83,3 +83,8 @@ body:not(.dark) #sun {
 .lang-switch li {
     display: inline-flex;
 }
+
+.logo-switches {
+    display: inline-flex;
+    flex-wrap: inherit;
+}
