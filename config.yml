@@ -3,14 +3,27 @@ title: PaperMod
 paginate: 8
 theme: hugo-PaperMod
 enableInlineShortcodes: true
+enableRobotsTXT: true
+
+# googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
 
 params:
   env: production
   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   author: Theme PaperMod
+  # author: ["Me", "You"] # multiple authors
   ShowReadingTime: true
   defaultTheme: auto
   ShowShareButtons: true
+
+  # images: ""
+  # assets:
+  #   favicon: '<path / external url>'
+
   profileMode:
     enabled: false
     title: PaperMod
