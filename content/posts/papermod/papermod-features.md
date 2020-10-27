@@ -3,17 +3,19 @@ title: "Papermod - Features"
 date: 2020-09-16T11:30:03+05:30
 showToc: true
 weight: 2
-aliases: ['/papermod-features']
-tags: ['PaperMod']
+aliases: ["/papermod-features"]
+tags: ["PaperMod"]
 author: "Aditya Telange"
 tocopen: true
 ---
 
 ### Assets (js/css)
+
 The following is enabled by default
-- [minification](https://gohugo.io/hugo-pipes/minification/) - makes the assets size smallest as possible.
-- [bundling](https://gohugo.io/hugo-pipes/bundling/) - bundles all the styles in one single asset
-- [fingerprint/intergity](https://gohugo.io/hugo-pipes/fingerprint/) check.
+
+-   [minification](https://gohugo.io/hugo-pipes/minification/) - makes the assets size smallest as possible.
+-   [bundling](https://gohugo.io/hugo-pipes/bundling/) - bundles all the styles in one single asset
+-   [fingerprint/intergity](https://gohugo.io/hugo-pipes/fingerprint/) check.
 
 ---
 
@@ -25,6 +27,7 @@ params:
     # defaultTheme: dark
     defaultTheme: auto # to switch between dark or light according to browser theme
 ```
+
 </details>
 
 ---
@@ -36,7 +39,7 @@ Shows icon besides title of page to change theme
 To disable it :
 
 ```yml
-disableThemeToggle : true
+disableThemeToggle: true
 ```
 
 ---
@@ -52,6 +55,7 @@ layout: "archives" # is necessary
 url: "/archive"
 summary: "archive"
 ---
+
 ```
 
 **Note:** Archives Layout does not support Multilingual Month Translations.
@@ -65,6 +69,7 @@ ex: [archives.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/
 Use 1st entry as some Information
 
 add following to config file
+
 ```yml
 params:
     homeInfoParams:
@@ -126,27 +131,29 @@ In post's page-variables add :
 
 ```yml
 cover:
-  image: '<image path/url>'
-  # can also paste direct link from external site
-  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-  alt: '<alt text>'
-  caption: '<text>'
+    image: "<image path/url>"
+    # can also paste direct link from external site
+    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "<alt text>"
+    caption: "<text>"
 ```
 
 When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/), multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
 
 To reduce generation time and size of the site, you can disable this feature using
+
 ```yml
 params:
-  cover:
-    responsiveImages: false
+    cover:
+        responsiveImages: false
 ```
 
 To enable hyperlinks to the full image size on post pages, use
+
 ```yml
 params:
-  cover:
-    linkFullImages: true
+    cover:
+        linkFullImages: true
 ```
 
 ---
@@ -156,6 +163,7 @@ params:
 Displays Share Buttons at Bottom of each post
 
 to show share buttons add
+
 ```yml
 params:
     ShowShareButtons: true
@@ -168,6 +176,7 @@ params:
 Displays Reading Time (the estimated time, in minutes, it takes to read the content.)
 
 To show reading time add
+
 ```yml
 Params:
     ShowReadingTime: true
@@ -180,11 +189,13 @@ Params:
 Displays ToC on blog-pages
 
 To show ToC add following to page-variables
+
 ```yml
 ShowToc: true
 ```
 
 To keep Toc Open **by default** on a post add following to page-variables:
+
 ```yml
 TocOpen: true
 ```
@@ -199,10 +210,10 @@ To Use multiple authors for a post, in post-variables:
 ---
 author: ["Me", "You"]
 ---
+
 ```
 
 To use Multiple Authors Site-wide, in `config.yml`:
-
 
 ```yml
 params:

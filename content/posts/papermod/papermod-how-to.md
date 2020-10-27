@@ -3,8 +3,8 @@ title: "Papermod - How To's Guide"
 date: 2020-09-18T11:30:03+05:30
 showtoc: true
 tocOpen: true
-aliases: ['/papermod-how-to-guide']
-tags: ['PaperMod']
+aliases: ["/papermod-how-to-guide"]
+tags: ["PaperMod"]
 author: "Aditya Telange"
 draft: true
 ---
@@ -20,7 +20,6 @@ We'll be using `yml/yaml` format for all examples down below, I recommend using 
 By Hugo's Lookup Order, you can override any part of a theme that you want. The following is a quick example.
 
 Let's say you wish the `list` was different. All you have to do is copy the `list` template:
-
 
 ```shell
 your-site/themes/papermod/layouts/_defaults/list.html
@@ -43,7 +42,7 @@ These include OpenGraph, Twitter Cards and Schema.
 
 ```yml
 params:
-  env: production
+    env: production
 ```
 
 or set `HUGO_ENV` as "production" in system env-vars
@@ -72,10 +71,11 @@ layout: "archives"
 url: "/archives/"
 summary: archives
 ---
+
 ```
 
 ---
 
 ## References
 
- - [Override a Hugo theme](https://zwbetz.com/override-a-hugo-theme/)
+-   [Override a Hugo theme](https://zwbetz.com/override-a-hugo-theme/)

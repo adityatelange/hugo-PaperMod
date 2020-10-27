@@ -4,12 +4,13 @@ date: 2020-09-17T11:30:03+05:30
 showtoc: true
 tocopen: true
 weight: 3
-aliases: ['/papermod-icons']
-tags: ['PaperMod']
+aliases: ["/papermod-icons"]
+tags: ["PaperMod"]
 author: "Aditya Telange"
 ---
 
 ## Social Icons
+
 Usage :
 
 ```
@@ -73,7 +74,7 @@ Usage:
 
 ```yml
 params:
-  ShowShareButtons: true
+    ShowShareButtons: true
 ```
 
 ![](https://i.ibb.co/sPN8bgd/paper-mod-share-butons.png)

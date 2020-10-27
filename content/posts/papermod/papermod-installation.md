@@ -3,8 +3,8 @@ title: "Papermod - Installation"
 date: 2020-09-15T11:30:03+05:30
 series: ["PaperMod"]
 weight: 1
-aliases: ['/papermod-installation']
-tags: ['PaperMod']
+aliases: ["/papermod-installation"]
+tags: ["PaperMod"]
 author: "Aditya Telange"
 showToc: true
 TocOpen: true
@@ -22,26 +22,29 @@ Inside the folder of your Hugo site, run:
 > ```console
 > git clone https://github.com/adityatelange/hugo-PaperMod themes/hugo-PaperMod --depth=1
 > ```
+>
 > > Updating theme :
+> >
 > > ```console
 > > cd themes/hugo-PaperMod
 > > git pull
 > > ```
-> >
 
 **or** you can use as [submodule](https://www.atlassian.com/git/tutorials/git-submodule) with
->
+
 > ```console
 > git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod
 > git submodule update --init --recursive
 > ```
+>
 > > Updating theme with submodule :
+> >
 > > ```console
 > > git submodule update --remote --merge
 > > ```
 > >
-Then change in `config.yml`:
->
+> > Then change in `config.yml`:
+
 ```yml
 theme: "hugo-PaperMod"
 ```
@@ -133,8 +136,8 @@ params:
 title: "My 1st post"
 date: 2020-09-15T11:30:03+00:00
 weight: 1
-aliases: ['/first']
-tags: ['first']
+aliases: ["/first"]
+tags: ["first"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -143,16 +146,19 @@ draft: false
 hidemeta: false
 disableShare: false
 cover:
-  image: '<image path/url>'
-  alt: '<alt text>'
-  caption: '<text>'
-  relative: false
+    image: "<image path/url>"
+    alt: "<alt text>"
+    caption: "<text>"
+    relative: false
 comments: false
 ---
+
 ```
 
 ---
 
-###  [Papermod - Features](../papermod-features)
-###  [Papermod - How to Guide](../papermod-how-to-guide)
-###  [Papermod - Icons](../papermod-icons)
+### [Papermod - Features](../papermod-features)
+
+### [Papermod - How to Guide](../papermod-how-to-guide)
+
+### [Papermod - Icons](../papermod-icons)
