@@ -1,5 +1,6 @@
 ---
 title: "Papermod - Icons"
+summary: List of all Icons supported by PaperMod
 date: 2020-09-17T11:30:03+05:30
 showtoc: true
 tocopen: true

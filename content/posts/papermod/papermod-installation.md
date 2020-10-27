@@ -1,5 +1,6 @@
 ---
 title: "Papermod - Installation"
+summary: Read Install and Update instructions here
 date: 2020-09-15T11:30:03+05:30
 series: ["PaperMod"]
 weight: 1

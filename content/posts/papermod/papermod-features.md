@@ -1,5 +1,6 @@
 ---
 title: "Papermod - Features"
+summary: Get known about All Features in PaperMod
 date: 2020-09-16T11:30:03+05:30
 showToc: true
 weight: 2
