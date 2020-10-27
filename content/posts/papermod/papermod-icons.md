@@ -64,12 +64,12 @@ socialIcons: # optional
 
 | No. | Platform |
 | --- | -------- |
-| 1   | facebook |
+| 1   | twitter  |
 | 2   | linkedin |
 | 3   | reddit   |
-| 4   | telegram |
-| 5   | twitter  |
-| 6   | whatsapp |
+| 4   | facebook |
+| 5   | whatsapp |
+| 6   | telegram |
 
 Usage:
 
@@ -78,4 +78,4 @@ params:
     ShowShareButtons: true
 ```
 
-![](https://i.ibb.co/sPN8bgd/paper-mod-share-butons.png)
+You can see Below how share Icons Look.
