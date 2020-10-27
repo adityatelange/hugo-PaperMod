@@ -65,7 +65,15 @@ ex: [archives.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/
 
 ---
 
+### Regular Mode (default-mode)
+
+![regular](images/regular.webp)
+
+---
+
 ### Home-Info Mode
+
+![homeinfo](images/homeinfo.webp)
 
 Use 1st entry as some Information
 
@@ -86,11 +94,11 @@ params:
 
 ex. [here](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.toml#L14)
 
-![](https://i.ibb.co/zsq6fLr/papermod-homeinfo.png)
-
 ---
 
 ### Profile Mode
+
+![profile](images/profile.webp)
 
 Shows Index/Home page as Full Page with Social Links and Image
 
@@ -115,8 +123,6 @@ params:
         - name: "<platform 2>"
             url: "<link2>"
 ```
-
-![](https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png)
 
 ---
 
