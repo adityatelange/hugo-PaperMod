@@ -19,7 +19,7 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 ---
 
 <p align="center">
-  <kbd><img width=600px src="https://i.ibb.co/GvspqCX/HomeInfo.png" alt="HomeInfo" /></kbd>
+  <kbd><img width=600px src="https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/homeinfo.webp" alt="HomeInfo" /></kbd>
   <kbd><img width=153px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
 </p>
 
@@ -33,21 +33,21 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
 
 ## Features/Mods
 
-- Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
-- 3 Modes:
-    - Regular Mode.
-    - [Home-Info Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#home-info-mode)
-    - [Profile Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#profile-mode)
-- Table of Content Generation (newer implementation).
-- Archive of posts.
-- Social-Media Share buttons on post.
-- Menu location indicator.
-- Multilingual support.
-- Cover image for each post (with Responsive image support).
-- Light/Dark theme ( automatic theme switch a/c to browser theme).
-- SEO Friendly.
-- Muliple Author support.
-- No webpack, nodejs and other depedencies required to edit the theme :)
+-   Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
+-   3 Modes:
+    -   Regular Mode.
+    -   [Home-Info Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#home-info-mode)
+    -   [Profile Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#profile-mode)
+-   Table of Content Generation (newer implementation).
+-   Archive of posts.
+-   Social-Media Share buttons on post.
+-   Menu location indicator.
+-   Multilingual support.
+-   Cover image for each post (with Responsive image support).
+-   Light/Dark theme ( automatic theme switch a/c to browser theme).
+-   SEO Friendly.
+-   Muliple Author support.
+-   No webpack, nodejs and other depedencies required to edit the theme :)
 
 Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
 
@@ -61,9 +61,7 @@ Read this post For More Details => [Social-Icons](https://adityatelange.github.i
 
 ---
 
-## LightHouse Report
-
-<kbd><a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F"><img src="https://i.ibb.co/y6RwCzb/lighthouse.png" alt="LightHouse" /></a></kbd>
+## [LightHouse Report](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
 
 ---
 
