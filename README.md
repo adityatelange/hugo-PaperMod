@@ -61,6 +61,12 @@ Read this post For More Details => [Social-Icons](https://adityatelange.github.i
 
 ---
 
+## FAQs / How To's
+
+Read this post For More Details => [How To's Guide](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-how-to/)
+
+---
+
 ## [LightHouse Report](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
 
 ---
