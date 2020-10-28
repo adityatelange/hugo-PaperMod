@@ -286,7 +286,7 @@
 .share-buttons {
     margin-top: var(--gap);
     border: 1px solid var(--tertiary);
-    padding: var(--radius);
+    padding-inline-start: var(--radius);
     border-radius: var(--radius);
     display: flex;
     overflow-x: auto;
