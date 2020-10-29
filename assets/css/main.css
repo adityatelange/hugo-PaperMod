@@ -52,14 +52,6 @@
     width: 26px;
 }
 
-.direction-rtl {
-    direction: rtl;
-}
-
-.direction-ltr {
-    direction: ltr;
-}
-
 code {
     direction: ltr;
 }
