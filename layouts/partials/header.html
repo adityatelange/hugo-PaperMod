@@ -33,7 +33,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="{{ "" | absLangURL }}">
+            <a href="{{ "" | absLangURL }}" accesskey="h">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
@@ -43,7 +43,7 @@
             <span class="logo-switches">
                 {{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
                 <span class="theme-toggle">
-                    <a id="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
                         <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">

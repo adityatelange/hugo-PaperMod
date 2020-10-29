@@ -27,7 +27,7 @@
   <div class="toc">
     <details {{if .Params.TocOpen }} open{{ end }}>
       <summary>
-        <div class="details">{{- i18n "toc" | default "Table of Contents" }}</div>
+        <div class="details" accesskey="c">{{- i18n "toc" | default "Table of Contents" }}</div>
       </summary>
       <blockquote>
         {{- partial "toc.html" . }}
