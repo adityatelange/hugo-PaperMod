@@ -257,6 +257,10 @@
     margin-inline-start: var(--gap);
 }
 
+.toc summary:focus {
+    outline: none;
+}
+
 .post-footer {
     margin-top: 56px;
 }

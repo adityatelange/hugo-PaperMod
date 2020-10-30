@@ -48,3 +48,7 @@
 .top-link:hover {
     color: var(--primary);
 }
+
+.top-link:focus {
+    outline: none;
+}

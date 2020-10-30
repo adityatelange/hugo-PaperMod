@@ -131,7 +131,3 @@ img {
         height: 2px;
     }
 }
-
-*:focus {
-    outline:none;
-}
