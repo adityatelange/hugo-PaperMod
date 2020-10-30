@@ -30,8 +30,8 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
-
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${id}']`).scrollIntoView({
                 behavior: "smooth"
             });
         });
