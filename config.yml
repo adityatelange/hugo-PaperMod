@@ -33,7 +33,7 @@ languages:
       title: PaperMod
       # imageUrl: "#"
       # imageTitle: my image
-      subtitle: Profile Mode
+      subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
       buttons:
         - name: Blog
           url: posts
@@ -75,7 +75,12 @@ params:
 
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: >
+      Welcome to demo of hugo's theme PaperMod.
+
+      - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+
+      - [![GitHub Repo stars](https://img.shields.io/github/stars/adityatelange/hugo-papermod?style=social)](https://github.com/adityatelange/hugo-PaperMod)
 
   socialIcons:
     - name: twitter
@@ -88,6 +93,8 @@ params:
       url: "#"
     - name: github
       url: "https://github.com/adityatelange/hugo-PaperMod"
+    - name: buymeacoffee
+      url: "https://www.buymeacoffee.com/adityatelange"
 
 taxonomies:
   category: categories
