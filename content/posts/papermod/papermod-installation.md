@@ -65,7 +65,7 @@ theme: hugo-PaperMod
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
-buildExpored: false
+buildExpired: false
 
 googleAnalytics: UA-123-45
 
