@@ -50,7 +50,7 @@
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 </script>
-{{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
+{{- if (and (not .Site.Params.disableThemeToggle) (not (eq .Site.Params.defaultTheme "auto"))) }}
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
