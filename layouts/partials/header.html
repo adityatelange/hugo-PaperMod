@@ -1,15 +1,11 @@
-{{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
+{{- if (not .Site.Params.disableThemeToggle) }}
 <script>
     // load memory
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark');
-        }
-    }
+    } 
 
 </script>
 {{- end }}
@@ -41,7 +37,7 @@
                 {{- .Site.Params.label.text | default .Site.Title -}}
             </a>
             <span class="logo-switches">
-                {{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
+                {{- if (not .Site.Params.disableThemeToggle) }}
                 <span class="theme-toggle">
                     <a id="theme-toggle" accesskey="t">
                         <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
