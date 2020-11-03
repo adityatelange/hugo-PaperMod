@@ -1,4 +1,4 @@
-{{- if (and (not .Site.Params.disableThemeToggle) (not (eq .Site.Params.defaultTheme "auto"))) }}
+{{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
 <script>
     // load memory
     if (localStorage.getItem("pref-theme") === "dark") {
@@ -13,7 +13,7 @@
 
 </script>
 {{- end }}
-{{- if (eq .Site.Params.defaultTheme "auto") }}
+{{- if (and (.Site.Params.disableThemeToggle) (eq .Site.Params.defaultTheme "auto")) }}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
@@ -41,7 +41,7 @@
                 {{- .Site.Params.label.text | default .Site.Title -}}
             </a>
             <span class="logo-switches">
-                {{- if (not .Site.Params.disableThemeToggle) }}
+                {{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
                 <span class="theme-toggle">
                     <a id="theme-toggle" accesskey="t">
                         <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
