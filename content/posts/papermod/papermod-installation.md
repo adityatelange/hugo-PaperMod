@@ -76,7 +76,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ExampleSite
-  description: 'ExampleSite's description'
+  description: 'ExampleSite description'
   author: Me
   # author: ["Me", "You"] # multiple authors
 
