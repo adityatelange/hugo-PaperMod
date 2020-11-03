@@ -37,7 +37,7 @@
 
 .theme-toggle svg {
     height: 18px;
-    margin: 0 10px;
+    margin-inline-end: 10px;
     user-select: none;
     cursor: pointer;
 }
@@ -88,4 +88,5 @@ body:not(.dark) #sun {
 .logo-switches {
     display: inline-flex;
     flex-wrap: inherit;
+    margin-inline-start: 10px;
 }
