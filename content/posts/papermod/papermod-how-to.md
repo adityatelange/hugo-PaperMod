@@ -102,6 +102,32 @@ and contents of `extend_footer.html` will be added to bottom of page.
 
 ---
 
+## Pin a Post
+
+Post can be pinned/ displayed top on the list by adding a `weight=<num>` var to page-variables
+
+example:
+
+```yml
+---
+title: "My Important post"
+date: 2020-09-15T11:30:03+00:00
+weight: 1
+---
+
+```
+
+```yml
+---
+title: "My 2nd Important post"
+date: 2020-09-15T11:30:03+00:00
+weight: 2
+---
+
+```
+
+---
+
 ## References
 
 -   [Override a Hugo theme](https://zwbetz.com/override-a-hugo-theme/)
