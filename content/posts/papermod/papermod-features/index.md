@@ -43,6 +43,17 @@ To disable it :
 disableThemeToggle: true
 ```
 
+You can refer following table for better understanding...
+
+| `defaultTheme` | `disableThemeToggle` | checks local storage? | checks system theme? | Info              |
+| -------------- | -------------------- | --------------------- | -------------------- | ----------------- |
+| `auto`         | true                 | No                    | Yes                  | only system theme |
+|                | false                | Yes (if not->2)       | Yes (2)              | _switch present_  |
+| `dark`         | true                 | No                    | No                   | force dark only   |
+|                | false                | Yes                   | No                   | _switch present_  |
+| `light`        | true                 | No                    | No                   | force light only  |
+|                | false                | Yes                   | No                   | _switch present_  |
+
 ---
 
 ### Archives Layout
