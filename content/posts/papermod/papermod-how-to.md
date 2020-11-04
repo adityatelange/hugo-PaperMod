@@ -77,6 +77,31 @@ summary: archives
 
 ---
 
+## Custom Head / Footer
+
+Custom css/js can be added by way mentioned below.
+
+```
+.(site root)
+├── config.yml
+├── content/
+├── theme/hugo-PaperMod/
+└── layouts
+    ├── partials
+    │   ├── comments.html
+    │   ├── extend_footer.html <---
+    │   └── extend_head.html   <---
+    └── robots.txt
+```
+
+Create a html page in directory structure as shown above.
+
+Contents of `extend_head.html` will be added to `head` of page.
+
+and contents of `extend_footer.html` will be added to bottom of page.
+
+---
+
 ## References
 
 -   [Override a Hugo theme](https://zwbetz.com/override-a-hugo-theme/)
