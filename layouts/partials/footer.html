@@ -63,7 +63,7 @@
     })
 </script>
 {{- else -}}
-<!-- case where owner disables theme button after deployment, this resets the stored theme -->
+{{/*  case where owner disables theme button after deployment, this resets the stored theme  */}}
 <script>
     localStorage.removeItem("pref-theme");
 </script>
