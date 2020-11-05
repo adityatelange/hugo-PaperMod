@@ -37,8 +37,17 @@
     as="style">
 {{- end -}}
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
-<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
+<link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
+<link rel="icon" type="image/png" sizes="16x16" href="
+    {{- .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL -}}">
+<link rel="icon" type="image/png" sizes="32x32" href="
+    {{- .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL -}}">
+<link rel="apple-touch-icon" href="
+    {{- .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL -}}">
+<link rel="mask-icon" href="{{- .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL -}}">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
 <!-- Generator -->
 {{- hugo.Generator }}
 <!-- RSS -->
