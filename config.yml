@@ -80,8 +80,6 @@ params:
 
       - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
 
-      - [![GitHub Repo stars](https://img.shields.io/github/stars/adityatelange/hugo-papermod?style=social)](https://github.com/adityatelange/hugo-PaperMod)
-
   socialIcons:
     - name: twitter
       url: "#"
