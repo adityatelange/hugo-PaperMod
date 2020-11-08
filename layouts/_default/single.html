@@ -14,7 +14,13 @@
         {{- i18n "translations" | default "Translations"}}:
         {{- range .Translations }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          <a href="{{ .Permalink }}">
+            {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+            {{- .Language.LanguageName | humanize -}}
+            {{- else }}
+            {{- .Lang | humanize -}}
+            {{- end -}}
+          </a>
         </li>
         {{- end }}
       </ul>
