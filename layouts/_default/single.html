@@ -16,7 +16,7 @@
         <li>
           <a href="{{ .Permalink }}">
             {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-            {{- .Language.LanguageName | humanize -}}
+            {{- .Language.LanguageName | emojify | humanize -}}
             {{- else }}
             {{- .Lang | humanize -}}
             {{- end -}}
