@@ -116,6 +116,10 @@ img {
     background: var(--theme);
 }
 
+.list::-webkit-scrollbar-track {
+    background: var(--code-bg);
+}
+
 *::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border-radius: var(--radius);
