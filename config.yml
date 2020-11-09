@@ -33,6 +33,8 @@ languages:
       title: PaperMod
       # imageUrl: "#"
       # imageTitle: my image
+      # imageWidth: 120
+      # imageHeight: 120
       subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
       buttons:
         - name: Blog
@@ -67,6 +69,8 @@ params:
     title: PaperMod
     imageUrl: "#"
     imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
     buttons:
       - name: Archives
         url: archives

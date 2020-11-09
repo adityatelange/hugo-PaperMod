@@ -122,6 +122,8 @@ params:
         title: "<Title>" # optional default will be site title
         imageUrl: "<image link>" # optional
         imageTitle: "<title of image as alt>" # optional
+        imageWidth: 120 # custom size
+        imageHeight: 120 # custom size
         buttons:
             - name: Archive
             url: "/archive"
