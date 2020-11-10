@@ -41,7 +41,9 @@
     </details>
   </div>
   {{- end }}
-  <div class="post-content">{{ .Content }}</div>
+  <div class="post-content">
+    {{- partial "anchored_headings.html" .Content -}}
+  </div>
   <footer class="post-footer">
     {{- if .Params.tags }}
     <ul class="post-tags">
