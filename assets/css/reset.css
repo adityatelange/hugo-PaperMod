@@ -116,7 +116,7 @@ img {
     background: var(--theme);
 }
 
-.list::-webkit-scrollbar-track {
+.list:not(.dark)::-webkit-scrollbar-track {
     background: var(--code-bg);
 }
 
