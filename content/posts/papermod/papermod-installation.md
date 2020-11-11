@@ -57,7 +57,7 @@ Example Site Structure is present here: [exampleSite](https://github.com/adityat
 ### Sample `config.yml`
 
 ```yml
-baseURL: 'https://examplesite.com'
+baseURL: "https://examplesite.com"
 title: ExampleSite
 paginate: 5
 theme: hugo-PaperMod
@@ -70,62 +70,65 @@ buildExpired: false
 googleAnalytics: UA-123-45
 
 minify:
-  disableXML: true
-  minifyOutput: true
+    disableXML: true
+    minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: 'ExampleSite description'
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-
-  images: "<link or path of image for opengraph, twitter-cards>"
-
-  ShowReadingTime: true
-  ShowShareButtons: true
-  comments: false
-  defaultTheme: auto
-  disableThemeToggle : false
-  disableSpecial1stPost : false
-
-  assets:
-    favicon: '<path / external url>'
-
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: ExampleSite
-    # imageUrl: '<img location>'
-    # imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+    description: "ExampleSite description"
+    author: Me
+    # author: ["Me", "You"] # multiple authors
 
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    images: "<link or path of image for opengraph, twitter-cards>"
 
-  socialIcons:
-    - name: twitter
-      url: 'https://twitter.com/'
-    - name: stackoverflow
-      url: 'https://stackoverflow.com'
-    - name: github
-      url: 'https://github.com/'
+    ShowReadingTime: true
+    ShowShareButtons: true
+    comments: false
+    defaultTheme: auto
+    disableThemeToggle: false
+    disableSpecial1stPost: false
 
+    assets:
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
 
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
+    label:
+        text: "Home"
+        icon: /apple-touch-icon.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: false # needs to be explicitly set
+        title: ExampleSite
+        # imageUrl: '<img location>'
+        # imageTitle: my image
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to my blog
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/"
+        - name: stackoverflow
+          url: "https://stackoverflow.com"
+        - name: github
+          url: "https://github.com/"
+
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
 ```
 
 ---
