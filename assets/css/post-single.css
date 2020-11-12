@@ -253,6 +253,10 @@
     padding: 10px 20px;
 }
 
+.toc a:hover {
+    box-shadow: 0 1px 0 var(--primary);
+}
+
 .toc li ul {
     margin-inline-start: var(--gap);
 }
