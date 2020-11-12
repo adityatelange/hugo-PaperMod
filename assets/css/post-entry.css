@@ -37,7 +37,7 @@
 }
 
 .home-info .entry-content {
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: unset;
 }
 
 .post-entry {
