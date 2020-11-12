@@ -37,6 +37,9 @@
 {{- range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
+{{- range .Translations -}}
+<link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
+{{ end }}
 {{- partial "extend_head.html" . -}}
 <!-- Misc -->
 {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
