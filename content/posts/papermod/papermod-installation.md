@@ -163,6 +163,6 @@ comments: false
 
 ### [Papermod - Features](../papermod-features)
 
-### [Papermod - How to Guide](../papermod-how-to-guide)
+### [Papermod - How to Guide](../papermod-how-to)
 
 ### [Papermod - Icons](../papermod-icons)
