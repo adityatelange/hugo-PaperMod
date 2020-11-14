@@ -44,6 +44,7 @@
 <!-- Misc -->
 {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/google_news.html" . }}
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
