@@ -7,22 +7,24 @@
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin-inline-start: auto;
     margin-inline-end: auto;
+    line-height: var(--header-height);
 }
 
 .nav a {
     display: block;
-    line-height: var(--header-height);
 }
 
 .logo,
 .menu {
     display: flex;
     margin: auto var(--gap);
+    flex-wrap: inherit;
 }
 
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    margin-inline-end: 10px;
 }
 
 .logo a img {
@@ -36,11 +38,11 @@
 
 .theme-toggle svg {
     height: 18px;
-    margin: 0 10px;
     user-select: none;
+    cursor: pointer;
 }
 
-body.dark #moon{
+body.dark #moon {
     vertical-align: middle;
     display: none;
 }
@@ -67,4 +69,23 @@ body:not(.dark) #sun {
 .menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor;
+}
+
+.lang-switch ul {
+    display: inline-flex;
+}
+
+.lang-switch a {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.lang-switch li {
+    display: inline-flex;
+}
+
+.logo-switches {
+    display: inline-flex;
+    flex-wrap: inherit;
 }

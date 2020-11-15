@@ -1,0 +1,2 @@
+<!-- formats .Content headings by adding an anchor -->
+{{ . | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" "${1}<a hidden class=\"anchor\" aria-hidden=\"true\" href=\"#${2}\">#</a>${3}" | safeHTML }}

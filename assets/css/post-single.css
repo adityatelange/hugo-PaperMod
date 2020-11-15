@@ -253,8 +253,16 @@
     padding: 10px 20px;
 }
 
+.toc a:hover {
+    box-shadow: 0 1px 0 var(--primary);
+}
+
 .toc li ul {
     margin-inline-start: var(--gap);
+}
+
+.toc summary:focus {
+    outline: none;
 }
 
 .post-footer {
@@ -286,7 +294,7 @@
 .share-buttons {
     margin-top: var(--gap);
     border: 1px solid var(--tertiary);
-    padding: var(--radius);
+    padding-inline-start: var(--radius);
     border-radius: var(--radius);
     display: flex;
     overflow-x: auto;
@@ -309,6 +317,18 @@
 
 .share-buttons svg:hover {
     transform: scale(0.96);
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+    display: inline-flex;
+    color: var(--secondary);
+    margin-inline-start: 8px;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 600px) {

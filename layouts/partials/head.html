@@ -1,6 +1,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name=" robots" content="noindex, nofollow">
+{{- end -}}
 <!-- Title -->
 <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} - {{ end }}{{end}}{{ .Site.Title }}</title>
 <!-- Meta -->
@@ -16,39 +21,35 @@
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
-{{- $anoldhope := resources.Get "css/an-old-hope.min.css" }}
-{{- $theme := resources.Get "css/theme-vars.css" }}
-{{- $reset := resources.Get "css/reset.css" }}
-{{- $header := resources.Get "css/header.css" }}
-{{- $main := resources.Get "css/main.css" }}
-{{- $postentry := resources.Get "css/post-entry.css" }}
-{{- $postsingle := resources.Get "css/post-single.css" }}
-{{- $terms := resources.Get "css/terms.css" }}
-{{- $archive := resources.Get "css/archive.css" }}
-{{- $footer := resources.Get "css/footer.css" }}
-{{- $404 := resources.Get "css/404.css" }}
-{{- $style := slice $theme $reset $header $main $postentry $postsingle $terms $archive $footer $404 | resources.Concat "stylesheet.css" }}
-{{- $stylesheet := slice $anoldhope $style | resources.Concat "assets/css/stylesheet.css" | minify | fingerprint -}}
+{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify | fingerprint -}}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
-{{- if (and (.Site.Params.profileMode.enabled) (.IsHome)) }}
-{{- $profileMode := slice (resources.Get "css/profile-mode.css") | resources.Concat "assets/css/profile-mode.css" | minify | fingerprint }}
-<link href="{{ $profileMode.Permalink }}" integrity="{{ $profileMode.Data.Integrity }}" rel="preload stylesheet"
-    as="style">
-{{- end -}}
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
-<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
+<link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
+<link rel="icon" type="image/png" sizes="16x16" href="
+    {{- .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL -}}">
+<link rel="icon" type="image/png" sizes="32x32" href="
+    {{- .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL -}}">
+<link rel="apple-touch-icon" href="
+    {{- .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL -}}">
+<link rel="mask-icon" href="{{- .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL -}}">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
 <!-- Generator -->
 {{- hugo.Generator }}
 <!-- RSS -->
 {{- range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
+{{- range .Translations -}}
+<link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
+{{ end }}
 {{- partial "extend_head.html" . -}}
 <!-- Misc -->
 {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics_async.html" . }}
+{{- template "_internal/google_news.html" . }}
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}

@@ -5,11 +5,11 @@
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
     {{- end }}
     <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo️️</a>️</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
     <span>&middot;</span>
-    <span>Theme️ <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top">
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
     <button class="top-link" id="top-link" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
             <path d="M12 6H0l6-6z" /></svg>
@@ -30,8 +30,8 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
-
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${id}']`).scrollIntoView({
                 behavior: "smooth"
             });
         });
@@ -50,7 +50,7 @@
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 </script>
-{{- if (and (not .Site.Params.disableThemeToggle) (not (or (eq .Site.Params.defaultTheme "light") (eq .Site.Params.defaultTheme "dark")))) }}
+{{- if (not .Site.Params.disableThemeToggle) }}
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
@@ -63,7 +63,7 @@
     })
 </script>
 {{- else -}}
-<!-- case where owner disables theme button after deployment, this resets the stored theme -->
+{{/*  case where owner disables theme button after deployment, this resets the stored theme  */}}
 <script>
     localStorage.removeItem("pref-theme");
 </script>

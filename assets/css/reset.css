@@ -116,6 +116,10 @@ img {
     background: var(--theme);
 }
 
+.list:not(.dark)::-webkit-scrollbar-track {
+    background: var(--code-bg);
+}
+
 *::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border-radius: var(--radius);
@@ -130,8 +134,4 @@ img {
         width: 8px;
         height: 2px;
     }
-}
-
-*:focus {
-    outline:none;
 }
