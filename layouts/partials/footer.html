@@ -31,7 +31,7 @@
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${id}']`).scrollIntoView({
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
                 behavior: "smooth"
             });
         });
