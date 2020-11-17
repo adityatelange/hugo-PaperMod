@@ -1,5 +1,3 @@
-/* Post single
--------------------------------------------------- */
 .post-header {
     margin: 24px auto var(--content-gap) auto
 }
@@ -7,119 +5,120 @@
 .post-title {
     margin-bottom: 2px;
     font-size: 40px;
-    transform: translateX(-2px);
+    transform: translateX(-2px)
 }
 
 .post-meta {
     color: var(--secondary);
     font-size: 14px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .post-meta .i18n_list li {
     display: inline-flex;
     list-style: none;
     margin: auto 3px;
-    box-shadow: 0 1px 0 var(--secondary);
+    box-shadow: 0 1px 0 var(--secondary)
 }
 
 .post-content {
-    color: var(--content);
+    color: var(--content)
 }
 
 .post-content h3,
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin: 24px 0 16px 0;
+    margin: 24px 0 16px
 }
 
 .post-content h1 {
-    margin: 40px auto 32px auto;
-    font-size: 40px;
+    margin: 40px auto 32px;
+    font-size: 40px
 }
 
 .post-content h2 {
-    margin: 32px auto 24px auto;
-    font-size: 32px;
+    margin: 32px auto 24px;
+    font-size: 32px
 }
 
 .post-content h3 {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .post-content h4 {
-    font-size: 16px;
+    font-size: 16px
 }
 
 .post-content h5 {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .post-content h6 {
-    font-size: 12px;
+    font-size: 12px
 }
 
-.post-content a {
-    box-shadow: 0 1px 0 var(--primary);
+.post-content a,
+.toc a:hover {
+    box-shadow: 0 1px 0 var(--primary)
 }
 
 .post-content a code {
     margin: auto 0;
     border-radius: 0;
-    box-shadow: 0 -1px 0 var(--primary) inset;
+    box-shadow: 0 -1px 0 var(--primary) inset
 }
 
 .post-content del {
     text-decoration: none;
-    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
+    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x
 }
 
-.post-content p,
-.post-content ul,
+.post-content dl,
 .post-content ol,
-.post-content dl {
-    margin-bottom: var(--content-gap);
+.post-content p,
+.post-content ul {
+    margin-bottom: var(--content-gap)
 }
 
-.post-content ul,
-.post-content ol {
-    padding-inline-start: 20px;
+.post-content ol,
+.post-content ul {
+    padding-inline-start: 20px
 }
 
 .post-content li {
-    margin-top: 5px;
+    margin-top: 5px
 }
 
 .post-content li p {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .post-content dl {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0
 }
 
 .post-content dt {
     width: 25%;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .post-content dd {
     width: 75%;
     margin-inline-start: 0;
-    padding-inline-start: 10px;
+    padding-inline-start: 10px
 }
 
-.post-content dt~dt,
-.post-content dd~dd {
-    margin-top: 10px;
+.post-content dd~dd,
+.post-content dt~dt {
+    margin-top: 10px
 }
 
 .post-content table {
-    margin-bottom: 32px;
+    margin-bottom: 32px
 }
 
 .post-content table th,
@@ -127,23 +126,23 @@
     min-width: 80px;
     padding: 12px 8px;
     line-height: 1.5;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border)
 }
 
 .post-content table th {
     font-size: 14px;
-    text-align: start;
+    text-align: start
 }
 
 .post-content table:not(.highlighttable) td code:only-child {
-    margin: auto 0;
+    margin: auto 0
 }
 
 .post-content .highlight,
 .post-content pre {
-    margin: auto calc(var(--gap) * -1) 32px calc(var(--gap) * -1);
+    margin: auto calc(var(--gap)*-1) 32px;
     background: var(--hljs-bg) !important;
-    border-radius: var(--radius);
+    border-radius: var(--radius)
 }
 
 .post-content li>.highlight {
@@ -151,128 +150,127 @@
 }
 
 .post-content ul pre {
-    margin-inline-start: calc(var(--gap) * -2);
+    margin-inline-start: calc(var(--gap)*-2)
 }
 
 .post-content .highlight pre {
-    margin: 0;
+    margin: 0
 }
 
-/* table */
 .post-content .highlighttable {
-    table-layout: fixed;
+    table-layout: fixed
 }
 
 .post-content .highlighttable td:first-child {
-    width: 40px;
+    width: 40px
 }
 
 .post-content .highlighttable td .linenodiv {
-    padding-inline-end: 0 !important;
+    padding-inline-end: 0 !important
 }
 
-.post-content .highlighttable td .linenodiv pre,
-.post-content .highlighttable td .highlight {
-    margin-bottom: 0;
+.post-content .highlighttable td .highlight,
+.post-content .highlighttable td .linenodiv pre {
+    margin-bottom: 0
 }
 
 .post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
-    display: none;
+    display: none
 }
 
-/* inline */
 .post-content .highlight span {
-    background: transparent !important;
+    background: 0 0 !important
 }
 
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
     font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
-    font-size: 0.78em;
+    font-size: .78em;
     line-height: 1.5;
     background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 2px
 }
 
 .post-content pre code {
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.8);
-    background: transparent;
+    color: rgba(255, 255, 255, .8);
+    background: 0 0;
     border-radius: 0;
-    overflow-x: auto;
+    overflow-x: auto
 }
 
 .post-content blockquote {
-    margin: 0 calc(var(--gap) * -1);
+    margin: 0 calc(var(--gap)*-1);
     padding: 0 32px;
-    border-inline-start: 2px solid var(--primary);
+    border-inline-start: 2px solid var(--primary)
 }
 
 .post-content hr {
-    margin: 30px calc(var(--gap) * -1);
+    margin: 30px calc(var(--gap)*-1);
     height: 2px;
     background: var(--tertiary);
     border-top: 0;
-    border-bottom: 0;
+    border-bottom: 0
 }
 
 .post-content iframe {
-    max-width: 100%;
+    max-width: 100%
 }
 
 .post-content img {
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .toc {
     margin-bottom: 40px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: .5em;
+    padding: .5em
 }
 
 .toc details summary {
     cursor: zoom-in;
-    margin-inline-start: 20px;
+    margin-inline-start: 20px
 }
 
 .toc details[open] summary {
-    cursor: zoom-out;
+    cursor: zoom-out
 }
 
 .toc .details {
     display: inline;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .toc blockquote {
     margin: 0 20px;
-    padding: 10px 20px;
-}
-
-.toc a:hover {
-    box-shadow: 0 1px 0 var(--primary);
+    padding: 10px 20px
 }
 
 .toc li ul {
-    margin-inline-start: var(--gap);
+    margin-inline-start: var(--gap)
 }
 
 .toc summary:focus {
-    outline: none;
+    outline: 0
 }
 
 .post-footer {
-    margin-top: 56px;
+    margin-top: 56px
 }
 
 .post-tags li {
     display: inline-block;
     margin-inline-end: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 5px
+}
+
+.post-tags a,
+.share-buttons {
+    border: 1px solid var(--tertiary)
 }
 
 .post-tags a {
@@ -283,40 +281,38 @@
     font-size: 14px;
     line-height: 34px;
     background: var(--code-bg);
-    border-radius: 4px;
-    border: 1px solid var(--tertiary);
+    border-radius: 4px
 }
 
 .post-tags a:hover {
-    background: var(--border);
+    background: var(--border)
 }
 
 .share-buttons {
     margin-top: var(--gap);
-    border: 1px solid var(--tertiary);
     padding-inline-start: var(--radius);
     border-radius: var(--radius);
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto
 }
 
 .share-buttons a {
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .share-buttons a:not(:last-of-type) {
-    margin-inline-end: 12px;
+    margin-inline-end: 12px
 }
 
 .share-buttons a svg {
     height: 30px;
     width: 30px;
     fill: currentColor;
-    transition: transform 0.1s;
+    transition: transform .1s
 }
 
 .share-buttons svg:hover {
-    transform: scale(0.96);
+    transform: scale(.96)
 }
 
 h1:hover .anchor,
@@ -328,12 +324,12 @@ h6:hover .anchor {
     display: inline-flex;
     color: var(--secondary);
     margin-inline-start: 8px;
-    font-weight: 500;
+    font-weight: 500
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .post-content blockquote {
-        margin: 0 calc(var(--gap) * -1);
-        padding: 0 21px;
+        margin: 0 calc(var(--gap)*-1);
+        padding: 0 21px
     }
 }

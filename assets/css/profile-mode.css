@@ -1,41 +1,43 @@
+.buttons,
+.main .profile {
+    display: flex;
+    justify-content: center
+}
+
 .main .profile {
     position: absolute;
     left: 0;
     right: 0;
-    display: flex;
     align-items: center;
-    justify-content: center;
     height: 80%;
-    text-align: center;
+    text-align: center
 }
 
 .profile .profile_inner h1 {
-    padding: 12px 0;
+    padding: 12px 0
 }
 
 .profile .profile_inner span {
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .profile img {
     display: inline-table;
     border-radius: 50%;
-    pointer-events: none;
+    pointer-events: none
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .profile img {
-        transform: scale(0.85);
+        transform: scale(.85)
     }
 }
 
 .buttons {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .button {
@@ -43,13 +45,13 @@
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
-    transition: transform 0.1s;
+    transition: transform .1s
 }
 
 .button-inner {
-    padding: 0 8px;
+    padding: 0 8px
 }
 
 .button:active {
-    transform: scale(0.96);
+    transform: scale(.96)
 }

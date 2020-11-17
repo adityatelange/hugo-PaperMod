@@ -1,24 +1,30 @@
-/* Reset
--------------------------------------------------- */
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
+::after,
+::before {
+    box-sizing: border-box
 }
 
 html {
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent
+}
+
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary)
 }
 
 body {
-    margin: 0;
-    color: var(--primary);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     line-height: 1.6;
     word-break: break-word;
-    background: var(--theme);
+    background: var(--theme)
 }
 
 article,
@@ -30,8 +36,9 @@ header,
 hgroup,
 main,
 nav,
-section {
-    display: block;
+section,
+table {
+    display: block
 }
 
 h1,
@@ -40,38 +47,40 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    color: var(--primary);
-    line-height: 1.2;
+    line-height: 1.2
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 a {
-    color: var(--primary);
-    text-decoration: none;
+    text-decoration: none
 }
 
-figure {
-    margin: 0;
+body,
+figure,
+ul {
+    margin: 0
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    display: block;
     overflow-x: scroll;
-    word-break: keep-all;
+    word-break: keep-all
 }
 
 button,
@@ -79,59 +88,57 @@ input,
 textarea {
     padding: 0;
     font: inherit;
-    background: transparent;
+    background: 0 0;
     border: 0;
-    -webkit-appearance: none;
-}
-
-button,
-input[type='button'],
-input[type='submit'] {
-    cursor: pointer;
+    -webkit-appearance: none
 }
 
 input,
 textarea {
-    padding: 0;
-    border: 0;
-    outline: 0;
+    outline: 0
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    cursor: pointer
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    box-shadow: 0 0 0 50px var(--theme) inset;
+    box-shadow: 0 0 0 50px var(--theme) inset
 }
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 100%
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
-    height: 6px;
+    height: 6px
 }
 
-*::-webkit-scrollbar-track {
-    background: var(--theme);
+::-webkit-scrollbar-track {
+    background: var(--theme)
 }
 
 .list:not(.dark)::-webkit-scrollbar-track {
-    background: var(--code-bg);
+    background: var(--code-bg)
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--tertiary);
-    border-radius: var(--radius);
+    border-radius: var(--radius)
 }
 
-*::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary);
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary)
 }
 
-@media screen and (max-width: 800px) {
-    *::-webkit-scrollbar {
+@media screen and (max-width:800px) {
+    ::-webkit-scrollbar {
         width: 8px;
-        height: 2px;
+        height: 2px
     }
 }
