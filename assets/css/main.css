@@ -1,7 +1,7 @@
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    max-width: calc(var(--main-width) + var(--gap)*2);
+    max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: var(--gap)
 }
@@ -29,7 +29,7 @@
     font-size: 13px;
     line-height: 36px;
     background: var(--primary);
-    border-radius: calc(36px/2);
+    border-radius: calc(36px / 2);
     padding: 0 16px
 }
 

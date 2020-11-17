@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 320px;
-    margin: var(--gap) 0 calc(var(--gap)*2) 0
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0
 }
 
 @media screen and (max-width:600px) {
