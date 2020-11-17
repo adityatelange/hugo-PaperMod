@@ -17,9 +17,9 @@
 </a>
 {{- partial "extend_footer.html" . -}}
 {{ if in site.Params.mainSections .Type }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint -}}
-<script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
+<script defer src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"
+    onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
 <script>
     window.onload = function () {
@@ -46,9 +46,11 @@
             mybutton.style.opacity = "0";
         }
     };
+
     function menu_on_scroll() {
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
+
 </script>
 {{- if (not .Site.Params.disableThemeToggle) }}
 <script>
@@ -61,10 +63,12 @@
             localStorage.setItem("pref-theme", 'dark');
         }
     })
+
 </script>
 {{- else -}}
 {{/*  case where owner disables theme button after deployment, this resets the stored theme  */}}
 <script>
     localStorage.removeItem("pref-theme");
+
 </script>
 {{- end }}
