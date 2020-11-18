@@ -5,7 +5,8 @@
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
     {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
-        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank">{{ end -}}
+        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
+            rel="noopener noreferrer">{{ end -}}
         {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
         {{- $prod := (eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")) }}
@@ -20,7 +21,8 @@
         <img src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
-        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank">{{ end -}}
+        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
+            rel="noopener noreferrer">{{ end -}}
             <img src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
