@@ -43,19 +43,20 @@ socialIcons: # optional
 | 17  | instagram     | instagram.com     |
 | 18  | lastfm        | last.fm           |
 | 19  | linkedin      | linkedin.com      |
-| 20  | mixcloud      | mixcloud.com      |
-| 21  | paypal        | paypal.com        |
-| 22  | qq            | qq.com            |
-| 23  | soundcloud    | soundcloud.com    |
-| 24  | shutterstock  | shutterstock.com  |
-| 25  | slack         | slack.com         |
-| 26  | sourcerer     | sourcerer.io      |
-| 27  | stackoverflow | stackoverflow.com |
-| 28  | steam         | steampowered.com  |
-| 29  | telegram      | telegram.org      |
-| 30  | twitch        | twitch.tv         |
-| 31  | twitter       | twitter.com       |
-| 32  | youtube       | youtube.com       |
+| 20  | mastodon      | mastodon.social   |
+| 21  | mixcloud      | mixcloud.com      |
+| 22  | paypal        | paypal.com        |
+| 23  | qq            | qq.com            |
+| 24  | soundcloud    | soundcloud.com    |
+| 25  | shutterstock  | shutterstock.com  |
+| 26  | slack         | slack.com         |
+| 27  | sourcerer     | sourcerer.io      |
+| 28  | stackoverflow | stackoverflow.com |
+| 29  | steam         | steampowered.com  |
+| 30  | telegram      | telegram.org      |
+| 31  | twitch        | twitch.tv         |
+| 32  | twitter       | twitter.com       |
+| 33  | youtube       | youtube.com       |
 |     | other         | -                 |
 
 ---
