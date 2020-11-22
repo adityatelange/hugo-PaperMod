@@ -1,5 +1,5 @@
 {{- with $.Site.Params.homeInfoParams }}
-<article class="first-entry home-info">
+<article class="first-entry home-info" align={{ .align | default "left"}}>
     <header class="entry-header">
         <h2>{{- .Title | markdownify }}</h2>
     </header>
