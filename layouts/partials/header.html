@@ -29,7 +29,7 @@
 
 </script>
 {{- end }}
-{{- /*  theme-toggle is enabled and theme is auto  */}}
+{{- /*  theme-toggle is disabled and theme is auto  */}}
 {{- else if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark"))}}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
