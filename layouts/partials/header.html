@@ -93,7 +93,7 @@
                             <a href="{{- .Permalink -}}" title="{{ .Language.LanguageName | default .Lang | humanize }}"
                                 aria-label="{{ .Language.LanguageName | default .Lang | humanize }}">
                                 {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-                                {{- .Language.LanguageName | emojify | humanize -}}
+                                {{- .Language.LanguageName | emojify -}}
                                 {{- else }}
                                 {{- .Lang | humanize -}}
                                 {{- end -}}
