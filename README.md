@@ -9,7 +9,6 @@
 ☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive
 
 Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
-
 The goal of this project is add more Features and customization to the og theme.
 
 The [demo site](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
@@ -25,7 +24,7 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 
 ---
 
-## Install
+## Install/Update
 
 Read this post For More Details => [hugo-PaperMod - Installation](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)
 
@@ -40,11 +39,13 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
     -   [Profile Mode.](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#profile-mode)
 -   Table of Content Generation (newer implementation).
 -   Archive of posts.
+-   Social Icons (home-info and profile-mode)
 -   Social-Media Share buttons on post.
 -   Menu location indicator.
--   Multilingual support.
+-   Multilingual support. (with language selector)
+-   Taxonomies
 -   Cover image for each post (with Responsive image support).
--   Light/Dark theme ( automatic theme switch a/c to browser theme).
+-   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
 -   SEO Friendly.
 -   Muliple Author support.
 -   No webpack, nodejs and other depedencies required to edit the theme :)
@@ -53,9 +54,11 @@ Read this post For More Details => [hugo-PaperMod - Features](https://adityatela
 
 Release ChangeLog has info about stuff added: [Releases](https://github.com/adityatelange/hugo-PaperMod/releases)
 
+Huge thanks to contributors for making this theme better :)
+
 ---
 
-## Social-Icons
+## Social-Icons/Share-Icons
 
 Read this post For More Details => [Social-Icons](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/)
 
@@ -67,17 +70,7 @@ Read this post For More Details => [How To's Guide](https://adityatelange.github
 
 ---
 
-## [LightHouse Report](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
-
----
-
-### Sponsoring
-
-If you like my work and if you think this project is worth to support it, you can
-
-<a href="https://www.buymeacoffee.com/adityatelange" target="_blank">
-<img height=40 width=150 src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee"/>
-</a>
+## [LightHouse Report (100% ?)](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fadityatelange.github.io%2Fhugo-PaperMod%2F)
 
 ---
 
