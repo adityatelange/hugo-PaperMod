@@ -47,7 +47,7 @@
   <footer class="post-footer">
     <ul class="post-tags">
       <li>
-        <a id="error-here" type="button" onclick="ga('send', 'event', 'Reports', 'report', 'Error Collection');document.getElementById('check').setAttribute('fill', 'white');document.getElementById('thank-you-text').innerHTML = 'Спасибо!';">
+        <a id="error-here" type="button" onclick="ga('send', {hitType: 'event',eventCategory: 'Reporst',eventAction: 'report',eventLabel: 'Reported error',eventName: 'report'});document.getElementById('check').setAttribute('fill', 'white');document.getElementById('thank-you-text').innerHTML = 'Спасибо!';">
           <svg id="check" style="vertical-align: middle; margin-right: 10px;" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round"
                stroke-linejoin="round" enable-background="new 0 0 24 24" height="24" viewBox="0 0 515.556 515.556" width="24"  xmlns="http://www.w3.org/2000/svg"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"/></svg>
              <span id="thank-you-text">Тут ошибочка...</span>
