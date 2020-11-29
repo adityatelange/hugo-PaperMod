@@ -8,7 +8,7 @@
 {{ range . }}{{ $hashtags.Add "tags" (slice (replaceRE "(\\s)" "" . ))}}{{end}}
 {{ $.Scratch.Set "tags" (delimit ($hashtags.Get "tags") ",")  }}
 {{- end }}
-
+{{- if .Site.Params.ShareButtons }}
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on twitter"
         href="https://twitter.com/intent/tweet/?text={{ $title }}&amp;url={{ $pageurl }}&amp;hashtags={{- $.Scratch.Get "tags" -}}">
@@ -53,3 +53,5 @@
         </svg>
     </a>
 </div>
+{{- end -}}
+
