@@ -6,6 +6,8 @@
 
 # hugo-PaperMod | [Demo](https://adityatelange.github.io/hugo-PaperMod/)
 
+slow
+
 ☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive
 
 Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
