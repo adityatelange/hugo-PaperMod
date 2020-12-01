@@ -52,6 +52,30 @@ or set `HUGO_ENV` as "production" in system env-vars
 
 ---
 
+## Failed to find a valid digest in the 'integrity' attribute for resource ... ?
+
+Read about How Subresource Integrity helps: [Subresource_Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+
+Why was the `asset` not loading ? : [How_browsers_handle_Subresource_Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity)
+
+**Solution:**
+
+Set the following in `config.yml`
+
+```yml
+params:
+    assets:
+        disableFingerprinting: true
+```
+
+Linked Issues:
+
+-   https://stackoverflow.com/questions/65056585/hugo-theme-not-loading
+-   https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource
+-   https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/
+
+---
+
 ## Archive Page
 
 ```shell
