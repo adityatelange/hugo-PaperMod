@@ -27,38 +27,43 @@ socialIcons: # optional
 | 1   | 123rf         | 123rf.com         |
 | 2   | adobestock    | stock.adobe.com   |
 | 3   | behance       | behance.net       |
-| 4   | codepen       | codepen.io        |
-| 5   | cryptohack    | cryptohack.org    |
-| 6   | dev           | dev.to            |
-| 7   | discogs       | discogs.com       |
-| 8   | dreamstime    | dreamstime.com    |
-| 9   | dribbble      | dribbble.com      |
-| 10  | email         | -                 |
-| 11  | facebook      | facebook.com      |
-| 12  | freepik       | freepik.com       |
-| 13  | github        | github.com        |
-| 14  | gitlab        | gitlab.com        |
-| 15  | hackerrank    | hackerrank.com    |
-| 16  | hackthebox    | hackthebox.eu     |
-| 17  | instagram     | instagram.com     |
-| 18  | keybase       | keybase.io        |
-| 19  | lastfm        | last.fm           |
-| 20  | linkedin      | linkedin.com      |
-| 21  | mastodon      | mastodon.social   |
-| 22  | mixcloud      | mixcloud.com      |
-| 23  | paypal        | paypal.com        |
-| 24  | qq            | qq.com            |
-| 25  | soundcloud    | soundcloud.com    |
-| 26  | shutterstock  | shutterstock.com  |
-| 27  | slack         | slack.com         |
-| 28  | sourcerer     | sourcerer.io      |
-| 29  | stackoverflow | stackoverflow.com |
-| 30  | steam         | steampowered.com  |
-| 31  | telegram      | telegram.org      |
-| 32  | twitch        | twitch.tv         |
-| 33  | twitter       | twitter.com       |
-| 34  | youtube       | youtube.com       |
-|     | other         | -                 |
+| 4   | buymeacoffee  | buymeacoffee.com  |
+| 5   | codepen       | codepen.io        |
+| 6   | cryptohack    | cryptohack.org    |
+| 7   | dev           | dev.to            |
+| 8   | discogs       | discogs.com       |
+| 9   | discord       |                   |
+| 10  | dreamstime    | dreamstime.com    |
+| 11  | dribbble      | dribbble.com      |
+| 12  | email         | -                 |
+| 13  | facebook      | facebook.com      |
+| 14  | freepik       | freepik.com       |
+| 15  | github        | github.com        |
+| 16  | gitlab        | gitlab.com        |
+| 17  | hackerrank    | hackerrank.com    |
+| 18  | hackthebox    | hackthebox.eu     |
+| 19  | instagram     | instagram.com     |
+| 20  | keybase       | keybase.io        |
+| 21  | kofi          |                   |
+| 22  | lastfm        | last.fm           |
+| 23  | linkedin      | linkedin.com      |
+| 24  | mastodon      | mastodon.social   |
+| 25  | medium        |                   |
+| 26  | mixcloud      | mixcloud.com      |
+| 27  | paypal        | paypal.com        |
+| 28  | qq            | qq.com            |
+| 29  | rss           |                   |
+| 30  | soundcloud    | soundcloud.com    |
+| 31  | shutterstock  | shutterstock.com  |
+| 32  | slack         | slack.com         |
+| 33  | sourcerer     | sourcerer.io      |
+| 34  | stackoverflow | stackoverflow.com |
+| 35  | steam         | steampowered.com  |
+| 36  | telegram      | telegram.org      |
+| 37  | twitch        | twitch.tv         |
+| 38  | twitter       | twitter.com       |
+| 39  | youtube       | youtube.com       |
+| 40  | other         | -                 |
 
 ---
 
