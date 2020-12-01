@@ -5,8 +5,14 @@
     {{- partial "head.html" . }}
 </head>
 
-<body class="{{ if (and (eq .Kind `page` ) (ne .Layout `archives`)) }}single{{ else }}list
-        {{- if .IsHome }} home{{ end }}{{ end }}{{- if eq $.Site.Params.defaultTheme `dark` }} dark{{ end }}" id="top">
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq $.Site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
     {{- partialCached "header.html" . .Page}}
     <main class="main">
         {{- block "main" . }}

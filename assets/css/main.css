@@ -6,12 +6,6 @@
     padding: var(--gap)
 }
 
-@media screen and (max-width:400px) {
-    .main {
-        min-height: calc(100vh - var(--header-height) - var(--footer-height) - 24px)
-    }
-}
-
 .page-header {
     margin-bottom: 24px
 }

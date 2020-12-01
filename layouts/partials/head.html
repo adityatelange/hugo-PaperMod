@@ -21,9 +21,14 @@
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
+{{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify | fingerprint -}}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
+{{- else}}
+{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify -}}
+<link href="{{ $stylesheet.Permalink }}" rel="preload stylesheet" as="style">
+{{- end}}
 <!-- Favicons -->
 <link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
 <link rel="icon" type="image/png" sizes="16x16" href="

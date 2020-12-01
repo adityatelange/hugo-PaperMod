@@ -16,6 +16,9 @@
 .menu {
     display: flex;
     margin: auto var(--gap);
+}
+
+.logo {
     flex-wrap: inherit
 }
 
