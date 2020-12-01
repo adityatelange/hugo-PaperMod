@@ -9,7 +9,7 @@ enableRobotsTXT: true
 
 minify:
   disableXML: true
-  minifyOutput: true
+  # minifyOutput: true
 
 languages:
   en:
@@ -17,11 +17,11 @@ languages:
     weight: 1
     menu:
       main:
-        - name: Archives
-          url: /archives/
+        - name: Archive
+          url: archives
           weight: 5
         - name: Tags
-          url: /tags/
+          url: tags/
           weight: 10
 
   l2:
@@ -41,6 +41,27 @@ languages:
           url: posts
         - name: Tags
           url: tags
+    menu:
+      main:
+        - name: Archive
+          url: archives/
+          weight: 5
+        - name: Tags
+          url: tags
+          weight: 10
+        - name: Categories
+          url: categories
+          weight: 10
+        - name: Series
+          url: series
+          weight: 10
+        - name: NullLink
+          url: "#"
+        - name: NullLink2
+          url: "#"
+        - name: NullLink3
+          url: "#"
+
 
   l3:
     languageName: "Langrtl"
@@ -50,6 +71,11 @@ languages:
     homeInfoParams:
       Title: "Hi there \U0001F44B"
       Content: Welcome to RTL layout
+    menu:
+      main:
+        - name: Tags
+          url: tags
+          weight: 10
 
 params:
   env: production
