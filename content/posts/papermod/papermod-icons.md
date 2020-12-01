@@ -32,7 +32,7 @@ socialIcons: # optional
 | 6   | cryptohack    | cryptohack.org    |
 | 7   | dev           | dev.to            |
 | 8   | discogs       | discogs.com       |
-| 9   | discord       |                   |
+| 9   | discord       | discord.com       |
 | 10  | dreamstime    | dreamstime.com    |
 | 11  | dribbble      | dribbble.com      |
 | 12  | email         | -                 |
@@ -44,15 +44,15 @@ socialIcons: # optional
 | 18  | hackthebox    | hackthebox.eu     |
 | 19  | instagram     | instagram.com     |
 | 20  | keybase       | keybase.io        |
-| 21  | kofi          |                   |
+| 21  | kofi          | ko-fi.com         |
 | 22  | lastfm        | last.fm           |
 | 23  | linkedin      | linkedin.com      |
 | 24  | mastodon      | mastodon.social   |
-| 25  | medium        |                   |
+| 25  | medium        | medium.com        |
 | 26  | mixcloud      | mixcloud.com      |
 | 27  | paypal        | paypal.com        |
 | 28  | qq            | qq.com            |
-| 29  | rss           |                   |
+| 29  | rss           | -                 |
 | 30  | soundcloud    | soundcloud.com    |
 | 31  | shutterstock  | shutterstock.com  |
 | 32  | slack         | slack.com         |
