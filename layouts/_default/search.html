@@ -43,7 +43,7 @@
     }
 
 </style>
-{{$fastsearch := slice (resources.Get "js/fastsearch.js") | resources.Concat "assets/js/fastsearch.js" | minify}}
+{{$fastsearch := slice (resources.Get "js/fastsearch.js") | resources.Concat "assets/js/fastsearch.js" | resources.ExecuteAsTemplate "assets/js/fastsearch.js" . | minify}}
 <script defer src="{{ $fastsearch.Permalink }}" onload="loadSearch();"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
 

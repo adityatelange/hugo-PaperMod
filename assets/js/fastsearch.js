@@ -47,7 +47,7 @@ function fetchJSONFile(path, callback) {
 
 // load our search index, only executed once
 function loadSearch() {
-    fetchJSONFile('/index.json', function (data) {
+    fetchJSONFile('{{ "index.json" | relURL }}', function (data) {
 
         var options = { // fuse.js options; check fuse.js website for details
             shouldSort: true,
