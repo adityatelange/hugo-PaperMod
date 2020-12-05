@@ -43,9 +43,11 @@
     }
 
 </style>
-{{$fastsearch := slice (resources.Get "js/fastsearch.js") | resources.Concat "assets/js/fastsearch.js" | minify}}
-<script defer src="{{ $fastsearch.Permalink }}" onload="loadSearch();"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+{{ $fastsearch := resources.Get "js/fastsearch.js" }}
+{{ $fusejs := resources.Get "js/fuse.js" }}
+{{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
+<script defer src="{{ $search.Permalink }}" onload="loadSearch();"></script>
 
 <header class="page-header">
     <h1>{{ .Title }}
