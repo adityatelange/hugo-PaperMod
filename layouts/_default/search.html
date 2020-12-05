@@ -1,7 +1,7 @@
 {{- define "main" }}
 
 <style type="text/css">
-    #fastSearch input {
+    .searchbox input {
         padding: 4px 10px;
         width: 100%;
         color: var(--primary);
@@ -10,7 +10,7 @@
         border-radius: var(--radius);
     }
 
-    #fastSearch input:focus {
+    .searchbox input:focus {
         border-color: var(--secondary);
     }
 
@@ -57,7 +57,7 @@
     </h1>
 </header>
 
-<div id="fastSearch">
+<div class="searchbox">
     <input id="searchInput" autofocus placeholder="{{.Title}} ↵">
     <ul id="searchResults"></ul>
 </div>
