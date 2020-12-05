@@ -9,7 +9,7 @@
     <span>&middot;</span>
     <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+<a aria-label="go to top" title="Go to Top" accesskey="g">
     <button class="top-link" id="top-link" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
             <path d="M12 6H0l6-6z" /></svg>
@@ -34,7 +34,6 @@
     }
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
-            e.preventDefault();
             var id = this.getAttribute("href").substr(1);
             document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
                 behavior: "smooth"
@@ -51,6 +50,11 @@
             mybutton.style.opacity = "0";
         }
     };
+    mybutton.onclick = function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        window.location.hash = ''
+    }
 
     function menu_on_scroll() {
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
