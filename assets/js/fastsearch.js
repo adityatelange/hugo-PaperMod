@@ -1,7 +1,4 @@
 var fuse; // holds our search engine
-var list = document.getElementById('searchResults'); // targets the <ul>
-var first = list.firstChild; // first child of search list
-var last = list.lastChild; // last child of search list
 
 // execute search as each character is typed
 document.getElementById("searchInput").onkeyup = function (e) {
@@ -23,10 +20,6 @@ document.getElementById("searchInput").onkeyup = function (e) {
     }
 
     document.getElementById("searchResults").innerHTML = searchitems;
-    if (results.length > 0) {
-        first = list.firstChild.firstElementChild; // first result container — used for checking against keyboard up/down location
-        last = list.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
-    }
 }
 
 
