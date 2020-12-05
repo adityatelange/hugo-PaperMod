@@ -46,8 +46,14 @@
 
 {{ $fastsearch := resources.Get "js/fastsearch.js" }}
 {{ $fusejs := resources.Get "js/fuse.js" }}
+{{- if not .Site.Params.assets.disableFingerprinting }}
+{{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
+<script defer src="{{ $search.Permalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}">
+</script>
+{{- else}}
 {{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
 <script defer src="{{ $search.Permalink }}" onload="loadSearch();"></script>
+{{- end}}
 
 <header class="page-header">
     <h1>{{ .Title }}
