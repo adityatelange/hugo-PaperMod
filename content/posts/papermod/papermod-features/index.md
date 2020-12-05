@@ -103,7 +103,7 @@ params:
             url: "<link2>"
 ```
 
-ex. [here](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.toml#L14)
+ex. [here](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml#L106)
 
 ---
 
