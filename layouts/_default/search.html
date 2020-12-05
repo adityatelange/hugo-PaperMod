@@ -1,52 +1,5 @@
 {{- define "main" }}
 
-<style type="text/css">
-    #fastSearch input {
-        padding: 4px 10px;
-        width: 100%;
-        color: var(--primary);
-        font-weight: bold;
-        border: 2px solid var(--tertiary);
-        border-radius: var(--radius);
-    }
-
-    #fastSearch input:focus {
-        border-color: var(--secondary);
-    }
-
-    #searchResults li {
-        list-style: none;
-        border-radius: var(--radius);
-        padding: 10px;
-        margin: 10px 0;
-        position: relative;
-        font-weight: 500;
-    }
-
-    #searchResults {
-        margin: 10px 0;
-        width: 100%;
-    }
-
-    #searchResults li:active {
-        transition: transform .1s;
-        transform: scale(.98);
-    }
-
-    #searchResults a {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        outline: none;
-    }
-
-</style>
-{{$fastsearch := slice (resources.Get "js/fastsearch.js") | resources.Concat "assets/js/fastsearch.js" | resources.ExecuteAsTemplate "assets/js/fastsearch.js" . | minify}}
-<script defer src="{{ $fastsearch.Permalink }}" onload="loadSearch();"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
-
 <header class="page-header">
     <h1>{{ .Title }}
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -55,11 +8,31 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
     </h1>
+    {{- if .Params.hideMeta }}{{ else }}
+    <div class="post-meta">
+        {{- if .IsTranslated -}}
+        <ul class="i18n_list">
+            {{- i18n "translations" | default "Translations"}}:
+            {{- range .Translations }}
+            <li>
+                <a href="{{ .Permalink }}">
+                    {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                    {{- .Language.LanguageName | emojify | humanize -}}
+                    {{- else }}
+                    {{- .Lang | humanize -}}
+                    {{- end -}}
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </div>
+    {{- end}}
 </header>
 
-<div id="fastSearch">
-    <input id="searchInput" autofocus placeholder="{{.Title}} ↵">
-    <ul id="searchResults"></ul>
+<div class="searchbox">
+    <input id="searchInput" autofocus placeholder="{{.Title}} ↵" aria-label="search">
+    <ul id="searchResults" aria-label="search results"></ul>
 </div>
 
 {{- end  }}{{/* end main */}}
