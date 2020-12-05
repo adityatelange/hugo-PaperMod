@@ -44,8 +44,8 @@
 
 </style>
 
-{{ $fastsearch := resources.Get "js/fastsearch.js" }}
-{{ $fusejs := resources.Get "js/fuse.js" }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" }}
+{{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
 <script defer src="{{ $search.Permalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}">
