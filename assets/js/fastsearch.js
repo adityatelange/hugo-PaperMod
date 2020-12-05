@@ -43,8 +43,7 @@ function loadSearch() {
     fetchJSONFile('../index.json', function (data) {
         // fuse.js options; check fuse.js website for details
         var options = {
-            isCaseSensitive: true,
-            useExtendedSearch: true,
+            isCaseSensitive: false,
             shouldSort: true,
             location: 0,
             distance: 100,
