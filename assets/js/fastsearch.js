@@ -40,7 +40,7 @@ function fetchJSONFile(path, callback) {
 
 // load our search index, only executed once
 function loadSearch() {
-    fetchJSONFile('{{ "index.json" | relURL }}', function (data) {
+    fetchJSONFile('{{ "index.json" | relLangURL }}', function (data) {
 
         // fuse.js options; check fuse.js website for details
         var options = {
