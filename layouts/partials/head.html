@@ -31,7 +31,7 @@
 {{- end}}
 <!-- Search -->
 {{- if (eq .Layout `search`) -}}
-{{- $fastsearch := resources.Get "js/fastsearch.js" }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | resources.ExecuteAsTemplate "assets/js/fastsearch.js" . }}
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
