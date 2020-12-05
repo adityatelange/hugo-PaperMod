@@ -41,7 +41,10 @@ function fetchJSONFile(path, callback) {
 // load our search index, only executed once
 function loadSearch() {
     fetchJSONFile('../index.json', function (data) {
-        var options = { // fuse.js options; check fuse.js website for details
+        // fuse.js options; check fuse.js website for details
+        var options = {
+            isCaseSensitive: true,
+            useExtendedSearch: true,
             shouldSort: true,
             location: 0,
             distance: 100,
