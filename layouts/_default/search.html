@@ -1,0 +1,38 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </h1>
+    {{- if .Params.hideMeta }}{{ else }}
+    <div class="post-meta">
+        {{- if .IsTranslated -}}
+        <ul class="i18n_list">
+            {{- i18n "translations" | default "Translations"}}:
+            {{- range .Translations }}
+            <li>
+                <a href="{{ .Permalink }}">
+                    {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                    {{- .Language.LanguageName | emojify | humanize -}}
+                    {{- else }}
+                    {{- .Lang | humanize -}}
+                    {{- end -}}
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </div>
+    {{- end}}
+</header>
+
+<div class="searchbox">
+    <input id="searchInput" autofocus placeholder="{{.Title}} ↵" aria-label="search">
+    <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+{{- end  }}{{/* end main */}}

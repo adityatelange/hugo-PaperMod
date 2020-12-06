@@ -1,0 +1,40 @@
+.searchbox input {
+    padding: 4px 10px;
+    width: 100%;
+    color: var(--primary);
+    font-weight: bold;
+    border: 2px solid var(--tertiary);
+    border-radius: var(--radius);
+}
+
+.searchbox input:focus {
+    border-color: var(--secondary);
+}
+
+#searchResults li {
+    list-style: none;
+    border-radius: var(--radius);
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    font-weight: 500;
+}
+
+#searchResults {
+    margin: 10px 0;
+    width: 100%;
+}
+
+#searchResults li:active {
+    transition: transform .1s;
+    transform: scale(.98);
+}
+
+#searchResults a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    outline: none;
+}
