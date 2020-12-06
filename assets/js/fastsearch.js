@@ -49,6 +49,8 @@ document.getElementById("searchInput").onkeyup = function (e) {
         }
 
         document.getElementById("searchResults").innerHTML = resultSet;
+    } else {
+        document.getElementById("searchResults").innerHTML = '';
     }
 }
 
