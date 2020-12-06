@@ -8,77 +8,76 @@ enableRobotsTXT: true
 # googleAnalytics: UA-123-45
 
 minify:
-  disableXML: true
-  # minifyOutput: true
+    disableXML: true
+    # minifyOutput: true
 
 languages:
-  en:
-    languageName: "English"
-    weight: 1
-    menu:
-      main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
 
-  l2:
-    languageName: "Lang2"
-    weight: 2
-    title: PaperModL2
-    profileMode:
-      enabled: true
-      title: PaperMod
-      # imageUrl: "#"
-      # imageTitle: my image
-      # imageWidth: 120
-      # imageHeight: 120
-      subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-      buttons:
-        - name: Blog
-          url: posts
-        - name: Tags
-          url: tags
-    menu:
-      main:
-        - name: Archive
-          url: archives/
-          weight: 5
-        - name: Tags
-          url: tags
-          weight: 10
-        - name: Categories
-          url: categories
-          weight: 10
-        - name: Series
-          url: series
-          weight: 10
-        - name: NullLink
-          url: "#"
-        - name: NullLink2
-          url: "#"
-        - name: NullLink3
-          url: "#"
+    l2:
+        languageName: "Lang2"
+        weight: 2
+        title: PaperModL2
+        profileMode:
+            enabled: true
+            title: PaperMod
+            # imageUrl: "#"
+            # imageTitle: my image
+            # imageWidth: 120
+            # imageHeight: 120
+            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+            buttons:
+                - name: Blog
+                  url: posts
+                - name: Tags
+                  url: tags
+        menu:
+            main:
+                - name: Archive
+                  url: archives/
+                  weight: 5
+                - name: Tags
+                  url: tags
+                  weight: 10
+                - name: Categories
+                  url: categories
+                  weight: 10
+                - name: Series
+                  url: series
+                  weight: 10
+                - name: NullLink
+                  url: "#"
+                - name: NullLink2
+                  url: "#"
+                - name: NullLink3
+                  url: "#"
 
-
-  l3:
-    languageName: "Langrtl"
-    languagedirection: rtl
-    weight: 3
-    title: PaperMod RTL
-    homeInfoParams:
-      Title: "Hi there \U0001F44B"
-      Content: Welcome to RTL layout
-    menu:
-      main:
-        - name: Tags
-          url: tags
-          weight: 10
+    l3:
+        languageName: "Langrtl"
+        languagedirection: rtl
+        weight: 3
+        title: PaperMod RTL
+        homeInfoParams:
+            Title: "Hi there \U0001F44B"
+            Content: Welcome to RTL layout
+        menu:
+            main:
+                - name: Tags
+                  url: tags
+                  weight: 10
 
 outputs:
     home:
@@ -87,77 +86,75 @@ outputs:
         - JSON
 
 params:
-  env: production
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
-  # author: ["Me", "You"] # multiple authors
-  ShowReadingTime: true
-  defaultTheme: auto
-  ShowShareButtons: true
-  displayFullLangName: true
-  # images: ""
-  # assets:
-  #   favicon: '<path / external url>'
+    env: production
+    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+    author: Theme PaperMod
+    # author: ["Me", "You"] # multiple authors
+    ShowReadingTime: true
+    defaultTheme: auto
+    ShowShareButtons: true
+    displayFullLangName: true
+    # images: ""
+    # assets:
+    #   favicon: '<path / external url>'
 
-  profileMode:
-    enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
+    profileMode:
+        enabled: false
+        title: PaperMod
+        imageUrl: "#"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: Archives
+              url: archives
+            - name: Tags
+              url: tags
 
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: >
-      Welcome to demo of hugo's theme PaperMod.
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: >
+            Welcome to demo of hugo's theme PaperMod.
 
-      - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
 
-  socialIcons:
-    - name: twitter
-      url: "#"
-    - name: stackoverflow
-      url: "#"
-    - name: codepen
-      url: "#"
-    - name: linkedin
-      url: "#"
-    - name: github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: buymeacoffee
-      url: "https://www.buymeacoffee.com/adityatelange"
+    socialIcons:
+        - name: twitter
+          url: "#"
+        - name: stackoverflow
+          url: "#"
+        - name: codepen
+          url: "#"
+        - name: linkedin
+          url: "#"
+        - name: github
+          url: "https://github.com/adityatelange/hugo-PaperMod"
 
 taxonomies:
-  category: categories
-  tag: tags
-  series: series
+    category: categories
+    tag: tags
+    series: series
 
 privacy:
-  vimeo:
-    disabled: false
-    simple: true
+    vimeo:
+        disabled: false
+        simple: true
 
-  twitter:
-    disabled: false
-    enableDNT: true
-    simple: true
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
 
-  instagram:
-    disabled: false
-    simple: true
+    instagram:
+        disabled: false
+        simple: true
 
-  youtube:
-    disabled: false
-    privacyEnhanced: true
+    youtube:
+        disabled: false
+        privacyEnhanced: true
 
 services:
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
