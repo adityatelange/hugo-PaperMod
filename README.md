@@ -48,6 +48,7 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
 -   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
 -   SEO Friendly.
 -   Muliple Author support.
+-   Search Page
 -   No webpack, nodejs and other depedencies required to edit the theme :)
 
 Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
