@@ -1,4 +1,4 @@
-+++
-title = "SearchL2"
-layout = "search"
-+++
+---
+title: "SearchL2"
+layout: "search"
+---
