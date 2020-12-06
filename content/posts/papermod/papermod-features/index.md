@@ -139,6 +139,38 @@ params:
 
 ---
 
+### Search
+
+Add the following to site config, `config.yml`
+
+```yml
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+```
+
+Create a page with `search.md` in `content` directory with following content
+
+```yml
+---
+title: "Search" # in any language you want
+layout: "search" # is necessary
+# url: "/archive"
+summary: "search"
+---
+
+```
+
+For Multilingual use `search.<lang>.md` ex. `search.es.md`.
+
+**Note:** Search will work only on current language, user is currently on !
+
+ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/search.md)
+
+---
+
 ### Draft Page indication
 
 adds `[draft]` mark to indicate draft pages.
