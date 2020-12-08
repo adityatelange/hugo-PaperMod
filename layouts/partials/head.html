@@ -21,12 +21,12 @@
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
+{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify -}}
 {{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify | fingerprint -}}
+{{- $stylesheet := $stylesheet | fingerprint -}}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
 {{- else}}
-{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify -}}
 <link href="{{ $stylesheet.Permalink }}" rel="preload stylesheet" as="style">
 {{- end}}
 <!-- Search -->
