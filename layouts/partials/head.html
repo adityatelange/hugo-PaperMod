@@ -29,6 +29,22 @@
 {{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify -}}
 <link href="{{ $stylesheet.Permalink }}" rel="preload stylesheet" as="style">
 {{- end}}
+<!-- Search -->
+{{- if (eq .Layout `search`) -}}
+<link rel="preload" as="fetch" href="../index.json" crossOrigin="anonymous">
+{{- $fastsearch := resources.Get "js/fastsearch.js" }}
+{{- $fusejs := resources.Get "js/fuse.js" }}
+{{- if not .Site.Params.assets.disableFingerprinting }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
+<script defer src="{{ $search.Permalink }}" rel="preload" as="script" onload="loadSearch();"
+    integrity="{{ $search.Data.Integrity }}">
+</script>
+{{- else}}
+{{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
+<script defer src="{{ $search.Permalink }}" rel="preload" as="script" onload="loadSearch();"></script>
+{{- end}}
+{{- end -}}
+
 <!-- Favicons -->
 <link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
 <link rel="icon" type="image/png" sizes="16x16" href="
