@@ -21,7 +21,12 @@
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
-{{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify -}}
+{{- $common := (resources.Match "css/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+{{- /*  bundle all required css  */}}
+{{- /*  Add extended css after theme style */ -}}
+{{- $stylesheet := (slice $common $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}
+
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint -}}
 <link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
