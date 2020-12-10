@@ -45,15 +45,14 @@
     {{- partial "anchored_headings.html" .Content -}}
   </div>
   <footer class="post-footer">
-    {{- with .Params.tags -}}
-      <ul class="post-tags">
-        {{- range $index, $value := . -}}
-        {{- $url := . | urlize | urls.Parse -}}
-        {{- $tag := $url.Path | printf "/tags/%v" | $.Site.GetPage -}}
-        <li><a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a></li>
-        {{- end -}}
-      </ul>
-    {{- end -}}
+    {{- with .Params.tags }}
+    <ul class="post-tags">
+      {{- range . }}
+      {{- $href := $.Site.GetPage (print "tags/" .)  }}
+      <li><a href="{{ $href.Permalink }}">{{ . }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
     {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
     {{- partial "share_icons.html" . }}
     {{- end }}
