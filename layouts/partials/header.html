@@ -109,7 +109,7 @@
         {{- $currentPage := . }}
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
-            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $menu_item_url := .URL | absLangURL }}
             {{- $page_url:= $currentPage.Permalink  | absLangURL }}
             <li>
                 <a href="{{ $menu_item_url }}">
