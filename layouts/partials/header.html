@@ -112,7 +112,7 @@
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink  | absLangURL }}
             <li>
-                <a href="{{ $menu_item_url }}">
+                <a href="{{ .URL | absLangURL }}">
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                         {{ .Name }}
                     </span>
