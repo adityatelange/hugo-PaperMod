@@ -45,11 +45,10 @@
     {{- partial "anchored_headings.html" .Content -}}
   </div>
   <footer class="post-footer">
-    {{- if .Params.tags }}
+    {{- with .Params.tags }}
     <ul class="post-tags">
-      {{- range .Params.tags }}
-      {{- $href := print (absLangURL "tags/") (urlize .) }}
-      <li><a href="{{ $href }}">{{ . }}</a></li>
+      {{- range ($.GetTerms "tags") }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
     {{- end }}
