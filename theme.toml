@@ -14,7 +14,8 @@ tags = [
   "dark",
   "blog",
   "minimalist",
-  "highlight.js"
+  "highlight.js",
+  "search"
 ]
 features = [
   "responsive",
@@ -33,7 +34,8 @@ features = [
   "minified-assets",
   "theme-toggle",
   "menu-location-indicator",
-  "scroll-to-top"
+  "scroll-to-top",
+  "search"
 ]
 min_version = "0.74.0"
 
