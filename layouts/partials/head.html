@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 <meta name="robots" content="index, follow">
 {{- else }}
 <meta name=" robots" content="noindex, nofollow">
@@ -76,7 +76,7 @@
 {{ end }}
 {{- partial "extend_head.html" . -}}
 <!-- Misc -->
-{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics_async.html" . }}
 {{- template "_internal/google_news.html" . }}
 {{- template "partials/templates/opengraph.html" . }}
