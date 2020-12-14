@@ -54,6 +54,22 @@
 {{- end}}
 {{- end -}}
 
+<!-- KaTeX -->
+{{- if or .Params.katex .Site.Params.katex }}
+    {{- $katex := resources.Get "js/katex/katex.js" }}
+    {{- $autorender := resources.Get "js/katex/auto-render.js" }}
+    {{- $js := (slice $katex $autorender) | resources.Concat "assets/js/katex.js" | minify }}
+    {{- $css := (slice (resources.Get "css/katex.css")) | resources.Concat "assets/css/katex.css" | minify }}
+
+    {{- if not .Site.Params.assets.disableFingerprinting }}
+        {{- $js := $js | fingerprint }}
+        {{- $css := $css | fingerprint }}
+    {{- end }}
+
+    <link href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" rel="preload stylesheet" as="style"/>
+    <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" rel="preload" as="script" onload="renderMathInElement(document.body)"></script>
+{{- end }}
+
 <!-- Favicons -->
 <link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
 <link rel="icon" type="image/png" sizes="16x16" href="
