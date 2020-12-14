@@ -66,8 +66,8 @@
         {{- $css := $css | fingerprint }}
     {{- end }}
 
-    <link href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" rel="preload stylesheet" as="style"/>
-    <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" rel="preload" as="script" onload="renderMathInElement(document.body)"></script>
+    <link href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" rel="prefetch stylesheet" as="style"/>
+    <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" rel="prefetch" as="script" onload="renderMathInElement(document.body)"></script>
 {{- end }}
 
 <!-- Favicons -->
