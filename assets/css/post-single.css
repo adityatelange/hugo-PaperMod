@@ -224,6 +224,13 @@
     border-radius: 4px
 }
 
+.post-content figure > figcaption {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 24px 0 16px;
+}
+
 .toc {
     margin-bottom: 40px;
     border: 1px solid var(--border);
