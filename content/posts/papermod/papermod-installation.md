@@ -129,6 +129,21 @@ params:
     analytics:
         google:
             SiteVerificationTag: "XYZabc"
+
+menu:
+    main:
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: example
+          name: example.org
+          url: https://example.org
+          weight: 30
 ```
 
 ---
