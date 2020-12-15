@@ -4,7 +4,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
 ![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
 
-# hugo-PaperMod | [Demo](https://adityatelange.github.io/hugo-PaperMod/)
+# PaperMod | [Demo](https://adityatelange.github.io/hugo-PaperMod/)
 
 ☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive
 
@@ -24,13 +24,13 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 
 ---
 
-## Install/Update
+## Install/Update 📥
 
 Read this post For More Details => [hugo-PaperMod - Installation](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)
 
 ---
 
-## Features/Mods
+## Features/Mods 🪄
 
 -   Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
 -   3 Modes:
@@ -49,23 +49,23 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
 -   SEO Friendly.
 -   Muliple Author support.
 -   Search Page
--   No webpack, nodejs and other depedencies required to edit the theme :)
+-   No webpack, nodejs and other depedencies required to edit the theme.
 
 Read this post For More Details => [hugo-PaperMod - Features](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/)
 
 Release ChangeLog has info about stuff added: [Releases](https://github.com/adityatelange/hugo-PaperMod/releases)
 
-Huge thanks to contributors for making this theme better :)
+Huge thanks to contributors for making this theme better 🙌
 
 ---
 
-## Social-Icons/Share-Icons
+## Social-Icons/Share-Icons 🖼️
 
 Read this post For More Details => [Social-Icons](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-icons/)
 
 ---
 
-## FAQs / How To's
+## FAQs / How To's 🙋
 
 Read this post For More Details => [How To's Guide](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-how-to/)
 
@@ -75,7 +75,15 @@ Read this post For More Details => [How To's Guide](https://adityatelange.github
 
 ---
 
-## Found a bug?
+## Special Thanks 🌟
+
+- [**Highlight.js**](https://github.com/highlightjs/highlight.js)
+- [**Fuse.js**](https://github.com/krisk/fuse)
+- [**Feather Icons**](https://github.com/feathericons/feather)
+- **All Contributors and Supporters**
+---
+
+## Found a bug ? 🐞
 
 If you spot any bugs, please use [Issue Tracker](https://github.com/adityatelange/hugo-PaperMod/issues) and/or
 create a new [Pull Request](https://github.com/adityatelange/hugo-PaperMod/pulls) to fix the issue.
