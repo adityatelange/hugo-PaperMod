@@ -167,6 +167,22 @@ For Multilingual use `search.<lang>.md` ex. `search.es.md`.
 
 **Note:** Search will work only on current language, user is currently on !
 
+**Customizing Fusejs Options**
+
+Refer https://fusejs.io/api/options.html for Options, Add those as shown below.
+
+```yml
+params:
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+```
+
 ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/search.md)
 
 ---
