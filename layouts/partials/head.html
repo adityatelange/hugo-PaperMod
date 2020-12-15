@@ -41,7 +41,7 @@
 <!-- Search -->
 {{- if (eq .Layout `search`) -}}
 <link rel="preload" as="fetch" href="../index.json" crossOrigin="anonymous">
-{{- $fastsearch := resources.Get "js/fastsearch.js" }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | resources.ExecuteAsTemplate "js/fastsearch.js" .Site.Params.fuseOpts }}
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
