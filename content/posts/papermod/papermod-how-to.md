@@ -128,6 +128,35 @@ and contents of `extend_footer.html` will be added to bottom of page.
 
 ---
 
+## Add menu to site
+
+You can add menu entries which will appear in the header of every page.
+
+To do so, add a `menu` section to your site's `config.yml`:
+```yml
+menu:
+    main:
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: example
+          name: example.org
+          url: https://example.org
+          weight: 30
+```
+`name` controls what will be displayed for the menu entry.  
+`url` sets the URL that the entry points to.  
+`weight` is used to control the positioning of entries.
+
+For more information on menus, see the [Hugo wiki page](https://gohugo.io/content-management/menus/).
+
+---
+
 ## Pin a Post
 
 Post can be pinned/ displayed top on the list by adding a `weight=<num>` var to page-variables
