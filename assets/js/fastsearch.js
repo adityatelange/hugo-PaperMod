@@ -2,6 +2,7 @@ var fuse; // holds our search engine
 var resList = document.getElementById('searchResults');
 var sInput = document.getElementById('searchInput');
 var first, last = null
+var resultsAvailable = false;
 
 // load our search index, only executed onload
 function loadSearch() {
@@ -42,7 +43,7 @@ function loadSearch() {
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
-    if (key === "ArrowDown") {
+    if (key === "ArrowDown" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
             resList.firstChild.lastChild.focus();
@@ -50,7 +51,7 @@ document.onkeydown = function (e) {
         } else {
             document.activeElement.parentElement.nextSibling.lastChild.focus();
         }
-    } else if (key === "ArrowUp") {
+    } else if (key === "ArrowUp" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
         } else if (document.activeElement.parentElement == first) {
@@ -77,10 +78,11 @@ document.getElementById("searchInput").onkeyup = function (e) {
         }
 
         document.getElementById("searchResults").innerHTML = resultSet;
-
+        resultsAvailable = true;
         first = resList.firstChild;
         last = resList.lastChild;
     } else {
+        resultsAvailable = false;
         document.getElementById("searchResults").innerHTML = '';
     }
 }
