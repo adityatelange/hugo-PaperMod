@@ -36,6 +36,18 @@ function loadSearch() {
     xhr.send();
 }
 
+// kb bindings
+document.onkeydown = function (e) {
+    let key = e.key;
+    if (key === "ArrowDown") {
+        e.preventDefault();
+        console.log(key)
+    } else if (key === "ArrowUp") {
+        e.preventDefault();
+        console.log(key)
+    }
+}
+
 // execute search as each character is typed
 document.getElementById("searchInput").onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
