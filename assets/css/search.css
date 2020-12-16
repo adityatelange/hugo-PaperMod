@@ -38,3 +38,7 @@
     left: 0px;
     outline: none;
 }
+
+#searchResults .active {
+    transform: scale(.98);
+}

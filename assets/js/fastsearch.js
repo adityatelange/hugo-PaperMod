@@ -46,18 +46,25 @@ document.onkeydown = function (e) {
     if (key === "ArrowDown" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
+            activeToggle();
             resList.firstChild.lastChild.focus();
+            activeToggle();
         } else if (document.activeElement.parentElement == last) {
         } else {
+            activeToggle();
             document.activeElement.parentElement.nextSibling.lastChild.focus();
+            activeToggle();
         }
     } else if (key === "ArrowUp" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
         } else if (document.activeElement.parentElement == first) {
+            activeToggle();
             sInput.focus();
         } else {
+            activeToggle();
             document.activeElement.parentElement.previousSibling.lastChild.focus();
+            activeToggle();
         }
     }
     console.log(document.activeElement);
@@ -89,4 +96,8 @@ document.getElementById("searchInput").onkeyup = function (e) {
 
 function itemGen(name, link) {
     return `<li class="post-entry"><header class="entry-header">${name}&nbsp;»</header><a href="${link}" aria-label="${name}"></a></li>`
+}
+
+function activeToggle() {
+    document.activeElement.parentElement.classList.toggle("active")
 }
