@@ -1,4 +1,7 @@
 var fuse; // holds our search engine
+var resList = document.getElementById('searchResults');
+var sInput = document.getElementById('searchInput');
+var first, last = null
 
 // load our search index, only executed onload
 function loadSearch() {
@@ -41,11 +44,22 @@ document.onkeydown = function (e) {
     let key = e.key;
     if (key === "ArrowDown") {
         e.preventDefault();
-        console.log(key)
+        if (document.activeElement == sInput) {
+            resList.firstChild.lastChild.focus();
+        } else if (document.activeElement.parentElement == last) {
+        } else {
+            document.activeElement.parentElement.nextSibling.lastChild.focus();
+        }
     } else if (key === "ArrowUp") {
         e.preventDefault();
-        console.log(key)
+        if (document.activeElement == sInput) {
+        } else if (document.activeElement.parentElement == first) {
+            sInput.focus();
+        } else {
+            document.activeElement.parentElement.previousSibling.lastChild.focus();
+        }
     }
+    console.log(document.activeElement);
 }
 
 // execute search as each character is typed
@@ -63,6 +77,9 @@ document.getElementById("searchInput").onkeyup = function (e) {
         }
 
         document.getElementById("searchResults").innerHTML = resultSet;
+
+        first = resList.firstChild;
+        last = resList.lastChild;
     } else {
         document.getElementById("searchResults").innerHTML = '';
     }
