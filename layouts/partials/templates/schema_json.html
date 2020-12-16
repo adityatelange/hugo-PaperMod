@@ -9,9 +9,9 @@
   "thumbnailUrl": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }},
   "sameAs": [
     {{- if .Site.Params.schema.sameAs }}
-      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+      {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
     {{- else}}
-      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ $e.url }}{{ end }}
+      {{ range $i, $e := .Site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " }}{{ end }}
     {{- end}}
   ]
 }

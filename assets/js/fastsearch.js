@@ -23,6 +23,7 @@ function loadSearch() {
                             'content'
                         ]
                     };
+                    {{ if . }}options = {{ jsonify . }}{{ end }} // load custom options from .Site.Params.fuseOpts
                     fuse = new Fuse(data, options); // build the index from the json file
                 }
             } else {

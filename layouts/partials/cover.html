@@ -9,7 +9,7 @@
             rel="noopener noreferrer">{{ end -}}
         {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
-        {{- $prod := (eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")) }}
+        {{- $prod := (hugo.IsProduction | or (eq .Site.Params.env "production")) }}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) (ne .Site.Params.cover.responsiveImages false) (eq $prod true)) }}
         <img srcset="{{- range $size := $sizes -}}
                         {{- if (ge $cover.Width $size) -}}
