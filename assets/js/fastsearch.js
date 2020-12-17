@@ -74,6 +74,8 @@ document.onkeydown = function (e) {
             ae.parentElement.previousSibling.lastChild.focus();
             activeToggle(); // add active class
         }
+    } else if (key === "ArrowRight" && resultsAvailable) {
+        ae.click();
     } else if (key === "Escape") {
         sInput.value = "";
     }
