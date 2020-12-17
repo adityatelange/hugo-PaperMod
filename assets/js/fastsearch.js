@@ -78,6 +78,12 @@ document.onkeydown = function (e) {
     console.log(ae);
 }
 
+document.onmousedown = function (e) {
+    if (e.type === "mousedown") {
+        e.preventDefault(); // prevent mousedown to change focus
+    }
+}
+
 // execute search as each character is typed
 document.getElementById("searchInput").onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
