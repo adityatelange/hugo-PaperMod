@@ -46,25 +46,31 @@ document.onkeydown = function (e) {
     if (key === "ArrowDown" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
-            activeToggle();
+            // if the currently focused element is the search input, focus the <a> of first <li>
+            activeToggle(); // rm active class
             resList.firstChild.lastChild.focus();
-            activeToggle();
+            activeToggle(); // add active class
         } else if (document.activeElement.parentElement == last) {
+            // if the currently focused element's parent is last, do nothing
         } else {
-            activeToggle();
+            // otherwise select the next search result
+            activeToggle(); // rm active class
             document.activeElement.parentElement.nextSibling.lastChild.focus();
-            activeToggle();
+            activeToggle(); // add active class
         }
     } else if (key === "ArrowUp" && resultsAvailable) {
         e.preventDefault();
         if (document.activeElement == sInput) {
+            // if the currently focused element is input box, do nothing
         } else if (document.activeElement.parentElement == first) {
-            activeToggle();
+            // if the currently focused element is first item, go to input box
+            activeToggle(); // rm active class
             sInput.focus();
         } else {
-            activeToggle();
+            // otherwise select the previous search result
+            activeToggle(); // rm active class
             document.activeElement.parentElement.previousSibling.lastChild.focus();
-            activeToggle();
+            activeToggle(); // add active class
         }
     }
     console.log(document.activeElement);
