@@ -40,6 +40,39 @@ function loadSearch() {
     xhr.send();
 }
 
+
+function itemGen(name, link) {
+    return `<li class="post-entry"><header class="entry-header">${name}&nbsp;»</header><a href="${link}" aria-label="${name}"></a></li>`
+}
+
+function activeToggle() {
+    document.activeElement.parentElement.classList.toggle("active")
+}
+
+// execute search as each character is typed
+document.getElementById("searchInput").onkeyup = function (e) {
+    // run a search query (for "term") every time a letter is typed
+    // in the search box
+    const results = fuse.search(this.value); // the actual query being run using fuse.js
+
+    if (results.length !== 0) {
+        // build our html if result exists
+        let resultSet = ''; // our results bucket
+
+        for (let item in results) {
+            resultSet = resultSet + itemGen(results[item].item.title, results[item].item.permalink)
+        }
+
+        document.getElementById("searchResults").innerHTML = resultSet;
+        resultsAvailable = true;
+        first = resList.firstChild;
+        last = resList.lastChild;
+    } else {
+        resultsAvailable = false;
+        document.getElementById("searchResults").innerHTML = '';
+    }
+}
+
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
@@ -75,49 +108,16 @@ document.onkeydown = function (e) {
             activeToggle(); // add active class
         }
     } else if (key === "ArrowRight" && resultsAvailable) {
-        ae.click();
+        ae.click(); // click on active link
     } else if (key === "Escape") {
         resultsAvailable = false;
-        document.getElementById("searchResults").innerHTML = sInput.value = '';
-        sInput.focus();
+        document.getElementById("searchResults").innerHTML = sInput.value = ''; // clear inputbox and searchResults
+        sInput.focus(); // shift focus to input box
     }
-    console.log(ae);
 }
 
 document.onmousedown = function (e) {
     if (e.type === "mousedown") {
         e.preventDefault(); // prevent mousedown to change focus
     }
-}
-
-// execute search as each character is typed
-document.getElementById("searchInput").onkeyup = function (e) {
-    // run a search query (for "term") every time a letter is typed
-    // in the search box
-    const results = fuse.search(this.value); // the actual query being run using fuse.js
-
-    if (results.length !== 0) {
-        // build our html if result exists
-        let resultSet = ''; // our results bucket
-
-        for (let item in results) {
-            resultSet = resultSet + itemGen(results[item].item.title, results[item].item.permalink)
-        }
-
-        document.getElementById("searchResults").innerHTML = resultSet;
-        resultsAvailable = true;
-        first = resList.firstChild;
-        last = resList.lastChild;
-    } else {
-        resultsAvailable = false;
-        document.getElementById("searchResults").innerHTML = '';
-    }
-}
-
-function itemGen(name, link) {
-    return `<li class="post-entry"><header class="entry-header">${name}&nbsp;»</header><a href="${link}" aria-label="${name}"></a></li>`
-}
-
-function activeToggle() {
-    document.activeElement.parentElement.classList.toggle("active")
 }
