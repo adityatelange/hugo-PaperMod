@@ -1,4 +1,4 @@
-{{ if .Params.hasMath }}
+{{ if or .Params.mathjax .Site.Params.mathjax }}
 <script
   type="text/javascript"
   async
