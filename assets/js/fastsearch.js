@@ -43,37 +43,39 @@ function loadSearch() {
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
+    let ae = document.activeElement;
+
     if (key === "ArrowDown" && resultsAvailable) {
         e.preventDefault();
-        if (document.activeElement == sInput) {
+        if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
             activeToggle(); // rm active class
             resList.firstChild.lastChild.focus();
             activeToggle(); // add active class
-        } else if (document.activeElement.parentElement == last) {
+        } else if (ae.parentElement == last) {
             // if the currently focused element's parent is last, do nothing
         } else {
             // otherwise select the next search result
             activeToggle(); // rm active class
-            document.activeElement.parentElement.nextSibling.lastChild.focus();
+            ae.parentElement.nextSibling.lastChild.focus();
             activeToggle(); // add active class
         }
     } else if (key === "ArrowUp" && resultsAvailable) {
         e.preventDefault();
-        if (document.activeElement == sInput) {
+        if (ae == sInput) {
             // if the currently focused element is input box, do nothing
-        } else if (document.activeElement.parentElement == first) {
+        } else if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
             activeToggle(); // rm active class
             sInput.focus();
         } else {
             // otherwise select the previous search result
             activeToggle(); // rm active class
-            document.activeElement.parentElement.previousSibling.lastChild.focus();
+            ae.parentElement.previousSibling.lastChild.focus();
             activeToggle(); // add active class
         }
     }
-    console.log(document.activeElement);
+    console.log(ae);
 }
 
 // execute search as each character is typed
