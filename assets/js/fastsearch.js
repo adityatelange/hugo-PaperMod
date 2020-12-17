@@ -77,7 +77,9 @@ document.onkeydown = function (e) {
     } else if (key === "ArrowRight" && resultsAvailable) {
         ae.click();
     } else if (key === "Escape") {
-        sInput.value = "";
+        resultsAvailable = false;
+        document.getElementById("searchResults").innerHTML = sInput.value = '';
+        sInput.focus();
     }
     console.log(ae);
 }
