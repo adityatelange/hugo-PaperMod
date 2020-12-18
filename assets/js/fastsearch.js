@@ -76,8 +76,9 @@ document.getElementById("searchInput").onkeyup = function (e) {
 document.onkeydown = function (e) {
     let key = e.key;
     let ae = document.activeElement;
+    let inbox = document.getElementById("searchbox").contains(ae)
 
-    if (key === "ArrowDown" && resultsAvailable) {
+    if (key === "ArrowDown" && resultsAvailable && inbox) {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
@@ -92,7 +93,7 @@ document.onkeydown = function (e) {
             ae.parentElement.nextSibling.lastChild.focus();
             activeToggle(); // add active class
         }
-    } else if (key === "ArrowUp" && resultsAvailable) {
+    } else if (key === "ArrowUp" && resultsAvailable && inbox) {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is input box, do nothing
@@ -106,17 +107,11 @@ document.onkeydown = function (e) {
             ae.parentElement.previousSibling.lastChild.focus();
             activeToggle(); // add active class
         }
-    } else if (key === "ArrowRight" && resultsAvailable) {
+    } else if (key === "ArrowRight" && resultsAvailable && inbox) {
         ae.click(); // click on active link
     } else if (key === "Escape") {
         resultsAvailable = false;
         document.getElementById("searchResults").innerHTML = sInput.value = ''; // clear inputbox and searchResults
         sInput.focus(); // shift focus to input box
-    }
-}
-
-document.onmousedown = function (e) {
-    if (e.type === "mousedown") {
-        e.preventDefault(); // prevent mousedown to change focus
     }
 }
