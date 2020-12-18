@@ -50,7 +50,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="{{ "" | absLangURL }}" accesskey="h">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ .Site.Params.label.text | default .Site.Title }} (Alt + H)">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
@@ -59,7 +59,7 @@
             </a>
             <span class="logo-switches">
                 {{- if (not .Site.Params.disableThemeToggle) }}
-                <span class="theme-toggle">
+                <span class="theme-toggle" title="(Alt + T)">
                     <a id="theme-toggle" accesskey="t">
                         <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
