@@ -12,14 +12,14 @@
     --secondary: rgba(0, 0, 0, 0.56);
     --tertiary: rgba(0, 0, 0, 0.16);
     --content: rgba(0, 0, 0, 0.88);
-    --hljs-bg: #1c1d21;
+    /* --hljs-bg: #2e2e33; */
     --code-bg: #f5f5f5;
-    --border: #eee
+    --border: #eee;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     :root {
-        --gap: 14px
+        --gap: 14px;
     }
 }
 
@@ -30,15 +30,15 @@
     --secondary: rgba(255, 255, 255, 0.56);
     --tertiary: rgba(255, 255, 255, 0.16);
     --content: rgba(255, 255, 255, 0.64);
-    --hljs-bg: #2e2e33;
+    /* --hljs-bg: #2e2e33; */
     --code-bg: #37383e;
-    --border: #5b5d67
+    --border: #5b5d67;
 }
 
 .list {
-    background: var(--code-bg)
+    background: var(--code-bg);
 }
 
 .dark.list {
-    background: var(--theme)
+    background: var(--theme);
 }

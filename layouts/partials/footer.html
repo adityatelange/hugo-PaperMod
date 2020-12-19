@@ -14,16 +14,8 @@
         <path d="M12 6H0l6-6z" /></svg>
 </button>
 {{- partial "extend_footer.html" . -}}
-{{ if (and (in site.Params.mainSections .Type) (ne .Layout `archives`) (ne .Layout `search`)) }}
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
-<script defer src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"
-    onload="hljs.initHighlightingOnLoad();"></script>
-{{- else}}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
-<script defer src="{{ $highlight.Permalink }}" onload="hljs.initHighlightingOnLoad();"></script>
-{{- end}}
-{{- end }}
+
+
 <script>
     window.onload = function () {
         if (localStorage.getItem("menu-scroll-position")) {
