@@ -121,6 +121,11 @@ img {
     max-width: 100%
 }
 
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 6px
