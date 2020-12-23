@@ -224,6 +224,10 @@
     border-radius: 4px
 }
 
+.post-content img[src*='#center'] {
+    margin: auto
+}
+
 .post-content figure > figcaption {
     color: var(--primary);
     font-size: 16px;
