@@ -225,8 +225,7 @@
 }
 
 .post-content img[src*='#center'] {
-    display: block;
-    margin: auto;
+    margin: auto
 }
 
 .post-content figure > figcaption {
