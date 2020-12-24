@@ -12,7 +12,7 @@
 {{- if eq $.Site.Params.defaultTheme `dark` -}}
 {{- print " dark" }}
 {{- end -}}
-">
+" id="top">
     {{- partialCached "header.html" . .Page}}
     <main class="main">
         {{- block "main" . }}
