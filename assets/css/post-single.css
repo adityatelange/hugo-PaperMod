@@ -203,7 +203,7 @@
 }
 
 .post-content blockquote {
-    margin: 0 calc(var(--gap) * -1);
+    margin: 0 0;
     padding: 0 32px;
     border-inline-start: 2px solid var(--primary)
 }
