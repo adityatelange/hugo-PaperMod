@@ -140,7 +140,7 @@
 
 .post-content:not(.gist) > .highlight,
 .post-content pre {
-    margin: auto calc(var(--gap) * -1) 32px;
+    margin: auto 0 32px;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius)
 }
