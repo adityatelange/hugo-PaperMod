@@ -80,7 +80,7 @@ params:
     author: Me
     # author: ["Me", "You"] # multiple authors
 
-    images: "<link or path of image for opengraph, twitter-cards>"
+    images: ["<link or path of image for opengraph, twitter-cards>"]
 
     ShowReadingTime: true
     ShowShareButtons: true
