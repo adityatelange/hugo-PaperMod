@@ -79,7 +79,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     word-break: keep-all
 }
 

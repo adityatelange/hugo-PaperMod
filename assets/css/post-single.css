@@ -122,7 +122,7 @@
 }
 
 .post-content table th,
-.post-content table:not(.highlighttable) td {
+.post-content:not(.gist) > table:not(.highlighttable) td {
     min-width: 80px;
     padding: 12px 8px;
     line-height: 1.5;
@@ -138,7 +138,7 @@
     margin: auto 0
 }
 
-.post-content .highlight,
+.post-content:not(.gist) > .highlight,
 .post-content pre {
     margin: auto calc(var(--gap) * -1) 32px;
     background: var(--hljs-bg) !important;
