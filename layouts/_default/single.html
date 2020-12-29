@@ -28,7 +28,8 @@
     </div>
     {{- end}}
   </header>
-  {{- partial "cover.html" (dict "cxt" . "IsHome" false) }}
+  {{- $isHidden := ((.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInSingle) | default .Params.cover.hidden )}}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if .Params.ShowToc }}
   <div class="toc">
     <details {{if .Params.TocOpen }} open{{ end }}>

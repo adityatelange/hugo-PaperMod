@@ -1,5 +1,5 @@
 {{- with .cxt}} {{/* Apply proper context from dict */}}
-{{- if .Params.cover.image }}
+{{- if (and .Params.cover.image (not $.isHidden)) }}
 {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
 <figure class="entry-cover">
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
