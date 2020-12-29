@@ -113,11 +113,6 @@ img {
     max-width: 100%
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 6px
-}
-
 ::-webkit-scrollbar-track {
     background: var(--theme)
 }
@@ -135,9 +130,9 @@ img {
     background: var(--secondary)
 }
 
-@media screen and (max-width:800px) {
+@media screen and (min-width:768px) {
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 2px
+        width: 10px;
+        height: 6px
     }
 }
