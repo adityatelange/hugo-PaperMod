@@ -18,7 +18,8 @@
     </button>
 </a>
 {{- partial "extend_footer.html" . -}}
-{{ if (and (in site.Params.mainSections .Type) (ne .Layout `archives`) (ne .Layout `search`)) }}
+{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
+{{- if (and (in site.Params.mainSections .Type) (ne .Layout `archives`) (ne .Layout `search`) (not $isHLJSdisabled)) }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
 <script defer src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"
