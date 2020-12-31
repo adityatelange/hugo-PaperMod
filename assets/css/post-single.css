@@ -337,3 +337,11 @@ h6:hover .anchor {
     margin-inline-start: 8px;
     font-weight: 500
 }
+
+.post-content ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.32)
+}
+
+.post-content ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.64)
+}
