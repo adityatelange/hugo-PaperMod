@@ -140,7 +140,7 @@
 
 .post-content:not(.gist) > .highlight,
 .post-content pre {
-    margin: auto 0 32px;
+    margin: auto 0 20px;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius)
 }
@@ -204,12 +204,12 @@
 
 .post-content blockquote {
     margin: 0 0;
-    padding: 0 32px;
+    padding: 0 14px;
     border-inline-start: 2px solid var(--primary)
 }
 
 .post-content hr {
-    margin: 30px calc(var(--gap) * -1);
+    margin: 30px 0;
     height: 2px;
     background: var(--tertiary);
     border-top: 0;
@@ -336,11 +336,4 @@ h6:hover .anchor {
     color: var(--secondary);
     margin-inline-start: 8px;
     font-weight: 500
-}
-
-@media screen and (max-width:600px) {
-    .post-content blockquote {
-        margin: 0 calc(var(--gap) * -1);
-        padding: 0 21px
-    }
 }
