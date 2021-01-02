@@ -6,6 +6,9 @@
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h1>
+    <div class="post-description">
+      {{ .Description }}
+    </div>
     {{- if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
