@@ -210,7 +210,7 @@
 .post-content blockquote {
     margin: 0 0;
     padding: 0 14px;
-    border-inline-start: 2px solid var(--primary)
+    border-inline-start: 3px solid var(--primary)
 }
 
 .post-content hr {
