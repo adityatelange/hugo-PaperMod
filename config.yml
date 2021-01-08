@@ -27,7 +27,7 @@ languages:
                   url: tags/
                   weight: 10
 
-    l2:
+    fr:
         languageName: "Lang2"
         weight: 2
         title: PaperModL2
@@ -65,7 +65,7 @@ languages:
                 - name: NullLink3
                   url: "#"
 
-    l3:
+    fa:
         languageName: "Langrtl"
         languagedirection: rtl
         weight: 3
