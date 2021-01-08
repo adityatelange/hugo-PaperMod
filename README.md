@@ -30,7 +30,7 @@ Read this post For More Details => [hugo-PaperMod - Installation](https://aditya
 
 ---
 
-## Features/Mods 🪄
+## Features/Mods 💥
 
 -   Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
 -   3 Modes:
