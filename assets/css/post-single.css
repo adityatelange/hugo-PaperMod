@@ -162,6 +162,10 @@
     margin: 0
 }
 
+.post-content .highlight {
+    margin: auto 0 20px
+}
+
 .post-content .highlighttable {
     table-layout: fixed
 }
