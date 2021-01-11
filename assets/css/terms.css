@@ -12,7 +12,7 @@
     transition: transform .1s
 }
 
-.terms-tags a:hover {
+.terms-tags a:active {
     background: var(--tertiary);
     transform: scale(.96)
 }

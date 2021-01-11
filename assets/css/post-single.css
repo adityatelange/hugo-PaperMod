@@ -331,7 +331,7 @@
     transition: transform .1s
 }
 
-.share-buttons svg:hover {
+.share-buttons svg:active {
     transform: scale(.96)
 }
 
