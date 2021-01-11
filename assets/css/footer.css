@@ -28,7 +28,6 @@
 
 .top-link {
     visibility: hidden;
-    opacity: 0;
     position: fixed;
     bottom: 60px;
     right: 30px;
@@ -38,8 +37,6 @@
     height: 42px;
     padding: 12px;
     border-radius: 64px;
-    fill: currentColor;
-    fill-opacity: 80%;
     transition: visibility .5s, opacity .8s linear
 }
 
