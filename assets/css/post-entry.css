@@ -53,6 +53,12 @@
     transform: scale(.96)
 }
 
+@media (prefers-reduced-motion) {
+    .post-entry:active {
+        transform: none
+    }
+}
+
 .tag-entry .entry-cover {
     display: none
 }

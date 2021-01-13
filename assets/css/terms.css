@@ -16,3 +16,9 @@
     background: var(--tertiary);
     transform: scale(.96)
 }
+
+@media (prefers-reduced-motion) {
+    .terms-tags a:active {
+        transform: none
+    }
+}

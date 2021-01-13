@@ -41,4 +41,11 @@
 
 #searchResults .active {
     transform: scale(.98);
+    border: 2px solid var(--tertiary)
+}
+
+@media (prefers-reduced-motion) {
+    #searchResults .active  {
+        transform: none
+    }
 }
