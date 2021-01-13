@@ -1,6 +1,6 @@
 ---
-title: "Papermod - How To's Guide"
-summary: FAQs
+title: "FAQs"
+summary: Frequently Asked Questions
 date: 2020-09-18T11:30:03+05:30
 showtoc: true
 tocOpen: true
@@ -9,6 +9,7 @@ tags: ["PaperMod"]
 author: "Aditya Telange"
 draft: true
 aliases: [/posts/papermod/papermod-how-to]
+weight: 3
 ---
 
 ## Intro
@@ -106,7 +107,7 @@ summary: archives
 
 ## Bundling Custom css with theme's assets
 
-- For adding custom css to be bundled inside one minimized css
+-   For adding custom css to be bundled inside one minimized css
 
 Create folder in yout project directory as
 
@@ -126,10 +127,10 @@ All `css` files inside `assets/css/extended` will be bundled !
 
 **Note**: blank.css is just the placeholder so that it doesn't break the theme when no files are present under `assets/css/extended`
 
-
 Linked Issues:
 
-- [Papermod Theme: How to add custom CSS?](https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165)
+-   [Papermod Theme: How to add custom CSS?](https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165)
+
 ---
 
 ## Custom Head / Footer
@@ -162,6 +163,7 @@ and contents of `extend_footer.html` will be added to bottom of page.
 You can add menu entries which will appear in the header of every page.
 
 To do so, add a `menu` section to your site's `config.yml`:
+
 ```yml
 menu:
     main:
@@ -178,8 +180,9 @@ menu:
           url: https://example.org
           weight: 30
 ```
-`name` controls what will be displayed for the menu entry.  
-`url` sets the URL that the entry points to.  
+
+`name` controls what will be displayed for the menu entry.
+`url` sets the URL that the entry points to.
 `weight` is used to control the positioning of entries.
 
 For more information on menus, see the [Hugo wiki page](https://gohugo.io/content-management/menus/).
@@ -255,6 +258,18 @@ and can be added accordingly.
         apple_touch_icon:  "/apple-touch-icon.png"
         safari_pinned_tab:  "/safari-pinned-tab.svg"
     ```
+
+---
+
+## Centering image in markdown
+
+Add `#center` after image to center align an image
+
+```md
+![name](path/to/image.png#center)
+```
+
+Thanks to [@pacientes](https://github.com/pacientes) for this
 
 ---
 

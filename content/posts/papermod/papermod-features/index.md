@@ -1,5 +1,5 @@
 ---
-title: "Papermod - Features"
+title: "Features"
 summary: Get known about All Features in PaperMod
 date: 2020-09-16T11:30:03+05:30
 showToc: true
@@ -309,6 +309,36 @@ read more about this [here](https://gohugo.io/content-management/comments/)
 
 ---
 
+### AccessKeys
+
+```text
+c - ToC Open/Close
+g - Go To Top
+h - Home (according to current lang)
+t - Theme toggle
+/ - Jumps to search page if in menu
+```
+
+[What's AccessKeys ?](https://www.w3schools.com/tags/att_global_accesskey.asp)
+
+---
+
+### Enhanced SEO
+
+**Enabled only when `env: prod`**
+
+-   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
+
+-   Twitter Cards Support
+
+-   Open-Graph support
+
+---
+
+### Multilingual Support
+
+---
+
 ### Misc
 
 #### Scroll-Bar themed (by default)
@@ -317,18 +347,12 @@ read more about this [here](https://gohugo.io/content-management/comments/)
 
 #### Scroll-to-Top Button (by default)
 
+```text
 Displays a Scroll-to-Top button in right-bottom corner
+```
 
 #### Google Analytics integration
 
-#### Open-Graph support
-
-#### Twitter Cards Support
-
 #### Syntax highlighting
 
-#### Twitter cards and opengraph tags support
-
 #### RSS feeds
-
-#### Multilingual Support

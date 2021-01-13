@@ -1,9 +1,13 @@
 baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
 title: PaperMod
-paginate: 8
+paginate: 5
 theme: hugo-PaperMod
+
 enableInlineShortcodes: true
 enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
 
 # googleAnalytics: UA-123-45
 
@@ -26,9 +30,12 @@ languages:
                 - name: Tags
                   url: tags/
                   weight: 10
+                - name: Categories
+                  url: categories/
+                  weight: 10
 
     fr:
-        languageName: "Lang2"
+        languageName: ":fr:"
         weight: 2
         title: PaperModL2
         profileMode:
@@ -66,7 +73,6 @@ languages:
                   url: "#"
 
     fa:
-        languageName: "Langrtl"
         languagedirection: rtl
         weight: 3
         title: PaperMod RTL
@@ -86,17 +92,19 @@ outputs:
         - JSON
 
 params:
-    env: production
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
     author: Theme PaperMod
     # author: ["Me", "You"] # multiple authors
-    ShowReadingTime: true
+
     defaultTheme: auto
+    # disableThemeToggle: true
     ShowShareButtons: true
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
     displayFullLangName: true
-    # images: ""
-    # assets:
-    #   favicon: '<path / external url>'
+    # comments: false
+    # images: ["<link or path of image for opengraph, twitter-cards>"]
 
     profileMode:
         enabled: false
@@ -112,23 +120,53 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Hi there \U0001F44B"
+        Title: "PaperMod v3.0"
         Content: >
             Welcome to demo of hugo's theme PaperMod.
 
             - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
 
+            - Do give a 🌟 on Github !
+
+            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+
     socialIcons:
-        - name: twitter
-          url: "#"
-        - name: stackoverflow
-          url: "#"
-        - name: codepen
-          url: "#"
-        - name: linkedin
-          url: "#"
         - name: github
           url: "https://github.com/adityatelange/hugo-PaperMod"
+        - name: KoFi
+          url: "https://ko-fi.com/adityatelange"
+        - name: RsS
+          url: "index.xml"
+
+    # label:
+    #     text: "Home"
+    #     icon: icon.png
+    #     iconHeight: 35
+
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: "XYZabc"
+
+    # assets:
+    #     favicon: "<link / abs url>"
+    #     favicon16x16: "<link / abs url>"
+    #     favicon32x32: "<link / abs url>"
+    #     apple_touch_icon: "<link / abs url>"
+    #     safari_pinned_tab: "<link / abs url>"
+
+    # cover:
+    #     hidden: true # hide everywhere but not in structured data
+    #     hiddenInList: true # hide on list pages and home
+    #     hiddenInSingle: true # hide on single page
+
+    # fuseOpts:
+    #     isCaseSensitive: false
+    #     shouldSort: true
+    #     location: 0
+    #     distance: 1000
+    #     threshold: 0.4
+    #     minMatchCharLength: 0
+    #     keys: ["title", "permalink", "summary", "content"]
 
 taxonomies:
     category: categories
