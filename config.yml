@@ -104,7 +104,7 @@ params:
     # disableSpecial1stPost: true
     displayFullLangName: true
     # comments: false
-    # images: ["<link or path of image for opengraph, twitter-cards>"]
+    images: ["papermod-cover.png"]
 
     profileMode:
         enabled: false
