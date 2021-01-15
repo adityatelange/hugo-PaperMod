@@ -335,12 +335,6 @@
     transform: scale(.96)
 }
 
-@media (prefers-reduced-motion) {
-    .share-buttons svg:active {
-        transform: none
-    }
-}
-
 h1:hover .anchor,
 h2:hover .anchor,
 h3:hover .anchor,

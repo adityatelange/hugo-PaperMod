@@ -129,10 +129,3 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary)
 }
-
-@media screen and (min-width:768px) {
-    ::-webkit-scrollbar {
-        width: 10px;
-        height: 6px
-    }
-}

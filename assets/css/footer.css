@@ -48,9 +48,3 @@
 .top-link:focus {
     outline: 0
 }
-
-@media screen and (max-width:800px) {
-    .list .top-link {
-        transform: translateY(-5rem)
-    }
-}

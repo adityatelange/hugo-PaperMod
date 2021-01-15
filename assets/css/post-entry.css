@@ -7,12 +7,6 @@
     margin: var(--gap) 0 calc(var(--gap) * 2) 0
 }
 
-@media screen and (max-width:600px) {
-    .first-entry {
-        min-height: 260px
-    }
-}
-
 .first-entry .entry-header {
     overflow: hidden;
     display: -webkit-box;
@@ -51,12 +45,6 @@
 
 .post-entry:active {
     transform: scale(.96)
-}
-
-@media (prefers-reduced-motion) {
-    .post-entry:active {
-        transform: none
-    }
 }
 
 .tag-entry .entry-cover {

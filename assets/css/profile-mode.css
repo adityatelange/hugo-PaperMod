@@ -28,12 +28,6 @@
     pointer-events: none
 }
 
-@media screen and (max-width:600px) {
-    .profile img {
-        transform: scale(.85)
-    }
-}
-
 .buttons {
     flex-wrap: wrap;
     max-width: 400px;
@@ -56,8 +50,3 @@
     transform: scale(.96)
 }
 
-@media (prefers-reduced-motion) {
-    .button:active  {
-        transform: none
-    }
-}

@@ -42,13 +42,3 @@
     color: var(--secondary);
     font-size: 14px
 }
-
-@media (max-width:800px) {
-    .archive-month {
-        flex-direction: column
-    }
-
-    .archive-year {
-        margin-top: 20px
-    }
-}
