@@ -325,7 +325,7 @@ t - Theme toggle
 
 ### Enhanced SEO
 
-**Enabled only when `env: prod`**
+**Enabled only when `env: production`**
 
 -   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
 
