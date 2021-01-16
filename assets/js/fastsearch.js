@@ -49,7 +49,7 @@ function activeToggle() {
 }
 
 // execute search as each character is typed
-document.getElementById("searchInput").onkeyup = function (e) {
+sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
     const results = fuse.search(this.value); // the actual query being run using fuse.js
@@ -77,6 +77,13 @@ document.onkeydown = function (e) {
     let key = e.key;
     let ae = document.activeElement;
     let inbox = document.getElementById("searchbox").contains(ae)
+
+    if (ae === sInput) {
+        var elements = document.getElementsByClassName('active');
+        while (elements.length > 0) {
+            elements[0].classList.remove('active');
+        }
+    }
 
     if (key === "ArrowDown" && resultsAvailable && inbox) {
         e.preventDefault();
@@ -111,7 +118,7 @@ document.onkeydown = function (e) {
         ae.click(); // click on active link
     } else if (key === "Escape") {
         resultsAvailable = false;
-        document.getElementById("searchResults").innerHTML = sInput.value = ''; // clear inputbox and searchResults
+        resList.innerHTML = sInput.value = ''; // clear inputbox and searchResults
         sInput.focus(); // shift focus to input box
     }
 }
