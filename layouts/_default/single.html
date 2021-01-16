@@ -58,8 +58,9 @@
     </ul>
     {{- end }}
     {{- if .Site.Params.ShowPostNavLinks }}
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- if gt (len $pages) 1}}
     <nav class="paginav">
-      {{$pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
       {{ with $pages.Prev . }}
       <a class="prev" href="{{.Permalink}}">
         <span class="title">« {{ i18n "prev_page" }}</span>
@@ -75,6 +76,7 @@
       </a>
       {{end}}
     </nav>
+    {{- end }}
     {{- end }}
     {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
     {{- partial "share_icons.html" . }}
