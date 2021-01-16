@@ -9,7 +9,7 @@
     <div class="post-description">
       {{ .Description }}
     </div>
-    {{- if not .Params.hideMeta }}
+    {{- if not .Param.hideMeta }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
       {{- if .IsTranslated -}}&nbsp;|&nbsp;
