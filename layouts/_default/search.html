@@ -8,7 +8,7 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
     </h1>
-    {{- if .Params.hideMeta }}{{ else }}
+    {{- if not .Param.hideMeta }}
     <div class="post-meta">
         {{- if .IsTranslated -}}
         <ul class="i18n_list">
