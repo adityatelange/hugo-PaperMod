@@ -268,8 +268,6 @@ Add `#center` after image to center align an image
 ![name](path/to/image.png#center)
 ```
 
-Thanks to [@pacientes](https://github.com/pacientes) for this
-
 ---
 
 ## References
