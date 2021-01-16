@@ -374,3 +374,38 @@ h6:hover .anchor {
 .post-content table::-webkit-scrollbar-thumb {
     border-width: 2px;
 }
+
+.post-content ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.paginav {
+    margin: 10px 0;
+    display: flex;
+    line-height: 36px;
+}
+
+.paginav .title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: small;
+    color: var(--secondary);
+}
+
+.paginav .prev,
+.paginav .next {
+    width: 50%;
+}
+
+.paginav span:hover:not(.title) {
+    box-shadow: 0 1px 0;
+}
+
+.paginav .next {
+    margin-inline-start: auto;
+    text-align: right;
+}
+
+[dir="rtl"] .paginav .next {
+    text-align: left;
+}

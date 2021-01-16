@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
     /* theme-vars */
     :root {
         --gap: 14px;
@@ -12,6 +12,24 @@
     /* post-entry */
     .first-entry {
         min-height: 260px;
+    }
+
+    /* post-single */
+    .paginav {
+        flex-direction: column;
+    }
+
+    .paginav .prev,
+    .paginav .next {
+        width: 100%;
+    }
+
+    .paginav .next {
+        text-align: unset;
+    }
+
+    [dir="rtl"] .paginav .next {
+        text-align: unset;
     }
 
     /* archive */
