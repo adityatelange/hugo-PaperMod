@@ -103,7 +103,7 @@ params:
             url: "<link2>"
 ```
 
-ex. [here](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml#L106)
+ex. [config.yml#L106](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml#L106)
 
 ---
 
@@ -305,7 +305,7 @@ params:
     comments: true
 ```
 
-read more about this [here](https://gohugo.io/content-management/comments/)
+read more about this [hugo-comments](https://gohugo.io/content-management/comments/)
 
 ---
 
