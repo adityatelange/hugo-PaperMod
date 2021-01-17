@@ -9,7 +9,7 @@
     <div class="post-description">
       {{ .Description }}
     </div>
-    {{- if not .Param.hideMeta }}
+    {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
       {{- if .IsTranslated -}}&nbsp;|&nbsp;
@@ -33,9 +33,9 @@
   </header>
   {{- $isHidden := ((.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInSingle) | default .Params.cover.hidden )}}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-  {{- if .Param.ShowToc }}
+  {{- if (.Param "ShowToc") }}
   <div class="toc">
-    <details {{if .Param.TocOpen }} open{{ end }}>
+    <details {{if (.Param "TocOpen") }} open{{ end }}>
       <summary accesskey="c" title="(Alt + C)">
         <div class="details">{{- i18n "toc" | default "Table of Contents" }}</div>
       </summary>
@@ -61,7 +61,7 @@
     {{- end }}
   </footer>
 
-  {{- if .Param.comments }}
+  {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
