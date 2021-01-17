@@ -120,7 +120,7 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod v3.0"
+        Title: "PaperMod"
         Content: >
             Welcome to demo of hugo's theme PaperMod.
 

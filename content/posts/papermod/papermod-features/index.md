@@ -204,6 +204,7 @@ cover:
     # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
     alt: "<alt text>"
     caption: "<text>"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
 ```
 
 When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/), multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
