@@ -382,7 +382,7 @@ h6:hover .anchor {
 .paginav {
     margin: 10px 0;
     display: flex;
-    line-height: 36px;
+    line-height: 30px;
 }
 
 .paginav .title {
