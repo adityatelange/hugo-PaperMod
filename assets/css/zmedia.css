@@ -14,24 +14,6 @@
         min-height: 260px;
     }
 
-    /* post-single */
-    .paginav {
-        flex-direction: column;
-    }
-
-    .paginav .prev,
-    .paginav .next {
-        width: 100%;
-    }
-
-    .paginav .next {
-        text-align: unset;
-    }
-
-    [dir="rtl"] .paginav .next {
-        text-align: unset;
-    }
-
     /* archive */
     .archive-month {
         flex-direction: column;
