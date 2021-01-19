@@ -376,7 +376,7 @@ h6:hover .anchor {
 }
 
 .post-content ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.64);
+    background: rgba(255, 255, 255, 0.64)
 }
 
 .paginav {
