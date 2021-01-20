@@ -17,11 +17,6 @@
     padding: 12px 0
 }
 
-.profile .profile_inner span {
-    padding: 10px 0;
-    font-size: 18px
-}
-
 .profile img {
     display: inline-table;
     border-radius: 50%;
@@ -49,4 +44,3 @@
 .button:active {
     transform: scale(.96)
 }
-
