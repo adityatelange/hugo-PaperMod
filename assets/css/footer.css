@@ -40,6 +40,11 @@
     transition: visibility .5s, opacity .8s linear
 }
 
+.top-link,
+.top-link svg {
+    filter: drop-shadow(0px 0px 0px var(--theme));
+}
+
 .footer a:hover,
 .top-link:hover {
     color: var(--primary)
