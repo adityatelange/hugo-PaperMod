@@ -18,7 +18,7 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 ---
 
 <p align="center">
-  <kbd><img width=600px src="https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/homeinfo.webp" alt="HomeInfo" /></kbd>
+  <kbd><img width=600px src="https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/homeinfo.jpg" alt="HomeInfo" /></kbd>
   <kbd><img width=153px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
 </p>
 
@@ -45,7 +45,7 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 -   Search Page with Fuse.js
 -   No webpack, nodejs and other depedencies required to edit the theme.
 
-Read this post For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
+Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
 
 ---
 
