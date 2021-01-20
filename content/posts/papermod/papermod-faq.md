@@ -1,7 +1,7 @@
 ---
 title: "FAQs"
 summary: Frequently Asked Questions
-date: 2020-09-18T11:30:03+05:30
+date: 2021-01-20
 showtoc: true
 tocOpen: true
 aliases: ["/papermod-how-to-guide"]
