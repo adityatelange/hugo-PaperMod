@@ -145,7 +145,7 @@
 
 .post-content .highlight:not(.gist .highlight),
 .post-content pre {
-    margin: auto 0 20px;
+    margin: 10px auto;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius)
 }
@@ -160,10 +160,6 @@
 
 .post-content .highlight pre {
     margin: 0
-}
-
-.post-content .highlight {
-    margin: 10px auto
 }
 
 .post-content .highlighttable {
