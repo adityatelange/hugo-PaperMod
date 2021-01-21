@@ -143,6 +143,10 @@
     margin: auto 0
 }
 
+.post-content .highlight table {
+    border-radius: var(--radius)
+}
+
 .post-content .highlight:not(.gist .highlight),
 .post-content pre {
     margin: 10px auto;
