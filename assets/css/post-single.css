@@ -64,7 +64,7 @@
     font-size: 12px
 }
 
-.post-content a,
+.post-content a:not(.gist a),
 .toc a:hover {
     box-shadow: 0 1px 0
 }
@@ -127,7 +127,7 @@
 }
 
 .post-content table th,
-.post-content:not(.gist) > table:not(.highlighttable) td {
+.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 80px;
     padding: 12px 8px;
     line-height: 1.5;
@@ -143,7 +143,7 @@
     margin: auto 0
 }
 
-.post-content:not(.gist) > .highlight,
+.post-content .highlight:not(.gist .highlight),
 .post-content pre {
     margin: auto 0 20px;
     background: var(--hljs-bg) !important;
