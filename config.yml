@@ -173,6 +173,15 @@ taxonomies:
     tag: tags
     series: series
 
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         # noClasses: false
+#         style: monokai
+
 privacy:
     vimeo:
         disabled: false
