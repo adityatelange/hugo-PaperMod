@@ -147,7 +147,7 @@
     border-radius: var(--radius)
 }
 
-.post-content .highlight:not(.gist .highlight),
+.post-content .highlight:not(table),
 .post-content pre {
     margin: 10px auto;
     background: var(--hljs-bg) !important;
