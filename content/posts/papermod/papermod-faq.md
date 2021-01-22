@@ -274,34 +274,36 @@ Add `#center` after image to center align an image
 
 1. Disable Highlight.js in site `config.yml`
 
-```yml
-params:
-    assets:
-        disableHLJS: true
-```
+    ```yml
+    params:
+        assets:
+            disableHLJS: true
+    ```
 
 2. Set hugo's markdown styling in site `config.yml`
 
-```yml
-markup:
-    highlight:
-        # anchorLineNos: true
-        codeFences: true
-        guessSyntax: true
-        lineNos: true
-        # noClasses: false
-        style: monokai
-```
+    ```yml
+    markup:
+        highlight:
+            # anchorLineNos: true
+            codeFences: true
+            guessSyntax: true
+            lineNos: true
+            # noClasses: false
+            style: monokai
+    ```
 
 3. If you want `lineNos: true`, the background won't be proper.
+   This will only work with `noClasses: false` or `pygmentsUseClasses: true`.
+   Read [Generate Syntax Highlighter CSS](https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css)
 
-Add the following to `assets/css/extended/custom.css`
+    Add the following to `assets/css/extended/custom.css`
 
-```css
-.chroma {
-    background-color: unset;
-}
-```
+    ```css
+    .chroma {
+        background-color: unset;
+    }
+    ```
 
 More Info : [Configure Markup - Highlight](https://gohugo.io/getting-started/configuration-markup#highlight)
 
