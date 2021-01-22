@@ -115,6 +115,10 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 </html>
 {{< /highlight >}}
 
+#### Gist
+
+{{< gist spf13 7896402 >}}
+
 ## List Types
 
 #### Ordered List
