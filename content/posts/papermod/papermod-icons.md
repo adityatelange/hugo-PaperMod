@@ -50,14 +50,15 @@ draft: true
 | 33  | soundcloud    | soundcloud.com                  |
 | 34  | shutterstock  | shutterstock.com                |
 | 35  | slack         | slack.com                       |
-| 36  | sourcerer     | sourcerer.io                    |
-| 37  | stackoverflow | stackoverflow.com               |
-| 38  | steam         | steampowered.com                |
-| 39  | telegram      | telegram.org                    |
-| 40  | twitch        | twitch.tv                       |
-| 41  | twitter       | twitter.com                     |
-| 42  | youtube       | youtube.com                     |
-| 43  | other         | -                               |
+| 36  | snapchat      | snapchat.com/add                |
+| 37  | sourcerer     | sourcerer.io                    |
+| 38  | stackoverflow | stackoverflow.com               |
+| 39  | steam         | steampowered.com                |
+| 40  | telegram      | telegram.org                    |
+| 41  | twitch        | twitch.tv                       |
+| 42  | twitter       | twitter.com                     |
+| 43  | youtube       | youtube.com                     |
+| 44  | other         | -                               |
 
 Usage :
 
