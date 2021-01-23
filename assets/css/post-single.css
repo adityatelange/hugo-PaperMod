@@ -265,7 +265,7 @@
     font-weight: 500
 }
 
-.toc blockquote {
+.toc .inner {
     margin: 0 20px;
     padding: 10px 20px
 }
