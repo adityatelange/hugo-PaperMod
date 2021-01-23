@@ -14,3 +14,6 @@
 
 - id: translations
   translation: "Translations"
+
+- id: powered_by
+  translation: "Powered by"
