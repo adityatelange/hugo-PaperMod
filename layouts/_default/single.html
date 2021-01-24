@@ -13,7 +13,7 @@
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
       {{- if .IsTranslated -}}
-      {{- if or .Params.author $.Site.Params.author $.Site.Params.ShowReadingTime (not .Date.IsZero) }}&nbsp;|&nbsp;{{- end -}}
+      {{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) }}&nbsp;|&nbsp;{{- end -}}
       <ul class="i18n_list">
         {{- i18n "translations" | default "Translations"}}:
         {{- range .Translations }}
