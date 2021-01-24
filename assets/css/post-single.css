@@ -290,7 +290,8 @@
 
 .post-tags a,
 .share-buttons {
-    border: 1px solid var(--tertiary)
+    border: 1px solid var(--tertiary);
+    border-radius: var(--radius)
 }
 
 .post-tags a {
@@ -300,8 +301,7 @@
     color: var(--secondary);
     font-size: 14px;
     line-height: 34px;
-    background: var(--code-bg);
-    border-radius: 4px
+    background: var(--code-bg)
 }
 
 .post-tags a:hover {
@@ -311,7 +311,6 @@
 .share-buttons {
     margin-top: var(--gap);
     padding-inline-start: var(--radius);
-    border-radius: var(--radius);
     display: flex;
     overflow-x: auto
 }
