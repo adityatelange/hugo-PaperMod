@@ -27,8 +27,8 @@
 @media screen and (min-width: 768px) {
     /* reset */
     ::-webkit-scrollbar {
-        width: 10px;
-        height: 6px;
+        width: 19px;
+        height: 11px;
     }
 }
 

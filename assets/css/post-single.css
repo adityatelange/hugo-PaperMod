@@ -347,9 +347,19 @@ h6:hover .anchor {
 }
 
 .post-content ::-webkit-scrollbar-thumb {
+    border: 2px solid var(--hljs-bg);
     background: rgba(255, 255, 255, 0.32)
 }
 
 .post-content ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.64)
+    background: rgba(255, 255, 255, 0.56)
+}
+
+.gist ::-webkit-scrollbar-thumb {
+    border: 2px solid rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.32)
+}
+
+.gist ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.56)
 }
