@@ -290,8 +290,9 @@
 
 .post-tags a,
 .share-buttons {
-    border: 1px solid var(--tertiary);
-    border-radius: var(--radius)
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    border: 1px solid var(--border)
 }
 
 .post-tags a {
