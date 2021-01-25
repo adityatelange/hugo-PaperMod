@@ -248,7 +248,7 @@
     margin-bottom: 40px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: .5em
+    padding: .4em
 }
 
 .toc details summary {
