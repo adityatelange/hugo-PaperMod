@@ -23,6 +23,9 @@
 {{- if .Site.Params.analytics.yandex.SiteVerificationTag }}
 <meta name="yandex-verification" content="{{ .Site.Params.analytics.yandex.SiteVerificationTag }}" />
 {{- end}}
+{{- if .Site.Params.analytics.bing.SiteVerificationTag }}
+<meta name="msvalidate.01" content="{{ .Site.Params.analytics.bing.SiteVerificationTag }}" />
+{{- end}}
 <!-- Styles -->
 {{- $common := (resources.Match "css/*.css") | resources.Concat "assets/css/common.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
