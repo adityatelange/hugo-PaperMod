@@ -3,7 +3,6 @@ title: PaperMod
 paginate: 5
 theme: hugo-PaperMod
 
-canonifyURLs: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
