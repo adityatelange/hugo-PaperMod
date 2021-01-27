@@ -375,10 +375,6 @@ h6:hover .anchor {
     border-width: 2px;
 }
 
-.post-content ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.64)
-}
-
 .paginav {
     margin: 10px 0;
     display: flex;
