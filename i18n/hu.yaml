@@ -1,0 +1,16 @@
+- id: prev_page
+  translation: "Előző oldal"
+
+- id: next_page
+  translation: "Következő oldal"
+
+- id: read_time
+  translation:
+    one: "1 perc"
+    other: "{{ .Count }} perc"
+
+- id: toc
+  translation: "Tartalomjegyzék"
+
+- id: translations
+  translation: "Fordítások"
