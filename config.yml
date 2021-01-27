@@ -103,6 +103,7 @@ params:
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
+    ShowPostNavLinks: true
     # comments: false
     images: ["papermod-cover.png"]
 
