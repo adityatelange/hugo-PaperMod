@@ -57,6 +57,27 @@
       {{- end }}
     </ul>
     {{- end }}
+    {{- if .Site.Params.ShowPostNavLinks }}
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- if and (gt (len $pages) 1) (in $pages . ) }}
+    <nav class="paginav">
+      {{- with $pages.Next . }}
+      <a class="prev" href="{{.Permalink}}">
+        <span class="title">« {{ i18n "prev_page" }}</span>
+        <br>
+        <span>{{- .Name -}}</span>
+      </a>
+      {{- end}}
+      {{- with $pages.Prev . }}
+      <a class="next" href="{{.Permalink}}">
+        <span class="title">{{ i18n "next_page" }} »</span>
+        <br>
+        <span>{{- .Name -}}</span>
+      </a>
+      {{- end}}
+    </nav>
+    {{- end }}
+    {{- end }}
     {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
     {{- partial "share_icons.html" . }}
     {{- end }}
