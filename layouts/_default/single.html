@@ -2,6 +2,20 @@
 
 <article class="post-single">
   <header class="post-header">
+    {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+    <div class="breadcrumbs post-meta">
+      <a href="{{ "" | absLangURL }}">Home</a>
+      {{- range $index, $element := split $url "/" }}
+
+      {{- $.Scratch.Add "path" (printf "%s/" $element )}}
+      {{- $bc_pg := $.Site.GetPage ($.Scratch.Get "path") -}}
+
+      {{- if (and ($bc_pg) (gt (len . ) 0))}}
+      {{- print "&nbsp;»&nbsp;" | safeHTML -}}<a href="{{ $bc_pg.Permalink }}">{{ $bc_pg.Name }}</a>
+      {{- end }}
+
+      {{- end }}
+    </div>
     <h1 class="post-title">
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
