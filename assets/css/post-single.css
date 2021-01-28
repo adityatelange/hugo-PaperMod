@@ -13,7 +13,8 @@
     margin-bottom: 5px;
 }
 
-.post-meta {
+.post-meta,
+.breadcrumbs {
     color: var(--secondary);
     font-size: 14px;
     display: flex;
@@ -25,6 +26,10 @@
     list-style: none;
     margin: auto 3px;
     box-shadow: 0 1px 0 var(--secondary)
+}
+
+.breadcrumbs a {
+    font-size: 16px;
 }
 
 .post-content {
