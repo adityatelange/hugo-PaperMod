@@ -58,7 +58,7 @@ Or you can Download as Zip from Github Page and extract in your themes directory
 
 ### Finally ...
 
-Add in `config.yml`:
+Add in `config.toml`:
 
 ```yml
 theme: "PaperMod"
@@ -80,7 +80,7 @@ theme: "PaperMod"
 
 ---
 
-## Sample `config.yml`
+## Sample `config.toml`
 
 > **Example Site Structure is present here**: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/)
 
