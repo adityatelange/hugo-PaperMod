@@ -3,9 +3,10 @@
 <article class="post-single">
   <header class="post-header">
     {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+    {{- $lang_url := replace $url ( printf "%s" .Lang) "" }}
     <div class="breadcrumbs post-meta">
       <a href="{{ "" | absLangURL }}">Home</a>
-      {{- range $index, $element := split $url "/" }}
+      {{- range $index, $element := split $lang_url "/" }}
 
       {{- $.Scratch.Add "path" (printf "%s/" $element )}}
       {{- $bc_pg := $.Site.GetPage ($.Scratch.Get "path") -}}
