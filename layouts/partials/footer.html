@@ -2,7 +2,7 @@
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
+    <span>&copy; {{ now.Year }} <a href="{{ "" | relLangURL }}">{{ .Site.Title }}</a></span>
     {{- end }}
     <span>&middot;</span>
     <span>{{ i18n "powered_by" }} <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
