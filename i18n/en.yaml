@@ -14,3 +14,6 @@
 
 - id: translations
   translation: "Translations"
+
+- id: home
+  translation: "Home"

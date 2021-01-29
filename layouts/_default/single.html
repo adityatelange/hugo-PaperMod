@@ -7,7 +7,7 @@
       {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{- $lang_url := replace $url ( printf "%s" .Lang) "" }}
 
-      <a href="{{ "" | absLangURL }}">Home</a>
+      <a href="{{ "" | absLangURL }}">{{ i18n "home" | default "Home"}}</a>
       {{- range $index, $element := split $lang_url "/" }}
 
       {{- $.Scratch.Add "path" (printf "%s/" $element )}}
