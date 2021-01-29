@@ -71,7 +71,7 @@
 {{- range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
-{{- range .Translations -}}
+{{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
 {{ end }}
 {{- partial "extend_head.html" . -}}
