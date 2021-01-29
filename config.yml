@@ -104,6 +104,7 @@ params:
     # disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
+    ShowBreadCrumbs: true
     # comments: false
     images: ["papermod-cover.png"]
 
