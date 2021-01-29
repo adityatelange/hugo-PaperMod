@@ -2,6 +2,24 @@
 
 <article class="post-single">
   <header class="post-header">
+    {{- if (.Param "ShowBreadCrumbs")}}
+    <div class="breadcrumbs">
+      {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+      {{- $lang_url := replace $url ( printf "%s" .Lang) "" }}
+
+      <a href="{{ "" | absLangURL }}">{{ i18n "home" | default "Home"}}</a>
+      {{- range $index, $element := split $lang_url "/" }}
+
+      {{- $.Scratch.Add "path" (printf "%s/" $element )}}
+      {{- $bc_pg := $.Site.GetPage ($.Scratch.Get "path") -}}
+
+      {{- if (and ($bc_pg) (gt (len . ) 0))}}
+      {{- print "&nbsp;»&nbsp;" | safeHTML -}}<a href="{{ $bc_pg.Permalink }}">{{ $bc_pg.Name }}</a>
+      {{- end }}
+
+      {{- end }}
+    </div>
+    {{- end }}
     <h1 class="post-title">
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
