@@ -43,6 +43,8 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 -   SEO Friendly.
 -   Muliple Author support.
 -   Search Page with Fuse.js
+-   Other Posts suggestion below a post
+-   BreadCrumb Navigation
 -   No webpack, nodejs and other depedencies required to edit the theme.
 
 Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
