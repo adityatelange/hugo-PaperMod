@@ -14,12 +14,9 @@ function loadSearch() {
                 if (data) {
                     // fuse.js options; check fuse.js website for details
                     var options = {
-                        isCaseSensitive: false,
-                        shouldSort: true,
-                        location: 0,
                         distance: 100,
                         threshold: 0.4,
-                        minMatchCharLength: 0,
+                        ignoreLocation: true,
                         keys: [
                             'title',
                             'permalink',
