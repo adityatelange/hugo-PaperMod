@@ -52,7 +52,7 @@ function activeToggle() {
 sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
-    const results = fuse.search(this.value); // the actual query being run using fuse.js
+    const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
 
     if (results.length !== 0) {
         // build our html if result exists
