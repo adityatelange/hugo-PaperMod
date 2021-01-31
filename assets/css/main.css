@@ -6,10 +6,6 @@
     padding: var(--gap)
 }
 
-.page-header {
-    margin-bottom: 24px
-}
-
 .page-header h1 {
     font-size: 40px
 }
