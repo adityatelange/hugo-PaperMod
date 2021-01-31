@@ -89,6 +89,7 @@ body:not(.dark) #sun {
 }
 
 .lang-switch a {
+    margin: auto 3px;
     font-size: 16px;
     font-weight: 500;
 }
