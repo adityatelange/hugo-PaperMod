@@ -13,7 +13,7 @@
 }
 
 .logo,
-.menu {
+#menu {
     display: flex;
     margin: auto var(--gap);
 }
@@ -25,7 +25,6 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
-    margin-inline-end: 10px
 }
 
 .logo a img {
@@ -37,9 +36,14 @@
     margin-inline-end: 8px
 }
 
-.theme-toggle svg {
+#theme-toggle svg {
     height: 18px;
+}
+
+a#theme-toggle  {
+    font-size: 24px;
     user-select: none;
+    margin: auto 4px;
     cursor: pointer
 }
 
@@ -52,22 +56,22 @@ body:not(.dark) #sun {
     display: none
 }
 
-.menu {
+#menu {
     list-style: none;
     word-break: keep-all;
     overflow-x: auto;
     white-space: nowrap
 }
 
-.menu li+li {
+#menu li+li {
     margin-inline-start: var(--gap)
 }
 
-.menu a {
+#menu a {
     font-size: 16px
 }
 
-.menu .active {
+#menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor
 }
@@ -75,13 +79,18 @@ body:not(.dark) #sun {
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
-    display: inline-flex
+    display: inline-flex;
+    margin: auto 4px;
+}
+
+.lang-switch {
+    display: flex;
+    flex-wrap: inherit
 }
 
 .lang-switch a {
     font-size: 16px;
     font-weight: 500;
-    margin: 0 8px
 }
 
 .logo-switches {
