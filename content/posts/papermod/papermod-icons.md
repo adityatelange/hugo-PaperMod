@@ -2,8 +2,6 @@
 title: "Icons"
 summary: List of all Icons supported by PaperMod
 date: 2021-01-20
-showtoc: true
-tocopen: true
 weight: 4
 aliases: ["/papermod-icons"]
 tags: ["PaperMod"]

@@ -2,12 +2,10 @@
 title: "Features"
 summary: Get known about All Features in PaperMod
 date: 2021-01-20
-showToc: true
 weight: 2
 aliases: ["/papermod-features"]
 tags: ["PaperMod"]
 author: "Aditya Telange"
-tocopen: true
 ---
 
 ## Intro

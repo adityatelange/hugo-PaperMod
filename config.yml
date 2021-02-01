@@ -105,6 +105,7 @@ params:
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
+    ShowToc: true
     # comments: false
     images: ["papermod-cover.png"]
 
