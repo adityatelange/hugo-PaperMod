@@ -31,48 +31,112 @@ weight: 5
 | hidemeta                             | boolean       | true \| false            | To Hide meta elements : date, read-time, author and available-translations for page |
 | showtoc                              | boolean       | true \| false            | To show/hide Table of Contents                                                      |
 | tocopen                              | boolean       | true \| false            | To keep open ToC by default on page load                                            |
+| ShowPostNavLinks                     | boolean       | true \| false            | Show Previous and Next Posts below a Post                                           |
+| ShowBreadCrumbs                      | boolean       | true \| false            | Show BreadCrumb Navigation above single post/page                                   |
 | comments                             | boolean       | true \| false            | To show/hide comments                                                               |
-| fuseOpts                             |               |                          |                                                                                     |
-| socialIcons                          |               |                          |                                                                                     |
-| analytics.google.SiteVerificationTag | string        | "XYZabc"                 |                                                                                     |
+| analytics.google.SiteVerificationTag | string        | "XYZabc"                 | Site Verification Tag for Google Analytics                                          |
+| analytics.bing.SiteVerificationTag   | string        | "XYZabc"                 | Site Verification Tag for Bing                                                      |
+| analytics.yandex.SiteVerificationTag | string        | "XYZabc"                 | Site Verification Tag for Yandex                                                    |
 |                                      |               |                          |                                                                                     |
-| label.text                           | string        | 'Home'                   | To display different label text other than title                                    |
-| label.icon                           | string        | '/apple-touch-icon.png'  | To display a logo image in label                                                    |
-| label.iconHeight                     | integer       | 35                       | To set size of label logo image                                                     |
-| assets.favicon                       | string        | 'icon.ico'               | To set favicon, can be path or external link                                        |
-| assets.disableHLJS                   |               |                          |                                                                                     |
-| assets.disableFingerprinting         |               |                          |                                                                                     |
-| cover.linkFullImages                 | boolean       | true \| false            | To open full size cover images on click on cover                                    |
-| cover.responsiveImages               | boolean       | true \| false            | To enable/disable generation of responsive cover images                             |
-| cover.hidden                         |               |                          |                                                                                     |
-| cover.hiddenInList                   |               |                          |                                                                                     |
-| cover.hiddenInSingle                 |               |                          |                                                                                     |
-| profileMode.enabled                  |               |                          |                                                                                     |
-| profileMode.title                    |               |                          |                                                                                     |
-| profileMode.imageUrl                 |               |                          |                                                                                     |
-| profileMode.imageWidth               |               |                          |                                                                                     |
-| profileMode.imageHeight              |               |                          |                                                                                     |
-| profileMode.imageTitle               |               |                          |                                                                                     |
-| profileMode.buttons                  |               |                          |                                                                                     |
+| fuseOpts                             | -             | -                        | [Details](#fuseOpts)                                                                |
+| socialIcons                          | -             | -                        | [Details](#socialIcons)                                                             |
+| label                                | -             | -                        | [Details](#label)                                                                   |
+| assets                               | -             | -                        | [Details](#assets)                                                                  |
+| cover                                | -             | -                        | [Details](#cover)                                                                   |
+| profileMode                          | -             | -                        | [Details](#profilemode)                                                             |
+
+#### label
+
+| name             | type    | example                 | Description                                      |
+| ---------------- | ------- | ----------------------- | ------------------------------------------------ |
+| label.text       | string  | 'Home'                  | To display different label text other than title |
+| label.icon       | string  | '/apple-touch-icon.png' | To display a logo image in label                 |
+| label.iconHeight | integer | 35                      | To set size of label logo image                  |
+
+#### profileMode
+
+| name                    | type    | example                                        | Description |
+| ----------------------- | ------- | ---------------------------------------------- | ----------- |
+| profileMode.enabled     | boolean | true \| false                                  |             |
+| profileMode.title       | string  | "Title"                                        |             |
+| profileMode.imageUrl    | string  | "image.png" \| "https://example.com/image.jpg" |             |
+| profileMode.imageWidth  | string  | ""                                             |             |
+| profileMode.imageHeight | string  | ""                                             |             |
+| profileMode.imageTitle  | string  | "This image is a picture of .."                |             |
+| profileMode.buttons     | -       | -                                              |             |
+
+#### assets
+
+| name                         | type    | example    | Description                                  |
+| ---------------------------- | ------- | ---------- | -------------------------------------------- |
+| assets.favicon               | string  | 'icon.ico' | To set favicon, can be path or external link |
+| assets.disableHLJS           | boolean |            |                                              |
+| assets.disableFingerprinting | boolean |            |                                              |
+
+#### cover
+
+| name                   | type    | example       | Description                                             |
+| ---------------------- | ------- | ------------- | ------------------------------------------------------- |
+| cover.linkFullImages   | boolean | true \| false | To open full size cover images on click on cover        |
+| cover.responsiveImages | boolean | true \| false | To enable/disable generation of responsive cover images |
+| cover.hidden           | boolean | true \| fals  |                                                         |
+| cover.hiddenInList     | boolean | true \| fals  |                                                         |
+| cover.hiddenInSingle   | boolean | true \| fals  |                                                         |
+
+#### fuseOpts
+
+```yml
+fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"] ##  can be less but not more than shown in list
+```
+
+#### socialIcons
+
+```yml
+socialIcons:
+    - name: "<platform>"
+        url: "<link>"
+    - name: "<platform 2>"
+        url: "<link2>"
+```
+
+####
+
+```yml
+profileMode:
+    buttons:
+        - name: Archive
+        url: "/archive"
+        - name: Github
+        url: "https://github.com/"
+```
 
 ---
 
 ### Page Variables
 
-| Name           | Type          | Example               | Description                                                                         |
-| -------------- | ------------- | --------------------- | ----------------------------------------------------------------------------------- |
-| showtoc        | boolean       | true \| false         | To show/hide Table of Contents                                                      |
-| tocopen        | boolean       | true \| false         | To keep open ToC by default on page load                                            |
-| hidemeta       | boolean       | true \| false         | To Hide meta elements : date, read-time, author and available-translations for page |
-| comments       | boolean       | true \| false         | To show/hide comments                                                               |
-| description    | string        | 'description text'    | Show Post Description under Title                                                   |
-| disableShare   | boolean       | true \| false         | To hide/show share icons under a page                                               |
-| disableHLJS    |               |                       |                                                                                     |
-| author         | string \|list | 'Me' \| ['Me','You']  | To show multiple Authors                                                            |
-| cover.image    | string        | 'featured.jpg'        | To add a cover image                                                                |
-| cover.caption  | string        | 'caption for image'   | To add caption to cover image                                                       |
-| cover.alt      | string        | 'this is cover image' | Alternate text to show if image doesn't load/show up                                |
-| cover.relative | boolean       | true \| false         | To use relative path for cover image, used in hugo Page-bundles                     |
-| cover.hidden   |               |                       |                                                                                     |
-|                |               |                       |                                                                                     |
-| weight         | integer       | 5                     | To set page order or to pin a post to Top of list                                   |
+| Name            | Type          | Example               | Description                                                                         |
+| --------------- | ------------- | --------------------- | ----------------------------------------------------------------------------------- |
+| showtoc         | boolean       | true \| false         | To show/hide Table of Contents                                                      |
+| tocopen         | boolean       | true \| false         | To keep open ToC by default on page load                                            |
+| hidemeta        | boolean       | true \| false         | To Hide meta elements : date, read-time, author and available-translations for page |
+| comments        | boolean       | true \| false         | To show/hide comments                                                               |
+| description     | string        | 'description text'    | Show Post Description under Title                                                   |
+| disableShare    | boolean       | true \| false         | To hide/show share icons under a page                                               |
+| disableHLJS     | boolean       | true \| false         |                                                                                     |
+| searchHidden    | boolean       | true \| false         |                                                                                     |
+| ShowBreadCrumbs | boolean       | true \| false         | Show BreadCrumb Navigation above single post/page                                   |
+| author          | string \|list | 'Me' \| ['Me','You']  | To show multiple Authors                                                            |
+| cover.image     | string        | 'featured.jpg'        | To add a cover image                                                                |
+| cover.caption   | string        | 'caption for image'   | To add caption to cover image                                                       |
+| cover.alt       | string        | 'this is cover image' | Alternate text to show if image doesn't load/show up                                |
+| cover.relative  | boolean       | true \| false         | To use relative path for cover image, used in hugo Page-bundles                     |
+| cover.hidden    | boolean       | true \| false         |                                                                                     |
+|                 |               |                       |                                                                                     |
+| weight          | integer       | 5                     | To set page order or to pin a post to Top of list                                   |

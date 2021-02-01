@@ -10,6 +10,14 @@ author: "Aditya Telange"
 tocopen: true
 ---
 
+## Intro
+
+-   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
+
+-   You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
+
+---
+
 ### Assets (js/css)
 
 The following is enabled by default
@@ -60,12 +68,25 @@ You can refer following table for better understanding...
 
 Create a page with `archive.md` in `content` directory with following content
 
+```shell
+.
+├── config.yml
+├── content/
+│   ├── archives.md   <--- Create archive.md here
+│   └── posts/
+├── static/
+└── themes/
+    └── PaperMod/
+```
+
+and add the following to it
+
 ```yml
 ---
-title: "Archive" # in any language you want
-layout: "archives" # is necessary
-url: "/archive"
-summary: "archive"
+title: "Archive"
+layout: "archives"
+url: "/archives/"
+summary: archives
 ---
 
 ```
@@ -109,7 +130,7 @@ ex. [config.yml#L106](https://github.com/adityatelange/hugo-PaperMod/blob/exampl
 
 ### Profile Mode
 
-![profile](images/profile.jpg)
+![profile](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/profile.jpg)
 
 Shows Index/Home page as Full Page with Social Links and Image
 
@@ -141,6 +162,8 @@ params:
 
 ### Search
 
+PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) for seach functionality
+
 Add the following to site config, `config.yml`
 
 ```yml
@@ -158,10 +181,20 @@ Create a page with `search.md` in `content` directory with following content
 title: "Search" # in any language you want
 layout: "search" # is necessary
 # url: "/archive"
+# description: "Description for Search"
 summary: "search"
 ---
 
 ```
+
+To hide a particular page from being searched, add it in post's fron't matter
+
+```yml
+---
+searchHidden: true
+```
+
+ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/search.md)
 
 For Multilingual use `search.<lang>.md` ex. `search.es.md`.
 
@@ -182,8 +215,6 @@ params:
         minMatchCharLength: 0
         keys: ["title", "permalink", "summary", "content"]
 ```
-
-ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/search.md)
 
 ---
 
@@ -270,6 +301,33 @@ TocOpen: true
 ```
 
 ---
+
+### BreadCrumb Navigation
+
+Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
+
+```yml
+params:
+    ShowBreadCrumbs: true
+```
+
+Can be diabled for particular page's front-matter
+
+```yml
+---
+ShowBreadCrumbs: false
+---
+
+```
+
+### Other Posts suggestion below a post
+
+Adds a Previous / Next post suggestion under a single post
+
+```yml
+params:
+    ShowPostNavLinks: true
+```
 
 ### Multiple Authors
 

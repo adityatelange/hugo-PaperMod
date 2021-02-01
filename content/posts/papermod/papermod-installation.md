@@ -44,7 +44,7 @@ git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/Pape
 git submodule update --init --recursive
 ```
 
-**Note**: You may use ` --branch v3.0` to end of above command if you want to stick to specific release.
+**Note**: You may use ` --branch v4.0` to end of above command if you want to stick to specific release.
 
 > Updating theme :
 >
@@ -55,6 +55,14 @@ git submodule update --init --recursive
 ### Method 3
 
 Or you can Download as Zip from Github Page and extract in your themes directory
+
+Direct Links:
+
+-   [Master Branch (Latest)](https://github.com/adityatelange/hugo-PaperMod/archive/master.zip)
+-   [v4.0](https://github.com/adityatelange/hugo-PaperMod/archive/v4.0.zip)
+-   [v3.0](https://github.com/adityatelange/hugo-PaperMod/archive/v3.0.zip)
+-   [v2.0](https://github.com/adityatelange/hugo-PaperMod/archive/v2.0.zip)
+-   [v1.0](https://github.com/adityatelange/hugo-PaperMod/archive/v1.0.zip)
 
 ### Finally ...
 
@@ -197,13 +205,13 @@ menu:
           url: https://example.org
           weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
 # markup:
 #     highlight:
 #         # anchorLineNos: true
 #         codeFences: true
 #         guessSyntax: true
 #         lineNos: true
-#         # noClasses: false
 #         style: monokai
 ```
 
@@ -229,6 +237,7 @@ description: "Desc Text."
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
+searchHidden: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
@@ -237,6 +246,12 @@ cover:
     hidden: true # only hide on current single page
 
 ---
+```
+
+You can use it by creating `archetypes/post.md`
+
+```shell
+hugo new --kind post <name>
 ```
 
 ---

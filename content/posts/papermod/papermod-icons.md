@@ -13,7 +13,7 @@ draft: true
 
 ## Social Icons
 
-| No. | name          | platform link                   |
+| No. | Name          | Platform Link                   |
 | --- | ------------- | ------------------------------- |
 | 1   | 123rf         | 123rf.com                       |
 | 2   | adobestock    | stock.adobe.com                 |
@@ -89,5 +89,3 @@ Usage:
 params:
     ShowShareButtons: true
 ```
-
-You can see Below how share Icons Look.
