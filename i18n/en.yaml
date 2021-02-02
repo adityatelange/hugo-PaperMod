@@ -16,4 +16,4 @@
   translation: "Translations"
 
 - id: powered_by
-  translation: "Powered by"
+  translation: "Powered by {{ . }}"

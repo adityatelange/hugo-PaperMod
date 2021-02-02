@@ -16,4 +16,4 @@
   translation: "Übersetzungen"
 
 - id: powered_by
-  translation: "Betrieben mit"
+  translation: "Betrieben mit {{ . }}"
