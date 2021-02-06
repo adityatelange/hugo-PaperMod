@@ -31,24 +31,8 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
-      {{- if .IsTranslated -}}
-      {{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) }}&nbsp;|&nbsp;{{- end -}}
-      <ul class="i18n_list">
-        {{- i18n "translations" | default "Translations"}}:
-        {{- range .Translations }}
-        <li>
-          <a href="{{ .Permalink }}">
-            {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-            {{- .Language.LanguageName | emojify | humanize -}}
-            {{- else }}
-            {{- .Lang | humanize -}}
-            {{- end -}}
-          </a>
-        </li>
-        {{- end }}
-      </ul>
-      {{- end }}
+      {{- partial "post_meta.html" .  -}}
+      {{- partial "translation_list.html" . -}}
     </div>
     {{- end}}
   </header>

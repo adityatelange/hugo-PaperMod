@@ -15,22 +15,7 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-        {{- if .IsTranslated -}}
-        <ul class="i18n_list">
-            {{- i18n "translations" | default "Translations"}}:
-            {{- range .Translations }}
-            <li>
-                <a href="{{ .Permalink }}">
-                    {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-                    {{- .Language.LanguageName | emojify | humanize -}}
-                    {{- else }}
-                    {{- .Lang | humanize -}}
-                    {{- end -}}
-                </a>
-            </li>
-            {{- end }}
-        </ul>
-        {{- end }}
+        {{- partial "translation_list.html" . -}}
     </div>
     {{- end}}
 </header>
