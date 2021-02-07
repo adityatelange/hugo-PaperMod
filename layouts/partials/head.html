@@ -35,7 +35,7 @@
 
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint -}}
-<link href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
+<link href="{{ $stylesheet.RelPermalink }}" {{- if .Site.Params.integrity }}integrity="{{ $stylesheet.Data.Integrity }}"{{- end}} rel="preload stylesheet"
     as="style">
 {{- else}}
 <link href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
@@ -47,7 +47,7 @@
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
-<script defer src="{{ $search.RelPermalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}"></script>
+<script defer src="{{ $search.RelPermalink }}" onload="loadSearch();" {{- if .Site.Params.integrity }}integrity="{{ $search.Data.Integrity }}"{{- end}}></script>
 {{- else}}
 {{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
 <script defer src="{{ $search.RelPermalink }}" onload="loadSearch();"></script>

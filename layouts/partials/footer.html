@@ -21,7 +21,7 @@
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
-<script defer src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
+<script defer src="{{ $highlight.RelPermalink }}" {{- if .Site.Params.integrity }}integrity="{{ $highlight.Data.Integrity }}" {{- end}}
     onload="hljs.initHighlightingOnLoad();"></script>
 {{- else}}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
