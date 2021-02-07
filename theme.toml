@@ -40,7 +40,7 @@ features = [
 min_version = "0.74.0"
 
 [author]
-  name = "Aditya Telange"
+  name = "Aditya test"
   homepage = "https://github.com/adityatelange/"
 
 # If porting an existing theme
