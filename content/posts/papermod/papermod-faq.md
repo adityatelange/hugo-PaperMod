@@ -76,33 +76,6 @@ Linked Issues:
 
 ---
 
-## Archive Page
-
-```shell
-.
-├── config.yml
-├── content/
-│   ├── archives.md   <--- Create archive.md here
-│   └── posts/
-├── static/
-└── themes/
-    └── hugo-PaperMod/
-```
-
-and add the following to it
-
-```yml
----
-title: "Archive"
-layout: "archives"
-url: "/archives/"
-summary: archives
----
-
-```
-
----
-
 ## Bundling Custom css with theme's assets
 
 -   For adding custom css to be bundled inside one minimized css
@@ -117,8 +90,8 @@ Create folder in yout project directory as
 └── assets/
     └── css/
         └── extended/  <---
-        │   ├── custom_css1.css <---
-        │   └── any_name.css   <---
+            ├── custom_css1.css <---
+            └── any_name.css   <---
 ```
 
 All `css` files inside `assets/css/extended` will be bundled !
@@ -303,7 +276,7 @@ Add `#center` after image to center align an image
     }
     ```
 
-More Info : [Configure Markup - Highlight](https://gohugo.io/getting-started/configuration-markup#highlight)
+    More Info : [Configure Markup - Highlight](https://gohugo.io/getting-started/configuration-markup#highlight)
 
 ---
 

@@ -139,6 +139,7 @@ params:
     profileMode:
         enabled: true
         title: "<Title>" # optional default will be site title
+        subtitle: "This is subtitle"
         imageUrl: "<image link>" # optional
         imageTitle: "<title of image as alt>" # optional
         imageWidth: 120 # custom size
@@ -158,7 +159,7 @@ params:
 
 ---
 
-### Search
+### Search Page
 
 PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) for seach functionality
 
@@ -193,6 +194,12 @@ searchHidden: true
 ```
 
 ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/search.md)
+
+> Search Page also has Key bindings:
+>
+> -   Arrow keys to move up/down the list
+> -   Enter key (return) or Right Arrow key to Go to highlighted page
+> -   Escape key to clear searchbox and results
 
 For Multilingual use `search.<lang>.md` ex. `search.es.md`.
 
@@ -318,6 +325,8 @@ ShowBreadCrumbs: false
 
 ```
 
+---
+
 ### Other Posts suggestion below a post
 
 Adds a Previous / Next post suggestion under a single post
@@ -326,6 +335,8 @@ Adds a Previous / Next post suggestion under a single post
 params:
     ShowPostNavLinks: true
 ```
+
+---
 
 ### Multiple Authors
 

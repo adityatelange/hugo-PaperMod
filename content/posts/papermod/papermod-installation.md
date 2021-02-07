@@ -9,9 +9,21 @@ tags: ["PaperMod"]
 author: "Aditya Telange"
 ---
 
+
+## Intro
+
+-   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
+-   You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
+
+---
 ## Guide
 
 Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup hugo and create a new site.
+
+> Note: Use -f to select yml format
+>
+> `hugo new site <name of site> -f yml`
+
 Make sure you install latest version of **`hugo(>=0.74.0)`**.
 
 After you have created a new site, at [Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) follow the steps:
@@ -39,7 +51,7 @@ you can use as [submodule](https://www.atlassian.com/git/tutorials/git-submodule
 
 ```bash
 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth=1
-git submodule update --init --recursive
+git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
 ```
 
 **Note**: You may use ` --branch v4.0` to end of above command if you want to stick to specific release.
@@ -146,6 +158,7 @@ params:
     profileMode:
         enabled: false # needs to be explicitly set
         title: ExampleSite
+        subtitle: "This is subtitle"
         imageUrl: "<img location>"
         imageWidth: 120
         imageHeight: 120
