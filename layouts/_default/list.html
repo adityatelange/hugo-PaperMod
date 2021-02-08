@@ -6,6 +6,7 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
   <div class="post-description">
