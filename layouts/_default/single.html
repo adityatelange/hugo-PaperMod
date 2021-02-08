@@ -4,7 +4,7 @@
   <header class="post-header">
     {{- if (.Param "ShowBreadCrumbs")}}
     <div class="breadcrumbs">
-      {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+      {{- $url := replace .Parent.Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{- $lang_url := replace $url ( printf "%s" .Lang) "" }}
 
       <a href="{{ "" | absLangURL }}">{{ i18n "home" | default "Home"}}</a>
