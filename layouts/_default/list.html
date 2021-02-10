@@ -16,10 +16,6 @@
 </header>
 {{- end }}
 
-{{- if and .IsHome .Site.Params.homeInfoParams (eq .Paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
@@ -27,6 +23,11 @@
 {{- end}}
 
 {{ $paginator := .Paginate $pages }}
+
+{{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
 {{ $term := .Data.Term}}
 {{- range $index, $page := $paginator.Pages }}
 
