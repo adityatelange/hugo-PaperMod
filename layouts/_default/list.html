@@ -16,6 +16,10 @@
 </header>
 {{- end }}
 
+{{- if and .IsHome .Site.Params.homeInfoParams (eq .Paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
@@ -27,15 +31,14 @@
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
-{{- if .Site.Params.homeInfoParams | or .Site.Params.disableSpecial1stPost}}
-{{- partial "home_info.html" . }}
-{{- else}}
+
+{{- $user_preferred := or .Site.Params.disableSpecial1stPost .Site.Params.homeInfoParams }}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
-{{- end }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
+
 <article class="{{ $class }}">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList)}}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
@@ -72,4 +75,4 @@
 </footer>
 {{- end }}
 {{end}}{{/* end profileMode */}}
-{{- end  }}{{- /* end main */ -}}
+{{- end }}{{- /* end main */ -}}
