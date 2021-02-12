@@ -40,11 +40,9 @@
     height: 18px;
 }
 
-a#theme-toggle  {
-    font-size: 24px;
-    user-select: none;
-    margin: auto 4px;
-    cursor: pointer
+button#theme-toggle  {
+    font-size: 26px;
+    margin: auto 4px
 }
 
 body.dark #moon {
