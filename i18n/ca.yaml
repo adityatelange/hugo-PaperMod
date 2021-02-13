@@ -1,0 +1,19 @@
+- id: prev_page
+  translation: "Pàgina anterior"
+
+- id: next_page
+  translation: "Pàgina següent"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: toc
+  translation: "Taula de Continguts"
+
+- id: translations
+  translation: "Traduccions"
+
+- id: home
+  translation: "Inici"
