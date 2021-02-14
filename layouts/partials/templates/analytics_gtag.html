@@ -1,10 +1,10 @@
-{{- if .Site.Params.googleGtag }}
+{{- if .Site.Params.analytics.google.gtag }}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{- .Params.googleGtag}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{- .Site.Params.analytics.google.gtag }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', "{{- .Params.googleGtag}}");
+  gtag('config', "{{- .Site.Params.analytics.google.gtag}}");
 </script>
 {{- end}}
