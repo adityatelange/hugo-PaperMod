@@ -45,7 +45,7 @@
 
   {{- end }}
   {{- /*  self-page addition  */ -}}
-  {{- if $bc_list }}, {{end }}
+  {{- if (ge (len $bc_list) 2) }}, {{end }}
     {
       "@type": "ListItem",
       "position": {{len $bc_list}},
