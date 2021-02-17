@@ -246,7 +246,13 @@
     color: var(--primary);
     font-size: 16px;
     font-weight: bold;
-    margin: 24px 0 16px;
+    margin: 8px 0 16px;
+}
+
+.post-content figure > figcaption > p {
+	color: var(--secondary);
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .toc {
