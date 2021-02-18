@@ -1,4 +1,4 @@
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
+baseURL: "https://frankccccc.github.io/hugo-PaperMod/"
 title: PaperMod
 paginate: 5
 theme: hugo-PaperMod
@@ -93,7 +93,7 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+    description: "Theme PaperMod - https://github.com/frankccccc/hugo-PaperMod"
     author: Theme PaperMod
     # author: ["Me", "You"] # multiple authors
 
@@ -131,7 +131,7 @@ params:
 
             - Do give a 🌟 on Github !
 
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            - PaperMod is based on theme [Paper](https://github.com/frankccccc/hugo-paper).
 
     socialIcons:
         - name: github
