@@ -242,6 +242,13 @@
     margin: auto
 }
 
+.post-content figure.align-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
 .post-content figure > figcaption {
     color: var(--primary);
     font-size: 16px;
