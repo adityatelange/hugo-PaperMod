@@ -1,6 +1,6 @@
-<figure{{ if or (.Get "class") (.Get "align") }} class="
-           {{- with .Get "align" }}align-{{ . }} {{ end }}
-           {{- with .Get "class" }}{{ . }}{{ end }}"
+<figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
+           {{- if eq (.Get "align") "center" }}align-center {{ end }}
+           {{- with .Get "class" }}{{ . }}{{- end }}"
 {{- end -}}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
