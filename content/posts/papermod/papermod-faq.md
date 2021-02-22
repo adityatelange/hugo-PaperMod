@@ -246,7 +246,7 @@ use `align=center` to center image with captions
 ex.
 
 ```md
-{{< figure align=center src="image.jpg" >}}
+{{</* figure align=center src="image.jpg" */>}}
 ```
 
 ---
