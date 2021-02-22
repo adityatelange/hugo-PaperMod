@@ -19,7 +19,7 @@
 {{- else if (or .IsPage .IsSection) }}
 {{/* BreadcrumbList */}}
 {{- $url := replace .Parent.Permalink ( printf "%s" .Site.BaseURL) "" }}
-{{- $lang_url := replace $url ( printf "%s" .Lang) "" }}
+{{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
 
 {{- $scratch := newScratch }}
