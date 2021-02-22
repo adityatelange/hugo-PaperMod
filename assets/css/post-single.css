@@ -242,6 +242,10 @@
     margin: auto
 }
 
+.post-content figure.align-center {
+	text-align: center;
+}
+
 .post-content figure > figcaption {
     color: var(--primary);
     font-size: 16px;
