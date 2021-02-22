@@ -15,7 +15,8 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 -   Create a partial under `/layouts/partials/math.html`
 -   Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
--   Include the partial in your templates like so:
+-   Include the partial in your templates ([`extend_head.html`](../papermod/papermod-faq/#custom-head--footer)) like so:
+-   refer [ISSUE #236](https://github.com/adityatelange/hugo-PaperMod/issues/236)
 
 ```bash
 {{ if or .Params.math .Site.Params.math }}
