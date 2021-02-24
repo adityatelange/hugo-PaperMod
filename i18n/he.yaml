@@ -1,0 +1,19 @@
+- id: prev_page
+  translation: "לעמוד הקודם"
+
+- id: next_page
+  translation: "לעמוד הבא"
+
+- id: read_time
+  translation:
+    one : "דקה אחת"
+    other: "{{ .Count }} דקות"
+
+- id: toc
+  translation: "תוכן עניינים"
+
+- id: translations
+  translation: "תרגומים"
+
+- id: home
+  translation: "דף בית"
