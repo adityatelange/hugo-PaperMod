@@ -21,7 +21,7 @@
   </header>
   {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden}}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-  {{- if (.Param "ShowToc") }}
+  {{- if and (.Param "ShowToc") (partial "toc.html" .) }}
   <div class="toc">
     <details {{if (.Param "TocOpen") }} open{{ end }}>
       <summary accesskey="c" title="(Alt + C)">
