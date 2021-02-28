@@ -6,8 +6,11 @@
 
 - id: read_time
   translation:
-    one : "دقيقة واحده"
-    other: "دقیقه {{ .Count }}"
+    one: "دقيقة واحده"
+    two: "دقيقتان"
+    few: "بضع ثوان"
+    zero: "الآن"
+    other: "دقائق {{ .Count }}"
 
 - id: toc
   translation: "فهرس المحتوي"
