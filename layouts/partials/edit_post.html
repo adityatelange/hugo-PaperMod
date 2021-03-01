@@ -1,3 +1,0 @@
-{{- if (.Param "editPostUrl") }}
-&nbsp;·&nbsp;<a href="{{ .Param "editPostUrl" }}/content/{{ .File.Path }}">{{ .Param "editPostText" | i18n "edit_post" | default "Edit" }}</a>
-{{- end }}
