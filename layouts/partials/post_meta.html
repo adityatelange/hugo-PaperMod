@@ -12,7 +12,7 @@
 {{ $scratch.Add "meta" (slice .)}}
 {{end}}
 
-{{- if (.Param "editPost") }}
+{{- if (.Param "editPost.URL") }}
 {{ $scratch.Add "meta" (printf "<a href=\"%s/content/%s\">%s</a>" (.Param "editPost.URL") .File.Path (.Param "editPost.Text" | i18n "edit_post" | default "Edit") ) }}
 {{- end -}}
 
