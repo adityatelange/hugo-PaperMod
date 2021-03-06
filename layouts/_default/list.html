@@ -49,7 +49,7 @@
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h2>
   </header>
-  {{- if (ne .Site.Params.hideSummary true)}}
+  {{- if (ne (.Param "hideSummary") true)}}
   <section class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
