@@ -1,0 +1,4 @@
+{{- if (.Param "editPost.URL") -}}
+{{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) }}|&nbsp;{{- end -}}
+<a href="{{ .Param "editPost.URL" }}/{{ .File.Path }}">{{ .Param "editPost.Text" | default (i18n "edit_post" | default "Edit") }}</a>
+{{- end }}
