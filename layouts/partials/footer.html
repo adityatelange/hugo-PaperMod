@@ -7,8 +7,10 @@
     {{- if .Site.Params.BeiAn }}
     <span>&middot;</span>
     <span><a href="https://beian.miit.gov.cn">{{ .Site.Params.BeiAn }}</a></span>
-    {{- end }}
+    <br>
+    {{- else }}
     <span>&middot;</span>
+    {{- end}}
     <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
     <span>&middot;</span>
     <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
