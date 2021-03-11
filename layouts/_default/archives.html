@@ -2,10 +2,12 @@
 
 <header class="page-header">
   <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
+  {{- if not (.Param "hideDescription") }}
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
   {{- end }}
 </header>
 

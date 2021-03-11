@@ -8,10 +8,12 @@
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
+  {{- if not (.Param "hideDescription") }}
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
   {{- end }}
 </header>
 {{- end }}
@@ -49,7 +51,7 @@
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h2>
   </header>
-  {{- if (ne .Site.Params.hideSummary true)}}
+  {{- if (ne (.Param "hideSummary") true)}}
   <section class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>

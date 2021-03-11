@@ -3,10 +3,12 @@
 {{- if .Title }}
 <header class="page-header">
     <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
+    {{- if not (.Param "hideDescription") }}
+      {{- if .Description }}
+      <div class="post-description">
         {{ .Description }}
-    </div>
+      </div>
+      {{- end }}
     {{- end }}
 </header>
 {{- end }}

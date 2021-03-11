@@ -7,10 +7,12 @@
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
     </h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
+    {{- if not (.Param "hideDescription") }}
+      {{- if .Description }}
+      <div class="post-description">
+        {{ .Description }}
+      </div>
+      {{- end }}
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
