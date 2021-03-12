@@ -4,7 +4,7 @@
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 <meta name="robots" content="index, follow">
 {{- else }}
-<meta name=" robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow">
 {{- end -}}
 <!-- Title -->
 <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} | {{ end }}{{end}}{{ .Site.Title }}</title>
