@@ -7,9 +7,9 @@
 {{ end }}
 
 <div dir="rtl">
-  {{ if eq ($.Scratch.Get "md") true }}
-    {{ .Inner | markdownify }}
-  {{ else }}
+  {{ if eq ($.Scratch.Get "md") false }}
     {{ .Inner }}
+  {{ else }}
+    {{ .Inner | markdownify }}
   {{ end }}
 </div>
