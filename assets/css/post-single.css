@@ -213,7 +213,8 @@
     color: rgba(255, 255, 255, .8);
     background: 0 0;
     border-radius: 0;
-    overflow-x: auto
+    overflow-x: auto;
+    word-break: break-all;
 }
 
 .post-content blockquote {
@@ -243,20 +244,20 @@
 }
 
 .post-content figure.align-center {
-	text-align: center;
+    text-align: center;
 }
 
-.post-content figure > figcaption {
+.post-content figure>figcaption {
     color: var(--primary);
     font-size: 16px;
     font-weight: bold;
     margin: 8px 0 16px;
 }
 
-.post-content figure > figcaption > p {
-	color: var(--secondary);
-	font-size: 14px;
-	font-weight: normal;
+.post-content figure>figcaption>p {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .toc {
