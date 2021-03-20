@@ -9,6 +9,9 @@
 <!-- Title -->
 <title>{{ if .IsHome }}{{else}}{{ if .Title }}{{ .Title }} | {{ end }}{{end}}{{ .Site.Title }}</title>
 <!-- Meta -->
+<meta name="keywords" content="{{ if .Site.Params.keywords -}}
+    {{- range $i, $e := .Site.Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 <meta name="keywords" content="{{ if .Params.keywords -}}
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
