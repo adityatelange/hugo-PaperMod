@@ -40,36 +40,13 @@
 }
 
 @media (prefers-reduced-motion) {
-    /* terms */
-    .terms-tags a:active {
-        transform: none;
-    }
-
-    /* profile-mode */
-    .button:active {
-        transform: none;
-    }
-
-    /* post-single */
-    .share-buttons svg:active {
-        transform: none;
-    }
-
-    /* post-entry */
-    .post-entry:active {
-        transform: none;
-    }
-
-    /* footer */
-    .top-link {
-        transition: none;
-    }
-
-    /* search */
-    #searchResults .focus {
-        transform: none;
-    }
-
+    /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
+    .terms-tags a:active,
+    .button:active,
+    .share-buttons svg:active,
+    .post-entry:active,
+    .top-link,
+    #searchResults .focus,
     #searchResults li:active {
         transform: none;
     }
