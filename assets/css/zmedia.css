@@ -69,4 +69,8 @@
     #searchResults .focus {
         transform: none;
     }
+
+    #searchResults li:active {
+        transform: none;
+    }
 }
