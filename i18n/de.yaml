@@ -14,3 +14,6 @@
 
 - id: translations
   translation: "Übersetzungen"
+
+- id: edit_post
+  translation: "Bearbeiten"

@@ -1,0 +1,6 @@
+{{- if or .Params.editPost.URL .Site.Params.editPost.URL -}}
+{{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}|&nbsp;{{- end -}}
+<a href="{{ .Params.editPost.URL | default .Site.Params.editPost.URL }}{{ if .Params.editPost.appendFilePath | default ( .Site.Params.editPost.appendFilePath | default false ) }}/{{ .File.Path }}{{ end }}" rel="noopener noreferrer" target="_blank">
+    {{- .Params.editPost.Text | default (.Site.Params.editPost.Text | default (i18n "edit_post" | default "Edit") ) -}}
+</a>
+{{- end }}
