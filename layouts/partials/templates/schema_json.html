@@ -62,7 +62,7 @@
   "@type": "BlogPosting",
   "headline": {{ .Title | plainify}},
   "name": "{{ .Title | plainify }}",
-  "description": {{ .Summary | plainify | truncate 180 | safeHTML }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end -}},
   "keywords": [
     {{- if .Params.keywords }}
     {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
