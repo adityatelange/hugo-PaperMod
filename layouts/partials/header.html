@@ -44,7 +44,10 @@
         .top-link {
             display: none;
         }
-        {{- if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark")) }}
+
+    </style>
+    {{- if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark")) }}
+    <style>
         @media (prefers-color-scheme: dark) {
             :root {
                 --theme: #1d1e20;
@@ -57,18 +60,22 @@
                 --code-bg: #37383e;
                 --border: #333;
             }
+
             .list {
                 background: var(--theme);
             }
+
             .list:not(.dark)::-webkit-scrollbar-track {
                 background: 0 0;
             }
+
             .list:not(.dark)::-webkit-scrollbar-thumb {
                 border-color: var(--theme);
             }
         }
-        {{- end }}
     </style>
+    {{- end }}
+
 </noscript>
 <header class="header">
     <nav class="nav">
