@@ -80,13 +80,14 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            {{- if .Title }}
-            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ .Site.Params.label.text | default .Site.Title }} (Alt + H)">
+            {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
+            {{- if .Site.Title }}
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
                 {{- end -}}
-                {{- .Site.Params.label.text | default .Site.Title -}}
+                {{- $label_text -}}
             </a>
             {{- end }}
             <span class="logo-switches">
@@ -113,7 +114,7 @@
                 </button>
                 {{- end}}
                 {{ $lang := .Lang}}
-                {{ $separator := or .Title (not .Site.Params.disableThemeToggle)}}
+                {{ $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
                 {{- with $.Site.Home.AllTranslations }}
 
                 <ul class="lang-switch">
