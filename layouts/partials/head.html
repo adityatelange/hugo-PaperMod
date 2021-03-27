@@ -30,8 +30,11 @@
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
-{{- $hljs := (resources.Get "css/hljs/an-old-hope.min.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
+
+{{- /* include `an-old-hope` if hljs is on */}}
+{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) | default false }}
+{{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
 
 {{- /* order is important */}}
 {{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" }}
