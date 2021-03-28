@@ -8,7 +8,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-
+enableEmoji: true
 # googleAnalytics: UA-123-45
 
 minify:
@@ -176,7 +176,10 @@ taxonomies:
     tag: tags
     series: series
 
-# markup:
+markup:
+     goldmark:
+        renderer:
+            unsafe: true
 #     highlight:
 #         # anchorLineNos: true
 #         codeFences: true
