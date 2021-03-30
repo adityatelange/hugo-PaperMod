@@ -20,7 +20,7 @@
   <div class="archive-month">
     <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-posts">
-      {{- range .Pages  }}
+      {{- range .Pages }}
       {{- if eq .Kind "page" }}
       <div class="archive-entry">
         <h3 class="archive-entry-title">
@@ -40,4 +40,4 @@
 {{- end }}
 {{- end }}
 
-{{- end  }}{{/* end main */}}
+{{- end }}{{/* end main */}}

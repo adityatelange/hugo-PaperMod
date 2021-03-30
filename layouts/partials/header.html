@@ -1,6 +1,6 @@
-{{- /*  theme-toggle is enabled  */}}
+{{- /* theme-toggle is enabled */}}
 {{- if (not .Site.Params.disableThemeToggle) }}
-{{- /*  theme is light  */}}
+{{- /* theme is light */}}
 {{- if (eq .Site.Params.defaultTheme "light") }}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
@@ -8,7 +8,7 @@
     }
 
 </script>
-{{- /*  theme is dark  */}}
+{{- /* theme is dark */}}
 {{- else if (eq .Site.Params.defaultTheme "dark") }}
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
@@ -17,7 +17,7 @@
 
 </script>
 {{- else }}
-{{- /*  theme is auto  */}}
+{{- /* theme is auto */}}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -29,7 +29,7 @@
 
 </script>
 {{- end }}
-{{- /*  theme-toggle is disabled and theme is auto  */}}
+{{- /* theme-toggle is disabled and theme is auto */}}
 {{- else if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark"))}}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -73,10 +73,11 @@
                 border-color: var(--theme);
             }
         }
+
     </style>
     {{- end }}
-
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -85,7 +86,7 @@
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
-                    height="{{- .Site.Params.label.iconHeight | default "30px" -}}">
+                    height="{{- .Site.Params.label.iconHeight | default " 30px" -}}">
                 {{- end -}}
                 {{- $label_text -}}
             </a>
@@ -112,11 +113,11 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                {{- end}}
-                {{ $lang := .Lang}}
-                {{ $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
-                {{- with $.Site.Home.AllTranslations }}
+                {{- end }}
 
+                {{- $lang := .Lang}}
+                {{- $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
+                {{- with $.Site.Home.AllTranslations }}
                 <ul class="lang-switch">
                     {{- if $separator }}<li>|</li>{{ end }}
                     {{- range . -}}
@@ -141,7 +142,7 @@
         <ul id="menu" onscroll="menu_on_scroll()">
             {{- range .Site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-            {{- $page_url:= $currentPage.Permalink  | absLangURL }}
+            {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
@@ -151,7 +152,7 @@
                     </span>
                 </a>
             </li>
-            {{- end -}}
+            {{- end }}
         </ul>
     </nav>
 </header>

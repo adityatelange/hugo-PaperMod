@@ -1,13 +1,13 @@
 {{- $pageurl := .Permalink }}
 {{- $title := .Title }}
 
-{{ $.Scratch.Set "tags" ""}}
+{{- $.Scratch.Set "tags" ""}}
 
 {{- with .Params.Tags }}
 {{ $hashtags := newScratch}}
-{{ range . }}{{ $hashtags.Add "tags" (slice (replaceRE "(\\s)" "" . ))}}{{end}}
-{{ $.Scratch.Set "tags" (delimit ($hashtags.Get "tags") ",")  }}
-{{- end }}
+{{- range . }}{{ $hashtags.Add "tags" (slice (replaceRE "(\\s)" "" . ))}}{{end}}
+{{- $.Scratch.Set "tags" (delimit ($hashtags.Get "tags") ",") }}
+{{- end -}}
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on twitter"

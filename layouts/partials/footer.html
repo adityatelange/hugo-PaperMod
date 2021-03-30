@@ -9,6 +9,7 @@
     <span>&middot;</span>
     <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
 </footer>
+
 {{- if (not .Site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -18,18 +19,21 @@
     </button>
 </a>
 {{- end }}
+
 {{- partial "extend_footer.html" . -}}
+
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
 <script defer src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
     onload="hljs.initHighlightingOnLoad();"></script>
-{{- else}}
+{{- else }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
 <script defer src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
-{{- end}}
 {{- end }}
+{{- end }}
+
 <script>
     window.onload = function () {
         if (localStorage.getItem("menu-scroll-position")) {

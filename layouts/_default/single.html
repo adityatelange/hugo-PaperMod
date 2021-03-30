@@ -2,7 +2,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    {{- partial "breadcrumbs.html" . }}
+    {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title">
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
@@ -14,13 +14,13 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" .  -}}
+      {{- partial "post_meta.html" . -}}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
     </div>
-    {{- end}}
+    {{- end }}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden}}
+  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
@@ -41,24 +41,24 @@
     {{- if and (gt (len $pages) 1) (in $pages . ) }}
     <nav class="paginav">
       {{- with $pages.Next . }}
-      <a class="prev" href="{{.Permalink}}">
+      <a class="prev" href="{{ .Permalink }}">
         <span class="title">« {{ i18n "prev_page" }}</span>
         <br>
         <span>{{- .Name -}}</span>
       </a>
-      {{- end}}
+      {{- end }}
       {{- with $pages.Prev . }}
-      <a class="next" href="{{.Permalink}}">
+      <a class="next" href="{{ .Permalink }}">
         <span class="title">{{ i18n "next_page" }} »</span>
         <br>
         <span>{{- .Name -}}</span>
       </a>
-      {{- end}}
+      {{- end }}
     </nav>
     {{- end }}
     {{- end }}
-    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
-    {{- partial "share_icons.html" . }}
+    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
 
@@ -67,4 +67,4 @@
   {{- end }}
 </article>
 
-{{- end  }}{{/* end main */}}
+{{- end }}{{/* end main */}}

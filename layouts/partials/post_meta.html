@@ -1,17 +1,17 @@
-{{- $scratch := newScratch}}
+{{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
 {{- $scratch.Add "meta" (slice (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat))) }}
-{{- end -}}
+{{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
 {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%s min" .ReadingTime))) }}
-{{- end -}}
-
-{{ with (partial "author.html" . ) }}
-{{ $scratch.Add "meta" (slice .)}}
-{{end}}
-
-{{- with ($scratch.Get "meta")}}
-{{- delimit . "&nbsp;·&nbsp;"}}
 {{- end }}
+
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice .) }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+{{- delimit . "&nbsp;·&nbsp;" -}}
+{{- end -}}

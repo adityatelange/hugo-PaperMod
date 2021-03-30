@@ -13,12 +13,11 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
-    {{- partialCached "header.html" . .Page}}
+    {{- partialCached "header.html" . .Page -}}
     <main class="main">
-        {{- block "main" . }}
-        {{- end }}
+        {{- block "main" . }}{{ end }}
     </main>
-    {{- partialCached "footer.html" . .Type .Layout .Params }}
+    {{ partialCached "footer.html" . .Type .Layout .Params -}}
 </body>
 
 </html>

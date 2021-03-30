@@ -20,15 +20,15 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- end}}
+{{- end }}
 
-{{ $paginator := .Paginate $pages }}
+{{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
 {{- end }}
 
-{{ $term := .Data.Term}}
+{{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
@@ -41,17 +41,17 @@
 {{- end }}
 
 <article class="{{ $class }}">
-  {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList)}}
+  {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">
     <h2>
-      {{ .Title }}
-      {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
+      {{- .Title }}
+      {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{ end -}}
     </h2>
   </header>
-  {{- if (ne (.Param "hideSummary") true)}}
+  {{- if (ne (.Param "hideSummary") true) }}
   <section class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{- if .Truncated }}...{{- end -}}</p>
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </section>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
@@ -75,5 +75,7 @@
   </nav>
 </footer>
 {{- end }}
-{{end}}{{/* end profileMode */}}
+
+{{- end }}{{/* end profileMode */}}
+
 {{- end }}{{- /* end main */ -}}
