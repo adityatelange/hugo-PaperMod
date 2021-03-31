@@ -11,7 +11,7 @@ assignees: ''
 
 ## READ BEFORE OPENING ISSUES
 
-Please fill the template below 
+Please fill the template below
 - **DO NOT** ask for instructions.
 - Use Discussions section if you need help
 - See project wiki https://github.com/adityatelange/hugo-PaperMod/wiki
@@ -25,12 +25,12 @@ Please fill the template below
 
  - Device/Os: [e.g. Android 10]
  - Type: [e.g. Desktop/Mobile]
- - Browser and version [e.g. Chrome 86.0]: 
- - Hugo Version [ >=0.74 expected]: 
- - Theme Version [e.g. v4.0, master, or commit-id ]: 
+ - Browser and version [e.g. Chrome 86.0]:
+ - Hugo Version [ >=0.82.0 expected]:
+ - Theme Version [e.g. v4.0, master, or commit-id ]:
 
 **Steps to reproduce the behavior:**
-<!-- 
+<!--
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
