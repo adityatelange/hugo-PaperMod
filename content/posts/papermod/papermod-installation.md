@@ -105,7 +105,7 @@ theme: "PaperMod"
 **Use appropriately**
 
 ```yml
-baseURL: "https://examplesite.com"
+baseURL: "https://examplesite.com/"
 title: ExampleSite
 paginate: 5
 theme: PaperMod
