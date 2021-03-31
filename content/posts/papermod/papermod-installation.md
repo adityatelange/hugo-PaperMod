@@ -9,13 +9,13 @@ tags: ["PaperMod"]
 author: "Aditya Telange"
 ---
 
-
 ## Intro
 
 -   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
 -   You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
 
 ---
+
 ## Guide
 
 Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup hugo and create a new site.
@@ -54,7 +54,7 @@ git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/Pape
 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
 ```
 
-**Note**: You may use ` --branch v4.0` to end of above command if you want to stick to specific release.
+**Note**: You may use ` --branch v5.0` to end of above command if you want to stick to specific release.
 
 > Updating theme :
 >
@@ -69,6 +69,7 @@ Or you can Download as Zip from Github Page and extract in your themes directory
 Direct Links:
 
 -   [Master Branch (Latest)](https://github.com/adityatelange/hugo-PaperMod/archive/master.zip)
+-   [v5.0](https://github.com/adityatelange/hugo-PaperMod/archive/v5.0.zip)
 -   [v4.0](https://github.com/adityatelange/hugo-PaperMod/archive/v4.0.zip)
 -   [v3.0](https://github.com/adityatelange/hugo-PaperMod/archive/v3.0.zip)
 -   [v2.0](https://github.com/adityatelange/hugo-PaperMod/archive/v2.0.zip)
@@ -125,18 +126,23 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: ExampleSite
     description: "ExampleSite description"
+    keywords: [Blog, Portfolio, PaperMod]
     author: Me
     # author: ["Me", "You"] # multiple authors
     images: ["<link or path of image for opengraph, twitter-cards>"]
-
+    DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
 
     ShowReadingTime: true
     ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
     disableSpecial1stPost: false
+    disableScrollToTop: false
     comments: false
     hidemeta: false
+    hideSummary: false
     showtoc: false
     tocopen: false
 
@@ -185,11 +191,20 @@ params:
     analytics:
         google:
             SiteVerificationTag: "XYZabc"
+        bing:
+            SiteVerificationTag: "XYZabc"
+        yandex:
+            SiteVerificationTag: "XYZabc"
 
     cover:
         hidden: true # hide everywhere but not in structured data
         hiddenInList: true # hide on list pages and home
         hiddenInSingle: true # hide on single page
+
+    editPost:
+        URL: "https://github.com/<path_to_repo>/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
 
     # for search
     # https://fusejs.io/api/options.html
@@ -248,14 +263,21 @@ description: "Desc Text."
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
+hideSummary: false
 searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-
+editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 ---
 ```
 

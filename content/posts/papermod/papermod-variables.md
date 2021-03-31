@@ -21,6 +21,7 @@ weight: 5
 | `description`                          | string        | 'This is a blog of mine' | To set site description                                                                   |
 | `author`                               | string \|list | 'Me' \| ['Me','You']     | To show multiple Authors                                                                  |
 | `images`                               | string        | 'myimage.png'            | Link or path of image for opengraph, twitter-cards                                        |
+| `keywords`                             | list          | [blog, page]             | Add keywords for Home page                                                                |
 | `DateFormat`                           | string        | "January 2, 2006"        | The format of date strings in the website. [Details](https://gohugo.io/functions/format/) |
 | `ShowReadingTime`                      | boolean       | true \| false            | To show read time in post meta                                                            |
 | `ShowShareButtons`                     | boolean       | true \| false            | To show/hide share buttons under post                                                     |
@@ -28,7 +29,7 @@ weight: 5
 | `disableThemeToggle`                   | boolean       | true \| false            | To disable theme toggle icon shown besides label                                          |
 | `disableSpecial1stPost`                | boolean       | true \| false            | To disable no-card special appearance of 1st post                                         |
 | `disableScrollToTop`                   | boolean       | true \| false            | To disable ScrollToTop button                                                             |
-| `hidemeta`                             | boolean       | true \| false            | To Hide meta elements : date, read-time, author and available-translations for page       |
+| `hideMeta`                             | boolean       | true \| false            | To Hide meta elements : date, read-time, author and available-translations for page       |
 | `hideSummary`                          | boolean       | true \| false            | To Hide summary being shown in list pages                                                 |
 | `showtoc`                              | boolean       | true \| false            | To show/hide Table of Contents                                                            |
 | `tocopen`                              | boolean       | true \| false            | To keep open ToC by default on page load                                                  |
