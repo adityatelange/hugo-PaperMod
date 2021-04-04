@@ -96,3 +96,34 @@
 
 </script>
 {{- end }}
+
+{{- if (not .Site.Params.disableCodeCopy) }}
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('div');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+            } catch (e) {};
+            selection.removeRange(range);
+        });
+
+        container.appendChild(copybutton);
+    });
+</script>
+{{- end }}

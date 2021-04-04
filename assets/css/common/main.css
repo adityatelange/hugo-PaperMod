@@ -41,5 +41,21 @@
 }
 
 code {
-    direction: ltr
+    direction: ltr;
+}
+
+div.highlight {
+    position: relative;
+}
+
+.copy-code {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    color: var(--secondary);
+}
+
+.copy-code:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
