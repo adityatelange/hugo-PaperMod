@@ -49,10 +49,15 @@ div.highlight {
 }
 
 .copy-code {
+    display: none;
     position: absolute;
     top: 4px;
     right: 16px;
     color: var(--secondary);
+}
+
+div.highlight:hover .copy-code {
+    display: block;
 }
 
 .copy-code:hover {
