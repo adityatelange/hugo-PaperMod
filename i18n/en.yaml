@@ -17,3 +17,9 @@
 
 - id: home
   translation: "Home"
+
+- id: copy
+  translation: "copy"
+
+- id: copied
+  translation: "copied!"
