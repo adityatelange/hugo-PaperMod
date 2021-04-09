@@ -3,7 +3,7 @@ import * as params from '@params';
 var fuse; // holds our search engine
 var resList = document.getElementById('searchResults');
 var sInput = document.getElementById('searchInput');
-var first, last = null
+var first, last, current_elem = null
 var resultsAvailable = false;
 
 // load our search index
@@ -38,8 +38,18 @@ window.onload = function () {
     xhr.send();
 }
 
-function activeToggle() {
-    document.activeElement.parentElement.classList.toggle("focus")
+function activeToggle(ae) {
+    document.querySelectorAll('.focus').forEach(function (element) {
+        // rm focus class
+        element.classList.remove("focus")
+    });
+    if (ae) {
+        ae.focus()
+        document.activeElement = current_elem = ae;
+        ae.parentElement.classList.add("focus")
+    } else {
+        document.activeElement.parentElement.classList.add("focus")
+    }
 }
 
 function reset() {
@@ -82,7 +92,8 @@ sInput.addEventListener('search', function (e) {
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
-    let ae = document.activeElement;
+    var ae = document.activeElement;
+
     let inbox = document.getElementById("searchbox").contains(ae)
 
     if (ae === sInput) {
@@ -90,22 +101,18 @@ document.onkeydown = function (e) {
         while (elements.length > 0) {
             elements[0].classList.remove('focus');
         }
-    }
+    } else if (current_elem) ae = current_elem;
 
     if (key === "ArrowDown" && resultsAvailable && inbox) {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
-            activeToggle(); // rm focus class
-            resList.firstChild.lastChild.focus();
-            activeToggle(); // add focus class
+            activeToggle(resList.firstChild.lastChild);
         } else if (ae.parentElement == last) {
             // if the currently focused element's parent is last, do nothing
         } else {
             // otherwise select the next search result
-            activeToggle(); // rm focus class
-            ae.parentElement.nextSibling.lastChild.focus();
-            activeToggle(); // add focus class
+            activeToggle(ae.parentElement.nextSibling.lastChild);
         }
     } else if (key === "ArrowUp" && resultsAvailable && inbox) {
         e.preventDefault();
@@ -113,13 +120,10 @@ document.onkeydown = function (e) {
             // if the currently focused element is input box, do nothing
         } else if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
-            activeToggle(); // rm focus class
-            sInput.focus();
+            activeToggle(sInput);
         } else {
             // otherwise select the previous search result
-            activeToggle(); // rm focus class
-            ae.parentElement.previousSibling.lastChild.focus();
-            activeToggle(); // add focus class
+            activeToggle(ae.parentElement.previousSibling.lastChild);
         }
     } else if (key === "ArrowRight" && resultsAvailable && inbox) {
         ae.click(); // click on active link
