@@ -65,10 +65,10 @@
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
-<script defer src="{{ $search.RelPermalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}"></script>
 {{- else }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
-<script defer src="{{ $search.RelPermalink }}" onload="loadSearch();"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" onload="loadSearch();"></script>
 {{- end }}
 {{- end -}}
 
@@ -78,11 +78,11 @@
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify |
 fingerprint }}
-<script defer src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
+<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
     onload="hljs.initHighlightingOnLoad();"></script>
 {{- else }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
-<script defer src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
+<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
 {{- end }}
 
