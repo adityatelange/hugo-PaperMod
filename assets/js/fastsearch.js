@@ -38,11 +38,6 @@ window.onload = function () {
     xhr.send();
 }
 
-
-function itemGen(name, link) {
-    return `<li class="post-entry"><header class="entry-header">${name}&nbsp;»</header><a href="${link}" aria-label="${name}"></a></li>`
-}
-
 function activeToggle() {
     document.activeElement.parentElement.classList.toggle("focus")
 }
@@ -57,23 +52,25 @@ function reset() {
 sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
-    const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
+    if (fuse) {
+        const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
+        if (results.length !== 0) {
+            // build our html if result exists
+            let resultSet = ''; // our results bucket
 
-    if (results.length !== 0) {
-        // build our html if result exists
-        let resultSet = ''; // our results bucket
+            for (let item in results) {
+                resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
+                    `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+            }
 
-        for (let item in results) {
-            resultSet = resultSet + itemGen(results[item].item.title, results[item].item.permalink)
+            resList.innerHTML = resultSet;
+            resultsAvailable = true;
+            first = resList.firstChild;
+            last = resList.lastChild;
+        } else {
+            resultsAvailable = false;
+            resList.innerHTML = '';
         }
-
-        resList.innerHTML = resultSet;
-        resultsAvailable = true;
-        first = resList.firstChild;
-        last = resList.lastChild;
-    } else {
-        resultsAvailable = false;
-        resList.innerHTML = '';
     }
 }
 
