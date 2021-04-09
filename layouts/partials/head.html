@@ -61,14 +61,14 @@
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | resources.ExecuteAsTemplate "js/fastsearch.js" .Site.Params.fuseOpts }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" .Site.Params.fuseOpts)) }}
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" onload="loadSearch();" integrity="{{ $search.Data.Integrity }}"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
 {{- else }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" onload="loadSearch();"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 {{- end }}
 {{- end -}}
 

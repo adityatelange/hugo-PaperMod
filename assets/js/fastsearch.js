@@ -1,11 +1,13 @@
+import * as params from '@params';
+
 var fuse; // holds our search engine
 var resList = document.getElementById('searchResults');
 var sInput = document.getElementById('searchInput');
 var first, last = null
 var resultsAvailable = false;
 
-// load our search index, only executed onload
-function loadSearch() {
+// load our search index
+window.onload = function () {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -24,7 +26,7 @@ function loadSearch() {
                             'content'
                         ]
                     };
-                    {{ if . }}options = {{ jsonify . }}{{ end }} // load custom options from .Site.Params.fuseOpts
+                    if (params.fuseOpts) options = params.fuseOpts;
                     fuse = new Fuse(data, options); // build the index from the json file
                 }
             } else {
