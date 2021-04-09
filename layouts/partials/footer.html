@@ -102,9 +102,9 @@
     document.querySelectorAll('pre > code').forEach((codeblock) => {
         const container = codeblock.parentNode.parentNode;
 
-        const copybutton = document.createElement('div');
+        const copybutton = document.createElement('button');
         copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
+        copybutton.innerText = 'copy';
 
         function copyingDone() {
             copybutton.innerText = 'copied!';

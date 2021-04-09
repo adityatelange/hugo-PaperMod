@@ -52,15 +52,14 @@ div.highlight {
     display: none;
     position: absolute;
     top: 4px;
-    right: 16px;
-    color: var(--secondary);
+    right: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(78, 78, 78, 0.8);
+    border-radius: var(--radius);
+    padding: 0 5px;
+    font-size: 14px;
 }
 
 div.highlight:hover .copy-code {
     display: block;
-}
-
-.copy-code:hover {
-    cursor: pointer;
-    text-decoration: underline;
 }
