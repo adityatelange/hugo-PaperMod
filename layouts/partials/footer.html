@@ -106,9 +106,17 @@
         copybutton.classList.add('copy-code');
         copybutton.innerHTML = 'copy';
 
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
         copybutton.addEventListener('click', (cb) => {
             if ('clipboard' in navigator) {
                 navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
                 return;
             }
 
@@ -119,6 +127,7 @@
             selection.addRange(range);
             try {
                 document.execCommand('copy');
+                copyingDone();
             } catch (e) {};
             selection.removeRange(range);
         });
