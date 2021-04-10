@@ -1,13 +1,14 @@
-# PaperMod | [Demo](https://adityatelange.github.io/hugo-PaperMod/)
+<h1 align=center>Hugo PaperMod | <a href="https://adityatelange.github.io/hugo-PaperMod/" rel="nofollow">Demo</a></h1>
 
-☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive
+<h4 align=center>☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive</h4>
+<br>
 
-Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
-The goal of this project is add more Features and customization to the og theme.
+> Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
+> The goal of this project is to add more Features and customization to the og theme.
 
-The [demo site](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
+The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
 
-ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite). Demo is built up with exampleSite as source.
+**ExampleSite** can be found here: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite). Demo is built up with [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite) as source.
 
 ![Build GH-Pages](https://github.com/adityatelange/hugo-PaperMod/workflows/Build%20GH-Pages/badge.svg)
 ![GitHub](https://img.shields.io/github/license/adityatelange/hugo-PaperMod)
@@ -45,6 +46,7 @@ ExampleSite can be found here: [exampleSite](https://github.com/adityatelange/hu
 -   Search Page with Fuse.js
 -   Other Posts suggestion below a post
 -   BreadCrumb Navigation
+-   Code Block Copy buttons
 -   No webpack, nodejs and other depedencies required to edit the theme.
 
 Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
