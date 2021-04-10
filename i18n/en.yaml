@@ -18,8 +18,8 @@
 - id: home
   translation: "Home"
 
-- id: copy
+- id: code_copy
   translation: "copy"
 
-- id: copied
+- id: code_copied
   translation: "copied!"
