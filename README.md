@@ -19,8 +19,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 ---
 
 <p align="center">
-  <kbd><img width=600px src="https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/homeinfo.jpg" alt="HomeInfo" /></kbd>
-  <kbd><img width=153px src="https://i.ibb.co/LNgGcrt/mobileview.png" alt="HomeInfo" /></kbd>
+  <kbd><img src="https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png" alt="Mockup image" title="Mockup"/></kbd>
 </p>
 
 ---
