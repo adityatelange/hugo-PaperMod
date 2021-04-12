@@ -1,0 +1,14 @@
+- id: prev_page
+  translation: 'Попередня'
+
+- id: next_page
+  translation: 'Наступна'
+
+- id: read_time
+  translation: '{{ .Count }} хвил'
+
+- id: toc
+  translation: 'Зміст'
+
+- id: translations
+  translation: 'Переклади'
