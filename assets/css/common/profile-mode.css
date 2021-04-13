@@ -17,10 +17,20 @@
     padding: 12px 0
 }
 
+.profile .profile_inner span {
+    padding: 10px 0;
+    font-size: 18px
+}
+
+.profile .profile_inner span a {
+    text-decoration: underline
+}
+
 .profile img {
     display: inline-table;
     border-radius: 50%;
-    pointer-events: none
+    pointer-events: none;
+    border: 3px #ffffff solid
 }
 
 .buttons {
