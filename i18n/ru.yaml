@@ -1,14 +1,23 @@
 - id: prev_page
-  translation: 'Предыдущая'
+  translation: "Предыдущая"
 
 - id: next_page
-  translation: 'Следующая'
+  translation: "Следующая"
 
 - id: read_time
-  translation: '{{ .Count }} мин'
+  translation: "{{ .Count }} мин"
 
 - id: toc
-  translation: 'Оглавление'
+  translation: "Оглавление"
 
 - id: translations
-  translation: 'Переводы'
+  translation: "Переводы"
+
+- id: home
+  translation: "Главная"
+
+- id: code_copy
+  translation: "копировать"
+
+- id: code_copied
+  translation: "скопировано!"
