@@ -5,10 +5,21 @@
   translation: 'Наступна'
 
 - id: read_time
-  translation: '{{ .Count }} хвил'
+  translation:
+    one : "1 хвилина"
+    other: "{{ .Count }} хвилин"
 
 - id: toc
   translation: 'Зміст'
 
 - id: translations
   translation: 'Переклади'
+
+- id: home
+  translation: "Головна"
+
+- id: code_copy
+  translation: "копіювати"
+
+- id: code_copied
+  translation: "скопійовано!"
