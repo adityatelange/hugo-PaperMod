@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "« paĝo"
+  translation: "antaŭa paĝo"
 
 - id: next_page
-  translation: "paĝo »"
+  translation: "sekva paĝo"
 
 - id: read_time
   translation:
