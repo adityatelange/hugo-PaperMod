@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: 'Попередня'
+  translation: "Попередня"
 
 - id: next_page
-  translation: 'Наступна'
+  translation: "Наступна"
 
 - id: read_time
   translation:
@@ -10,10 +10,10 @@
     other: "{{ .Count }} хвилин"
 
 - id: toc
-  translation: 'Зміст'
+  translation: "Зміст"
 
 - id: translations
-  translation: 'Переклади'
+  translation: "Переклади"
 
 - id: home
   translation: "Головна"
