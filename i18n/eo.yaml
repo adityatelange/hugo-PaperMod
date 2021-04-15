@@ -1,0 +1,25 @@
+- id: prev_page
+  translation: "antaŭa paĝo"
+
+- id: next_page
+  translation: "sekva paĝo"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: toc
+  translation: "Enhavo"
+
+- id: translations
+  translation: "tradukoj"
+
+- id: home
+  translation: "ĉefpaĝo"
+
+- id: code_copy
+  translation: "kopii"
+
+- id: code_copied
+  translation: "kopiite!"
