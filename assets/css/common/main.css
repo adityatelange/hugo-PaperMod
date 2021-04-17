@@ -44,7 +44,7 @@ code {
     direction: ltr;
 }
 
-div.highlight {
+div.highlight, pre {
     position: relative;
 }
 
@@ -60,6 +60,7 @@ div.highlight {
     font-size: 14px;
 }
 
-div.highlight:hover .copy-code {
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
     display: block;
 }
