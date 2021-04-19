@@ -38,10 +38,10 @@ jobs:
           pip install requests pyyaml
       - name: Fetch GitHub stars
         run: |
-          python scripts/fetch-github-stars.py data/projectsGit.yml
+          python scripts/fetch-github-stars.py data/projects.yml
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          
+
       - name: Build
         run: hugo --buildDrafts --gc --verbose --minify
 
