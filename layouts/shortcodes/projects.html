@@ -1,0 +1,16 @@
+<ul class="projects">
+    {{ range sort .Page.Site.Data.projects ".stars" "desc" }}
+        <li class="item">
+            <div class="name">
+                <h3><a href="{{ .url }}">{{ .name }}</a></h3>
+                <h4 class="stars">Stars: ★ {{ .stars }}</h4>
+                <h4 class="lastmod">Last Modified: {{ .updated_at }}</h4>
+            </div>
+            <div class="description">
+                <p>{{ .description }}</p>
+            </div>
+            <h4 class="homepage">Link to access: <a href="{{ .homepage }}">{{ .homepage }}</a></h4>
+        </li>
+        <hr>
+    {{ end }}
+</ul>

@@ -1,0 +1,28 @@
+- description: freeCodeCamp.org's open source codebase and curriculum. Learn to code for free.
+  github_uri: freeCodeCamp/freeCodeCamp
+  name: Free code camp
+  stars: 0
+  updated_at: '2021-03-31T17:59:49Z'
+  url: https://github.com/freeCodeCamp/freeCodeCamp
+  homepage: https://contribute.freecodecamp.org
+- description: 📚 Freely available programming books
+  github_uri: EbookFoundation/free-programming-books
+  name: EbookFoundation
+  stars:  0
+  updated_at: '2021-03-31T17:59:49Z'
+  url: https://github.com/EbookFoundation/free-programming-books
+  homepage: https://ebookfoundation.github.io/free-programming-books/
+- description: The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+  github_uri: twbs/bootstrap
+  name: bootstrap project
+  stars:  0
+  updated_at: '2021-03-31T17:59:49Z'
+  url: https://github.com/twbs/bootstrap
+  homepage: https://getbootstrap.com/
+- description: A curated list of awesome Python frameworks, libraries, software and resources.
+  github_uri: vinta/awesome-python
+  name: Python framework
+  stars:  0
+  updated_at: '2021-03-31T17:59:49Z'
+  url: https://github.com/vinta/awesome-python
+  homepage: https://awesome-python.com/
