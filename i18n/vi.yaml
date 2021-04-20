@@ -1,0 +1,25 @@
+- id: prev_page
+  translation: "Trang trước"
+
+- id: next_page
+  translation: "Trang tiếp theo"
+
+- id: read_time
+  translation:
+    one : "1 phút"
+    other: "{{ .Count }} phút"
+
+- id: toc
+  translation: "Mục lục"
+
+- id: translations
+  translation: "Bản dịch"
+
+- id: home
+  translation: "Trang chủ"
+
+- id: code_copy
+  translation: "Sao chép"
+
+- id: code_copied
+  translation: "Đã sao chép!"
