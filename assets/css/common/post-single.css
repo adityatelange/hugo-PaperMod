@@ -88,6 +88,7 @@
 .post-content dl,
 .post-content ol,
 .post-content p,
+.post-content figure,
 .post-content ul {
     margin-bottom: var(--content-gap)
 }
