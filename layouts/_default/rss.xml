@@ -40,6 +40,9 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ with .Description | html }}{{ . }}{{ else }}{{ .Summary | html }}{{ end -}}</description>
+      {{- if .Site.Params.ShowFullTextinRSS }}
+      <content>{{ .Content | html }}</content>
+      {{- end }}
     </item>
     {{- end }}
     {{ end }}

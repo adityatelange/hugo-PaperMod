@@ -1,3 +1,4 @@
+blank_issues_enabled: false
 contact_links:
   - name: PaperMod Discussions
     url: https://github.com/adityatelange/hugo-PaperMod/discussions
