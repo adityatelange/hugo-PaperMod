@@ -10,7 +10,7 @@
             {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
             {{- .Language.LanguageName | emojify -}}
             {{- else }}
-            {{- .Lang | humanize -}}
+            {{- .Lang | title -}}
             {{- end -}}
         </a>
     </li>
