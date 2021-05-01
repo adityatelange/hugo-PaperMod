@@ -36,7 +36,7 @@ Inside the folder of your Hugo site, run:
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 ```
 
-**Note**: You may use ` --branch v3.0` to end of above command if you want to stick to specific release.
+**Note**: You may use ` --branch v5.0` to end of above command if you want to stick to specific release.
 
 > Updating theme :
 >
@@ -138,6 +138,7 @@ params:
     ShowShareButtons: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
+    ShowCodeCopyButtons: false
     disableSpecial1stPost: false
     disableScrollToTop: false
     comments: false
@@ -260,6 +261,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Desc Text."
+canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
