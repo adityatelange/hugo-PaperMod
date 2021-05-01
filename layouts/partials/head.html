@@ -58,6 +58,16 @@
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
+{{- with .Site.Params.profileMode }}
+{{- if and .enabled .imageUrl }}
+<link rel="preload" href="{{ .imageUrl }}" as="image">
+{{- end }}
+{{- end }}
+
+{{- with .Site.Params.label.icon }}
+<link rel="preload" href="{{ . }}" as="image">
+{{- end }}
+
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
