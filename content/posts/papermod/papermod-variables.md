@@ -42,6 +42,7 @@ weight: 5
 | `analytics.google.SiteVerificationTag` | string        | "XYZabc"                 | Site Verification Tag for Google Analytics                                                |
 | `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                 | Site Verification Tag for Bing                                                            |
 | `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                 | Site Verification Tag for Yandex                                                          |
+| `schema`                               | -             | -                        | [Details](#schema)                                                                        |
 | `fuseOpts`                             | -             | -                        | [Details](#fuseOpts)                                                                      |
 | `socialIcons`                          | -             | -                        | [Details](#socialIcons)                                                                   |
 | `label`                                | -             | -                        | [Details](#label)                                                                         |
@@ -99,6 +100,13 @@ profileMode:
 | `cover.hidden`           | boolean | true \| false | To hide everywhere but not in structured data           |
 | `cover.hiddenInList`     | boolean | true \| false | To hide on list pages and home                          |
 | `cover.hiddenInSingle `  | boolean | true \| false | To hide on list pages and home                          |
+
+#### schema
+
+| name                   | type   | example          | Description                   |
+| ---------------------- | ------ | ---------------- | ----------------------------- |
+| `schema.publisherType` | string | 'Organization'   | https://schema.org/publisher  |
+| `schema.sameAs`        | list   | ["URL1", "URL2"] | Set https://schema.org/sameAs |
 
 #### fuseOpts
 
