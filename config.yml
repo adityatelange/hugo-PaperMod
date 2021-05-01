@@ -36,6 +36,7 @@ languages:
 
     fr:
         languageName: ":fr:"
+        languageAltTitle: French
         weight: 2
         title: PaperModL2
         profileMode:
@@ -105,6 +106,7 @@ params:
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
     ShowToc: true
     # comments: false
     images: ["papermod-cover.png"]
@@ -140,6 +142,11 @@ params:
           url: "https://ko-fi.com/adityatelange"
         - name: RsS
           url: "index.xml"
+
+    editPost:
+        URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
 
     # label:
     #     text: "Home"
@@ -177,7 +184,7 @@ taxonomies:
     series: series
 
 markup:
-     goldmark:
+    goldmark:
         renderer:
             unsafe: true
 #     highlight:
