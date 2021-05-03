@@ -42,7 +42,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 -   Cover image for each post (with Responsive image support).
 -   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
 -   SEO Friendly.
--   Muliple Author support.
+-   Multiple Author support.
 -   Search Page with Fuse.js
 -   Other Posts suggestion below a post
 -   BreadCrumb Navigation
@@ -87,3 +87,16 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Fuse.js**](https://github.com/krisk/fuse)
 -   [**Feather Icons**](https://github.com/feathericons/feather)
 -   **All Contributors and Supporters**
+
+---
+
+## Examples
+
+List of sites based on Hugo PaperMod theme:
+
+| Site | Source |
+|------|--------|
+| [hugo-PaperMod](https://adityatelange.github.io/hugo-PaperMod/) | https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite |
+| [holywar4j](https://boiarshinov.github.io/holywar4j/) | https://github.com/Boiarshinov/holywar4j |
+
+Feel free to add your own site based on Hugo PaperMod via Pull Request
