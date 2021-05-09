@@ -41,5 +41,5 @@
 
 #searchResults .focus {
     transform: scale(.98);
-    border: 2px solid var(--tertiary)
+    border: 2px solid var(--tertiary);
 }
