@@ -1,6 +1,3 @@
-body{
- transition: background-color 350ms ;
-}
 
 .main {
     position: relative;
@@ -67,4 +64,8 @@ div.highlight, pre {
 div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
+}
+
+.transition-delay {
+    transition: background-color 350ms, border 350ms ;
 }

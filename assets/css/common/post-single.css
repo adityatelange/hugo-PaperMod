@@ -266,8 +266,8 @@
     border: 1px solid var(--border);
     background: var(--code-bg);
     border-radius: var(--radius);
-    padding: .4em
-    transition: transform .1s, background-color 350ms, border 350ms;
+    padding: .4em;
+    transition: background-color 350ms, border 350ms;
 }
 
 .dark .toc {
