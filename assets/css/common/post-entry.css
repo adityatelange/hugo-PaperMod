@@ -39,8 +39,7 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform .1s;
-    transition: background-color 350ms, border 350ms;
+    transition: transform .1s, background-color 350ms, border 350ms;
     border: 1px solid var(--border);
 }
 
