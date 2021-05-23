@@ -4,11 +4,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script>
     const gitalk = new Gitalk({
-        clientID: '{{ .params.gitalk.clientID }}',
-        clientSecret: '{{ .params.gitalk.clientSecret }}',
-        repo: '{{ .params.gitalk.repo }}',
-        owner: '{{ .params.gitalk.owner }}',
-        admin: ['{{ .params.gitalk.admin}}'],
+        clientID: '{{ .Site.Params.gitalk.clientID }}',
+        clientSecret: '{{ .Site.Params.gitalk.clientSecret }}',
+        repo: '{{ .Site.Params.gitalk.repo }}',
+        owner: '{{ .Site.Params.gitalk.owner }}',
+        admin: ['{{ .Site.Params.gitalk.admin }}'],
         id: location.pathname, // Ensure uniqueness and length less than 50
         distractionFreeMode: false // Facebook-like distraction free mode
     });
