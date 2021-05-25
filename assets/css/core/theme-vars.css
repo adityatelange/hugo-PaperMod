@@ -40,5 +40,5 @@
     background: var(--code-bg);
 }
 .mermaid .messageText {
-    stroke: var(--entry);
+    stroke: var(--content);
 }
