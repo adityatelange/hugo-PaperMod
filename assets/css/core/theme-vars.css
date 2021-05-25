@@ -38,5 +38,7 @@
 }
 .mermaid {
     background: var(--code-bg);
+}
+.mermaid text {
     color: var(--content);
 }
