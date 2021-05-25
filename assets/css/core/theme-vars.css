@@ -36,3 +36,6 @@
 .dark.list {
     background: var(--theme);
 }
+.mermaid {
+    background: var(--code-bg);
+}
