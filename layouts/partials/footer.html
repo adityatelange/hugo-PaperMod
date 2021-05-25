@@ -141,6 +141,7 @@
             el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
         }
     );
+    mermaid.initialize({ startOnLoad: true });
 </script>
 <style>
     /* Set svg to center */
