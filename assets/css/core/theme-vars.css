@@ -37,8 +37,5 @@
     background: var(--theme);
 }
 .mermaid {
-    background: var(--code-bg);
-}
-.mermaid text.messageText {
-    stroke: var(--content);
+    background: #fff;
 }
