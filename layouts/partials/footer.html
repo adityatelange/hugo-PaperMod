@@ -136,12 +136,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.9.3/mermaid.min.js" integrity="sha512-kxc8+BGu0/ESUMiK6Q/goKwwcoIoFVcXZ4GwMoGupMA/qTGx19BcNn1uiebOZO5f85ZD0oTdvlRKdeNh3RTnVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     // Replace mermaid pre.code to div
-    Array.from(document.getElementsByClassName("language-mermaid")).forEach(
-        (el) => {
-            el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
-        }
-    );
-    mermaid.initialize({ startOnLoad: true });
+
+    $(function() {
+        Array.from(document.getElementsByClassName("language-mermaid")).forEach(
+            (el) => {
+                el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+            }
+        );
+    });
 </script>
 <style>
     /* Set svg to center */
