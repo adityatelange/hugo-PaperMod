@@ -38,4 +38,5 @@
 }
 .mermaid {
     background: #fff;
+    border-radius: var(--radius);
 }
