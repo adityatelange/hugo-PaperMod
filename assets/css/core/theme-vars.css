@@ -39,3 +39,6 @@
 .mermaid {
     background: var(--code-bg);
 }
+.mermaid .messageText {
+    color: var(--entry);
+}
