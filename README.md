@@ -42,12 +42,12 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 -   Cover image for each post (with Responsive image support).
 -   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
 -   SEO Friendly.
--   Muliple Author support.
+-   Multiple Author support.
 -   Search Page with Fuse.js
 -   Other Posts suggestion below a post
 -   BreadCrumb Navigation
 -   Code Block Copy buttons
--   No webpack, nodejs and other depedencies required to edit the theme.
+-   No webpack, nodejs and other dependencies required to edit the theme.
 
 Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
 
