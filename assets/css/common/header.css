@@ -40,7 +40,7 @@
     height: 18px;
 }
 
-button#theme-toggle  {
+button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
 }
@@ -61,7 +61,7 @@ body:not(.dark) #sun {
     white-space: nowrap;
 }
 
-#menu li+li {
+#menu li + li {
     margin-inline-start: var(--gap);
 }
 

@@ -9,10 +9,10 @@
     padding: 3px 10px;
     background: var(--tertiary);
     border-radius: 6px;
-    transition: transform .1s;
+    transition: transform 0.1s;
 }
 
 .terms-tags a:active {
     background: var(--tertiary);
-    transform: scale(.96);
+    transform: scale(0.96);
 }

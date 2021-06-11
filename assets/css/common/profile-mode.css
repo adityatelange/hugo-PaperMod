@@ -34,7 +34,7 @@
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
-    transition: transform .1s;
+    transition: transform 0.1s;
 }
 
 .button-inner {
@@ -42,5 +42,5 @@
 }
 
 .button:active {
-    transform: scale(.96);
+    transform: scale(0.96);
 }
