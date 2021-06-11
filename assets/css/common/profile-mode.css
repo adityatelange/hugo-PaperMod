@@ -5,11 +5,8 @@
 }
 
 .main .profile {
-    position: absolute;
-    left: 0;
-    right: 0;
     align-items: center;
-    height: 80%;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
     text-align: center;
 }
 
