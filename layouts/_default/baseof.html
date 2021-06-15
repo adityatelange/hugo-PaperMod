@@ -18,6 +18,7 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind -}}
+    {{ partial "script.html" . }}
 </body>
 
 </html>

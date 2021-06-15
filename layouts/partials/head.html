@@ -68,32 +68,6 @@
 <link rel="preload" href="{{ . }}" as="image">
 {{- end }}
 
-{{- /* Search */}}
-{{- if (eq .Layout `search`) -}}
-<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" .Site.Params.fuseOpts)) }}
-{{- $fusejs := resources.Get "js/fuse.js" }}
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
-{{- else }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
-{{- end }}
-{{- end -}}
-
-{{- /* Highlight.js */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
-{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
-    onload="hljs.initHighlightingOnLoad();"></script>
-{{- else }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
-<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
-{{- end }}
-{{- end }}
 
 {{- /* Favicons */}}
 <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
@@ -109,7 +83,7 @@
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 {{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
