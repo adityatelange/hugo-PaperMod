@@ -10,6 +10,11 @@
 </header>
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if .Site.Params.ShowAllPagesInArchive }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
 <div class="archive-year">
