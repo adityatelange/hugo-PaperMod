@@ -25,8 +25,6 @@ jobs:
 
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
-- name: doks
-run: mkdir docs
 
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
