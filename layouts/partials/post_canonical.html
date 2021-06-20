@@ -1,4 +1,4 @@
-{{ if and (.Params.canonicalURL) (.Params.showCanonicalLink ) -}}
+{{ if and (.Params.canonicalURL) (.Params.ShowCanonicalLink ) -}}
 {{ $url := urls.Parse .Params.canonicalURL }}
 
 {{- if or .Params.author $.Site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated ( or .Params.editPost.URL .Site.Params.editPost.URL) }}&nbsp;|&nbsp;{{- end -}}
