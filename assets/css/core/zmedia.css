@@ -22,6 +22,11 @@
     .archive-year {
         margin-top: 20px;
     }
+
+    /* footer */
+    .footer {
+        padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
+    }
 }
 
 @media screen and (min-width: 768px) {

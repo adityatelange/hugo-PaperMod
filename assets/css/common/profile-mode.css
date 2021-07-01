@@ -1,32 +1,29 @@
 .buttons,
 .main .profile {
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 .main .profile {
-    position: absolute;
-    left: 0;
-    right: 0;
     align-items: center;
-    height: 80%;
-    text-align: center
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
+    text-align: center;
 }
 
 .profile .profile_inner h1 {
-    padding: 12px 0
+    padding: 12px 0;
 }
 
 .profile img {
     display: inline-table;
     border-radius: 50%;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .buttons {
     flex-wrap: wrap;
     max-width: 400px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .button {
@@ -34,13 +31,13 @@
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
-    transition: transform .1s
+    transition: transform 0.1s;
 }
 
 .button-inner {
-    padding: 0 8px
+    padding: 0 8px;
 }
 
 .button:active {
-    transform: scale(.96)
+    transform: scale(0.96);
 }

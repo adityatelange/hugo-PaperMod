@@ -4,15 +4,15 @@
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    padding: var(--gap)
+    padding: var(--gap);
 }
 
 .page-header h1 {
-    font-size: 40px
+    font-size: 40px;
 }
 
 .pagination {
-    display: flex
+    display: flex;
 }
 
 .pagination a {
@@ -21,31 +21,32 @@
     line-height: 36px;
     background: var(--primary);
     border-radius: calc(36px / 2);
-    padding: 0 16px
+    padding: 0 16px;
 }
 
 .pagination .next {
-    margin-inline-start: auto
+    margin-inline-start: auto;
 }
 
 .social-icons {
-    padding: 12px 0
+    padding: 12px 0;
 }
 
 .social-icons a:not(:last-of-type) {
-    margin-inline-end: 12px
+    margin-inline-end: 12px;
 }
 
 .social-icons a svg {
     height: 26px;
-    width: 26px
+    width: 26px;
 }
 
 code {
     direction: ltr;
 }
 
-div.highlight, pre {
+div.highlight,
+pre {
     position: relative;
 }
 
