@@ -1,0 +1,17 @@
+- id: prev_page
+  translation: "আাগের পেজ"
+
+- id: next_page
+  translation: "পরের পেজ"
+
+- id: translations
+  translation: "ট্রান্সলেশন"
+
+- id: home
+  translation: "হোম"
+
+- id: code_copy
+  translation: "কপি"
+
+- id: code_copied
+  translation: "কপি হয়েছে!"
