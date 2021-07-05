@@ -4,7 +4,7 @@
 <br>
 
 > Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
-> The goal of this project is to add more Features and customization to the og theme.
+> The goal of this project is to add more Features and customization to the orginal theme.
 
 The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
 
