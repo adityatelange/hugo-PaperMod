@@ -136,3 +136,8 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
+::selection {
+    background: var(--primary);
+    color: var(--theme);
+}
