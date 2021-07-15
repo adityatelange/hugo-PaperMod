@@ -46,7 +46,7 @@
     {{- end }}
   </footer>
 
-  {{- if (.Param "comments") }}
+  {{- if and (.Param "comments") (not .Params.disableComment) }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
