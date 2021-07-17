@@ -19,7 +19,6 @@ Markdown文件类型结尾是.md或.markdown形式.
 
 优点: **简单 统一(写一次任何地方显示一致) 支持网站平台多**(Github Gitlab Wordpresse 知乎 简书等)
 
-编辑软件推荐:  **{{< url "Typora" "https://typora.io/#download">}}**
 
 
 ## 1. 标题
