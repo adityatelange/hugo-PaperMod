@@ -13,7 +13,9 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
+    {{- if not .Site.Params.profileMode.hideHeader -}}
     {{- partialCached "header.html" . .Page -}}
+    {{- end }}
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
