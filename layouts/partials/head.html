@@ -18,9 +18,31 @@
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 {{- end }}
-<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
-    {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
-    {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+{{- $metaDescription := .Description -}}
+{{- if .IsHome -}}
+    {{- if isset site.Params "description" -}}
+        {{- $metaDescription = site.Params.description -}}
+    {{- end -}}
+{{- end -}}
+{{- if .Data.Terms -}}
+    {{- $metaDescription = printf "taxonomy (classification): list of %s" (partial "return-helpers/title" . | lower ) -}}
+{{- else if or .Data.Plural .Data.Singular -}}
+    {{- $metaDescription = printf "pages for taxonomy (classification) term: %s" (partial "return-helpers/title" . | lower ) -}}
+{{- end -}}
+{{- if lt (len $metaDescription) 15 -}}
+    {{- if isset .Params "description" -}}
+        {{- $metaDescription = .Params.description -}}
+    {{- else if isset .Params "summary" -}}
+        {{- $metaDescription = .Params.summary -}}
+    {{- else if gt (len .Summary) 15 -}}
+        {{- $metaDescription = .Summary -}}
+    {{- end -}}
+{{- end -}}
+{{- if lt (len $metaDescription) 15 -}}
+    {{- $metaDescription = (partial "return-helpers/title" (dict "curPage" . "concatSiteTitle" true)) | lower -}}
+{{- end -}}
+{{ $metaDescription = trim ($metaDescription | plainify | htmlUnescape) "\n\r " }}
+<meta name="description" content="{{- substr $metaDescription 0 159 -}}" />
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
