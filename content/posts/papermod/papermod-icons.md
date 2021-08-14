@@ -27,41 +27,48 @@ draft: true
 | 12  | `dribbble`      | dribbble.com                    |
 | 13  | `email`         | -                               |
 | 14  | `facebook`      | facebook.com                    |
-| 15  | `freepik`       | freepik.com                     |
-| 16  | `gitea`         | gitea.io                        |
-| 17  | `github`        | github.com                      |
-| 18  | `gitlab`        | gitlab.com                      |
-| 19  | `hackerone`     | hackerone.com                   |
-| 20  | `hackerrank`    | hackerrank.com                  |
-| 21  | `hackthebox`    | hackthebox.eu                   |
-| 22  | `instagram`     | instagram.com                   |
-| 23  | `itchio`        | itch.io                         |
-| 24  | `kakaotalk`     | kakaocorp.com/service/KakaoTalk |
-| 25  | `keybase`       | keybase.io                      |
-| 26  | `kofi`          | ko-fi.com                       |
-| 27  | `lastfm`        | last.fm                         |
-| 28  | `linkedin`      | linkedin.com                    |
-| 29  | `mastodon`      | mastodon.social                 |
-| 30  | `medium`        | medium.com                      |
-| 31  | `mixcloud`      | mixcloud.com                    |
-| 32  | `nuget`         | nuget.org                       |
-| 33  | `paypal`        | paypal.com                      |
-| 34  | `qq`            | qq.com                          |
-| 35  | `reddit`        | reddit.com                      |
-| 36  | `rss`           | -                               |
-| 37  | `soundcloud`    | soundcloud.com                  |
-| 38  | `shutterstock`  | shutterstock.com                |
-| 39  | `slack`         | slack.com                       |
-| 40  | `snapchat`      | snapchat.com/add                |
-| 41  | `sourcerer`     | sourcerer.io                    |
-| 42  | `stackoverflow` | stackoverflow.com               |
-| 43  | `steam`         | steampowered.com                |
-| 44  | `telegram`      | telegram.org                    |
-| 45  | `twitch`        | twitch.tv                       |
-| 46  | `twitter`       | twitter.com                     |
-| 47  | `unsplash`      | unsplash.com                    |
-| 48  | `youtube`       | youtube.com                     |
-| 49  | `other`         | -                               |
+| 15  | `flickr`        | flickr.com                      |
+| 16  | `freepik`       | freepik.com                     |
+| 17  | `gitea`         | gitea.io                        |
+| 18  | `github`        | github.com                      |
+| 19  | `gitlab`        | gitlab.com                      |
+| 20  | `goodreads`     | goodreads.com                   |
+| 21  | `hackerone`     | hackerone.com                   |
+| 22  | `hackerrank`    | hackerrank.com                  |
+| 23  | `hackthebox`    | hackthebox.eu                   |
+| 24  | `instagram`     | instagram.com                   |
+| 25  | `itchio`        | itch.io                         |
+| 26  | `kakaotalk`     | kakaocorp.com/service/KakaoTalk |
+| 27  | `keybase`       | keybase.io                      |
+| 28  | `kofi`          | ko-fi.com                       |
+| 29  | `lastfm`        | last.fm                         |
+| 30  | `liberapay`     | liberapay.com                   |
+| 31  | `linkedin`      | linkedin.com                    |
+| 32  | `mastodon`      | mastodon.social                 |
+| 33  | `matrix`        | matrix.org                      |
+| 34  | `medium`        | medium.com                      |
+| 35  | `mixcloud`      | mixcloud.com                    |
+| 36  | `nuget`         | nuget.org                       |
+| 37  | `paypal`        | paypal.com                      |
+| 38  | `qq`            | qq.com                          |
+| 39  | `reddit`        | reddit.com                      |
+| 40  | `rss`           | -                               |
+| 41  | `serverfault`   | serverfault.com                 |
+| 42  | `soundcloud`    | soundcloud.com                  |
+| 43  | `shutterstock`  | shutterstock.com                |
+| 44  | `slack`         | slack.com                       |
+| 45  | `snapchat`      | snapchat.com/add                |
+| 46  | `sourcerer`     | sourcerer.io                    |
+| 47  | `spotify`       | spotify.com                     |
+| 48  | `stackoverflow` | stackoverflow.com               |
+| 49  | `steam`         | steampowered.com                |
+| 50  | `telegram`      | telegram.org                    |
+| 51  | `twitch`        | twitch.tv                       |
+| 52  | `twitter`       | twitter.com                     |
+| 53  | `unsplash`      | unsplash.com                    |
+| 54  | `xda`           | xda-developers.com              |
+| 55  | `youtube`       | youtube.com                     |
+| 56  | `other`         | -                               |
 
 Usage :
 
@@ -90,5 +97,5 @@ Usage:
 
 ```yml
 params:
-    ShowShareButtons: true
+  ShowShareButtons: true
 ```
