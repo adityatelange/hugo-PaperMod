@@ -22,7 +22,7 @@ The following is enabled by default
 
 -   [minification](https://gohugo.io/hugo-pipes/minification/) - makes the assets size smallest as possible.
 -   [bundling](https://gohugo.io/hugo-pipes/bundling/) - bundles all the styles in one single asset
--   [fingerprint/intergity](https://gohugo.io/hugo-pipes/fingerprint/) check.
+-   [fingerprint/integrity](https://gohugo.io/hugo-pipes/fingerprint/) check.
 
 ---
 
