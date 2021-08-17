@@ -438,9 +438,78 @@ t - Theme toggle
 
 -   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
 
--   Twitter Cards Support
+#### Twitter Cards Support
 
--   Open-Graph support
+* `twitter:title` comes from `.Title`
+* `twitter:description` comes from:
+  * For Site: `.Description` if present, else `.Site.params.description`
+  * For Page: `.Description` if present, else `.Summary`
+* `twitter:site` comes from: `.Site.Social.twitter`
+* `twitter:image` is determined as follows:
+  * If `.Params.cover.image` is present, then
+    * `twitter:card` is `summary_large_image`
+    * If `.Params.cover.relative`:
+      * `twitter:image` is the absolute URL of `.Params.cover.image`
+    * Else
+      * `twitter:image` is the absolute URL of `.RelPermalink`/`.Params.cover.image`
+  * Else
+    * If `.Params.images` is present
+      * `twitter:card` is `summary_large_image`
+      * `twitter:image` is the first image in the `.Params.images` list
+    * Else
+      * Resources of type image from the page bundle is retrieved
+      * If a resource exists with `feature` in the name
+        * `twitter:card` is `summary_large_image`
+        * `twitter:image` is the first such image
+      * Else if a resource exists with `cover` or `thumbnail` in the name
+        * `twitter:card` is `summary_large_image`
+        * `twitter:image` is the first such image
+      * Else if `.Site.Params.images` is present
+        * `twitter:card` is `summary_large_image`
+        * `twitter:image` is the first image in the `.Site.Params.images` list
+      * Else
+        * `twitter:card` is `summary` and there is no `twitter:image`
+
+#### Open-Graph support
+
+* `og:title` comes from `.Title`
+* `og:description` comes from:
+  * For Site: `.Description` if present, else `.Site.params.description`
+  * For Page: `.Description` if present, else `.Summary`
+* `og.type` is `article` for when `.IsPage`, otherwise it is `website`
+* `og:url` is `.Page` `.Permalink`
+* `og:image` is determined as follows:
+  * If `.Params.cover.image` is present, then
+    * If `.Params.cover.relative`:
+      * `og:image` is the absolute URL of `.Params.cover.image`
+    * Else
+      * `og:image` is the absolute URL of `.RelPermalink`/`.Params.cover.image`
+  * Else
+    * If `.Params.images` is present
+      * `og:image` is the first image in the `.Params.images` list
+    * Else
+      * Resources of type image from the page bundle is retrieved
+      * If a resource exists with `feature` in the name
+        * `og:image` is the first such image
+      * Else if a resource exists with `cover` or `thumbnail` in the name
+        * `og:image` is the first such image
+      * Else if `.Site.Params.images` is present
+        * `og:image` is the first image in the `.Site.Params.images` list
+      * Else
+        * There is no `og:image`
+
+* If  `.IsPage`
+  * `article:section` is `.Section`
+  * `article:published_time` is `.PublishDate` (if present)
+  * `article:modified_time` is `.Lastmod` (if present)
+  * `og:audio` is `.Params.audio` (if present)
+  * `og:locale` is `.Params.locale` (if present)
+  * `og.site_name` is `.Site.Params.title` (if present)
+  * `og:videos` is the link for each link in `.Params.videos` (if present)
+  * If page is has a `series` Taxonomy:
+    * `og:see_also` is link for the first six links in the same series as the page (if present)
+
+* `fb:admins` is `.Site.Social.facebook_admin` if present
 
 ---
 
