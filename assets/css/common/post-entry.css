@@ -102,3 +102,31 @@
     color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
 }
+
+.entry-cover ~ .entry-item {
+    display: block;
+    width: 100%;
+}
+
+@media screen {
+    .entry-cover.entry-cover-thumbnail {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .entry-cover.entry-cover-thumbnail {
+        display: inline-block;
+        margin-right: .6em;
+        margin-top: 1.3em;
+        vertical-align: middle;
+        width: 15%;
+    }
+
+    .entry-cover.entry-cover-thumbnail ~ .entry-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+    }
+}

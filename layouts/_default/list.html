@@ -50,18 +50,27 @@
 
 <article class="{{ $class }}">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+  {{- $isThumbnail := (default false (.Param "cover.thumbnailInList")) -}}
+  {{ if not $isThumbnail }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden "isThumbnail" $isThumbnail ) }}
+  <div class="entry-item">
+  {{ end }}
   <header class="entry-header">
     <h2>
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
   </header>
+  {{ if $isThumbnail }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden "isThumbnail" $isThumbnail ) }}
+  <div class="entry-item">
+  {{ end }}
   {{- if (ne (.Param "hideSummary") true) }}
-  <section class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </section>
+    <section class="entry-content">
+      <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    </section>
   {{- end }}
+  </div>
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
