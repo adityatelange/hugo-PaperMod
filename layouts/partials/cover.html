@@ -23,7 +23,7 @@
             alt="{{ $alt }}"
             width="{{ $cover.Width }}"
             height="{{ $cover.Height }}"
-        />
+        >
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
         <img 
             loading="lazy"
@@ -31,12 +31,12 @@
             alt="{{ $alt }}"
             width="{{ $cover.Width }}"
             height="{{ $cover.Height }}"
-        />
+        >
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
         {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}"/>
+            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
     {{/*  Display Caption  */}}
