@@ -1,5 +1,9 @@
+html {
+    font-size: var(--min-font-size);
+}
+
 body {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.6;
 }
 

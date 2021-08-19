@@ -1,31 +1,31 @@
 .archive-posts {
     width: 100%;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .archive-year {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 .archive-month {
-    padding: 10px 0;
+    padding: .625rem 0;
 }
 
 .archive-month-header {
-    margin: 25px 0;
-    width: 200px;
+    margin: 1.5625rem 0;
+    width: 12.5rem;
 }
 
 .archive-entry {
-    padding: 5px;
-    margin: 10px 0;
+    padding: .3125rem;
+    margin: .625rem 0;
 }
 
 .archive-entry-title {
-    margin: 5px 0;
+    margin: .3125rem 0;
 }
 
 .archive-count,
 .archive-meta {
-    font-size: 14px;
+    font-size: .875rem;
 }

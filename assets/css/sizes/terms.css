@@ -1,11 +1,10 @@
 .terms-tags li {
-    margin: 10px;
-    font-weight: 500;
+    margin: .625rem;
 }
 
 .terms-tags a {
-    padding: 3px 10px;
-    border-radius: 6px;
+    padding: .3125rem .625rem;
+    border-radius: .3125rem;
 }
 
 .terms-tags a:active {

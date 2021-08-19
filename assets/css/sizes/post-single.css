@@ -1,62 +1,62 @@
 .page-header,
 .post-header {
-    margin: 24px auto var(--content-gap) auto;
+    margin: 1.5rem auto var(--content-gap) auto;
 }
 
 .post-title {
-    margin-bottom: 2px;
-    font-size: 40px;
+    margin-bottom: .125rem;
+    font-size: 2.5rem;
 }
 
 .post-description {
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: .625rem;
+    margin-bottom: .3125rem;
 }
 
 .post-meta,
 .breadcrumbs {
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 .post-meta .i18n_list li {
-    margin: auto 3px;
+    margin: auto .1875rem;
 }
 
 .breadcrumbs a {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .post-content h3,
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin: 24px 0 16px;
+    margin: 1.5rem 0 1rem;
 }
 
 .post-content h1 {
-    margin: 40px auto 32px;
-    font-size: 40px;
+    margin: 2.5rem auto 2rem;
+    font-size: 2.5rem;
 }
 
 .post-content h2 {
-    margin: 32px auto 24px;
-    font-size: 32px;
+    margin: 2rem auto 1.5rem;
+    font-size: 2rem;
 }
 
 .post-content h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .post-content h4 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .post-content h5 {
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 .post-content h6 {
-    font-size: 12px;
+    font-size: .75rem;
 }
 
 .post-content a code {
@@ -74,11 +74,11 @@
 
 .post-content ol,
 .post-content ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 1.25rem;
 }
 
 .post-content li {
-    margin-top: 5px;
+    margin-top: .3125rem;
 }
 
 .post-content li p {
@@ -96,27 +96,27 @@
 .post-content dd {
     width: 75%;
     margin-inline-start: 0;
-    padding-inline-start: 10px;
+    padding-inline-start: .625rem;
 }
 
 .post-content dd ~ dd,
 .post-content dt ~ dt {
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .post-content table {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
 
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
-    min-width: 80px;
-    padding: 12px 8px;
+    min-width: 5rem;
+    padding: .75rem .5rem;
     line-height: 1.5;
 }
 
 .post-content table th {
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 .post-content table:not(.highlighttable) td code:only-child {
@@ -129,7 +129,7 @@
 
 .post-content .highlight:not(table),
 .post-content pre {
-    margin: 10px auto;
+    margin: .625rem auto;
     border-radius: var(--radius);
 }
 
@@ -146,7 +146,7 @@
 }
 
 .post-content .highlighttable td:first-child {
-    width: 40px;
+    width: 2.5rem;
 }
 
 .post-content .highlighttable td .linenodiv {
@@ -159,27 +159,27 @@
 }
 
 .post-content code {
-    margin: auto 4px;
-    padding: 4px 6px;
+    margin: auto .25rem;
+    padding: .25rem .375rem;
     font-size: 0.78em;
     line-height: 1.5;
-    border-radius: 2px;
+    border-radius: .125rem;
 }
 
 .post-content pre code {
     margin: auto 0;
-    padding: 10px;
+    padding: .625rem;
     border-radius: 0;
 }
 
 .post-content blockquote {
-    margin: 20px 0;
-    padding: 0 14px;
+    margin: 1.25rem 0;
+    padding: 0 .875rem;
 }
 
 .post-content hr {
-    margin: 30px 0;
-    height: 2px;
+    margin: 1.875rem 0;
+    height: .125rem;
     border-top: 0;
     border-bottom: 0;
 }
@@ -189,7 +189,7 @@
 }
 
 .post-content img {
-    border-radius: 4px;
+    border-radius: .25rem;
     margin: 1rem 0;
 }
 
@@ -198,27 +198,27 @@
 }
 
 .post-content figure > figcaption {
-    font-size: 16px;
-    margin: 8px 0 16px;
+    font-size: 1rem;
+    margin: .5rem 0 1rem;
 }
 
 .post-content figure > figcaption > p {
-    font-size: 14px;
+    font-size: .875rem;
 }
 
 .toc {
-    margin: 0 2px 40px 2px;
+    margin: 0 .125rem 2.5rem .125rem;
     border-radius: var(--radius);
     padding: 0.4em;
 }
 
 .toc details summary {
-    margin-inline-start: 20px;
+    margin-inline-start: 1.25rem;
 }
 
 .toc .inner {
-    margin: 0 20px;
-    padding: 10px 20px;
+    margin: 0 1.25rem;
+    padding: .625rem 1.25rem;
 }
 
 .toc li ul {
@@ -226,12 +226,12 @@
 }
 
 .post-footer {
-    margin-top: 56px;
+    margin-top: 3.5rem;
 }
 
 .post-tags li {
-    margin-inline-end: 3px;
-    margin-bottom: 5px;
+    margin-inline-end: .1875rem;
+    margin-bottom: .3125rem;
 }
 
 .post-tags a,
@@ -241,28 +241,28 @@
 }
 
 .post-tags a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
-    font-size: 14px;
-    line-height: 34px;
+    padding-inline-start: .875rem;
+    padding-inline-end: .875rem;
+    font-size: .875rem;
+    line-height: 2.125rem;
 }
 
 .share-buttons {
-    margin: 14px 0;
+    margin: .875rem 0;
     padding-inline-start: var(--radius);
 }
 
 .share-buttons a {
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .share-buttons a:not(:last-of-type) {
-    margin-inline-end: 12px;
+    margin-inline-end: .75rem;
 }
 
 .share-buttons a svg {
-    height: 30px;
-    width: 30px;
+    height: 1.875rem;
+    width: 1.875rem;
 }
 
 .share-buttons svg:active {
@@ -275,23 +275,23 @@ h3:hover .anchor,
 h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
-    margin-inline-start: 8px;
+    margin-inline-start: .5rem;
 }
 
 .paginav {
-    margin: 10px 0;
-    line-height: 30px;
+    margin: .625rem 0;
+    line-height: 1.875rem;
     border-radius: var(--radius);
 }
 
 .paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
+    padding-inline-start: .875rem;
+    padding-inline-end: .875rem;
     border-radius: var(--radius);
 }
 
 .paginav .title {
-    letter-spacing: 1px;
+    letter-spacing: .0625rem;
     font-size: small;
 }
 

@@ -11,22 +11,22 @@
 }
 
 .logo a {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .logo a img {
     transform: translate(0, -10%);
-    border-radius: 6px;
-    margin-inline-end: 8px;
+    border-radius: 0.375rem;
+    margin-inline-end: .5rem;
 }
 
 #theme-toggle svg {
-    height: 18px;
+    height: 1.125rem;
 }
 
 button#theme-toggle {
-    font-size: 26px;
-    margin: auto 4px;
+    font-size: 1.625rem;
+    margin: auto .25rem;
 }
 
 #menu li + li {
@@ -34,16 +34,16 @@ button#theme-toggle {
 }
 
 #menu a {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
-    margin: auto 4px;
+    margin: auto .25rem;
 }
 
 .lang-switch a {
-    margin: auto 3px;
-    font-size: 16px;
+    margin: auto .1825rem;
+    font-size: 1rem;
 }

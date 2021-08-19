@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
     /* theme-vars */
     :root {
-        --gap: 14px;
+        --gap: .875rem;
     }
 
     /* profile-mode */
@@ -11,16 +11,16 @@
 
     /* post-entry */
     .first-entry {
-        min-height: 260px;
+        min-height: 16.25rem;
     }
 
     .archive-year {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     /* footer */
     .footer {
-        padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
+        padding: calc((var(--footer-height) - var(--gap) - .625rem) / 2) var(--gap);
     }
 }
 
