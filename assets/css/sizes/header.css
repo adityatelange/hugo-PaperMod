@@ -1,0 +1,49 @@
+.nav {
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+}
+
+.logo,
+#menu {
+    margin: auto var(--gap);
+}
+
+.logo a {
+    font-size: 24px;
+}
+
+.logo a img {
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-inline-end: 8px;
+}
+
+#theme-toggle svg {
+    height: 18px;
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+#menu li + li {
+    margin-inline-start: var(--gap);
+}
+
+#menu a {
+    font-size: 16px;
+}
+
+.lang-switch li,
+.lang-switch ul,
+.logo-switches {
+    margin: auto 4px;
+}
+
+.lang-switch a {
+    margin: auto 3px;
+    font-size: 16px;
+}

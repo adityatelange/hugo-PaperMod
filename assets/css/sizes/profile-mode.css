@@ -1,0 +1,30 @@
+.main .profile {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
+}
+
+.profile .profile_inner h1 {
+    padding: 12px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.buttons {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.button {
+    border-radius: var(--radius);
+    margin: 8px;
+    padding: 6px;
+}
+
+.button-inner {
+    padding: 0 8px;
+}
+
+.button:active {
+    transform: scale(0.96);
+}

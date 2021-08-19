@@ -1,0 +1,31 @@
+#searchbox input {
+    padding: 4px 10px;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+#searchResults li {
+    border-radius: var(--radius);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#searchResults {
+    margin: 10px 0;
+    width: 100%;
+}
+
+#searchResults li:active {
+    transform: scale(0.98);
+}
+
+#searchResults a {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#searchResults .focus {
+    transform: scale(0.98);
+}

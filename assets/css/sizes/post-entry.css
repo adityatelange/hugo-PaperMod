@@ -1,0 +1,73 @@
+.first-entry {
+    min-height: 320px;
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+}
+
+.first-entry .entry-header {
+    -webkit-line-clamp: 3;
+}
+
+.first-entry .entry-header h1 {
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.first-entry .entry-content {
+    margin: 14px 0;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+}
+
+.first-entry .entry-footer {
+    font-size: 14px;
+}
+
+.home-info .entry-content {
+    -webkit-line-clamp: unset;
+}
+
+.post-entry {
+    margin-bottom: var(--gap);
+    padding: var(--gap);
+    border-radius: var(--radius);
+}
+
+.post-entry:active {
+    transform: scale(0.96);
+}
+
+.entry-header h2 {
+    font-size: 24px;
+}
+
+.entry-content {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-line-clamp: 2;
+}
+
+.entry-footer {
+    font-size: 13px;
+}
+
+.entry-link {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.entry-cover,
+.entry-isdraft {
+    font-size: 14px;
+}
+
+.entry-cover {
+    margin-bottom: var(--gap);
+}
+
+.entry-cover img {
+    border-radius: var(--radius);
+    width: 100%;
+}

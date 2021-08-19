@@ -34,17 +34,20 @@
 {{- end }}
 
 {{- /* Styles */}}
-{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
+{{- $theme_color_vars := (resources.Get "css/core/theme-color-vars.css") }}
+{{- $theme_size_vars := (resources.Get "css/core/theme-size-vars.css") }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
-{{- $media := (resources.Get "css/core/zmedia.css") }}
+{{- $media_main := (resources.Get "css/core/zmedia-main.css") }}
+{{- $media_sizes := (resources.Get "css/core/zmedia-sizes.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $sizes := (resources.Match "css/sizes/*.css") | resources.Concat "assets/css/sizes.css" }}
 
 {{- /* include `an-old-hope` if hljs is on */}}
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default false) }}
 {{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" }}
+{{- $core := (slice $theme_color_vars $theme_size_vars $reset $common $sizes $hljs $media_main $media_sizes) | resources.Concat "assets/css/core.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
 
 {{- /* bundle all required css */}}
