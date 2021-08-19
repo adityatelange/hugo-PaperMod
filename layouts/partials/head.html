@@ -18,9 +18,17 @@
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 {{- end }}
-<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
-    {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
-    {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+{{- $description := "" -}}
+{{- with .Description }}{{ $description = . }}{{- else }}{{- if .IsPage}}
+    {{- $description = (.Summary | default (printf "%s - %s" .Title  .Site.Title)) }}{{- else }}
+    {{- with .Site.Params.description }}{{ $description = . }}{{- end }}{{- end }}{{- end -}}
+{{- if lt (len $description) 25 -}}
+    {{- warnf (print (T "seo_colon") " " .File.Path " " (T "meta_description_less_than_25")) -}}
+{{- end -}}
+{{- if gt (len $description) 160 -}}
+    {{- warnf (print (T "seo_colon") " " .File.Path " " (T "meta_description_greater_than_160")) -}}
+{{- end -}}
+<meta name="description" content="$description">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
