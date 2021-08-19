@@ -28,7 +28,7 @@
 {{- if gt (len $description) 160 -}}
     {{- warnf (print (T "seo_colon") " " .File.Path " " (T "meta_description_greater_than_160")) -}}
 {{- end -}}
-<meta name="description" content="$description">
+<meta name="description" content="{{ $description }}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
