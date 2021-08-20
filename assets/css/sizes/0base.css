@@ -1,28 +1,97 @@
+/* Fall back base font-size for old browsers */
 html {
-    font-size: var(--min-font-size);
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1376px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    html {
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1880px) {
+    html {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 2048px) {
+    html {
+        font-size:25px;
+    }
+}
+
+@media screen and (min-width: 3172px) {
+    html {
+        font-size:32px;
+    }
 }
 
 body {
     font-size: 1.125rem;
-    line-height: 1.6;
+}
+/* End of Fall back base font-size for old browsers */
+
+/* Set the base font-size using the method supported by the browser
+   1. clamp & calc
+   2. min, max, and calc
+   3. calc plus media query
+*/
+@supports (font-size: clamp(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier))), var(--max-font-size))) {
+    html {
+        font-size: clamp(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier))), var(--max-font-size));
+    }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+@supports ((font-size: min(max(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier)))), var(--max-font-size))) and (not (font-size: clamp(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier))), var(--max-font-size))))) {
+    html {
+        font-size: min(max(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier)))), var(--max-font-size));
+    }
+}
+
+@supports ((font-size: calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier)))) and (not (font-size: min(max(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier)))), var(--max-font-size)))) and (not (font-size: clamp(var(--min-font-size), calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier))), var(--max-font-size))))) {
+    html {
+        font-size: calc(var(--main-width) / (var(--main-width-in-chars) * var(--body-font-multiplier)));
+    }
+    @media screen and (min-width: 3172px) {
+        html {
+            font-size: var(--max-font-size);
+        }
+    }
+}
+/* End Set the base font-size using the method supported by the browser */
+
+/* Override the body font-size via var, if supported */
+@supports (font-size: var(--body-font-size)) {
+    body {
+        font-size: var(--body-font-size);
+        line-height: 1.6;
+    }
+}
+/* End Override the body font-size via var, if supported */
+
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -31,9 +100,7 @@ ul {
     padding: 0;
 }
 
-body,
-figure,
-ul {
+body, figure, ul {
     margin: 0;
 }
 
@@ -42,15 +109,12 @@ table {
     border-spacing: 0;
 }
 
-button,
-input,
-textarea {
+button, input, textarea {
     padding: 0;
     border: 0;
 }
 
-input,
-textarea {
+input, textarea {
     outline-offset: 0;
     outline-width: 0;
 }

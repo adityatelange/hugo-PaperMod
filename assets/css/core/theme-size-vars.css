@@ -1,9 +1,13 @@
 :root {
     --min-font-size: 16px;
+    --max-font-size: 32px;
+    --body-font-multiplier: 1.125;
+    --body-font-size: 1.125rem;
+    --main-width-in-chars: 55;
     --gap: 1.5rem;
     --content-gap: 1.25rem;
-    --nav-width: 64rem;
-    --main-width: 48rem;
+    --nav-width: 95vw;
+    --main-width: 75vw;
     --header-height: 3.75rem;
     --footer-height: 3.75rem;
     --radius: .5rem;
