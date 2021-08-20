@@ -19,8 +19,7 @@
             sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}" 
             width="{{ $cover.Width }}" height="{{ $cover.Height }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}" 
-            width="{{ $cover.Width }}" height="{{ $cover.Height }}">
+        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
         {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
