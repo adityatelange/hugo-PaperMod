@@ -1,5 +1,5 @@
 .archive-year:not(:last-of-type) {
-    border-bottom-style: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
 }
 
 .archive-month {
@@ -8,7 +8,7 @@
 }
 
 .archive-month:not(:last-of-type) {
-    border-bottom-style: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .archive-entry {

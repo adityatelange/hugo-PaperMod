@@ -13,11 +13,11 @@
 
 .footer a {
     color: inherit;
-    border-bottom-style: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
 }
 
 .footer a:hover {
-    border-bottom-style: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
 }
 
 .top-link {
