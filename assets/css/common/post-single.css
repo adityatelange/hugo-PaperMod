@@ -77,7 +77,7 @@
 }
 
 .post-content blockquote {
-    border-inline-start-style: 3px solid var(--primary);
+    border-inline-start: 3px solid var(--primary);
 }
 
 .post-content hr {
@@ -99,7 +99,7 @@
 }
 
 .toc {
-    border-style: 1px solid var(--border);
+    border: 1px solid var(--border);
     background: var(--code-bg);
 }
 
@@ -173,7 +173,7 @@ h6:hover .anchor {
 }
 
 .post-content :not(table) ::-webkit-scrollbar-thumb {
-    border-style: 2px solid var(--hljs-bg);
+    border: 2px solid var(--hljs-bg);
     background: rgba(255, 255, 255, 0.32);
 }
 
@@ -182,7 +182,7 @@ h6:hover .anchor {
 }
 
 .gist table::-webkit-scrollbar-thumb {
-    border-style: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     background: rgba(0, 0, 0, 0.32);
 }
 
