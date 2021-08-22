@@ -438,10 +438,48 @@ t - Theme toggle
 
 -   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
 
--   Twitter Cards Support
+#### Twitter Cards Support
 
--   Open-Graph support
+* The Twitter Cards metadata, except ``twitter:image`` should not require
+  additional configuration, since it is generated from metadata that
+  you should already have (for instance the page title and description).
+* The ``twitter:image`` uses the [Post Cover Image](#post-cover-image), if present.
+* In the absence of a cover images, the first image from the ``images``
+  frontmatter (a list) is used.
+  ```yaml
+  images:
+    - image_01.png
+    - image_02.png
+  ```
+* Finally, if neither of those are provided, ``twitter:image`` comes from the first
+  [Page Bundle](https://gohugo.io/content-management/page-bundles/)
+  image with ``feature`` in the name, with a fallback to the first image with
+  ``cover`` or ``thumbnail`` in the name.
 
+#### OpenGraph support
+
+* The OpenGraph metadata, except ``og:image`` should not require
+  additional configuration, since it is generated from metadata that
+  you should already have (for instance the page title and description).
+* The ``og:image`` uses the [Post Cover Image](#post-cover-image), if present.
+* In the absence of a cover images, the first image from the ``images``
+  frontmatter (a list) is used.
+  ```yaml
+  images:
+    - image_01.png
+    - image_02.png
+  ```
+* Finally, if neither of those are provided, ``og:image`` comes from the first
+  [Page Bundle](https://gohugo.io/content-management/page-bundles/)
+  image with ``feature`` in the name, with a fallback to the first image with
+  ``cover`` or ``thumbnail`` in the name.
+* For pages, you can also add audio (using frontmatter ``audio: filename.ext``) and/or
+  videos.
+  ```yaml
+  videos:
+    - filename01.mov
+    - filename02.avi
+  ```
 ---
 
 ### Multilingual Support
