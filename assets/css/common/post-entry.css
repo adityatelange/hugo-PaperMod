@@ -125,7 +125,6 @@
 
 .entry-cover ~ .entry-item {
     display: block;
-    width: 100%;
 }
 
 .entry-cover~.entry-item-wrapper {
@@ -165,7 +164,47 @@
     .entry-cover.entry-cover-thumbnail ~ .entry-item {
         display: inline-block;
         vertical-align: top;
-        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .entry-main {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: flex-start;
+    }
+
+    .entry-cover.entry-cover-thumbnail {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 6rem;
+        margin: 0;
+        max-height: 100%;
+    }
+
+    .entry-cover.entry-cover-thumbnail img {
+        display: block;
+    }
+
+    .entry-cover.entry-cover-thumbnail svg {
+        display: block;
+    }
+
+    .entry-cover.entry-cover-thumbnail ~ .entry-item-wrapper {
+        align-self: stretch;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        justify-items: start;
+    }
+
+    .entry-item-wrapper .entry-footer {
+        justify-self: end;
+    }
+
+    .entry-footer {
+        font-style: italic;
     }
 
     .entry-main {
