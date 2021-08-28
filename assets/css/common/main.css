@@ -65,3 +65,9 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
+
+img,
+svg {
+    max-width: 100%;
+    max-height: 50vh;
+}
