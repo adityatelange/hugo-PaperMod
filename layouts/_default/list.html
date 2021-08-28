@@ -62,20 +62,26 @@
     </h2>
   </header>
   {{ if $isThumbnail }}
+  <div class="entry-main">
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden "isThumbnail" $isThumbnail ) }}
-  <div class="entry-item">
+    <div class="entry-item-wrapper">
+      <div class="entry-item">
   {{ end }}
   {{- if (ne (.Param "hideSummary") true) }}
-    <section class="entry-content">
-      <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-    </section>
+        <section class="entry-content">
+          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        </section>
   {{- end }}
-  </div>
+      </div>
   {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
+      <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
-  </footer>
+      </footer>
   {{- end }}
+  {{ if $isThumbnail }}
+    </div>
+  </div>
+  {{ end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}

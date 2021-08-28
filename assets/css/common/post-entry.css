@@ -88,14 +88,33 @@
 
 .entry-cover {
     margin-bottom: var(--gap);
+    margin-top: 1rem;
+    height: auto;
+    max-height: 100%;
     text-align: center;
 }
 
 .entry-cover img {
     border-radius: var(--radius);
-    pointer-events: none;
-    width: 100%;
+    display: block;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50vh;
+    max-width: 100%;
+    pointer-events: none;
+    width: auto;
+}
+
+.entry-cover svg {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50vh;
+    max-width: 100%;
+    pointer-events: none;
+    width: auto;
 }
 
 .entry-cover a {
@@ -108,25 +127,100 @@
     width: 100%;
 }
 
-@media screen {
-    .entry-cover.entry-cover-thumbnail {
-        display: block;
-        width: 100%;
-    }
+.entry-cover~.entry-item-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.entry-cover {
+    text-align: center;
+}
+
+.entry-cover ~ .entry-footer {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.entry-cover.entry-cover-thumbnail {
+    display: block;
+    flex: 1 1 100%;
+    height: auto;
+    max-height: inherit;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
     .entry-cover.entry-cover-thumbnail {
         display: inline-block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 6rem;
+        justify-self: center;
+        margin: 0;
         margin-right: .6em;
         margin-top: 1.3em;
-        vertical-align: middle;
+        max-height: 100%;
+        vertical-align: initial;
         width: 15%;
-    }
+   }
 
     .entry-cover.entry-cover-thumbnail ~ .entry-item {
         display: inline-block;
         vertical-align: top;
         width: 80%;
+    }
+
+    .entry-main {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: flex-start;
+        margin: 0;
+        margin-top: 1rem;
+        min-height: 6rem;
+    }
+
+    .entry-cover.entry-cover-thumbnail img {
+        display: block;
+        height: auto;
+        margin: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .entry-cover.entry-cover-thumbnail svg {
+        display: block;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .entry-cover.entry-cover-thumbnail ~ .entry-item-wrapper {
+        align-self: stretch;
+        display: flex;
+        flex: 8 0 16rem;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        justify-items: start;
+        margin-left: .8rem;
+        margin-top: 0;
+    }
+
+    .entry-item-wrapper .entry-footer {
+        justify-self: end;
+        margin-top: 0;
+    }
+
+    .entry-footer {
+        font-style: italic;
+    }
+
+    .entry-content {
+        margin: 0;
     }
 }
