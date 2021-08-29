@@ -120,6 +120,7 @@
 .entry-cover a {
     color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
+    text-align: center;
 }
 
 .entry-cover ~ .entry-item {
@@ -130,10 +131,6 @@
 .entry-cover~.entry-item-wrapper {
     display: block;
     width: 100%;
-}
-
-.entry-cover {
-    text-align: center;
 }
 
 .entry-cover ~ .entry-footer {
