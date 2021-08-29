@@ -1,1 +1,21 @@
-<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{ $destination := .Destination }}
+{{- if not (strings.HasPrefix .Destination "http") -}}
+    {{- $image := (.Page.Resources.ByType "image").GetMatch .Destination -}}
+    {{- if $image }}
+        {{- with .Page -}}
+            {{- $imageOptions := "" -}}
+            {{- with .Params.convertimagesto -}}
+                {{- $imageOptions = printf "%dx%d %s" $image.Width $image.Height . -}}
+            {{- else -}}
+                {{- with .Site.Params.convertimagesto -}}
+                    {{- $imageOptions = printf "%dx%d %s" $image.Width $image.Height . -}}
+                {{- end -}}
+            {{- end -}}
+            {{- if ne $imageOptions "" -}}
+                {{- $image = $image.Resize $imageOptions -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $destination = $image.RelPermalink -}}
+    {{- end -}}
+{{- end }}
+<img loading="lazy" src="{{ $destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
