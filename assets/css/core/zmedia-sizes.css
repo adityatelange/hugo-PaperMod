@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
     /* theme-vars */
     :root {
-        --gap: 14px;
+        --gap: 1.167rem;
     }
 
     /* profile-mode */
@@ -11,16 +11,16 @@
 
     /* post-entry */
     .first-entry {
-        min-height: 260px;
+        min-height: 21.667rem;
     }
 
     .archive-year {
-        margin-top: 20px;
+        margin-top: 1.667rem;
     }
 
     /* footer */
     .footer {
-        padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
+        padding: calc((var(--footer-height) - var(--gap) - .833rem) / 2) var(--gap);
     }
 }
 
@@ -35,6 +35,6 @@
 /* footer */
 @media screen and (max-width: 900px) {
     .list .top-link {
-        transform: translateY(-5rem);
+        transform: translateY(-6.667rem);
     }
 }

@@ -6,14 +6,14 @@
 }
 
 .page-header h1 {
-    font-size: 40px;
+    font-size: 3.333rem;
 }
 
 .pagination a {
-    font-size: 13px;
-    line-height: 36px;
-    border-radius: calc(36px / 2);
-    padding: 0 16px;
+    font-size: 1.0833rem;
+    line-height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 1.333rem;
 }
 
 .pagination .next {
@@ -21,22 +21,22 @@
 }
 
 .social-icons {
-    padding: 12px 0;
+    padding: 1rem 0;
 }
 
 .social-icons a:not(:last-of-type) {
-    margin-inline-end: 12px;
+    margin-inline-end: 1rem;
 }
 
 .social-icons a svg {
-    height: 26px;
-    width: 26px;
+    height: 2.167rem;
+    width: 2.167rem;
 }
 
 .copy-code {
-    top: 4px;
-    right: 4px;
+    top: .3333rem;
+    right: .3333rem;
     border-radius: var(--radius);
-    padding: 0 5px;
-    font-size: 14px;
+    padding: 0 .4167rem;
+    font-size: 1.167rem;
 }

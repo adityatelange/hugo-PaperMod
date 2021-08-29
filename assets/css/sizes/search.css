@@ -1,17 +1,17 @@
 #searchbox input {
-    padding: 4px 10px;
+    padding: .3333rem .8333rem;
     width: 100%;
     border-radius: var(--radius);
 }
 
 #searchResults li {
     border-radius: var(--radius);
-    padding: 10px;
-    margin: 10px 0;
+    padding: .8333rem;
+    margin: .8333rem 0;
 }
 
 #searchResults {
-    margin: 10px 0;
+    margin: .8333 0;
     width: 100%;
 }
 

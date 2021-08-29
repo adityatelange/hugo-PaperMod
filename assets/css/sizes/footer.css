@@ -1,25 +1,25 @@
 .footer,
 .top-link {
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .footer {
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
-    line-height: 24px;
+    line-height: 1.5rem;
 }
 
 .footer span {
-    margin-inline-start: 1px;
-    margin-inline-end: 1px;
+    margin-inline-start: .0833rem;
+    margin-inline-end: .0833rem;
 }
 
 .top-link {
-    bottom: 60px;
-    right: 30px;
-    width: 42px;
-    height: 42px;
-    padding: 12px;
-    border-radius: 64px;
+    bottom: 5rem;
+    right: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1rem;
+    border-radius: 5.333rem;
 }

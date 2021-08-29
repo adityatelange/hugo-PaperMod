@@ -3,7 +3,7 @@
 }
 
 .profile .profile_inner h1 {
-    padding: 12px 0;
+    padding: 1rem 0;
 }
 
 .profile img {
@@ -11,18 +11,18 @@
 }
 
 .buttons {
-    max-width: 400px;
+    max-width: 33.333rem;
     margin: 0 auto;
 }
 
 .button {
     border-radius: var(--radius);
-    margin: 8px;
-    padding: 6px;
+    margin: .667rem;
+    padding: .5rem;
 }
 
 .button-inner {
-    padding: 0 8px;
+    padding: 0 .667rem;
 }
 
 .button:active {
