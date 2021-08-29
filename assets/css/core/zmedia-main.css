@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px) {
+    /* archive */
+    .archive-month {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
+    .terms-tags a:active,
+    .button:active,
+    .share-buttons svg:active,
+    .post-entry:active,
+    .top-link,
+    #searchResults .focus,
+    #searchResults li:active {
+        transform: none;
+    }
+}

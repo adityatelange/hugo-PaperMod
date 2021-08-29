@@ -1,20 +1,10 @@
 .footer,
 .top-link {
-    font-size: 12px;
     color: var(--secondary);
 }
 
 .footer {
-    max-width: calc(var(--main-width) + var(--gap) * 2);
-    margin: auto;
-    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
-    line-height: 24px;
-}
-
-.footer span {
-    margin-inline-start: 1px;
-    margin-inline-end: 1px;
 }
 
 .footer span:last-child {
@@ -33,14 +23,8 @@
 .top-link {
     visibility: hidden;
     position: fixed;
-    bottom: 60px;
-    right: 30px;
     z-index: 99;
     background: var(--tertiary);
-    width: 42px;
-    height: 42px;
-    padding: 12px;
-    border-radius: 64px;
     transition: visibility 0.5s, opacity 0.8s linear;
 }
 

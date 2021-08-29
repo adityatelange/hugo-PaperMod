@@ -1,0 +1,56 @@
+body {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+body,
+figure,
+ul {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+button,
+input,
+textarea {
+    padding: 0;
+    border: 0;
+}
+
+input,
+textarea {
+    outline-offset: 0;
+    outline-width: 0;
+}
+
+img {
+    max-width: 100%;
+}
