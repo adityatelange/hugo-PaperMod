@@ -33,6 +33,9 @@ languages:
                 - name: Categories
                   url: categories/
                   weight: 10
+                - name: Thumbnails
+                  url: thumbnail-posts/
+                  weight: 20
 
     fr:
         languageName: ":fr:"
@@ -66,6 +69,9 @@ languages:
                 - name: Series
                   url: series
                   weight: 10
+                - name: Thumbnails
+                  url: thumbnail-posts/
+                  weight: 20
                 - name: NullLink
                   url: "#"
                 - name: NullLink2
@@ -110,6 +116,8 @@ params:
     ShowToc: true
     # comments: false
     images: ["papermod-cover.png"]
+    convertImagesTo: webp
+    mainSections: [posts]
 
     profileMode:
         enabled: false
@@ -168,6 +176,7 @@ params:
     #     hidden: true # hide everywhere but not in structured data
     #     hiddenInList: true # hide on list pages and home
     #     hiddenInSingle: true # hide on single page
+    #     thumbnailInList: false # display cover images as thumbnails on post list pages
 
     # fuseOpts:
     #     isCaseSensitive: false
