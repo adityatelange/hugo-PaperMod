@@ -4,10 +4,10 @@
 {{- if $image }}
     {{- with .Page -}}
         {{- $imageOptions := "" -}}
-        {{- with .Params.convertimagesto -}}
+        {{- with .Params.convertImagesTo -}}
             {{- $imageOptions = printf "%dx%d %s" $image.Width $image.Height . -}}
         {{- else -}}
-            {{- with .Site.Params.convertimagesto -}}
+            {{- with .Site.Params.convertImagesTo -}}
                 {{- $imageOptions = printf "%dx%d %s" $image.Width $image.Height . -}}
             {{- end -}}
         {{- end -}}
