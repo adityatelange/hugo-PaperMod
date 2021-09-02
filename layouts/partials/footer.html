@@ -1,3 +1,4 @@
+{{- if not (.Param "hideFooter") }}
 <footer class="footer">
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
@@ -10,6 +11,7 @@
         <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
+{{- end }}
 
 {{- if (not .Site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
