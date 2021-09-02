@@ -10,7 +10,7 @@
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
   <div class="post-description">
-    {{ .Description }}
+    {{ .Description | markdownify }}
   </div>
   {{- end }}
 </header>
