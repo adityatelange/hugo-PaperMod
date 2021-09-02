@@ -16,6 +16,12 @@
 </header>
 {{- end }}
 
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
