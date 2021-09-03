@@ -27,11 +27,11 @@
             rel="noopener noreferrer">{{ end -}}
             <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
     {{- end }}
-    {{- if $addLink }}</a>{{ end -}}
-    {{/*  Display Caption  */}}
+    {{- if $addLink }}</a>{{- end -}}
+    {{- /*  Display Caption  */ -}}
     {{- if not $.IsHome }}
-        {{ with .Params.cover.caption }}<p>{{ . | markdownify }}</p>{{- end }}
+        {{- with .Params.cover.caption }}<p>{{ . | markdownify }}</p>{{- end }}
     {{- end }}
 </figure>
 {{- end }}{{/* End image */}}
-{{- end -}}{{/* End context */ -}}
+{{- end -}}{{- /* End context */ -}}

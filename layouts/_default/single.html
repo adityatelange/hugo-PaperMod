@@ -25,7 +25,6 @@
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}
-
   {{- if .Content }}
   <div class="post-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
@@ -33,7 +32,6 @@
     {{- else }}{{ partial "helpers/basic-content" . }}{{ end }}
   </div>
   {{- end }}
-
   <footer class="post-footer">
     {{- if .Params.tags }}
     <ul class="post-tags">

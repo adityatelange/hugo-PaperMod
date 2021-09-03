@@ -2,7 +2,7 @@
 
 {{- if (and .Site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
-{{- else }} {{/* if not profileMode */}}
+{{- else -}}{{- /* if not profileMode */ -}}
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
@@ -22,31 +22,31 @@
   {{- partial "anchored_headings.html" (partial "helpers/basic-content" .) -}}
   {{- else }}{{ partial "helpers/basic-content" . }}{{ end }}
 </div>
-{{- end }}
+{{- end -}}
 
-{{- $pages := union .RegularPages .Sections }}
+{{- $pages := union .RegularPages .Sections -}}
 
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- end }}
+{{- if .IsHome -}}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- end -}}
 
-{{- $paginator := .Paginate $pages }}
+{{- $paginator := .Paginate $pages -}}
 
 {{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
-{{- end }}
+{{- end -}}
 
 {{- $term := .Data.Term }}
-{{- range $index, $page := $paginator.Pages }}
+{{- range $index, $page := $paginator.Pages -}}
 
-{{- $class := "post-entry" }}
+{{- $class := "post-entry" -}}
 
-{{- $user_preferred := or .Site.Params.disableSpecial1stPost .Site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
-{{- end }}
+{{- $user_preferred := or .Site.Params.disableSpecial1stPost .Site.Params.homeInfoParams -}}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) -}}
+{{- $class = "first-entry" -}}
+{{- else if $term -}}
+{{- $class = "post-entry tag-entry" -}}
+{{- end -}}
 
 <article class="{{ $class }}">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
