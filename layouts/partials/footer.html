@@ -15,11 +15,11 @@
 
 {{- if (not .Site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
+    <span class="top-link" id="top-link" accesskey="g" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
             <path d="M12 6H0l6-6z" />
         </svg>
-    </button>
+    </span>
 </a>
 {{- end }}
 
