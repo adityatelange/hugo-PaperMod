@@ -86,10 +86,6 @@
     color: var(--secondary);
 }
 
-.entry-isdraft {
-    display: inline;
-}
-
 .entry-cover {
     margin-bottom: var(--gap);
     text-align: center;
