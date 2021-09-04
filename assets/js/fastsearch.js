@@ -103,31 +103,31 @@ document.onkeydown = function (e) {
         }
     } else if (current_elem) ae = current_elem;
 
-    if (key === "ArrowDown" && resultsAvailable && inbox) {
+    if (key === "Escape") {
+        reset()
+    } else if (!resultsAvailable || !inbox) {
+        return
+    } else if (key === "ArrowDown") {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
             activeToggle(resList.firstChild.lastChild);
-        } else if (ae.parentElement == last) {
+        } else if (ae.parentElement != last) {
             // if the currently focused element's parent is last, do nothing
-        } else {
             // otherwise select the next search result
             activeToggle(ae.parentElement.nextSibling.lastChild);
         }
-    } else if (key === "ArrowUp" && resultsAvailable && inbox) {
+    } else if (key === "ArrowUp") {
         e.preventDefault();
-        if (ae == sInput) {
-            // if the currently focused element is input box, do nothing
-        } else if (ae.parentElement == first) {
+        if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
             activeToggle(sInput);
-        } else {
+        } else if (ae != sInput) {
+            // if the currently focused element is input box, do nothing
             // otherwise select the previous search result
             activeToggle(ae.parentElement.previousSibling.lastChild);
         }
-    } else if (key === "ArrowRight" && resultsAvailable && inbox) {
+    } else if (key === "ArrowRight") {
         ae.click(); // click on active link
-    } else if (key === "Escape") {
-        reset()
     }
 }
