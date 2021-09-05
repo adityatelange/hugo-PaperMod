@@ -1,13 +1,13 @@
+{{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
+{{- $has_headers := ge (len $headers) 1 -}}
+{{- if $has_headers -}}
 <div class="toc">
     <details {{if (.Param "TocOpen") }} open{{ end }}>
         <summary accesskey="c" title="(Alt + C)">
-            <div class="details">{{- i18n "toc" | default "Table of Contents" }}</div>
+            <span class="details">{{- i18n "toc" | default "Table of Contents" }}</span>
         </summary>
-        <div class="inner">
-            {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
-            {{- $has_headers := ge (len $headers) 1 -}}
-            {{- if $has_headers -}}
 
+        <div class="inner">
             {{- $largest := 6 -}}
             {{- range $headers -}}
             {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
@@ -87,7 +87,7 @@
             {{- end -}}
             {{- end }}
             </ul>
-            {{- end }}
         </div>
     </details>
 </div>
+{{- end }}
