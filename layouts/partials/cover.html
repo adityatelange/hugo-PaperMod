@@ -10,20 +10,22 @@
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
     {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
-        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
-            rel="noopener noreferrer">{{ end -}}
         {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
         {{- $prod := (hugo.IsProduction | or (eq .Site.Params.env "production")) }}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
+            {{- if $addLink }}<a href="{{ ($cover.Resize (printf "%dx%d%s" $cover.Width $cover.Height $imageConversion)).Permalink }}" target="_blank"
+                rel="noopener noreferrer">{{ end -}}
         <img loading="lazy" srcset="{{- range $size := $sizes -}}
                         {{- if (ge $cover.Width $size) -}}
                         {{ printf "%s %s" (($cover.Resize (printf "%sx%s" $size $imageConversion)).Permalink) (printf "%sw ," $size) -}}
                         {{ end }}
-                    {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}" 
-            sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}" 
+                    {{- end -}}{{ ($cover.Resize (printf "%dx%d%s" $cover.Width $cover.Height $imageConversion)).Permalink }}" 
+            sizes="(min-width: 768px) 720px, 100vw" src="{{ ($cover.Resize (printf "%dx%d%s" $cover.Width $cover.Height $imageConversion)).Permalink }}" alt="{{ $alt }}" 
             width="{{ $cover.Width }}" height="{{ $cover.Height }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
+            {{- if $addLink }}<a href="{{ $cover.Permalink }}" target="_blank"
+                rel="noopener noreferrer">{{ end -}}
         <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
