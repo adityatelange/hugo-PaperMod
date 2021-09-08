@@ -18,7 +18,11 @@
 </script>
 {{- else if (or .IsPage .IsSection) }}
 {{/* BreadcrumbList */}}
-{{- $url := replace .Parent.Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{- $base_url := urls.Parse .Site.BaseURL -}}
+{{- if eq $base_url.Path "" -}}
+{{- $base_url = urls.Parse (printf "%s/" .Site.BaseURL) -}}
+{{- end -}}
+{{- $url := replace .Parent.Permalink ( printf "%s" ($base_url | string)) "" }}
 {{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
 
