@@ -8,10 +8,10 @@
     --radius: 8px;
     --theme: #fff;
     --entry: #fff;
-    --primary: rgba(0, 0, 0, 0.88);
-    --secondary: rgba(0, 0, 0, 0.56);
-    --tertiary: rgba(0, 0, 0, 0.16);
-    --content: rgba(0, 0, 0, 0.88);
+    --primary: rgb(30, 30, 30);
+    --secondary: rgb(108, 108, 108);
+    --tertiary: rgb(214, 214, 214);
+    --content: rgb(31, 31, 31);
     --hljs-bg: #1c1d21;
     --code-bg: #f5f5f5;
     --border: #eee;
