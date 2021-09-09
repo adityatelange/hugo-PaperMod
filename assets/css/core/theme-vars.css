@@ -20,10 +20,10 @@
 .dark {
     --theme: #1d1e20;
     --entry: #2e2e33;
-    --primary: rgba(255, 255, 255, 0.84);
-    --secondary: rgba(255, 255, 255, 0.56);
-    --tertiary: rgba(255, 255, 255, 0.16);
-    --content: rgba(255, 255, 255, 0.74);
+    --primary: rgb(218, 218, 219);
+    --secondary: rgb(155, 156, 157);
+    --tertiary: rgb(65, 66, 68);
+    --content: rgb(196, 196, 197);
     --hljs-bg: #2e2e33;
     --code-bg: #37383e;
     --border: #333;
