@@ -18,7 +18,7 @@
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 {{- end }}
-<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if .IsPage}}
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
@@ -59,7 +59,7 @@
 {{- end }}
 
 {{- with .Site.Params.profileMode }}
-{{- if and .enabled .imageUrl }}
+{{- if and .enabled .imageUrl $.IsHome }}
 <link rel="preload" href="{{ .imageUrl }}" as="image">
 {{- end }}
 {{- end }}

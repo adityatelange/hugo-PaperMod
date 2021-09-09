@@ -237,10 +237,11 @@
 
 .post-content img {
     border-radius: 4px;
+    margin: 1rem 0;
 }
 
 .post-content img[src*="#center"] {
-    margin: auto;
+    margin: 1rem auto;
 }
 
 .post-content figure.align-center {

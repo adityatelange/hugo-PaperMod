@@ -4,9 +4,9 @@
 <br>
 
 > Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
-> The goal of this project is to add more Features and customization to the og theme.
+> The goal of this project is to add more features and customization to the og theme.
 
-The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with few more stuff. Make sure you visit it, to get the awesome hands-on experience and get known about the features ...
+The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with a few more stuff. Make sure you visit it, to get an awesome hands-on experience and get to know about the features ...
 
 **ExampleSite** can be found here: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite). Demo is built up with [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite) as source.
 
@@ -35,7 +35,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 -   Table of Content Generation (newer implementation).
 -   Archive of posts.
 -   Social Icons (home-info and profile-mode)
--   Social-Media Share buttons on post.
+-   Social-Media Share buttons on posts.
 -   Menu location indicator.
 -   Multilingual support. (with language selector)
 -   Taxonomies
@@ -45,9 +45,9 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 -   Multiple Author support.
 -   Search Page with Fuse.js
 -   Other Posts suggestion below a post
--   BreadCrumb Navigation
+-   Breadcrumb Navigation
 -   Code Block Copy buttons
--   No webpack, nodejs and other dependencies required to edit the theme.
+-   No webpack, nodejs and other dependencies are required to edit the theme.
 
 Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
 
@@ -86,4 +86,5 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Highlight.js**](https://github.com/highlightjs/highlight.js)
 -   [**Fuse.js**](https://github.com/krisk/fuse)
 -   [**Feather Icons**](https://github.com/feathericons/feather)
+-   [**Simple Icons**](https://github.com/simple-icons/simple-icons)
 -   **All Contributors and Supporters**
