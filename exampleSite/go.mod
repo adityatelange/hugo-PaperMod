@@ -1,3 +1,3 @@
-module github.com/danielfdickinson/adityatelang-hugo-PaperMod-exampleSite
+module github.com/danielfdickinson/adityatelange-hugo-PaperMod-exampleSite
 
 go 1.17

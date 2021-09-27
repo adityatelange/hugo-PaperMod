@@ -6,7 +6,7 @@
 [build.environment]
   HUGO_VERSION = "0.88.1"
   TZ = "America/Toronto"
-  HUGO_MODULE_REPLACEMENTS = "github.com/danielfdickinson/adityatelange-hugo-PaperMod -> ../../../repo"
+  HUGO_MODULE_REPLACEMENTS = "github.com/danielfdickinson/adityatelange-hugo-PaperMod -> ../../repo"
 #  GIT_LFS_ENABLED = "1"
 #  GIT_LFS_FETCH_INCLUDE = "*.jpg,*.png,*.jpeg,*.svg,*.gif,*.pdf,*.mp4,*.bmp,*.webp,*.ico"
 
