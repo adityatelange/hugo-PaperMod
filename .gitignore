@@ -1,0 +1,8 @@
+exampleSite/public/
+exampleSite/resources/
+resources/
+# Local Netlify folder
+.netlify
+node_modules
+/public
+/netlify.log
