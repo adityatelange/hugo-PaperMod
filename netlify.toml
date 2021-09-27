@@ -6,7 +6,7 @@
 [build.environment]
   HUGO_VERSION = "0.88.1"
   TZ = "America/Toronto"
-  HUGO_MODULE_REPLACEMENTS = "github.com/danielfdickinson/adityatelange-hugo-PaperMod -> ../../repo"
+  HUGO_MODULE_REPLACEMENTS = "github.com/danielfdickinson/adityatelange-hugo-PaperMod -> ../../../repo"
 #  GIT_LFS_ENABLED = "1"
 #  GIT_LFS_FETCH_INCLUDE = "*.jpg,*.png,*.jpeg,*.svg,*.gif,*.pdf,*.mp4,*.bmp,*.webp,*.ico"
 
@@ -22,34 +22,34 @@
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
 
-[[plugins]]
-  package = "netlify-plugin-html-validate"
+# [[plugins]]
+#   package = "netlify-plugin-html-validate"
 
-    [plugins.inputs]
-      ext = "html"
-      config = ".htmlvalidate.json"
+#     [plugins.inputs]
+#       ext = "html"
+#       config = ".htmlvalidate.json"
 
-[[plugins]]
-  package = "netlify-plugin-checklinks"
+# [[plugins]]
+#   package = "netlify-plugin-checklinks"
 
-    [plugins.inputs]
-      checkExternal = false
+#     [plugins.inputs]
+#       checkExternal = false
 
-[[plugins]]
-  package = "netlify-plugin-minify-html"
+# [[plugins]]
+#   package = "netlify-plugin-minify-html"
 
-    [plugins.inputs.minifierOptions]
-    collapseBooleanAttributes = true
-    decodeEntities = true
-    preserveLineBreaks = true
-    removeAttributeQuotes = true
-    removeComments = true
-    removeEmptyAttributes = true
-    removeOptionalTags = true
-    removeRedundantAttributes = true
-    removeScriptTypeAttributes = true
-    removeTypeLinkTypeAttributes = true
-    useShortDocType = true
+#     [plugins.inputs.minifierOptions]
+#     collapseBooleanAttributes = true
+#     decodeEntities = true
+#     preserveLineBreaks = true
+#     removeAttributeQuotes = true
+#     removeComments = true
+#     removeEmptyAttributes = true
+#     removeOptionalTags = true
+#     removeRedundantAttributes = true
+#     removeScriptTypeAttributes = true
+#     removeTypeLinkTypeAttributes = true
+#     useShortDocType = true
 
 [dev]
   command = "hugo server -s exampleSite --poll 700ms -b http://localhost:8888/"

@@ -1,8 +1,5 @@
 {
   "devDependencies": {
-    "netlify-plugin-checklinks": "^4.1.1",
-    "netlify-plugin-html-validate": "^1.1.1",
-    "netlify-plugin-hugo-cache-resources": "^0.2.1",
-    "netlify-plugin-minify-html": "^0.3.1"
+    "netlify-plugin-hugo-cache-resources": "^0.2.1"
   }
 }

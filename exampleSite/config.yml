@@ -219,6 +219,13 @@ services:
     twitter:
         disableInlineCSS: true
 
-modules:
+module:
   imports:
-    - path: github.com/danielfdickinson/adityatelange-hugo-PaperMod
+    - mounts:
+        - source: "assets"
+          target: "assets"
+        - source: "i18n"
+          target: "i18n"
+        - source: "layouts"
+          target: "layouts"
+      path: github.com/danielfdickinson/adityatelange-hugo-PaperMod
