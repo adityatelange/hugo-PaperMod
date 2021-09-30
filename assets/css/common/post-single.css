@@ -193,10 +193,6 @@
     display: none;
 }
 
-.post-content .highlight span {
-    background: 0 0 !important;
-}
-
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
