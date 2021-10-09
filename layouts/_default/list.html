@@ -54,34 +54,25 @@
 <article class="{{ $class }}">
   {{- $isEntryHidden := default $isHidden (.Params.cover.hidden | default .Params.cover.hiddenInList) }}
   {{- $isEntryThumbnail := (default $isThumbnail (.Param "cover.thumbnailInList")) -}}
-  {{- if not $isEntryThumbnail -}}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isEntryHidden "isThumbnail" $isEntryThumbnail ) }}
-  <div class="entry-item">
-  {{- end }}
-    <header class="entry-header">
-      <h2>
-        {{- .Title }}
-          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-      </h2>
-    </header>
-  {{- if $isEntryThumbnail }}
   <div class="entry-main">
   {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isEntryHidden "isThumbnail" $isEntryThumbnail ) }}
-    <div class="entry-item-wrapper">
-      <div class="entry-item">
-  {{ end }}
+    <div class="entry-item">
+      <header class="entry-header">
+        <h2>
+          {{- .Title }}
+            {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h2>
+      </header>
   {{- if (ne (.Param "hideSummary") true) }}
-        <section class="entry-content">
-          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-        </section>
+      <section class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </section>
   {{- end }}
-      </div>
   {{- if not (.Param "hideMeta") }}
       <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
       </footer>
   {{- end }}
-  {{- if $isEntryThumbnail }}
     </div>
   </div>
   {{ end }}
