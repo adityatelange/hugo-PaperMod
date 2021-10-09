@@ -87,15 +87,15 @@ theme: "PaperMod"
 
 ## Quick Links
 
--   ### [Papermod - Features](../papermod-features)
+-   [Papermod - Features](../papermod-features)
 
--   ### [Papermod - FAQs](../papermod-how-to)
+-   [Papermod - FAQs](../papermod-how-to)
 
--   ### [Papermod - Variables](../papermod-variables)
+-   [Papermod - Variables](../papermod-variables)
 
--   ### [Papermod - Icons](../papermod-icons)
+-   [Papermod - Icons](../papermod-icons)
 
--   ### [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
+-   [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
 
 ---
 

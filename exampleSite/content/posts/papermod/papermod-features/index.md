@@ -8,7 +8,7 @@ tags: ["PaperMod"]
 author: "Aditya Telange"
 ---
 
-### Intro
+## Intro
 
 -   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
 
@@ -16,7 +16,7 @@ author: "Aditya Telange"
 
 ---
 
-### Assets (js/css)
+## Assets (js/css)
 
 The following is enabled by default
 
@@ -26,7 +26,7 @@ The following is enabled by default
 
 ---
 
-### Default Theme light/dark/auto
+## Default Theme light/dark/auto
 
 ```yml
 params:
@@ -35,11 +35,9 @@ params:
     defaultTheme: auto # to switch between dark or light according to browser theme
 ```
 
-</details>
-
 ---
 
-### Theme Switch Toggle (enabled by default)
+## Theme Switch Toggle (enabled by default)
 
 Shows icon besides title of page to change theme
 
@@ -62,7 +60,7 @@ You can refer following table for better understanding...
 
 ---
 
-### Archives Layout
+## Archives Layout
 
 Create a page with `archive.md` in `content` directory with following content
 
@@ -95,13 +93,13 @@ ex: [archives.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/
 
 ---
 
-### Regular Mode (default-mode)
+## Regular Mode (default-mode)
 
 ![regular](images/regular.jpg)
 
 ---
 
-### Home-Info Mode
+## Home-Info Mode
 
 ![homeinfo](images/homeinfo.jpg)
 
@@ -126,7 +124,7 @@ ex. [config.yml#L106](https://github.com/adityatelange/hugo-PaperMod/blob/exampl
 
 ---
 
-### Profile Mode
+## Profile Mode
 
 ![profile](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/exampleSite/content/posts/papermod/papermod-features/images/profile.jpg)
 
@@ -159,7 +157,7 @@ params:
 
 ---
 
-### Search Page
+## Search Page
 
 PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) for seach functionality
 
@@ -223,13 +221,13 @@ params:
 
 ---
 
-### Draft Page indication
+## Draft Page indication
 
 adds `[draft]` mark to indicate draft pages.
 
 ---
 
-### Post Cover Image
+## Post Cover Image
 
 In post's page-variables add :
 
@@ -263,7 +261,7 @@ params:
 
 ---
 
-### Share Buttons on post
+## Share Buttons on post
 
 Displays Share Buttons at Bottom of each post
 
@@ -276,7 +274,7 @@ params:
 
 ---
 
-### Show post reading time
+## Show post reading time
 
 Displays Reading Time (the estimated time, in minutes, it takes to read the content.)
 
@@ -289,7 +287,7 @@ Params:
 
 ---
 
-### Show Table of Contents (Toc) on blog post
+## Show Table of Contents (Toc) on blog post
 
 Displays ToC on blog-pages
 
@@ -307,7 +305,7 @@ TocOpen: true
 
 ---
 
-### BreadCrumb Navigation
+## BreadCrumb Navigation
 
 Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
 
@@ -327,7 +325,7 @@ ShowBreadCrumbs: false
 
 ---
 
-### Edit Link for Posts
+## Edit Link for Posts
 
 Add a button to suggest changes by using the file path of the post to link to a edit destination.
 
@@ -368,7 +366,7 @@ also use other URL schemas like `mailto://`, e.g.
 
 ---
 
-### Other Posts suggestion below a post
+## Other Posts suggestion below a post
 
 Adds a Previous / Next post suggestion under a single post
 
@@ -379,7 +377,7 @@ params:
 
 ---
 
-### Multiple Authors
+## Multiple Authors
 
 To Use multiple authors for a post, in post-variables:
 
@@ -399,7 +397,7 @@ params:
 
 ---
 
-### Comments
+## Comments
 
 to add comments, create a html file
 
@@ -418,7 +416,7 @@ read more about this [hugo-comments](https://gohugo.io/content-management/commen
 
 ---
 
-### AccessKeys
+## AccessKeys
 
 ```text
 c - ToC Open/Close
@@ -432,13 +430,13 @@ t - Theme toggle
 
 ---
 
-### Enhanced SEO
+## Enhanced SEO
 
 **Enabled only when `env: production`**
 
 -   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
 
-#### Twitter Cards Support
+### Twitter Cards Support
 
 * The Twitter Cards metadata, except ``twitter:image`` should not require
   additional configuration, since it is generated from metadata that
@@ -456,7 +454,7 @@ t - Theme toggle
   image with ``feature`` in the name, with a fallback to the first image with
   ``cover`` or ``thumbnail`` in the name.
 
-#### OpenGraph support
+### OpenGraph support
 
 * The OpenGraph metadata, except ``og:image`` should not require
   additional configuration, since it is generated from metadata that
@@ -482,24 +480,24 @@ t - Theme toggle
   ```
 ---
 
-### Multilingual Support
+## Multilingual Support
 
 ---
 
-### Misc
+## Misc
 
-#### Scroll-Bar themed (by default)
+### Scroll-Bar themed (by default)
 
-#### Smooth Scroll between in-page links (by default)
+### Smooth Scroll between in-page links (by default)
 
-#### Scroll-to-Top Button (by default)
+### Scroll-to-Top Button (by default)
 
 ```text
 Displays a Scroll-to-Top button in right-bottom corner
 ```
 
-#### Google Analytics integration
+### Google Analytics integration
 
-#### Syntax highlighting
+### Syntax highlighting
 
-#### RSS feeds
+### RSS feeds
