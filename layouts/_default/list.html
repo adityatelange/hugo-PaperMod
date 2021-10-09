@@ -53,19 +53,20 @@
 
 <article class="{{ $class }}">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
-  {{ if not $isThumbnail }}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isHidden "isThumbnail" $isThumbnail ) }}
+  {{- $isEntryThumbnail := (default $isThumbnail (.Param "cover.thumbnailInList")) -}}
+  {{- if not $isEntryThumbnail -}}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isHidden "isThumbnail" $isEntryThumbnail ) }}
   <div class="entry-item">
-  {{ end }}
-  <header class="entry-header">
-    <h2>
-      {{- .Title }}
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-    </h2>
-  </header>
-  {{ if $isThumbnail }}
+  {{- end }}
+    <header class="entry-header">
+      <h2>
+        {{- .Title }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+      </h2>
+    </header>
+  {{- if $isEntryThumbnail }}
   <div class="entry-main">
-  {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isHidden "isThumbnail" $isThumbnail ) }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" $.IsHome "isHidden" $isHidden "isThumbnail" $isEntryThumbnail ) }}
     <div class="entry-item-wrapper">
       <div class="entry-item">
   {{ end }}
@@ -80,7 +81,7 @@
     {{- partial "post_meta.html" . -}}
       </footer>
   {{- end }}
-  {{ if $isThumbnail }}
+  {{- if $isEntryThumbnail }}
     </div>
   </div>
   {{ end }}
