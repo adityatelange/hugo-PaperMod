@@ -43,10 +43,10 @@
     collapseBooleanAttributes = true
     decodeEntities = true
     preserveLineBreaks = true
-    removeAttributeQuotes = true
+    removeAttributeQuotes = false
     removeComments = true
     removeEmptyAttributes = true
-    removeOptionalTags = true
+    removeOptionalTags = false
     removeRedundantAttributes = true
     removeScriptTypeAttributes = true
     removeTypeLinkTypeAttributes = true
