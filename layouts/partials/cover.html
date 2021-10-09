@@ -3,7 +3,7 @@
 {{- with .cxt}}{{/* Apply proper context from dict */}}
 {{- if (and .Params.cover.image (not $isHidden)) }}
 {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
-<figure class="entry-cover{{ if eq $isThumbnail true }} entry-cover-thumbnail{{ end }}{{ if eq (.Params.cover.showTagCover | default .Site.Params.cover.showTagCover) true }} show-tag-cover{{ end }}">
+<figure class="entry-cover{{ if eq $isThumbnail true }} entry-cover-thumbnail{{ end }}{{ if eq (.Params.cover.showTagCover | default .Site.Params.cover.showTagCover) true }} show-tag-cover{{ end }}{{ if eq (.Params.cover.fitWidth | default .Site.Params.cover.fitWidth) true }} fit-width{{ else if eq (.Params.cover.fitHeight | default .Site.Params.cover.fitHeight) true }} fit-height{{ end }}">
     {{- $responsiveImages := (.Params.cover.responsiveImages | default .Site.Params.cover.responsiveImages) | default true }}
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
     {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}

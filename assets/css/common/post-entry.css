@@ -197,3 +197,37 @@
         margin: 0;
     }
 }
+
+.fit-width img,
+.fit-width svg {
+    height: auto;
+    width: 100%;
+}
+
+.fit-height img,
+.fit-height svg {
+    height: max-content;
+    width: auto;
+}
+
+.entry-cover.fit-width img,
+.entry-cover.fit-width svg {
+    max-height: unset;
+}
+
+.entry-cover.fit-height img,
+.entry-cover.fit-height svg {
+    max-height: unset;
+    min-height: fit-content;
+}
+
+.entry-main .entry-cover.entry-cover-thumbnail.fit-width img,
+.entry-main .entry-cover.entry-cover-thumbnail.fit-width svg {
+    max-height: 4em;
+    min-height: fit-content;
+}
+
+.entry-main .entry-cover.entry-cover-thumbnail.fit-height img,
+.entry-main .entry-cover.entry-cover-thumbnail.fit-height svg {
+    min-height: 100%;
+}
