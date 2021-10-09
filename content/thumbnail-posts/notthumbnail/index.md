@@ -2,6 +2,7 @@
 title: "Cover: Not Thumbnail"
 date: 2021-10-09T06:29:50-04:00
 publishDate: 2021-10-09T06:29:50-04:00
+author: Daniel F. Dickinson
 cover:
     image: profile.jpg
     relative: true
