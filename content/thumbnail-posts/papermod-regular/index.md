@@ -4,12 +4,13 @@ summary: Test of post list with cover as thumbnail
 date: 2021-01-20
 weight: 3
 aliases: ["/papermod-features"]
-tags: ["PaperMod"]
+tags: ["PaperMod", "cover-thumbnail-test"]
 author: "Aditya Telange"
 cover:
      image: regular.jpg
      relative: true
      alt: Screenshot of default homepage mode
+     showTagCover: true
 ---
 
 ![Test of render hook](/papermod-cover.png)

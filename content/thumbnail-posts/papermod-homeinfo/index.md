@@ -3,12 +3,13 @@ title: "Features with Homeinfo Cover"
 summary: Test of post list with cover as thumbnail
 date: 2021-01-20
 weight: 1
-tags: ["PaperMod"]
+tags: ["PaperMod", "cover-thumbnail-test"]
 author: "Aditya Telange"
 cover:
      image: homeinfo.jpg
      relative: true
      alt: Screenshot of homeinfo mode
+     showTagCover: true
 ---
 
 ### Intro
