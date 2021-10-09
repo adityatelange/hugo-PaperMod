@@ -1,0 +1,6 @@
+public/*
+!public/posts
+!public/archives
+**/page/*/index.html
+public/**/migrate-from-jekyl/index.html
+public/**/papermod-how-to/index.html

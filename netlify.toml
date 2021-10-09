@@ -22,34 +22,35 @@
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
 
-# [[plugins]]
-#   package = "netlify-plugin-html-validate"
+[[plugins]]
+  package = "netlify-plugin-html-validate"
 
-#     [plugins.inputs]
-#       ext = "html"
-#       config = ".htmlvalidate.json"
+    [plugins.inputs]
+      ext = "html"
+      config = ".htmlvalidate.json"
 
-# [[plugins]]
-#   package = "netlify-plugin-checklinks"
+[[plugins]]
+  package = "netlify-plugin-checklinks"
 
-#     [plugins.inputs]
-#       checkExternal = false
+    [plugins.inputs]
+      checkExternal = false
+      skipPatterns = [ "<link rel=\"alternate\"", "<meta http-equiv=\"refresh\" content=\"0; url=", "<link rel=\"icon\"", "<link rel=\"apple-touch-icon\"" ]
 
-# [[plugins]]
-#   package = "netlify-plugin-minify-html"
+[[plugins]]
+  package = "netlify-plugin-minify-html"
 
-#     [plugins.inputs.minifierOptions]
-#     collapseBooleanAttributes = true
-#     decodeEntities = true
-#     preserveLineBreaks = true
-#     removeAttributeQuotes = true
-#     removeComments = true
-#     removeEmptyAttributes = true
-#     removeOptionalTags = true
-#     removeRedundantAttributes = true
-#     removeScriptTypeAttributes = true
-#     removeTypeLinkTypeAttributes = true
-#     useShortDocType = true
+    [plugins.inputs.minifierOptions]
+    collapseBooleanAttributes = true
+    decodeEntities = true
+    preserveLineBreaks = true
+    removeAttributeQuotes = true
+    removeComments = true
+    removeEmptyAttributes = true
+    removeOptionalTags = true
+    removeRedundantAttributes = true
+    removeScriptTypeAttributes = true
+    removeTypeLinkTypeAttributes = true
+    useShortDocType = true
 
 [dev]
-  command = "hugo server -s exampleSite --poll 700ms -b http://localhost:8888/"
+  command = "hugo server -s exampleSite --poll 700ms -b http://localhost:8888/ --port 8000"
