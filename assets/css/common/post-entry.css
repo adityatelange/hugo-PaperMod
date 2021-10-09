@@ -47,7 +47,7 @@
     transform: scale(0.96);
 }
 
-.tag-entry .entry-cover {
+.tag-entry .entry-cover:not(.show-tag-cover) {
     display: none;
 }
 
