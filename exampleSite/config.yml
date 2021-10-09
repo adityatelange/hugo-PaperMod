@@ -5,8 +5,8 @@ paginate: 5
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
+buildDrafts: true
+buildFuture: true
 buildExpired: false
 enableEmoji: true
 # googleAnalytics: UA-123-45
