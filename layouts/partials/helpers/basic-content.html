@@ -1,0 +1,6 @@
+{{- /* If there are H1 elements in content rendered from content file, replace H1 with H2 */ -}}
+{{- if gt (len (findRE "<h1.*?>(.|\n)*?</h1>" .Content)) 0 -}}
+    {{ replaceRE "<h1(.*?)id=\"(.*?)\"(.*?)>((.*|\n)*?)</h1>" "<h2 $1 id=\"$2-831\"$3>$5</h2>" .Content | safeHTML }}
+{{ else }}
+    {{ .Content }}
+{{ end }}
