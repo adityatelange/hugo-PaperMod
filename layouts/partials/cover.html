@@ -16,7 +16,7 @@
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (or (eq $prod true)  (eq $isThumbnail true))) }}
         <img loading="lazy" srcset="{{- range $size := $sizes -}}
                         {{- if (ge $cover.Width $size) -}}
-                        {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw ," $size) -}}
+                        {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).RelPermalink) (printf "%sw ," $size) -}}
                         {{ end }}
                     {{- end -}}{{$cover.RelPermalink }} {{printf "%dw" ($cover.Width)}}"
             sizes="{{ if ne $isThumbnail true }}(min-width: 768px) 720px, 100vw{{ else }}((min-width: 2048px) and (max-width: 4096px)) 360px, ((min-width: 1024px) and (max-width: 2048px)) 180px, (min-width: 768px) 90px, 100vw{{ end }}" src="{{ $cover.RelPermalink }}" alt="{{ $alt }}"
