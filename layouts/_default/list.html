@@ -36,7 +36,7 @@
 {{- partial "home_info.html" . }}
 {{- end }}
 
-{{- $isThumbnail := (default false (eq (.Param "cover.thumbnailInList") true) -}}
+{{- $isThumbnail := default false (eq (.Param "cover.thumbnailInList") true) -}}
 {{- $isHidden := default false (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
 {{- $term := .Data.Term }}
 
