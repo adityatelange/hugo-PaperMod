@@ -8,7 +8,7 @@
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
     {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
-        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
+        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | relLangURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
         {{- $sizes := (slice "90" "180" "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
@@ -18,16 +18,16 @@
                         {{- if (ge $cover.Width $size) -}}
                         {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw ," $size) -}}
                         {{ end }}
-                    {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}"
-            sizes="{{ if ne $isThumbnail true }}(min-width: 768px) 720px, 100vw{{ else }}((min-width: 2048px) and (max-width: 4096px)) 360px, ((min-width: 1024px) and (max-width: 2048px)) 180px, (min-width: 768px) 90px, 100vw{{ end }}" src="{{ $cover.Permalink }}" alt="{{ $alt }}"
+                    {{- end -}}{{$cover.RelPermalink }} {{printf "%dw" ($cover.Width)}}"
+            sizes="{{ if ne $isThumbnail true }}(min-width: 768px) 720px, 100vw{{ else }}((min-width: 2048px) and (max-width: 4096px)) 360px, ((min-width: 1024px) and (max-width: 2048px)) 180px, (min-width: 768px) 90px, 100vw{{ end }}" src="{{ $cover.RelPermalink }}" alt="{{ $alt }}"
             width="{{ $cover.Width }}" height="{{ $cover.Height }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
+        <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | relLangURL }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
-        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
+        {{- if $addLink }}<a href="{{ (.Params.cover.image) | relLangURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+            <img loading="lazy" src="{{ (.Params.cover.image) | relLangURL }}" alt="{{ $alt }}">
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
     {{/*  Display Caption  */}}
