@@ -210,7 +210,7 @@
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(213, 213, 214);
     background: 0 0;
     border-radius: 0;
     overflow-x: auto;
@@ -374,20 +374,20 @@ h6:hover .anchor {
 
 .post-content :not(table) ::-webkit-scrollbar-thumb {
     border: 2px solid var(--hljs-bg);
-    background: rgba(255, 255, 255, 0.32);
+    background: rgb(113, 113, 117);
 }
 
 .post-content :not(table) ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.56);
+    background: rgb(163, 163, 165);
 }
 
 .gist table::-webkit-scrollbar-thumb {
     border: 2px solid rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.32);
+    background: rgb(173, 173, 173);
 }
 
 .gist table::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.56);
+    background: rgb(112, 112, 112);
 }
 
 .post-content table::-webkit-scrollbar-thumb {

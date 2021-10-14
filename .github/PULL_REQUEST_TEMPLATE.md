@@ -37,6 +37,7 @@ is closed automatically when this PR is merged.
 
 - [ ] This change adds/updates translations and I have used the [template present here](https://github.com/adityatelange/hugo-PaperMod/wiki/Translations#want-to-add-your-language-).
 - [ ] I have enabled [maintainer edits for this PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
+- [ ] I have verified that the code works as described/as intended.
 - [ ] This change adds a Social Icon which has a permissive license to use it.
 - [ ] This change **does not** include any CDN resources/links.
 - [ ] This change **does not** include any unrelated scripts such as bash and python scripts.
