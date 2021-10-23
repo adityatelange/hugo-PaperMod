@@ -1,0 +1,23 @@
+#!/bin/bash
+set -o pipefail
+
+HUGO_BUILD_URL="$1"
+
+# Should only occur using Netlify CLI
+if [ -z "HUGO_BUILD_URL" ]
+then
+    HUGO_BUILD_URL="https://www.example.com/"
+fi
+
+shift
+
+cd exampleSite && HUGO_MINIFY_TDEWOLFF_HTML_KEEPCOMMENTS=true HUGO_ENABLEMISSINGTRANSLATIONPLACEHOLDERS=true hugo ${HUGO_BUILD_URL:+-b $HUGO_BUILD_URL} && grep -inorE "<\!-- raw HTML omitted -->|ZgotmplZ|hahahugo|\[i18n\]" public/; RET="$?"
+
+if [ "$RET" != "0" ]
+then
+    hugo --gc ${HUGO_BUILD_URL:+-b $HUGO_BUILD_URL} --cleanDestinationDir "$@"; RET=$?
+else
+    cd ..
+fi
+
+exit "$RET"

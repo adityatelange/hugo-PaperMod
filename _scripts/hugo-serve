@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd exampleSite && HUGO_MINIFY_TDEWOLFF_HTML_KEEPCOMMENTS=true HUGO_ENABLEMISSINGTRANSLATIONPLACEHOLDERS=true hugo ${HUGO_BUILD_URL:+-b $HUGO_BUILD_URL} && grep -inorE "<\!-- raw HTML omitted -->|ZgotmplZ|hahahugo|\[i18n\]" public/; RET="$?"
+
+if [ "$RET" != "0" ]
+then
+    hugo server --poll 700ms -b http://localhost:8888/ -w "$@"
+else
+    cd ..
+fi
+
+exit 0

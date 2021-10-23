@@ -1,6 +1,5 @@
 [build]
-  base = "exampleSite"
-  publish = "public"
+  publish = "exampleSite/public"
   command = "hugo"
 
 [build.environment]
@@ -11,13 +10,13 @@
 #  GIT_LFS_FETCH_INCLUDE = "*.jpg,*.png,*.jpeg,*.svg,*.gif,*.pdf,*.mp4,*.bmp,*.webp,*.ico"
 
 [context.production]
-  command = "hugo --gc ${URL:+-b $URL} --cleanDestinationDir"
+  command = "_scripts/hugo-build \"$URL\""
 
 [context.deploy-preview]
-  command = "hugo --gc ${DEPLOY_PRIME_URL:+-b $DEPLOY_PRIME_URL} --cleanDestinationDir"
+  command = "_scripts/hugo-build \"$DEPLOY_PRIME_URL\""
 
 [context.branch-deploy]
-  command = "hugo --gc ${DEPLOY_PRIME_URL:+-b $DEPLOY_PRIME_URL} --cleanDestinationDir"
+  command = "_scripts/hugo-build \"$DEPLOY_PRIME_URL\""
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
@@ -25,16 +24,12 @@
 [[plugins]]
   package = "netlify-plugin-html-validate"
 
-    [plugins.inputs]
-      ext = "html"
-      config = ".htmlvalidate.json"
-
 [[plugins]]
   package = "netlify-plugin-checklinks"
 
     [plugins.inputs]
       checkExternal = false
-      skipPatterns = [ "<link rel=\"alternate\"", "<meta http-equiv=\"refresh\" content=\"0; url=", "<link rel=\"icon\"", "<link rel=\"apple-touch-icon\"", "<meta property=\"og:url\"" ]
+      skipPatterns = [ "<link rel=\"alternate\"", "<meta http-equiv=\"refresh\" content=\"0; url=", "<link rel=\"icon\"", "<link rel=\"apple-touch-icon\"", "<meta property=\"og:", "<meta property=\"twitter:" ]
 
 [[plugins]]
   package = "netlify-plugin-minify-html"
@@ -50,7 +45,9 @@
     removeRedundantAttributes = true
     removeScriptTypeAttributes = true
     removeTypeLinkTypeAttributes = true
-    useShortDocType = true
+    useShortDocType = false
 
 [dev]
-  command = "hugo server -s exampleSite --poll 700ms -b http://localhost:8888/ --port 8000"
+  command = "_scripts/hugo-serve"
+  targetPort = 1313
+  framework = "#custom"
