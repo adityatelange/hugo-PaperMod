@@ -4,33 +4,33 @@
     flex-direction: column;
     justify-content: center;
     min-height: 320px;
-    margin: var(--gap) 0 calc(var(--gap) * 2) 0
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
 .first-entry .entry-header {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3
+    -webkit-line-clamp: 3;
 }
 
 .first-entry .entry-header h1 {
     font-size: 34px;
-    line-height: 1.3
+    line-height: 1.3;
 }
 
 .first-entry .entry-content {
     margin: 14px 0;
     font-size: 16px;
-    -webkit-line-clamp: 3
+    -webkit-line-clamp: 3;
 }
 
 .first-entry .entry-footer {
-    font-size: 14px
+    font-size: 14px;
 }
 
 .home-info .entry-content {
-    -webkit-line-clamp: unset
+    -webkit-line-clamp: unset;
 }
 
 .post-entry {
@@ -39,20 +39,21 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform .1s;
+    transition: transform 0.1s;
     border: 1px solid var(--border);
 }
 
 .post-entry:active {
-    transform: scale(.96)
+    transform: scale(0.96);
 }
 
 .tag-entry .entry-cover {
-    display: none
+    display: none;
 }
 
 .entry-header h2 {
-    font-size: 24px
+    font-size: 24px;
+    line-height: 1.3;
 }
 
 .entry-content {
@@ -63,12 +64,12 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
+    -webkit-line-clamp: 2;
 }
 
 .entry-footer {
     color: var(--secondary);
-    font-size: 13px
+    font-size: 13px;
 }
 
 .entry-link {
@@ -76,31 +77,28 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0
+    bottom: 0;
 }
 
 .entry-cover,
 .entry-isdraft {
     font-size: 14px;
-    color: var(--secondary)
-}
-
-.entry-isdraft {
-    display: inline
+    color: var(--secondary);
 }
 
 .entry-cover {
     margin-bottom: var(--gap);
-    text-align: center
+    text-align: center;
 }
 
 .entry-cover img {
     border-radius: var(--radius);
     pointer-events: none;
-    width: 100%
+    width: 100%;
+    height: auto;
 }
 
 .entry-cover a {
     color: var(--secondary);
-    box-shadow: 0 1px 0 var(--primary)
+    box-shadow: 0 1px 0 var(--primary);
 }

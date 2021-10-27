@@ -26,8 +26,8 @@
 }
 
 #searchResults li:active {
-    transition: transform .1s;
-    transform: scale(.98);
+    transition: transform 0.1s;
+    transform: scale(0.98);
 }
 
 #searchResults a {
@@ -40,6 +40,6 @@
 }
 
 #searchResults .focus {
-    transform: scale(.98);
-    border: 2px solid var(--tertiary)
+    transform: scale(0.98);
+    border: 2px solid var(--tertiary);
 }
