@@ -13,7 +13,7 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
-    {{- if not .Site.Params.profileMode.hideHeader -}}
+    {{- if or (not .Page.IsHome) (not .Site.Params.profileMode.hideHeader) -}}
     {{- partialCached "header.html" . .Page -}}
     {{- end }}
     <main class="main">
