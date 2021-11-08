@@ -46,7 +46,7 @@
             {{- if .Site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if .Site.Params.label.icon }}
-                <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
+                <img src="{{- .Site.Params.label.icon | relURL -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default " 30px" -}}">
                 {{- end -}}
                 {{- $label_text -}}
@@ -84,7 +84,8 @@
                     {{- range . -}}
                     {{- if ne $lang .Lang }}
                     <li>
-                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
+                        <a href="{{- .Permalink -}}"
+                            title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
                             aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
                             {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
                             {{- .Language.LanguageName | emojify -}}
@@ -106,8 +107,9 @@
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
             <li>
-                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
-                {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)"
+                    | safeHTMLAttr) ("" | safeHTMLAttr ) }}" {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" |
+                    safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                         {{- .Pre }}
                         {{- .Name -}}
