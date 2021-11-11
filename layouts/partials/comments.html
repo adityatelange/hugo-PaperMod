@@ -1,3 +1,17 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+<div id="gitalk-container"></div>
+<script>
+const gitalk = new Gitalk({
+  clientID: '402f41759b3537b6c752',
+  clientSecret: 'd9558424431bfc3ee18d4b6c6ce7594ef682a701',
+  repo: 'liuchang0812.github.io',      // The repository of store comments,
+  owner: 'liuchang0812',
+  admin: ['liuchang0812'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
 {{- /* Comments area end */ -}}
