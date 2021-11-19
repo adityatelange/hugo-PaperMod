@@ -1,7 +1,13 @@
 <div class="social-icons">
     {{- range . }}
-    <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
-        {{ partial "svg.html" . }}
-    </a>
+        {{ if eq (substr (trim .url " ") 0 4) "tel:"}}
+            <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
+                {{ partial "svg.html" . }}
+            </a>
+        {{ else }}
+            <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
+                {{ partial "svg.html" . }}
+            </a>
+        {{ end }}
     {{- end }}
 </div>
