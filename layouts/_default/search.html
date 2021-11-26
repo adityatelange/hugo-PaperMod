@@ -21,7 +21,8 @@
 </header>
 
 <div id="searchbox">
-    <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}" aria-label="search" type="search">
+    <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}"
+        aria-label="search" type="search" autocomplete="off">
     <ul id="searchResults" aria-label="search results"></ul>
 </div>
 
