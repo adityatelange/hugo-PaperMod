@@ -1,0 +1,24 @@
+{{/* New to Fathom analytics? Use my affiliate link to get a 10 dollar discount: https://usefathom.com/ref/FPKJIU */}}
+
+{{- if .Site.Params.analytics.fathom.siteId }}
+<script 
+{{- if .Site.Params.analytics.fathom... }}
+{{- else }}
+{{- end}}
+data-site="{{ .Site.Params.analytics.fathom.siteId }}"
+src="{{ .Site.Params.analytics.fathom.customDomain | default "https://cdn.usefathom.com/script.js" }}" 
+{{- if .Site.Params.analytics.fathom.honorDnt }}
+data-honor-dnt="{{ .Site.Params.analytics.fathom.honorDnt }}"
+{{- end}}
+{{- if .Site.Params.analytics.fathom.canonical }}
+data-canonical="{{ .Site.Params.analytics.fathom.canonical }}"
+{{- end}}
+{{- if .Site.Params.analytics.fathom.excludedDomains }}
+data-excluded-domains="{{ .Site.Params.analytics.fathom.excludedDomains }}"
+{{- end}}
+{{- if .Site.Params.analytics.fathom.includedDomains }}
+data-included-domains="{{ .Site.Params.analytics.fathom.includedDomains }}"
+{{- end}}
+defer
+></script>
+{{- end -}}

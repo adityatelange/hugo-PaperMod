@@ -15,7 +15,8 @@ tags = [
   "blog",
   "minimalist",
   "highlight.js",
-  "search"
+  "search",
+  "fathom analytics"
 ]
 features = [
   "responsive",

@@ -48,6 +48,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 -   Breadcrumb Navigation
 -   Code Block Copy buttons
 -   No webpack, nodejs and other dependencies are required to edit the theme.
+-   [Fathom analytics](https://usefathom.com/ref/FPKJIU) support (Privacy focussed website analytics)
 
 Read Wiki For More Details => **[PaperMod - Features](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**
 
