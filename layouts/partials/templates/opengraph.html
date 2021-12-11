@@ -1,7 +1,7 @@
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .RelPermalink }}" />
 {{- if .Params.cover.image -}}
 {{- if (ne .Params.cover.relative true) }}
 <meta property="og:image" content="{{ .Params.cover.image | absURL }}" />
@@ -16,7 +16,7 @@
 {{- $featured := $images.GetMatch "*feature*" -}}
 {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
 {{- with $featured -}}
-<meta property="og:image" content="{{ $featured.Permalink }}"/>
+<meta property="og:image" content="{{ $featured.RelPermalink }}"/>
 {{ else -}}
 {{- with $.Site.Params.images -}}
 <meta property="og:image" content="{{ index . 0 | absURL }}"/>
@@ -43,12 +43,12 @@
 {{ end }}{{ end }}
 
 {{- /* If it is part of a series, link to related articles */}}
-{{- $permalink := .Permalink }}
+{{- $permalink := .RelPermalink }}
 {{- $siteSeries := .Site.Taxonomies.series }}{{ with .Params.series }}
 {{- range $name := . }}
   {{- $series := index $siteSeries $name }}
   {{- range $page := first 6 $series.Pages }}
-    {{- if ne $page.Permalink $permalink }}<meta property="og:see_also" content="{{ $page.Permalink }}" />{{ end }}
+    {{- if ne $page.RelPermalink $permalink }}<meta property="og:see_also" content="{{ $page.RelPermalink }}" />{{ end }}
   {{- end }}
 {{ end }}{{ end }}
 
