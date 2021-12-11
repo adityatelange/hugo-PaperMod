@@ -16,13 +16,13 @@
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
-<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="canonical" href="{{ .RelPermalink }}" />
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
 {{- $stylesheet := (resources.Match "css/*.css") | resources.Concat "assets/css/stylesheet.css" | minify | fingerprint -}}
-<link href="{{ $stylesheet.Permalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
+<link href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet"
     as="style">
 <!-- Favicons -->
 <link rel="icon" href="{{- .Site.Params.assets.favicon | default "favicon.ico" | absURL -}}">
@@ -39,10 +39,10 @@
 {{- hugo.Generator }}
 <!-- RSS -->
 {{- range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
 {{ end -}}
 {{- range .Translations -}}
-<link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
+<link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .RelPermalink -}}" />
 {{ end }}
 {{- partial "extend_head.html" . -}}
 <!-- Misc -->
