@@ -63,7 +63,7 @@
   {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ .Permalink | safeHTML }}
+    "@id": {{ .RelPermalink | safeHTML }}
   },
   "publisher": {
     "@type": "{{- ( .Site.Params.schema.publisherType | default "Organization") | humanize -}}",

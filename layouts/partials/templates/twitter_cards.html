@@ -15,7 +15,7 @@
 {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
 {{- with $featured -}}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+<meta name="twitter:image" content="{{ $featured.RelPermalink }}"/>
 {{- else -}}
 {{- with $.Site.Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>

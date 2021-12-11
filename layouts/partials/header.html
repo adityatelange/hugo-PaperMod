@@ -90,7 +90,9 @@
                         {{- range . -}}
                         {{- if ne $lang .Lang }}
                         <li>
+
                             <a href="{{- .RelPermalik -}}" title="{{ .Language.LanguageName | default .Lang | humanize }}"
+                               
                                 aria-label="{{ .Language.LanguageName | default .Lang | humanize }}">
                                 {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
                                 {{- .Language.LanguageName | emojify -}}
