@@ -101,7 +101,8 @@
         elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
         // Make the first header active
         activeElement = elements[0];
-        document.querySelector(`.inner ul li a[href="#${activeElement.getAttribute('id')}"]`).classList.add('active');
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
     }, false);
 
     window.addEventListener('resize', function(event) {
@@ -118,10 +119,11 @@
         }) || activeElement
 
         elements.forEach(element => {
-            if (element === activeElement ){
-                document.querySelector(`.inner ul li a[href="#${element.getAttribute('id')}"]`).classList.add('active');
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
             } else {
-                document.querySelector(`.inner ul li a[href="#${element.getAttribute('id')}"]`).classList.remove('active');
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
             }
         })
     }, false);
