@@ -146,9 +146,9 @@ params:
         imageHeight: 120 # custom size
         buttons:
             - name: Archive
-            url: "/archive"
+                url: "/archive"
             - name: Github
-            url: "https://github.com/"
+                url: "https://github.com/"
 
     socialIcons: # optional
         - name: "<platform>"
