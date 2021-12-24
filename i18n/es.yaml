@@ -14,3 +14,12 @@
 
 - id: translations
   translation: "Traducciones"
+
+- id: home
+  translation: "Inicio"
+
+- id: code_copy
+  translation: "copiar"
+
+- id: code_copied
+  translation: "¡copiado!"
