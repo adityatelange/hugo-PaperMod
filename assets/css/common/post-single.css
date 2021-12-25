@@ -160,6 +160,10 @@
     border-radius: var(--radius);
 }
 
+.post-content table pre {
+    border-radius: 0;
+}
+
 .post-content li > .highlight {
     margin-inline-end: 0;
 }
