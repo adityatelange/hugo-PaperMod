@@ -33,30 +33,7 @@
 <meta name="msvalidate.01" content="{{ .Site.Params.analytics.bing.SiteVerificationTag }}" />
 {{- end }}
 
-{{- /* Styles */}}
-{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
-{{- $reset := (resources.Get "css/core/reset.css") }}
-{{- $media := (resources.Get "css/core/zmedia.css") }}
-{{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
-
-{{- /* include `an-old-hope` if hljs is on */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default false) }}
-{{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
-
-{{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" }}
-{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
-
-{{- /* bundle all required css */}}
-{{- /* Add extended css after theme style */ -}}
-{{- $stylesheet := (slice $core $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}
-
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $stylesheet := $stylesheet | fingerprint }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
-{{- else }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
-{{- end }}
+{{- partial "head_styles.html" . }}
 
 {{- with .Site.Params.profileMode }}
 {{- if and .enabled .imageUrl $.IsHome }}
