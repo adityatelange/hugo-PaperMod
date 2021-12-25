@@ -24,7 +24,7 @@ Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to se
 >
 > `hugo new site <name of site> -f yml`
 
-Make sure you install latest version of **`hugo(>=0.82.0)`**.
+Make sure you install latest version of **`hugo(>=0.83.0)`**.
 
 After you have created a new site, at [Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) follow the steps:
 
