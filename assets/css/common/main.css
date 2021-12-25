@@ -49,6 +49,10 @@ pre {
     position: relative;
 }
 
+div.highlight div {
+    background-color: var(--theme) !important;
+}
+
 .copy-code {
     display: none;
     position: absolute;
