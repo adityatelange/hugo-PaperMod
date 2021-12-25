@@ -4,12 +4,19 @@
 {{- $media := (resources.Get "css/core/zmedia.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
-{{- /* include `an-old-hope` if hljs is on */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default false) }}
-{{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
+{{- /* includes */}}
+{{- $includes := slice }}
+{{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
+
+{{- if not (.Site.Params.assets.disableHLJS) }}
+    {{- $hljs := (resources.Get "css/includes/an-old-hope.min.css") }}
+    {{- $includes = (append $hljs $includes) }}
+{{- end }}
+
+{{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" }}
+{{- $core := (slice $theme_vars $reset $common $includes_all $media) | resources.Concat "assets/css/core.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
 
 {{- /* bundle all required css */}}
