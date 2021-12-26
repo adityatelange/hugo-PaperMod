@@ -47,7 +47,7 @@ git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth
 
 ### Method 2
 
-you can use as [submodule](https://www.atlassian.com/git/tutorials/git-submodule) with
+You can use as [submodule](https://www.atlassian.com/git/tutorials/git-submodule) with
 
 ```bash
 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth=1
@@ -81,6 +81,28 @@ Add in `config.yml`:
 
 ```yml
 theme: "PaperMod"
+```
+### Method 4
+
+ - Install [Go programming language](https://go.dev/doc/install) in your operating system.
+
+ - Intialize your own hugo mod
+ 
+```
+hugo mod init YOUR_OWN_GIT_REPOSITORY
+```
+
+ - Add PaperMod in your `config.yml` file
+
+```
+module:
+  imports:
+  - path: github.com/adityatelange/hugo-PaperMod
+```
+ - Update theme
+
+```
+hugo mod get -u
 ```
 
 ---
