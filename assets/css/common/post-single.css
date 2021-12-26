@@ -160,7 +160,7 @@
     border-radius: var(--radius);
 }
 
-.post-content table pre {
+.post-content .highlight table pre {
     border-radius: 0;
 }
 
