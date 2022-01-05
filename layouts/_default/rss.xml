@@ -32,7 +32,7 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
     {{ range $pages }}
-    {{- if and (ne .Layout `search`) (ne .Layout `archives`) }}
+    {{- if and (ne .Layout `search`)  (ne .Params.offTheRecord true) (ne .Layout `archives`) }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
