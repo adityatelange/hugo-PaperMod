@@ -13,6 +13,11 @@
     {{- $includes = (append $hljs $includes) }}
 {{- end }}
 
+{{- if .Site.Params.features.search }}
+    {{- $search := (resources.Get "css/includes/search.css") }}
+    {{- $includes = (append $search $includes) }}
+{{- end }}
+
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- /* order is important */}}
