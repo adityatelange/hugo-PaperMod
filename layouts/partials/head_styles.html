@@ -23,6 +23,26 @@
     {{- $includes = (append $profileMode $includes) }}
 {{- end }}
 
+{{- if not (eq .Site.Params.features.ShowCodeCopyButtons false) }}
+    {{- $ShowCodeCopyButtons := (resources.Get "css/includes/show-code-copy-buttons.css") }}
+    {{- $includes = (append $ShowCodeCopyButtons $includes) }}
+{{- end }}
+
+{{- if not (eq .Site.Params.features.ShowPostNavLinks false) }}
+    {{- $ShowPostNavLinks := (resources.Get "css/includes/show-post-nav-links.css") }}
+    {{- $includes = (append $ShowPostNavLinks $includes) }}
+{{- end }}
+
+{{- if not (eq .Site.Params.features.ShowShareButtons false) }}
+    {{- $ShowShareButtons := (resources.Get "css/includes/show-share-buttons.css") }}
+    {{- $includes = (append $ShowShareButtons $includes) }}
+{{- end }}
+
+{{- if not (eq .Site.Params.features.disableAnchoredHeadings true) }}
+    {{- $AnchoredHeadings := (resources.Get "css/includes/show-share-buttons.css") }}
+    {{- $includes = (append $AnchoredHeadings $includes) }}
+{{- end }}
+
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- /* order is important */}}

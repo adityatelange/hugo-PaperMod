@@ -329,46 +329,6 @@
     background: var(--border);
 }
 
-.share-buttons {
-    margin: 14px 0;
-    padding-inline-start: var(--radius);
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-}
-
-.share-buttons a {
-    margin-top: 10px;
-}
-
-.share-buttons a:not(:last-of-type) {
-    margin-inline-end: 12px;
-}
-
-.share-buttons a svg {
-    height: 30px;
-    width: 30px;
-    fill: currentColor;
-    transition: transform 0.1s;
-}
-
-.share-buttons svg:active {
-    transform: scale(0.96);
-}
-
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-    display: inline-flex;
-    color: var(--secondary);
-    margin-inline-start: 8px;
-    font-weight: 500;
-    user-select: none;
-}
-
 .post-content :not(table) ::-webkit-scrollbar-thumb {
     border: 2px solid var(--hljs-bg);
     background: rgb(113, 113, 117);
@@ -389,42 +349,4 @@ h6:hover .anchor {
 
 .post-content table::-webkit-scrollbar-thumb {
     border-width: 2px;
-}
-
-.paginav {
-    margin: 10px 0;
-    display: flex;
-    line-height: 30px;
-    border-radius: var(--radius);
-}
-
-.paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
-    border-radius: var(--radius);
-}
-
-.paginav .title {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: small;
-    color: var(--secondary);
-}
-
-.paginav .prev,
-.paginav .next {
-    width: 50%;
-}
-
-.paginav span:hover:not(.title) {
-    box-shadow: 0 1px 0;
-}
-
-.paginav .next {
-    margin-inline-start: auto;
-    text-align: right;
-}
-
-[dir="rtl"] .paginav .next {
-    text-align: left;
 }
