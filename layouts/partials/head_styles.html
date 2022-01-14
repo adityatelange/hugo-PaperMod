@@ -18,6 +18,11 @@
     {{- $includes = (append $search $includes) }}
 {{- end }}
 
+{{- if .Site.Params.profileMode.enabled }}
+    {{- $profileMode := (resources.Get "css/includes/profile-mode.css") }}
+    {{- $includes = (append $profileMode $includes) }}
+{{- end }}
+
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- /* order is important */}}
