@@ -1,7 +1,7 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html {
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--primary)
+    color: var(--primary);
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     word-break: break-word;
-    background: var(--theme)
+    background: var(--theme);
 }
 
 article,
@@ -40,7 +40,7 @@ main,
 nav,
 section,
 table {
-    display: block
+    display: block;
 }
 
 h1,
@@ -49,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 1.2
+    line-height: 1.2;
 }
 
 h1,
@@ -60,21 +60,21 @@ h5,
 h6,
 p {
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 ul {
-    padding: 0
+    padding: 0;
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 body,
 figure,
 ul {
-    margin: 0
+    margin: 0;
 }
 
 table {
@@ -82,7 +82,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     overflow-x: auto;
-    word-break: keep-all
+    word-break: keep-all;
 }
 
 button,
@@ -96,43 +96,43 @@ textarea {
 
 input,
 textarea {
-    outline: 0
+    outline: 0;
 }
 
 button,
 input[type=button],
 input[type=submit] {
-    cursor: pointer
+    cursor: pointer;
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    box-shadow: 0 0 0 50px var(--theme) inset
+    box-shadow: 0 0 0 50px var(--theme) inset;
 }
 
 img {
     display: block;
-    max-width: 100%
+    max-width: 100%;
 }
 
 ::-webkit-scrollbar-track {
-    background: 0 0
+    background: 0 0;
 }
 
 .list:not(.dark)::-webkit-scrollbar-track {
-    background: var(--code-bg)
+    background: var(--code-bg);
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border: 5px solid var(--theme);
-    border-radius: var(--radius)
+    border-radius: var(--radius);
 }
 
 .list:not(.dark)::-webkit-scrollbar-thumb {
-    border: 5px solid var(--code-bg)
+    border: 5px solid var(--code-bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary)
+    background: var(--secondary);
 }

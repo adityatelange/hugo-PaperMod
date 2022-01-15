@@ -3,3 +3,23 @@
 
 - id: next_page
   translation: "다음 페이지"
+
+- id: read_time
+  translation:
+    one : "1 분"
+    other: "{{ .Count }} 분"
+
+- id: toc
+  translation: "목차"
+
+- id: translations
+  translation: "번역"
+
+- id: home
+  translation: "홈페이지"
+
+- id: code_copy
+  translation: "복사"
+
+- id: code_copied
+  translation: "복사완료!"

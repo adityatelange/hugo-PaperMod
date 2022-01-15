@@ -14,3 +14,9 @@
 
 - id: translations
   translation: "Traduzioni"
+
+- id: code_copy
+  translation: "copia"
+
+- id: code_copied
+  translation: "copiato!"

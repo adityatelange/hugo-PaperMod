@@ -26,7 +26,21 @@ window.onload = function () {
                             'content'
                         ]
                     };
-                    if (params.fuseOpts) options = params.fuseOpts;
+                    if (params.fuseOpts) {
+                        options = {
+                            isCaseSensitive: params.fuseOpts.iscasesensitive ? params.fuseOpts.iscasesensitive : false,
+                            includeScore: params.fuseOpts.includescore ? params.fuseOpts.includescore : false,
+                            includeMatches: params.fuseOpts.includematches ? params.fuseOpts.includematches : false,
+                            minMatchCharLength: params.fuseOpts.minmatchcharlength ? params.fuseOpts.minmatchcharlength : 1,
+                            shouldSort: params.fuseOpts.shouldsort ? params.fuseOpts.shouldsort : true,
+                            findAllMatches: params.fuseOpts.findallmatches ? params.fuseOpts.findallmatches : false,
+                            keys: params.fuseOpts.keys ? params.fuseOpts.keys : ['title', 'permalink', 'summary', 'content'],
+                            location: params.fuseOpts.location ? params.fuseOpts.location : 0,
+                            threshold: params.fuseOpts.threshold ? params.fuseOpts.threshold : 0.4,
+                            distance: params.fuseOpts.distance ? params.fuseOpts.distance : 100,
+                            ignoreLocation: params.fuseOpts.ignorelocation ? params.fuseOpts.ignorelocation : true
+                        }
+                    }
                     fuse = new Fuse(data, options); // build the index from the json file
                 }
             } else {
@@ -103,31 +117,31 @@ document.onkeydown = function (e) {
         }
     } else if (current_elem) ae = current_elem;
 
-    if (key === "ArrowDown" && resultsAvailable && inbox) {
+    if (key === "Escape") {
+        reset()
+    } else if (!resultsAvailable || !inbox) {
+        return
+    } else if (key === "ArrowDown") {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
             activeToggle(resList.firstChild.lastChild);
-        } else if (ae.parentElement == last) {
+        } else if (ae.parentElement != last) {
             // if the currently focused element's parent is last, do nothing
-        } else {
             // otherwise select the next search result
             activeToggle(ae.parentElement.nextSibling.lastChild);
         }
-    } else if (key === "ArrowUp" && resultsAvailable && inbox) {
+    } else if (key === "ArrowUp") {
         e.preventDefault();
-        if (ae == sInput) {
-            // if the currently focused element is input box, do nothing
-        } else if (ae.parentElement == first) {
+        if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
             activeToggle(sInput);
-        } else {
+        } else if (ae != sInput) {
+            // if the currently focused element is input box, do nothing
             // otherwise select the previous search result
             activeToggle(ae.parentElement.previousSibling.lastChild);
         }
-    } else if (key === "ArrowRight" && resultsAvailable && inbox) {
+    } else if (key === "ArrowRight") {
         ae.click(); // click on active link
-    } else if (key === "Escape") {
-        reset()
     }
 }

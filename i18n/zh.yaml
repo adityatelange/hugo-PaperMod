@@ -14,3 +14,12 @@
 
 - id: translations
   translation: "语言"
+
+- id: home
+  translation: "主页"
+
+- id: code_copy
+  translation: "复制"
+
+- id: code_copied
+  translation: "已复制！"
