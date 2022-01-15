@@ -18,6 +18,9 @@
 - id: home
   translation: "Inicio"
 
+- id: edit_post
+  translation: "Editar"
+
 - id: code_copy
   translation: "copiar"
 

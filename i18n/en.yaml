@@ -18,6 +18,9 @@
 - id: home
   translation: "Home"
 
+- id: edit_post
+  translation: "Edit"
+
 - id: code_copy
   translation: "copy"
 

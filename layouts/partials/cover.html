@@ -4,7 +4,7 @@
 <figure class="entry-cover">
     {{- $responsiveImages := (.Params.cover.responsiveImages | default .Site.Params.cover.responsiveImages) | default true }}
     {{- $addLink := (and .Site.Params.cover.linkFullImages (not $.IsHome)) }}
-    {{- $cover := (.Page.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+    {{- $cover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
         {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
