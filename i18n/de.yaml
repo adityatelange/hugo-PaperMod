@@ -9,6 +9,11 @@
     one: "1 min"
     other: "{{ .Count }} min"
 
+- id: words
+  translation:
+    one : "Wort"
+    other: "{{ .Count }} Wörter"
+
 - id: toc
   translation: "Inhaltsverzeichnis"
 
