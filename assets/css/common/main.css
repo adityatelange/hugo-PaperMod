@@ -6,6 +6,10 @@
     padding: var(--gap);
 }
 
+.main.page {
+    max-width: calc(var(--article-width) + var(--gap) * 2);
+}
+
 .page-header h1 {
     font-size: 40px;
 }
