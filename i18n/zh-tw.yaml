@@ -18,6 +18,9 @@
 - id: home
   translation: "首頁"
 
+- id: edit_post
+  translation: "編輯"
+
 - id: code_copy
   translation: "複製"
 
