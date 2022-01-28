@@ -231,9 +231,16 @@
     max-width: 100%;
 }
 
-.post-content img {
+.post-content {
     border-radius: 4px;
     margin: 1rem 0;
+}
+
+/*  Had to make this change so the images have a smaller bottom margin. 
+    This would allow me to position the caption closer to the image*/
+img {
+    border-radius: 4px;
+    margin: 1rem 0 0.1rem 0;
 }
 
 .post-content img[src*="#center"] {
