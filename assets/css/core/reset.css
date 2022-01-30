@@ -136,3 +136,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
+p > code {
+    color: #FF7F50;
+}
