@@ -8,15 +8,18 @@
                 <span class="details">{{- i18n "toc" | default "Table of Contents" }}</span>
             </summary>
 
-            <div class="inner">
-                {{- $largest := 6 -}}
-                {{- range $headers -}}
-                {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
-                {{- $headerLevel := len (seq $headerLevel) -}}
-                {{- if lt $headerLevel $largest -}}
-                {{- $largest = $headerLevel -}}
-                {{- end -}}
-                {{- end -}}
+        <div class="inner">
+            {{- if (.Param "UseHugoToc") }}
+            {{- .TableOfContents -}}
+            {{- else }}
+            {{- $largest := 6 -}}
+            {{- range $headers -}}
+            {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
+            {{- $headerLevel := len (seq $headerLevel) -}}
+            {{- if lt $headerLevel $largest -}}
+            {{- $largest = $headerLevel -}}
+            {{- end -}}
+            {{- end -}}
 
                 {{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}}
 
@@ -88,6 +91,7 @@
                 {{- end -}}
                 {{- end }}
                 </ul>
+                {{- end }}
             </div>
         </details>
     </div>
