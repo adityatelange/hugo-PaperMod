@@ -1,97 +1,96 @@
 .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    line-height: var(--header-height);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 2);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  line-height: var(--header-height);
 }
 
 .nav a {
-    display: block;
+  display: block;
 }
 
 .logo,
 #menu {
-    display: flex;
-    margin: auto var(--gap);
+  display: flex;
+  margin: auto var(--gap);
 }
 
 .logo {
-    flex-wrap: inherit;
+  flex-wrap: inherit;
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: 700;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .logo a img {
-    display: inline;
-    vertical-align: middle;
-    pointer-events: none;
-    transform: translate(0, -10%);
-    border-radius: 6px;
-    margin-inline-end: 8px;
+  display: inline;
+  vertical-align: middle;
+  pointer-events: none;
+  transform: translate(0, -10%);
+  border-radius: 6px;
+  margin-inline-end: 8px;
 }
 
 #theme-toggle svg {
-    height: 18px;
+  height: 18px;
 }
 
 button#theme-toggle {
-    font-size: 26px;
-    margin: auto 4px;
+  margin: none;
 }
 
 body.dark #moon {
-    vertical-align: middle;
-    display: none;
+  vertical-align: middle;
+  display: none;
 }
 
 body:not(.dark) #sun {
-    display: none;
+  display: none;
 }
 
 #menu {
-    list-style: none;
-    word-break: keep-all;
-    overflow-x: auto;
-    white-space: nowrap;
+  list-style: none;
+  word-break: keep-all;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 #menu li + li {
-    margin-inline-start: var(--gap);
+  margin-inline-start: var(--gap);
 }
 
 #menu a {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 #menu .active {
-    font-weight: 500;
-    border-bottom: 2px solid currentColor;
+  font-weight: 500;
+  border-bottom: 2px solid currentColor;
 }
 
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
-    display: inline-flex;
-    margin: auto 4px;
+  display: inline-flex;
+  margin: auto 4px;
 }
 
 .lang-switch {
-    display: flex;
-    flex-wrap: inherit;
+  display: flex;
+  flex-wrap: inherit;
 }
 
 .lang-switch a {
-    margin: auto 3px;
-    font-size: 16px;
-    font-weight: 500;
+  margin: auto 3px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .logo-switches {
-    flex-wrap: inherit;
+  flex-wrap: inherit;
 }
