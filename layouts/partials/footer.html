@@ -3,7 +3,7 @@
     {{- if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{- .Site.Params.label.text | default .Site.Title }}</a></span>
+    <span>&copy; {{ if $.Site.Params.launchYear }}{{ .Site.Params.launchYear }}–{{ end }}{{ now.Year }} {{ .Site.Title | default .Site.Params.label.text }}</span>
     {{- end }}
     {{- if not $.Site.Params.hideCredits }}
     <span>
