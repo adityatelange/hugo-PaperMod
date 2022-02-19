@@ -104,9 +104,6 @@
 <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 
-{{- /* Generator */}}
-{{ hugo.Generator }}
-
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
