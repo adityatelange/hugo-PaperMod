@@ -137,6 +137,6 @@ img {
     background: var(--secondary);
 }
 
-p > code {
-    color: #FF7F50;
+code {
+    color: var(--code);
 }

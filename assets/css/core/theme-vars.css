@@ -15,6 +15,10 @@
     --hljs-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --code: #125b9b;
+    /* 
+    0A4578
+    6764A0 */
 }
 
 .dark {
@@ -27,7 +31,10 @@
     --hljs-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    --code: #99c2cf;
 }
+
+/* 9CDAEC */
 
 .list {
     background: var(--code-bg);
