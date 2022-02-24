@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "Página Anterior"
+  translation: "Página anterior"
 
 - id: next_page
-  translation: "Próxima Página"
+  translation: "Próxima página"
 
 - id: read_time
   translation:
@@ -15,7 +15,19 @@
     other: "{{ .Count }} palavras"
 
 - id: toc
-  translation: "Conteúdo"
+  translation: "Índice"
 
 - id: translations
   translation: "Traduções"
+  
+- id: home
+  translation: "Página inicial"
+
+- id: edit_post
+  translation: "Editar"
+
+- id: code_copy
+  translation: "copiar"
+
+- id: code_copied
+  translation: "copiado!"
