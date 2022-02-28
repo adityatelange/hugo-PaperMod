@@ -1,7 +1,7 @@
 baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
 title: PaperMod
 paginate: 5
-theme: hugo-PaperMod
+theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
