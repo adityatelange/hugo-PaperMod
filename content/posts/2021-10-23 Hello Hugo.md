@@ -1,5 +1,4 @@
 ---
-author: "Hugo Authors"
 title: "Hello Hugo, Meet SmugMug"
 date: "2021-10-23"
 description: "This blog is built with Hugo and served using a collaboration between Github and Cloudflare Pages."
