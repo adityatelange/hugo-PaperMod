@@ -15,7 +15,7 @@ weight: 1
 
 Hello
 
-![](test/test.jpg)
+![](/test/test.jpg)
 
 ![](test/2022-02-12%20Seattle%20Selfie%20Museum%2013-56-24.jpg)
 
