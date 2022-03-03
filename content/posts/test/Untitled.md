@@ -7,7 +7,8 @@ author: "Aditya Telange"
 draft: true
 aliases: [/posts/papermod/papermod-how-to]
 weight: 3
-cover: /sample_640×426.jpeg
+cover: 
+     image:/sample_640×426.jpeg
 
 ---
 
