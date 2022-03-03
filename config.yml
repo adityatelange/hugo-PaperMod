@@ -1,7 +1,7 @@
 baseURL: "https://hugo-papermod.pages.dev/"
 title: PaperMod
 paginate: 5
-theme: hugo-PaperMod
+
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
