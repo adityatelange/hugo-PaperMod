@@ -15,7 +15,7 @@ My old Wordpress blog contains hundreds of posts. Many of them utilize photo gal
 <!--more-->
 ---
 
-![](/2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg)
+![](2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg)
 
 ### Just Switch / To Heck With It
 
