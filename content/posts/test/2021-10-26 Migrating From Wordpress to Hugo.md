@@ -7,7 +7,7 @@ categories: ["Nerdy"]
 ShowToc: true
 TocOpen: true
 cover:
-    image: "/posts/test/2021-10-26-migrating-from-wordpress-to-hugo/2021-10-23%20Tiffany%20and%20Jason's%20Halloween%20Party%2020-55-45-X5.jpeg"
+    image: "/test/2021-10-26-migrating-from-wordpress-to-hugo/2021-10-23%20Tiffany%20and%20Jason's%20Halloween%20Party%2020-55-45-X5.jpeg"
     caption: "Haunted house photo from this past weekend. See the full gallery [here](https://www.bershatsky.net/2021/2021-10-23-tiffany-and-jasons-halloween-party/)."
 ---
 
