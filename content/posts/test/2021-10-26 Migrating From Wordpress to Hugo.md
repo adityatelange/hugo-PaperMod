@@ -7,7 +7,7 @@ categories: ["Nerdy"]
 ShowToc: true
 TocOpen: true
 cover:
-    image: "/2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg"
+    image: "/posts/test/2021-10-26-migrating-from-wordpress-to-hugo/2021-10-23%20Tiffany%20and%20Jason's%20Halloween%20Party%2020-55-45-X5.jpeg"
     caption: "Haunted house photo from this past weekend. See the full gallery [here](https://www.bershatsky.net/2021/2021-10-23-tiffany-and-jasons-halloween-party/)."
 ---
 
@@ -15,6 +15,8 @@ My old Wordpress blog contains hundreds of posts. Many of them utilize photo gal
 <!--more-->
 ---
 ![](/2021-10-23%20Tiffany%20and%20Jason's%20Halloween%20Party%2020-55-45-X5.jpeg)
+
+"/2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg"
 
 ### Just Switch / To Heck With It
 
