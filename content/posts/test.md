@@ -1,14 +1,14 @@
 ---
-title: "/test"
-summary: /test.
+title: "test"
+summary: test.
 date: 2022-03-03
-tags: ["/test tag"]
-categories: ["/test category"]
+tags: ["test tag"]
+categories: ["test category"]
 draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: "//test/2022-02-12 Seattle Selfie Museum 14-20-23.jpg"
+    image: "/test/2022-02-12 Seattle Selfie Museum 14-20-23.jpg"
 weight: 1
 
 ---
