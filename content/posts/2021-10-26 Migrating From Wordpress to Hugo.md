@@ -15,6 +15,8 @@ My old Wordpress blog contains hundreds of posts. Many of them utilize photo gal
 <!--more-->
 ---
 
+![](/2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg)
+
 ### Just Switch / To Heck With It
 
 If you have a newer solutions that works better for your workflow or aesthetic - just switch. Don't even bother about migrating your old content. It's OK to have more than one site. 
