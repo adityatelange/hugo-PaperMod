@@ -14,7 +14,7 @@ cover:
 My old Wordpress blog contains hundreds of posts. Many of them utilize photo galleries made with a third party plugin. The problem? They don't export or convert to Hugo easily or even convert at all. What to do?
 <!--more-->
 ---
-![](/2021-10-23%20Tiffany%20and%20Jason's%20Halloween%20Party%2020-55-45-X5.jpeg)
+![](/test.jpeg)
 
 "/2021-10-23 Tiffany and Jason's Halloween Party 20-55-45-X5.jpeg"
 
