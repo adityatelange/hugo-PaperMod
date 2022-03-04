@@ -18,3 +18,5 @@
 - id: home
   translation: "Bosh sahifa"
   
+- id: tags
+  translation: "Teglar"

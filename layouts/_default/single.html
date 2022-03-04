@@ -36,13 +36,13 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- if .Params.tags }}
+    {{- if isset .Params (i18n "tags" | default "tags")}}
     <ul class="post-tags">
-      {{- range ($.GetTerms "tags") }}
+      {{- range ($.GetTerms (i18n "tags" | default "tags")) }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    {{- end }}
+    {{- end}}
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}

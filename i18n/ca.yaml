@@ -17,3 +17,6 @@
 
 - id: home
   translation: "Inici"
+
+- id: tags
+  translation: "Etiquetes"

@@ -26,3 +26,6 @@
 
 - id: code_copied
   translation: "Skopiowano!"
+
+- id: tags
+  translation: "Tagi"

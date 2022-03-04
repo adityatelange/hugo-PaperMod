@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "скопійовано!"
+
+- id: tags
+  translation: "теги"

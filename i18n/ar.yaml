@@ -20,3 +20,6 @@
   
 - id: home
   translation: "الصفحة الرئيسية"
+
+- id: tags
+  translation: "العلامات"

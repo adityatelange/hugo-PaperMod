@@ -19,3 +19,6 @@
 
 - id: translations
   translation: "Traduções"
+
+- id: tags
+  translation: "Tag"

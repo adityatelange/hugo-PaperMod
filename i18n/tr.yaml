@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "Kopyalandı!"
+
+- id: tags
+  translation: "Etiketler"

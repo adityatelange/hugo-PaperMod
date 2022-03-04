@@ -26,3 +26,6 @@
 
 - id: code_copied
   translation: "已複製！"
+
+- id: tags
+  translation: "標籤"

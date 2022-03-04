@@ -26,3 +26,6 @@
 
 - id: code_copied
   translation: "کپی شد!"
+
+- id: tags
+  translation: "برچسب ها"

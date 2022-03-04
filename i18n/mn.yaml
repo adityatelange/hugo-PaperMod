@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "хуулсан!"
+
+- id: tags
+  translation: "шошго"

@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "¡copiado!"
+
+- id: tags
+  translation: "etiquetas"

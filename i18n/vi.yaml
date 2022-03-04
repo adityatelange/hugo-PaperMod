@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "Đã sao chép!"
+
+- id: tags
+  translation: "thẻ"

@@ -21,3 +21,6 @@
 
 - id: code_copied
   translation: "скопировано!"
+
+- id: tags
+  translation: "теги"

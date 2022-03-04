@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "copié!"
+
+- id: tags
+  translation: "Mots clés"

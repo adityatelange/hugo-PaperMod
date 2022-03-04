@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "kopiite!"
+
+- id: tags
+  translation: "etikedoj"

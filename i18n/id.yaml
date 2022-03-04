@@ -14,3 +14,6 @@
 
 - id: translations
   translation: "Terjemahan"
+
+- id: tags
+  translation: "Tag"

@@ -17,3 +17,6 @@
 
 - id: home
   translation: "דף בית"
+
+- id: tags
+  translation: "תגים"

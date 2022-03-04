@@ -23,3 +23,6 @@
 
 - id: code_copied
   translation: "복사완료!"
+
+- id: tags
+  translation: "태그"
