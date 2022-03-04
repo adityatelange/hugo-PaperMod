@@ -15,7 +15,7 @@ weight: 1
 *HiFi shops have all but disappeared. Big box stores like Best Buy, Target, and Walmart do not sell higher end audio gear. Thus, we're forced to research audio gear online. In this article, I'll share my current HiFi setup and explain the rationale why I chose each piece of gear and service.*
 
 # My Current HiFi Audio Setup
-This article is not a review. The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
+This article is **not a review**. The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
 
 The challenge with researching HiFi audio gear online is of course that you can't actually test any of it out or hear it! Moreover, I don't believe any amount of adjectives can accurately describe sound reproduction. My goal with this article is to share what works for me and hopefully save you from some of the buying mistakes that I've made.
 
@@ -23,13 +23,13 @@ For my particular use case, I mainly listen to music when I'm sitting in my den,
 
 ---
 
-# Audio Source #1 - Premium Internet Streaming Services
+## Audio Source #1 - Premium Internet Streaming Services
 Vinyl and CD's are great, but you can't beat the convenience of modern day streaming platforms. Type in any song or artist, click a few icons, and you're listening in no time!
 
-## 24-bit / 192 kHz Hi-Res Lossless Music Streaming Services
+### 24-bit / 192 kHz Hi-Res Lossless Music Streaming Services
 The ultimate audiophile goal is to have THE best sound quality possible. To achieve that, you'll want to bypass any and all computer processing and have the external DAC do any all of the decoding. This is much easier said than done. Being that a MacBook Pro is my main interface for this HiFi setup, you need to choose your music streaming service carefully. There's pros and cons to each one, but in the end (as of the time of this writing), there's one clear winner for me. Let's discuss each one:
 
-### Apple Music
+#### Apple Music
 We subscribe to the family plan since everyone in our household uses an iPhone. The selection of music is fantastic. Siri integration makes it super convenient to verbally interact with the phone and play music while driving. 
 
 When using Apple Music on a Mac, there's no such thing as a straight passthrough to your DAC. Instead, the audio is resampled to whatever the settings are in the "Audio MIDI Setup" app built into OS X. That means if you're playing a 24 bit / 192 kHz song, but forgot to change the output format in the MIDI app from 16 bit / 48 kHz to 192 kHz, then your music will be downsampled when output to your DAC. If you've got the output set to a higher setting than the music being played, then it upsamples the music. That being said, I just leave the MIDI settings set to 192 kHz and deal with it. 
@@ -46,19 +46,19 @@ As of the time of this writing, Apple music is my preferred choice vs all of the
 4. Already paying for it for the family. Anything else would be an extra cost, which I'm not opposed to, but the other platform better be something extra special.
 5. M1 ARM native app = better performance.
 
-### Amazon Music HD
+#### Amazon Music HD
 Amazon Music's app exhibits the same bitrate non-switching problem as Apple Music. This issue persists even if you've enabled the "exclusive mode" setting in the app.
 
 Also, I've noticed some blips/gaps/buffering issues on my 1GB internet connection that just shouldn't happen. This has happened multiple times. It's inexcusable - that's an immediate "no-go" for me. It's not just me, [here's a Reddit thread with others dealing with the same issue](https://www.reddit.com/r/AmazonMusic/comments/nrkuqn/amazon_music_on_macbook_stutteringskipping/). Perhaps this is because the app is not optimized to run on ARM, but instead runs using Rosetta emulation.
 
 During my trial of Amazon Music HD, I didn't see any reason to switch away from Apple Music.
 
-### Spotify
+#### Spotify
 As of the time of this writing, Spotify still doesn't offer songs in as high of a quality as the competition. Furthermore, you can't download just one song at a time from an album. How stupid is that? Due to a lack of high fidelity audio, at this time it's out of the running for me. Like Amazon, it's also running using Rosetta.
 
 That being said, I do use the free version of Spotify to listen to various podcasts.
 
-### Tidal
+#### Tidal
 There's a lot of controversy around Tidal's high quality music tech. It boils down to their own proprietary format known as MQA. The TL;DR of countless tech articles slamming MQA is that it adds to the cost of licensing from music companies, adds to the cost of consumers needing to buy DACs that feature this proprietary codec, and it is a lossy format that doesn't sound as great as it could. In addition to all of that, their best plan to obtain the highest quality audio that they offer in more expensive than the competition. Because of these reasons, I'm not interested in Tidal. Promoting MQA as being superior to other formats, is dishonest and not in the best interest of anyone except Tidal.
 
 Here's some references on the subject of MQA and Tidal that do a much more eloquent job of explaining this controversy than I can.
@@ -70,7 +70,7 @@ Here's some references on the subject of MQA and Tidal that do a much more eloqu
 
 Controversy aside, they do have a free tier (which sounds awful), but I tested out their Mac application. Its exclusive mode was no better than Amazon, and wouldn't change the outgoing bitrate to the DAC on the fly. Lastly, it too isn't ARM native.
 
-### Qobuz
+#### Qobuz
 The Qobuz Mac app just works! It automatically switches the output in the MIDI settings to match the music source. It works better than Apple's own native Music app and service. Inconceivable!
 
 I've tried comparing it to Apple Music using a Mac and iOS device. I've tried listening for a difference. Sometimes I think Qobuz sounds slightly better, other times they seem to be the same. Is it the auto changing of the bitrate that makes Qobuz sound better? Does it even make a difference? I know it's not sending out unaltered bits because the volume control in the app still is functional. 
@@ -95,27 +95,38 @@ My trial end in about 10 tens, so I plan on doing a lot more testing before my t
 
 ---
 
-# Audio Source #2 - Compact Discs
+## Audio Source #2 - Compact Discs
 Vinyl doesn't interest me (too much). Records are en vogue right now, and you'll pay a premium for vinyl wherever you go. I remember the headaches of vinyl, the space they take up, turning the record over, and dealing with all the mechanisms of turntables and maintenance. Compact discs became the dominant format for many reasons which still hold true today. 
+
 Nowadays, nobody wants CDs. Heck, I've had people just give me CDs that they can't even play back anymore. Used, you can pick them up for a few bucks, and they still sound great.
+
 CDs have many benefits - even in 2022:
-They sound awesome! You might be hard pressed to hear the difference between streaming and CDs.
-Once you own them, you own them. Physical media has many advantages over streaming. At any point in time, a streaming service could pull one of your favorite tracks for any reason.
-No ongoing fee. Pay once, and it's yours.
-You can rip them to your computer and play them back in perfect quality from a variety of devices and apps.
-They're less expensive than vinyl.
-Available used for a fraction of the cost that they were even decades ago and that includes being adjusted for inflation.
-Fairly durable (although can break, scratch, etc.)
-Always have the same audio quality regardless of age and times played.
-Don't need to be flipped like records.
-Retro / cool / hipster factor. Records are mainstream - heck BestBuy even offers them. CDs are today's underdog - they're not "in."
-You'll most likely listen to all the tracks, in order, like the the artist intended. You'll probably even listen to songs that you might otherwise skip. Some of these songs might not be the popular hits, but you might find some that you'll absolutely love or would have missed otherwise.
+
+1. They sound awesome! You might be hard pressed to hear the difference between streaming and CDs.
+2. Once you own them, you own them. Physical media has many advantages over streaming. At any point in time, a streaming service could pull one of your favorite tracks for any reason.
+3. No ongoing fee. Pay once, and it's yours.
+4. You can easily rip them to your computer and play them back in perfect quality from a variety of devices and apps.
+5. They're less expensive than vinyl.
+6. Readily available used for a fraction of the cost that they were even decades ago and that includes being adjusted for inflation.
+7. Fairly durable (although can break, scratch, etc.)
+8. Always have the same audio quality regardless of age and times played.
+9. Don't need to be flipped over like records.
+10. Retro / cool / hipster factor. Records are mainstream - heck BestBuy even offers them. CDs are today's underdog - they're not "in."
+11. You'll most likely listen to all the tracks, in order, like the the artist intended. You'll probably even listen to songs that you might otherwise skip. Some of these songs might not be the popular hits, but you might find some that you'll absolutely love or would have missed otherwise.
+
 Mark my words. Compact discs will see a resurgence within the next few years when the younger generations rediscover them.
 
-Audio Source #3 - Plex and Plexamp
+---
+
+## Audio Source #3 - Plex and Plexamp
 There are many solutions to streaming your ripped CD collection at home. These include Roon, Audirvana, and more. However, those solutions have a monthly cost. Paying monthly to play music I already own seems crazy to me. I've looked at Roon before and was completely unimpressed. Audirvana costs an arm and a leg, and isn't something I'd consider. 
+
 Plex on the other hand is $120 for a lifetime membership. It allows you to stream any and all of your media - including DSD files. Off topic, but with regards to DSD, I only have a few test files that I downloaded as this seems like a dead / dying format. 32 bit PCM WAV files seem to be better than DSD and a new more modern standard. Once you have purchased your membership to Plex, you have full access to the Plexamp app for your phone, tablet, or computer. It works great!
-Plexamp allows me to stream my CD library losslessly when on wifi and lossy when on cellular - from anywhere! When streaming lossless files it's near bit perfect. I say near, because Plex doesn't actually say bit perfect anywhere, but one of the developers eluded to the fact that it's bit perfect-ish on one of the forums. I guess it does some processing, although you can minimize that in settings. When connected to an external DAC, it displays the correct bitrate of the file being played. 
+
+Plexamp allows me to stream my CD library losslessly when on wifi and lossy when on cellular - from anywhere![^1] When streaming lossless files it's near bit perfect. I say near, because Plex doesn't actually say bit perfect anywhere, but one of the developers eluded to the fact that it's bit perfect-ish on one of the forums. I guess it does some processing, although you can minimize that in settings. When connected to an external DAC, it displays the correct bitrate of the file being played.
+
+[^1]: There is one major caveat to streaming outside of your home network though. In my case, it causes our router to crash sporadically. To fix this issue, I plan on building my own router using PFSense.
+ 
 All is not perfect in the land of Plex, there are a few issues with the Plexamp app:
 You cannot download your full library. Why? Because the developer says so. They've ignored that request from their users, and just don't care. That's the way it is. You need to download each album one at a time.
 Cannot just download an individual song, it has to be the full album.
