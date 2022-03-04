@@ -1,6 +1,6 @@
 ---
 title: "My Current HiFi Audio Setup"
-summary: This article is not a review. The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
+summary: HiFi shops have all but disappeared. Big box stores like Best Buy, Target, and Walmart do not sell higher end audio gear. Thus, we're forced to research audio gear online. In this article, I'll share my current HiFi setup and explain the rationale why I chose each piece of gear and service.
 date: 2022-03-03
 categories: ["Audio"]
 draft: false
@@ -11,6 +11,8 @@ cover:
 weight: 1
 
 ---
+
+*HiFi shops have all but disappeared. Big box stores like Best Buy, Target, and Walmart do not sell higher end audio gear. Thus, we're forced to research audio gear online. In this article, I'll share my current HiFi setup and explain the rationale why I chose each piece of gear and service.*
 
 # My Current HiFi Audio Setup
 This article is not a review. The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
