@@ -1,6 +1,6 @@
 ---
-title: "This article is not a review."
-summary: The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
+title: "My Current HiFi Audio Setup"
+summary: This article is not a review. The equipment discussed herein, is merely the gear I'm using and why I chose each piece. At the end, I'll talk about audio gear that I've had to return, and thus would not recommend.
 date: 2022-03-03
 categories: ["Audio"]
 draft: false
