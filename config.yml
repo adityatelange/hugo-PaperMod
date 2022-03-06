@@ -57,7 +57,7 @@ params:
     ShowCodeCopyButtons: true
     ShowToc: true
     # comments: false
-    images: ["papermod-cover.png"]
+    # images: ["papermod-cover.png"]
 
     profileMode:
         enabled: false
@@ -73,15 +73,9 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "Bershatsky Blog"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
-
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-
-            - Do give a 🌟 on Github !
-
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            A blog (mostly) about photography.
 
     socialIcons:
         - name: github
