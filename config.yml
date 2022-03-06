@@ -1,11 +1,11 @@
 baseURL: "https://hugo-papermod.pages.dev/"
-title: PaperMod
-paginate: 5
+title: Bershatsky
+paginate: 10
 
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDrafts: true
+buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
@@ -33,25 +33,7 @@ languages:
                 - name: Categories
                   url: categories/
                   weight: 10
-
-    fr:
-        languageName: ":fr:"
-        languageAltTitle: French
-        weight: 2
-        title: PaperModL2
-        profileMode:
-            enabled: true
-            title: PaperMod
-            # imageUrl: "#"
-            # imageTitle: my image
-            # imageWidth: 120
-            # imageHeight: 120
-            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-            buttons:
-                - name: Blog
-                  url: posts
-                - name: Tags
-                  url: tags
+                  
         menu:
             main:
                 - name: Archive
@@ -98,8 +80,8 @@ params:
     author: Theme PaperMod
     # author: ["Me", "You"] # multiple authors
 
-    defaultTheme: auto
-    # disableThemeToggle: true
+    defaultTheme: light
+    disableThemeToggle: true
     ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
