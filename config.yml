@@ -75,7 +75,7 @@ params:
     homeInfoParams:
         Title: "Bershatsky Blog"
         Content: >
-            A *nerdy* blog (mostly) about photography.
+            A **nerdy** blog (mostly) about photography.
 
     socialIcons:
         - name: github
