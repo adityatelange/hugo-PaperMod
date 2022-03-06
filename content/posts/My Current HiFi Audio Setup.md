@@ -5,7 +5,7 @@ date: 2022-03-03
 categories: ["Audio"]
 draft: false
 ShowToc: True
-TocOpen: True
+TocOpen: False
 cover:
     image: "/2022-02-16-CD-Transport-HiFi-System-17-00-27.jpeg"
 weight: 1
