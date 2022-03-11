@@ -154,7 +154,7 @@
 }
 
 .post-content .highlight:not(table),
-.post-content .highlight pre {
+.post-content pre {
     margin: 10px auto;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
