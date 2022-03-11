@@ -21,6 +21,14 @@
         style="font-variation-settings:normal"
         d="M1.774 18.063V5.466h5.51c1.978 0 3.116 1.326 3.055 2.806-.043 1.049-.711 2.988-2.643 2.988h-5.93H7.73c1.224 0 3.532 1.13 3.532 3.532 0 2.4-1.873 3.27-3.318 3.27zm12.57-4.459h7.89s.012-4.18-4.167-4.18c-5.237 0-5.277 9.11-.3 9.11 3.06 0 3.935-1.806 3.935-1.806M15.526 5.823h4.987" />
 </svg>
+{{- else if (eq $icon_name "bilibili") -}}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.3333" y="6" width="21.333" height="15.333" rx="4" ry="4"/>
+    <path d="m8 12.4v1.2"/>
+    <path d="m16 12.4v1.2"/>
+    <path d="m5.8853 2.6667 2.6667 2.6667"/>
+    <path d="m18.115 2.6667-2.6667 2.6667"/>
+</svg>
 {{- else if (eq $icon_name "buymeacoffee") -}}
 <svg viewBox="0 0 884 1279" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
     <path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z"
@@ -321,6 +329,12 @@
     <path
         d="M7.144 19.532l1.049-5.751c.11-.606.691-1.002 1.304-.948 2.155.192 6.877.1 8.818-4.002 2.554-5.397-.59-7.769-6.295-7.769H7.43a1.97 1.97 0 0 0-1.944 1.655L2.77 19.507a.857.857 0 0 0 .846.994h2.368a1.18 1.18 0 0 0 1.161-.969zM7.967 22.522a.74.74 0 0 0 .666.416h2.313c.492 0 .923-.351 1.003-.837l.759-4.601c.095-.523.597-.866 1.127-.819 1.86.166 5.567-.118 6.85-3.821.554-1.6.705-2.954.408-4.018"
         style="font-variation-settings:normal" stroke="currentColor" stroke-linejoin="miter" />
+</svg>
+{{- else if or (eq $icon_name "pgpkey") (eq $icon_name "key") -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 18l2-2h2l1.36-1.36a6.5 6.5 0 1 0-3.997-3.992L2 18v4h4l2-2v-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17" cy="7" r="1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 {{- else if (eq $icon_name "phone") -}}
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
