@@ -117,9 +117,9 @@ params:
 
     socialIcons: # optional
         - name: "<platform>"
-            url: "<link>"
+          url: "<link>"
         - name: "<platform 2>"
-            url: "<link2>"
+          url: "<link2>"
 ```
 
 ex. [config.yml#L106](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml#L106)
