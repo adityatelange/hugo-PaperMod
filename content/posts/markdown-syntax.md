@@ -71,7 +71,32 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 ## Code Blocks
 
+#### Inline Code
+
+`This is Inline Code`
+
+#### Only `pre`
+
+<pre>
+This is pre text
+</pre>
+
 #### Code block with backticks
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
+</html>
+```
+
+#### Code block with backticks and language specified
 
 ```html
 <!DOCTYPE html>

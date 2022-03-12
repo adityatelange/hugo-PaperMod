@@ -49,7 +49,8 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote with attribution
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
+> Don't communicate by sharing memory, share memory by communicating.
+>
 > — <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
@@ -71,7 +72,32 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 ## Code Blocks
 
+#### Inline Code
+
+`This is Inline Code`
+
+#### Only `pre`
+
+<pre>
+This is pre text
+</pre>
+
 #### Code block with backticks
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
+</html>
+```
+
+#### Code block with backticks and language specified
 
 ```html
 <!DOCTYPE html>
@@ -115,6 +141,10 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 </html>
 {{< /highlight >}}
 
+#### Gist
+
+{{< gist spf13 7896402 >}}
+
 ## List Types
 
 #### Ordered List
@@ -145,7 +175,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 H<sub>2</sub>O
 
-X<sup>n</sup> + Y<sup>n</sup>: Z<sup>n</sup>
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
