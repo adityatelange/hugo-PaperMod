@@ -99,7 +99,7 @@ This is pre text
 
 #### Code block with backticks and language specified
 
-```html
+```html {linenos=true}
 <!DOCTYPE html>
 <html lang="en">
     <head>
