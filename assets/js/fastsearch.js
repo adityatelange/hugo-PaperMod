@@ -48,7 +48,7 @@ window.onload = function () {
             }
         }
     };
-    xhr.open('GET', "../index.json");
+    xhr.open('GET', jsonLangUrl); // Using Relative Path to Base URL instead of to current directory
     xhr.send();
 }
 
