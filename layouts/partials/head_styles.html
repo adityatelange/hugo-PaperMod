@@ -43,6 +43,11 @@
     {{- $includes = (append $AnchoredHeadings $includes) }}
 {{- end }}
 
+{{- if not (eq .Site.Params.features.disableScrollStyle true) }}
+    {{- $ScrollStyle := (resources.Get "css/includes/scroll-bar.css") }}
+    {{- $includes = (append $ScrollStyle $includes) }}
+{{- end }}
+
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- /* order is important */}}
