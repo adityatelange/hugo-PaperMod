@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default " auto" }}">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     {{- partial "head.html" . }}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8721803444159352"
+        crossorigin="anonymous"></script>
 </head>
 
 <body class="
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
-{{- end -}}
-{{- if eq $.Site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
-{{- end -}}
-" id="top">
+{{- print " list" -}} {{- end -}} {{- if eq $.Site.Params.defaultTheme `dark` -}} {{- print " dark" }} {{- end
+    -}} " id="top">
     {{- partialCached "header.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+    <script>
+        if (localStorage.getItem("pref-theme") == 'dark') {
+            theme = 'dark'
+        } else {
+            theme = ''
+        }
+        mermaidTextContents = Array.from(document.getElementsByClassName("language-mermaid")).map(value => value.innerHTML)
+        mermaid.initialize({ theme: theme, startOnLoad: true });
+        mermaid.init(undefined, '.language-mermaid');
+    </script>
 </body>
 
 </html>
