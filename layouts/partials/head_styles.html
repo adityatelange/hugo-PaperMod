@@ -13,7 +13,7 @@
     {{- $includes = (append $hljs $includes) }}
 {{- end }}
 
-{{- if .Site.Params.features.search }}
+{{- if not (.Site.Params.features.disableSearch) }}
     {{- $search := (resources.Get "css/includes/search.css") }}
     {{- $includes = (append $search $includes) }}
 {{- end }}
