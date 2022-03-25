@@ -95,6 +95,19 @@
 {{- end }}
 {{- end }}
 
+{{- /* Mermaid.js */}}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search"))  }}
+
+{{- if not .Site.Params.assets.disableFingerprinting }}
+{{- $mermaid := slice (resources.Get "js/mermaid.min.js") | resources.Concat "assets/js/mermaid.js" | minify | fingerprint }}
+<script crossorigin="anonymous" src="{{ $mermaid.RelPermalink }}"></script>
+{{- else }}
+{{- $mermaid := slice (resources.Get "js/mermaid.min.js") | resources.Concat "assets/js/mermaid.js" | minify }}
+<script crossorigin="anonymous" src="{{ $mermaid.RelPermalink }}"></script>
+{{- end }}
+{{- end }}
+
+
 {{- /* Favicons */}}
 <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">

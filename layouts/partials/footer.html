@@ -75,10 +75,19 @@
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
+            theme = ''
         } else {
             document.body.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
+            theme = 'dark'
         }
+        mermaidTextContents.forEach((element, index) => {
+            document.getElementsByClassName("language-mermaid")[index].removeAttribute('data-processed')
+            document.getElementsByClassName("language-mermaid")[index].innerHTML = element
+        })
+
+        mermaid.initialize({ theme: theme, startOnLoad: true });
+        mermaid.init(undefined, '.language-mermaid');
     })
 
 </script>
@@ -133,3 +142,16 @@
     });
 </script>
 {{- end }}
+
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search")) }}
+<script>
+    if (localStorage.getItem("pref-theme") == 'dark') {
+        theme = 'dark'
+    } else {
+        theme = ''
+    }
+    mermaidTextContents = Array.from(document.getElementsByClassName("language-mermaid")).map(value => value.innerHTML)
+    mermaid.initialize({ theme: theme, startOnLoad: true });
+    mermaid.init(undefined, '.language-mermaid');
+</script>
+{{- end}}
