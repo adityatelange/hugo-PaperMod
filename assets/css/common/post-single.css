@@ -169,7 +169,7 @@
 
 .post-content .highlight pre {
     margin: 0;
-    background-color: var(--theme);
+    background-color: var(--theme) !important;
 }
 
 .post-content .highlighttable {
