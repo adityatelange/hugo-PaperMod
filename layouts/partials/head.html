@@ -49,7 +49,7 @@
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
 {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" .Site.Params.fuseOpts)) }}
-{{- $fusejs := resources.Get "js/fuse.js" }}
+{{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
@@ -80,9 +80,6 @@
 <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
 <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
-
-{{- /* Generator */}}
-{{ hugo.Generator }}
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
