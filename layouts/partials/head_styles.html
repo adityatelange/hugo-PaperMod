@@ -39,7 +39,7 @@
 {{- end }}
 
 {{- if not (eq .Site.Params.features.disableAnchoredHeadings true) }}
-    {{- $AnchoredHeadings := (resources.Get "css/includes/show-share-buttons.css") }}
+    {{- $AnchoredHeadings := (resources.Get "css/includes/anchored-headings.css") }}
     {{- $includes = (append $AnchoredHeadings $includes) }}
 {{- end }}
 
