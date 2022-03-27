@@ -46,8 +46,30 @@
             {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if site.Params.label.icon }}
+                {{- $img := resources.Get site.Params.label.icon }}
+                {{- if $img }}
+                    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                    {{- if hugo.IsExtended -}}
+                        {{- $processableFormats = $processableFormats | append "webp" -}}
+                    {{- end -}}
+                    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                    {{- $imgUrl := "" }}
+                    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                        {{- if site.Params.label.iconHeight }}
+                            {{- $img = $img.Resize (printf "x%d" site.Params.label.iconHeight) }}
+                        {{ else }}
+                            {{- $img = $img.Resize "x30" }}
+                        {{- end }}
+                        {{- $imgUrl = $img.Permalink }}
+                    {{- else }}
+                        {{- $imgUrl = site.Params.label.icon | absURL }}
+                    {{- end }}
+                    <img src="{{ $imgUrl }}" alt="logo" aria-label="logo"
+                        height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- else }}
                 <img src="{{- site.Params.label.icon | absURL -}}" alt="logo" aria-label="logo"
                     height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- end -}}
                 {{- end -}}
                 {{- $label_text -}}
             </a>
