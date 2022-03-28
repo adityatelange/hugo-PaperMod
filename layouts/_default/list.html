@@ -58,9 +58,9 @@
     </h2>
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
-  <section class="entry-content">
+  <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </section>
+  </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
