@@ -1,4 +1,21 @@
 {{- with site.Params.homeInfoParams }}
+
+<style>
+    img {
+        border-radius: 50%;
+        width: 8rem;
+    }
+
+    .lediv {
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        justify-content: flex-start;
+        margin: 0;
+    }
+</style>
+
 <article class="first-entry home-info">
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>

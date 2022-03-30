@@ -1,5 +1,6 @@
 {{- define "main" }}
 
+
 <header class="page-header">
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
@@ -11,7 +12,7 @@
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
-{{- if site.Params.ShowAllPagesInArchive }}
+{{- if .Site.Params.ShowAllPagesInArchive }}
 {{- $pages = site.RegularPages }}
 {{- end }}
 
@@ -27,16 +28,23 @@
     <div class="archive-posts">
       {{- range .Pages }}
       {{- if eq .Kind "page" }}
-      <div class="archive-entry">
-        <h3 class="archive-entry-title">
-          {{- .Title | markdownify }}
-          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-        </h3>
-        <div class="archive-meta">
-          {{- partial "post_meta.html" . -}}
+      <div style="display: flex; align-items: center;">
+        {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
+        {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden "Isarchives" true) }}
+        <div class="archive-entry">
+        
+          <h3 class="archive-entry-title">
+            
+            {{- .Title | markdownify }}
+            {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+          </h3>
+          <div class="archive-meta">
+            {{- partial "post_meta.html" . -}}
+          </div>
+          <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
         </div>
-        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </div>
+      
       {{- end }}
       {{- end }}
     </div>

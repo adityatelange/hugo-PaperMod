@@ -1,10 +1,13 @@
 {{- define "main" }}
 
-{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- if (and .Site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
+
+
+
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
@@ -16,12 +19,15 @@
 </header>
 {{- end }}
 
+
+
 {{- if .Content }}
 <div class="post-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
 </div>
+
 {{- end }}
 
 {{- $pages := union .RegularPages .Sections }}
@@ -30,40 +36,86 @@
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- end }}
 
+
+
+
 {{- $paginator := .Paginate $pages }}
 
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+
 {{- partial "home_info.html" . }}
+
 {{- end }}
+
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
 
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
+
+
+{{- $user_preferred := or .Site.Params.disableSpecial1stPost .Site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
+
 {{- end }}
 
+
+
+<style>
+  img {
+    min-width: 100px;
+  }
+  @media only screen and (hover: none) and (pointer: coarse){
+
+  .imagecontenaire {
+    margin-right: 10px;
+  }
+  
+  figure {
+    width: 100%;
+    
+  }
+
+}
+</style>
+
+
+
 <article class="{{ $class }}">
-  {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
-  <header class="entry-header">
-    <h2>
-      {{- .Title }}
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-    </h2>
-  </header>
+  <div style="display: flex; margin-bottom: 10px;">
+    <div style="vertical-align: middle;" class="imagecontenaire">
+      {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
+      {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+    </div>
+    
+
+    
+    <div style="display: inline; vertical-align: middle;">
+      <header class="entry-header">
+        <h2>
+          {{- .Title }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h2>
+      </header>
+      <section class="entry-content">
+        <p>{{- if .Description }}{{- .Description }}{{- end }}</p>
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </section>
+    </div>
+    
+  </div>
+  
+  
   {{- if (ne (.Param "hideSummary") true) }}
-  <section class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </section>
+  
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
+    
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
