@@ -224,6 +224,7 @@
     background: var(--tertiary);
     border-top: 0;
     border-bottom: 0;
+    border: 0;
 }
 
 .post-content iframe {
