@@ -1,5 +1,5 @@
-{{- if or .Params.author .Site.Params.author }}
-{{- $author := (.Params.author | default .Site.Params.author) }}
+{{- if or .Params.author site.Params.author }}
+{{- $author := (.Params.author | default site.Params.author) }}
 {{- $author_type := (printf "%T" $author) }}
 {{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
 {{- (delimit $author ", " ) }}

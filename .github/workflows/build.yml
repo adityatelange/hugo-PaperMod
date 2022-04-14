@@ -7,6 +7,11 @@ on:
       - exampleSite
   workflow_dispatch:
     # manual run
+    inputs:
+      hugoVersion:
+        description: "Hugo Version"
+        required: false
+        default: "0.83.0"
 
 jobs:
   build:
@@ -26,7 +31,7 @@ jobs:
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.83.0'
+          hugo-version: "${{ github.event.inputs.hugoVersion }}"
 
       - name: Build
         run: hugo --buildDrafts --gc --verbose --minify
