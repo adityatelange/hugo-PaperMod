@@ -2,8 +2,8 @@
 {{- if (ne .Layout "search") }}
 {{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) }}&nbsp;|&nbsp;{{- end -}}
 {{- end }}
+{{- i18n "translations" | default "Translations" }}:
 <ul class="i18n_list">
-    {{- i18n "translations" | default "Translations" }}:
     {{- range .Translations }}
     <li>
         <a href="{{ .Permalink }}">
