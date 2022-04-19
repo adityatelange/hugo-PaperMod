@@ -222,8 +222,6 @@
     margin: 30px 0;
     height: 2px;
     background: var(--tertiary);
-    border-top: 0;
-    border-bottom: 0;
     border: 0;
 }
 
