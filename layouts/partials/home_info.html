@@ -3,9 +3,9 @@
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
-    <section class="entry-content">
+    <div class="entry-content">
         <p>{{ .Content | markdownify }}</p>
-    </section>
+    </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" site.Params.socialIcons }}
     </footer>
