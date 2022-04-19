@@ -71,13 +71,13 @@ Read Wiki For More Details => **[PaperMod-FAQs](https://github.com/adityatelange
 
 ---
 
-## Release Changelog
+## Release Changelog 📃
 
 Release ChangeLog has info about stuff added: **[Releases](https://github.com/adityatelange/hugo-PaperMod/releases)**
 
 ---
 
-## [Pagespeed Insights (100% ?)](https://pagespeed.web.dev/report?url=https://adityatelange.github.io/hugo-PaperMod/)
+## [Pagespeed Insights (100% ?)](https://pagespeed.web.dev/report?url=https://adityatelange.github.io/hugo-PaperMod/) 👀
 
 ---
 
@@ -88,3 +88,8 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Feather Icons**](https://github.com/feathericons/feather)
 -   [**Simple Icons**](https://github.com/simple-icons/simple-icons)
 -   **All Contributors and Supporters**
+
+## Stargazers over time 📈
+
+<kbd>[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg)](https://starchart.cc/adityatelange/hugo-PaperMod)</kbd>
+
