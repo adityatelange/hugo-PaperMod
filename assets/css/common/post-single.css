@@ -157,6 +157,7 @@
     margin: 10px auto;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
+    direction: ltr;
 }
 
 .post-content li > .highlight {
