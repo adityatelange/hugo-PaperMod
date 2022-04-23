@@ -20,6 +20,10 @@ languages:
     en:
         languageName: "English"
         weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
         menu:
             main:
                 - name: Archive
@@ -40,6 +44,10 @@ languages:
         languageAltTitle: French
         weight: 2
         title: PaperModL2
+        taxonomies:
+          category: FRcategories
+          tag: FRtags
+          series: FRseries
         profileMode:
             enabled: true
             title: PaperMod
@@ -58,14 +66,14 @@ languages:
                 - name: Archive
                   url: archives/
                   weight: 5
-                - name: Tags
-                  url: tags
+                - name: FRTags
+                  url: frtags
                   weight: 10
-                - name: Categories
-                  url: categories
+                - name: FRCategories
+                  url: frcategories
                   weight: 10
-                - name: Series
-                  url: series
+                - name: FRSeries
+                  url: frseries
                   weight: 10
                 - name: NullLink
                   url: "#"
@@ -81,10 +89,14 @@ languages:
         homeInfoParams:
             Title: "Hi there \U0001F44B"
             Content: Welcome to RTL layout
+        taxonomies:
+          category: FAcategories
+          tag: FAtags
+          series: FAseries
         menu:
             main:
-                - name: Tags
-                  url: tags
+                - name: FATags
+                  url: fatags
                   weight: 10
 
 outputs:
@@ -178,11 +190,6 @@ params:
     #     threshold: 0.4
     #     minMatchCharLength: 0
     #     keys: ["title", "permalink", "summary", "content"]
-
-taxonomies:
-    category: categories
-    tag: tags
-    series: series
 
 markup:
     goldmark:
