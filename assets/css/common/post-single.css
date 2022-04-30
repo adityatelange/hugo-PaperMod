@@ -427,3 +427,7 @@ h6:hover .anchor {
 [dir="rtl"] .paginav .next {
     text-align: left;
 }
+
+h1>a>svg {
+    display: inline;
+}
