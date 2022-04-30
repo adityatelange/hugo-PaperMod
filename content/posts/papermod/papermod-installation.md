@@ -293,6 +293,7 @@ searchHidden: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
+ShowRssButtonInSectionTermList: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
