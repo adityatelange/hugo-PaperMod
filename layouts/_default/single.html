@@ -21,7 +21,7 @@
     </div>
     {{- end }}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
+  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
@@ -36,17 +36,16 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- if .Params.tags }}
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
-      {{- range ($.GetTerms "tags") }}
+      {{- range ($.GetTerms $tags) }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    {{- end }}
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
-    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
     {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>

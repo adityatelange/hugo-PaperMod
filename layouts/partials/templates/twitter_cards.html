@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
 {{- else -}}
-{{- with $.Site.Params.images -}}
+{{- with site.Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
 {{ else -}}
@@ -27,7 +27,7 @@
 {{- end }}
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-{{ with .Site.Social.twitter -}}
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
+{{ with site.Social.twitter -}}
 <meta name="twitter:site" content="@{{ . }}"/>
 {{ end -}}

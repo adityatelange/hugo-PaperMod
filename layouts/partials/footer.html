@@ -1,9 +1,9 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    {{- if .Site.Copyright }}
-    <span>{{ .Site.Copyright | markdownify }}</span>
+    {{- if site.Copyright }}
+    <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
-    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
+    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
     <span>
         Powered by
@@ -13,7 +13,7 @@
 </footer>
 {{- end }}
 
-{{- if (not .Site.Params.disableScrollToTop) }}
+{{- if (not site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
@@ -53,7 +53,7 @@
 
 </script>
 
-{{- if (not .Site.Params.disableScrollToTop) }}
+{{- if (not site.Params.disableScrollToTop) }}
 <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
@@ -69,7 +69,7 @@
 </script>
 {{- end }}
 
-{{- if (not .Site.Params.disableThemeToggle) }}
+{{- if (not site.Params.disableThemeToggle) }}
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
