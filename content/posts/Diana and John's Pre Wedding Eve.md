@@ -1,5 +1,5 @@
 ---
-title: "Diana Bedient and John McDonald's Pre Wedding Eve"
+title: "Diana and John's Pre Wedding Eve"
 date: 2022-04-23
 categories: ["Photography"]
 Tags: ["Canon EOS R5", "Canon 70-200mm f/2.8 RF", "Canon 28-70mm f/2", "Capture One Pro 22", "Exposure X7"]
