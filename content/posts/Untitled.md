@@ -7,12 +7,12 @@ draft: false
 ShowToc: True
 TocOpen: False
 cover:
-    image: "/2022-02-16-CD-Transport-HiFi-System-17-00-27.jpeg"
+    image: "/2022-04-23-Diana-Bedient-and-John-McDonald's-Pre-Wedding-Eve/cover.jpeg"
 weight: 1
 
 ---
 
-![](/2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-36-59.jpg)
+![](/2022-04-23-Diana-Bedient-and-John-McDonald's-Pre-Wedding-Eve/2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-36-59.jpg)
 
 ![](2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-39-28.jpg)
 
