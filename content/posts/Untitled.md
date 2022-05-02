@@ -12,7 +12,7 @@ weight: 1
 
 ---
 
-![](2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-36-59.jpg)
+![](/2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-36-59.jpg)
 
 ![](2022-04-23%20Diana%20Bedient%20and%20John%20McDonald's%20Pre%20Wedding%20Eve%2018-39-28.jpg)
 
