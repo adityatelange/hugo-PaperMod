@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "copied!"
+
+- id: draft
+  translation: "draft"
