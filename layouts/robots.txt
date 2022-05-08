@@ -1,12 +1,6 @@
 User-agent: *
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- $noIndexPages := where .Site.Pages "Params.robotsNoIndex" true }}
-{{- range $noIndexPages }}
-Disallow: {{ .RelPermalink }}
-{{- end }}
-{{- if not $noIndexPages }}
 Disallow:
-{{- end }}
 {{- else }}
 Disallow: /
 {{- end }}
