@@ -93,6 +93,8 @@ There's one feature that I really like with Qobuz though, and that is that it'll
 
 My trial end in about 10 tens, so I plan on doing a lot more testing before my trial expires, and I really do hope they or Apple can fix that Bluetooth issue. As of right now however, I plan on sticking with Apple Music and not subscribing to Qobuz.
 
+Update as of 2022-03-06: I have cancelled my Qobuz trial. After extensive listening, I really can’t tell the difference from Apple Music. The main reasons I am sticking with Apple Music is it has a much larger selection of music. There were quite a few albums that I could not find on Qobuz that I could on Apple. Also, the search algorithms of Qobuz leave much to be desired. It’s an exercise in frustration to look something up. Lastly, after a three month trial, they still haven’t fixed their bluetooth problem on Mac.
+
 ---
 
 # Audio Source #2 - Compact Discs
@@ -123,9 +125,9 @@ There are many solutions to streaming your ripped CD collection at home. These i
 
 Plex on the other hand is $120 for a lifetime membership. It allows you to stream any and all of your media - including DSD files. Off topic, but with regards to DSD, I only have a few test files that I downloaded as this seems like a dead / dying format. 32 bit PCM WAV files seem to be better than DSD and a new more modern standard. Once you have purchased your membership to Plex, you have full access to the Plexamp app for your phone, tablet, or computer. It works great!
 
-Plexamp allows me to stream my CD library losslessly when on wifi and lossy when on cellular - from anywhere![^1] When streaming lossless files it's near bit perfect. I say near, because Plex doesn't actually say bit perfect anywhere, but one of the developers eluded to the fact that it's bit perfect-ish on one of the forums. I guess it does some processing, although you can minimize that in settings. When connected to an external DAC, it displays the correct bitrate of the file being played.
+Plexamp allows me to stream my CD library losslessly when on wifi and lossy when on cellular - from anywhere! [^1] When streaming lossless files it's near bit perfect. I say near, because Plex doesn't actually say bit perfect anywhere, but one of the developers eluded to the fact that it's bit perfect-ish on one of the forums. I guess it does some processing, although you can minimize that in settings. When connected to an external DAC, it displays the correct bitrate of the file being played.
 
-	[^1]: There is one major caveat to streaming outside of your home network though. In my case, it causes our router to crash sporadically. To fix this issue, I plan on building my own router using PFSense.
+[^1]: There is one major caveat to streaming outside of your home network though. In my case, it causes our router to crash sporadically. To fix this issue, I plan on building my own router using PFSense.
  
 All is not perfect in the land of Plex, there are a few issues with the Plexamp app:
 
