@@ -32,7 +32,7 @@ languages:
                   weight: 15
                 - name: Search
                   url: search/
-                  weight: 30
+                  weight: 20
 
 outputs:
     home:
