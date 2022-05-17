@@ -1,7 +1,7 @@
-baseURL: "https://hugo-papermod.pages.dev/"
-title: Bershatsky Photo
-paginate: 10
-
+baseURL: "https://hugo-papermod.pages.dev/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: PaperMod
+paginate: 5
+theme: hugo-PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -9,6 +9,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
+pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
 
 minify:
@@ -19,20 +20,84 @@ languages:
     en:
         languageName: "English"
         weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
         menu:
             main:
                 - name: Archive
                   url: archives
                   weight: 5
-                - name: Categories
-                  url: categories/
+                - name: Search
+                  url: search/
                   weight: 10
                 - name: Tags
                   url: tags/
-                  weight: 15
-                - name: Search
-                  url: search/
-                  weight: 30
+                  weight: 10
+                - name: Categories
+                  url: categories/
+                  weight: 10
+
+    fr:
+        languageName: ":fr:"
+        languageAltTitle: French
+        weight: 2
+        title: PaperModL2
+        taxonomies:
+          category: FRcategories
+          tag: FRtags
+          series: FRseries
+        profileMode:
+            enabled: true
+            title: PaperMod
+            # imageUrl: "#"
+            # imageTitle: my image
+            # imageWidth: 120
+            # imageHeight: 120
+            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+            buttons:
+                - name: Blog
+                  url: posts
+                - name: Tags
+                  url: tags
+        menu:
+            main:
+                - name: Archive
+                  url: archives/
+                  weight: 5
+                - name: FRTags
+                  url: frtags
+                  weight: 10
+                - name: FRCategories
+                  url: frcategories
+                  weight: 10
+                - name: FRSeries
+                  url: frseries
+                  weight: 10
+                - name: NullLink
+                  url: "#"
+                - name: NullLink2
+                  url: "#"
+                - name: NullLink3
+                  url: "#"
+
+    fa:
+        languagedirection: rtl
+        weight: 3
+        title: PaperMod RTL
+        homeInfoParams:
+            Title: "Hi there \U0001F44B"
+            Content: Welcome to RTL layout
+        taxonomies:
+          category: FAcategories
+          tag: FAtags
+          series: FAseries
+        menu:
+            main:
+                - name: FATags
+                  url: fatags
+                  weight: 10
 
 outputs:
     home:
@@ -43,21 +108,22 @@ outputs:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-    
+    author: Theme PaperMod
     # author: ["Me", "You"] # multiple authors
 
-    defaultTheme: light
-    disableThemeToggle: true
-    ShowShareButtons: false
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
     ShowToc: true
     # comments: false
-    # images: ["papermod-cover.png"]
+    images: ["papermod-cover.png"]
 
     profileMode:
         enabled: false
@@ -73,24 +139,26 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Bershatsky Photo"
+        Title: "PaperMod"
         Content: >
-            A **nerdy** blog (mostly) about photography.
+            Welcome to demo of hugo's theme PaperMod.
+
+            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+
+            - Do give a 🌟 on Github !
+
+            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
 
     socialIcons:
         - name: github
-          url: "https://github.com/adityatelange/noahbershatsky"
-        - name: instagram
-          url: "https://www.instagram.com/noahbershatsky"
-        - name: facebook
-          url: "https://www.facebook.com/noahbershatsky"   
-        - name: youtube
-          url: "https://www.youtube.com/c/noahbershatsky"          
+          url: "https://github.com/adityatelange/hugo-PaperMod"
+        - name: KoFi
+          url: "https://ko-fi.com/adityatelange"
         - name: RsS
           url: "index.xml"
 
     editPost:
-        URL: "mailto:noah@bershatsky.com?subject="
+        URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
@@ -104,11 +172,11 @@ params:
     #         SiteVerificationTag: "XYZabc"
 
     # assets:
-        favicon: /favicon.ico
-        favicon16x16: /favicon-16x16.png
-        favicon32x32: /favicon-32x32.png
-        apple_touch_icon: /apple-touch-icon.png
-        safari_pinned_tab: /android-chrome-512x512.png
+    #     favicon: "<link / abs url>"
+    #     favicon16x16: "<link / abs url>"
+    #     favicon32x32: "<link / abs url>"
+    #     apple_touch_icon: "<link / abs url>"
+    #     safari_pinned_tab: "<link / abs url>"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
@@ -123,11 +191,6 @@ params:
     #     threshold: 0.4
     #     minMatchCharLength: 0
     #     keys: ["title", "permalink", "summary", "content"]
-
-taxonomies:
-    category: categories
-    tag: tags
-    series: series
 
 markup:
     goldmark:
