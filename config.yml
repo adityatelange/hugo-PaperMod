@@ -24,15 +24,15 @@ languages:
                 - name: Archive
                   url: archives
                   weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
-                - name: Tags
-                  url: tags/
-                  weight: 10
                 - name: Categories
                   url: categories/
                   weight: 10
+                  - name: Tags
+                  url: tags/
+                  weight: 15
+                - name: Search
+                  url: search/
+                  weight: 30
 
 outputs:
     home:
@@ -73,20 +73,24 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "Bershatsky Blog"
+        Title: "Bershatsky Photo"
         Content: >
             A **nerdy** blog (mostly) about photography.
 
     socialIcons:
         - name: github
-          url: "https://github.com/adityatelange/hugo-PaperMod"
-        - name: KoFi
-          url: "https://ko-fi.com/adityatelange"
+          url: "https://github.com/adityatelange/noahbershatsky"
+        - name: instagram
+          url: "https://www.instagram.com/noahbershatsky"
+        - name: facebook
+          url: "https://www.facebook.com/noahbershatsky"   
+        - name: youtube
+          url: "https://www.youtube.com/c/noahbershatsky"          
         - name: RsS
           url: "index.xml"
 
     editPost:
-        URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+        URL: "mailto://noah@bershatsky.com"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
