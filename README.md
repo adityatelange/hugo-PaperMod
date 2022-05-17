@@ -16,6 +16,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/themes/hugo-papermod/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
 ![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
+[![Discord](https://img.shields.io/discord/971046860317921340?label=Discord)](https://discord.gg/ahpmTvhVmp)
 
 ---
 
