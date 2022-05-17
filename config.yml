@@ -90,7 +90,7 @@ params:
           url: "index.xml"
 
     editPost:
-        URL: "noah@bershatsky.com"
+        URL: "mailto:noah@bershatsky.com"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
