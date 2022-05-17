@@ -73,7 +73,7 @@ Controversy aside, they do have a free tier (which sounds awful), but I tested o
 ### Qobuz
 The Qobuz Mac app just works! It automatically switches the output in the MIDI settings to match the music source. It works better than Apple's own native Music app and service. Inconceivable!
 
-I've tried comparing it to Apple Music using a Mac and iOS device. I've tried listening for a difference. Sometimes I think Qobuz sounds slightly better, other times they seem to be the same. Is it the auto changing of the bitrate that makes Qobuz sound better? Does it even make a difference? I know it's not sending out unaltered bits because the volume control in the app still is functional. 
+I've tried comparing it to Apple Music using a Mac and iOS device. I've tried listening for a difference. Sometimes I think Qobuz sounds slightly better, other times they seem to be the same. Is it the auto changing of the bitrate that makes Qobuz sound better? Does it even make a difference? I know it's not sending out unaltered bits because the volume control in the app still is functional.
 
 One thing that's for sure, the interface and published playlists aren't as user friendly or as robust as Apple Music. Also, the Qobuz music library isn't as vast as Apple's either. There's many times that I'm looking for a particular album or track, and I end up going back to Apple Music to play it. Their search feature leaves quite a bit to be desired, it's rudimentary, and nowhere's near as robust as Apple's. Finding a particular track or album can be a real chore.
 
@@ -83,17 +83,17 @@ The Mac app has built in Chrome Cast support which works well with my home theat
 
 In regards to iOS, the app outputs bit perfect audio to an external DAC - just like Apple Music  does.
 
-If you are using an M1 MacBook with the AirPods Max, there is a compatibility issue between the Qobuz Mac app and these and some other headphones as well. The app works fine with my older pair of Sony WH-1000XM3 headphones. However, when I tried with a newer pair of headphones, the Bang and Olufson H95 (good headphones, but not worth the price), there was crackling at the beginning of nearly every track. On the AirPods Max, the music playback is always distorted and ruined, it's not subtle either, you'll know after a split second that something is wrong. A workaround is that you can play music using a web browser, but then it doesn't auto switch the bitrate for you. 
+If you are using an M1 MacBook with the AirPods Max, there is a compatibility issue between the Qobuz Mac app and these and some other headphones as well. The app works fine with my older pair of Sony WH-1000XM3 headphones. However, when I tried with a newer pair of headphones, the Bang and Olufson H95 (good headphones, but not worth the price), there was crackling at the beginning of nearly every track. On the AirPods Max, the music playback is always distorted and ruined, it's not subtle either, you'll know after a split second that something is wrong. A workaround is that you can play music using a web browser, but then it doesn't auto switch the bitrate for you.
 
 I've asked them about the Bluetooth issue out of the M1 Macs, and they seem completely confounded by it. Tech support didn't have access to an M1 or AirPod Max to even try it out to see if they can replicate the issue.
 
-My trial with Qobuz is coming to an end, and if they can fix their issues / improve things, I would consider paying for it in addition to Apple because I think it might actually sound slightly better than Apple Music based upon my testing. That being said, as I type this, I'm listening to Apple Music.
+I'm still in a trial with Qobuz, and if they can fix their issues / improve things, I would consider paying for it in addition to Apple because I think it might actually sound slightly better than Apple Music based upon my testing. That being said, as I type this, I'm listening to Apple Music.
 
 There's one feature that I really like with Qobuz though, and that is that it'll autoplay a song that their algorithms think you might like. Quite often, I do! It's a great way to find new music.
 
-My trial end in about 10 tens, so I plan on doing a lot more testing before my trial expires, and I really do hope they or Apple can fix that Bluetooth issue. As of right now however, I plan on sticking with Apple Music and not subscribing to Qobuz.
+My trial ends in March, so I plan on doing a lot more testing before my trial expires, and I really do hope they or Apple can fix that Bluetooth issue.
 
-Update as of 2022-03-06: I have cancelled my Qobuz trial. After extensive listening, I really can’t tell the difference from Apple Music. The main reasons I am sticking with Apple Music is it has a much larger selection of music. There were quite a few albums that I could not find on Qobuz that I could on Apple. Also, the search algorithms of Qobuz leave much to be desired. It’s an exercise in frustration to look something up. Lastly, after a three month trial, they still haven’t fixed their bluetooth problem on Mac.
+**Update as of 2022-03-06:** I have cancelled my Qobuz trial. After extensive listening, I really can’t tell the difference from Apple Music. The main reasons I am sticking with Apple Music is it has a much larger selection of music. There were quite a few albums that I could not find on Qobuz that I could on Apple. Also, the search algorithms of Qobuz leave much to be desired. It’s an exercise in frustration to look something up. Lastly, after a three month trial, they still haven’t fixed their bluetooth problem on Mac.
 
 ---
 
