@@ -92,7 +92,7 @@ params:
     editPost:
         URL: "mailto://noah@bershatsky.com"
         Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
+      # appendFilePath: true # to append file path to Edit link
 
     # label:
     #     text: "Home"
