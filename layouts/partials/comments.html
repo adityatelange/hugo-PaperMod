@@ -1,3 +1,26 @@
+<!--
+ * @Date: 2022-04-13 12:22:30
+ * @LastEditors: Kunyang Xie
+ * @LastEditTime: 2022-05-14 15:35:51
+-->
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+<!-- Twikoo -->
+<div>
+    <div class="pagination__title">
+        <span class="pagination__title-h" style="font-size: 20px;">Tell me something...</span>
+        <hr />
+    </div>
+    <div id="tcomment"></div>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.10/dist/twikoo.all.min.js"></script>
+    <script>
+        twikoo.init({
+            envId: "https://twikoo-kyxie.vercel.app/",  //这里填写自己的envId
+            el: "#tcomment",
+            lang: 'en-US',
+            region: '',  //默认是ap-shanghai
+            path: window.TWIKOO_MAGIC_PATH || window.location.pathname,
+        });
+    </script>
+</div>
 {{- /* Comments area end */ -}}

@@ -1,5 +1,201 @@
-/*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+:root {
+    --nav-width: 1380px;
+    --article-width: 650px;
+    --toc-width: 300px;
+}
 
-Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
-*/
+.toc {
+    margin: 0 2px 40px 2px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 0.4em;
+}
+
+.toc-container.wide {
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    left: calc((var(--toc-width) + var(--gap)) * -1);
+    top: calc(var(--gap) * 2);
+    width: var(--toc-width);
+}
+
+.wide .toc {
+    position: sticky;
+    top: var(--gap);
+    border: unset;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
+    margin: 0 2px 40px 2px;
+}
+
+.toc details summary {
+    cursor: zoom-in;
+    margin-inline-start: 20px;
+    padding: 12px 0;
+}
+
+.toc details[open] summary {
+    font-weight: 500;
+}
+
+.toc-container.wide .toc .inner {
+    margin: 0;
+}
+
+.active {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.toc ul {
+    list-style-type: circle;
+}
+
+.toc .inner {
+    margin: 0 0 0 20px;
+    padding: 0px 15px 15px 20px;
+    font-size: 16px;
+}
+
+.toc li ul {
+    margin-inline-start: calc(var(--gap) * 0.5);
+    list-style-type: none;
+}
+
+.toc li {
+    list-style: none;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+}
+
+.toc li a:hover {
+    color: var(--secondary);
+}
+
+/* code font */
+.post-content pre,
+code {
+    font-family: "Ubuntu Mono", monospace;
+    max-height: 40rem;
+}
+
+/* link */
+.post-content a {
+    color: #409eff;
+    box-shadow: none;
+    text-decoration: none;
+}
+.post-content a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.friendurl {
+    text-decoration: none !important;
+    color: black;
+    box-shadow: none !important;
+}
+
+.myfriend {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    padding: 2px;
+    margin-top: 20px !important;
+    margin-left: 14px !important;
+    background-color: #fff;
+}
+
+.frienddiv {
+    overflow: auto;
+    height: 100px;
+    width: 49%;
+    display: inline-block !important;
+    border-radius: 5px;
+    background: none;
+
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
+}
+
+.dark .frienddiv:hover {
+    background: var(--code-bg);
+}
+
+.frienddiv:hover {
+    background: var(--theme);
+    transition: transform 0.5s;
+    webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* .frienddiv:hover .frienddivleft img {
+    transition: 0.9s !important;
+    -webkit-transition: 0.9s !important;
+    -moz-transition: 0.9s !important;
+    -o-transition: 0.9s !important;
+    -ms-transition: 0.9s !important;
+    transform: rotate(360deg) !important;
+    -webkit-transform: rotate(360deg) !important;
+    -moz-transform: rotate(360deg) !important;
+    -o-transform: rotate(360deg) !important;
+    -ms-transform: rotate(360deg) !important;
+} */
+
+.frienddivleft {
+    width: 92px;
+    float: left;
+    margin-right: -5px;
+}
+
+.frienddivright {
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+.friendname {
+    text-overflow: ellipsis;
+    font-size: 100%;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.friendinfo {
+    text-overflow: ellipsis;
+    font-size: 70%;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 600px) {
+    .friendinfo {
+        display: none;
+    }
+    .frienddivleft {
+        width: 84px;
+        margin: auto;
+    }
+    .frienddivright {
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .friendname {
+        font-size: 18px;
+    }
+}

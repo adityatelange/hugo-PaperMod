@@ -1,0 +1,18 @@
+<!--
+ * @Date: 2022-05-21 21:47:12
+ * @LastEditors: Kunyang Xie
+ * @LastEditTime: 2022-05-21 21:47:40
+-->
+{{- if .IsNamedParams -}}
+<a target="_blank" href={{ .Get "url" }} title={{ .Get "name" }} class="friendurl">
+    <div class="frienddiv">
+        <div class="frienddivleft">
+            <img class="myfriend" src={{ .Get "logo" }} />
+        </div>
+        <div class="frienddivright">
+            <div class="friendname">{{- .Get "name" -}}</div>
+            <div class="friendinfo">{{- .Get "word" -}}</div>
+        </div>
+    </div>
+</a>
+{{- end }}

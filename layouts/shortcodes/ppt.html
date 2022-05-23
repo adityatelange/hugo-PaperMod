@@ -1,0 +1,37 @@
+<!--
+ * @Date: 2022-04-28 23:08:15
+ * @LastEditors: Kunyang Xie
+ * @LastEditTime: 2022-04-28 23:08:48
+ * @FilePath: \undefinedd:\kyxie\themes\PaperMod\layouts\shortcodes\ppt.html
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        #googleslides_shortcodes {
+            padding-bottom: 66%;
+            position: relative;
+            display: block;
+            width: 100%;
+            border-bottom: 5px solid;
+        }
+
+        #googleslides_shortcodes iframe {
+            position: absolute;
+            top: 0;
+            left: 0
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div id="googleslides_shortcodes">
+        <iframe id="googleSlideIframe" width="100%" height="100%" src="{{ .Get " src" }}" frameborder="0"
+            allowfullscreen="">
+        </iframe>
+    </div>
+</body>
+
+</html>

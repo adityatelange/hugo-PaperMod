@@ -18,6 +18,7 @@
 }
 
 .dark {
+    transition: background-color 0.3s;
     --theme: rgb(29, 30, 32);
     --entry: rgb(46, 46, 51);
     --primary: rgb(218, 218, 219);
@@ -30,6 +31,7 @@
 }
 
 .list {
+    transition:  background-color 0.3s;
     background: var(--code-bg);
 }
 

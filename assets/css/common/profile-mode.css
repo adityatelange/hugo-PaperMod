@@ -34,6 +34,15 @@
     transition: transform 0.1s;
 }
 
+.button:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    /* box-shadow: 0 0 0 1px grey; */
+    transform: scale(1.1) translateZ(0) translate3d(0, 0, 0) rotate(0.01deg);
+}
+
 .button-inner {
     padding: 0 8px;
 }

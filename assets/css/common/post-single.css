@@ -15,6 +15,7 @@
 
 .post-meta,
 .breadcrumbs {
+    /* author color */
     color: var(--secondary);
     font-size: 14px;
     display: flex;
@@ -82,7 +83,8 @@
 
 .post-content del {
     text-decoration: none;
-    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;
+    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0
+        50%/1px 1px repeat-x;
 }
 
 .post-content dl,
@@ -133,7 +135,9 @@
 }
 
 .post-content table th,
-.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+.post-content
+    table:not(.highlighttable, .highlight table, .gist .highlight)
+    td {
     min-width: 80px;
     padding: 12px 8px;
     line-height: 1.5;
@@ -168,6 +172,7 @@
 }
 
 .post-content .highlight pre {
+    background-color: var(--theme) !important;
     margin: 0;
 }
 
@@ -198,16 +203,16 @@
     font-size: 0.78em;
     line-height: 1.5;
     background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .post-content pre code {
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgb(213, 213, 214);
-    background: var(--hljs-bg) !important;
-    border-radius: var(--radius);
+    /* 主要代码颜色 */
+    color: #abb2bf;
+    font-weight: 200;
     overflow-x: auto;
     word-break: break-all;
 }

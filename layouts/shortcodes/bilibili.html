@@ -1,0 +1,42 @@
+<!--
+ * @Date: 2022-04-20 13:47:33
+ * @LastEditors: Kunyang Xie
+ * @LastEditTime: 2022-04-20 13:48:24
+ * @FilePath: \undefinedd:\kyxie\themes\PaperMod\layouts\shortcodes\bilibili.html
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        .bilibili_shortcodes {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 66%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .bilibili_shortcodes iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div class="bilibili_shortcodes">
+        <iframe
+            src="https://player.bilibili.com/player.html?bvid={{.Get 0 }}&page={{ if .Get 1 }}{{.Get 1}}{{ else }}1&high_quality=1&danmaku=0&as_wide=0{{end}}"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+        </iframe>
+    </div>
+</body>
+
+</html>

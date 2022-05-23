@@ -27,6 +27,11 @@
     font-weight: 700;
 }
 
+.logo a:hover {
+    transition: 0.15s;
+    color: grey;
+}
+
 .logo a img {
     display: inline;
     vertical-align: middle;
@@ -40,6 +45,42 @@
     height: 18px;
 }
 
+svg:hover {
+    transition: 0.15s;
+}
+
+.social-icons a:nth-child(1) svg:hover {
+    color: #C84370 !important;
+}
+
+.social-icons a:nth-child(2) svg:hover {
+    color: grey !important;
+}
+
+.social-icons a:nth-child(3) svg:hover {
+    color: #0A66C2 !important;
+}
+
+.social-icons a:nth-child(4) svg:hover {
+    color: #2DC100 !important;
+}
+
+.social-icons a:nth-child(5) svg:hover {
+    color: #EA8011 !important;
+}
+
+.social-icons a:nth-child(6) svg:hover {
+    color: #FB7299 !important;
+    /* color: #1e88e5 !important; */
+}
+
+.social-icons a:nth-child(7) svg:hover {
+    color: #FD4C06 !important;
+}
+
+.social-icons a:nth-child(8) svg:hover {
+    color: #FD003A !important;
+}
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
@@ -50,8 +91,18 @@ body.dark #moon {
     display: none;
 }
 
+#moon:hover {
+    transition: 0.15s;
+    color: deepskyblue;
+}
+
 body:not(.dark) #sun {
     display: none;
+}
+
+#sun:hover {
+    transition: 0.15s;
+    color: gold;
 }
 
 #menu {
@@ -67,6 +118,11 @@ body:not(.dark) #sun {
 
 #menu a {
     font-size: 16px;
+}
+
+#menu a:hover {
+    transition: 0.15s;
+    color: grey;
 }
 
 #menu .active {
