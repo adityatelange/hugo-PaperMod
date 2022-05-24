@@ -43,6 +43,15 @@
     border: 1px solid var(--border);
 }
 
+.post-entry:hover {
+    transition: transform 0.15s;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
 .post-entry:active {
     transform: scale(0.96);
 }

@@ -50,7 +50,7 @@ svg:hover {
 }
 
 .social-icons a:nth-child(1) svg:hover {
-    color: #C84370 !important;
+    color: #c84370 !important;
 }
 
 .social-icons a:nth-child(2) svg:hover {
@@ -58,29 +58,30 @@ svg:hover {
 }
 
 .social-icons a:nth-child(3) svg:hover {
-    color: #0A66C2 !important;
+    color: #0a66c2 !important;
 }
 
 .social-icons a:nth-child(4) svg:hover {
-    color: #2DC100 !important;
+    color: #2dc100 !important;
 }
 
 .social-icons a:nth-child(5) svg:hover {
-    color: #EA8011 !important;
+    color: #ea8011 !important;
 }
 
 .social-icons a:nth-child(6) svg:hover {
-    color: #FB7299 !important;
+    color: #fb7299 !important;
     /* color: #1e88e5 !important; */
 }
 
 .social-icons a:nth-child(7) svg:hover {
-    color: #FD4C06 !important;
+    color: #fd4c06 !important;
 }
 
 .social-icons a:nth-child(8) svg:hover {
-    color: #FD003A !important;
+    color: #fd003a !important;
 }
+
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;

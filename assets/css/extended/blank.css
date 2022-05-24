@@ -135,12 +135,12 @@ body {
 
 .frienddiv:hover {
     background: var(--theme);
-    transition: transform 0.5s;
-    webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+    transition: transform 0.15s;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* .frienddiv:hover .frienddivleft img {
