@@ -8,6 +8,9 @@
         </summary>
 
         <div class="inner">
+            {{- if (.Param "UseHugoToc") }}
+            {{- .TableOfContents -}}
+            {{- else }}
             {{- $largest := 6 -}}
             {{- range $headers -}}
             {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
@@ -87,6 +90,7 @@
             {{- end -}}
             {{- end }}
             </ul>
+            {{- end }}
         </div>
     </details>
 </div>

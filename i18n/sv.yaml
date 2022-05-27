@@ -1,0 +1,28 @@
+- id: prev_page
+  translation: "Förra Sidan"
+
+- id: next_page
+  translation: "Nästa Sida"
+
+- id: read_time
+  translation:
+    one: "1 min"
+    other: "{{ .Count }} min"
+
+- id: toc
+  translation: "Innehållsförteckning"
+
+- id: translations
+  translation: "Översättningar"
+
+- id: home
+  translation: "Hem"
+
+- id: edit_post
+  translation: "Redigera"
+
+- id: code_copy
+  translation: "kopiera"
+
+- id: code_copied
+  translation: "kopierad!"
