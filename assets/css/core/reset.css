@@ -137,6 +137,6 @@ img {
     background: var(--secondary);
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar:not(.highlighttable, .highlight table, .gist .highlight) {
     background: var(--theme);
 }
