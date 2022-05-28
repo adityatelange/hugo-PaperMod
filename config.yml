@@ -154,6 +154,8 @@ params:
           url: "https://github.com/adityatelange/hugo-PaperMod"
         - name: KoFi
           url: "https://ko-fi.com/adityatelange"
+        - name: Discord
+          url: "https://discord.gg/ahpmTvhVmp"
         - name: RsS
           url: "index.xml"
 
