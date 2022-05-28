@@ -157,6 +157,7 @@
     margin: 10px auto;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
+    direction: ltr;
 }
 
 .post-content li > .highlight {
@@ -222,8 +223,7 @@
     margin: 30px 0;
     height: 2px;
     background: var(--tertiary);
-    border-top: 0;
-    border-bottom: 0;
+    border: 0;
 }
 
 .post-content iframe {
@@ -426,4 +426,8 @@ h6:hover .anchor {
 
 [dir="rtl"] .paginav .next {
     text-align: left;
+}
+
+h1>a>svg {
+    display: inline;
 }

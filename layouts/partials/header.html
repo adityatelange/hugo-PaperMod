@@ -70,7 +70,7 @@
                 {{- $label_text -}}
             </a>
             {{- end }}
-            <span class="logo-switches">
+            <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -115,7 +115,7 @@
                     {{- end}}
                 </ul>
                 {{- end }}
-            </span>
+            </div>
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
