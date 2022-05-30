@@ -66,6 +66,18 @@ Read Wiki For More Details => **[PaperMod-Icons](https://github.com/adityatelang
 
 ---
 
+---
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ## FAQs / How To's Guide 🙋
 
 Read Wiki For More Details => **[PaperMod-FAQs](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs)**
