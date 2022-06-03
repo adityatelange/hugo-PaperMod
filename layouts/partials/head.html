@@ -39,6 +39,11 @@
 {{- $includes := slice }}
 {{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
 
+{{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
+    {{- $ScrollStyle := (resources.Get "css/includes/scroll-bar.css") }}
+    {{- $includes = (append $ScrollStyle $includes) }}
+{{- end }}
+
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
