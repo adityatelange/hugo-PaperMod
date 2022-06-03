@@ -34,6 +34,13 @@
 {{- end }}
 
 {{- /* Styles */}}
+
+{{- /* includes */}}
+{{- $includes := slice }}
+{{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
+
+{{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
+
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
@@ -45,7 +52,7 @@
 {{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $core := (slice $theme_vars $reset $common $hljs $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
 
 {{- /* bundle all required css */}}
