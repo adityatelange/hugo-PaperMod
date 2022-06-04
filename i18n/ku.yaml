@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "Rêpela Berê"
+  translation: "Rûpela Paş"
 
 - id: next_page
-  translation: "Rûpela Bê"
+  translation: "Rûpela Pêş"
 
 - id: read_time
   translation:
@@ -13,13 +13,13 @@
   translation: "Pêrist"
 
 - id: translations
-  translation: "Wergêranan"
+  translation: "Wergeran"
 
 - id: home
   translation: "Xanî"
 
 - id: code_copy
-  translation: "Jê bigre"
+  translation: "Jê bigire"
 
 - id: code_copied
-  translation: "Hat jê girtin!"
+  translation: "Hat jêgirtin!"
