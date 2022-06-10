@@ -10,9 +10,9 @@ author: "Aditya Telange"
 
 ### Intro
 
--   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
+- **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
 
--   You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
+- You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
 
 ---
 
@@ -20,9 +20,9 @@ author: "Aditya Telange"
 
 The following is enabled by default
 
--   [minification](https://gohugo.io/hugo-pipes/minification/) - makes the assets size smallest as possible.
--   [bundling](https://gohugo.io/hugo-pipes/bundling/) - bundles all the styles in one single asset
--   [fingerprint/integrity](https://gohugo.io/hugo-pipes/fingerprint/) check.
+- [minification](https://gohugo.io/hugo-pipes/minification/) - makes the assets size smallest as possible.
+- [bundling](https://gohugo.io/hugo-pipes/bundling/) - bundles all the styles in one single asset
+- [fingerprint/intergity](https://gohugo.io/hugo-pipes/fingerprint/) check.
 
 ---
 
@@ -30,9 +30,9 @@ The following is enabled by default
 
 ```yml
 params:
-    # defaultTheme: light
-    # defaultTheme: dark
-    defaultTheme: auto # to switch between dark or light according to browser theme
+  # defaultTheme: light
+  # defaultTheme: dark
+  defaultTheme: auto # to switch between dark or light according to browser theme
 ```
 
 </details>
@@ -86,7 +86,6 @@ layout: "archives"
 url: "/archives/"
 summary: archives
 ---
-
 ```
 
 **Note:** Archives Layout does not support Multilingual Month Translations.
@@ -122,8 +121,6 @@ params:
           url: "<link2>"
 ```
 
-ex. [config.yml#L106](https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml#L106)
-
 ---
 
 ### Profile Mode
@@ -146,15 +143,15 @@ params:
         imageHeight: 120 # custom size
         buttons:
             - name: Archive
-                url: "/archive"
+              url: "/archive"
             - name: Github
-                url: "https://github.com/"
+              url: "https://github.com/"
 
     socialIcons: # optional
         - name: "<platform>"
-            url: "<link>"
+          url: "<link>"
         - name: "<platform 2>"
-            url: "<link2>"
+          url: "<link2>"
 ```
 
 ---
@@ -167,10 +164,10 @@ Add the following to site config, `config.yml`
 
 ```yml
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
 ```
 
 Create a page with `search.md` in `content` directory with following content
@@ -182,8 +179,8 @@ layout: "search" # is necessary
 # url: "/archive"
 # description: "Description for Search"
 summary: "search"
+placeholder: "placeholder text in search input box"
 ---
-
 ```
 
 To hide a particular page from being searched, add it in post's fron't matter
@@ -197,9 +194,9 @@ ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/ex
 
 > Search Page also has Key bindings:
 >
-> -   Arrow keys to move up/down the list
-> -   Enter key (return) or Right Arrow key to Go to highlighted page
-> -   Escape key to clear searchbox and results
+> - Arrow keys to move up/down the list
+> - Enter key (return) or Right Arrow key to Go to highlighted page
+> - Escape key to clear searchbox and results
 
 For Multilingual use `search.<lang>.md` ex. `search.es.md`.
 
@@ -211,14 +208,14 @@ Refer https://fusejs.io/api/options.html for Options, Add those as shown below.
 
 ```yml
 params:
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 ```
 
 ---
@@ -235,12 +232,12 @@ In post's page-variables add :
 
 ```yml
 cover:
-    image: "<image path/url>"
-    # can also paste direct link from external site
-    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-    alt: "<alt text>"
-    caption: "<text>"
-    relative: false # To use relative path for cover image, used in hugo Page-bundles
+  image: "<image path/url>"
+  # can also paste direct link from external site
+  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: false # To use relative path for cover image, used in hugo Page-bundles
 ```
 
 When you include images in the [Page Bundle](https://gohugo.io/content-management/page-bundles/), multiple sizes of the image will automatically be provided using the HTML5 `srcset` field.
@@ -249,16 +246,16 @@ To reduce generation time and size of the site, you can disable this feature usi
 
 ```yml
 params:
-    cover:
-        responsiveImages: false
+  cover:
+    responsiveImages: false
 ```
 
 To enable hyperlinks to the full image size on post pages, use
 
 ```yml
 params:
-    cover:
-        linkFullImages: true
+  cover:
+    linkFullImages: true
 ```
 
 ---
@@ -271,7 +268,7 @@ to show share buttons add
 
 ```yml
 params:
-    ShowShareButtons: true
+  ShowShareButtons: true
 ```
 
 ---
@@ -284,7 +281,7 @@ To show reading time add
 
 ```yml
 Params:
-    ShowReadingTime: true
+  ShowReadingTime: true
 ```
 
 ---
@@ -313,7 +310,7 @@ Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation
 
 ```yml
 params:
-    ShowBreadCrumbs: true
+  ShowBreadCrumbs: true
 ```
 
 Can be diabled for particular page's front-matter
@@ -322,7 +319,6 @@ Can be diabled for particular page's front-matter
 ---
 ShowBreadCrumbs: false
 ---
-
 ```
 
 ---
@@ -335,10 +331,10 @@ For site config use:
 
 ```yml
 Params:
-    editPost:
-        URL: "https://github.com/<path_to_repo>/content"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 ```
 
 Can be modified for individual pages
@@ -346,11 +342,10 @@ Can be modified for individual pages
 ```yml
 ---
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  URL: "https://github.com/<path_to_repo>/content"
+  Text: "Suggest Changes" # edit text
+  appendFilePath: true # to append file path to Edit link
 ---
-
 ```
 
 The example above would yield the following link for the post file `posts/post-name.md`:
@@ -374,7 +369,18 @@ Adds a Previous / Next post suggestion under a single post
 
 ```yml
 params:
-    ShowPostNavLinks: true
+  ShowPostNavLinks: true
+```
+
+---
+
+### Code Copy Button
+
+Adds a `copy` button in code block to copy the code it contains
+
+```yml
+params:
+  ShowCodeCopyButtons: true
 ```
 
 ---
@@ -387,14 +393,13 @@ To Use multiple authors for a post, in post-variables:
 ---
 author: ["Me", "You"]
 ---
-
 ```
 
 To use Multiple Authors Site-wide, in `config.yml`:
 
 ```yml
 params:
-    author: ["Me", "You"]
+  author: ["Me", "You"]
 ```
 
 ---
@@ -411,7 +416,7 @@ also in config add this
 
 ```yml
 params:
-    comments: true
+  comments: true
 ```
 
 read more about this [hugo-comments](https://gohugo.io/content-management/comments/)
@@ -436,7 +441,7 @@ t - Theme toggle
 
 **Enabled only when `env: production`**
 
--   [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
+- [Rich Results/Snippets Support](https://support.google.com/webmasters/answer/7506797?hl=en)
 
 #### Twitter Cards Support
 

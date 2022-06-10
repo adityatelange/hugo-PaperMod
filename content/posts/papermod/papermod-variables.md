@@ -14,44 +14,49 @@ weight: 5
 
 ### Site Variables under `Params`
 
-| name                                   | type          | example                  | Description                                                                               |
-| -------------------------------------- | ------------- | ------------------------ | ----------------------------------------------------------------------------------------- |
-| `env`                                  | string        | 'production'             | To set env to production                                                                  |
-| `title`                                | string        | 'My Blog'                | To set title                                                                              |
-| `description`                          | string        | 'This is a blog of mine' | To set site description                                                                   |
-| `author`                               | string \|list | 'Me' \| ['Me','You']     | To show multiple Authors                                                                  |
-| `images`                               | string        | 'myimage.png'            | Link or path of image for opengraph, twitter-cards                                        |
-| `keywords`                             | list          | [blog, page]             | Add keywords for Home page                                                                |
-| `DateFormat`                           | string        | "January 2, 2006"        | The format of date strings in the website. [Details](https://gohugo.io/functions/format/) |
-| `languageAltTitle`                     | string        | "English"                | Alternate title in Multilingual Mode                                                      |
-| `ShowReadingTime`                      | boolean       | true \| false            | To show read time in post meta                                                            |
-| `ShowShareButtons`                     | boolean       | true \| false            | To show/hide share buttons under post                                                     |
-| `ShowCodeCopyButtons`                  | boolean       | true \| false            | To show/hide Code Copy button                                                             |
-| `ShowRssButtonInSectionTermList`       | boolean       | true \| false            | To show/hide RSS Copy button in Section and Term list                                     |
-| `ShowFullTextinRSS`                    | boolean       | true \| false            | To show Content in RSS feed                                                               |
-| `defaultTheme`                         | string        | light \| dark \| auto    | To set default theme                                                                      |
-| `disableThemeToggle`                   | boolean       | true \| false            | To disable theme toggle icon shown besides label                                          |
-| `disableSpecial1stPost`                | boolean       | true \| false            | To disable no-card special appearance of 1st post                                         |
-| `disableScrollToTop`                   | boolean       | true \| false            | To disable ScrollToTop button                                                             |
-| `disableAnchoredHeadings`              | boolean       | true \| false            | To disable Anchored Headings                                                              |
-| `hideMeta`                             | boolean       | true \| false            | To Hide meta elements : date, read-time, author and available-translations for page       |
-| `hideSummary`                          | boolean       | true \| false            | To Hide summary being shown in list pages                                                 |
-| `showtoc`                              | boolean       | true \| false            | To show/hide Table of Contents                                                            |
-| `tocopen`                              | boolean       | true \| false            | To keep open ToC by default on page load                                                  |
-| `ShowPostNavLinks`                     | boolean       | true \| false            | Show Previous and Next Posts below a Post                                                 |
-| `ShowBreadCrumbs`                      | boolean       | true \| false            | Show BreadCrumb Navigation above single post/page                                         |
-| `comments`                             | boolean       | true \| false            | To show/hide comments                                                                     |
-| `analytics.google.SiteVerificationTag` | string        | "XYZabc"                 | Site Verification Tag for Google Analytics                                                |
-| `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                 | Site Verification Tag for Bing                                                            |
-| `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                 | Site Verification Tag for Yandex                                                          |
-| `schema`                               | -             | -                        | [Details](#schema)                                                                        |
-| `fuseOpts`                             | -             | -                        | [Details](#fuseOpts)                                                                      |
-| `socialIcons`                          | -             | -                        | [Details](#socialIcons)                                                                   |
-| `label`                                | -             | -                        | [Details](#label)                                                                         |
-| `assets`                               | -             | -                        | [Details](#assets)                                                                        |
-| `cover`                                | -             | -                        | [Details](#cover)                                                                         |
-| `profileMode`                          | -             | -                        | [Details](#profilemode)                                                                   |
-| `editPost`                             | -             | -                        | [Details](#editPost)                                                                      |
+| name                                   | type          | example                   | Description                                                                               |
+| -------------------------------------- | ------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
+| `env`                                  | string        | 'production'              | To set env to production                                                                  |
+| `title`                                | string        | 'My Blog'                 | To set title                                                                              |
+| `description`                          | string        | 'This is a blog of mine'  | To set site description                                                                   |
+| `author`                               | string \|list | 'Me' \| ['Me','You']      | To show multiple Authors                                                                  |
+| `images`                               | string        | 'myimage.png'             | Link or path of image for opengraph, twitter-cards                                        |
+| `keywords`                             | list          | [blog, page]              | Add keywords for Home page                                                                |
+| `DateFormat`                           | string        | "January 2, 2006"         | The format of date strings in the website. [Details](https://gohugo.io/functions/format/) |
+| `languageAltTitle`                     | string        | "English"                 | Alternate title in Multilingual Mode                                                      |
+| `ShowReadingTime`                      | boolean       | true \| false             | To show read time in post meta                                                            |
+| `ShowShareButtons`                     | boolean       | true \| false             | To show/hide share buttons under post                                                     |
+| `ShowCodeCopyButtons`                  | boolean       | true \| false             | To show/hide Code Copy button                                                             |
+| `ShowFullTextinRSS`                    | boolean       | true \| false             | To show Content in RSS feed                                                               |
+| `defaultTheme`                         | string        | light \| dark \| auto     | To set default theme                                                                      |
+| `disableThemeToggle`                   | boolean       | true \| false             | To disable theme toggle icon shown besides label                                          |
+| `disableSpecial1stPost`                | boolean       | true \| false             | To disable no-card special appearance of 1st post                                         |
+| `disableScrollToTop`                   | boolean       | true \| false             | To disable ScrollToTop button                                                             |
+| `disableAnchoredHeadings`              | boolean       | true \| false             | To disable Anchored Headings                                                              |
+| `hideMeta`                             | boolean       | true \| false             | To Hide meta elements : date, read-time, author and available-translations for page       |
+| `hideSummary`                          | boolean       | true \| false             | To Hide summary being shown in list pages                                                 |
+| `showtoc`                              | boolean       | true \| false             | To show/hide Table of Contents                                                            |
+| `tocopen`                              | boolean       | true \| false             | To keep open ToC by default on page load                                                  |
+| `ShowPostNavLinks`                     | boolean       | true \| false             | Show Previous and Next Posts below a Post                                                 |
+| `ShowBreadCrumbs`                      | boolean       | true \| false             | Show BreadCrumb Navigation above single post/page                                         |
+| `ShareButtons`                         | list          | ["linkedin", "twitter"]   | To customize which share buttons to be enabled on page                                    |
+| `ShowWordCount`                        | boolean       | true \| false             | To word count to metadata                                                                 |
+| `ShowRssButtonInSectionTermList`       | boolean       | true \| false             | To show RSS icon in Section, Term and List pages                                          |
+| `UseHugoToc`                           | boolean       | true \| false             | To use Hugo's default Toc instead of custom                                               |
+| `comments`                             | boolean       | true \| false             | To show/hide comments                                                                     |
+| `hideFooter`                           | boolean       | true \| false             | To Hide Footer Text om the end of page                                                    |
+| `CanonicalLinkText`                    | string        | 'Originally published at' | To show text before canonical URL's hostname                                              |
+| `analytics.google.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Google Analytics                                                |
+| `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                  | Site Verification Tag for Bing                                                            |
+| `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Yandex                                                          |
+| `schema`                               | -             | -                         | [Details](#schema)                                                                        |
+| `fuseOpts`                             | -             | -                         | [Details](#fuseOpts)                                                                      |
+| `socialIcons`                          | -             | -                         | [Details](#socialIcons)                                                                   |
+| `label`                                | -             | -                         | [Details](#label)                                                                         |
+| `assets`                               | -             | -                         | [Details](#assets)                                                                        |
+| `cover`                                | -             | -                         | [Details](#cover)                                                                         |
+| `profileMode`                          | -             | -                         | [Details](#profilemode)                                                                   |
+| `editPost`                             | -             | -                         | [Details](#editPost)                                                                      |
 
 ### Site Variables
 
@@ -93,11 +98,13 @@ profileMode:
 
 #### assets
 
-| name                           | type    | example       | Description                                  |
-| ------------------------------ | ------- | ------------- | -------------------------------------------- |
-| `assets.favicon`               | string  | 'icon.ico'    | To set favicon, can be path or external link |
-| `assets.disableHLJS`           | boolean | true \| false | To disable Highlight.js loading              |
-| `assets.disableFingerprinting` | boolean | true \| false | To disable Sub-Resource integrity for assets |
+| name                             | type    | example       | Description                                  |
+| -------------------------------- | ------- | ------------- | -------------------------------------------- |
+| `assets.favicon`                 | string  | 'icon.ico'    | To set favicon, can be path or external link |
+| `assets.disableHLJS`             | boolean | true \| false | To disable Highlight.js loading              |
+| `assets.disableFingerprinting`   | boolean | true \| false | To disable Sub-Resource integrity for assets |
+| `assets.theme_color`             | string  | '#color'      | To set custom meta theme-color               |
+| `assets.msapplication_TileColor` | string  | '#color'      | To set custom msapplication_TileColor        |
 
 #### cover
 
@@ -164,19 +171,28 @@ editPost:
 | `comments`                       | boolean       | true \| false                   | To show/hide comments                                                               |
 | `description`                    | string        | 'description text'              | Show Post Description under Title                                                   |
 | `canonicalURL`                   | string        | "https://canonical.url/to/page" | To add canonical URL to posts                                                       |
+| `ShowCanonicalLink`              | boolean       | true \| false                   | To show canonical URL's hostname                                                    |
+| `CanonicalLinkText`              | string        | 'Originally published at'       | To show text before canonical URL's hostname                                        |
 | `disableShare`                   | boolean       | true \| false                   | To hide/show share icons under a page                                               |
 | `disableHLJS`                    | boolean       | true \| false                   | To disable Highlight.js loading                                                     |
 | `disableAnchoredHeadings`        | boolean       | true \| false                   | To disable Anchored Headings                                                        |
 | `searchHidden`                   | boolean       | true \| false                   | Hide page from search                                                               |
 | `hideSummary`                    | boolean       | true \| false                   | To Hide summary being shown in list pages                                           |
+| `hideFooter`                     | boolean       | true \| false                   | To Hide Footer Text om the end of page                                              |
 | `ShowReadingTime`                | boolean       | true \| false                   | To show read time in post meta                                                      |
 | `ShowBreadCrumbs`                | boolean       | true \| false                   | Show BreadCrumb Navigation above single post/page                                   |
 | `ShowPostNavLinks`               | boolean       | true \| false                   | Show Previous and Next Posts below a Post                                           |
-| `ShowRssButtonInSectionTermList` | boolean       | true \| false                   | To show/hide RSS Copy button in Section and Term list                               |
+| `ShowCodeCopyButtons`            | boolean       | true \| false                   | To show/hide Code Copy button                                                       |
 | `author`                         | string \|list | 'Me' \| ['Me','You']            | To show multiple Authors                                                            |
 | `cover.image`                    | string        | 'featured.jpg'                  | To add a cover image                                                                |
 | `cover.caption `                 | string        | 'caption for image'             | To add caption to cover image                                                       |
 | `cover.alt`                      | string        | 'this is cover image'           | Alternate text to show if image doesn't load/show up                                |
 | `cover.relative`                 | boolean       | true \| false                   | To use relative path for cover image, used in hugo Page-bundles                     |
-| `cover.hidden `                  | boolean       | true \| false                   | To hide on current single page                                                      |
+| `cover.responsiveImages`         | boolean       | true \| false                   | To enable/disable generation of responsive cover images                             |
+| `cover.hidden`                   | boolean       | true \| false                   | To hide on current single page                                                      |
 | `weight `                        | integer       | 5                               | To set page order or to pin a post to Top of list                                   |
+| `ShareButtons`                   | list          | ["linkedin", "twitter"]         | To customize which share buttons to be enabled on page                              |
+| `ShowWordCount`                  | boolean       | true \| false                   | To word count to metadata                                                           |
+| `ShowRssButtonInSectionTermList` | boolean       | true \| false                   | To show RSS icon in Section, Term and List pages                                    |
+| `UseHugoToc`                     | boolean       | true \| false                   | To use Hugo's default Toc instead of custom                                         |
+| `robotsNoIndex`                  | boolean       | true \| false                   | To hide a particular page from indexing by search engines                           |

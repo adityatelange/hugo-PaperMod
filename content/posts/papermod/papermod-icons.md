@@ -11,91 +11,116 @@ draft: true
 
 ## Social Icons
 
-| No. | Name            | Platform Link                   |
-| --- | --------------- | ------------------------------- |
-| 1   | `123rf`         | 123rf.com                       |
-| 2   | `adobestock`    | stock.adobe.com                 |
-| 3   | `behance`       | behance.net                     |
-| 4   | `buymeacoffee`  | buymeacoffee.com                |
-| 5   | `codepen`       | codepen.io                      |
-| 6   | `cryptohack`    | cryptohack.org                  |
-| 7   | `ctftime`       | ctftime.org                     |
-| 8   | `dev`           | dev.to                          |
-| 9   | `discogs`       | discogs.com                     |
-| 10  | `discord`       | discord.com                     |
-| 11  | `dreamstime`    | dreamstime.com                  |
-| 12  | `dribbble`      | dribbble.com                    |
-| 13  | `email`         | -                               |
-| 14  | `facebook`      | facebook.com                    |
-| 15  | `flickr`        | flickr.com                      |
-| 16  | `freepik`       | freepik.com                     |
-| 17  | `gitea`         | gitea.io                        |
-| 18  | `github`        | github.com                      |
-| 19  | `gitlab`        | gitlab.com                      |
-| 20  | `goodreads`     | goodreads.com                   |
-| 21  | `hackerone`     | hackerone.com                   |
-| 22  | `hackerrank`    | hackerrank.com                  |
-| 23  | `hackthebox`    | hackthebox.eu                   |
-| 24  | `instagram`     | instagram.com                   |
-| 25  | `itchio`        | itch.io                         |
-| 26  | `kakaotalk`     | kakaocorp.com/service/KakaoTalk |
-| 27  | `keybase`       | keybase.io                      |
-| 28  | `kofi`          | ko-fi.com                       |
-| 29  | `lastfm`        | last.fm                         |
-| 30  | `liberapay`     | liberapay.com                   |
-| 31  | `linkedin`      | linkedin.com                    |
-| 32  | `mastodon`      | mastodon.social                 |
-| 33  | `matrix`        | matrix.org                      |
-| 34  | `medium`        | medium.com                      |
-| 35  | `mixcloud`      | mixcloud.com                    |
-| 36  | `nuget`         | nuget.org                       |
-| 37  | `paypal`        | paypal.com                      |
-| 38  | `qq`            | qq.com                          |
-| 39  | `reddit`        | reddit.com                      |
-| 40  | `rss`           | -                               |
-| 41  | `serverfault`   | serverfault.com                 |
-| 42  | `soundcloud`    | soundcloud.com                  |
-| 43  | `shutterstock`  | shutterstock.com                |
-| 44  | `slack`         | slack.com                       |
-| 45  | `snapchat`      | snapchat.com/add                |
-| 46  | `sourcerer`     | sourcerer.io                    |
-| 47  | `spotify`       | spotify.com                     |
-| 48  | `stackoverflow` | stackoverflow.com               |
-| 49  | `steam`         | steampowered.com                |
-| 50  | `telegram`      | telegram.org                    |
-| 51  | `twitch`        | twitch.tv                       |
-| 52  | `twitter`       | twitter.com                     |
-| 53  | `unsplash`      | unsplash.com                    |
-| 54  | `xda`           | xda-developers.com              |
-| 55  | `youtube`       | youtube.com                     |
-| 56  | `other`         | -                               |
+| Name            | Platform Link                   |
+| --------------- | ------------------------------- |
+| `123rf`         | 123rf.com                       |
+| `adobestock`    | stock.adobe.com                 |
+| `apple music`   | music.apple.com                 |
+| `behance`       | behance.net                     |
+| `bilibili`      | bilibili.com                    |
+| `bitcoin`       | -                               |
+| `buymeacoffee`  | buymeacoffee.com                |
+| `codepen`       | codepen.io                      |
+| `cryptohack`    | cryptohack.org                  |
+| `ctftime`       | ctftime.org                     |
+| `cv`            | -                               |
+| `deezer`        | deezer.com                      |
+| `dev`           | dev.to                          |
+| `discogs`       | discogs.com                     |
+| `discord`       | discord.com                     |
+| `dreamstime`    | dreamstime.com                  |
+| `dribbble`      | dribbble.com                    |
+| `email`         | -                               |
+| `facebook`      | facebook.com                    |
+| `flickr`        | flickr.com                      |
+| `freepik`       | freepik.com                     |
+| `gitea`         | gitea.io                        |
+| `github`        | github.com                      |
+| `gitlab`        | gitlab.com                      |
+| `goodreads`     | goodreads.com                   |
+| `googlescholar` | scholar.google.com              |
+| `guruShots`     | gurushots.com                   |
+| `hackerone`     | hackerone.com                   |
+| `hackerrank`    | hackerrank.com                  |
+| `hackthebox`    | hackthebox.eu                   |
+| `instagram`     | instagram.com                   |
+| `itchio`        | itch.io                         |
+| `kaggle`        | -                               |
+| `kakaotalk`     | kakaocorp.com/service/KakaoTalk |
+| `key`           | -                               |
+| `keybase`       | keybase.io                      |
+| `kofi`          | ko-fi.com                       |
+| `komoot`        | -                               |
+| `lastfm`        | last.fm                         |
+| `letterboxd`    | -                               |
+| `liberapay`     | liberapay.com                   |
+| `linkedin`      | linkedin.com                    |
+| `mastodon`      | mastodon.social                 |
+| `matrix`        | matrix.org                      |
+| `medium`        | medium.com                      |
+| `monero`        | -                               |
+| `mixcloud`      | mixcloud.com                    |
+| `nuget`         | nuget.org                       |
+| `paypal`        | paypal.com                      |
+| `peertube`      | -                               |
+| `pgp`           | -                               |
+| `phone`         | -                               |
+| `ploywork`      | ploywork.com                    |
+| `qq`            | qq.com                          |
+| `reddit`        | reddit.com                      |
+| `researchgate`  | researchgate.net                |
+| `rss`           | -                               |
+| `serverfault`   | serverfault.com                 |
+| `soundcloud`    | soundcloud.com                  |
+| `shutterstock`  | shutterstock.com                |
+| `slack`         | slack.com                       |
+| `snapchat`      | snapchat.com/add                |
+| `spotify`       | spotify.com                     |
+| `stackoverflow` | stackoverflow.com               |
+| `steam`         | steampowered.com                |
+| `strava`        | strava.com                      |
+| `telegram`      | telegram.org                    |
+| `tiktok         | tiktok.com                      |
+| `twitch`        | twitch.tv                       |
+| `twitter`       | twitter.com                     |
+| `unsplash`      | unsplash.com                    |
+| `xda`           | xda-developers.com              |
+| `xing`          | xing.com                        |
+| `ycombinator`   | ycombinator.com                 |
+| `youtube`       | youtube.com                     |
+| `other`         | -                               |
 
 Usage :
 
 ```
 socialIcons:
-    - name: "kofi"
-        url: "https://kofi.com"
-    - name: "twitter"
-        url: "https://twitter.com"
+  - name: "kofi"
+    url: "https://kofi.com"
+  - name: "twitter"
+    url: "https://twitter.com"
 ```
 
 ---
 
 ## Share Icons
 
-| No. | Platform                                                        |
-| --- | --------------------------------------------------------------- |
-| 1   | `twitter` (also generates hash tags from tags linked with post) |
-| 2   | `linkedin`                                                      |
-| 3   | `reddit`                                                        |
-| 4   | `facebook`                                                      |
-| 5   | `whatsapp`                                                      |
-| 6   | `telegram`                                                      |
+| No.                                                             | Platform |
+| --------------------------------------------------------------- | -------- |
+| `twitter` (also generates hash tags from tags linked with post) |
+| `linkedin`                                                      |
+| `reddit`                                                        |
+| `facebook`                                                      |
+| `whatsapp`                                                      |
+| `telegram`                                                      |
 
 Usage:
 
 ```yml
 params:
   ShowShareButtons: true
+```
+
+```yml
+params:
+  ShareButtons: ["linkedin", "twitter"] # To customize which share buttons to be enabled on page
 ```
