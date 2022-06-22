@@ -23,13 +23,13 @@
     {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
-{{- if site.Params.analytics.googlesiteVerificationTag }}
+{{- if site.Params.analytics.google.siteVerificationTag }}
 <meta name="google-site-verification" content="{{ site.Params.analytics.google.siteVerificationTag }}">
 {{- end }}
-{{- if site.Params.analytics.yandexsiteVerificationTag }}
+{{- if site.Params.analytics.yandex.siteVerificationTag }}
 <meta name="yandex-verification" content="{{ site.Params.analytics.yandex.siteVerificationTag }}">
 {{- end }}
-{{- if site.Params.analytics.bingsiteVerificationTag }}
+{{- if site.Params.analytics.bing.siteVerificationTag }}
 <meta name="msvalidate.01" content="{{ site.Params.analytics.bing.siteVerificationTag }}">
 {{- end }}
 
