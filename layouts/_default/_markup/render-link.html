@@ -1,0 +1,3 @@
+<!-- Source: https://roneo.org/en/hugo-open-external-links-in-a-new-tab/ -->
+
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>{{ .Text  | safeHTML }}</a>
