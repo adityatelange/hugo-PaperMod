@@ -18,6 +18,13 @@
     display: inline-table;
     border-radius: 50%;
     pointer-events: none;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    pointer-events: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    overflow: hidden;
 }
 
 .buttons {
