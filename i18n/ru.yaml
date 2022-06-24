@@ -7,18 +7,18 @@
 - id: read_time
   translation:
     zero: "0 минут"
-    one: "{{ .Count }} минута"
+    one: "1 минута"
     few: "{{ .Count }} минуты"
     many: "{{ .Count }} минут"
-    other: "{{ .Count }} минуты"
+    other: "{{ .Count }} минута"
 
 - id: words
   translation:
     zero: "0 слов"
-    one: "{{ .Count }} слово"
+    one: "1 слово"
     few: "{{ .Count }} слова"
     many: "{{ .Count }} слов"
-    other: "{{ .Count }} слова"
+    other: "{{ .Count }} слово"
 
 - id: toc
   translation: "Оглавление"
