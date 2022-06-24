@@ -7,7 +7,7 @@
 - id: read_time
   translation:
     zero: "0 минут"
-    one: "минута"
+    one: "{{ .Count }} минута"
     few: "{{ .Count }} минуты"
     many: "{{ .Count }} минут"
     other: "{{ .Count }} минуты"
@@ -15,7 +15,7 @@
 - id: words
   translation:
     zero: "0 слов"
-    one: "слово"
+    one: "{{ .Count }} слово"
     few: "{{ .Count }} слова"
     many: "{{ .Count }} слов"
     other: "{{ .Count }} слова"
