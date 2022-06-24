@@ -5,7 +5,14 @@
   translation: "Следующая"
 
 - id: read_time
-  translation: "{{ .Count }} мин"
+  translation:
+    one : "1 мин"
+    other: "{{ .Count }} мин"
+
+- id: words
+  translation:
+    one : "слово"
+    other: "{{ .Count }} слов"
 
 - id: toc
   translation: "Оглавление"
@@ -15,6 +22,9 @@
 
 - id: home
   translation: "Главная"
+
+- id: edit_post
+  translation: "Редактировать"
 
 - id: code_copy
   translation: "копировать"
