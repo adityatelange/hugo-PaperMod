@@ -158,7 +158,7 @@ params:
 
 ### Search Page
 
-PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) for seach functionality
+PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) for search functionality
 
 Add the following to site config, `config.yml`
 
@@ -183,7 +183,7 @@ placeholder: "placeholder text in search input box"
 ---
 ```
 
-To hide a particular page from being searched, add it in post's fron't matter
+To hide a particular page from being searched, add it in post's frontmatter
 
 ```yml
 ---
@@ -195,7 +195,7 @@ ex: [search.md](https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/ex
 > Search Page also has Key bindings:
 >
 > - Arrow keys to move up/down the list
-> - Enter key (return) or Right Arrow key to Go to highlighted page
+> - Enter key (return) or Right Arrow key to go to the highlighted page
 > - Escape key to clear searchbox and results
 
 For Multilingual use `search.<lang>.md` ex. `search.es.md`.
