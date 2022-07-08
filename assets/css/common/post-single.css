@@ -394,3 +394,8 @@ h6:hover .anchor {
 h1>a>svg {
     display: inline;
 }
+
+img.in-text {
+    display: inline;
+    margin: auto;
+}
