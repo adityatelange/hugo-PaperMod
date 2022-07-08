@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "Halaman Sebelumnya"
+  translation: "Sebelumnya"
 
 - id: next_page
-  translation: "Halaman Selanjutnya"
+  translation: "Selanjutnya"
 
 - id: read_time
   translation:
