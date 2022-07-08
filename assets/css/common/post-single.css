@@ -344,11 +344,6 @@
     height: 30px;
     width: 30px;
     fill: currentColor;
-    transition: transform 0.1s;
-}
-
-.share-buttons svg:active {
-    transform: scale(0.96);
 }
 
 h1:hover .anchor,
