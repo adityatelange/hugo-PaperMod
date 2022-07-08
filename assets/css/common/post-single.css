@@ -340,12 +340,6 @@
     margin-inline-end: 12px;
 }
 
-.share-buttons a svg {
-    height: 30px;
-    width: 30px;
-    fill: currentColor;
-}
-
 h1:hover .anchor,
 h2:hover .anchor,
 h3:hover .anchor,
