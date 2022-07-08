@@ -34,4 +34,4 @@ jobs:
           hugo-version: "${{ github.event.inputs.hugoVersion }}"
 
       - name: Build
-        run: hugo --buildDrafts --gc --verbose --minify
+        run: hugo gen chromastyles --style dracula --highlightStyle 'bg:#474733' > assets/css/extended/dracula.css && hugo --buildDrafts --gc --verbose --minify
