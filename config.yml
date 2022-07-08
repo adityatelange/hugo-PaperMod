@@ -35,8 +35,8 @@ languages:
                 - name: Tags
                   url: tags/
                   weight: 10
-                - name: Categories
-                  url: categories/
+                - name: WiKi
+                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
                   weight: 10
 
     fr:
@@ -59,8 +59,8 @@ languages:
             buttons:
                 - name: Blog
                   url: posts
-                - name: Tags
-                  url: tags
+                - name: Profile Mode
+                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
         menu:
             main:
                 - name: Archive
