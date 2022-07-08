@@ -18,7 +18,7 @@ author: "Aditya Telange"
 
 ## Guide
 
-Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup hugo and create a new site.
+Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup {{< inTextImg url="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" height="14" >}} and create a new site.
 
 > Note: Use -f to select yml format
 >
