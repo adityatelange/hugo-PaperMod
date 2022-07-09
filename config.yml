@@ -52,8 +52,8 @@ languages:
         profileMode:
             enabled: true
             title: PaperMod
-            # imageUrl: "#"
-            # imageTitle: my image
+            imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
+            imageTitle: ProfileMode image
             # imageWidth: 120
             # imageHeight: 120
             subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
@@ -77,10 +77,6 @@ languages:
                   url: frseries
                   weight: 10
                 - name: NullLink
-                  url: "#"
-                - name: NullLink2
-                  url: "#"
-                - name: NullLink3
                   url: "#"
 
     fa:
