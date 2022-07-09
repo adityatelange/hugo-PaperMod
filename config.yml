@@ -36,8 +36,9 @@ languages:
                   url: tags/
                   weight: 10
                 - name: WiKi
-                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
-                  weight: 10
+                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+                - name: Discord
+                  url: https://discord.gg/ahpmTvhVmp
 
     fr:
         languageName: ":fr:"
@@ -154,9 +155,7 @@ params:
           url: "https://github.com/adityatelange/hugo-PaperMod"
         - name: KoFi
           url: "https://ko-fi.com/adityatelange"
-        - name: Discord
-          url: "https://discord.gg/ahpmTvhVmp"
-        - name: RsS
+        - name: Rss
           url: "index.xml"
 
     editPost:
