@@ -36,10 +36,6 @@
     margin-inline-end: 8px;
 }
 
-#theme-toggle svg {
-    height: 18px;
-}
-
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
