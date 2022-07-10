@@ -189,10 +189,6 @@
     margin-bottom: 0;
 }
 
-.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
-    display: none;
-}
-
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
@@ -344,17 +340,6 @@
     margin-inline-end: 12px;
 }
 
-.share-buttons a svg {
-    height: 30px;
-    width: 30px;
-    fill: currentColor;
-    transition: transform 0.1s;
-}
-
-.share-buttons svg:active {
-    transform: scale(0.96);
-}
-
 h1:hover .anchor,
 h2:hover .anchor,
 h3:hover .anchor,
@@ -366,28 +351,6 @@ h6:hover .anchor {
     margin-inline-start: 8px;
     font-weight: 500;
     user-select: none;
-}
-
-.post-content :not(table) ::-webkit-scrollbar-thumb {
-    border: 2px solid var(--hljs-bg);
-    background: rgb(113, 113, 117);
-}
-
-.post-content :not(table) ::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 163, 165);
-}
-
-.gist table::-webkit-scrollbar-thumb {
-    border: 2px solid rgb(255, 255, 255);
-    background: rgb(173, 173, 173);
-}
-
-.gist table::-webkit-scrollbar-thumb:hover {
-    background: rgb(112, 112, 112);
-}
-
-.post-content table::-webkit-scrollbar-thumb {
-    border-width: 2px;
 }
 
 .paginav {
@@ -430,4 +393,9 @@ h6:hover .anchor {
 
 h1>a>svg {
     display: inline;
+}
+
+img.in-text {
+    display: inline;
+    margin: auto;
 }
