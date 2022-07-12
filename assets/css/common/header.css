@@ -1,3 +1,11 @@
+header.header-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--theme);
+    z-index: 1000;
+}
+
 .nav {
     display: flex;
     flex-wrap: wrap;
