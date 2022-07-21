@@ -1,42 +1,13 @@
-{{- /* theme-toggle is enabled */}}
-{{- if (not site.Params.disableThemeToggle) }}
-{{- /* theme is light */}}
-{{- if (eq site.Params.defaultTheme "light") }}
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    }
-
-</script>
-{{- /* theme is dark */}}
-{{- else if (eq site.Params.defaultTheme "dark") }}
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    }
-
-</script>
+{{- /* theme.js */}}
+{{- if not site.Params.disableThemeToggle }}
+{{- $theme := resources.Get "js/theme.js" | resources.Minify }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $theme_js := (slice $theme) | resources.Concat "assets/js/theme.js" | fingerprint }}
+<script crossorigin="anonymous" src="{{ $theme_js.RelPermalink }}" integrity="{{ $theme_js.Data.Integrity }}"></script>
 {{- else }}
-{{- /* theme is auto */}}
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
+{{- $theme_js := (slice $theme) | resources.Concat "assets/js/theme.js" }}
+<script crossorigin="anonymous" src="{{ $theme_js.RelPermalink }}"></script>
 {{- end }}
-{{- /* theme-toggle is disabled and theme is auto */}}
-{{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
-<script>
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
 {{- end }}
 
 <header class="header">

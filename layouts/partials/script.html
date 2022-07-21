@@ -1,0 +1,39 @@
+{{- /* Search */}}
+{{- if (eq .Layout `search`) -}}
+<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
+{{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
+{{- $license_js := resources.Get "js/license.js" }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+{{- else }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
+{{- end }}
+{{- end -}}
+
+{{- /* Highlight.js */}}
+{{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"></script>
+{{- else }}
+{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" }}
+<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}"></script>
+{{- end }}
+{{- end }}
+
+{{- /* PaperMod.js */}}
+{{- $scrollToTop := (not site.Params.disableScrollToTop | default .Params.disableScrollToTop ) }}
+{{- $themeToggle := (not site.Params.disableThemeToggle | default .Params.disableThemeToggle ) }}
+{{- $showCodeCopyButtons := ((and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (site.Params.ShowCodeCopyButtons)) | default .Params.ShowCodeCopyButtons ) }}
+{{- $papermod := resources.Get "js/papermod.js" | js.Build (dict "params" (dict "scrollToTop" $scrollToTop "themeToggle" $themeToggle "showCodeCopyButtons" $showCodeCopyButtons)) | resources.Minify }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $papermod_js := (slice $papermod) | resources.Concat "assets/js/papermod.js" | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $papermod_js.RelPermalink }}" integrity="{{ $papermod_js.Data.Integrity }}"></script>
+{{- else }}
+{{- $papermod_js := (slice $papermod) | resources.Concat "assets/js/papermod.js" }}
+<script defer crossorigin="anonymous" type="module" src="{{ $papermod_js.RelPermalink }}"></script>
+{{- end }}

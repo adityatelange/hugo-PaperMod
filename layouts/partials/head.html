@@ -71,34 +71,6 @@
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
-{{- /* Search */}}
-{{- if (eq .Layout `search`) -}}
-<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
-{{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
-{{- $license_js := resources.Get "js/license.js" }}
-{{- if not site.Params.assets.disableFingerprinting }}
-{{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
-{{- else }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
-{{- end }}
-{{- end -}}
-
-{{- /* Highlight.js */}}
-{{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
-{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
-{{- if not site.Params.assets.disableFingerprinting }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
-    onload="hljs.initHighlightingOnLoad();"></script>
-{{- else }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" }}
-<script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
-{{- end }}
-{{- end }}
-
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
