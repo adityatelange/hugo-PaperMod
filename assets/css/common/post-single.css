@@ -211,7 +211,7 @@
     /* reset inline code */
     background-color: unset;
     display: block;
-    margin: auto 0;
+    margin: 20px;
     padding: 10px;
     overflow-x: auto;
     word-break: break-all;
