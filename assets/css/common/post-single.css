@@ -155,7 +155,6 @@
 
 .post-content .highlight:not(table) {
     margin: 10px auto;
-    background: var(--hljs-bg) !important;
     border-radius: var(--radius);
     direction: ltr;
 }
@@ -189,24 +188,37 @@
     margin-bottom: 0;
 }
 
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+    display: none;
+}
+
+/* code block */
+.post-content .chroma {
+    border-radius: var(--radius);
+}
+
 .post-content code {
+    /* inline code */
+    background-color: var(--tertiary);
     margin: auto 4px;
     padding: 4px 6px;
     font-size: 0.78em;
     line-height: 1.5;
-    background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .post-content pre code {
+    /* reset inline code */
+    background-color: unset;
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgb(213, 213, 214);
-    background: var(--hljs-bg) !important;
-    border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
+}
+
+.post-content .chroma code {
+    background-color: inherit;
 }
 
 .post-content blockquote {
@@ -255,7 +267,7 @@
 .toc {
     margin: 0 2px 40px 2px;
     border: 1px solid var(--border);
-    background: var(--code-bg);
+    background: var(--tertiary);
     border-radius: var(--radius);
     padding: 0.4em;
 }
@@ -316,12 +328,7 @@
     color: var(--secondary);
     font-size: 14px;
     line-height: 34px;
-    background: var(--code-bg);
-}
-
-.post-tags a:hover,
-.paginav a:hover {
-    background: var(--border);
+    background: var(--tertiary);
 }
 
 .share-buttons {
@@ -358,6 +365,8 @@ h6:hover .anchor {
     display: flex;
     line-height: 30px;
     border-radius: var(--radius);
+    background: none;
+    border: none;
 }
 
 .paginav a {
