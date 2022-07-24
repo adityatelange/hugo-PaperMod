@@ -43,7 +43,9 @@ function scrollToTop() {
 }
 
 function themeToggle() {
-    document.getElementById("theme-toggle").addEventListener("click", () => {
+    var themeButton = document.getElementById("theme-toggle");
+
+    themeButton.addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
