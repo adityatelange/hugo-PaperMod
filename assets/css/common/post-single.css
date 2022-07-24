@@ -272,17 +272,23 @@
     padding: 0.4em;
 }
 
+@media screen and (min-width: 1400px) {
+    .toc.side {
+        position: fixed;
+        right: 30px;
+        top: 100px;
+        width: 300px;
+        font-size: .9em;
+    }
+}
+
 .dark .toc {
     background: var(--entry);
 }
 
 .toc details summary {
-    cursor: zoom-in;
+    cursor: pointer;
     margin-inline-start: 20px;
-}
-
-.toc details[open] summary {
-    cursor: zoom-out;
 }
 
 .toc .details {
