@@ -1,7 +1,7 @@
 ## WonderMod (PaperMod)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/wonderfall/hugo-WonderMod/main/.github/assets/web-capture.jpeg" title="WonderMod" alt="WonderMod image">
+  <img src="https://raw.githubusercontent.com/wonderfall/hugo-WonderMod/master/.github/assets/web-capture.jpeg" title="WonderMod" alt="WonderMod image">
 </p>
 
 ### What is this?
