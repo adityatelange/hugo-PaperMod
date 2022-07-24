@@ -320,7 +320,6 @@
 }
 
 .post-tags a,
-.share-buttons,
 .paginav {
     border-radius: var(--radius);
     background: var(--code-bg);
@@ -343,6 +342,8 @@
     display: flex;
     justify-content: center;
     overflow-x: auto;
+    background: none;
+    border: none;
 }
 
 .share-buttons a {
