@@ -8,3 +8,14 @@ Current "main" changes are as follows:
 
 Additional credits:
 - [PaperModX](https://github.com/reorx/hugo-PaperModX/) by reorx
+
+To enable syntax highlighting, put this in your `config.yml` :
+
+```
+markup:
+    highlight:
+        style: dracula
+        noClasses: false
+```
+
+https://gohugo.io/getting-started/configuration-markup#highlight
