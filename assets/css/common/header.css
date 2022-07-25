@@ -82,7 +82,7 @@ body:not(.dark) #sun {
     z-index: 10001;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     #menu {
         display: none;
     }
