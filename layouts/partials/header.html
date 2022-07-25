@@ -89,6 +89,9 @@
             </div>
         </div>
         {{- $currentPage := . }}
+        <input id="hamburger-input" type="checkbox"></input>
+        <label id="hamburger-menu" for="hamburger-input"></label>
+        <div class="overlay"></div>
         <ul id="menu">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}

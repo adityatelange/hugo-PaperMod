@@ -61,6 +61,69 @@ body:not(.dark) #sun {
     margin-inline-start: var(--gap);
 }
 
+#hamburger-menu {
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    margin-right: 3px;
+    margin-left: 3px;
+    background: linear-gradient(
+        var(--primary), var(--primary) 20%, 
+        #ffffff00 20%, #ffffff00 40%, 
+        var(--primary) 40%, var(--primary) 60%, 
+        #ffffff00 60%, #ffffff00 80%, 
+        var(--primary) 80%, var(--primary) 100%
+      );
+    z-index: 10001;
+}
+
+@media screen and (max-width: 900px) {
+    #menu {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: inline;
+    }
+
+    #hamburger-input:checked ~ .overlay {
+        visibility: visible;
+    }
+
+    #hamburger-input:checked ~ #menu {
+        display: block;
+        width: 80%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 10002;
+    }
+
+    #menu li {
+        text-align: center;
+    }
+
+    #menu li + li {
+        margin-inline-start: 0;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    background: var(--theme);
+    z-index: 10000;
+}
+
 #menu a {
     font-size: 16px;
 }
