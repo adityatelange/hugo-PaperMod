@@ -70,8 +70,8 @@ body:not(.dark) #sun {
     width: 18px;
     height: 18px;
     margin: auto;
-    margin-right: 3px;
-    margin-left: 3px;
+    margin-right: 13px;
+    margin-left: 13px;
     background: linear-gradient(
         var(--primary), var(--primary) 20%, 
         #ffffff00 20%, #ffffff00 40%, 
@@ -82,7 +82,7 @@ body:not(.dark) #sun {
     z-index: 10001;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     #menu {
         display: none;
     }
