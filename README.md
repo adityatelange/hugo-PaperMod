@@ -13,6 +13,7 @@ Current "main" changes are as follows:
 - Improved YouTube shortcode ([4dc3bee](https://github.com/Wonderfall/hugo-WonderMod/commit/4dc3bee5477b6d22ce830faa13375f4c2e6a216b))
 - Built-in Chroma instead of client-side syntax highlighting with HLJS ([841141](https://github.com/Wonderfall/hugo-WonderMod/commit/8411411a671785d098ffff9323b064acc0c16cb4))
 - Responsive Table of Contents with side display support ([2303605](https://github.com/Wonderfall/hugo-WonderMod/commit/230360552b44a8e45496da76ae539a63ad0a3f5a))
+- Reponsive menu for mobile ([723ac4f](https://github.com/Wonderfall/hugo-WonderMod/commit/723ac4f5c68180b816ebf1dce26839fd3db02ab3))
 - Bunch of CSS and other changes (see [commit history](https://github.com/Wonderfall/hugo-WonderMod/commits/master))
 
 ### Credits
