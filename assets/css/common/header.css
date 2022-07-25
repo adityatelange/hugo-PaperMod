@@ -80,6 +80,7 @@ body:not(.dark) #sun {
         var(--primary) 80%, var(--primary) 100%
       );
     z-index: 10001;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
