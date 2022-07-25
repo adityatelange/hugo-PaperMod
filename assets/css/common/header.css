@@ -61,6 +61,10 @@ body:not(.dark) #sun {
     margin-inline-start: var(--gap);
 }
 
+#hamburger-input {
+    display: none;
+}
+
 #hamburger-menu {
     display: none;
     width: 18px;
