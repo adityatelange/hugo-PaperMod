@@ -91,6 +91,18 @@ body:not(.dark) #sun {
         display: inline;
     }
 
+    #hamburger-input:checked ~  #hamburger-menu {
+        background: none;
+    }
+
+    #hamburger-input:checked ~ #hamburger-menu:after {
+        content: "\00d7";
+        position: absolute;
+        font-size: 28px;
+        line-height: 0;
+        top: 28px;
+    }
+
     #hamburger-input:checked ~ .overlay {
         visibility: visible;
     }
