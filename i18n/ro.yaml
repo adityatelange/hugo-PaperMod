@@ -1,0 +1,39 @@
+- id: prev_page
+  translation: "Anteriora"
+
+- id: next_page
+  translation: "Următorea"
+
+- id: read_time
+  translation:
+    zero: "0 minute"
+    one: "1 minuta"
+    few: "{{ .Count }} minute"
+    many: "{{ .Count }} de minute"
+    other: "{{ .Count }} minut"
+
+- id: words
+  translation:
+    zero: "0 cuvinte"
+    one: "1 cuvânt"
+    few: "{{ .Count }} cuvinte"
+    many: "{{ .Count }} cuvinte"
+    other: "{{ .Count }} cuvânt"
+
+- id: toc
+  translation: "Cuprins"
+
+- id: translations
+  translation: "Traduceri"
+
+- id: home
+  translation: "Acasă"
+
+- id: edit_post
+  translation: "Editați"
+
+- id: code_copy
+  translation: "copie"
+
+- id: code_copied
+  translation: "copiat!"
