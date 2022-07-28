@@ -104,7 +104,16 @@ function showCodeCopyButtons() {
     });
 }
 
+function openToc() {
+    var toc = document.getElementById("toc");
+
+    if (toc && window.screen.width > 1500 && window.screen.height > 800) {
+        toc.open = true;
+    }
+}
+
 initializeMenu();
+openToc()
 if (params.scrollToTop) scrollToTop();
 if (params.themeToggle) themeToggle();
 if (params.showCodeCopyButtons) showCodeCopyButtons();
