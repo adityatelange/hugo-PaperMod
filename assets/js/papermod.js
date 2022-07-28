@@ -107,13 +107,23 @@ function showCodeCopyButtons() {
 function openToc() {
     var toc = document.getElementById("toc");
 
-    if (toc && window.innerWidth > 1500 && window.innerHeight > 800) {
+    if (window.innerWidth > 1500 && window.innerHeight > 800) {
         toc.open = true;
     }
 }
 
+function progressBar() {
+    var bar = document.getElementById("progressBar");
+
+    document.addEventListener('scroll', () => {
+        var scrollPercent = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight) * 100 + '%';
+        bar.style.setProperty("--scrollAmount", scrollPercent);
+    })
+}
+
 initializeMenu();
-openToc();
 if (params.scrollToTop) scrollToTop();
 if (params.themeToggle) themeToggle();
 if (params.showCodeCopyButtons) showCodeCopyButtons();
+if (document.getElementById("toc")) openToc();
+if (document.getElementById("progressBar")) progressBar();

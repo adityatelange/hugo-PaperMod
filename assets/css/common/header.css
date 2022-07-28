@@ -171,3 +171,12 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+
+#progressBar {
+    --scrollAmount: 0%;
+    width: var(--scrollAmount);
+    height: 3px;
+    background-color: rgb(0, 128, 128);
+    position: fixed;
+    z-index: 9999;
+  }

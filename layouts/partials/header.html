@@ -11,6 +11,9 @@
 {{- end }}
 
 <header class="header">
+    {{- if .IsPage }}
+    <div id="progressBar"></div>
+    {{- end }}
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
