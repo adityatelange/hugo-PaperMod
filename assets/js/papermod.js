@@ -107,7 +107,7 @@ function showCodeCopyButtons() {
 function openToc() {
     var toc = document.getElementById("toc");
 
-    if (toc && window.screen.width > 1500 && window.screen.height > 800) {
+    if (toc && window.innerWidth > 1500 && window.innerHeight > 800) {
         toc.open = true;
     }
 }
