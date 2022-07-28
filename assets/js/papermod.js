@@ -113,7 +113,7 @@ function openToc() {
 }
 
 initializeMenu();
-openToc()
+openToc();
 if (params.scrollToTop) scrollToTop();
 if (params.themeToggle) themeToggle();
 if (params.showCodeCopyButtons) showCodeCopyButtons();
