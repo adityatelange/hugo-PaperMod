@@ -72,3 +72,9 @@
 .toc.side::-webkit-scrollbar {
     width: 8px;
 }
+
+/* code */
+
+.highlight pre code::-webkit-scrollbar {
+    height: 6px;
+}
