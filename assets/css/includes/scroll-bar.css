@@ -61,3 +61,14 @@
         height: 11px;
     }
 }
+
+/* side ToC */
+
+.toc.side::-webkit-scrollbar-thumb {
+    border: none;
+    background: var(--secondary);
+}
+
+.toc.side::-webkit-scrollbar {
+    width: 8px;
+}

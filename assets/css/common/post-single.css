@@ -279,6 +279,8 @@
         top: 100px;
         width: 300px;
         font-size: .9em;
+        max-height: calc(100% - 150px);
+        overflow: auto;
     }
 }
 
