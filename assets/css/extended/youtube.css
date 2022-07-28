@@ -1,6 +1,7 @@
 .youtube-embed-div {
     position: relative;
     padding-bottom: 56.25%;
+    margin-bottom: 20px;
     height: 0;
     overflow: hidden;
 }
@@ -12,4 +13,4 @@
     width: 100%;
     height: 100%;
     border: 0;
-} 
+}

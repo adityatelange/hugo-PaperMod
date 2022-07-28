@@ -98,7 +98,7 @@ body:not(.dark) #sun {
 
     #hamburger-input:checked ~ #hamburger-menu:after {
         content: "\00d7";
-        position: absolute;
+        position: fixed;
         font-size: 28px;
         line-height: 0;
         top: 28px;
@@ -112,7 +112,7 @@ body:not(.dark) #sun {
         display: block;
         width: 80%;
         margin: auto;
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         margin-right: -50%;
