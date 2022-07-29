@@ -1,45 +1,17 @@
 import * as params from '@params';
 
-function initializeMenu() {
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-}
-
 function scrollToTop() {
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+    var topButton = document.getElementById("top-link");
+
+    document.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            topButton.style.visibility = "visible";
+            topButton.style.opacity = "1";
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            topButton.style.visibility = "hidden";
+            topButton.style.opacity = "0";
         }
-    };
+    })
 }
 
 function themeToggle() {
@@ -107,6 +79,8 @@ function showCodeCopyButtons() {
 function openToc() {
     var toc = document.getElementById("toc");
 
+    if (!toc) return;
+
     if (window.innerWidth > 1500 && window.innerHeight > 800) {
         toc.open = true;
     }
@@ -115,6 +89,8 @@ function openToc() {
 function progressBar() {
     var bar = document.getElementById("progressBar");
 
+    if (!bar) return;
+
     document.addEventListener('scroll', () => {
         var scrollPercent = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight) * 100;
         if (scrollPercent >= 99) { scrollPercent = 0 };
@@ -122,9 +98,9 @@ function progressBar() {
     })
 }
 
-initializeMenu();
+
 if (params.scrollToTop) scrollToTop();
 if (params.themeToggle) themeToggle();
 if (params.showCodeCopyButtons) showCodeCopyButtons();
-if (document.getElementById("toc")) openToc();
-if (document.getElementById("progressBar")) progressBar();
+openToc();
+progressBar();
