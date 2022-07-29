@@ -176,7 +176,7 @@ body:not(.dark) #sun {
     --scrollAmount: 0%;
     width: var(--scrollAmount);
     height: 3px;
-    background-color: rgb(0, 128, 128);
+    background-color: #1e8cdb;
     position: fixed;
     z-index: 9999;
-  }
+}
