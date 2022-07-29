@@ -1,7 +1,7 @@
 import * as params from '@params';
 
 function scrollToTop() {
-    var topButton = document.getElementById("top-link");
+    const topButton = document.getElementById("top-link");
 
     document.addEventListener('scroll', () => {
         if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
@@ -15,7 +15,7 @@ function scrollToTop() {
 }
 
 function themeToggle() {
-    var themeButton = document.getElementById("theme-toggle");
+    const themeButton = document.getElementById("theme-toggle");
 
     themeButton.addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
@@ -77,7 +77,7 @@ function showCodeCopyButtons() {
 }
 
 function openToc() {
-    var toc = document.getElementById("toc");
+    const toc = document.getElementById("toc");
 
     if (!toc) return;
 
@@ -87,12 +87,12 @@ function openToc() {
 }
 
 function progressBar() {
-    var bar = document.getElementById("progressBar");
+    const bar = document.getElementById("progressBar");
 
     if (!bar) return;
 
     document.addEventListener('scroll', () => {
-        var scrollPercent = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+        let scrollPercent = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight) * 100;
         if (scrollPercent >= 99) { scrollPercent = 0 };
         bar.style.setProperty("--scrollAmount", scrollPercent + '%');
     })
