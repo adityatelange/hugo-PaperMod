@@ -16,6 +16,7 @@ Current "main" changes are as follows:
 - Built-in Chroma instead of client-side syntax highlighting with HLJS ([841141](https://github.com/Wonderfall/hugo-WonderMod/commit/8411411a671785d098ffff9323b064acc0c16cb4))
 - Responsive Table of Contents with side display support ([2303605](https://github.com/Wonderfall/hugo-WonderMod/commit/230360552b44a8e45496da76ae539a63ad0a3f5a))
 - Responsive "hamburger" menu for mobile ([723ac4f](https://github.com/Wonderfall/hugo-WonderMod/commit/723ac4f5c68180b816ebf1dce26839fd3db02ab3))
+- Simple reading progress bar ([13876be](https://github.com/Wonderfall/hugo-WonderMod/commit/13876beb0afd9d535890e82af459e639064650f1))
 - Bunch of CSS and other changes (see [commit history](https://github.com/Wonderfall/hugo-WonderMod/commits/master))
 
 ### Credits
