@@ -11,7 +11,7 @@
 {{- end }}
 
 <header class="header">
-    {{- if .IsPage }}
+    {{- if ( and (.IsPage) (ne .Layout "archives") (ne .Layout "search")) }}
     <div id="progressBar"></div>
     {{- end }}
     <nav class="nav">
