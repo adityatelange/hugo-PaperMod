@@ -29,14 +29,6 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    /* reset */
-    ::-webkit-scrollbar {
-        width: 19px;
-        height: 11px;
-    }
-}
-
 /* footer */
 @media screen and (max-width: 900px) {
     .list .top-link {
@@ -48,7 +40,6 @@
     /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
     .terms-tags a:active,
     .button:active,
-    .share-buttons svg:active,
     .post-entry:active,
     .top-link,
     #searchResults .focus,

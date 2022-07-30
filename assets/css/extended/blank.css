@@ -92,6 +92,26 @@ code {
     text-decoration: underline;
 }
 
+/* image center*/
+.post-content img {
+    margin: auto;
+}
+
+/* table center */
+.post-content table > * {
+    display: grid;
+    place-items: center;
+}
+
+/* table font size */
+.post-content table > thead > * > * {
+    font-size: 1rem;
+}
+
+.post-content table > tbody > * > * {
+    font-size: 1rem;
+}
+
 body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1rem;

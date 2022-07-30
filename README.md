@@ -16,6 +16,7 @@ The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of doc
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/themes/hugo-papermod/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
 ![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
+[![Discord](https://img.shields.io/discord/971046860317921340?label=Discord)](https://discord.gg/ahpmTvhVmp)
 
 ---
 
@@ -71,13 +72,13 @@ Read Wiki For More Details => **[PaperMod-FAQs](https://github.com/adityatelange
 
 ---
 
-## Release Changelog
+## Release Changelog 📃
 
 Release ChangeLog has info about stuff added: **[Releases](https://github.com/adityatelange/hugo-PaperMod/releases)**
 
 ---
 
-## [Pagespeed Insights (100% ?)](https://pagespeed.web.dev/report?url=https://adityatelange.github.io/hugo-PaperMod/)
+## [Pagespeed Insights (100% ?)](https://pagespeed.web.dev/report?url=https://adityatelange.github.io/hugo-PaperMod/) 👀
 
 ---
 
@@ -88,3 +89,8 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Feather Icons**](https://github.com/feathericons/feather)
 -   [**Simple Icons**](https://github.com/simple-icons/simple-icons)
 -   **All Contributors and Supporters**
+
+## Stargazers over time 📈
+
+<kbd>[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg)](https://starchart.cc/adityatelange/hugo-PaperMod)</kbd>
+
