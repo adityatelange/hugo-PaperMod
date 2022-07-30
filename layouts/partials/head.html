@@ -68,6 +68,17 @@
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
+{{- /* noscript */}}
+<noscript>
+    {{- $noscript := (resources.Get "css/includes/noscript.css") }}
+    {{- if not site.Params.assets.disableFingerprinting }}
+    {{- $noscript := $noscript | fingerprint }}
+    <link crossorigin="anonymous" href="{{ $noscript.RelPermalink }}" integrity="{{ $noscript.Data.Integrity }}" rel="preload stylesheet" as="style">
+    {{- else }}
+    <link crossorigin="anonymous" href="{{ $noscript.RelPermalink }}" rel="preload stylesheet" as="style">
+    {{- end }}
+</noscript>
+
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
