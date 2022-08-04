@@ -25,3 +25,15 @@
 
 - id: code_copied
   translation: "copiato!"
+
+- id: cookie_approve
+  translation: "Accetta"
+
+- id: cookie_deny
+  translation: "Rifiuta"
+
+- id: cookie_more_info
+  translation: "Più Info"
+
+- id: cookie_message
+  translation: "Vorrei utilizzare cookie e script di terze parti per migliorare la funzionalità di questo sito web."

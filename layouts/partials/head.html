@@ -163,7 +163,11 @@
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+{{- if eq .Site.Params.cookieEnabled true }}
+{{- template "partials/templates/cookie-consent.html" . }}
+{{- else }}
 {{- template "_internal/google_analytics.html" . }}
+{{- end -}}
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}

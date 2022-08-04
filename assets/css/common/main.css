@@ -66,3 +66,49 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
+
+#cookie-notice {
+    font-size: medium;
+    padding: 0.5rem 1rem;
+    display: none;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    padding-top: 15;
+    padding-bottom: 10px;
+    width: 100%;
+    background: rgb(70, 70, 70);
+    color: rgba(255,255,255,0.8);
+}
+    
+#cookie-notice a {
+    font-weight: 600;
+    display: inline-flex;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+#cookie-notice-accept {
+    color:rgb(86, 228, 58);
+}
+
+#cookie-notice-deny {
+    color:rgb(243, 34, 34);
+}
+
+@media (max-width: 767px) {
+    #cookie-notice span {
+        display: block;
+        padding-top: 3px;
+        margin-bottom: 1rem;
+    }
+    #cookie-notice a {
+        position: relative;
+        bottom: 4px;
+    }
+    #cookie-notice {
+        left: 0px;
+    }
+}
+    
