@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "পূর্বের পাতা"
+  translation: "পূর্ববর্তী"
 
 - id: next_page
-  translation: "পরবর্তী পাতা"
+  translation: "পরবর্তী"
 
 - id: read_time
   translation:
