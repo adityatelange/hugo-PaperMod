@@ -1,17 +1,13 @@
 <div>
     <h1>TEST</h1>
-    <canvas id='{{ .Get "id"}}' width='{{ .Get "width" }}' height='{{ .Get "height" }}'></canvas>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
-        integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer">
-    </script>
+    {{ $data := index .Site.Data (split (.Get "data") ".") }}
+    {{ $chartID := .Get "id" | default (md5 (jsonify $data)) }}
+    <canvas id='{{ $chartID }}' width='{{ .Get "width" }}' height='{{ .Get "height" }}'></canvas>
     <script>
         (function () {
-            var ctx = document.getElementById('{{ .Get "id"}}');
-            var myChart = new Chart(ctx, {{ index .Site.Data (split (.Get "data") ".") }});
+            var ctx = document.getElementById('{{ $chartID }}');
+            var myChart = new Chart(ctx, {{ $data }});
         })();
     </script>
 </div>
-{{/*  {{ .Page.Store.Set "hasChart" true }}  */}}
+{{ .Page.Store.Set "hasChart" true }}
