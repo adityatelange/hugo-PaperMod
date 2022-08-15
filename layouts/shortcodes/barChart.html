@@ -1,0 +1,38 @@
+<div>
+    {{ $data := index .Site.Data (split (.Get "data") ".") }}
+    {{ $chartID := .Get "id" | default (md5 (jsonify $data)) }}
+    {{ $colors := .Site.Data.charts.colors.all }}
+    {{ $bgColors := .Site.Data.charts.colors.bgAll }}
+    <canvas id='{{ $chartID }}' width='{{ .Get "width" }}' height='{{ .Get "height" }}'></canvas>
+    <script>
+        (function () {
+            var ctx = document.getElementById('{{ $chartID }}');
+            var myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: {{ $data.labels }},
+                    datasets: [{
+                        label: null,
+                        data: {{ $data.data }},
+                        backgroundColor: {{ $bgColors }},
+                        borderColor: {{ $colors }},
+                        borderWidth: 1
+                    }],
+                },
+                options: {
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                            }
+                        }]
+                    }
+                }  
+            });
+        })();
+    </script>
+</div>
+{{ .Page.Store.Set "hasChart" true }}

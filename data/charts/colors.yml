@@ -1,0 +1,28 @@
+red: &red '#FF6384FF' 
+bgRed: &bgRed '#FF638433'
+blue: &blue '#36A2EBFF'
+bgBlue: &bgBlue '#36A2EB33'
+yellow: &yellow '#FFCE56FF'
+bgYellow: &bgYellow '#FFCE5633'
+aquamarine: &aquamarine '#4BC0C0FF'
+bgAquamarine: &bgAquamarine '#4BC0C033'
+purple: &purple '#9966FFFF'
+bgPurple: &bgPurple '#9966FF33'
+orange: &orange '#FF9F40FF'
+bgOrange: &bgOrange '#FF9F4033'
+darkseagreen: &darkseagreen '#8FBC8FFF'
+bgDarkseagreen: &bgDarkseagreen '#8FBC8F33'
+cyan: &cyan '#00FFFFFF'
+bgCyan: &bgCyan '#00FFFF33'
+brown: &brown '#A52A2AFF'
+bgBrown: &bgBrown '#A52A2A33'
+fuchsia: &fuchsia '#FF00FFFF'
+bgFuchsia: &bgFuchsia '#FF00FF33'
+lightskyblue: &lightskyblue '#87CEFAFF'
+bgLightskyblue: &bgLightskyblue '#87CEFA33'
+
+
+
+all: [*red, *blue, *yellow, *aquamarine, *purple, *orange, *darkseagreen, *cyan, *brown, *fuchsia, *lightskyblue,]
+
+bgAll: [*bgRed, *bgBlue, *bgYellow, *bgAquamarine, *bgPurple, *bgOrange, *bgDarkseagreen, *bgCyan, *bgBrown, *bgFuchsia, *bgLightskyblue]
