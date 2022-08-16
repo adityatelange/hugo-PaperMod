@@ -13,14 +13,16 @@
     {{ end }}
 </head>
 
-<body class="
+{{- $bodyClass := "" -}}
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
+{{- $bodyClass = print $bodyClass " list" -}}
 {{- end -}}
 {{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
+{{- $bodyClass = print $bodyClass " dark" -}}
 {{- end -}}
-" id="top">
+
+
+<body class="{{ $bodyClass }}" id="top">
     {{- partialCached "header.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
