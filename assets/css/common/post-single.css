@@ -3,10 +3,6 @@
     margin: 24px auto var(--content-gap) auto;
 }
 
-.post-title {
-    margin-bottom: 2px;
-    font-size: 40px;
-}
 
 .post-description {
     margin-top: 10px;
