@@ -1,21 +1,21 @@
 import * as params from '@params';
 
-var fuse; // holds our search engine
-var resList = document.getElementById('searchResults');
-var sInput = document.getElementById('searchInput');
-var first, last, current_elem = null
-var resultsAvailable = false;
+let fuse; // holds our search engine
+let resList = document.getElementById('searchResults');
+let sInput = document.getElementById('searchInput');
+let first, last, current_elem = null
+let resultsAvailable = false;
 
 // load our search index
 window.onload = function () {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText);
+                let data = JSON.parse(xhr.responseText);
                 if (data) {
                     // fuse.js options; check fuse.js website for details
-                    var options = {
+                    let options = {
                         distance: 100,
                         threshold: 0.4,
                         ignoreLocation: true,
@@ -106,12 +106,12 @@ sInput.addEventListener('search', function (e) {
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
-    var ae = document.activeElement;
+    let ae = document.activeElement;
 
     let inbox = document.getElementById("searchbox").contains(ae)
 
     if (ae === sInput) {
-        var elements = document.getElementsByClassName('focus');
+        let elements = document.getElementsByClassName('focus');
         while (elements.length > 0) {
             elements[0].classList.remove('focus');
         }
