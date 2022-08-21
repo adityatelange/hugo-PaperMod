@@ -43,7 +43,7 @@
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
-            
+
             {{- if site.Title }}
                 <a 
                     accesskey="h" 
@@ -64,7 +64,7 @@
 
                             {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true) -}}
                                 {{- if site.Params.label.iconHeight -}}
-                                    {{- $img = $img.Resize (printf "x%s" site.Params.label.iconHeight) -}}
+                                    {{- $img = $img.Resize (printf "x%d" site.Params.label.iconHeight) -}}
 
                                 {{ else -}}
                                     {{- $img = $img.Resize "x30" -}}
