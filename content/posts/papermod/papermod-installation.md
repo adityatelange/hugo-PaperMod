@@ -186,6 +186,7 @@ params:
     text: "Home"
     icon: /apple-touch-icon.png
     iconHeight: 35
+    iconWidth: 35
 
   # profile-mode
   profileMode:
