@@ -54,17 +54,23 @@
                     {{- end -}}
                     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
                     {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                        {{- if site.Params.label.iconHeight }}
+                        {{- if (and (site.Params.label.iconHeight) (site.Params.label.iconWidth)) }}
+                            {{- $img = $img.Resize (printf "%dx%d" site.Params.lable.iconWidth site.Params.label.iconHeight) }}
+                        {{- else if site.Params.label.iconHeight}}
                             {{- $img = $img.Resize (printf "x%d" site.Params.label.iconHeight) }}
+                        {{ else if site.Params.label.iconWidth }}
+                            {{- $img = $img.Resize (printf "%dx" site.Params.label.iconWidth) }}
                         {{ else }}
-                            {{- $img = $img.Resize "x30" }}
+                            {{- $img = $img.Resize "30x30" }}
                         {{- end }}
                     {{- end }}
                     <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
-                        height="{{- site.Params.label.iconHeight | default "30" -}}">
+                        height="{{- site.Params.label.iconHeight | default "30" -}}"
+                        width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- else }}
                 <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
-                    height="{{- site.Params.label.iconHeight | default "30" -}}">
+                    height="{{- site.Params.label.iconHeight | default "30" -}}
+                    width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
