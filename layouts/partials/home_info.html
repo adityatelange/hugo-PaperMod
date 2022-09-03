@@ -1,5 +1,9 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
+	<div class="home-info__profile-img">
+		<img draggable="false" src="{{ .ImageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}"
+				height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+	</div>
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>

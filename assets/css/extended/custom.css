@@ -1,0 +1,17 @@
+.home-info__profile-img {
+	display: flex;
+	justify-content: center;
+}
+
+.home-info__profile-img > img{
+	border-radius: 100%;
+	margin-bottom: 16px;
+}
+
+.entry-header > h1{
+	text-align: center;
+}
+
+.entry-header {
+	margin-bottom: 24px;
+}
