@@ -7,7 +7,7 @@
 - id: read_time
   translation:
     one : "1 minuta"
-    other: "{{ .Count }} minuta"
+    other: "{{ .Count }} minute"
 
 - id: words
   translation:
