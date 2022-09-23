@@ -1,0 +1,13 @@
+{{ $related := first 5 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+{{ with $related }}
+  <div class="related">
+    <h3 class="see-also">{{- i18n "related" -}}</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

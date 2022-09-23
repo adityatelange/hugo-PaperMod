@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "copied!"
+
+- id: related
+  translation: "See also"

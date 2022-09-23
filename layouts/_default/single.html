@@ -36,6 +36,12 @@
   {{- end }}
 
   <footer class="post-footer">
+
+    {{/*  Show related posts  */}}
+    {{- if (.Param "ShowRelatedContent") }}
+      {{- partial "related.html" . }}
+    {{- end }}
+
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
