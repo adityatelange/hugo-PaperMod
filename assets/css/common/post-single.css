@@ -391,6 +391,16 @@ h6:hover .anchor {
     text-align: left;
 }
 
+.paginav .name {
+  display: none;
+}
+
+@media screen and (min-width: 540px) {
+  .paginav .name {
+    display: block;
+  }
+}
+
 h1>a>svg {
     display: inline;
 }
