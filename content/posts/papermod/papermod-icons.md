@@ -15,7 +15,7 @@ draft: true
 | --------------- | ------------------------------- |
 | `123rf`         | 123rf.com                       |
 | `adobestock`    | stock.adobe.com                 |
-| `apple music`   | music.apple.com                 |
+| `applemusic`    | music.apple.com                 |
 | `behance`       | behance.net                     |
 | `bilibili`      | bilibili.com                    |
 | `bitcoin`       | -                               |
