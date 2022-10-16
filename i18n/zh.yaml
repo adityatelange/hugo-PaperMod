@@ -31,3 +31,9 @@
 
 - id: code_copied
   translation: "已复制！"
+
+- id: Categories
+  translation: "分类"
+
+- id: Tags
+  translation: "标签"

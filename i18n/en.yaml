@@ -31,3 +31,9 @@
 
 - id: code_copied
   translation: "copied!"
+
+- id: Categories
+  translation: "Categories"
+
+- id: Tags
+  translation: "Tags"
