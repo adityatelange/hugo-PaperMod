@@ -91,3 +91,36 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+
+.sub-menu {
+    position: absolute;
+    visibility: hidden;
+    list-style: none;
+    z-index: 10;
+    border-radius: var(--radius);
+    padding: 0 15px;
+    background-color: var(--code-bg);
+    border: 1px solid var(--tertiary);
+}
+
+.sub-menu a:hover {
+    text-shadow: 0px 0px 1px currentColor;
+}
+
+.menu-item:hover .sub-menu {
+    visibility: visible;
+    display: block;
+}
+
+.sub-menu:hover {
+    visibility: visible;
+}
+
+.arrow-down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--primary);
+    position: relative;
+    top: 1em;
+    left: 6px;
+}

@@ -125,7 +125,7 @@
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
-            <li>
+            <li class="menu-item">
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
@@ -141,7 +141,17 @@
                         <path d="M10 14L21 3"></path>
                     </svg>
                     {{- end }}
+                    {{ if .HasChildren }}
+                    <i class="arrow-down"></i>
+                    {{ end }}
                 </a>
+            {{ if .HasChildren }}
+                <div class="sub-menu">
+                    {{ range .Children }}
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
             </li>
             {{- end }}
         </ul>
