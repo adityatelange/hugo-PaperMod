@@ -67,11 +67,15 @@
 {{- /* Add extended css after theme style */ -}}
 {{- $stylesheet := (slice $license_css $core $extended) | resources.Concat "assets/css/stylesheet.css"  }}
 
+{{- if site.Params.assets.inlineCSS }}
+<style>{{ $stylesheet.Content | safeCSS }}</style>
+{{- else }}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
 {{- else }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+{{- end }}
 {{- end }}
 
 {{- /* Search */}}
