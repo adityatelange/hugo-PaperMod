@@ -76,13 +76,6 @@ Direct Links:
 - [v2.0](https://github.com/adityatelange/hugo-PaperMod/archive/v2.0.zip)
 - [v1.0](https://github.com/adityatelange/hugo-PaperMod/archive/v1.0.zip)
 
-### Finally ...
-
-Add in `config.yml`:
-
-```yml
-theme: "PaperMod"
-```
 ### Method 4
 
  - Install [Go programming language](https://go.dev/doc/install) in your operating system.
@@ -105,6 +98,22 @@ module:
 ```
 hugo mod get -u
 ```
+
+### Finally ...
+
+Add in `config.yml`:
+
+```yml
+theme: "PaperMod"
+```
+
+---
+
+## Videos featuring Papermod
+
+You can go through few videos which are available on YouTube for getting to know the creator's thoughts as well as the setup process.
+
+▶️ https://youtube.com/playlist?list=PLeiDFxcsdhUrzkK5Jg9IZyiTsIMvXxKZP
 
 ---
 

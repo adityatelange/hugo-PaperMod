@@ -80,7 +80,7 @@ draft: true
 | `steam`         | steampowered.com                |
 | `strava`        | strava.com                      |
 | `telegram`      | telegram.org                    |
-| `tiktok         | tiktok.com                      |
+| `tiktok`        | tiktok.com                      |
 | `twitch`        | twitch.tv                       |
 | `twitter`       | twitter.com                     |
 | `unsplash`      | unsplash.com                    |
@@ -117,10 +117,10 @@ Usage:
 
 ```yml
 params:
-  ShowShareButtons: true
+    ShowShareButtons: true
 ```
 
 ```yml
 params:
-  ShareButtons: ["linkedin", "twitter"] # To customize which share buttons to be enabled on page
+    ShareButtons: ["linkedin", "twitter"] # To customize which share buttons to be enabled on page
 ```

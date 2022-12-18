@@ -46,6 +46,7 @@ weight: 5
 | `comments`                             | boolean       | true \| false             | To show/hide comments                                                                     |
 | `hideFooter`                           | boolean       | true \| false             | To Hide Footer Text om the end of page                                                    |
 | `CanonicalLinkText`                    | string        | 'Originally published at' | To show text before canonical URL's hostname                                              |
+| `displayFullLangName`                  | boolean       | true \| false             | To show `languageName` under a language in Language switch header                                            |
 | `analytics.google.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Google Analytics                                                |
 | `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                  | Site Verification Tag for Bing                                                            |
 | `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Yandex                                                          |
