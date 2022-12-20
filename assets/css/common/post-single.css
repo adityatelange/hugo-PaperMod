@@ -72,6 +72,8 @@
 .post-content a,
 .toc a:hover {
     box-shadow: 0 1px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .post-content a code {
