@@ -1,0 +1,5 @@
+{{- $Img := (.Get "url") }}
+{{- $height := (.Get "height") }}
+{{- $alt := (.Get "alt") }}
+
+<img class="in-text" height="{{ $height | default `15` }}" src="{{$Img}}" alt="{{$alt}}">

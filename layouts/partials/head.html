@@ -1,115 +1,122 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
 <meta name="robots" content="index, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
 
 {{- /* Title */}}
-<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ (.Site.Params.label.text | default .Site.Title) }}</title>
+<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ (site.Params.label.text | default site.Title) }}</title>
 
 {{- /* Meta */}}
 {{- if .IsHome }}
-{{ with .Site.Params.keywords -}}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />{{ end }}
+{{ with site.Params.keywords -}}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">{{ end }}
 {{- else }}
 <meta name="keywords" content="{{ if .Params.keywords -}}
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
-    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
 {{- end }}
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
-    {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
-    {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+    {{- .Summary | default (printf "%s - %s" .Title  site.Title) }}{{- else }}
+    {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
-<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
-{{- if .Site.Params.analytics.google.SiteVerificationTag }}
-<meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
+<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
+{{- if site.Params.analytics.google.SiteVerificationTag }}
+<meta name="google-site-verification" content="{{ site.Params.analytics.google.SiteVerificationTag }}">
 {{- end }}
-{{- if .Site.Params.analytics.yandex.SiteVerificationTag }}
-<meta name="yandex-verification" content="{{ .Site.Params.analytics.yandex.SiteVerificationTag }}" />
+{{- if site.Params.analytics.yandex.SiteVerificationTag }}
+<meta name="yandex-verification" content="{{ site.Params.analytics.yandex.SiteVerificationTag }}">
 {{- end }}
-{{- if .Site.Params.analytics.bing.SiteVerificationTag }}
-<meta name="msvalidate.01" content="{{ .Site.Params.analytics.bing.SiteVerificationTag }}" />
+{{- if site.Params.analytics.bing.SiteVerificationTag }}
+<meta name="msvalidate.01" content="{{ site.Params.analytics.bing.SiteVerificationTag }}">
+{{- end }}
+{{- if site.Params.analytics.naver.SiteVerificationTag }}
+<meta name="naver-site-verification" content="{{ site.Params.analytics.naver.SiteVerificationTag }}">
 {{- end }}
 
 {{- /* Styles */}}
+
+{{- /* includes */}}
+{{- $includes := slice }}
+{{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
+
+{{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
+    {{- $ScrollStyle := (resources.Get "css/includes/scroll-bar.css") }}
+    {{- $includes = (append $ScrollStyle $includes) }}
+{{- end }}
+
+{{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
+
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
+{{- $license_css := (resources.Get "css/core/license.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
 {{- /* include `an-old-hope` if hljs is on */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default false) }}
-{{- $hljs := (cond ($isHLJSdisabled) (" " | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
+{{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default false) }}
+{{- $hljs := (cond ($isHLJSdisabled) (".chroma { background-color: unset !important;}" | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $hljs $media) | resources.Concat "assets/css/core.css" }}
-{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+{{- $core := (slice $theme_vars $reset $common $hljs $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
-{{- $stylesheet := (slice $core $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}
+{{- $stylesheet := (slice $license_css $core $extended) | resources.Concat "assets/css/stylesheet.css"  }}
 
-{{- if not .Site.Params.assets.disableFingerprinting }}
+{{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
 {{- else }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
-{{- with .Site.Params.profileMode }}
-{{- if and .enabled .imageUrl $.IsHome }}
-<link rel="preload" href="{{ .imageUrl }}" as="image">
-{{- end }}
-{{- end }}
-
-{{- with .Site.Params.label.icon }}
-<link rel="preload" href="{{ . }}" as="image">
-{{- end }}
-
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" .Site.Params.fuseOpts)) }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
+{{- $license_js := resources.Get "js/license.js" }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
 {{- else }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 {{- end }}
 {{- end -}}
 
 {{- /* Highlight.js */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
+{{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
-{{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
     onload="hljs.initHighlightingOnLoad();"></script>
 {{- else }}
-{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
+{{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" }}
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
 {{- end }}
 
 {{- /* Favicons */}}
-<link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
-<link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
-<meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
-<meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
+<meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
+<meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 {{- range .AllTranslations -}}
-<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 
 <noscript>
@@ -120,7 +127,7 @@
         }
 
     </style>
-    {{- if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark")) }}
+    {{- if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark")) }}
     <style>
         @media (prefers-color-scheme: dark) {
             :root {
@@ -155,7 +162,7 @@
 {{- partial "extend_head.html" . -}}
 
 {{- /* Misc */}}
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- template "_internal/google_analytics.html" . }}
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}

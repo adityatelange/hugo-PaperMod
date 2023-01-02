@@ -1,7 +1,7 @@
 {{- /* theme-toggle is enabled */}}
-{{- if (not .Site.Params.disableThemeToggle) }}
+{{- if (not site.Params.disableThemeToggle) }}
 {{- /* theme is light */}}
-{{- if (eq .Site.Params.defaultTheme "light") }}
+{{- if (eq site.Params.defaultTheme "light") }}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -9,7 +9,7 @@
 
 </script>
 {{- /* theme is dark */}}
-{{- else if (eq .Site.Params.defaultTheme "dark") }}
+{{- else if (eq site.Params.defaultTheme "dark") }}
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -30,7 +30,7 @@
 </script>
 {{- end }}
 {{- /* theme-toggle is disabled and theme is auto */}}
-{{- else if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark"))}}
+{{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
@@ -42,20 +42,40 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
-            {{- if .Site.Title }}
+            {{- $label_text := (site.Params.label.text | default site.Title) }}
+            {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
-                {{- if .Site.Params.label.icon }}
-                <img src="{{- .Site.Params.label.icon | absURL -}}" alt="logo" aria-label="logo"
-                    height="{{- .Site.Params.label.iconHeight | default " 30px" -}}">
+                {{- if site.Params.label.icon }}
+                {{- $img := resources.Get site.Params.label.icon }}
+                {{- if $img }}
+                    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                    {{- if hugo.IsExtended -}}
+                        {{- $processableFormats = $processableFormats | append "webp" -}}
+                    {{- end -}}
+                    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                        {{- if site.Params.label.iconHeight }}
+                            {{- $img = $img.Resize (printf "x%d" site.Params.label.iconHeight) }}
+                        {{ else }}
+                            {{- $img = $img.Resize "x30" }}
+                        {{- end }}
+                    {{- end }}
+                    <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
+                        height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- else }}
+                <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
+                    height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- end -}}
+                {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
+                    {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
                 {{- $label_text -}}
             </a>
             {{- end }}
             <span class="logo-switches">
                 {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
-                {{- with $.Site.Home.AllTranslations }}
+                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
+                {{- with site.Home.AllTranslations }}
                 <ul class="lang-switch">
                     {{- if $separator }}<li>|</li>{{ end }}
                     {{- range . -}}
@@ -63,7 +83,7 @@
                     <li>
                         <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
                             aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
-                            {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                            {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
                             {{- .Language.LanguageName | emojify -}}
                             {{- else }}
                             {{- .Lang | title -}}
@@ -74,14 +94,14 @@
                     {{- end}}
                 </ul>
                 {{- end }}
-            </span>
+            </div>
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
-            {{- range .Site.Menus.main }}
+            {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
-            {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
+            {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
@@ -90,10 +110,18 @@
                         {{- .Name -}}
                         {{ .Post -}}
                     </span>
+                    {{- if (findRE "://" .URL) }}&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
                 </a>
             </li>
             {{- end }}
-            {{- if (not .Site.Params.disableThemeToggle) }}
+            {{- if (not site.Params.disableThemeToggle) }}
             <li>
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

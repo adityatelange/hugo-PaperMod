@@ -1,19 +1,33 @@
 - id: prev_page
-  translation: "לעמוד הקודם"
+  translation: "קודם"
 
 - id: next_page
-  translation: "לעמוד הבא"
+  translation: "הבא"
 
 - id: read_time
   translation:
     one : "דקה אחת"
-    other: "{{ .Count }} דקות"
+    other: "דקות {{ .Count }}"
+
+- id: words
+  translation:
+    one : "word"
+    other: "מילים {{ .Count }} "
 
 - id: toc
-  translation: "תוכן עניינים"
+  translation: "תוכן העניינים"
 
 - id: translations
   translation: "תרגומים"
 
 - id: home
-  translation: "דף בית"
+  translation: "בית"
+
+- id: edit_post
+  translation: "ערוך"
+
+- id: code_copy
+  translation: "העתק"
+
+- id: code_copied
+  translation: "!הועתק"

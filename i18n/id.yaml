@@ -1,16 +1,33 @@
 - id: prev_page
-  translation: "Halaman Sebelumnya"
+  translation: "Sebelumnya"
 
 - id: next_page
-  translation: "Halaman Selanjutnya"
+  translation: "Selanjutnya"
 
 - id: read_time
   translation:
     one : "1 menit"
     other: "{{ .Count }} menit"
 
+- id: words
+  translation:
+    one : "kata"
+    other: "{{ .Count }} kata"
+
 - id: toc
-  translation: "Daftar Isi"
+  translation: "Daftar isi"
 
 - id: translations
   translation: "Terjemahan"
+
+- id: home
+  translation: "Beranda"
+
+- id: edit_post
+  translation: "Sunting"
+
+- id: code_copy
+  translation: "salin"
+
+- id: code_copied
+  translation: "disalin!"

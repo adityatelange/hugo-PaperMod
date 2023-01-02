@@ -26,7 +26,6 @@
 .profile img {
     display: inline-table;
     border-radius: 50%;
-    pointer-events: none;
 }
 
 .buttons {
