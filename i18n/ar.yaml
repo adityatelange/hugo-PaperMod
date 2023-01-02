@@ -1,0 +1,22 @@
+- id: prev_page
+  translation: "الصفحة السابقة"
+
+- id: next_page
+  translation: "الصفحة التالية"
+
+- id: read_time
+  translation:
+    one: "دقيقة واحدة"
+    two: "دقيقتان"
+    few: "بضع ثوان"
+    zero: "الآن"
+    other: "دقائق {{ .Count }}"
+
+- id: toc
+  translation: "فهرس المحتوى"
+
+- id: translations
+  translation: "ترجمات أخرى"
+  
+- id: home
+  translation: "الصفحة الرئيسية"

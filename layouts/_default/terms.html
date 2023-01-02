@@ -1,8 +1,13 @@
-{{ define "main" }}
+{{- define "main" }}
 
 {{- if .Title }}
 <header class="page-header">
     <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
 </header>
 {{- end }}
 
@@ -11,7 +16,7 @@
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
     {{- $count := .Count }}
-    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
     <li>
         <a href="{{ .RelPermalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
     </li>
@@ -19,4 +24,4 @@
     {{- end }}
 </ul>
 
-{{ end  }}{{/* end main */}}
+{{- end }}{{/* end main */ -}}

@@ -1,0 +1,20 @@
+- id: prev_page
+  translation: "Oldingi sahifa"
+
+- id: next_page
+  translation: "Keyingi sahifa"
+
+- id: read_time
+  translation:
+    one : "Bir daqiqa"
+    other: "{{ .Count }} daqiqa"
+
+- id: toc
+  translation: "Mundarija"
+
+- id: translations
+  translation: "Tarjimalar"
+
+- id: home
+  translation: "Bosh sahifa"
+  

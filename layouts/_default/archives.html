@@ -2,9 +2,19 @@
 
 <header class="page-header">
   <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
 </header>
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if site.Params.ShowAllPagesInArchive }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
 <div class="archive-year">
@@ -15,11 +25,12 @@
   <div class="archive-month">
     <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-posts">
-      {{- range .Pages  }}
+      {{- range .Pages }}
       {{- if eq .Kind "page" }}
       <div class="archive-entry">
         <h3 class="archive-entry-title">
           {{- .Title | markdownify }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
         </h3>
         <div class="archive-meta">
           {{- partial "post_meta.html" . -}}
@@ -35,4 +46,4 @@
 {{- end }}
 {{- end }}
 
-{{- end  }}{{/* end main */}}
+{{- end }}{{/* end main */}}

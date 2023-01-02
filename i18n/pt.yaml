@@ -1,0 +1,21 @@
+- id: prev_page
+  translation: "Página Anterior"
+
+- id: next_page
+  translation: "Próxima Página"
+
+- id: read_time
+  translation:
+    one: "1 minuto"
+    other: "{{ .Count }} minutos"
+
+- id: words
+  translation:
+    one : "palavra"
+    other: "{{ .Count }} palavras"
+
+- id: toc
+  translation: "Conteúdo"
+
+- id: translations
+  translation: "Traduções"

@@ -1,0 +1,27 @@
+- id: prev_page
+  translation: "Pag Prec"
+
+- id: next_page
+  translation: "Pag Succ"
+
+- id: read_time
+  translation:
+    one: "1 minuto"
+    other: "{{ .Count }} minuti"
+
+- id: words
+  translation:
+    one : "parola"
+    other: "{{ .Count }} parole"
+
+- id: toc
+  translation: "Tabella dei Contenuti"
+
+- id: translations
+  translation: "Traduzioni"
+
+- id: code_copy
+  translation: "copia"
+
+- id: code_copied
+  translation: "copiato!"

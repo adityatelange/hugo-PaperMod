@@ -1,7 +1,7 @@
 .terms-tags li {
     display: inline-block;
     margin: 10px;
-    font-weight: 500
+    font-weight: 500;
 }
 
 .terms-tags a {
@@ -9,10 +9,10 @@
     padding: 3px 10px;
     background: var(--tertiary);
     border-radius: 6px;
-    transition: transform .1s
+    transition: transform 0.1s;
 }
 
-.terms-tags a:hover {
+.terms-tags a:active {
     background: var(--tertiary);
-    transform: scale(.96)
+    transform: scale(0.96);
 }

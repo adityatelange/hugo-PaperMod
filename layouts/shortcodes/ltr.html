@@ -1,0 +1,15 @@
+{{ $.Scratch.Set "md" false }}
+
+{{ if .IsNamedParams }}
+{{ $.Scratch.Set "md" (.Get "md") }}
+{{ else }}
+{{ $.Scratch.Set "md" (.Get 0) }}
+{{ end }}
+
+<div dir="ltr">
+  {{ if eq ($.Scratch.Get "md") false }}
+    {{ .Inner }}
+  {{ else }}
+    {{ .Inner | markdownify }}
+  {{ end }}
+</div>

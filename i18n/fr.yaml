@@ -1,5 +1,33 @@
 - id: prev_page
-  translation: "Page Précédente"
+  translation: "Page précédente"
 
 - id: next_page
-  translation: "Page Suivante"
+  translation: "Page suivante"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: words
+  translation:
+    one : "mot"
+    other: "{{ .Count }} mots"
+
+- id: toc
+  translation: "Table des matières"
+
+- id: translations
+  translation: "Traductions"
+
+- id: home
+  translation: "Accueil"
+
+- id: edit_post
+  translation: "Modifier"
+
+- id: code_copy
+  translation: "Copier"
+
+- id: code_copied
+  translation: "Copié !"
