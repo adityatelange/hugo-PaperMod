@@ -191,6 +191,13 @@
     margin-bottom: 0;
 }
 
+.post-content .highlight + ol,
+.post-content .highlight + p,
+.post-content .highlight + figure,
+.post-content .highlight + ul {
+    margin-top: var(--content-gap)
+}
+
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
