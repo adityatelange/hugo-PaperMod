@@ -71,7 +71,8 @@ weight: 5
 | ------------------ | ------- | ----------------------- | ------------------------------------------------ |
 | `label.text`       | string  | 'Home'                  | To display different label text other than title |
 | `label.icon`       | string  | '/apple-touch-icon.png' | To display a logo image in label                 |
-| `label.iconHeight` | integer | 35                      | To set size of label logo image                  |
+| `label.iconHeight` | integer | 35                      | To set height of label logo image                  |
+| `label.iconWidth`  | integer | 35                      | To set width of label logo image                  |
 
 #### profileMode
 

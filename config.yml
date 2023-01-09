@@ -163,6 +163,7 @@ params:
     #     text: "Home"
     #     icon: icon.png
     #     iconHeight: 35
+    #     iconWidth: 35
 
     # analytics:
     #     google:
