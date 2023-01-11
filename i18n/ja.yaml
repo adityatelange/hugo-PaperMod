@@ -9,8 +9,25 @@
     one : "1 分"
     other: "{{ .Count }} 分"
 
+- id: words
+  translation:
+    one: "文字"
+    other: "{{ .Count }} 文字"
+
 - id: toc
   translation: "目次"
 
 - id: translations
   translation: "言語"
+
+- id: home
+  translation: "ホーム"
+
+- id: edit_post
+  translation: "編集"
+
+- id: code_copy
+  translation: "コピー"
+
+- id: code_copied
+  translation: "コピーされました!"

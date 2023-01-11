@@ -1,13 +1,18 @@
 - id: prev_page
-  translation: "Önceki Sayfa"
+  translation: "Önceki"
 
 - id: next_page
-  translation: "Sonraki Sayfa"
+  translation: "Sonraki"
 
 - id: read_time
   translation:
     one : "1 dk"
     other: "{{ .Count }} dk"
+
+- id: words
+  translation:
+    one : "kelime"
+    other: "{{ .Count }} kelime"
 
 - id: toc
   translation: "İçindekiler"
@@ -17,6 +22,9 @@
 
 - id: home
   translation: "Anasayfa"
+
+- id: edit_post
+  translation: "Düzenle"
 
 - id: code_copy
   translation: "Kopyala"

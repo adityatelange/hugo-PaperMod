@@ -2,7 +2,10 @@
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
         {{- if .imageUrl -}}
-        {{- $img := resources.Get .imageUrl }}
+        {{- $img := "" }}
+        {{- if not (urls.Parse .imageUrl).IsAbs }}
+            {{- $img = resources.Get .imageUrl }}
+        {{- end }}
         {{- if $img }}
             {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
             {{- if hugo.IsExtended -}}
