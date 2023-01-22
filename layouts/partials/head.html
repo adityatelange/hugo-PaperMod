@@ -103,13 +103,11 @@
 {{- end }}
 
 {{- /* Favicons */}}
-<link rel="icon" type="image/x-icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
-<link rel="shortcut icon" sizes="192x192" href="{{ site.Params.assets.android_icon | default "android-icon-192x192.png" | absURL }}">
-<link rel="manifest" href="{{ site.Params.assets.site_webmanifest | default "site.webmanifest" | absURL }}">
-<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}" color="#2e2e33">
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}" sizes="any"><!-- 32×32 -->
+<link rel="icon" href="{{ site.Params.assets.icon | default "icon.svg" | absURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}"><!-- 180×180 -->
+<link rel="manifest" href="{{ site.Params.assets.webmanifest | default "site.webmanifest" | absURL }}"><!-- 192x192 + 512x512 -->
+{{- /* Colors */}}
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 
