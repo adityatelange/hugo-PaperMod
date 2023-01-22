@@ -81,7 +81,9 @@
 }
 
 .entry-cover,
-.entry-isdraft {
+.entry-isdraft,
+.entry-isfuture,
+.entry-isexpired {
     font-size: 14px;
     color: var(--secondary);
 }

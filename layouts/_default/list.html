@@ -68,6 +68,8 @@
     <h2>
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+      {{- if and (not .Date.IsZero) (gt (time .Date) now) }}<sup><span class="entry-isfuture">&nbsp;&nbsp;[future]</span></sup>{{- end }}
+      {{- if and (not .ExpiryDate.IsZero) (gt now (time .ExpiryDate)) }}<sup><span class="entry-isexpired">&nbsp;&nbsp;[expired]</span></sup>{{- end }}
     </h2>
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
