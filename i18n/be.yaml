@@ -1,0 +1,39 @@
+- id: prev_page
+  translation: "Папярэдняя"
+
+- id: next_page
+  translation: "Наступная"
+
+- id: read_time
+  translation:
+    zero: "0 хвілін"
+    one: "1 хвіліна"
+    few: "{{ .Count }} хвіліны"
+    many: "{{ .Count }} хвілін"
+    other: "{{ .Count }} хвілін"
+
+- id: words
+  translation:
+    zero: "няма слоў"
+    one: "1 слова"
+    few: "{{ .Count }} слова"
+    many: "{{ .Count }} слоў"
+    other: "{{ .Count }} слова"
+
+- id: toc
+  translation: "Змест"
+
+- id: translations
+  translation: "Пераклады"
+
+- id: home
+  translation: "Галоўная"
+
+- id: edit_post
+  translation: "Рэдагаваць"
+
+- id: code_copy
+  translation: "капіяваць"
+
+- id: code_copied
+  translation: "скапіявана!"
