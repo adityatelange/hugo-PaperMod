@@ -96,27 +96,42 @@
                 </button>
                 {{- end }}
 
-                {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
-                {{- with site.Home.AllTranslations }}
-                <ul class="lang-switch">
-                    {{- if $separator }}<li>|</li>{{ end }}
-                    {{- range . -}}
-                    {{- if ne $lang .Lang }}
-                    <li>
-                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
-                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
-                            {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
-                            {{- .Language.LanguageName | emojify -}}
-                            {{- else }}
-                            {{- .Lang | title -}}
-                            {{- end -}}
-                        </a>
-                    </li>
-                    {{- end -}}
-                    {{- end}}
-                </ul>
-                {{- end }}
+                {{/* LANGUAGE SELECTOR */}}
+                {{ if .Site.IsMultiLingual }}
+                    {{/* set vars with page data */}}
+                    {{ $currentLang := .Lang }}
+                    {{ $allTranslations := .Translations }}
+
+                    {{ $separator := or $label_text (not site.Params.disableThemeToggle)}}
+
+                    <ul class="lang-switch">
+                        {{ if $separator }}<li>|</li>{{ end }}
+                        {{ range $anySiteLang := .Site.Home.AllTranslations }}
+
+                            {{/* code here can only access page-related data via vars set above */}}
+                            {{ if ne $currentLang $anySiteLang.Lang }}
+                                {{ $translationLink := .Permalink }}
+                                {{ range $translation := $allTranslations }}
+                                    {{ if eq $anySiteLang.Lang $translation.Lang }}
+                                        {{ $translationLink = $translation.Permalink }}
+                                    {{ end }}
+                                {{ end }}
+
+                                <li>
+                                    <a href="{{ $translationLink }}"
+                                    title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName ) | default (.Lang | upper) }}"
+                                    aria-label="{{ .Language.LanguageName | default (.Lang | upper) }}">
+                                        {{ if site.Params.DisplayFullLangName }}
+                                            {{ .Language.LanguageName }}
+                                        {{ else }}
+                                            {{ .Lang | upper }}
+                                        {{ end }}
+                                    </a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                {{ end }}
             </div>
         </div>
         {{- $currentPage := . }}

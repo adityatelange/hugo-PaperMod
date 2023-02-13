@@ -36,7 +36,7 @@
 -   Social Icons (home-info and profile-mode)
 -   Social-Media Share buttons on posts.
 -   Menu location indicator.
--   Multilingual support. (with language selector)
+-   Multilingual support (with improved language selector)
 -   Taxonomies
 -   Cover image for each post (with Responsive image support).
 -   Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).

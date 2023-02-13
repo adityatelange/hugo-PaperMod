@@ -15,7 +15,9 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
+      {{- if .Param "showTranslationListInPosts" }}
+        {{- partial "translation_list.html" . -}}
+      {{- end }}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
     </div>
