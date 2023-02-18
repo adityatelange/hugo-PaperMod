@@ -9,7 +9,7 @@
   {{- end }}
 </header>
 
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.hiddenPage" "!=" "true" }}
 
 {{- if site.Params.ShowAllPagesInArchive }}
 {{- $pages = site.RegularPages }}

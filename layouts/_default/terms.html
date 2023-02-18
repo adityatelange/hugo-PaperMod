@@ -13,13 +13,16 @@
 
 <ul class="terms-tags">
     {{- $type := .Type }}
-    {{- range $key, $value := .Data.Terms.Alphabetical }}
-    {{- $name := .Name }}
-    {{- $count := .Count }}
+    {{- range $term := .Data.Terms.Alphabetical  }}
+    {{- $termPages := where $term.Pages "Params.hiddenPage" "!=" "true" }}
+    {{- if (len $termPages | ne 0) }}
+    {{- $name := $term.Name }}
+    {{- $count := len $termPages }}
     {{- with site.GetPage (printf "/%s/%s" $type $name) }}
     <li>
-        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+        <a href="{{ .Permalink }}">{{ $name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
     </li>
+    {{- end }}
     {{- end }}
     {{- end }}
 </ul>
