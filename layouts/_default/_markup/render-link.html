@@ -1,0 +1,1 @@
+<a href="{{ .Destination | safeURL }}" {{ with .Title }}title="{{ . }}"{{ end }} {{ if strings.HasPrefix .Destination "http" | and (eq .Page.Params.hiddenPage true) }}target="_blank" rel="nofollow noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>
