@@ -14,7 +14,7 @@
 <ul class="terms-tags">
     {{- $type := .Type }}
     {{- range $term := .Data.Terms.Alphabetical  }}
-    {{- $termPages := where $term.Pages "Params.hiddenPage" "!=" "true" }}
+    {{- $termPages := where $term.Pages "Params.hiddenPage" "!=" true }}
     {{- if (len $termPages | ne 0) }}
     {{- $name := $term.Name }}
     {{- $count := len $termPages }}
