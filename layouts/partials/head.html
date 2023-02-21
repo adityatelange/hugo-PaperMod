@@ -73,6 +73,7 @@
 {{- else }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
+{{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
 
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
