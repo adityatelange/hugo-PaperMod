@@ -17,6 +17,13 @@
 .first-entry .entry-header h1 {
     font-size: 34px;
     line-height: 1.3;
+    letter-spacing: 0;
+    line-height: clamp(28px,4.6875vw,36px);
+    margin-bottom: 16px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: .3s;
+    font-weight: 400;
 }
 
 .first-entry .entry-content {
@@ -41,6 +48,7 @@
     border-radius: var(--radius);
     transition: transform 0.1s;
     border: 1px solid var(--border);
+    box-shadow: 0 0 32px rgb(0 0 0 / 11%);
 }
 
 .post-entry:active {
@@ -52,8 +60,15 @@
 }
 
 .entry-header h2 {
-    font-size: 24px;
-    line-height: 1.3;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: clamp(28px,4.6875vw,36px);
+    margin-bottom: 16px;
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0);
+    transition: .3s;
+    font-weight: normal;
 }
 
 .entry-content {

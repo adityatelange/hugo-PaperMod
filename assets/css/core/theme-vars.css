@@ -5,7 +5,7 @@
     --main-width: 720px;
     --header-height: 60px;
     --footer-height: 60px;
-    --radius: 8px;
+    --radius: 16px;
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
     --primary: rgb(30, 30, 30);
@@ -13,7 +13,7 @@
     --tertiary: rgb(214, 214, 214);
     --content: rgb(31, 31, 31);
     --hljs-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
+    --code-bg: rgb(255, 255, 255);
     --border: rgb(238, 238, 238);
 }
 
