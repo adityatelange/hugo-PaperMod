@@ -78,6 +78,18 @@
                 {{- with site.Home.AllTranslations }}
                 <ul class="lang-switch">
                     {{- if $separator }}<li>|</li>{{ end }}
+                    {{- if site.Params.mirrorSite }}
+                    <li>
+                        <a href="{{- site.Params.mirrorSite -}}" title="{{ site.Params.mirrorSiteLanguageAltTitle }}"
+                            aria-label="{{ site.Params.mirrorSiteLanguageName }}">
+                            {{- if (and site.Params.displayFullLangName (site.Params.mirrorSiteLanguageName)) }}
+                            {{- site.Params.mirrorSiteLanguageName | emojify -}}
+                            {{- else }}
+                            {{- site.Params.mirrorSiteLang | title -}}
+                            {{- end -}}
+                        </a>
+                    </li>
+                    {{ end }}
                     {{- range . -}}
                     {{- if ne $lang .Lang }}
                     <li>
