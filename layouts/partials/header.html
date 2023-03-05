@@ -75,9 +75,9 @@
             <div class="logo-switches">
                 {{- $lang := .Lang}}
                 {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
-                {{- with site.Home.AllTranslations }}
                 <ul class="lang-switch">
                     {{- if $separator }}<li>|</li>{{ end }}
+                    
                     {{- if site.Params.mirrorSite }}
                     <li>
                         <a href="{{- site.Params.mirrorSite -}}" title="{{ site.Params.mirrorSiteLanguageAltTitle }}"
@@ -90,6 +90,8 @@
                         </a>
                     </li>
                     {{ end }}
+
+                    {{- with site.Home.AllTranslations }}
                     {{- range . -}}
                     {{- if ne $lang .Lang }}
                     <li>
@@ -103,9 +105,9 @@
                         </a>
                     </li>
                     {{- end -}}
-                    {{- end}}
+                    {{- end }}
+                    {{- end }}
                 </ul>
-                {{- end }}
             </div>
         </div>
         {{- $currentPage := . }}
