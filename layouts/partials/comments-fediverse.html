@@ -1,0 +1,140 @@
+{{- /* Fediverse comments area start */ -}}
+<h2>Comments</h2>
+
+<noscript>
+  <div id="error">
+    Enable JavaScript to view comments from the Fediverse.
+  </div>
+</noscript>
+
+<p>Use your Fediverse account (e.g. Mastodon) to <a class="comment-reply-link"
+    href="{{ .Params.comments.fediverse.url }}">reply</a>.
+</p>
+<p id="fediverse-comments-list"></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js" integrity="sha512-jB0TkTBeQC9ZSkBqDhdmfTv1qdfbWpGE72yJ/01Srq6hEzZIz2xkz1e57p9ai7IeHMwEG7HpzG6NdptChif5Pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  var [host, fedipostUrlPath] = '{{ .Params.comments.fediverse.url }}'.split('@', 2).map(x => { return x.endsWith('/') ? x.slice(0, -1) : x });
+  var [user, id] = fedipostUrlPath.split('/', 2);
+
+  // * always hide hidden
+  // * if moderation is not the default 'opt-out', only show accepted
+  var moderation = {{ .Params.comments.fediverse.moderation }} || 'opt-out';
+  var acceptedReplies = {{ .Params.comments.fediverse.shown }} || [];
+  var hiddenReplies = {{ .Params.comments.fediverse.hidden }} || [];
+
+  function escapeHtml(unsafe) {
+    return unsafe
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  var commentsLoaded = false;
+
+  function toot_active(toot, what) {
+    var count = toot[what+'_count'];
+    return count > 0 ? 'active' : '';
+  }
+
+  function toot_count(toot, what) {
+    var count = toot[what+'_count'];
+    return count > 0 ? count : '0';
+  }
+
+  function user_account(account) {
+    var result =`@${account.acct}`;
+    if (account.acct.indexOf('@') === -1) {
+      var domain = new URL(account.url);
+      result += `@${domain.hostname}`;
+    }
+    return result;
+  }
+
+  function render_toots(toots, in_reply_to, depth) {
+    var tootsToRender = toots
+      .filter(toot => toot.in_reply_to_id === in_reply_to)
+      .filter(toot => {
+        if (hiddenReplies.includes(toot.url)) { return false };
+        if (acceptedReplies.includes(toot.url)) { return true };
+        return moderation == 'opt-out';
+      });
+    tootsToRender.forEach(toot => render_toot(toots, toot, depth));
+  }
+
+  function render_toot(toots, toot, depth) {
+    toot.account.display_name = escapeHtml(toot.account.display_name);
+    toot.account.emojis.forEach(emoji => {
+      toot.account.display_name = toot.account.display_name.replace(`:${emoji.shortcode}:`, `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
+    });
+    fediverseComment =
+      `<div class="fediverse-comment" style="margin-left: calc(var(--fediverse-comment-indent) * ${depth})">
+        <div class="author">
+          <div class="avatar">
+            <img src="${escapeHtml(toot.account.avatar_static)}" height=60 width=60 alt="">
+          </div>
+          <div class="details">
+            <a class="name" href="${toot.account.url}" rel="nofollow">${toot.account.display_name}</a>
+            <a class="user" href="${toot.account.url}" rel="nofollow">${user_account(toot.account)}</a>
+          </div>
+          <a class="date" href="${toot.url}" rel="nofollow">${toot.created_at.substr(0, 10)} ${toot.created_at.substr(11, 8)}</a>
+        </div>
+        <div class="content">${toot.content}</div>
+        <div class="status">
+          <div class="replies ${toot_active(toot, 'replies')}">
+            <a href="${toot.url}" rel="nofollow">↩️ ${toot_count(toot, 'replies')}</a>
+          </div>
+          <div class="reblogs ${toot_active(toot, 'reblogs')}">
+            <a href="${toot.url}" rel="nofollow">🔁 ${toot_count(toot, 'reblogs')}</a>
+          </div>
+          <div class="favourites ${toot_active(toot, 'favourites')}">
+            <a href="${toot.url}" rel="nofollow">⭐ ${toot_count(toot, 'favourites')}</a>
+          </div>
+        </div>
+      </div>`;
+    document.getElementById('fediverse-comments-list').appendChild(DOMPurify.sanitize(fediverseComment, {'RETURN_DOM_FRAGMENT': true}));
+
+    render_toots(toots, toot.id, depth + 1);
+  }
+
+  function loadComments() {
+    if (commentsLoaded) return;
+
+    document.getElementById("fediverse-comments-list").innerHTML = "Loading comments from the Fediverse...";
+
+    fetch(host + '/api/v1/statuses/' + id + '/context')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
+            document.getElementById('fediverse-comments-list').innerHTML = "";
+            render_toots(data['descendants'], id, 0);
+        }
+
+        commentsLoaded = true;
+      });
+  }
+
+  function respondToVisibility(element, callback) {
+    var options = {
+      root: null,
+    };
+
+    var observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          callback();
+        }
+      });
+    }, options);
+
+    observer.observe(element);
+  }
+
+  var comments = document.getElementById("fediverse-comments-list");
+  respondToVisibility(comments, loadComments);
+</script>
+{{- /* Fediverse comments area end */ -}}

@@ -15,6 +15,7 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --fediverse-comment-indent: 10px
 }
 
 .dark {
