@@ -18,6 +18,7 @@
     <description>Recent content {{ if ne  .Title  site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ site.Title }}</description>
     {{- with site.Params.images }}
     <image>
+      <title>{{ site.Title }}</title>
       <url>{{ index . 0 | absURL }}</url>
       <link>{{ index . 0 | absURL }}</link>
     </image>
