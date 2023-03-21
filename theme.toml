@@ -3,9 +3,9 @@
 
 name = "PaperMod"
 license = "MIT"
-licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
+licenselink = ""
 description = "A fast, clean, responsive Hugo theme"
-homepage = "https://adityatelange.github.io/hugo-PaperMod/"
+homepage = ""
 tags = [
   "responsive",
   "simple",
@@ -40,8 +40,8 @@ features = [
 min_version = "0.83.0"
 
 [author]
-  name = "Aditya Telange"
-  homepage = "https://github.com/adityatelange/"
+  name = "Doffyno2"
+  homepage = "https://github.com/doffyno2/"
 
 # If porting an existing theme
 [original]
