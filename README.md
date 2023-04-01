@@ -6,17 +6,15 @@
 > Hugo PaperMod is a theme based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper).
 > The goal of this project is to add more features and customization to the og theme.
 
-The [demo](https://adityatelange.github.io/hugo-PaperMod/) includes a lot of documentation about Installation, Features with a few more stuff. Make sure you visit it, to get an awesome hands-on experience and get to know about the features ...
+**Documentation** can be found here: [**📚 Wiki**](https://github.com/adityatelange/hugo-PaperMod/wiki)
 
-**ExampleSite** can be found here: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite). Demo is built up with [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite) as source.
+**ExampleSite** can be found here: [**exampleSite**](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite). Demo is built up with [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite) as source.
 
-[![Minimum Hugo Version](https://img.shields.io/static/v1?label=min-HUGO-version&message=0.83.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.83.0)
-[![Build GH-Pages](https://github.com/adityatelange/hugo-PaperMod/workflows/Build%20GH-Pages/badge.svg)](https://github.com/adityatelange/hugo-PaperMod/deployments/activity_log?environment=github-pages)
-[![GitHub](https://img.shields.io/github/license/adityatelange/hugo-PaperMod)](https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE)
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/themes/hugo-papermod/)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adityatelange_hugo-PaperMod&metric=alert_status)](https://sonarcloud.io/dashboard?id=adityatelange_hugo-PaperMod)
-![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
+[![Minimum Hugo Version](https://img.shields.io/static/v1?label=min-HUGO-version&message=0.83.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.83.0)
 [![Discord](https://img.shields.io/discord/971046860317921340?label=Discord)](https://discord.gg/ahpmTvhVmp)
+[![GitHub](https://img.shields.io/github/license/adityatelange/hugo-PaperMod)](https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE)
+![code-size](https://img.shields.io/github/languages/code-size/adityatelange/hugo-PaperMod)
 
 ---
 
@@ -60,15 +58,15 @@ Read Wiki For More Details => **[PaperMod - Installation](https://github.com/adi
 
 ---
 
-## Social-Icons/Share-Icons 🖼️
-
-Read Wiki For More Details => **[PaperMod-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons)**
-
----
-
 ## FAQs / How To's Guide 🙋
 
 Read Wiki For More Details => **[PaperMod-FAQs](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs)**
+
+---
+
+## Social-Icons/Share-Icons 🖼️
+
+Read Wiki For More Details => **[PaperMod-Icons](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons)**
 
 ---
 
@@ -90,7 +88,8 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Simple Icons**](https://github.com/simple-icons/simple-icons)
 -   **All Contributors and Supporters**
 
+---
+
 ## Stargazers over time 📈
 
 <kbd>[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg)](https://starchart.cc/adityatelange/hugo-PaperMod)</kbd>
-

@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Προηγούμενο"
+
+- id: next_page
+  translation: "Επόμενο"
+
+- id: read_time
+  translation:
+    one: "1 λεπτό"
+    other: "{{ .Count }} λεπτά"
+
+- id: words
+  translation:
+    one: "λέξη"
+    other: "{{ .Count }} λέξεις"
+
+- id: toc
+  translation: "Πίνακας Περιεχομένων"
+
+- id: translations
+  translation: "Μεταφράσεις"
+
+- id: home
+  translation: "Αρχική"
+
+- id: edit_post
+  translation: "Επεξεργασία"
+
+- id: code_copy
+  translation: "αντιγραφή"
+
+- id: code_copied
+  translation: "αντιγράφηκε!"
