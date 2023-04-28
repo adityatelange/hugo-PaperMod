@@ -207,12 +207,12 @@ and can be added accordingly.
 
     ```
     params:
-    assets:
-        favicon: "<link / absolute url>"
-        favicon16x16:  "<link / absolute url>"
-        favicon32x32:  "<link / absolute url>"
-        apple_touch_icon:  "<link / absolute url>"
-        safari_pinned_tab:  "<link / absolute url>"
+        assets:
+            favicon: "<link / absolute url>"
+            favicon16x16:  "<link / absolute url>"
+            favicon32x32:  "<link / absolute url>"
+            apple_touch_icon:  "<link / absolute url>"
+            safari_pinned_tab:  "<link / absolute url>"
     ```
 
     - `absolute url` means direct links to external resource: ex. https://web.site/someimage.png
@@ -221,12 +221,12 @@ and can be added accordingly.
 
     ```
     params:
-    assets:
-        favicon: "/favicon.ico"
-        favicon16x16:  "/favicon-16x16.png"
-        favicon32x32:  "/favicon-32x32.png"
-        apple_touch_icon:  "/apple-touch-icon.png"
-        safari_pinned_tab:  "/safari-pinned-tab.svg"
+        assets:
+            favicon: "/favicon.ico"
+            favicon16x16:  "/favicon-16x16.png"
+            favicon32x32:  "/favicon-32x32.png"
+            apple_touch_icon:  "/apple-touch-icon.png"
+            safari_pinned_tab:  "/safari-pinned-tab.svg"
     ```
 
 ---
