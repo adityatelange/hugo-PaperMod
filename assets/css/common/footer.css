@@ -58,3 +58,11 @@
 #theme-toggle:focus {
     outline: 0;
 }
+
+.footer nav a {
+    border-bottom: none;
+}
+
+.footer nav a:hover {
+    border-bottom: none;
+}
