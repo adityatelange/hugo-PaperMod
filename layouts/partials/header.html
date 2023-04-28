@@ -69,7 +69,9 @@
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
-                {{- $label_text -}}
+                {{- if ne site.Params.label.showText false -}}
+                    {{- $label_text -}}
+                {{- end -}}
             </a>
             {{- end }}
             <div class="logo-switches">
