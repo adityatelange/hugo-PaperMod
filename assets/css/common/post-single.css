@@ -399,3 +399,11 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+div.book {
+    display: inline-block;  
+    padding: 0 1rem; 
+    max-width:150px; 
+    min-height: 250px;
+    vertical-align: top;
+}

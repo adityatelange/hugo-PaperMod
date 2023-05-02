@@ -19,7 +19,7 @@
     font-size: 13px;
     line-height: 36px;
     background: var(--primary);
-    border-radius: calc(36px / 2);
+    border-radius: calc(20px / 2);
     padding: 0 16px;
 }
 
