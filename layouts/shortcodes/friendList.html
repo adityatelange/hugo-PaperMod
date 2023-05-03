@@ -1,7 +1,7 @@
 <script>
     
 $( document ).ready(function() {
-  $.get("http://localhost:4367/api/getGithubFriend", { name: '{{ .Get "githubLoginList" }}' }, function(data) {
+  $.get("https://getgithubfriend.azurewebsites.net/api/getGithubFriend", { name: '{{ .Get "githubLoginList" }}' }, function(data) {
     var dataObj = JSON.parse(data)
     Object.keys(dataObj['data']).forEach(element => {
       console.log(element, dataObj['data'][element])
