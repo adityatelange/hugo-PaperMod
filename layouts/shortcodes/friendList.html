@@ -1,0 +1,40 @@
+<script>
+    
+$( document ).ready(function() {
+  $.get("http://localhost:4367/api/getGithubFriend", { name: '{{ .Get "githubLoginList" }}' }, function(data) {
+    var dataObj = JSON.parse(data)
+    Object.keys(dataObj['data']).forEach(element => {
+      console.log(element, dataObj['data'][element])
+      $("div.post-content").append(' \
+        <div class="friend-link"> \
+          <a href="' + dataObj['data'][element]['websiteUrl'] +'" target="_blank"> \
+            <div class="friend-link-avatar"> \
+              <img src="' + dataObj['data'][element]['avatarUrl'] + '"/> \
+            </div> \
+            <div> \
+              <div class="friend-link-name">' + dataObj['data'][element]['name'] + '</div> \
+              <div class="friend-link-bio">' + dataObj['data'][element]['bioHTML'] + '</div> \
+            </div>\
+          </a>\
+        </div>'
+      )
+    });
+  });
+});
+
+</script>
+
+
+<!-- template
+<div class="friend-link">
+  <a href="http://www.baidu.com" target="_blank">
+    <div class="friend-link-avatar">
+      <img src="https://avatars.githubusercontent.com/u/24749960?v=4"/>
+    </div>
+    <div>
+      <div class="friend-link-name">Johnathan Lin</div>
+      <div class="friend-link-bio">Love Coding</div>
+    </div>
+  </a>
+</div>
+ -->

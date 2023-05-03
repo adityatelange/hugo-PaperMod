@@ -407,3 +407,35 @@ div.book {
     min-height: 250px;
     vertical-align: top;
 }
+
+div.friend-link {
+    width: 355px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+div.friend-link div.friend-link-avatar {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 10px;
+}
+
+div.friend-link div.friend-link-avatar img {
+    margin: 0;
+}
+
+div.friend-link div.friend-link-name {
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+div.friend-link div.friend-link-bio {
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    overflow: hidden;
+}

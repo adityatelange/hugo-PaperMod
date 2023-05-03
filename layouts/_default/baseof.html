@@ -3,6 +3,7 @@
 
 <head>
     {{- partial "head.html" . }}
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body class="
@@ -18,6 +19,8 @@
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+
 </body>
 
 </html>
