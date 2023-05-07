@@ -37,7 +37,7 @@ features = [
   "scroll-to-top",
   "search"
 ]
-min_version = "0.83.0"
+min_version = "0.97.1"
 
 [author]
   name = "Aditya Telange"
