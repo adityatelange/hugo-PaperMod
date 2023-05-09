@@ -53,7 +53,7 @@ jobs:
           ref: exampleSite
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v2
       - name: Get Theme
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
