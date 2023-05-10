@@ -1,10 +1,16 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
+        <h1>{{ .title | markdownify }}</h1>
     </header>
-    <div class="entry-content">
-        {{ .Content | markdownify }}
+    <div class="home-info-container" target="_blank">
+        <a href="{{ .image.link | absURL }}" target="_blank">
+            <img draggable="false" src="{{ .image.url | absURL }}" alt=" {{ .image.title | default "profile image" }}"
+                title="{{ .image.title }}" height="{{ .image.height | default 150 }}" width="{{ .image.width | default 150 }}" />
+        </a>
+        <div class="entry-content">
+            {{ .content | markdownify }}
+        </div>
     </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" site.Params.socialIcons }}

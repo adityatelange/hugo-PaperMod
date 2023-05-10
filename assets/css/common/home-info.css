@@ -1,0 +1,23 @@
+.home-info-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-info-container img {
+  flex: 1;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-right: 20px;
+  border-radius: 20%;
+}
+
+.home-info-container ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.home-info-container li {
+  padding-top: 10px;
+}
