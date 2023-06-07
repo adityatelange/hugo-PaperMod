@@ -1,13 +1,18 @@
 - id: prev_page
-  translation: "Poprzednia strona"
+  translation: "Poprzednia"
 
 - id: next_page
-  translation: "Następna strona"
+  translation: "Następna"
 
 - id: read_time
   translation:
       one: "1 min"
       other: "{{ .Count }} min"
+
+- id: words
+  translation:
+    one : "słowo"
+    other: "{{ .Count }} słów"
 
 - id: toc
   translation: "Spis treści"

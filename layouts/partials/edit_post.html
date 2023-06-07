@@ -1,4 +1,4 @@
-{{- if or .Params.editPost.URL site.Params.editPost.URL -}}
+{{- if and (or .Params.editPost.URL site.Params.editPost.URL) (not (.Param "editPost.disabled")) -}}
 {{- $fileUrlPath := path.Join .File.Path }}
 
 {{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;|&nbsp;{{- end -}}
