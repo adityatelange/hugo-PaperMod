@@ -12,6 +12,11 @@
     zero: "الآن"
     other: "دقائق {{ .Count }}"
 
+- id: words
+  translation:
+    one: "كلمة"
+    other: "{{ .Count }} كلمة"
+
 - id: toc
   translation: "فهرس المحتوى"
 
@@ -20,6 +25,9 @@
   
 - id: home
   translation: "الصفحة الرئيسية"
+
+- id: edit_post
+  translation: "تعديل"
 
 - id: code_copied
   translation: "تم النسخ!"
