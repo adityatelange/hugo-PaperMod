@@ -23,6 +23,15 @@
         </svg>
     </a>
     {{- end }}
+    {{- if (cond ($custom) (in $ShareButtons "mastodon") (true)) }}
+    <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on mastodon"
+        href="https://mastodon.social/share?text={{ $title }}&amp;url={{ $pageurl }}">
+        <svg width="30px" height="30px" viewBox="0 0 1000 1000" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M 75 0C 75 0 75 0 75 0C 33 0 0 33 0 75C 0 75 0 925 0 925C 0 967 33 1000 75 1000C 75 1000 925 1000 925 1000C 967 1000 1000 967 1000 925C 1000 925 1000 75 1000 75C 1000 33 967 0 925 0C 925 0 75 0 75 0 M 502 18C 623 19 740 32 808 64C 808 64 942 124 942 330C 942 330 944 482 924 587C 911 654 807 727 688 741C 626 749 565 756 500 753C 394 748 310 727 310 727C 310 738 310 747 312 757C 326 862 416 868 501 871C 588 874 665 850 665 850C 665 850 668 928 668 928C 668 928 608 960 500 966C 441 969 367 965 281 942C 95 893 63 694 58 493C 57 433 58 377 58 330C 58 124 193 64 193 64C 261 32 377 19 499 18C 499 18 502 18 502 18M 256 224C 230 254 217 295 217 346C 217 346 217 595 217 595C 217 595 315 595 315 595C 315 595 315 353 315 353C 315 302 337 276 380 276C 427 276 451 307 451 368C 451 368 451 500 451 500C 451 500 549 500 549 500C 549 500 549 368 549 368C 549 307 573 276 620 276C 663 276 685 302 685 353C 685 353 685 595 685 595C 685 595 783 595 783 595C 783 595 783 346 783 346C 783 295 770 254 744 224C 717 194 682 179 639 179C 588 179 550 199 525 237C 525 237 500 279 500 279C 500 279 475 237 475 237C 450 199 412 179 361 179C 318 179 283 194 256 224C 256 224 256 224 256 224"/>
+        </svg>
+    </a>
+    {{- end }}
     {{- if (cond ($custom) (in $ShareButtons "linkedin") (true)) }}
     <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on linkedin"
         href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $pageurl }}&amp;title={{ $title }}&amp;summary={{ $title }}&amp;source={{ $pageurl }}">
