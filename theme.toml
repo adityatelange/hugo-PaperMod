@@ -40,7 +40,7 @@ features = [
 min_version = "0.97.1"
 
 [author]
-  name = "Aditya Telange"
+  name = "Omotosho Temitope"
   homepage = "https://github.com/adityatelange/"
 
 # If porting an existing theme
