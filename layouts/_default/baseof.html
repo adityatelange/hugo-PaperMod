@@ -3,6 +3,11 @@
 
 <head>
     {{- partial "head.html" . }}
+    {{ if .Params.isResume }}
+    <link href="/media/{{ .Site.Params.style }}-screen.css" type="text/css" rel="stylesheet" media="screen">
+    <link href="/media/{{ .Site.Params.style }}-print.css" type="text/css" rel="stylesheet" media="print">
+    <title> {{ if .Title }} {{ .Title }} | {{ end }} CV</title>
+    {{ end }}
 </head>
 
 <body class="
