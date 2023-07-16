@@ -42,26 +42,12 @@ languages:
 
     fr:
         languageName: ":fr:"
-        languageAltTitle: French
         weight: 2
         title: PaperModL2
         taxonomies:
           category: FRcategories
           tag: FRtags
           series: FRseries
-        profileMode:
-            enabled: true
-            title: PaperMod
-            imageUrl: "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg"
-            imageTitle: ProfileMode image
-            # imageWidth: 120
-            # imageHeight: 120
-            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-            buttons:
-                - name: Blog
-                  url: posts
-                - name: Profile Mode
-                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
         menu:
             main:
                 - name: Archive
@@ -78,14 +64,26 @@ languages:
                   weight: 10
                 - name: NullLink
                   url: "#"
+        params:
+            languageAltTitle: French
+            profileMode:
+                enabled: true
+                title: PaperMod
+                imageUrl: https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f317.svg
+                imageTitle: ProfileMode image
+                # imageWidth: 120
+                # imageHeight: 120
+                subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+                buttons:
+                    - name: Blog
+                      url: posts
+                    - name: Profile Mode
+                      url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
 
     fa:
         languagedirection: rtl
         weight: 3
         title: PaperMod RTL
-        homeInfoParams:
-            Title: "Hi there \U0001F44B"
-            Content: Welcome to RTL layout
         taxonomies:
           category: FAcategories
           tag: FAtags
@@ -95,6 +93,10 @@ languages:
                 - name: FATags
                   url: fatags
                   weight: 10
+        params:
+            homeInfoParams:
+                Title: "Hi there \U0001F44B"
+                Content: Welcome to RTL layout
 
 outputs:
     home:
