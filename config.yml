@@ -1,5 +1,5 @@
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-title: PaperMod
+baseURL: "https://wspitch.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: Pitch Sinlapanuntakul
 paginate: 5
 theme: hugo-PaperMod
 
@@ -37,6 +37,8 @@ languages:
                   weight: 10
                 - name: WiKi
                   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+                  params:
+                      external: true
                 - name: Discord
                   url: https://discord.gg/ahpmTvhVmp
 
