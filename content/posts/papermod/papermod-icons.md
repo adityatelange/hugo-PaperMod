@@ -84,6 +84,7 @@ draft: true
 | `twitch`        | twitch.tv                       |
 | `twitter`       | twitter.com                     |
 | `unsplash`      | unsplash.com                    |
+| `x`             | x.com                           |
 | `xda`           | xda-developers.com              |
 | `xing`          | xing.com                        |
 | `ycombinator`   | ycombinator.com                 |
@@ -96,8 +97,8 @@ Usage :
 socialIcons:
   - name: "kofi"
     url: "https://kofi.com"
-  - name: "twitter"
-    url: "https://twitter.com"
+  - name: "x"
+    url: "https://x.com"
 ```
 
 ---
@@ -106,7 +107,7 @@ socialIcons:
 
 | Platform                                                        |
 | --------------------------------------------------------------- |
-| `twitter` (also generates hash tags from tags linked with post) |
+| `x` (also generates hash tags from tags linked with post) |
 | `linkedin`                                                      |
 | `reddit`                                                        |
 | `facebook`                                                      |
