@@ -215,6 +215,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
+    limit: 10
     keys: ["title", "permalink", "summary", "content"]
 ```
 
