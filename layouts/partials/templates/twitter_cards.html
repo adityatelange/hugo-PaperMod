@@ -1,10 +1,16 @@
 {{- if .Params.cover.image -}}
+{{- $cover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- if $cover -}}{{/* i.e it is present in page bundle */}}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ $cover.Permalink }}"/>
+{{- else }}{{/* For absolute urls and external links */}}
 <meta name="twitter:card" content="summary_large_image" />
 {{- if (ne $.Params.cover.relative true) }}
 <meta name="twitter:image" content="{{ .Params.cover.image | absURL }}" />
 {{- else }}
 <meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
 {{- end}}
+{{- end -}}
 {{- else }}
 {{- with $.Params.images -}}
 <meta name="twitter:card" content="summary_large_image"/>
