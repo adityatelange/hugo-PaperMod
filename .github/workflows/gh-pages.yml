@@ -53,7 +53,7 @@ jobs:
           ref: exampleSite
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
       - name: Get Theme
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
@@ -64,7 +64,7 @@ jobs:
             --buildDrafts --gc --verbose \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
   # Deployment job
@@ -77,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
