@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Uliopita"
+
+- id: next_page
+  translation: "Ujao"
+
+- id: read_time
+  translation:
+    one : "dakika 1"
+    other: "dakika {{ .Count }}"
+
+- id: words
+  translation:
+    one : "neno"
+    other: "maneno {{ .Count }}"
+
+- id: toc
+  translation: "Jedwali la Yaliyomo"
+
+- id: translations
+  translation: "Tafsiri"
+
+- id: home
+  translation: "Mwanzo"
+
+- id: edit_post
+  translation: "Hariri"
+
+- id: code_copy
+  translation: "nakili"
+
+- id: code_copied
+  translation: "nakiliwa!"
