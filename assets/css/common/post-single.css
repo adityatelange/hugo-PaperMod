@@ -418,7 +418,9 @@ div.friend-link {
     border: 1px solid var(--border);
     border-radius: var(--radius);
 }
-
+div.friend-link:active {
+    transform: scale(.96);
+}
 div.friend-link div.friend-link-avatar {
     width: 64px;
     height: 64px;
