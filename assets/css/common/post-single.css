@@ -420,6 +420,7 @@ div.friend-link {
 }
 div.friend-link:active {
     transform: scale(.96);
+    transition: transform .1s;
 }
 div.friend-link div.friend-link-avatar {
     width: 64px;
