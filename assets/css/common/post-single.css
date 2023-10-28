@@ -412,8 +412,11 @@ div.friend-link {
     width: 355px;
     display: inline-block;
     vertical-align: top;
-    padding: 0 10px;
-    margin-bottom: 10px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
 div.friend-link div.friend-link-avatar {
