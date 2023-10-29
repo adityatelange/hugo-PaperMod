@@ -168,7 +168,3 @@
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
 {{- end -}}
-
-{{ if not .Site.IsServer }}
-{{ template "_internal/google_analytics.html" . }}
-{{ end }}
