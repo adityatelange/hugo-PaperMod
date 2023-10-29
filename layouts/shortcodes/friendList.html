@@ -1,26 +1,83 @@
 <script>
     
 $( document ).ready(function() {
-  $.get("https://getgithubfriend.azurewebsites.net/api/getGithubFriend", { name: '{{ .Get "githubLoginList" }}' }, function(data) {
-    var dataObj = JSON.parse(data)
-    Object.keys(dataObj['data']).forEach(element => {
-      console.log(element, dataObj['data'][element])
-      $("div.post-content").append(' \
-        <div class="friend-link"> \
-          <a href="' + dataObj['data'][element]['websiteUrl'] +'" target="_blank"> \
-            <div class="friend-link-avatar"> \
-              <img src="' + dataObj['data'][element]['avatarUrl'] + '"/> \
-            </div> \
-            <div> \
-              <div class="friend-link-name">' + dataObj['data'][element]['name'] + '</div> \
-              <div class="friend-link-bio">' + dataObj['data'][element]['bioHTML'] + '</div> \
-            </div>\
-          </a>\
-        </div>'
-      )
+  var cacheFriendsData = getItem("windypath-friend");
+  if (cacheFriendsData !== null) {
+    console.log("from cache")
+    showFriends(cacheFriendsData)
+  } else {
+    console.log("not cache")
+    $.get("https://getgithubfriend.azurewebsites.net/api/getGithubFriend", { name: '{{ .Get "githubLoginList" }}' }, function(data) {
+      showFriends(data)
+      setItem("windypath-friend", data)
     });
-  });
+  }
 });
+
+
+// add an entry
+// default expiry is 30 days in milliseconds
+function setItem(key, value, maxAge = 30 * 60 * 60 * 1000) {
+    // store the value as the object
+    // along with the expiry date
+    let result  = {
+      data : value
+    }
+    
+    
+    if(maxAge){
+      // set the expiry 
+      // from the current date
+      result.expireTime = Date.now() + maxAge;
+    }
+    
+    // stringify the result
+    // and the data in original storage
+    window.localStorage.setItem(key, JSON.stringify(result));
+}
+
+function getItem(key) {
+  // get the parsed value of the given key
+  let result = JSON.parse(window.localStorage.getItem(key));
+  
+  // if the key has value
+  if(result){ 
+      
+      // if the entry is expired
+      // remove the entry and return null
+      if(result.expireTime <= Date.now()){
+          window.localStorage.removeItem(key);
+          return null;
+      }  
+      
+      // else return the value
+      return result.data;
+  }
+  
+  // if the key does not have value
+  return null;
+}
+
+function showFriends(data) {
+  var dataObj = JSON.parse(data)
+  Object.keys(dataObj['data']).forEach(element => {
+    // console.log(element, dataObj['data'][element])
+    $("div.post-content").append(' \
+      <div class="friend-link"> \
+        <a href="' + dataObj['data'][element]['websiteUrl'] +'" target="_blank"> \
+          <div class="friend-link-avatar"> \
+            <img src="' + dataObj['data'][element]['avatarUrl'] + '"/> \
+          </div> \
+          <div> \
+            <div class="friend-link-name">' + dataObj['data'][element]['name'] + '</div> \
+            <div class="friend-link-bio">' + dataObj['data'][element]['bioHTML'] + '</div> \
+          </div>\
+        </a>\
+      </div>'
+    )
+  });
+}
+
 
 </script>
 
