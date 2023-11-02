@@ -3,7 +3,7 @@
 {{- end -}}
 
 <!DOCTYPE html>
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" {{ if (site.Params.stickyHeader) }}class="header-sticky"{{ end }}>
 
 <head>
     {{- partial "head.html" . }}

@@ -1,3 +1,8 @@
+/* See: https://github.com/adityatelange/hugo-PaperMod/pull/979#issuecomment-1654974106 */
+html.header-sticky {
+    scroll-padding-top: calc(var(--header-height) * 2);
+}
+
 header.header-sticky {
     position: sticky;
     top: 0;
