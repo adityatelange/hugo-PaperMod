@@ -30,8 +30,10 @@
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
 {{- /* Deprecate site.Social.twitter in favor of site.Params.social.twitter */}}
 {{- $twitterSite := "" }}
-{{- with site.Params.social.twitter }}
-  {{- $twitterSite = . }}
+{{- with site.Params.social }}
+  {{- if reflect.IsMap . }}
+    {{- $twitterSite = .twitter }}
+  {{- end }}
 {{- else }}
   {{- with site.Social.twitter }}
     {{- $twitterSite = . }}
@@ -40,5 +42,9 @@
 {{- end }}
 
 {{- with $twitterSite }}
-<meta name="twitter:site" content="@{{ . }}"/>
+  {{- $content := . }}
+  {{- if not (strings.HasPrefix . "@") }}
+    {{- $content = printf "@%v" $twitterSite }}
+  {{- end }}
+<meta name="twitter:site" content="{{ $content }}"/>
 {{- end }}
