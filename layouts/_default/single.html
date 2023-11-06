@@ -43,10 +43,10 @@
       {{- end }}
     </ul>
     {{- if (.Param "ShowPostNavLinks") }}
-    {{- partial "post_nav_links.html" . }}
+      {{- partial "post_nav_links.html" . }}
     {{- end }}
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
-    {{- partial "share_icons.html" . -}}
+      {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
 
