@@ -40,6 +40,9 @@
 {{- end }}
 
 <header class="header">
+    {{ if templates.Exists "partials/extend_header_before.html" }}
+    {{- partial "extend_header_before.html" . -}}
+    {{ end }}
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
@@ -121,6 +124,9 @@
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
+            {{ if templates.Exists "partials/extend_header_menu_items_before.html" }}
+            {{- partial "extend_header_menu_items_before.html" . -}}
+            {{ end }}
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
@@ -144,6 +150,12 @@
                 </a>
             </li>
             {{- end }}
+            {{ if templates.Exists "partials/extend_header_menu_items_after.html" }}
+            {{- partial "extend_header_menu_items_after.html" . -}}
+            {{ end }}
         </ul>
     </nav>
+    {{ if templates.Exists "partials/extend_header_after.html" }}
+    {{- partial "extend_header_after.html" . -}}
+    {{ end }}
 </header>
