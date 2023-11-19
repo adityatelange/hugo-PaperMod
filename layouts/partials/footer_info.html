@@ -1,13 +1,14 @@
+{{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    {{- if .Site.Copyright }}
-    <span id="copyright">{{ default .Site.Copyright | markdownify }}</span>
+    {{- if site.Copyright }}
+    <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
-    <span id="copyright">&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ default .Site.Title (.Param "formalName") }}</a></span>
+    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
-    <span id="poweredBy">
+    <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-
+{{- end }}
