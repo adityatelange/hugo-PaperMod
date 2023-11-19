@@ -72,6 +72,8 @@
 .post-content a,
 .toc a:hover {
     box-shadow: 0 1px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 .post-content a code {
@@ -81,8 +83,7 @@
 }
 
 .post-content del {
-    text-decoration: none;
-    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;
+    text-decoration: line-through;
 }
 
 .post-content dl,
@@ -153,11 +154,11 @@
     border-radius: var(--radius);
 }
 
-.post-content .highlight:not(table),
-.post-content pre {
+.post-content .highlight:not(table) {
     margin: 10px auto;
     background: var(--hljs-bg) !important;
     border-radius: var(--radius);
+    direction: ltr;
 }
 
 .post-content li > .highlight {
@@ -189,14 +190,6 @@
     margin-bottom: 0;
 }
 
-.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
-    display: none;
-}
-
-.post-content .highlight span {
-    background: 0 0 !important;
-}
-
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
@@ -210,9 +203,9 @@
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.8);
-    background: 0 0;
-    border-radius: 0;
+    color: rgb(213, 213, 214);
+    background: var(--hljs-bg) !important;
+    border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
 }
@@ -227,8 +220,7 @@
     margin: 30px 0;
     height: 2px;
     background: var(--tertiary);
-    border-top: 0;
-    border-bottom: 0;
+    border: 0;
 }
 
 .post-content iframe {
@@ -237,10 +229,11 @@
 
 .post-content img {
     border-radius: 4px;
+    margin: 1rem 0;
 }
 
 .post-content img[src*="#center"] {
-    margin: auto;
+    margin: 1rem auto;
 }
 
 .post-content figure.align-center {
@@ -348,17 +341,6 @@
     margin-inline-end: 12px;
 }
 
-.share-buttons a svg {
-    height: 30px;
-    width: 30px;
-    fill: currentColor;
-    transition: transform 0.1s;
-}
-
-.share-buttons svg:active {
-    transform: scale(0.96);
-}
-
 h1:hover .anchor,
 h2:hover .anchor,
 h3:hover .anchor,
@@ -369,28 +351,7 @@ h6:hover .anchor {
     color: var(--secondary);
     margin-inline-start: 8px;
     font-weight: 500;
-}
-
-.post-content :not(table) ::-webkit-scrollbar-thumb {
-    border: 2px solid var(--hljs-bg);
-    background: rgba(255, 255, 255, 0.32);
-}
-
-.post-content :not(table) ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.56);
-}
-
-.gist table::-webkit-scrollbar-thumb {
-    border: 2px solid rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.32);
-}
-
-.gist table::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.56);
-}
-
-.post-content table::-webkit-scrollbar-thumb {
-    border-width: 2px;
+    user-select: none;
 }
 
 .paginav {
@@ -429,4 +390,13 @@ h6:hover .anchor {
 
 [dir="rtl"] .paginav .next {
     text-align: left;
+}
+
+h1>a>svg {
+    display: inline;
+}
+
+img.in-text {
+    display: inline;
+    margin: auto;
 }

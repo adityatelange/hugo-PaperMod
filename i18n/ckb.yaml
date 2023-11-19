@@ -1,0 +1,25 @@
+- id: prev_page
+  translation: "پەڕەی پێشتر"
+
+- id: next_page
+  translation: "پەڕەی دواتر"
+
+- id: read_time
+  translation:
+    one : "1 خولەک"
+    other: "{{ .Count }} خولەک"
+
+- id: toc
+  translation: "پێڕست"
+
+- id: translations
+  translation: "وەرگێڕانەکان"
+
+- id: home
+  translation: "ماڵەوە"
+
+- id: code_copy
+  translation: "لەبەری بگرەوە"
+
+- id: code_copied
+  translation: "لەبەر گیرایەوە!"

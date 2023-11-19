@@ -9,8 +9,25 @@
     one: "1 minuto"
     other: "{{ .Count }} minutos"
 
+- id: words
+  translation:
+    one : "palavra"
+    other: "{{ .Count }} palavras"
+
 - id: toc
   translation: "Conteúdo"
 
 - id: translations
   translation: "Traduções"
+  
+- id: home
+  translation: "Início"
+
+- id: edit_post
+  translation: "Editar"
+
+- id: code_copy
+  translation: "copiar"
+
+- id: code_copied
+  translation: "copiado!"

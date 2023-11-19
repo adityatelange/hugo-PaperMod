@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "পূর্ববর্তী"
+
+- id: next_page
+  translation: "পরবর্তী"
+
+- id: read_time
+  translation:
+    one : "১ মিনিট"
+    other: "{{ .Count }} মিনিট"
+    
+- id: words
+  translation:
+    one : "১ টি শব্দ"
+    other: "{{ .Count }} টি শব্দ"
+
+- id: toc
+  translation: "সূচিপত্র"
+
+- id: translations
+  translation: "অনুবাদসমূহ"
+
+- id: home
+  translation: "হোম"
+
+- id: edit_post
+  translation: "সম্পাদনা করুন"
+
+- id: code_copy
+  translation: "কপি করুন"
+
+- id: code_copied
+  translation: "কপি হয়েছে!"

@@ -1,21 +1,21 @@
 import * as params from '@params';
 
-var fuse; // holds our search engine
-var resList = document.getElementById('searchResults');
-var sInput = document.getElementById('searchInput');
-var first, last, current_elem = null
-var resultsAvailable = false;
+let fuse; // holds our search engine
+let resList = document.getElementById('searchResults');
+let sInput = document.getElementById('searchInput');
+let first, last, current_elem = null
+let resultsAvailable = false;
 
 // load our search index
 window.onload = function () {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText);
+                let data = JSON.parse(xhr.responseText);
                 if (data) {
                     // fuse.js options; check fuse.js website for details
-                    var options = {
+                    let options = {
                         distance: 100,
                         threshold: 0.4,
                         ignoreLocation: true,
@@ -26,7 +26,21 @@ window.onload = function () {
                             'content'
                         ]
                     };
-                    if (params.fuseOpts) options = params.fuseOpts;
+                    if (params.fuseOpts) {
+                        options = {
+                            isCaseSensitive: params.fuseOpts.iscasesensitive ?? false,
+                            includeScore: params.fuseOpts.includescore ?? false,
+                            includeMatches: params.fuseOpts.includematches ?? false,
+                            minMatchCharLength: params.fuseOpts.minmatchcharlength ?? 1,
+                            shouldSort: params.fuseOpts.shouldsort ?? true,
+                            findAllMatches: params.fuseOpts.findallmatches ?? false,
+                            keys: params.fuseOpts.keys ?? ['title', 'permalink', 'summary', 'content'],
+                            location: params.fuseOpts.location ?? 0,
+                            threshold: params.fuseOpts.threshold ?? 0.4,
+                            distance: params.fuseOpts.distance ?? 100,
+                            ignoreLocation: params.fuseOpts.ignorelocation ?? true
+                        }
+                    }
                     fuse = new Fuse(data, options); // build the index from the json file
                 }
             } else {
@@ -63,7 +77,12 @@ sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
     if (fuse) {
-        const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
+        let results;
+        if (params.fuseOpts) {
+            results = fuse.search(this.value.trim(), {limit: params.fuseOpts.limit}); // the actual query being run using fuse.js along with options
+        } else {
+            results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
+        }
         if (results.length !== 0) {
             // build our html if result exists
             let resultSet = ''; // our results bucket
@@ -92,42 +111,42 @@ sInput.addEventListener('search', function (e) {
 // kb bindings
 document.onkeydown = function (e) {
     let key = e.key;
-    var ae = document.activeElement;
+    let ae = document.activeElement;
 
     let inbox = document.getElementById("searchbox").contains(ae)
 
     if (ae === sInput) {
-        var elements = document.getElementsByClassName('focus');
+        let elements = document.getElementsByClassName('focus');
         while (elements.length > 0) {
             elements[0].classList.remove('focus');
         }
     } else if (current_elem) ae = current_elem;
 
-    if (key === "ArrowDown" && resultsAvailable && inbox) {
+    if (key === "Escape") {
+        reset()
+    } else if (!resultsAvailable || !inbox) {
+        return
+    } else if (key === "ArrowDown") {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
             activeToggle(resList.firstChild.lastChild);
-        } else if (ae.parentElement == last) {
+        } else if (ae.parentElement != last) {
             // if the currently focused element's parent is last, do nothing
-        } else {
             // otherwise select the next search result
             activeToggle(ae.parentElement.nextSibling.lastChild);
         }
-    } else if (key === "ArrowUp" && resultsAvailable && inbox) {
+    } else if (key === "ArrowUp") {
         e.preventDefault();
-        if (ae == sInput) {
-            // if the currently focused element is input box, do nothing
-        } else if (ae.parentElement == first) {
+        if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
             activeToggle(sInput);
-        } else {
+        } else if (ae != sInput) {
+            // if the currently focused element is input box, do nothing
             // otherwise select the previous search result
             activeToggle(ae.parentElement.previousSibling.lastChild);
         }
-    } else if (key === "ArrowRight" && resultsAvailable && inbox) {
+    } else if (key === "ArrowRight") {
         ae.click(); // click on active link
-    } else if (key === "Escape") {
-        reset()
     }
 }

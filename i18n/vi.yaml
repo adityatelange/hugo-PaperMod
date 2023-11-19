@@ -6,8 +6,13 @@
 
 - id: read_time
   translation:
-    one : "1 phút"
+    one: "1 phút"
     other: "{{ .Count }} phút"
+
+- id: words
+  translation:
+    one: "từ"
+    other: "{{ .Count }} từ"
 
 - id: toc
   translation: "Mục lục"
@@ -17,6 +22,9 @@
 
 - id: home
   translation: "Trang chủ"
+
+- id: edit_post
+  translation: "Chỉnh sửa"
 
 - id: code_copy
   translation: "Sao chép"

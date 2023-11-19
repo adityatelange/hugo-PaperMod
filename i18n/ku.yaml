@@ -1,0 +1,25 @@
+- id: prev_page
+  translation: "Rûpela Paş"
+
+- id: next_page
+  translation: "Rûpela Pêş"
+
+- id: read_time
+  translation:
+    one : "1 xulek"
+    other: "{{ .Count }} xulek"
+
+- id: toc
+  translation: "Pêrist"
+
+- id: translations
+  translation: "Wergeran"
+
+- id: home
+  translation: "Xanî"
+
+- id: code_copy
+  translation: "Jê bigire"
+
+- id: code_copied
+  translation: "Hat jêgirtin!"

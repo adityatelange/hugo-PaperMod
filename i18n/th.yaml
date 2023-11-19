@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "ก่อนหน้า"
+
+- id: next_page
+  translation: "ถัดไป"
+
+- id: read_time
+  translation:
+    one : "1 นาที"
+    other: "{{ .Count }} นาที"
+
+- id: words
+  translation:
+    one : "คำ"
+    other: "{{ .Count }} คำ"
+
+- id: toc
+  translation: "สารบัญ"
+
+- id: translations
+  translation: "การแปล"
+
+- id: home
+  translation: "หน้าหลัก"
+
+- id: edit_post
+  translation: "แก้ไข"
+
+- id: code_copy
+  translation: "คัดลอก"
+
+- id: code_copied
+  translation: "คัดลอกแล้ว!"

@@ -53,6 +53,7 @@
 
 .entry-header h2 {
     font-size: 24px;
+    line-height: 1.3;
 }
 
 .entry-content {
@@ -85,10 +86,6 @@
     color: var(--secondary);
 }
 
-.entry-isdraft {
-    display: inline;
-}
-
 .entry-cover {
     margin-bottom: var(--gap);
     text-align: center;
@@ -98,6 +95,7 @@
     border-radius: var(--radius);
     pointer-events: none;
     width: 100%;
+    height: auto;
 }
 
 .entry-cover a {
