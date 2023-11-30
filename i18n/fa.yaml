@@ -9,11 +9,16 @@
     one: "۱ دقیقه"
     other: "{{ .Count }} دقیقه"
 
+- id: words
+  translation:
+    one : "۱ کلمه"
+    other: "{{ .Count }} کلمه"
+
 - id: toc
   translation: "فهرست مطالب"
 
 - id: translations
-  translation: "ترجمه ها"
+  translation: "ترجمه‌ها"
 
 - id: home
   translation: "خانه"
