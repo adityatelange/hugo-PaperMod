@@ -53,6 +53,7 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+  {{ partial "adsense-multiplex.html" $ }}
 </article>
 
 {{- end }}{{/* end main */}}

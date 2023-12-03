@@ -1,0 +1,6 @@
+{{ $adsenseEnabled := (and .Site.Params "adsense" (ne .Params.disableAdsense true) ) }}
+{{ $adsenseAllowedOnPage := (ne .Kind "404" )}}
+
+{{- if (and $adsenseEnabled $adsenseAllowedOnPage) }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{- .Site.Params.adsense.clientID -}}" crossorigin="anonymous"></script>
+{{- end }}
