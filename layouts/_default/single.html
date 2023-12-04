@@ -32,6 +32,7 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+    {{ partial "adsense-inarticle.html" $ }}
   </div>
   {{- end }}
 
