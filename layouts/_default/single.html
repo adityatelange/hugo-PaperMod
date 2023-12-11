@@ -35,6 +35,8 @@
   </div>
   {{- end }}
 
+  {{- partial "extend_content.html" . }}
+
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
