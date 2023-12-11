@@ -91,3 +91,12 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+/* 加载自己的字体 */
+@font-face {
+    font-family: "stratum2";
+    src: url("/stratum2-medium-webfont.ttf");
+}
+@font-face {
+    font-family: "fangzhengheiti";
+    src: url("/FZHTJW.ttf");
+}
