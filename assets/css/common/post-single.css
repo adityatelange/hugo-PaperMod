@@ -34,6 +34,7 @@
 
 .post-content {
     color: var(--content);
+    font-family: 'Times New Roman', 'Noto Serif SC' !important;
 }
 
 .post-content h3,

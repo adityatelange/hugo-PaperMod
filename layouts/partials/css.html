@@ -1,23 +1,26 @@
 
 <style>
-    :root {
+    /* :root {
       --sys-font-family: "Noto Serif SC";
       --zh-font-family: "Noto Serif SC";
       --base-font-family: "Noto Serif SC";
       --code-font-family: "Noto Serif SC";
       --article-font-family: "Noto Serif SC";
-    }
+    } */
   </style>
   
   <script>
     (function () {
-      const customFont = document.createElement("link");
-      customFont.href =
-        "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
-  
-      customFont.type = "text/css";
-      customFont.rel = "stylesheet";
-  
-      document.head.appendChild(customFont);
+      const notoSerifFont = document.createElement("link");
+      notoSerifFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+      notoSerifFont.type = "text/css";
+      notoSerifFont.rel = "stylesheet";
+      document.head.appendChild(notoSerifFont);
+
+      const notoSansFont = document.createElement("link");
+      notoSansFont.href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&&display=swap";
+      notoSansFont.type = "text/css";
+      notoSansFont.rel = "stylesheet";
+      document.head.appendChild(notoSansFont);
     })();
   </script>
