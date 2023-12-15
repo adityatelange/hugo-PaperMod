@@ -1,11 +1,11 @@
 ---
-title: "Features"
+title: "Features / Mods"
 summary: Learn About All Features in PaperMod
 date: 2021-01-20
 weight: 2
 aliases: ["/papermod-features"]
-tags: ["PaperMod"]
-author: "Aditya Telange"
+tags: ["PaperMod", "Docs"]
+author: ["Aditya Telange"]
 ---
 
 ### Intro
@@ -28,7 +28,7 @@ The following is enabled by default
 
 ### Default Theme light/dark/auto
 
-```yml
+```yml {linenos=true}
 params:
   # defaultTheme: light
   # defaultTheme: dark
@@ -45,7 +45,7 @@ Shows icon besides title of page to change theme
 
 To disable it :
 
-```yml
+```yml {linenos=true}
 disableThemeToggle: true
 ```
 
@@ -110,15 +110,15 @@ add following to config file
 
 ```yml
 params:
-    homeInfoParams:
-        Title: Hi there wave
-        Content: Can be Info, links, about...
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
 
-    socialIcons: # optional
-        - name: "<platform>"
-          url: "<link>"
-        - name: "<platform 2>"
-          url: "<link2>"
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
 ```
 
 ---
@@ -131,27 +131,27 @@ Shows Index/Home page as Full Page with Social Links and Image
 
 add following to config file
 
-```yml
+```yml {linenos=true}
 params:
-    profileMode:
-        enabled: true
-        title: "<Title>" # optional default will be site title
-        subtitle: "This is subtitle"
-        imageUrl: "<image link>" # optional
-        imageTitle: "<title of image as alt>" # optional
-        imageWidth: 120 # custom size
-        imageHeight: 120 # custom size
-        buttons:
-            - name: Archive
-              url: "/archive"
-            - name: Github
-              url: "https://github.com/"
+  profileMode:
+    enabled: true
+    title: "<Title>" # optional default will be site title
+    subtitle: "This is subtitle"
+    imageUrl: "<image link>" # optional
+    imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: Archive
+        url: "/archive"
+      - name: Github
+        url: "https://github.com/"
 
-    socialIcons: # optional
-        - name: "<platform>"
-          url: "<link>"
-        - name: "<platform 2>"
-          url: "<link2>"
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
 ```
 
 ---
@@ -162,20 +162,20 @@ PaperMod uses [Fuse.js Basic](https://fusejs.io/getting-started/different-builds
 
 Add the following to site config, `config.yml`
 
-```yml
+```yml {linenos=true,hl_lines=[5]}
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
+    - JSON # necessary for search
 ```
 
 Create a page with `search.md` in `content` directory with following content
 
-```yml
+```yml {linenos=true,hl_lines=[3]}
 ---
 title: "Search" # in any language you want
-layout: "search" # is necessary
+layout: "search" # necessary for search
 # url: "/archive"
 # description: "Description for Search"
 summary: "search"
@@ -185,8 +185,7 @@ placeholder: "placeholder text in search input box"
 
 To hide a particular page from being searched, add it in post's frontmatter
 
-```yml
----
+```yml {linenos=true}
 searchHidden: true
 ```
 
@@ -206,7 +205,7 @@ For Multilingual use `search.<lang>.md` ex. `search.es.md`.
 
 Refer https://fusejs.io/api/options.html for Options, Add those as shown below.
 
-```yml
+```yml {linenos=true}
 params:
   fuseOpts:
     isCaseSensitive: false
@@ -231,7 +230,7 @@ adds `[draft]` mark to indicate draft pages.
 
 In post's page-variables add :
 
-```yml
+```yml {linenos=true}
 cover:
   image: "<image path/url>"
   # can also paste direct link from external site
@@ -245,7 +244,7 @@ When you include images in the [Page Bundle](https://gohugo.io/content-managemen
 
 To reduce generation time and size of the site, you can disable this feature using
 
-```yml
+```yml {linenos=true}
 params:
   cover:
     responsiveImages: false
@@ -253,7 +252,7 @@ params:
 
 To enable hyperlinks to the full image size on post pages, use
 
-```yml
+```yml {linenos=true}
 params:
   cover:
     linkFullImages: true
@@ -350,13 +349,13 @@ editPost:
 ```
 
 The example above would yield the following link for the post file `posts/post-name.md`:
-https://github.com/<path_to_repo>/content/posts/post-name.md
+`https://github.com/<path_to_repo>/content/posts/post-name.md`
 
-| Parameter               | Required | Default Value |
-| ----------------------- | -------- | ------------- |
-| editPost.URL            | true     | -             |
-| editPost.appendFilePath | false    | false         |
-| editPost.Text           | false    | "Edit"        |
+| Parameter                 | Required | Default Value |
+| ------------------------- | -------- | ------------- |
+| `editPost.URL`            | true     | -             |
+| `editPost.appendFilePath` | false    | `false`       |
+| `editPost.Text`           | false    | `Edit`        |
 
 Since the link generated is a regular HTML anchor tag `<a href=...>`, you can
 also use other URL schemas like `mailto://`, e.g.
@@ -446,46 +445,47 @@ t - Theme toggle
 
 #### Twitter Cards Support
 
-* The Twitter Cards metadata, except ``twitter:image`` should not require
+- The Twitter Cards metadata, except `twitter:image` should not require
   additional configuration, since it is generated from metadata that
   you should already have (for instance the page title and description).
-* The ``twitter:image`` uses the [Post Cover Image](#post-cover-image), if present.
-* In the absence of a cover images, the first image from the ``images``
+- The `twitter:image` uses the [Post Cover Image](#post-cover-image), if present.
+- In the absence of a cover images, the first image from the `images`
   frontmatter (a list) is used.
   ```yaml
   images:
     - image_01.png
     - image_02.png
   ```
-* Finally, if neither of those are provided, ``twitter:image`` comes from the first
+- Finally, if neither of those are provided, `twitter:image` comes from the first
   [Page Bundle](https://gohugo.io/content-management/page-bundles/)
-  image with ``feature`` in the name, with a fallback to the first image with
-  ``cover`` or ``thumbnail`` in the name.
+  image with `feature` in the name, with a fallback to the first image with
+  `cover` or `thumbnail` in the name.
 
 #### OpenGraph support
 
-* The OpenGraph metadata, except ``og:image`` should not require
+- The OpenGraph metadata, except `og:image` should not require
   additional configuration, since it is generated from metadata that
   you should already have (for instance the page title and description).
-* The ``og:image`` uses the [Post Cover Image](#post-cover-image), if present.
-* In the absence of a cover images, the first image from the ``images``
+- The `og:image` uses the [Post Cover Image](#post-cover-image), if present.
+- In the absence of a cover images, the first image from the `images`
   frontmatter (a list) is used.
   ```yaml
   images:
     - image_01.png
     - image_02.png
   ```
-* Finally, if neither of those are provided, ``og:image`` comes from the first
+- Finally, if neither of those are provided, `og:image` comes from the first
   [Page Bundle](https://gohugo.io/content-management/page-bundles/)
-  image with ``feature`` in the name, with a fallback to the first image with
-  ``cover`` or ``thumbnail`` in the name.
-* For pages, you can also add audio (using frontmatter ``audio: filename.ext``) and/or
+  image with `feature` in the name, with a fallback to the first image with
+  `cover` or `thumbnail` in the name.
+- For pages, you can also add audio (using frontmatter `audio: filename.ext`) and/or
   videos.
   ```yaml
   videos:
     - filename01.mov
     - filename02.avi
   ```
+
 ---
 
 ### Multilingual Support

@@ -1,12 +1,15 @@
 ---
-title: "Installation | Update"
-summary: Read Install and Update instructions here
+title: "Install / Update PaperMod"
+summary: Read aboout Install and Update instructions and sampled configuration templates
 date: 2021-01-20
 series: ["PaperMod"]
 weight: 1
 aliases: ["/papermod-installation"]
-tags: ["PaperMod"]
-author: "Aditya Telange"
+tags: ["PaperMod", "Docs"]
+author: ["Aditya Telange"]
+cover:
+  image: images/papermod-cover.png
+  hiddenInList: true
 ---
 
 ## Intro
@@ -22,7 +25,7 @@ Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to se
 
 > Note: Use -f to select yml format
 >
-> `hugo new site <name of site> -f yml`
+> `hugo new site <name of site> --format yaml`
 
 Make sure you install latest version of **`hugo(>=0.83.0)`**.
 
@@ -78,22 +81,23 @@ Direct Links:
 
 ### Method 4
 
- - Install [Go programming language](https://go.dev/doc/install) in your operating system.
+- Install [Go programming language](https://go.dev/doc/install) in your operating system.
 
- - Intialize your own hugo mod
- 
+- Intialize your own hugo mod
+
 ```
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
- - Add PaperMod in your `config.yml` file
+- Add PaperMod in your `config.yml` file
 
-```
+```go {linenos=true}
 module:
   imports:
   - path: github.com/adityatelange/hugo-PaperMod
 ```
- - Update theme
+
+- Update theme
 
 ```
 hugo mod get -u
@@ -103,13 +107,13 @@ hugo mod get -u
 
 Add in `config.yml`:
 
-```yml
+```yml {linenos=true}
 theme: "PaperMod"
 ```
 
 ---
 
-## Videos featuring Papermod
+## Videos featuring PaperMod
 
 You can go through few videos which are available on YouTube for getting to know the creator's thoughts as well as the setup process.
 
@@ -119,15 +123,15 @@ You can go through few videos which are available on YouTube for getting to know
 
 ## Quick Links
 
--   ### [Papermod - Features](../papermod-features)
+- ### [Papermod - Features](../papermod-features)
 
--   ### [Papermod - FAQs](../papermod-how-to)
+- ### [Papermod - FAQs](../papermod-how-to)
 
--   ### [Papermod - Variables](../papermod-variables)
+- ### [Papermod - Variables](../papermod-variables)
 
--   ### [Papermod - Icons](../papermod-icons)
+- ### [Papermod - Icons](../papermod-icons)
 
--   ### [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
+- ### [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
 
 ---
 
