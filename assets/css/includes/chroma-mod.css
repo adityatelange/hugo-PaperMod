@@ -6,15 +6,14 @@
     display: flex;
 }
 
-table pre.chroma code {
-    padding: 0.4rem 0;
+.chroma .lnt {
+    padding-inline-start: 12px;
 }
 
-/* .chroma .lntd:first-of-type {
-    padding-inline-start: 10px;
+table pre.chroma code {
+    padding: 10px 0;
 }
 
 .chroma .lntd:last-of-type {
-    padding-inline-end: 10px;
     width: 100%;
-} */
+}
