@@ -257,8 +257,8 @@ params:
     Content: Welcome to my blog
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
+    - name: x
+      url: "https://x.com/"
     - name: stackoverflow
       url: "https://stackoverflow.com"
     - name: github
