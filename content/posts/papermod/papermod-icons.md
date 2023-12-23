@@ -1,11 +1,11 @@
 ---
-title: "Icons"
+title: "Social-Icons / Share-Icons"
 summary: List of all Icons supported by PaperMod
 date: 2021-01-20
 weight: 4
 aliases: ["/papermod-icons"]
-tags: ["PaperMod"]
-author: "Aditya Telange"
+tags: ["PaperMod", "Docs"]
+author: ["Aditya Telange"]
 draft: true
 ---
 
@@ -93,7 +93,7 @@ draft: true
 
 Usage :
 
-```
+```yml {linenos=true}
 socialIcons:
   - name: "kofi"
     url: "https://kofi.com"
@@ -105,23 +105,23 @@ socialIcons:
 
 ## Share Icons
 
-| Platform                                                        |
-| --------------------------------------------------------------- |
-| `x` (also generates hash tags from tags linked with post) |
-| `linkedin`                                                      |
-| `reddit`                                                        |
-| `facebook`                                                      |
-| `whatsapp`                                                      |
-| `telegram`                                                      |
+| Platform                                                            |
+| ------------------------------------------------------------------- |
+| `x` (also generates `#hashtags` from _tags_ linked with post) |
+| `linkedin`                                                          |
+| `reddit`                                                            |
+| `facebook`                                                          |
+| `whatsapp`                                                          |
+| `telegram`                                                          |
 
 Usage:
 
-```yml
+```yml {linenos=true}
 params:
-    ShowShareButtons: true
+  ShowShareButtons: true
 ```
 
-```yml
+```yml {linenos=true}
 params:
-    ShareButtons: ["linkedin", "twitter"] # To customize which share buttons to be enabled on page
+  ShareButtons: ["linkedin", "twitter"] # To customize which share buttons to be enabled on page
 ```

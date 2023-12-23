@@ -1,74 +1,90 @@
 ---
-title: "Installation | Update"
-summary: Read Install and Update instructions here
+title: "Install / Update PaperMod"
+summary: Read aboout Install and Update instructions and sampled configuration templates
 date: 2021-01-20
 series: ["PaperMod"]
 weight: 1
 aliases: ["/papermod-installation"]
-tags: ["PaperMod"]
-author: "Aditya Telange"
+tags: ["PaperMod", "Docs"]
+author: ["Aditya Telange"]
+cover:
+  image: images/papermod-cover.png
+  hiddenInList: true
 ---
 
-## Intro
-
-- **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
-- You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
+> - **We'll be using `yml/yaml` format for all examples down below, it is recommend to use `yaml` over `toml` as it is easier to read.**
+> - You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if needed.
 
 ---
 
-## Guide
+## Getting Started 🚀
 
-Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup {{< inTextImg url="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" height="14" >}} and create a new site.
+1. Follow **[Hugo Docs's - Quick Start](https://gohugo.io/getting-started/quick-start/)** guide to install {{< inTextImg url="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" height="14" >}}.
+   <br>(Make sure you install **Hugo >= v0.112.4**)
 
-> Note: Use -f to select yml format
->
-> `hugo new site <name of site> -f yml`
+2. Create a new {{< inTextImg url="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" height="14" >}} site
+   ```sh
+   hugo new site MyFreshWebsite --format yaml
+   # replace MyFreshWebsite with name of your website
+   ```
+   Note:
+   - Older versions of Hugo may not support `--format yaml`
+   - Read more here about [Hugo Docs's - hugo new site command](https://gohugo.io/commands/hugo_new_site/#synopsis)
 
-Make sure you install latest version of **`hugo(>=0.83.0)`**.
+After you have created a new site, follow the below steps to add **PaperMod**
 
-After you have created a new site, at [Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) follow the steps:
+### Installing/Updating PaperMod
 
-### Method 1
+- Themes reside in `MyFreshWebsite/themes` directory.
+- PaperMod will be installed in `MyFreshWebsite/themes/PaperMod`
 
-Inside the folder of your Hugo site, run:
+> {{< collapse summary="**Expand Method 1 - Git Clone**" >}}
+
+**INSTALL** : Inside the folder of your Hugo site `MyFreshWebsite`, run:
 
 ```bash
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 ```
 
-**Note**: You may use ` --branch v5.0` to end of above command if you want to stick to specific release.
+You may use ` --branch v7.0` to end of above command if you want to stick to specific release.
 
-> Updating theme :
->
-> ```bash
-> cd themes/PaperMod
-> git pull
-> ```
+**UPDATE**: Inside the folder of your Hugo site `MyFreshWebsite`, run:
 
-### Method 2
+```bash
+cd themes/PaperMod
+git pull
+```
 
-you can use as [submodule](https://www.atlassian.com/git/tutorials/git-submodule) with
+{{</ collapse >}}
+
+> {{< collapse summary="**Expand Method 2 - Git Submodule (recomended)**" >}}
+
+**INSTALL** : Inside the folder of your Hugo site `MyFreshWebsite`, run:
 
 ```bash
 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
 ```
 
-**Note**: You may use ` --branch v5.0` to end of above command if you want to stick to specific release.
+You may use ` --branch v7.0` to end of above command if you want to stick to specific release.
+Read more about git submodules [here](https://www.atlassian.com/git/tutorials/git-submodule).
 
-> Updating theme :
->
-> ```bash
-> git submodule update --remote --merge
-> ```
+**UPDATE**: Inside the folder of your Hugo site `MyFreshWebsite`, run:
 
-### Method 3
+```bash
+git submodule update --remote --merge
+```
 
-Or you can Download as Zip from Github Page and extract in your themes directory
+{{</ collapse >}}
+
+> {{< collapse summary="**Expand Method 3 - Download an unzip**" >}}
+
+Download PaperMod source as Zip from Github Releases and extract in your themes directory at `MyFreshWebsite/themes/PaperMod`
 
 Direct Links:
 
 - [Master Branch (Latest)](https://github.com/adityatelange/hugo-PaperMod/archive/master.zip)
+- [v7.0](https://github.com/adityatelange/hugo-PaperMod/archive/v7.0.zip)
 - [v6.0](https://github.com/adityatelange/hugo-PaperMod/archive/v6.0.zip)
 - [v5.0](https://github.com/adityatelange/hugo-PaperMod/archive/v5.0.zip)
 - [v4.0](https://github.com/adityatelange/hugo-PaperMod/archive/v4.0.zip)
@@ -76,40 +92,64 @@ Direct Links:
 - [v2.0](https://github.com/adityatelange/hugo-PaperMod/archive/v2.0.zip)
 - [v1.0](https://github.com/adityatelange/hugo-PaperMod/archive/v1.0.zip)
 
-### Method 4
+{{</ collapse >}}
 
- - Install [Go programming language](https://go.dev/doc/install) in your operating system.
+> {{< collapse summary="**Expand Method 4 - Hugo module**" >}}
 
- - Intialize your own hugo mod
- 
+**INSTALL** :
+
+- Install [Go programming language](https://go.dev/doc/install) in your operating system.
+
+- Intialize your own hugo mod
+
 ```
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
- - Add PaperMod in your `config.yml` file
+- Add PaperMod in your `config.yml` file
 
-```
+```go {linenos=true}
 module:
   imports:
   - path: github.com/adityatelange/hugo-PaperMod
 ```
- - Update theme
+
+**UPDATE**:
 
 ```
 hugo mod get -u
 ```
 
-### Finally ...
+Read more : [Hugo Docs's - HUGO MODULES](https://gohugo.io/hugo-modules/use-modules/)
 
-Add in `config.yml`:
+{{</ collapse >}}
 
-```yml
-theme: "PaperMod"
+### Finally set theme as PaperMod in your site config
+
+In `config.yml` add:
+
+```yml {linenos=true}
+theme: ["PaperMod"]
 ```
+
+### Next up - Customizing PaperMod to suit your preferences.
+
+- Your site will be blank after you set up for the very first time.
+- You may go through this website's source code - [PaperMod's exampleSite's souce](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite)
+- Scroll below this page where you will find more specific details about each section.
+- Kindly go through all of the pages below to know how to configure PaperMod.
 
 ---
 
-## Videos featuring Papermod
+## Support 🫶
+
+- Star 🌟 PaperMod's Github repository.
+- Help spread the word about PaperMod by sharing it on social media and recommending it to your friends. 🗣️
+- You can also sponsor 🏅 on [Github Sponsors](https://github.com/sponsors/adityatelange) / [Ko-Fi](https://ko-fi.com/adityatelange).
+
+---
+
+## Videos featuring PaperMod
 
 You can go through few videos which are available on YouTube for getting to know the creator's thoughts as well as the setup process.
 
@@ -119,15 +159,15 @@ You can go through few videos which are available on YouTube for getting to know
 
 ## Quick Links
 
--   ### [Papermod - Features](../papermod-features)
+- ### [Papermod - Features](../papermod-features)
 
--   ### [Papermod - FAQs](../papermod-how-to)
+- ### [Papermod - FAQs](../papermod-how-to)
 
--   ### [Papermod - Variables](../papermod-variables)
+- ### [Papermod - Variables](../papermod-variables)
 
--   ### [Papermod - Icons](../papermod-icons)
+- ### [Papermod - Icons](../papermod-icons)
 
--   ### [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
+- ### [ChangeLog](https://github.com/adityatelange/hugo-PaperMod/releases)
 
 ---
 
@@ -251,6 +291,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
