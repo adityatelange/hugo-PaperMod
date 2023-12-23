@@ -1,0 +1,20 @@
+.chroma {
+    background-color: unset !important;
+}
+
+.chroma .hl {
+    display: flex;
+}
+
+table pre.chroma code {
+    padding: 0.4rem 0;
+}
+
+/* .chroma .lntd:first-of-type {
+    padding-inline-start: 10px;
+}
+
+.chroma .lntd:last-of-type {
+    padding-inline-end: 10px;
+    width: 100%;
+} */
