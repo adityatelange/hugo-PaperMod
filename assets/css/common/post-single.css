@@ -199,7 +199,7 @@
 }
 
 .post-content pre code {
-    display: block;
+    display: grid;
     margin: auto 0;
     padding: 10px;
     color: rgb(213, 213, 214);
