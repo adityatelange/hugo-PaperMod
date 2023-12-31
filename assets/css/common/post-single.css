@@ -155,7 +155,7 @@
 
 .post-content .highlight:not(table) {
     margin: 10px auto;
-    background: var(--hljs-bg) !important;
+    background: var(--code-block-bg) !important;
     border-radius: var(--radius);
     direction: ltr;
 }
@@ -199,11 +199,11 @@
 }
 
 .post-content pre code {
-    display: block;
+    display: grid;
     margin: auto 0;
     padding: 10px;
     color: rgb(213, 213, 214);
-    background: var(--hljs-bg) !important;
+    background: var(--code-block-bg) !important;
     border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
