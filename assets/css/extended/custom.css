@@ -15,24 +15,3 @@ iframe {
 .entry-cover img {
     border: 1px solid var(--border);
 }
-
-/* line highlight fix start */
-.chroma .hl {
-    display: inherit;
-}
-
-.post-content table pre code {
-    padding: 10px 0px 10px 0px;
-}
-
-.chroma .lntd:first-of-type {
-    padding-inline-start: 10px;
-}
-
-.chroma .lntd:last-of-type {
-    padding-inline-end: 10px;
-    width: 100%;
-}
-
-/* line highlight fix end */
-
