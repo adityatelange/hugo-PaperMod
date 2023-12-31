@@ -37,3 +37,24 @@
 
 - id: Tags
   translation: "标签"
+
+- id: no_comment_but
+  translation: "本站不提供评论功能，但是鼓励您与作者交流讨论！"
+
+- id: send_email
+  translation: "发送邮件"
+
+- id: chat_on_telegram
+  translation: "发送Telegram消息"
+
+- id: or
+  translation: "或"
+
+- id: chat_email_title_prefix
+  translation: "我想和你讨论这篇文章的内容: "
+
+- id: chat_email_body_prefix
+  translation: "原文链接: "
+
+- id: latest_articles
+  translation: "最新文章"

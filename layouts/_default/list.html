@@ -46,8 +46,16 @@
 {{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
+{{- partial "index_profile.html" . }}
+
 {{- end }}
+
+{{- if .IsHome }}
+<header class="page-header">
+  <h1>{{ i18n "latest_articles"}}</h1>
+</header>
+{{- end }}
+
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}

@@ -6,7 +6,8 @@
 
 .main .profile {
     align-items: center;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
+    /* min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2)); 改为全屏*/
+    min-height: calc(100vh - var(--header-height) ); 
     text-align: center;
 }
 

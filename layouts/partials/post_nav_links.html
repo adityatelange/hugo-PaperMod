@@ -1,5 +1,17 @@
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
+<!-- 不提供评论但是可以发邮件和telegram -->
+<div class="no-comment-but">
+	{{ i18n "no_comment_but" }}
+	<a href="mailto:windypathblog@gmail.com?subject={{ i18n " chat_email_title_prefix"}}{{.Title}}&body={{ i18n "chat_email_body_prefix"}}{{.Permalink}}">
+		{{ i18n "send_email" }}
+	</a>
+	{{ i18n "or" }}
+	<a href="https://t.me/windypath" style="border-bottom: 1px solid var(--secondary);"target="_blank">
+		{{ i18n "chat_on_telegram" }}
+	</a>
+</div>
+
 <nav class="paginav">
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">

@@ -37,3 +37,24 @@
 
 - id: Tags
   translation: "Tags"
+
+- id: no_comment_but
+  translation: "No comments here, but I encourage you to engage in discussions with the author!"
+
+- id: send_email
+  translation: "Send Email"
+
+- id: chat_on_telegram
+  translation: "Chat On Telegram"
+
+- id: or
+  translation: "Or"
+
+- id: chat_email_title_prefix
+  translation: "I'd like to discuss the content of this article: "
+
+- id: chat_email_body_prefix
+  translation: "The original link: "
+
+- id: latest_articles
+  translation: "Latest Articles"

@@ -446,3 +446,11 @@ div.friend-link div.friend-link-bio {
     line-height: 32px;
     overflow: hidden;
 }
+
+.no-comment-but {
+    font-size: 14px;
+}
+
+.no-comment-but a {
+    border-bottom: 1px solid var(--secondary);
+}
