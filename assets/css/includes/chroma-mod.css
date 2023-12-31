@@ -1,0 +1,24 @@
+.chroma {
+    background-color: unset !important;
+}
+
+.chroma .hl {
+    display: flex;
+}
+
+.chroma .lnt {
+    padding: 0 0 0 12px;
+}
+
+.highlight pre.chroma code {
+    padding: 8px 0;
+}
+
+.highlight pre.chroma .line .cl,
+.chroma .ln {
+    padding: 0 10px;
+}
+
+.chroma .lntd:last-of-type {
+    width: 100%;
+}
