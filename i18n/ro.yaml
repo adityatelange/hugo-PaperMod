@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Înapoi"
+
+- id: next_page
+  translation: "Înainte"
+
+- id: read_time
+  translation:
+    one : "1 minut"
+    other: "{{ .Count }} minute"
+
+- id: words
+  translation:
+    one : "cuvânt"
+    other: "{{ .Count }} cuvinte"
+
+- id: toc
+  translation: "Sumar"
+
+- id: translations
+  translation: "Traduceri"
+
+- id: home
+  translation: "Acasă"
+
+- id: edit_post
+  translation: "Editează"
+
+- id: code_copy
+  translation: "copiază"
+
+- id: code_copied
+  translation: "copiat!"
