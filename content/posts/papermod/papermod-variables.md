@@ -39,14 +39,14 @@ weight: 5
 | `tocopen`                              | boolean       | true \| false             | To keep open ToC by default on page load                                                  |
 | `ShowPostNavLinks`                     | boolean       | true \| false             | Show Previous and Next Posts below a Post                                                 |
 | `ShowBreadCrumbs`                      | boolean       | true \| false             | Show BreadCrumb Navigation above single post/page                                         |
-| `ShareButtons`                         | list          | ["linkedin", "x"]   | To customize which share buttons to be enabled on page                                    |
+| `ShareButtons`                         | list          | ["linkedin", "x"]         | To customize which share buttons to be enabled on page                                    |
 | `ShowWordCount`                        | boolean       | true \| false             | To word count to metadata                                                                 |
 | `ShowRssButtonInSectionTermList`       | boolean       | true \| false             | To show RSS icon in Section, Term and List pages                                          |
 | `UseHugoToc`                           | boolean       | true \| false             | To use Hugo's default Toc instead of custom                                               |
 | `comments`                             | boolean       | true \| false             | To show/hide comments                                                                     |
 | `hideFooter`                           | boolean       | true \| false             | To Hide Footer Text om the end of page                                                    |
 | `CanonicalLinkText`                    | string        | 'Originally published at' | To show text before canonical URL's hostname                                              |
-| `displayFullLangName`                  | boolean       | true \| false             | To show `languageName` under a language in Language switch header                                            |
+| `displayFullLangName`                  | boolean       | true \| false             | To show `languageName` under a language in Language switch header                         |
 | `analytics.google.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Google Analytics                                                |
 | `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                  | Site Verification Tag for Bing                                                            |
 | `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Yandex                                                          |
@@ -198,3 +198,4 @@ editPost:
 | `ShowRssButtonInSectionTermList` | boolean       | true \| false                   | To show RSS icon in Section, Term and List pages                                    |
 | `UseHugoToc`                     | boolean       | true \| false                   | To use Hugo's default Toc instead of custom                                         |
 | `robotsNoIndex`                  | boolean       | true \| false                   | To hide a particular page from indexing by search engines                           |
+| `hiddenInHomelist`                | boolean      | true \| false                   | To Hide specific being shown in Home pages                                          |
