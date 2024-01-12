@@ -26,7 +26,7 @@ Please fill the template below
  - Device/Os: [e.g. Android 10]
  - Type: [e.g. Desktop/Mobile]
  - Browser and version [e.g. Chrome 86.0]:
- - Hugo Version [ >=0.97.1 expected]:
+ - Hugo Version [ >=0.112.4 expected]:
  - Theme Version [e.g. v4.0, master, or commit-id ]:
 
 **Steps to reproduce the behavior:**

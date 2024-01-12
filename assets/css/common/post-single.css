@@ -130,19 +130,18 @@
 }
 
 .post-content table {
-    margin-bottom: 32px;
+    margin-bottom: var(--content-gap);
 }
 
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 80px;
-    padding: 12px 8px;
+    padding: 8px 5px;
     line-height: 1.5;
     border-bottom: 1px solid var(--border);
 }
 
 .post-content table th {
-    font-size: 14px;
     text-align: start;
 }
 
@@ -156,7 +155,7 @@
 
 .post-content .highlight:not(table) {
     margin: 10px auto;
-    background: var(--hljs-bg) !important;
+    background: var(--code-block-bg) !important;
     border-radius: var(--radius);
     direction: ltr;
 }
@@ -200,11 +199,11 @@
 }
 
 .post-content pre code {
-    display: block;
+    display: grid;
     margin: auto 0;
     padding: 10px;
     color: rgb(213, 213, 214);
-    background: var(--hljs-bg) !important;
+    background: var(--code-block-bg) !important;
     border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
@@ -296,10 +295,18 @@
     margin-top: 56px;
 }
 
+.post-footer>* {
+    margin-bottom: 10px;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .post-tags li {
     display: inline-block;
-    margin-inline-end: 3px;
-    margin-bottom: 5px;
 }
 
 .post-tags a,
@@ -312,8 +319,7 @@
 
 .post-tags a {
     display: block;
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
+    padding: 0 14px;
     color: var(--secondary);
     font-size: 14px;
     line-height: 34px;
@@ -326,15 +332,16 @@
 }
 
 .share-buttons {
-    margin: 14px 0;
-    padding-inline-start: var(--radius);
+    padding: 10px;
     display: flex;
     justify-content: center;
     overflow-x: auto;
+    gap: 10px;
 }
 
+.share-buttons li,
 .share-buttons a {
-    margin-top: 10px;
+    display: inline-flex;
 }
 
 .share-buttons a:not(:last-of-type) {
@@ -355,10 +362,8 @@ h6:hover .anchor {
 }
 
 .paginav {
-    margin: 10px 0;
     display: flex;
     line-height: 30px;
-    border-radius: var(--radius);
 }
 
 .paginav a {
