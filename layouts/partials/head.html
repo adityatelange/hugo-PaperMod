@@ -49,7 +49,7 @@
 
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
-{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
+{{- $theme_vars := (resources.Get "css/core/theme-vars.css.template" | resources.ExecuteAsTemplate "css/core/theme-vars.css" . | resources.ToCSS) }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
 {{- $license_css := (resources.Get "css/core/license.css") }}
