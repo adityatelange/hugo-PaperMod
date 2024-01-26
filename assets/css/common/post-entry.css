@@ -61,10 +61,19 @@
     color: var(--secondary);
     font-size: 14px;
     line-height: 1.6;
+    position: relative;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+
+.entry-content dl,
+.entry-content ol,
+.entry-content p,
+.entry-content figure,
+.entry-content ul {
+    margin-bottom: var(--content-gap-summary);
 }
 
 .entry-footer {
@@ -78,6 +87,14 @@
     right: 0;
     top: 0;
     bottom: 0;
+}
+
+.entry-content-on-top .entry-content {
+    z-index: 1;
+}
+
+.entry-content-on-top .entry-link {
+    z-index: 0;
 }
 
 .entry-hint {

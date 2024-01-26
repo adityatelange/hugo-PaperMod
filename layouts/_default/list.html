@@ -63,7 +63,7 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
-<article class="{{ $class }}">
+<article class="{{ $class }}{{ cond site.Params.onlyRenderedShortSummaries " entry-content-on-top" "" }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
@@ -79,9 +79,13 @@
       {{- end }}
     </h2>
   </header>
-  {{- if (ne (.Param "hideSummary") true) }}
+  {{- $summary := printf (.Summary | plainify | htmlUnescape) (cond .Truncated "..." "") }}
+  {{- if site.Params.onlyRenderedShortSummaries }}
+    {{- $summary = (or (.Params.summary | markdownify) (cond (not .Truncated) .Content false)) }}
+  {{- end }}
+  {{- if (and (ne (.Param "hideSummary") true) $summary) }}
   <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    <p>{{- $summary | safeHTML }}</p>
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}

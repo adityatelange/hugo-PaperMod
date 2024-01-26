@@ -32,224 +32,12 @@
     font-size: 16px;
 }
 
-.post-content {
-    color: var(--content);
-}
-
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-    margin: 24px 0 16px;
-}
-
-.post-content h1 {
-    margin: 40px auto 32px;
-    font-size: 40px;
-}
-
-.post-content h2 {
-    margin: 32px auto 24px;
-    font-size: 32px;
-}
-
-.post-content h3 {
-    font-size: 24px;
-}
-
-.post-content h4 {
-    font-size: 16px;
-}
-
-.post-content h5 {
-    font-size: 14px;
-}
-
-.post-content h6 {
-    font-size: 12px;
-}
-
-.post-content a,
-.toc a:hover {
-    box-shadow: 0 1px 0;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-}
-
-.post-content a code {
-    margin: auto 0;
-    border-radius: 0;
-    box-shadow: 0 -1px 0 var(--primary) inset;
-}
-
-.post-content del {
-    text-decoration: line-through;
-}
-
 .post-content dl,
 .post-content ol,
 .post-content p,
 .post-content figure,
 .post-content ul {
     margin-bottom: var(--content-gap);
-}
-
-.post-content ol,
-.post-content ul {
-    padding-inline-start: 20px;
-}
-
-.post-content li {
-    margin-top: 5px;
-}
-
-.post-content li p {
-    margin-bottom: 0;
-}
-
-.post-content dl {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-}
-
-.post-content dt {
-    width: 25%;
-    font-weight: 700;
-}
-
-.post-content dd {
-    width: 75%;
-    margin-inline-start: 0;
-    padding-inline-start: 10px;
-}
-
-.post-content dd ~ dd,
-.post-content dt ~ dt {
-    margin-top: 10px;
-}
-
-.post-content table {
-    margin-bottom: var(--content-gap);
-}
-
-.post-content table th,
-.post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
-    min-width: 80px;
-    padding: 8px 5px;
-    line-height: 1.5;
-    border-bottom: 1px solid var(--border);
-}
-
-.post-content table th {
-    text-align: start;
-}
-
-.post-content table:not(.highlighttable) td code:only-child {
-    margin: auto 0;
-}
-
-.post-content .highlight table {
-    border-radius: var(--radius);
-}
-
-.post-content .highlight:not(table) {
-    margin: 10px auto;
-    background: var(--code-block-bg) !important;
-    border-radius: var(--radius);
-    direction: ltr;
-}
-
-.post-content li > .highlight {
-    margin-inline-end: 0;
-}
-
-.post-content ul pre {
-    margin-inline-start: calc(var(--gap) * -2);
-}
-
-.post-content .highlight pre {
-    margin: 0;
-}
-
-.post-content .highlighttable {
-    table-layout: fixed;
-}
-
-.post-content .highlighttable td:first-child {
-    width: 40px;
-}
-
-.post-content .highlighttable td .linenodiv {
-    padding-inline-end: 0 !important;
-}
-
-.post-content .highlighttable td .highlight,
-.post-content .highlighttable td .linenodiv pre {
-    margin-bottom: 0;
-}
-
-.post-content code {
-    margin: auto 4px;
-    padding: 4px 6px;
-    font-size: 0.78em;
-    line-height: 1.5;
-    background: var(--code-bg);
-    border-radius: 2px;
-}
-
-.post-content pre code {
-    display: grid;
-    margin: auto 0;
-    padding: 10px;
-    color: rgb(213, 213, 214);
-    background: var(--code-block-bg) !important;
-    border-radius: var(--radius);
-    overflow-x: auto;
-    word-break: break-all;
-}
-
-.post-content blockquote {
-    margin: 20px 0;
-    padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
-}
-
-.post-content hr {
-    margin: 30px 0;
-    height: 2px;
-    background: var(--tertiary);
-    border: 0;
-}
-
-.post-content iframe {
-    max-width: 100%;
-}
-
-.post-content img {
-    border-radius: 4px;
-    margin: 1rem 0;
-}
-
-.post-content img[src*="#center"] {
-    margin: 1rem auto;
-}
-
-.post-content figure.align-center {
-    text-align: center;
-}
-
-.post-content figure > figcaption {
-    color: var(--primary);
-    font-size: 16px;
-    font-weight: bold;
-    margin: 8px 0 16px;
-}
-
-.post-content figure > figcaption > p {
-    color: var(--secondary);
-    font-size: 14px;
-    font-weight: normal;
 }
 
 .toc {
@@ -290,6 +78,13 @@
 .toc summary:focus {
     outline: 0;
 }
+
+.toc a:hover {
+    box-shadow: 0 1px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 
 .post-footer {
     margin-top: 56px;
