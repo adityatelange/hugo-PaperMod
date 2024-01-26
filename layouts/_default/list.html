@@ -64,6 +64,7 @@
 {{- end }}
 
 <article class="{{ $class }}">
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
@@ -89,7 +90,6 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
 
