@@ -6,6 +6,9 @@
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
 <head>
+    {{ if site.Params.htmx }}
+        {{- partialCached "script-htmx.html" . -}}
+    {{ endif }}
     {{- partial "head.html" . }}
 </head>
 
@@ -16,7 +19,12 @@
 {{- if eq site.Params.defaultTheme `dark` -}}
 {{- print " dark" }}
 {{- end -}}
-" id="top">
+" id="top"
+{{- if site.Params.htmx -}}
+hx-boost="true" hx-push-url="true"
+{{- endif -}}
+
+>
     {{- partialCached "header.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
