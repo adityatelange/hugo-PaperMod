@@ -4,7 +4,7 @@
   "@context": "https://schema.org",
   "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
   "name": {{ site.Title }},
-  "url": {{ site.BaseURL }},
+  "url": {{ site.Home.Permalink }},
   "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
   "thumbnailUrl": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
   "sameAs": [
@@ -18,7 +18,7 @@
 </script>
 {{- else if (or .IsPage .IsSection) }}
 {{/* BreadcrumbList */}}
-{{- $url := replace .Parent.Permalink ( printf "%s" site.BaseURL) "" }}
+{{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
 {{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
 
