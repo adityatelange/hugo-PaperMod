@@ -25,7 +25,7 @@
 
     /* footer */
     .footer {
-        padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
+        padding: calc(((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap));
     }
 }
 
