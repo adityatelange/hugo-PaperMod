@@ -7,7 +7,7 @@
 .footer {
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
+    padding: calc(((var(--footer-height) - var(--gap)) / 2) var(--gap));
     text-align: center;
     line-height: 24px;
 }
