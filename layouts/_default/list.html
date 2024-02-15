@@ -84,6 +84,16 @@
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
+  <div class="entry-categories">
+    {{- range .Params.categories }}
+    <span class="category category-{{ . | lower }}">{{ . }}</span>
+    {{- end }}
+  </div>
+  <div class="entry-tags">
+    {{- range .Params.tags }}
+    <span class="tag">{{ . }}</span>
+    {{- end }}
+  </div>
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}

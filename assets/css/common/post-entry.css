@@ -1,108 +1,152 @@
 .first-entry {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 320px;
-    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+  margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
 .first-entry .entry-header {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .first-entry .entry-header h1 {
-    font-size: 34px;
-    line-height: 1.3;
+  font-size: 34px;
+  line-height: 1.3;
 }
 
 .first-entry .entry-content {
-    margin: 14px 0;
-    font-size: 16px;
-    -webkit-line-clamp: 3;
+  margin: 14px 0;
+  font-size: 16px;
+  -webkit-line-clamp: 3;
 }
 
 .first-entry .entry-footer {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .home-info .entry-content {
-    -webkit-line-clamp: unset;
+  -webkit-line-clamp: unset;
 }
 
 .post-entry {
-    position: relative;
-    margin-bottom: var(--gap);
-    padding: var(--gap);
-    background: var(--entry);
-    border-radius: var(--radius);
-    transition: transform 0.1s;
-    border: 1px solid var(--border);
+  position: relative;
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
+  transition: transform 0.1s;
+  border: 1px solid var(--border);
 }
 
 .post-entry:active {
-    transform: scale(0.96);
+  transform: scale(0.96);
 }
 
 .tag-entry .entry-cover {
-    display: none;
+  display: none;
 }
 
 .entry-header h2 {
-    font-size: 24px;
-    line-height: 1.3;
+  font-size: 24px;
+  line-height: 1.3;
 }
 
 .entry-content {
-    margin: 8px 0;
-    color: var(--secondary);
-    font-size: 14px;
-    line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+  margin: 8px 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .entry-footer {
-    color: var(--secondary);
-    font-size: 13px;
+  color: var(--secondary);
+  font-size: 13px;
 }
 
 .entry-link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .entry-hint {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .entry-hint-parent {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .entry-cover {
-    font-size: 14px;
-    margin-bottom: var(--gap);
-    text-align: center;
+  font-size: 14px;
+  margin-bottom: var(--gap);
+  text-align: center;
 }
 
 .entry-cover img {
-    border-radius: var(--radius);
-    pointer-events: none;
-    width: 100%;
-    height: auto;
+  border-radius: var(--radius);
+  pointer-events: none;
+  width: 100%;
+  height: auto;
 }
 
 .entry-cover a {
-    color: var(--secondary);
-    box-shadow: 0 1px 0 var(--primary);
+  color: var(--secondary);
+  box-shadow: 0 1px 0 var(--primary);
+}
+
+.entry-tags {
+  margin-top: 10px; /* Ajoutez un espacement si nécessaire */
+}
+
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0; /* Couleur de fond des tags */
+  color: #333; /* Couleur du texte des tags */
+  padding: 5px 10px; /* Espacement à l'intérieur des tags */
+  border-radius: 5px; /* Ajoutez des coins arrondis */
+  margin-right: 5px; /* Espacement entre les tags */
+}
+
+.entry-categories {
+  margin-top: 10px; /* Ajoutez un espacement si nécessaire */
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.category-informatique {
+  background-color: #ff9999; /* Couleur pour la catégorie "Technologie" */
+  color: #333;
+}
+
+.category-science {
+  background-color: #99ccff; /* Couleur pour la catégorie "Science" */
+  color: #333;
+}
+
+.category-art {
+  background-color: #ffcc99; /* Couleur pour la catégorie "Art" */
+  color: #333;
+}
+
+.category-unknown {
+  background-color: red; /* Couleur par défaut pour les catégories inconnues */
+  color: #333;
 }
