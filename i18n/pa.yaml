@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "ਪਿਛਲਾ"
+
+- id: next_page
+  translation: "ਅਗਲਾ"
+
+- id: read_time
+  translation:
+    one: "1 ਮਿੰਟ"
+    other: "{{ .Count }} ਮਿੰਟ"
+
+- id: words
+  translation:
+    one: "ਸ਼ਬਦ"
+    other: "{{ .Count }} ਸ਼ਬਦ"
+
+- id: toc
+  translation: "ਤਤਕਰਾ"
+
+- id: translations
+  translation: "ਅਨੁਵਾਦ"
+
+- id: home
+  translation: "ਘਰ"
+
+- id: edit_post
+  translation: "ਸੋਧ"
+
+- id: code_copy
+  translation: "ਕਾਪੀ"
+
+- id: code_copied
+  translation: "ਕਾਪੀ ਕੀਤੀ ਗਈ!!"
