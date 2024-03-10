@@ -80,6 +80,11 @@
     {{- else -}}
     {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
     {{- end}}
+  {{- else }}
+    {{- $images := partial "partials/templates/_funcs/get-page-images" . -}}
+    {{- with index $images 0 -}}
+  "image": {{ .Permalink }}
+    {{- end }}
   {{- end -}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
