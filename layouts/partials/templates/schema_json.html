@@ -83,7 +83,7 @@
   {{- else }}
     {{- $images := partial "partials/templates/_funcs/get-page-images" . -}}
     {{- with index $images 0 -}}
-  "image": {{ .Permalink }}
+  "image": {{ .Permalink }},
     {{- end }}
   {{- end -}}
   "datePublished": {{ .PublishDate }},
