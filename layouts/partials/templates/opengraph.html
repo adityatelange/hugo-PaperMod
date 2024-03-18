@@ -3,10 +3,15 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- if .Params.cover.image -}}
+{{- $cover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- if $cover -}}{{/* i.e it is present in page bundle */}}
+<meta property="og:image" content="{{ $cover.Permalink }}" />
+{{- else }}{{/* For absolute urls and external links */}}
 {{- if (ne .Params.cover.relative true) }}
 <meta property="og:image" content="{{ .Params.cover.image | absURL }}" />
 {{- else}}
 <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}" />
+{{- end}}
 {{- end}}
 {{- else }}
 
