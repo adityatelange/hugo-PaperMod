@@ -38,11 +38,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.112.4"
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.112.4' }}
     steps:
-      - name: Check version
-        if: ${{ github.event.inputs.hugoVersion }}
-        run: export HUGO_VERSION="${{ github.event.inputs.hugoVersion }}"
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
@@ -61,7 +58,7 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
-            --buildDrafts --gc --verbose \
+            --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
