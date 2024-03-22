@@ -261,7 +261,9 @@
 }
 
 .dark .toc {
-    background: var(--entry);
+    background: var(--theme);
+    border: 2px solid var(--code-bg);
+
 }
 
 .toc details summary {

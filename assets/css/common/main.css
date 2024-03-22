@@ -31,6 +31,7 @@
 .social-icons a {
     display: inline-flex;
     padding: 10px;
+    color: var(--monet)
 }
 
 .social-icons a svg {

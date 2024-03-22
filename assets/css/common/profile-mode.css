@@ -19,6 +19,7 @@
 
 .profile img {
     border-radius: 50%;
+    box-shadow: 100px;
 }
 
 .buttons {
@@ -27,11 +28,13 @@
 }
 
 .button {
-    background: var(--tertiary);
+    background: var(--theme);
     border-radius: var(--radius);
-    margin: 8px;
+    border: 2px solid var(--code-bg);
+    margin: 6px;
     padding: 6px;
-    transition: transform 0.1s;
+    transition: transform 0.2s;
+
 }
 
 .button-inner {
@@ -39,5 +42,5 @@
 }
 
 .button:active {
-    transform: scale(0.96);
+    transform: scale(0.9);
 }
