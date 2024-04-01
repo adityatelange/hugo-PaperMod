@@ -8,6 +8,11 @@
   translation:
     one : "১ মিনিট"
     other: "{{ .Count }} মিনিট"
+    
+- id: words
+  translation:
+    one : "১ টি শব্দ"
+    other: "{{ .Count }} টি শব্দ"
 
 - id: toc
   translation: "সূচিপত্র"

@@ -7,6 +7,8 @@
 html {
     -webkit-tap-highlight-color: transparent;
     overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 a,

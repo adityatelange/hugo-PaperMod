@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Prethodna stranica"
+
+- id: next_page
+  translation: "Sljedeća stranica"
+
+- id: read_time
+  translation:
+    one : "1 minuta"
+    other: "{{ .Count }} minute"
+
+- id: words
+  translation:
+    one : "riječ"
+    other: "{{ .Count }} riječi"
+
+- id: toc
+  translation: "Tablica Sadržaja"
+
+- id: translations
+  translation: "Prijevodi"
+
+- id: home
+  translation: "Početna stranica"
+
+- id: edit_post
+  translation: "Promjeni"
+
+- id: code_copy
+  translation: "kopiraj"
+
+- id: code_copied
+  translation: "kopirano!"
