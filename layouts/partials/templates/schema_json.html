@@ -6,7 +6,7 @@
   "name": {{ site.Title }},
   "url": {{ site.Home.Permalink }},
   "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
-  "thumbnailUrl": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
   "sameAs": [
     {{- if site.Params.schema.sameAs }}
       {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
