@@ -45,6 +45,20 @@
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+                {{- if site.Params.label.lightIcon }}
+                <img src="{{- site.Params.label.lightIcon | absURL -}}"
+                     alt="{{- site.Title -}}"
+                     class="logo-light"
+                     aria-label="logo"
+                     height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- end -}}
+                {{- if site.Params.label.darkIcon }}
+                <img src="{{- site.Params.label.darkIcon | absURL -}}"
+                     alt="{{- site.Title -}}"
+                     class="logo-dark"
+                     aria-label="logo"
+                     height="{{- site.Params.label.iconHeight | default "30" -}}">
+                {{- end -}}
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}
@@ -69,7 +83,6 @@
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
-                {{- $label_text -}}
             </a>
             {{- end }}
             <div class="logo-switches">
