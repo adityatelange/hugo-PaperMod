@@ -103,4 +103,4 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 
 ## Stargazers over time 📈
 
-<kbd>[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg?variant=adaptive)](https://starchart.cc/adityatelange/hugo-PaperMod)</kbd>
+[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg?background=%23ffffff00&axis=%23858585&line=%236b63ff)](https://starchart.cc/adityatelange/hugo-PaperMod)
