@@ -1,0 +1,58 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>
+        {{ .Title }}
+        {{- if and (or (eq .Kind `taxonomy`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
+        <a href="index.xml" title="RSS" aria-label="RSS">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" height="23">
+            <path d="M4 11a9 9 0 0 1 9 9" />
+            <path d="M4 4a16 16 0 0 1 16 16" />
+            <circle cx="5" cy="19" r="1" />
+        </svg>
+        </a>
+        {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<div class="categories">
+{{- $type := .Type }}
+{{- range $key, $value := .Data.Terms.Alphabetical }}
+{{- $name := .Name }}
+{{- $count := .Count }}
+{{- with site.GetPage (printf "/%s/%s" $type $name) }}
+<div class="category-entry">
+    <header class="entry-header">
+        <h2>{{- .Name }} <sup style="font-size:10pt">{{ $count }}</sup></h2>
+    </header>
+    {{- if (ne (.Param "hideSummary") true) }}
+    
+    <div class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    </div>
+    {{- end }}
+    
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</div>
+{{- end }}
+{{- end }}
+</div>
+
+{{- end }}{{/* end main */ -}}
