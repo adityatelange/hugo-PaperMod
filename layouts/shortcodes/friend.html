@@ -1,0 +1,11 @@
+<div class="pe-friend">
+    <a class="pe-friend-url" href={{ .Get "url" }} target="_blank">
+        <div class="pe-friend-logo-wrap">
+            <img class="pe-friend-logo" src={{ .Get "logo" }} alt={{- .Get "name" -}}>
+        </div>
+        <div class="pe-friend-info">
+            <div class="pe-friend-name">{{- .Get "name" -}}</div>
+            <div class="pe-friend-description">{{- .Get "description" -}}</div>
+        </div>
+    </a>
+</div>

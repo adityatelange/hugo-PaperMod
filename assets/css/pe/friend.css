@@ -1,0 +1,106 @@
+.pe-friend {
+    overflow: auto;
+    height: 10rem;
+    width: 49%;
+    display: inline-block !important;
+    border-radius: .5rem;
+    background: none;
+
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
+}
+
+.dark .pe-friend:hover {
+    background: var(--code-bg);
+}
+
+.pe-friend:hover {
+    background: rgb(214, 214, 214);
+    transition: transform 1s;
+    webkit-transform: scale(1.1);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+.pe-friend-url {
+    text-decoration: none;
+    color: black;
+    box-shadow: none !important;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.pe-friend-logo-wrap {
+    width: 9.2rem;
+    float: left;
+    margin-right: -.5rem;
+}
+
+.pe-friend-logo {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50% !important;
+    padding: .2rem;
+    margin: 2rem 1rem 1rem 1.4rem !important;
+    background-color: #fff;
+}
+
+
+.friend-div:hover .pe-friend-logo {
+    transition: 0.9s !important;
+    -webkit-transition: 0.9s !important;
+    -moz-transition: 0.9s !important;
+    -o-transition: 0.9s !important;
+    -ms-transition: 0.9s !important;
+    transform: rotate(360deg) !important;
+    -webkit-transform: rotate(360deg) !important;
+    -moz-transform: rotate(360deg) !important;
+    -o-transform: rotate(360deg) !important;
+    -ms-transform: rotate(360deg) !important;
+}
+
+.pe-friend-info {
+    margin-top: 1.8rem;
+    margin-right: 1.8rem;
+}
+
+.pe-friend-name {
+    text-overflow: ellipsis;
+    font-size: 100%;
+    margin-bottom: .5rem;
+    color: var(--primary);
+}
+
+.pe-friend-description {
+    text-overflow: ellipsis;
+    font-size: .8em;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 60rem) {
+    .pe-friend-logo-wrap {
+        width: 8.4rem;
+        margin: auto;
+    }
+
+    .pe-friend-info {
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pe-friend-name {
+        font-size: 1.8rem;
+    }
+
+    .pe-friend-description {
+        display: none;
+    }
+}

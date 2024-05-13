@@ -1,10 +1,6 @@
 {{- $button := .Params.rewardButton | default "赞赏" }}
 {{- $subtitle := .Params.rewardSubtitle | default "如果本文对你有所帮助，可以点击上方按钮请作者喝杯咖啡！" }}
 
-{{- $RewardStyle := (resources.Get "css/pe/reward.css") }}
-<link crossorigin="anonymous" href="{{ $RewardStyle.RelPermalink }}" rel="preload stylesheet" as="style">
-
-
 <div class="pe-reward-wrap">
     <div class="pe-reward">
         <div class="pe-reward-btn">

@@ -1,1 +1,10 @@
+{{- if not .Page.Site.Params.disableFancybox -}}
+<div class="pe-fancybox">
+    <a data-fancybox="gallery" href="{{ .Destination | safeURL }}">
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+    </a>
+</div>
+{{- else -}}
 <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{- end -}}
+{{ .Page.Store.Set "hasImages" true }}

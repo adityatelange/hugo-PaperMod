@@ -44,7 +44,12 @@ theme: PaperMod-PE
 
 ### 样式
 
-单位由 `px` 改用 `rem` / `em`，为简化计算，设置 `html: font-size: 
+单位由 `px` 改用 `rem` / `em`，为简化计算，设置 `html: font-size: 62.5%;`。
+
+转换计算：
+
+- 10px = 1rem
+- 16px = 1.6rem
 
 
 ## 待办事项
