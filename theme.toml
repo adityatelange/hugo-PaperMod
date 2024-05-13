@@ -1,11 +1,11 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "PaperMod"
+name = "PaperMod-PE"
 license = "MIT"
-licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
+licenselink = "https://github.com/tofuwine/PaperMod-PE/blob/master/LICENSE"
 description = "A fast, clean, responsive Hugo theme"
-homepage = "https://adityatelange.github.io/hugo-PaperMod/"
+homepage = "https://tofuwine.github.io"
 tags = [
   "responsive",
   "simple",
@@ -37,15 +37,15 @@ features = [
   "scroll-to-top",
   "search"
 ]
-min_version = "0.112.4"
+min_version = "0.125.3"
 
 [author]
-  name = "Aditya Telange"
-  homepage = "https://github.com/adityatelange/"
+  name = "tofuwine"
+  homepage = "https://github.com/tofuwine/"
 
 # If porting an existing theme
 [original]
-  name = "Paper"
-  author = "nanxiaobei"
-  homepage = "https://github.com/nanxiaobei"
-  repo = "https://github.com/nanxiaobei/hugo-paper/"
+  name = "PaperMod"
+  author = "adityatelange"
+  homepage = "https://github.com/adityatelange/"
+  repo = "https://github.com/adityatelange/hugo-PaperMod/"
