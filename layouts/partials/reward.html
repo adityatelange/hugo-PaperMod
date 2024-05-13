@@ -1,0 +1,36 @@
+{{- $button := .Params.rewardButton | default "赞赏" }}
+{{- $subtitle := .Params.rewardSubtitle | default "如果本文对你有所帮助，可以点击上方按钮请作者喝杯咖啡！" }}
+
+{{- $RewardStyle := (resources.Get "css/pe/reward.css") }}
+<link crossorigin="anonymous" href="{{ $RewardStyle.RelPermalink }}" rel="preload stylesheet" as="style">
+
+
+<div class="pe-reward-wrap">
+    <div class="pe-reward">
+        <div class="pe-reward-btn">
+            <a href="javascript:void(0);"
+               onclick="document.querySelector('.pe-reward-overlay').classList.remove('hidden')">
+                {{ $button }}
+            </a>
+        </div>
+        <div class="pe-reward-overlay hidden">
+            <div class="pe-reward-qr-wrap">
+                <div class="pe-reward-img">
+                    <a class="fancybox" rel="group">
+                        <img src="{{ .Site.Params.WechatPay | absURL }}" alt="wechat_pay"></a>
+                    <p>微信</p>
+                </div>
+                <div class="pe-reward-img">
+                    <a class="fancybox" rel="group">
+                        <img src="{{ .Site.Params.Alipay | absURL }}" alt="alipay"></a>
+                    <p>支付宝</p>
+                </div>
+            </div>
+        </div>
+        {{- if not .Params.hideRewardSubtitle  }}
+        <p>
+            {{- $subtitle -}}
+        </p>
+        {{ end }}
+    </div>
+</div>

@@ -146,6 +146,9 @@
     {{- end }}
 </noscript>
 
+{{- $pe_bass_css := (resources.Get "css/pe/base.css") }}
+<link crossorigin="anonymous" href="{{ $pe_bass_css.RelPermalink }}" rel="preload stylesheet" as="style">
+
 {{- partial "extend_head.html" . -}}
 
 {{- /* Misc */}}
