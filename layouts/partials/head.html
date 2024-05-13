@@ -145,16 +145,18 @@
     </style>
     {{- end }}
 </noscript>
+{{- $pe_css := resources.Get "css/pe/pe.css" | minify | fingerprint }}
+<link crossorigin="anonymous" href="{{ $pe_css.RelPermalink }}" rel="preload stylesheet" as="style">
 
-{{- $pe_bass_css := (resources.Get "css/pe/base.css") | minify | fingerprint }}
-<link crossorigin="anonymous" href="{{ $pe_bass_css.RelPermalink }}" rel="preload stylesheet" as="style">
-
+<!-- 赞赏 -->
+{{ if .Param "reward" }}
 {{- $RewardStyle := (resources.Get "css/pe/reward.css") | minify | fingerprint }}
 <link href="{{ $RewardStyle.RelPermalink }}" rel="stylesheet">
+{{ end }}
 
 <!-- fancybox 灯箱 -->
-{{ if and (not .Page.Site.Params.disableFancybox) (.Store.Get "hasImages")}}
-{{ if .Params.enableAssetsCDN }}
+{{ if and (not (.Param "disableFancybox")) (.Store.Get "hasImages")}}
+{{ if .Param "enableAssetsCDN" }}
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

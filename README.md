@@ -71,6 +71,7 @@ theme: PaperMod-PE
 - 🔵 Mermaid
 - 🔵 LaTex
 - 🟢 赞赏
+- 🟢 Fancybox 灯箱
 
 ### shortcode
 
@@ -81,7 +82,7 @@ theme: PaperMod-PE
 
 - 🟢 关于
 - 🟢 最新文章
-- 🔵 友链
+- 🟢 友链
 
 ## FAQ
 
