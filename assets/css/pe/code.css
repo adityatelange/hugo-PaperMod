@@ -1,0 +1,175 @@
+/* 代码样式 */
+.post-content code {
+    margin: unset;
+    padding: .4rem;
+    line-height: 1.5;
+    background: var(--code-bg);
+    border-radius: var(--radius);
+    font-size: 1.4rem;
+    font-family: Consolas, sans-serif;
+    color: var(--pe-primary-hover-color);
+}
+
+/* 代码块样式 */
+.pe-code-block-wrap {
+    border-radius: var(--radius);
+    margin: var(--content-gap) auto;
+    background-color: var(--pe-code-block-header-bg-color);
+    font-family: Consolas, sans-serif;
+}
+
+.pe-code-block-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: var(--pe-code-block-header-color);
+    justify-content: space-between;
+    padding: .25rem .5rem .25rem .5rem;
+}
+
+.pe-code-block-header-left {
+    font-size: 1.4rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.pe-code-block-header-center {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.pe-code-block-header-right {
+    line-height: 1rem;
+    text-align: right;
+    width: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-content .highlight:not(table) {
+    margin: unset;
+    background: var(--pe-code-block-bg-color) !important;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.post-content pre code {
+    background-color: var(--pe-code-block-bg-color) !important;
+    font-size: 1.4rem;
+    color: var(--pe-code-block-color);
+}
+
+
+.pe-code-copy-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.pe-code-copy-button:hover {
+    color: var(--pe-primary-hover-color);
+}
+
+.pe-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke-width: 2;
+    flex-shrink: 0;
+    margin-right: .24rem;
+}
+
+.copy-code:hover {
+    background: var(--pe-primary-hover-color);
+}
+
+/* 注释 */
+.chroma .c {
+    font-family: 'font-base', sans-serif;
+}
+
+.chroma .lnt {
+    padding: 0 0 0 1.2rem !important;
+}
+
+/* 滚动条 */
+.post-content :not(table) ::-webkit-scrollbar-thumb {
+    border: .2rem solid var(--pe-code-block-bg-color);
+    background: var(--pe-scrollbar-bg-color);
+}
+
+.post-content :not(table) ::-webkit-scrollbar-thumb:hover {
+    background: var(--pe-scrollbar-hover-bg-color);
+}
+
+.pe-code-block-container pre {
+    margin: unset;
+}
+
+
+.pe-code-details .pe-code-details-summary:hover {
+    cursor: pointer;
+}
+
+.pe-code-details i.pe-code-details-icon {
+    color: var(--content);
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+.dark .pe-code-details i.pe-code-details-icon {
+    color: var(--content);
+}
+
+.pe-code-details .pe-code-details-content {
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    -moz-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    -o-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+}
+
+.pe-code-details.open i.pe-code-details-icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.pe-code-details.open .pe-code-details-content {
+    max-height: 1200rem;
+    -webkit-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    -moz-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    -o-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+}
+
+.pe-code-details .fa-chevron-right:before {
+    content: "\f105";
+}
+
+
+.pe-code-details.open .fa-chevron-right:before {
+    content: "\f107";
+}
+
+.pe-code-details .fa-ellipsis-h:before {
+    content: "\f141";
+}
+
+.pe-code-details.open .fa-ellipsis-h:before {
+    content: "";
+}
+
+.pe-code-details .pe-code-copy-button {
+    display: none;
+}
+
+.pe-code-details.open .pe-code-copy-button {
+    display: inherit;
+}

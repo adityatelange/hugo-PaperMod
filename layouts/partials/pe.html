@@ -6,13 +6,15 @@
 
 <!-- PE Base CSS -->
 {{ $PeCSSSlice := slice (resources.Get "css/pe/pe-base.css")}}
+<!-- PE Base JavaScript -->
+{{ $PeJSSlice := slice (resources.Get "js/pe-base.js") }}
+
+{{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/code.css") }}
 
 {{ if .Param "enableCopyright" }}
 {{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/copyright.css") }}
 {{ end }}
 
-<!-- PE Base JavaScript -->
-{{ $PeJSSlice := slice (resources.Get "js/pe-base.js") }}
 
 <!-- Shortcode-->
 <!-- 使用 .HasShortcode 方法判断后，无法正确 append -->
@@ -32,6 +34,8 @@
 {{ else }}
 <link crossorigin="anonymous" href="{{ $PeCSS.RelPermalink }}" rel="preload stylesheet" as="style">
 {{ end }}
+
+{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-code.js") }}
 
 <!-- PaperMod-PE JavaScript -->
 {{ $PeJS := $PeJSSlice | resources.Concat "assets/js/pe.js" | resources.Minify }}
@@ -64,4 +68,12 @@
 <!-- MathJax -->
 {{ if eq $mathematicsRenderer "MATHJAX" }}
 {{ partialCached "mathjax.html" . }}
+{{ end }}
+
+<!-- Mermaid -->
+{{ if .Store.Get "hasMermaid" }}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script>
 {{ end }}

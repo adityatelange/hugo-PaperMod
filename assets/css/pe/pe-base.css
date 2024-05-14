@@ -16,6 +16,22 @@
     --pe-post-reposted-color: rgb(45, 183, 245);
     /* 文章标识 - 草稿 */
     --pe-post-draft-color: #e26c56;
+
+    /* 代码块标题色 */
+    --pe-code-block-header-color: var(--content);
+    /* 代码块标题背景色 */
+    --pe-code-block-header-bg-color: #ededed;
+    /* 代码块文本颜色 */
+    --pe-code-block-color: #979797;
+    /* 代码块背景色 */
+    --pe-code-block-bg-color: #f5f5f5;
+    /* 代码块复制按钮字体颜色 */
+    --pe-copy-code-color: #fff;
+    /* 代码块复制按钮背景色 */
+    --pe-copy-code-bg-color: #979797;
+
+    --pe-scrollbar-bg-color: rgb(163, 163, 165);
+    --pe-scrollbar-hover-bg-color: rgb(113, 113, 117);
 }
 
 /* 鼠标选中文本颜色 */
