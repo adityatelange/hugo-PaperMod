@@ -34,6 +34,34 @@
     --pe-scrollbar-hover-bg-color: rgb(113, 113, 117);
 }
 
+.dark {
+    /* 主题颜色参数 */
+    --primary: rgba(180, 181, 182, 0.8);
+    --content: rgba(196, 196, 197, 0.8);
+
+    /*****************************************/
+    /******* 自定义颜色参数 (以 tw 为前缀) *******/
+    /*****************************************/
+    --pe-underline-hover-color: #e26c56;
+    --pe-post-top-color: rgba(205, 32, 31, 0.8);
+    --pe-post-reposted-color: rgba(45, 183, 245, 0.8);
+
+    /* 代码块标题色 */
+    --pe-code-block-header-color: var(--content);
+    /* 代码块标题背景色 */
+    --pe-code-block-header-bg-color: #20252B;
+    /* 代码块文本颜色 */
+    --pe-code-block-color: rgba(255, 255, 255, 0.7);
+    /* 代码块背景色 */
+    --pe-code-block-bg-color: #272C34;
+
+    --pe-copy-code-color: rgba(255, 255, 255, 0.7);
+    --pe-copy-code-bg-color: #414244;
+
+    --pe-scrollbar-bg-color: rgb(113, 113, 117);
+    --pe-scrollbar-hover-bg-color: rgb(163, 163, 165);
+}
+
 /* 鼠标选中文本颜色 */
 ::-moz-selection {
     background: var(--pe-primary-hover-color);
@@ -141,4 +169,86 @@
 a:hover {
     transition: 0.15s;
     color: var(--pe-primary-hover-color);
+}
+
+.pe-float-btn {
+    position: fixed;
+    right: 2rem;
+    z-index: 999;
+    background: var(--tertiary);
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--pe-btn-font-color);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pe-float-btn:hover {
+    background-color: var(--pe-primary-hover-color);
+    color: var(--pe-btn-font-color);
+    outline: 0;
+}
+
+#top-link {
+    bottom: 2rem;
+    transition: visibility 0.5s, opacity 0.8s linear;
+}
+
+#top-link,
+#top-link svg {
+    filter: drop-shadow(0px 0px 0px var(--theme));
+}
+
+.pe-top-svg {
+    width: 2rem;
+}
+
+#pe-read-progress {
+    width: max-content;
+}
+
+#theme-toggle-float {
+    bottom: 8rem;
+}
+
+#comments-link {
+    bottom: 14rem;
+}
+
+
+@keyframes pe-bottom-jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1.0rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pe-bottom-jump {
+    animation: tw-bottom-jump 0.5s ease;
+}
+
+@keyframes pe-top-jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pe-top-jump {
+    animation: tw-top-jump 0.5s ease;
 }

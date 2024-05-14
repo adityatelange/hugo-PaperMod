@@ -27,34 +27,8 @@
 }
 
 .footer a:hover {
-    border-bottom: 1px solid var(--primary);
-}
-
-.top-link {
-    visibility: hidden;
-    position: fixed;
-    bottom: 60px;
-    right: 30px;
-    z-index: 99;
-    background: var(--tertiary);
-    width: 42px;
-    height: 42px;
-    padding: 12px;
-    border-radius: 64px;
-    transition: visibility 0.5s, opacity 0.8s linear;
-}
-
-.top-link,
-.top-link svg {
-    filter: drop-shadow(0px 0px 0px var(--theme));
-}
-
-.footer a:hover,
-.top-link:hover {
-    color: var(--primary);
-}
-
-.top-link:focus,
-#theme-toggle:focus {
-    outline: 0;
+    border-bottom: .1rem solid transparent;
+    padding-bottom: 0.1rem;
+    border-bottom-color: var(--pe-primary-hover-color);
+    color: var(--pe-primary-hover-color);
 }

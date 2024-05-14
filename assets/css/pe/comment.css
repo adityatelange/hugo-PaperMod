@@ -1,0 +1,18 @@
+/* giscus 评论组件 */
+.pe-comments-decoration {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.pe-comments-title {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.5rem 0 .5rem;
+}
+
+.pe-comments-subtitle {
+    font-size: 1.6rem;
+}

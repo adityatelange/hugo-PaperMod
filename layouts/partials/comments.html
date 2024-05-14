@@ -1,3 +1,56 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+<div class="pe-comments-decoration">
+    <p class="pe-comments-title">{{- .Param "discussionTitle" }}</p>
+    <p class="pe-comments-subtitle">{{- .Param "discussionSubtitle" }} </p>
+</div>
+<div id="pe-comments"></div>
+<script>
+    const getStoredTheme = () => localStorage.getItem("pref-theme") === "dark" ? "{{ .Site.Params.giscus.darkTheme }}" : "{{ .Site.Params.giscus.lightTheme }}";
+    const setGiscusTheme = () => {
+        const sendMessage = (message) => {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe) {
+                iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
+            }
+        }
+        sendMessage({setConfig: {theme: getStoredTheme()}})
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "{{ .Site.Params.giscus.repo }}",
+            "data-repo-id": "{{ .Site.Params.giscus.repoId }}",
+            "data-category": "{{ .Site.Params.giscus.category }}",
+            "data-category-id": "{{ .Site.Params.giscus.categoryId }}",
+            "data-mapping": "{{ .Site.Params.giscus.mapping | default "pathname" }}",
+            "data-strict": "{{ .Site.Params.giscus.strict | default "0" }}",
+            "data-reactions-enabled": "{{ .Site.Params.giscus.reactionsEnabled | default "1" }}",
+            "data-emit-metadata": "{{ .Site.Params.giscus.emitMetadata | default "0" }}",
+            "data-input-position": "{{ .Site.Params.giscus.inputPosition | default "bottom" }}",
+            "data-theme": getStoredTheme(),
+            "data-lang": "{{ .Site.Params.giscus.lang | default "en" }}",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+            "async": "",
+        };
+
+        // 动态创建 giscus script
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(
+            ([key, value]) => giscusScript.setAttribute(key, value));
+        document.querySelector("#pe-comments").appendChild(giscusScript);
+
+        // 页面主题变更后，变更 giscus 主题
+        const themeSwitcher = document.querySelector("#theme-toggle");
+        if (themeSwitcher) {
+            themeSwitcher.addEventListener("click", setGiscusTheme);
+        }
+        const themeFloatSwitcher = document.querySelector("#theme-toggle-float");
+        if (themeFloatSwitcher) {
+            themeFloatSwitcher.addEventListener("click", setGiscusTheme);
+        }
+    });
+</script>
 {{- /* Comments area end */ -}}

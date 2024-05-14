@@ -15,6 +15,10 @@
 {{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/copyright.css") }}
 {{ end }}
 
+{{ if .Param "comments" }}
+{{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/comment.css") }}
+{{ end }}
+
 
 <!-- Shortcode-->
 <!-- 使用 .HasShortcode 方法判断后，无法正确 append -->
@@ -37,6 +41,20 @@
 
 {{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-code.js") }}
 
+<!-- reward js -->
+{{ if (.Param "reward") }}
+{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-reward.js") }}
+{{ end }}
+
+<!-- go top js -->
+{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-go-top.js") }}
+
+<!-- go comment js -->
+{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-go-comment.js") }}
+
+<!-- theme toggle js -->
+{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-theme-toggle.js") }}
+
 <!-- PaperMod-PE JavaScript -->
 {{ $PeJS := $PeJSSlice | resources.Concat "assets/js/pe.js" | resources.Minify }}
 {{ if not site.Params.assets.disableFingerprinting }}
@@ -54,9 +72,9 @@
 
 <!-- fancybox 灯箱 -->
 {{ if and (.Param "enableFancybox") (.Store.Get "hasImages")}}
-<script src="https://cdn.staticfile.net/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="https://cdn.staticfile.net/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.net/fancybox/3.5.7/jquery.fancybox.min.css" />
-<script src="https://cdn.staticfile.net/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script defer src="https://cdn.staticfile.net/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 {{ end }}
 
 <!-- KaTex -->

@@ -75,9 +75,9 @@ body:not(.dark) #sun {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -.1rem;
+    bottom: -.2rem;
     width: 100%;
-    height: .1rem;
+    height: .2rem;
     background-color: var(--pe-primary-hover-color);
     border-radius: .4rem;
 }
@@ -86,9 +86,9 @@ body:not(.dark) #sun {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -.1rem; /* 调整下划线位置，根据需要调整值 */
+    bottom: -.2rem; /* 调整下划线位置，根据需要调整值 */
     width: 100%; /* 下划线宽度为标签元素的100% */
-    height: .1rem; /* 下划线的高度 */
+    height: .2rem; /* 下划线的高度 */
     background-color: #e26c56; /* 下划线颜色 */
     border-radius: var(--radius);
     transform: scaleX(0); /* 初始状态下下划线宽度为0 */
@@ -103,7 +103,7 @@ body:not(.dark) #sun {
 .lang-switch ul,
 .logo-switches {
     display: inline-flex;
-    margin: auto 4px;
+    margin: auto .4rem;
 }
 
 .lang-switch {
@@ -112,8 +112,8 @@ body:not(.dark) #sun {
 }
 
 .lang-switch a {
-    margin: auto 3px;
-    font-size: 16px;
+    margin: auto .3rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
