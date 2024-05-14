@@ -82,11 +82,12 @@
 
 .entry-hint {
     color: var(--secondary);
+    margin-left: auto;
 }
 
 .entry-hint-parent {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .entry-cover {

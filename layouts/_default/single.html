@@ -42,9 +42,13 @@
   </div>
   {{- end }}
 
-  {{- if .Param "reward" }}
-  {{- partial "reward.html" . }}
-  {{- end }}
+  {{ if .Param "enableReward" }}
+  {{ partial "reward.html" . }}
+  {{ end }}
+
+  {{ if .Param "enableCopyright" }}
+  {{ partial "copyright.html" . }}
+  {{ end }}
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}

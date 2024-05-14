@@ -1,0 +1,106 @@
+/***********************************/
+/********** PaperMod-PE ************/
+/***********************************/
+
+:root {
+    --nav-width: 138rem;
+    --article-width: 65rem;
+    --toc-width: 30rem;
+
+    --pe-primary-hover-color: #e26c56;
+    /* 按钮字体颜色 */
+    --pe-bt-font-color: #fff;
+    /* 文章标识 - 置顶 */
+    --pe-post-top-color: rgb(205, 32, 31);
+    /* 文章标识 - 转载 */
+    --pe-post-reposted-color: rgb(45, 183, 245);
+    /* 文章标识 - 草稿 */
+    --pe-post-draft-color: #e26c56;
+}
+
+/* 文本高亮 */
+.pe-text-highlight {
+    background-color: yellow;
+}
+
+.dark .pe-text-highlight {
+    color: rgb(51, 51, 51);
+}
+
+.pe-details .pe-details-summary:hover {
+    cursor: pointer;
+}
+
+/* 折叠 */
+.pe-details .pe-details-content {
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    -moz-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    -o-transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+    transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.1s;
+}
+
+.pe-details.open .pe-details-content {
+    max-height: 1200rem;
+    -webkit-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    -moz-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    -o-transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+    transition: max-height 0.8s cubic-bezier(0.5, 0, 1, 0) 0s;
+}
+
+.pe-details .pe-details-icon {
+    color: var(--content);
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+[class=dark] .pe-details .pe-details-icon {
+    color: var(--content);
+}
+
+.pe-details.open .pe-details-icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.pe-entry-top {
+    font-size: 1.4rem;
+    color: var(--pe-post-top-color);
+}
+
+.pe-entry-reposted {
+    font-size: 1.4rem;
+    color: var(--pe-post-reposted-color);
+}
+
+.pe-entry-draft {
+    font-size: 1.4rem;
+    color: var(--pe-post-draft-color);
+}
+
+.pe-post-meta-item {
+    display: inline-block;
+}
+
+.pe-post-meta-item a {
+    color: #6C6C6C;
+}
+
+.pe-post-meta-item svg {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.15em;
+    margin-right: .4rem;
+}
+
+a:hover {
+    transition: 0.15s;
+    color: var(--pe-primary-hover-color);
+}

@@ -1,0 +1,17 @@
+<div class="pe-copyright">
+    <hr>
+    <blockquote>
+    {{ if .Param "reposted" }}
+        <p>本文为转载内容，原文信息如下：</p>
+        <p>原文标题：{{- .Param "repostedTitle" -}}</p>
+        <p>原文作者：{{- .Param "repostedAuthor" -}}</p>
+        <p>原文链接：<a href="{{- .Param "repostedLink" -}}" target="_blank">{{- .Param "repostedLink" -}}</a></p>
+        <p>如有侵权，请<a href="mailto://tofuwine@outlook.com">联系作者</a>删除。</p>
+    {{ else }}
+        <p>本文为原创内容，版权归作者所有。如需转载，请在文章中声明本文标题及链接。</p>
+        <p>文章标题：{{ .Title }} —— tofuwine</p>
+        <p>文章链接：<a href="{{ .Permalink }}" target="_blank">{{ .Permalink }}</a></p>
+        <p>许可协议：<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></p>
+    {{ end }}
+    </blockquote>
+</div>

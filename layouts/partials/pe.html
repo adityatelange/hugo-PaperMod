@@ -1,0 +1,65 @@
+<!--
+    PaperMod-PE V1
+    License: MIT https://github.com/tofuwine/PaperMod-PE/blob/master/LICENSE
+    Copyright (c) 2024 tofuwine
+-->
+
+<!-- PE Base CSS -->
+{{ $PeCSSSlice := slice (resources.Get "css/pe/pe-base.css")}}
+
+{{ if .Param "enableCopyright" }}
+{{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/copyright.css") }}
+{{ end }}
+
+<!-- PE Base JavaScript -->
+{{ $PeJSSlice := slice (resources.Get "js/pe/pe-base.js") }}
+
+<!-- Shortcode-->
+<!-- 使用 .HasShortcode 方法判断后，无法正确 append -->
+<!-- ShortCode: admonition -->
+{{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/admonition.css") }}
+
+<!-- 赞赏 -->
+{{ if .Param "enableReward" }}
+{{ $PeCSSSlice = $PeCSSSlice | append (resources.Get "css/pe/reward.css") }}
+{{ end }}
+
+<!-- PaperMod-PE CSS -->
+{{ $PeCSS := $PeCSSSlice | resources.Concat "assets/css/pe.css" | resources.Minify }}
+{{ if not site.Params.assets.disableFingerprinting }}
+{{ $PeCSS := $PeCSS | fingerprint }}
+<link crossorigin="anonymous" href="{{ $PeCSS.RelPermalink }}" integrity="{{ $PeCSS.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{ else }}
+<link crossorigin="anonymous" href="{{ $PeCSS.RelPermalink }}" rel="preload stylesheet" as="style">
+{{ end }}
+
+<!-- PaperMod-PE JavaScript -->
+{{ $PeJS := $PeJSSlice | resources.Concat "assets/js/pe.js" | resources.Minify }}
+{{ if not site.Params.assets.disableFingerprinting }}
+{{ $PeJS := $PeJS | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $PeJS.RelPermalink }}" integrity="{{ $PeJS.Data.Integrity }}"></script>
+{{ else }}
+<script defer crossorigin="anonymous" src="{{ $PeJS.RelPermalink }}"></script>
+{{ end }}
+
+<!-- 第三方 -->
+
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/6.5.1/css/v4-shims.min.css">
+
+<!-- fancybox 灯箱 -->
+{{ if and (.Param "enableFancybox") (.Store.Get "hasImages")}}
+{{ if .Param "enableAssetsCDN" }}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+{{ else }}
+{{- $jQueryJS := resources.Get "js/pe/jquery.min.js" }}
+<script src="{{ $jQueryJS.RelPermalink }}"></script>
+{{- $FancyboxStyle := (resources.Get "css/pe/jquery.fancybox.min.css") }}
+<link href="{{ $FancyboxStyle.RelPermalink }}" rel="stylesheet">
+{{- $FancyboxJS := (resources.Get "js/pe/jquery.fancybox.min.js") }}
+<script src="{{ $FancyboxJS.RelPermalink }}"></script>
+{{ end }}
+{{ end }}

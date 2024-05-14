@@ -1,16 +1,14 @@
 {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
 {{- if $has_headers -}}
-<div class="toc">
-    <details {{if (.Param "TocOpen") }} open{{ end }}>
-        <summary accesskey="c" title="(Alt + C)">
+<aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details {{ if (.Param "TocOpen") }} open{{ end }}>
+        <summary>
             <span class="details">{{- i18n "toc" | default "Table of Contents" }}</span>
         </summary>
 
         <div class="inner">
-            {{- if (.Param "UseHugoToc") }}
-            {{- .TableOfContents -}}
-            {{- else }}
             {{- $largest := 6 -}}
             {{- range $headers -}}
             {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
@@ -51,7 +49,6 @@
                         {{- end -}}
                         {{- end -}}
                         {{- else -}}
-                        </li>
                         {{- if lt $headerLevel $prevHeaderLevel -}}
                         {{- range seq (sub $prevHeaderLevel 1) -1 $headerLevel -}}
                         {{- if in ($.Scratch.Get "bareul") . -}}
@@ -65,16 +62,17 @@
                     {{- end -}}
                     {{- else -}}
                 </ul>
-                </li>
                 {{- end -}}
                 {{- end -}}
                 {{- end -}}
                 {{- end }}
                 <li>
-                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify | safeHTML -}}">{{- $header | plainify | safeHTML -}}</a>
+                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}">
+                        {{- $header | safeHTML -}}</a>
                     {{- else }}
                 <li>
-                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify | safeHTML -}}">{{- $header | plainify | safeHTML -}}</a>
+                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}">
+                        {{- $header | safeHTML -}}</a>
                     {{- end -}}
                     {{- end -}}
                     <!-- {{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}} -->
@@ -85,13 +83,10 @@
                 {{- if in ($.Scratch.Get "bareul") (add . $firstHeaderLevel) }}
             </ul>
             {{- else }}
-            </ul>
-            </li>
             {{- end -}}
             {{- end }}
-            </ul>
-            {{- end }}
         </div>
-    </details>
-</div>
+        </details>
+    </div>
+</aside>
 {{- end }}

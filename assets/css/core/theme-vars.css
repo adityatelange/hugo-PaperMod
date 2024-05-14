@@ -15,14 +15,6 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
-    /* 按钮字体颜色 */
-    --pe-bt-font-color: #fff;
-    /* 文章标识 - 置顶 */
-    --pe-post-top-color: rgb(205, 32, 31);
-    /* 文章标识 - 转载 */
-    --pe-post-reposted-color: rgb(45, 183, 245);
-    /* 文章标识 - 草稿 */
-    --pe-post-draft-color: #e26c56;
 }
 
 .dark {

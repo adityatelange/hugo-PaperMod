@@ -1,0 +1,45 @@
+{{- $inner := .Inner | .Page.RenderString -}}
+
+{{- $iconMap := dict "note" "fas fa-pencil-alt fa-fw" -}}
+{{- $iconMap  = dict "abstract" "fas fa-list-ul fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "info" "fas fa-info-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "tip" "fas fa-lightbulb fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "success" "fas fa-check-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "question" "fas fa-question-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "warning" "fas fa-exclamation-triangle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "failure" "fas fa-times-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "danger" "fas fa-skull-crossbones fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "bug" "fas fa-bug fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "example" "fas fa-list-ol fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "quote" "fas fa-quote-right fa-fw" | merge $iconMap -}}
+{{- $iconDetails := "fas fa-angle-right fa-fw" -}}
+
+{{- if .IsNamedParams -}}
+{{- $type := .Get "type" | default "note" -}}
+<div class="pe-details admonition {{ $type }}{{ if .Get `open` | ne false }} open{{ end }}">
+    <div class="pe-details-summary admonition-title">
+        <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}"
+           aria-hidden="true"></i>{{ .Get "title" | default (T $type) }}<i class="pe-details-icon {{ $iconDetails }}"
+                                                                           aria-hidden="true"></i>
+    </div>
+    <div class="pe-details-content">
+        <div class="admonition-content">
+            {{- $inner -}}
+        </div>
+    </div>
+</div>
+{{- else -}}
+{{- $type := .Get 0 | default "note" -}}
+<div class="pe-details admonition {{ $type }}{{ if .Get 2 | ne false }} open{{ end }}">
+    <div class="pe-details-summary admonition-title">
+        <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}"
+           aria-hidden="true"></i>{{ .Get 1 | default (T $type) }}<i class="pe-details-icon {{ $iconDetails }}"
+                                                                     aria-hidden="true"></i>
+    </div>
+    <div class="pe-details-content">
+        <div class="admonition-content">
+            {{- $inner -}}
+        </div>
+    </div>
+</div>
+{{- end -}}
