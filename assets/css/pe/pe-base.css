@@ -197,6 +197,7 @@ a:hover {
 #top-link {
     bottom: 2rem;
     transition: visibility 0.5s, opacity 0.8s linear;
+    visibility: hidden; opacity: 0;
 }
 
 #top-link,

@@ -41,10 +41,6 @@
 
 {{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-code.js") }}
 
-<!-- reward js -->
-{{ if (.Param "reward") }}
-{{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-reward.js") }}
-{{ end }}
 
 <!-- go top js -->
 {{ $PeJSSlice = $PeJSSlice | append (resources.Get "js/pe-go-top.js") }}

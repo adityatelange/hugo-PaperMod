@@ -90,3 +90,6 @@
     </div>
 </aside>
 {{- end }}
+
+{{ $script := resources.Get "js/pe-toc.js" | minify | fingerprint}}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
