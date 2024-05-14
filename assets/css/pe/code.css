@@ -24,19 +24,18 @@
     align-items: center;
     color: var(--pe-code-block-header-color);
     justify-content: space-between;
-    padding: .25rem .5rem .25rem .5rem;
+    padding: .4rem 1rem;
+    font-size: 1.4rem;
 }
 
 .pe-code-block-header-left {
-    font-size: 1.4rem;
     text-align: left;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: .2rem;
 }
 
 .pe-code-block-header-center {
-    font-size: 1.4rem;
     text-align: center;
 }
 
@@ -61,13 +60,6 @@
 }
 
 
-.pe-code-copy-button {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 1.4rem;
-}
-
 .pe-code-copy-button:hover {
     color: var(--pe-primary-hover-color);
 }
@@ -75,9 +67,6 @@
 .pe-icon {
     width: 1.6rem;
     height: 1.6rem;
-    stroke-width: 2;
-    flex-shrink: 0;
-    margin-right: .24rem;
 }
 
 .copy-code:hover {

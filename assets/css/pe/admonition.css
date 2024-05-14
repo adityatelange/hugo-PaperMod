@@ -1,18 +1,20 @@
 .admonition {
-    position: relative;
     margin: 1rem 0;
     padding: 0 1.2rem;
     background-color: rgba(68, 138, 255, 0.1);
     border-radius: var(--radius);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .admonition .admonition-title {
     font-weight: bold;
     margin: 0 -1.2rem;
-    padding: 0.4rem 2.8rem;
+    padding: .4rem .5rem .4rem 1rem;
     border-bottom: .1rem solid rgba(68, 138, 255, 0.1);
     background-color: rgba(68, 138, 255, 0.25);
+    display: flex;
+    align-items: center;
+    gap: .6rem;
 }
 
 .admonition.open .admonition-title {
@@ -25,17 +27,18 @@
 }
 
 .admonition i.icon {
-    font-size: 1.36rem;
+    font-size: 1.6rem;
     color: #448aff;
-    position: absolute;
-    top: 0.96rem;
-    left: 0.64rem;
+    /*position: absolute;*/
+    /*top: 0.96rem;*/
+    /*left: 0.64rem;*/
 }
 
-.admonition i.details-icon {
-    position: absolute;
-    top: 0.96rem;
-    right: 0.48rem;
+.admonition i.pe-details-icon {
+    /*position: absolute;*/
+    /*top: 0.96rem;*/
+    /*right: 0.48rem;*/
+    margin-left: auto;
 }
 
 .admonition.note {
