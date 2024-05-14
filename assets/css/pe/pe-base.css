@@ -9,13 +9,29 @@
 
     --pe-primary-hover-color: #e26c56;
     /* 按钮字体颜色 */
-    --pe-bt-font-color: #fff;
+    --pe-btn-font-color: #fff;
     /* 文章标识 - 置顶 */
     --pe-post-top-color: rgb(205, 32, 31);
     /* 文章标识 - 转载 */
     --pe-post-reposted-color: rgb(45, 183, 245);
     /* 文章标识 - 草稿 */
     --pe-post-draft-color: #e26c56;
+}
+
+/* 鼠标选中文本颜色 */
+::-moz-selection {
+    background: var(--pe-primary-hover-color);
+    color: var(--pe-btn-font-color);
+}
+
+::selection {
+    background: var(--pe-primary-hover-color);
+    color: var(--pe-btn-font-color);
+}
+
+::-webkit-selection {
+    background: var(--pe-primary-hover-color);
+    color: var(--pe-btn-font-color);
 }
 
 /* 文本高亮 */
@@ -27,11 +43,12 @@
     color: rgb(51, 51, 51);
 }
 
+/* 折叠 */
+
 .pe-details .pe-details-summary:hover {
     cursor: pointer;
 }
 
-/* 折叠 */
 .pe-details .pe-details-content {
     max-height: 0;
     overflow-y: hidden;
@@ -69,6 +86,8 @@
     transform: rotate(90deg);
 }
 
+/* 文章标识 */
+
 .pe-entry-top {
     font-size: 1.4rem;
     color: var(--pe-post-top-color);
@@ -83,6 +102,8 @@
     font-size: 1.4rem;
     color: var(--pe-post-draft-color);
 }
+
+/* 文章 meta */
 
 .pe-post-meta-item {
     display: inline-block;
@@ -100,6 +121,7 @@
     margin-right: .4rem;
 }
 
+/* 超链接 */
 a:hover {
     transition: 0.15s;
     color: var(--pe-primary-hover-color);

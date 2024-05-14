@@ -12,7 +12,7 @@
 {{ end }}
 
 <!-- PE Base JavaScript -->
-{{ $PeJSSlice := slice (resources.Get "js/pe/pe-base.js") }}
+{{ $PeJSSlice := slice (resources.Get "js/pe-base.js") }}
 
 <!-- Shortcode-->
 <!-- 使用 .HasShortcode 方法判断后，无法正确 append -->
@@ -50,16 +50,18 @@
 
 <!-- fancybox 灯箱 -->
 {{ if and (.Param "enableFancybox") (.Store.Get "hasImages")}}
-{{ if .Param "enableAssetsCDN" }}
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/tofuwine/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-{{ else }}
-{{- $jQueryJS := resources.Get "js/pe/jquery.min.js" }}
-<script src="{{ $jQueryJS.RelPermalink }}"></script>
-{{- $FancyboxStyle := (resources.Get "css/pe/jquery.fancybox.min.css") }}
-<link href="{{ $FancyboxStyle.RelPermalink }}" rel="stylesheet">
-{{- $FancyboxJS := (resources.Get "js/pe/jquery.fancybox.min.js") }}
-<script src="{{ $FancyboxJS.RelPermalink }}"></script>
+<script src="https://cdn.staticfile.net/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.net/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdn.staticfile.net/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 {{ end }}
+
+<!-- KaTex -->
+{{ $mathematicsRenderer := upper (.Param "mathematicsRenderer") }}
+{{ if eq $mathematicsRenderer "KATEX" }}
+{{ partialCached "katex.html" . }}
+{{ end }}
+
+<!-- MathJax -->
+{{ if eq $mathematicsRenderer "MATHJAX" }}
+{{ partialCached "mathjax.html" . }}
 {{ end }}

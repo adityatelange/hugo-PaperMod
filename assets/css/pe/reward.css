@@ -27,7 +27,7 @@
     display: inline-block;
     text-align: center;
     background: rgba(255, 37, 37, 0.6);
-    color: var(--pe-bt-font-color);
+    color: var(--pe-btn-font-color);
     border-radius: 100%;
     -webkit-animation: pe-reward-btn-frames 2s alternate infinite;
     animation: pe-reward-btn-frames 2s alternate infinite;

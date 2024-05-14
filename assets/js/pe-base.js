@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     // Make the first header active
     activatedTitle = articleTitles[0];
     const id = encodeURI(activatedTitle.getAttribute('id')).toLowerCase();
-    document.querySelector(`.inner ul li a[href="#${id}"]`).parentElement.classList.add('active', 'open');
+    document.querySelector(`.inner ul li a[href="#${id}"]`).parentElement.classList.add('active', 'pe-toc-open');
 }, false);
 
 window.addEventListener('resize', function (event) {

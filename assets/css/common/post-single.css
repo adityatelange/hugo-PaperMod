@@ -71,11 +71,13 @@
 
 .post-content a,
 .toc a:hover {
-    box-shadow: 0 1px 0;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     transition: 0.15s;
-    color: var(--pe-primary-hover-color);
+}
+
+.post-content a {
+    box-shadow: 0 1px;
 }
 
 .toc {

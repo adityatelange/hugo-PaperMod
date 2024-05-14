@@ -61,7 +61,7 @@ body:not(.dark) #sun {
 }
 
 #menu a {
-    font-size: 16px;
+    font-size: 1.6rem;
     position: relative;
     line-height: 3rem;
 }
@@ -75,9 +75,9 @@ body:not(.dark) #sun {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -.2rem;
+    bottom: -.1rem;
     width: 100%;
-    height: .2rem;
+    height: .1rem;
     background-color: var(--pe-primary-hover-color);
     border-radius: .4rem;
 }
@@ -86,9 +86,9 @@ body:not(.dark) #sun {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -.2rem; /* 调整下划线位置，根据需要调整值 */
+    bottom: -.1rem; /* 调整下划线位置，根据需要调整值 */
     width: 100%; /* 下划线宽度为标签元素的100% */
-    height: .2rem; /* 下划线的高度 */
+    height: .1rem; /* 下划线的高度 */
     background-color: #e26c56; /* 下划线颜色 */
     border-radius: var(--radius);
     transform: scaleX(0); /* 初始状态下下划线宽度为0 */
