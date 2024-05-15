@@ -160,6 +160,7 @@
 .toc li ul {
     margin-inline-start: calc(var(--gap) * 0.5);
     list-style-type: none;
+    display: none;
 }
 
 .toc li {
@@ -180,10 +181,6 @@
     padding-bottom: 0.1rem;
     border-bottom-color: var(--pe-primary-hover-color);
     color: var(--pe-primary-hover-color);
-}
-
-.toc li ul {
-    display: none;
 }
 
 .toc li.open > ul {

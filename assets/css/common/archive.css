@@ -32,6 +32,16 @@
     margin: 10px 0;
 }
 
+.archive-entry:hover {
+    background-color: rgb(214, 214, 214);
+    border-radius: var(--radius);
+}
+
+.dark .archive-entry:hover {
+    background-color: rgb(65, 66, 68);
+    border-radius: var(--radius);
+}
+
 .archive-entry-title {
     margin: 5px 0;
     font-weight: 400;

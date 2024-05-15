@@ -4,6 +4,10 @@
     font-weight: 500;
 }
 
+.terms-tags li:hover {
+    transform: scale(1.1);
+}
+
 .terms-tags a {
     display: block;
     padding: 3px 10px;

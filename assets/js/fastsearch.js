@@ -113,7 +113,7 @@ document.onkeydown = function (e) {
     let key = e.key;
     let ae = document.activeElement;
 
-    let inbox = document.getElementById("searchbox").contains(ae)
+    let inbox = document.getElementById("searchBox").contains(ae)
 
     if (ae === sInput) {
         let elements = document.getElementsByClassName('focus');

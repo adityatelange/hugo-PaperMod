@@ -235,7 +235,7 @@ a:hover {
 }
 
 .pe-bottom-jump {
-    animation: tw-bottom-jump 0.5s ease;
+    animation: pe-bottom-jump 0.5s ease;
 }
 
 @keyframes pe-top-jump {
@@ -251,5 +251,5 @@ a:hover {
 }
 
 .pe-top-jump {
-    animation: tw-top-jump 0.5s ease;
+    animation: pe-top-jump 0.5s ease;
 }

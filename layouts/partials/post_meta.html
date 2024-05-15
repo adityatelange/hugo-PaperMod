@@ -1,23 +1,34 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
-{{- end }}
-
-{{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
+{{- $scratch.Add "meta_keys" (slice "date") -}}
+{{- $scratch.SetInMap "meta_items" "date" (slice "calendar" (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat))) -}}
 {{- end }}
 
 {{- if (.Param "ShowWordCount") -}}
-{{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d words" .WordCount))) }}
+{{- $scratch.Add "meta_keys" (slice "words") -}}
+{{- $scratch.SetInMap "meta_items" "words" (slice "file-text" (i18n "words" .WordCount | default (printf "%d words" .WordCount))) -}}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+{{- $scratch.Add "meta_keys" (slice "read_time") -}}
+{{- $scratch.SetInMap "meta_items" "read_time" (slice "clock" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) -}}
 {{- end }}
 
 {{- if not (.Param "hideAuthor") -}}
-{{- with (partial "author.html" .) }}
-{{- $scratch.Add "meta" (slice .) }}
+{{- with (partial "author.html" .) -}}
+{{- $scratch.Add "meta_keys" (slice "author") -}}
+{{- $scratch.SetInMap "meta_items" "author" (slice "avatar" .) -}}
 {{- end }}
 {{- end }}
 
-{{- with ($scratch.Get "meta") }}
+{{- $metaItems := $scratch.Get "meta_items" -}}
+{{- range ($scratch.Get "meta_keys") -}}
+{{- $icon := (partial "svg.html" (dict "name" (index $metaItems . 0))) -}}
+{{- $text := (printf "<span>%s</span>" (index $metaItems . 1)) -}}
+{{- $scratch.Add "meta" (slice (printf "<span class=\"pe-post-meta-item\">%s%s</span>" $icon $text )) -}}
+{{- end }}
+
+{{- with ($scratch.Get "meta") -}}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
-{{- end -}}
+{{- end }}
