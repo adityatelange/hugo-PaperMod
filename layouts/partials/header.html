@@ -39,7 +39,7 @@
 </script>
 {{- end }}
 
-<header class="header">
+<header class="header {{ if (site.Params.stickyHeader) }}header-sticky{{ end }}">
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
