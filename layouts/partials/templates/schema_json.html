@@ -74,6 +74,10 @@
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
   {{ if .Params.cover.image -}}
+  {{- $cover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+  {{- if $cover -}}{{/* i.e it is present in page bundle */}}
+  "image": "{{ $cover.Permalink }}",
+  {{- else }}{{/* For absolute urls and external links */}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}
     {{ .Params.cover.image | absURL }},
@@ -85,6 +89,7 @@
     {{- with index $images 0 -}}
   "image": {{ .Permalink }},
     {{- end }}
+  {{- end -}}
   {{- end -}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
