@@ -42,6 +42,11 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if site.Params.ShowAllPagesInHome }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
