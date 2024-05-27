@@ -135,7 +135,7 @@ theme: ["PaperMod"]
 ### Next up - Customizing PaperMod to suit your preferences.
 
 - Your site will be blank after you set up for the very first time.
-- You may go through this website's source code - [PaperMod's exampleSite's souce](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite)
+- You may go through this website's source code - [PaperMod's exampleSite's source](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite)
 - Scroll below this page where you will find more specific details about each section.
 - Kindly go through all of the pages below to know how to configure PaperMod.
 
