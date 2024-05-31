@@ -8,9 +8,9 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
     </h1>
-    {{- if .Description }}
-    <div class="post-description">
-        {{ .Description }}
+    {{- if .Summary }}
+    <div class="post-summary">
+        {{ .Summary }}
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}

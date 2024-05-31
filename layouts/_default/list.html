@@ -22,9 +22,9 @@
     {{- end }}
     {{- end }}
   </h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description | markdownify }}
+  {{- if .Summary }}
+  <div class="post-summary">
+    {{ .Summary | markdownify }}
   </div>
   {{- end }}
 </header>
