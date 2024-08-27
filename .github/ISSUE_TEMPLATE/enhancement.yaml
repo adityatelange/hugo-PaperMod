@@ -16,15 +16,15 @@ body:
     id: what_happened
     attributes:
       label: What you'd like to propose?
-      description: 
-      placeholder: 
+      description:
+      placeholder:
     validations:
       required: true
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme). 
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
