@@ -8,7 +8,7 @@
   translation:
     one : "১ মিনিট"
     other: "{{ .Count }} মিনিট"
-    
+
 - id: words
   translation:
     one : "১ টি শব্দ"
