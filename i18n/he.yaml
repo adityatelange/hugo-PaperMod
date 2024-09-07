@@ -11,7 +11,7 @@
 
 - id: words
   translation:
-    one : "מילה"
+    one : "מילה אחת"
     other: "{{ .Count }} מילים"
 
 - id: toc
