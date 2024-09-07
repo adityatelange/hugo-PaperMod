@@ -6,12 +6,12 @@
 
 - id: read_time
   translation:
-    one : "דקה אחת"
+    one: "דקה אחת"
     other: "{{ .Count }} דקות"
 
 - id: words
   translation:
-    one : "מילה אחת"
+    one: "מילה אחת"
     other: "{{ .Count }} מילים"
 
 - id: toc
