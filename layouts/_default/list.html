@@ -43,6 +43,10 @@
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- if site.Params.maxPostsOnHomePage }}
+{{- $limit := site.Params.maxPostsOnHomePage }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
