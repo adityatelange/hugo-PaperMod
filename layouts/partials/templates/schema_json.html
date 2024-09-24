@@ -21,6 +21,7 @@
 {{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
 {{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
+{{- $position := 0 }}
 
 {{- $scratch := newScratch }}
 <script type="application/ld+json">
@@ -34,10 +35,11 @@
     {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
 
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
+    {{- $position = add 1 $position }}
     {{- if (and $index)}}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{ add 1 $index  }},
+      "position": {{ $position }},
       "name": {{ $bc_pg.Name }},
       "item": {{ $bc_pg.Permalink | safeHTML }}
     }
@@ -45,10 +47,10 @@
 
   {{- end }}
   {{- /*  self-page addition  */ -}}
-  {{- if (ge (len $bc_list) 2) }}, {{end }}
+  {{- if (gt $position 0) }}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{len $bc_list}},
+      "position": {{ add 1 $position }},
       "name": {{ .Name }},
       "item": {{ .Permalink | safeHTML }}
     }
