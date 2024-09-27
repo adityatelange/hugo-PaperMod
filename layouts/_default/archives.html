@@ -30,7 +30,7 @@
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
 {{- if site.Params.ShowAllPagesInArchive }}
-{{- $pages = site.RegularPages }}
+{{- $pages := where site.RegularPages ".Params.unlisted" "!=" "true"}}
 {{- end }}
 
 {{- range $pages.GroupByPublishDate "2006" }}
