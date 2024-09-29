@@ -37,7 +37,7 @@
         {{- with .buttons }}
         <div class="buttons">
             {{- range . }}
-                {{- if (not .draft) }}
+                {{- if or (and (not (site.BuildDrafts)) (not .draft)) (site.BuildDrafts) }}
                     <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
                         <span class="button-inner">
                             {{ .name }}
