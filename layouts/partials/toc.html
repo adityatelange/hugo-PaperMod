@@ -71,10 +71,10 @@
                 {{- end -}}
                 {{- end }}
                 <li>
-                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}">{{- $header | safeHTML -}}</a>
+                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify | safeHTML -}}">{{- $header | plainify | safeHTML -}}</a>
                     {{- else }}
                 <li>
-                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}">{{- $header | safeHTML -}}</a>
+                    <a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify | safeHTML -}}">{{- $header | plainify | safeHTML -}}</a>
                     {{- end -}}
                     {{- end -}}
                     <!-- {{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}} -->
