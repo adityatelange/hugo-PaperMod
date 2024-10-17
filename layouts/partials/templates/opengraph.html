@@ -30,6 +30,10 @@
 <meta property="og:video" content="{{ . | absURL }}">
 {{ end }}{{ end }}
 
+{{- if or .Params.fediverseCreator site.Params.fediverseCreator }}
+<meta name="fediverse:creator" content="{{ .Params.fediverseCreator | default site.Params.fediverseCreator }}" />
+{{- end -}}
+
 {{- /* If it is part of a series, link to related articles */}}
 {{- $permalink := .Permalink }}
 {{- $siteSeries := site.Taxonomies.series }}
