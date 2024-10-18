@@ -207,6 +207,7 @@
     border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
+    white-space: pre-wrap;
 }
 
 .post-content blockquote {
