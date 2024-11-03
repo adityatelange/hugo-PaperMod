@@ -39,8 +39,8 @@ body:
       label: Hugo Version
       description: What version of Hugo are you running?
       options:
-        - Hugo >= 0.112.4 (Recommended - Minimum version required for PaperMod)
-        - Hugo < 0.112.4  (Incompatible - Not recommended to build PaperMod on lower verions)
+        - Hugo >= 0.125.7 (Recommended - Minimum version required for PaperMod)
+        - Hugo < 0.125.7  (Incompatible - Not recommended to build PaperMod on lower verions)
     validations:
       required: true
   - type: input
