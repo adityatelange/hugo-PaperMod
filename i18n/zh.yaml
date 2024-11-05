@@ -32,9 +32,6 @@
 - id: code_copied
   translation: "已复制！"
   
-- id: articles
-  translation: "所有文章"
-
 - id: Series
   translation: "合集"
 

@@ -11,7 +11,7 @@
     {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
 
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
-    {{- print "&nbsp;»&nbsp;" | safeHTML -}}<a href="{{ $bc_pg.Permalink }}">{{ i18n $bc_pg.Name }}</a>
+    {{- print "&nbsp;»&nbsp;" | safeHTML -}}<a href="{{ $bc_pg.Permalink }}">{{ i18n $bc_pg.Name | default $bc_pg.Name }}</a>
     {{- end }}
 
     {{- end -}}
