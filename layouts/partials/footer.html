@@ -11,14 +11,16 @@
 
     {{- with site.Params.footer.text }}
         {{ . | markdownify }}
-        {{- print " · "}}
     {{- end }}
 
+    {{- if not site.Params.footer.hidePoweredBy }}
     <span>
+        {{- print " · "}}
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
+    {{- end }}
 </footer>
 {{- end }}
 
