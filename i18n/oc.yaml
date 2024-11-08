@@ -1,8 +1,8 @@
 - id: prev_page
-  translation: "Précédent"
+  translation: "Prec."
 
 - id: next_page
-  translation: "Suivant"
+  translation: "Seg."
 
 - id: read_time
   translation:
@@ -12,22 +12,22 @@
 - id: words
   translation:
     one : "mot"
-    other: "{{ .Count }} mots"
+    other: "{{ .Count }} motss"
 
 - id: toc
-  translation: "Table des matières"
+  translation: "Taula de contengut"
 
 - id: translations
-  translation: "Traductions"
+  translation: "Traduccions"
 
 - id: home
-  translation: "Accueil"
+  translation: "Acuèlh"
 
 - id: edit_post
-  translation: "Modifier"
+  translation: "Modificar"
 
 - id: code_copy
-  translation: "Copier"
+  translation: "copiar"
 
 - id: code_copied
-  translation: "Copié !"
+  translation: "copiat !"

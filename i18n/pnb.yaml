@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "پِچھلا"
+
+- id: next_page
+  translation: "اگلا"
+
+- id: read_time
+  translation:
+    one: "ایک منٹ"
+    other: "مِنٹ {{ .Count }}"
+
+- id: words
+  translation:
+    one: "لفظ"
+    other: "لفظ {{ .Count }}"
+
+- id: toc
+  translation: "تتکرا"
+
+- id: translations
+  translation: "انوواد"
+
+- id: home
+  translation: "گھر"
+
+- id: edit_post
+  translation: "سودھ"
+
+- id: code_copy
+  translation: "کاپی"
+
+- id: code_copied
+  translation: "کاپی کیتی گئی!"

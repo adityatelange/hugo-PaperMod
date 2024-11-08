@@ -36,6 +36,12 @@
     }
 }
 
+@media screen and (max-width: 340px) {
+    .share-buttons {
+        justify-content: unset;
+    }
+}
+
 @media (prefers-reduced-motion) {
     /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
     .terms-tags a:active,
