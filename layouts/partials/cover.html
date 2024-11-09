@@ -8,9 +8,12 @@
     {{- $pageBundleCover     := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $cover := (or $pageBundleCover $globalResourcesCover)}}
+
+    {{- if $addLink }}
+        <a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank" rel="noopener noreferrer">
+    {{- end }}
+
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
-        {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank"
-            rel="noopener noreferrer">{{ end -}}
         {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
         {{- if hugo.IsExtended -}}
@@ -33,10 +36,16 @@
             rel="noopener noreferrer">{{ end -}}
             <img loading="{{$loading}}" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
     {{- end }}
-    {{- if $addLink }}</a>{{ end -}}
+
+    {{- if $addLink }}
+        </a>
+    {{ end -}}
+
     {{/*  Display Caption  */}}
     {{- if $.IsSingle }}
-        {{ with .Params.cover.caption }}<p>{{ . | markdownify }}</p>{{- end }}
+        {{- with .Params.cover.caption }}
+            <p>{{ . | markdownify }}</p>
+        {{- end }}
     {{- end }}
 </figure>
 {{- end }}{{/* End image */}}
