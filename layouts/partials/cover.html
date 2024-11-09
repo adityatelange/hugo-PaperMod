@@ -17,26 +17,29 @@
         {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
+    {{- $imgdl := (.Params.cover.image) | absURL }}
+    {{- if $cover -}}
+        {{- $imgdl = $cover.Permalink }}
+    {{- end -}}
+
     {{- if $addLink }}
-        <a href="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" target="_blank" rel="noopener noreferrer">
+        <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
     {{- end }}
 
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
-        <img loading="{{$loading}}" srcset="{{- range $size := $sizes -}}
-                        {{- if (ge $cover.Width $size) -}}
-                        {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw ," $size) -}}
-                        {{ end }}
-                    {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}" 
-            sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}" 
-            width="{{ $cover.Width }}" height="{{ $cover.Height }}">
+            <img loading="{{$loading}}" srcset="{{- range $size := $sizes -}}
+                            {{- if (ge $cover.Width $size) -}}
+                            {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw ," $size) -}}
+                            {{ end }}
+                        {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}" 
+                sizes="(min-width: 768px) 720px, 100vw" src="{{ $cover.Permalink }}" 
+                width="{{ $cover.Width }}" height="{{ $cover.Height }}" alt="{{ $alt }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-        <img loading="{{$loading}}" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
+        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
-        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
-            rel="noopener noreferrer">{{ end -}}
-            <img loading="{{$loading}}" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
     {{- end }}
 
     {{- if $addLink }}
