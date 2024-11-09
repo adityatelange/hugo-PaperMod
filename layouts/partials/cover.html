@@ -57,7 +57,7 @@
     {{/*  Display Caption  */}}
     {{- if $.IsSingle }}
         {{- with .Params.cover.caption }}
-            <p>{{ . | markdownify }}</p>
+            <figcaption>{{ . | markdownify }}</figcaption>
         {{- end }}
     {{- end }}
 </figure>
