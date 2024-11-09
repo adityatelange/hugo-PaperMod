@@ -10,8 +10,8 @@
     {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $cover := (or $pageBundleCover $globalResourcesCover)}}
-    {{/* We are not using the .Param.cover.relative to decide the location of image */}}
-    {{/* If we have the image in pageBundle or globalResources we can process the image */}}
+    {{- /* We are not using the .Param.cover.relative to decide the location of image */}}
+    {{- /* If we have the image in pageBundle or globalResources we can process the image */}}
 
     {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
     {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
@@ -46,17 +46,17 @@
             <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}
-        {{/* For absolute urls and external links, no img processing here */}}
+        {{- /* For absolute urls and external links, no img processing here */}}
         <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
     {{- end }}
 
     {{- if $addLink }}
         </a>
-    {{ end -}}
+    {{- end -}}
 
-    {{/*  Display Caption  */}}
+    {{- /*  Display Caption  */}}
     {{- if $.IsSingle }}
-        {{- with .Params.cover.caption }}
+        {{ with .Params.cover.caption -}}
             <figcaption>{{ . | markdownify }}</figcaption>
         {{- end }}
     {{- end }}
