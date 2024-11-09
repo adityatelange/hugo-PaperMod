@@ -33,9 +33,17 @@
   <meta property="og:type" content="website">
 {{- end }}
 
-{{- with partial "_funcs/get-page-images" . }}
-  {{- range . | first 6 }}
-    <meta property="og:image" content="{{ .Permalink }}">
+{{- if .Params.cover.image -}}
+  {{- if (ne .Params.cover.relative true) }}
+    <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+  {{- else}}
+    <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+  {{- end}}
+{{- else }}
+  {{- with partial "_funcs/get-page-images" . }}
+    {{- range . | first 6 }}
+      <meta property="og:image" content="{{ .Permalink }}">
+    {{- end }}
   {{- end }}
 {{- end }}
 
