@@ -1,8 +1,8 @@
 {{- with .cxt}} {{/* Apply proper context from dict */}}
 {{- if (and .Params.cover.image (not $.isHidden)) }}
-{{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
-{{- $loading := cond $.IsSingle "eager" "lazy" }}
 <figure class="entry-cover">
+    {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
+    {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $pageBundleCover     := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
