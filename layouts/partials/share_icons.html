@@ -14,6 +14,29 @@
 {{- with $ShareButtons }}{{ $custom = true }}{{ end }}
 
 <ul class="share-buttons">
+    {{- if (cond ($custom) (in $ShareButtons "bluesky") (true)) }}
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on bluesky"
+            href="https://bsky.app/intent/compose?text={{ $pageurl }}">
+        <svg
+        role="img"
+        viewBox="0 0 30 30"
+        version="1.1"
+        id="svg1"
+        width="30"
+        height="30"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <path
+            d="M 0,3 V 25.98333 A 4.0166697,4.0166697 45 0 0 4.0166697,30 H 27 a 3,3 135 0 0 3,-3 V 2.9217946 A 2.9217946,2.9217946 45 0 0 27.078205,0 H 3 A 3,3 135 0 0 0,3 Z m 4.8574219,1.3339844 c 0.6870019,-0.00377 1.69625,0.3075781 3.34375,1.4707031 C 10.953172,7.7466875 13.913,11.684828 15,13.798828 c 1.087,-2.113 4.046828,-6.0510936 6.798828,-7.9960936 2.636,-1.86 3.639828,-1.5382344 4.298828,-1.2402344 C 26.860656,4.9075 27,6.0775781 27,6.7675781 c 0,0.688 -0.377047,5.6505159 -0.623047,6.4785159 -0.815,2.736 -3.714765,3.662234 -6.384765,3.365234 3.911999,0.58 7.007234,2.770125 2.740234,7.078125 -5.683,4.963 -6.779422,-1.113594 -7.732422,-4.308594 -0.953,3.195 -2.809266,9.498594 -7.8222656,4.308594 -4.557,-5.073 -1.0819219,-6.498125 2.8300776,-7.078125 -2.6699995,0.296 -5.5697651,-0.629234 -6.3847651,-3.365234 C 3.3770469,12.417094 3,7.4575781 3,6.7675781 c 0,-0.688 0.1393438,-1.860125 0.9023438,-2.203125 0.2471249,-0.112125 0.5428769,-0.228207 0.9550781,-0.2304687 z" />
+        </svg>
+        </a>
+    </li>
+    {{- end }}
     {{- if (or (cond ($custom) (in $ShareButtons "x") (true)) (cond ($custom) (in $ShareButtons "twitter") (true))) }}
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on x"
