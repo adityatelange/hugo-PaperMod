@@ -22,7 +22,7 @@
     {{- end }}
     {{- end }}
   </h1>
-  {{- if .Description }}
+  {{- if and (.Param "ShowDescription") .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
   </div>
