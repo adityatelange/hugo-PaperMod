@@ -29,6 +29,9 @@
 {{- if site.Params.analytics.yandex.SiteVerificationTag }}
 <meta name="yandex-verification" content="{{ site.Params.analytics.yandex.SiteVerificationTag }}">
 {{- end }}
+{{- if site.Params.analytics.goatcounter.Code }}
+<script data-goatcounter="https://{{site.Params.analytics.goatcounter.Code}}.goatcounter.com/count" async src="{{ if site.Params.analytics.goatcounter.Src }}{{ site.Params.analytics.goatcounter.Src }}{{ else }}//gc.zgo.at/count.js{{ end }}"></script>
+{{- end }}
 {{- if site.Params.analytics.bing.SiteVerificationTag }}
 <meta name="msvalidate.01" content="{{ site.Params.analytics.bing.SiteVerificationTag }}">
 {{- end }}
