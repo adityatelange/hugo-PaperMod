@@ -6,16 +6,16 @@
 
 - id: read_time
   translation:
-    one : "১ মিনিট"
+    one : "এক মিনিট"
     other: "{{ .Count }} মিনিট"
     
 - id: words
   translation:
-    one : "১ টি শব্দ"
+    one : "একটি শব্দ"
     other: "{{ .Count }} টি শব্দ"
 
 - id: toc
-  translation: "সূচিপত্র"
+  translation: "বিষয়সারণী"
 
 - id: translations
   translation: "অনুবাদসমূহ"
