@@ -46,7 +46,6 @@ window.onload = function () {
                             ignoreLocation: params.fuseOpts.ignorelocation ?? true
                         }
                     }
-                    // fuse = new Fuse(data, options); // build the index from the json file
 
                     fetch(currentScriptSrc)
                         .then(resp => resp.text())
@@ -130,8 +129,6 @@ sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
     if (fuseWorker) {
-        // const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
-
         fuseWorker.postMessage(this.value.trim())
     }
 }
