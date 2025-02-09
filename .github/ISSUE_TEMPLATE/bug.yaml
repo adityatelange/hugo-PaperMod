@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report :)
         - Kindly **DO NOT** ask for instructions.
-        - Use [Discussions](https://github.com/adityatelange/hugo-PaperMod/discussions) section if you have a query or doubts or any orther relevant question.
+        - Use [Discussions](https://github.com/adityatelange/hugo-PaperMod/discussions) section if you have a query or doubts or any other relevant question.
         - You may join [Discord community](https://discord.gg/ahpmTvhVmp) to interact with fellow contributors and users
         - Read project's [Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki) for detailed documentation.
         - Read project's [FAQs](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs) section for Frequently asked questions.
@@ -40,7 +40,7 @@ body:
       description: What version of Hugo are you running?
       options:
         - Hugo >= 0.125.7 (Recommended - Minimum version required for PaperMod)
-        - Hugo < 0.125.7  (Incompatible - Not recommended to build PaperMod on lower verions)
+        - Hugo < 0.125.7  (Incompatible - Not recommended to build PaperMod on lower versions)
     validations:
       required: true
   - type: input
@@ -104,7 +104,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme). 
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
