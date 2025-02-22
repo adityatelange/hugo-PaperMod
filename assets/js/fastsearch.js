@@ -1,10 +1,15 @@
 import * as params from '@params';
 
-let fuse; // holds our search engine
 let resList = document.getElementById('searchResults');
 let sInput = document.getElementById('searchInput');
 let first, last, current_elem = null
 let resultsAvailable = false;
+
+const currentScriptSrc = document.currentScript.src
+let data, options
+
+/** @type {Worker} */
+let fuseWorker
 
 // load our search index
 window.onload = function () {
@@ -12,10 +17,10 @@ window.onload = function () {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                let data = JSON.parse(xhr.responseText);
+                data = JSON.parse(xhr.responseText);
                 if (data) {
                     // fuse.js options; check fuse.js website for details
-                    let options = {
+                    options = {
                         distance: 100,
                         threshold: 0.4,
                         ignoreLocation: true,
@@ -41,7 +46,54 @@ window.onload = function () {
                             ignoreLocation: params.fuseOpts.ignorelocation ?? true
                         }
                     }
-                    fuse = new Fuse(data, options); // build the index from the json file
+
+                    fetch(currentScriptSrc)
+                        .then(resp => resp.text())
+                        .then(currentScriptCode => {
+                            const m = currentScriptCode.match(/Fuse=t\(\);/)
+                            const fuseScript = currentScriptCode.slice(0, m.index) + 'Fuse=t();'
+
+                            const workerScript = `
+                                ${fuseScript};
+
+                                let data = ${JSON.stringify(data)};
+                                let options = ${JSON.stringify(options)};
+                                let fuse = new Fuse(data, options);
+
+                                onmessage = (e) => {
+                                    const results = fuse.search(e.data)
+
+                                    postMessage(results)
+                                }
+                            `
+                            const workerScriptBlob = new Blob([workerScript], { type: 'script/js' })
+                            const workerScriptUrl = URL.createObjectURL(workerScriptBlob)
+
+                            fuseWorker = new Worker(workerScriptUrl)
+
+                            fuseWorker.addEventListener('message', (ev) => {
+                                const results = ev.data
+
+                                if (results.length !== 0) {
+                                    // build our html if result exists
+                                    let resultSet = ''; // our results bucket
+
+                                    for (let item in results) {
+                                        resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
+                                            `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+                                    }
+
+                                    resList.innerHTML = resultSet;
+                                    resultsAvailable = true;
+                                    first = resList.firstChild;
+                                    last = resList.lastChild;
+                                } else {
+                                    resultsAvailable = false;
+                                    resList.innerHTML = '';
+                                }
+                            })
+                        })
+
                 }
             } else {
                 console.log(xhr.responseText);
@@ -76,30 +128,8 @@ function reset() {
 sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
-    if (fuse) {
-        let results;
-        if (params.fuseOpts) {
-            results = fuse.search(this.value.trim(), {limit: params.fuseOpts.limit}); // the actual query being run using fuse.js along with options
-        } else {
-            results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
-        }
-        if (results.length !== 0) {
-            // build our html if result exists
-            let resultSet = ''; // our results bucket
-
-            for (let item in results) {
-                resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
-                    `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
-            }
-
-            resList.innerHTML = resultSet;
-            resultsAvailable = true;
-            first = resList.firstChild;
-            last = resList.lastChild;
-        } else {
-            resultsAvailable = false;
-            resList.innerHTML = '';
-        }
+    if (fuseWorker) {
+        fuseWorker.postMessage(this.value.trim())
     }
 }
 
