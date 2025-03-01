@@ -17,7 +17,7 @@ https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#custom-head--footer
 **What does this PR change? What problem does it solve?**
 
 <!--
-Describe the changes and their purpose here, as detailed as and if  needed.
+Describe the changes and their purpose here, as detailed as and if needed.
 
 Please do not add 2 unrelated changes in a single PR as it is difficult to track/revert those in future.
 -->

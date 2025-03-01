@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Prec."
+
+- id: next_page
+  translation: "Seg."
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} min"
+
+- id: words
+  translation:
+    one : "mot"
+    other: "{{ .Count }} motss"
+
+- id: toc
+  translation: "Taula de contengut"
+
+- id: translations
+  translation: "Traduccions"
+
+- id: home
+  translation: "Acuèlh"
+
+- id: edit_post
+  translation: "Modificar"
+
+- id: code_copy
+  translation: "copiar"
+
+- id: code_copied
+  translation: "copiat !"

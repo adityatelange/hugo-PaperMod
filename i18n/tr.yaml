@@ -11,8 +11,8 @@
 
 - id: words
   translation:
-    one : "kelime"
-    other: "{{ .Count }} kelime"
+    one : "sözcük"
+    other: "{{ .Count }} sözcük"
 
 - id: toc
   translation: "İçindekiler"
@@ -21,7 +21,7 @@
   translation: "Çeviriler"
 
 - id: home
-  translation: "Anasayfa"
+  translation: "Ana Sayfa"
 
 - id: edit_post
   translation: "Düzenle"

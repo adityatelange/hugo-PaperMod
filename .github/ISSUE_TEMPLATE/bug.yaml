@@ -1,0 +1,112 @@
+name: Bug Report 🐞
+description: Create a report to help us improve
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report :)
+        - Kindly **DO NOT** ask for instructions.
+        - Use [Discussions](https://github.com/adityatelange/hugo-PaperMod/discussions) section if you have a query or doubts or any other relevant question.
+        - You may join [Discord community](https://discord.gg/ahpmTvhVmp) to interact with fellow contributors and users
+        - Read project's [Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki) for detailed documentation.
+        - Read project's [FAQs](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs) section for Frequently asked questions.
+        - Search for previous [Issues](https://github.com/adityatelange/hugo-PaperMod/issues)/[Pull Requests](https://github.com/adityatelange/hugo-PaperMod/pulls) if this issue is already reported or fix has been created.
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: A bug happened! Here are the screenshots.. Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How to reproduce this issue. Here are the steps...
+      placeholder:  |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: hugo_version
+    attributes:
+      label: Hugo Version
+      description: What version of Hugo are you running?
+      options:
+        - Hugo >= 0.125.7 (Recommended - Minimum version required for PaperMod)
+        - Hugo < 0.125.7  (Incompatible - Not recommended to build PaperMod on lower versions)
+    validations:
+      required: true
+  - type: input
+    id: papermod_version
+    attributes:
+      label: PaperMod Version
+      description: What version of PaperMod are you running?
+      placeholder:  |
+        PaperMod v7.0 or
+        Branch master or
+        Commit-id: 3f50861a0ced88f9b614a43662edeb4c0bc45da8
+    validations:
+      required: true
+  - type: dropdown
+    id: browser_type
+    attributes:
+      label: What kind of devices are you seeing the problem on?
+      multiple: true
+      options:
+        - Mobile
+        - Desktop
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+    validations:
+      required: false
+  - type: input
+    id: browser_version
+    attributes:
+      label: Browser Version
+      description: Please add browser version or enter user agent string (navigator.userAgent)
+      placeholder: ex. Google Chrome 86.0
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository/Source Code link where this issue can be reproduced
+      description: Please add url of the repository where this issue can be reproduced
+      placeholder: https://github.com/<username>/<repo name>
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+    validations:
+      required: true
