@@ -61,10 +61,6 @@
   {{- end }}
 {{- end }}
 
-{{- if or .Params.fediverseCreator site.Params.fediverseCreator }}
-<meta name="fediverse:creator" content="{{ .Params.fediverseCreator | default site.Params.fediverseCreator }}" />
-{{- end -}}
-
 {{- range .GetTerms "series" }}
   {{- range .Pages | first 7 }}
     {{- if ne $ . }}
@@ -83,4 +79,8 @@
       {{- end }}
     {{- end }}
   {{- end }}
+{{- end }}
+
+{{- with (.Param "social.fediverse_creator") }}
+  <meta name="fediverse:creator" content="{{ . }}">
 {{- end }}
