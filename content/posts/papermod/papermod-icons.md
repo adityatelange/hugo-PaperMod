@@ -7,6 +7,8 @@ aliases: ["/papermod-icons"]
 tags: ["PaperMod", "Docs"]
 author: ["Aditya Telange"]
 draft: true
+social:
+  fediverse_creator: "@adityatelange@mastodon.social"
 ---
 
 ## Social Icons
