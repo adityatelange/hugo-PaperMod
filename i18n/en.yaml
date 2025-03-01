@@ -31,3 +31,15 @@
 
 - id: code_copied
   translation: "copied!"
+
+- id: cookie_approve
+  translation: "Approve"
+
+- id: cookie_deny
+  translation: "Deny"
+
+- id: cookie_more_info
+  translation: "More Info"
+
+- id: cookie_message
+  translation: "I would like to use third party cookies and scripts to improve the functionalities of this website."
