@@ -80,3 +80,7 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{- with (.Param "social.fediverse_creator") }}
+  <meta name="fediverse:creator" content="{{ . }}">
+{{- end }}
