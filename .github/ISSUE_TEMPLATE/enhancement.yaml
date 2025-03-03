@@ -1,0 +1,32 @@
+name: Enhancement 🚀
+description: Propose a new feature or change for enhancing the experience.
+title: "[Enhancement]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this enhancement form :)
+        - Use [Discussions](https://github.com/adityatelange/hugo-PaperMod/discussions) section if you have a query or doubts or any other relevant question.
+        - You may join [Discord community](https://discord.gg/ahpmTvhVmp) to interact with fellow contributors and users
+        - Read project's [Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki) for detailed documentation.
+        - Read project's [FAQs](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs) section for Frequently asked questions.
+        - Search for previous [Issues](https://github.com/adityatelange/hugo-PaperMod/issues)/[Pull Requests](https://github.com/adityatelange/hugo-PaperMod/pulls) if this issue is already reported or fix has been created.
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What you'd like to propose?
+      description:
+      placeholder:
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/adityatelange/hugo-PaperMod?tab=coc-ov-file#readme).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+    validations:
+      required: true
