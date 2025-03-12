@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "පෙර පිටුව"
+
+- id: next_page
+  translation: "මීළඟ පිටුව"
+
+- id: read_time
+  translation:
+    one: "එක් මිනිත්තුවයි"
+    other: "මිනිත්තු {{ .Count }}"
+
+- id: words
+  translation:
+    one: "එක් වචනයයි"
+    other: "වචන {{ .Count }}"
+
+- id: toc
+  translation: "පටුන"
+
+- id: translations
+  translation: "පරිවර්තන"
+
+- id: home
+  translation: "මුල් පිටුව"
+
+- id: edit_post
+  translation: "සංස්කරණය"
+
+- id: code_copy
+  translation: "පිටපත් කරගන්න"
+
+- id: code_copied
+  translation: "පිටපත් කරගත්තා!"
