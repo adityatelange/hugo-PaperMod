@@ -1,13 +1,91 @@
 {{- with site.Params.homeInfoParams }}
+
+<style>
+    hr {
+        border: none;
+        border-top: 2px solid #444; /* Adjust color as per theme */
+        margin: 2rem auto;
+        width: 80%; /* Adjust width for better alignment */
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        flex-wrap: nowrap;
+        width: 100%; 
+        text-align: center;
+    }
+
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        white-space: nowrap;
+    }
+
+
+    .button:hover {
+        transform: translateY(-1px);
+    }
+
+    .button svg {
+        vertical-align: middle;
+    }
+
+    .first-entry.home-info {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem;
+    }
+
+</style>
+
 <article class="first-entry home-info">
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
+
     <div class="entry-content">
         {{ .Content | markdownify }}
     </div>
+
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>
+
+    <center>
+    {{- with .buttons }}
+    <div class="buttons">
+        {{- range . }}
+        <a class="button" href="{{ .url }}" title="{{ .name }}">
+            <span>
+                {{ .name }}
+            </span>
+            {{- if (findRE "://" .url) }}
+            <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                viewBox="0 0 24 24" height="14" width="14">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14L21 3"></path>
+            </svg>
+            {{- end }}
+        </a>
+        {{- end }}
+    </div>
+    {{- end }}
+    </center>
+    
+    <hr>
+    
 </article>
+
 {{- end -}}
