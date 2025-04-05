@@ -65,3 +65,48 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
+
+hr {
+    border: none;
+    border-top: 2px solid #444;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+    width: 50%; 
+    text-align: center;
+}
+
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button svg {
+    vertical-align: middle;
+}
+
+.first-entry.home-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}

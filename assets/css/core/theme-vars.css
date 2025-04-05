@@ -6,28 +6,30 @@
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 20px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(15, 15, 15);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
-    --code-block-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: #2D1410;
+
+    /* Pastel Light Theme */
+    --theme: #fffafc;
+    --entry: #fff5f8;
+    --primary: #4b3f4e;
+    --secondary: #9c8c9f;
+    --tertiary: #d7c8dc;
+    --content: #4b3f4e;
+    --code-block-bg: #f9f2f7;
+    --code-bg: #f7edf3;
+    --border: #e5cfe0;
 }
 
 .dark {
-    --theme: #0C0B11;
-    --entry: #553a4a31;
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --code-block-bg: #553A4A;
-    --code-bg: #553A4A;
-    --border: #553A4A;
-    --monet: #785767;
+    --theme: #2d2a32;
+    --entry: #3e3b44;
+    --primary: #e8e3e3;        /* off-white */
+    --secondary: #9db5b2;      /* muted seafoam */
+    --tertiary: #d9c6e2;       /* soft lilac */
+    --content: #f3efe8;        /* cream */
+    --code-block-bg: #394b4a;  /* teal gray */
+    --code-bg: #3f2f3f;        /* desaturated plum */
+    --border: #7d6b91;         /* faded violet */
+    --monet: #aacfcf;          /* pastel aqua */
 }
 
 .list {
