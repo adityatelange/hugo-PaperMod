@@ -3,7 +3,6 @@
 baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
 title: PaperMod
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
-paginate: 5
 theme: [hugo-PaperMod]
 
 enableInlineShortcodes: true
@@ -18,6 +17,10 @@ mainsections: ["posts", "papermod"]
 minify:
   disableXML: true
   # minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
 
 languages:
   en:
