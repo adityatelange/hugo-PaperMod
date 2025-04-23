@@ -62,6 +62,7 @@ social:
 | `medium`        | medium.com                      |
 | `monero`        | -                               |
 | `mixcloud`      | mixcloud.com                    |
+| `nostr`         | nostr.org                       |
 | `nuget`         | nuget.org                       |
 | `paypal`        | paypal.com                      |
 | `peertube`      | -                               |
