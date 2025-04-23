@@ -12,7 +12,6 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
 
 minify:
   disableXML: true
@@ -127,6 +126,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
+  mainsections: ["posts", "papermod"]
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
