@@ -73,8 +73,17 @@
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
       <guid>{{ .Permalink }}</guid>
       <description>{{ with .Description | html }}{{ . }}{{ else }}{{ .Summary | html }}{{ end -}}</description>
-      {{- if and site.Params.ShowFullTextinRSS .Content }}
-      <content:encoded>{{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}</content:encoded>
+      {{- $isCoverHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+      {{- $cover := (partial "cover.html" (dict "cxt" . "IsSingle" false "IsHome" false "isHidden" $isCoverHidden)) -}}
+      {{- if (or $cover (and site.Params.ShowFullTextinRSS .Content)) -}}
+          <content:encoded>
+          {{- if $cover -}}
+              {{ (printf "<![CDATA[%s]]>" $cover) | safeHTML }}
+          {{- end -}}
+          {{- if and site.Params.ShowFullTextinRSS .Content }}
+               {{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}
+          {{- end -}}
+          </content:encoded>
       {{- end }}
     </item>
     {{- end }}
