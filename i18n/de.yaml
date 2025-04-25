@@ -31,3 +31,6 @@
 
 - id: code_copied
   translation: "Kopiert!"
+
+- id: lastmod
+  translation: "Zuletzt geändert"
