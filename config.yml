@@ -182,6 +182,11 @@ params:
   # icon: icon.png
   # iconHeight: 35
 
+  # Added layouts/partials/google_analytics.html in PR https://github.com/adityatelange/hugo-PaperMod/pull/1734
+  services:
+    googleAnalytics:
+      id: G-XXXXXXXXXX
+
   # analytics:
   #     google:
   #         SiteVerificationTag: "XYZabc"
