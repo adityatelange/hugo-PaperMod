@@ -1,0 +1,10 @@
+{{- $gaID := .Site.Params.services.googleAnalytics.id }}
+{{- if and (eq .Site.Params.env "production") $gaID }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaID }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ $gaID }}');
+</script>
+{{- end }}
