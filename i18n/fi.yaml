@@ -1,0 +1,33 @@
+- id: prev_page
+  translation: "Edellinen"
+
+- id: next_page
+  translation: "Seuraava"
+
+- id: read_time
+  translation:
+    one : "1 min"
+    other: "{{ .Count }} minuuttia"
+
+- id: words
+  translation:
+    one : "sana"
+    other: "{{ .Count }} sanaa"
+
+- id: toc
+  translation: "Sisällysluettelo"
+
+- id: translations
+  translation: "Käännökset"
+
+- id: home
+  translation: "Etusivu"
+
+- id: edit_post
+  translation: "Muokkaa"
+
+- id: code_copy
+  translation: "Kopioi"
+
+- id: code_copied
+  translation: "Kopioitu!"
