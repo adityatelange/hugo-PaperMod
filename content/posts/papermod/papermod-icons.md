@@ -91,6 +91,7 @@ social:
 | `xing`          | xing.com                        |
 | `ycombinator`   | ycombinator.com                 |
 | `youtube`       | youtube.com                     |
+| `zcal`          | zcal.co                         |
 | `other`         | -                               |
 
 Usage :
