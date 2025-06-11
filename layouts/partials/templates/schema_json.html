@@ -49,10 +49,10 @@
 
   {{- end }}
   {{- /*  self-page addition  */ -}}
-  {{- if (ge (len $bc_list) 2) }}, {{end }}
+  {{- if (ge (len $bc_list) 1) }}, {{end }}
     {
       "@type": "ListItem",
-      "position": {{len $bc_list}},
+      "position": {{ add 1 (len $bc_list) }},
       "name": {{ .Name }},
       "item": {{ .Permalink | safeHTML }}
     }
