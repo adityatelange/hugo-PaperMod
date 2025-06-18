@@ -82,15 +82,10 @@
     box-shadow: 0 -1px 0 var(--primary) inset;
 }
 
-.post-content a.external-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .post-content a.external-link::after {
   content: "";
   display: inline-block;
+  margin-left: 5px;
   clip-path: polygon(
     60% 5%,
     60% 0%,
