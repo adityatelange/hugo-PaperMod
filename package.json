@@ -1,0 +1,10 @@
+{
+  "name": "catalystedge-site",
+  "version": "1.0.0",
+  "description": "Static website for Catalyst Edge built with Hugo and PaperMod",
+  "scripts": {
+    "build": "hugo"
+  },
+  "author": "Catalyst Edge",
+  "license": "MIT"
+}
