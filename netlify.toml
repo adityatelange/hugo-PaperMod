@@ -1,6 +1,6 @@
 [build]
   command = "hugo"
-  command = "git submodule update --init --recursive && hugo"
+#  command = "git submodule update --init --recursive && hugo"
   publish = "public"
   
 [context.production.environment]
