@@ -1,0 +1,12 @@
+<div class="post_comments">
+  {{ if .Site.Config.Services.Disqus.Shortname }}
+    {{ template "_internal/disqus.html" . }}
+  {{ end }}
+  {{ if .Site.Params.utterances }}
+    {{ partial "utterances.html" . }}
+  {{ end }}
+  {{ if .Site.Params.giscus }}
+    {{ partial "giscus.html" . }}
+  {{ end }}
+  <!-- add custom comments markup here -->
+</div>

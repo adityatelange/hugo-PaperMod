@@ -1,0 +1,72 @@
+[read_more]
+other = "Read More"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "All Rights Reserved"
+
+[share_on]
+other = "Share on"
+
+[featured_posts]
+other = "Featured Posts"
+
+[recent_posts]
+other = "Recent Posts"
+
+[404_title]
+other = "Lost"
+
+[could_not_find]
+other = "We couldn't find the page you're looking for"
+
+[go_back]
+other = "Go Back"
+
+[translations]
+other = "Translations"
+
+[categories]
+other = "Categories"
+
+[tags]
+other = "Tags"
+
+[series]
+other = "Series"
+
+[all_categories]
+other = "All Categories"
+
+[all_tags]
+other = "All Tags"
+
+[all_series]
+other = "All Series"
+
+[overview]
+other = "Overview"
+
+[reading_time]
+other = "{{ .ReadingTime }} min read"
+
+[series_posts]
+other = "Posts in this series"
+
+# search
+[quick_links]
+  other = "Results"
+[no_matches]
+  other = "No results found"
+[search_field_placeholder]
+  other = "Search the knowledge base"
+[blog_search_field_placeholder]
+  other = "Search..."
+[search_results_label]
+  other = "Search Results"
+[short_search_query]
+  other = "Query is too short"
+[type_to_search]
+  other = "Type to search"

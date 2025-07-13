@@ -1,0 +1,35 @@
+<li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify  }}</a>
+      </h3>
+      {{ partial "post-meta" . }}
+    </div>
+    {{- with .Params.thumbnail }}
+    <div class="excerpt_footer partition">
+      <div class="excerpt_thumbnail">
+        {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
+      </div>
+      {{ else }}
+      <div class="excerpt_footer">
+        {{- end }}
+        <div class="pale">
+          {{- $summary := truncate 320  (htmlUnescape .Plain) }}
+          {{- if .Params.summary }}
+            {{- $summary = .Params.summary }}
+          {{- else if .Params.abstract }}
+            {{ $summary = .Params.abstract }}
+          {{- end }}
+          {{ if not ( strings.Contains $summary "<p>" ) }}
+            <p>{{ $summary | markdownify }}</p>
+          {{ else }}
+            {{ $summary | markdownify }}
+          {{ end }}
+          <br>
+          {{- $r := T "read_more" }}
+          <a href="{{ .Permalink }}" title="{{ $r }}" class="excerpt_more button">{{ $r }}</a>
+        </div>
+      </div>
+    </div>
+  </li>

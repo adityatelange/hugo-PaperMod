@@ -1,0 +1,20 @@
+{
+	"Add Hugo Notice": {
+		"scope": "markdown",
+		"prefix": "note",
+		"body": [
+			"{{% notice ${1|note,info,tip,warning|} ${2:title} %}}",
+			"$3",
+	        "{{% /notice %}}"
+		],
+		"description": "create note"
+	},
+	"Add Hugo Reference": {
+		"scope": "markdown",
+		"prefix": "ref",
+		"body": [
+			"{{< ref \"$1\" >}}"
+		],
+		"description": "create local ref link"
+	},
+}

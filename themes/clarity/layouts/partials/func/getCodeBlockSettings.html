@@ -1,0 +1,25 @@
+{{ $s := site.Params }}
+{{ $p := .Params }}
+{{ $maxCodeLines := 100 }}
+{{ with $s.codeMaxLines }}
+  {{ $maxCodeLines = . }}
+{{ end }}
+{{ with $p.codeMaxLines }}
+  {{ $maxCodeLines = . }}
+{{ end }}
+
+{{ $codeLineNumbers := false }}
+{{ with $s.codeLineNumbers }}
+  {{ $codeLineNumbers = . }}
+{{ end }}
+{{ with $p.codeLineNumbers }}
+  {{ $codeLineNumbers = . }}
+  {{ else }}
+  {{ if eq $p.codeLineNumbers false }}
+    {{ $codeLineNumbers = false }}
+  {{ end }}
+{{ end }}
+
+{{ $config := (dict "max" $maxCodeLines "lines" $codeLineNumbers) }}
+
+{{ return $config }}

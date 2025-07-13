@@ -1,0 +1,37 @@
+{{- $menu := .menu }}
+{{- $iconsDir := default "icons/" site.Params.iconsDir }}
+{{ $menuData := site.Data.menu }}
+{{- $link := .context.Permalink }}
+{{- $url := "" }}
+{{- $name := "" }}
+{{- $forwardSlash := "/" }}
+{{- $children := false }}
+{{- range $menu }}
+  {{- if eq $menu $menuData }}
+    {{- $children = .submenu }}
+    {{- $name = .name }}
+    {{- $url = absURL .link }}
+  {{- else }}
+    {{- $children = .Children }}
+    {{- $name = .Name }}
+    {{- $url = absLangURL .URL }}
+  {{- end }}
+  <div class="nav_parent{{ if (and (not .Children) (eq (trim $url $forwardSlash) (trim $link $forwardSlash))) }} nav_active{{ end}}">
+    <a href="{{ $url }}" class="nav_item" title="{{ $name }}">{{ $name }} {{ with $children }}<img src='{{ absURL (printf "%scaret-icon.svg" $iconsDir) }}' alt="icon" class="nav_icon">{{ end }}</a>
+    {{- with $children }}
+    <div class="nav_sub">
+      <span class="nav_child"></span>
+      {{- range . }}
+        {{- if eq $menu $menuData }}
+          {{- $name = .name }}
+          {{- $url = absURL .link }}
+        {{- else }}
+          {{- $name = .Name }}
+          {{- $url = absLangURL .URL }}
+        {{- end }}
+        <a href="{{ $url }}" class="nav_child nav_item" title="{{ $name }}">{{ $name }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+{{- end }}

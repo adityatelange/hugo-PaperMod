@@ -1,0 +1,26 @@
+<!-- scripts definition -->
+{{ $highlightPath := "js/highlight.js" }}
+{{ $highlight := resources.Get $highlightPath | resources.ExecuteAsTemplate $highlightPath . }}
+
+{{ $variablesScriptPath := "js/variables.js" }}
+{{ $variables := resources.Get $variablesScriptPath | resources.ExecuteAsTemplate (printf "%s/js/variables.js" .Lang) . }}
+
+{{ $functionsScriptPath := "js/functions.js" }}
+{{ $functions := resources.Get $functionsScriptPath | resources.ExecuteAsTemplate $functionsScriptPath . }}
+
+{{ $codeScriptPath := "js/code.js" }}
+{{ $code := resources.Get $codeScriptPath | resources.ExecuteAsTemplate $codeScriptPath . }}
+
+{{ $customScriptPath := "js/custom.js" }}
+{{ if (fileExists "../../assets/js/custom.js") }}
+  {{ $customScriptPath := "../../assets/js/custom.js" }}
+{{ end }}
+{{ $custom := resources.Get $customScriptPath | resources.ExecuteAsTemplate $customScriptPath . }}
+
+{{ $mainScriptPath := "js/index.js" }}
+{{ $main := resources.Get $mainScriptPath | resources.ExecuteAsTemplate $mainScriptPath . }}
+
+{{ $bundlePath := (printf "%s/js/bundle.js" .Lang ) }}
+{{ $bundle := slice $highlight $variables $functions $code $main $custom | resources.Concat $bundlePath | resources.Fingerprint "sha512" }}
+
+{{ return $bundle }}
