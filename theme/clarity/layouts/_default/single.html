@@ -1,0 +1,58 @@
+{{- define "main" }}
+{{- $s := .Site.Params }}
+{{- $p := .Params }}
+{{- $scratch := newScratch }}
+{{- if isset $p "image" }}
+  {{- $scratch.Set "image" $p.image }}
+{{- else }}
+  {{ $scratch.Set "image" $s.fallBackOgImage }}
+{{- end }}
+{{- $image := $scratch.Get "image" }}
+{{- $bg := absLangURL (path.Join "images" $image) }}
+<div class="{{ if ne $p.singleColumn true }}grid-inverse {{ end }}wrap content">
+  <article class="post_content">
+    {{- $t := .Title }}
+    <h1 class="post_title">{{ $t | markdownify }}</h1>
+    {{- partial "post-meta" . }}
+    {{- with .Params.featureImage -}}
+      <div class="post_featured">
+        {{- partial "image" (dict "file" $p.featureImage "alt" $p.featureImageAlt "cap" $p.featureImageCap "type" "featured" "Page" $.Page) }}
+      </div>
+    {{- end -}}
+    {{ if $p.toc }}
+      <div class="post_toc">
+        <h2>{{ T "overview" }}</h2>
+        {{ .TableOfContents }}
+      </div>
+    {{ end }}
+    <div class="post_body">
+      {{- .Content }}
+    </div>
+
+    {{- $showRelatedInArticle := $s.showRelatedInArticle }}
+    {{- if eq $p.showRelatedInArticle true }}
+      {{- $showRelatedInArticle = true }}
+    {{- else if eq $p.showRelatedInArticle false }}
+      {{- $showRelatedInArticle = false }}
+    {{- end }}
+    {{- if (and ($showRelatedInArticle) (isset $p "series")) }}
+      {{- partial "related" . }}
+    {{- end }}
+
+    {{- $showComments := true }}
+    {{- if eq $s.comments false }}
+      {{- $showComments = false }}
+    {{- else if eq $p.comments false }}
+      {{- $showComments = false }}
+    {{- end }}
+    {{- if ne $showComments false }}
+      {{- partial "comments" . }}
+    {{- end }}
+    {{- partial "i18nlist" . }}
+
+  </article>
+  {{- if ( ne $p.sidebar false ) }}
+    {{- partial "sidebar" . }}
+  {{ end }}
+</div>
+{{- end }}

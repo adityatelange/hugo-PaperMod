@@ -1,0 +1,135 @@
+{{- $summary := truncate 160 .Summary }}
+{{- $s := .Site.Params }}
+{{- $p := .Params }}
+
+{{- $relpath := "" -}}
+{{- if or $s.usePageBundles $p.usePageBundles }}
+  {{- $relpath = .Page.RelPermalink -}}
+{{- end }}
+
+{{ if eq $p.usePageBundles false }}
+  {{- $relpath = "" }}
+{{ end }}
+
+{{- with $p.description }}
+  {{- $summary = truncate 160 . }}
+{{- end }}
+{{- if .IsHome }}
+  {{- $summary = $s.description }}
+  {{- with $p.description }}
+    {{- $summary = . }}
+  {{- end }}
+{{- end }}
+{{- $site := .Site.Title }}
+{{- $title := .Title }}
+{{- $permalink := .Permalink }}
+{{- $logo := absURL $s.logo }}
+{{- $author := $s.author }}
+{{- with $p.author }}
+  {{ $author := . }}
+{{- end }}
+{{- $image := absURL $s.fallBackOgImage }}
+{{- with $p.featureImage }}
+  {{- $fullpath := ( add $relpath . ) -}}
+  {{- $image = absURL $fullpath  }}
+{{- end }}
+{{- with $p.thumbnail }}
+  {{- $fullpath := ( add $relpath . ) -}}
+  {{- $image = absURL $fullpath  }}
+{{- end }}
+{{- with $p.shareImage }}
+  {{- $fullpath := ( add $relpath . ) -}}
+  {{- $image = absURL $fullpath  }}
+{{- end }}
+<meta property="og:locale" content="{{ .Lang }}" />
+{{ range .Translations }}
+<meta property="og:locale:alternate" content="{{ .Lang }}" />
+{{ end }}
+{{- if .IsHome }}
+<meta property="og:type" content="website">
+{{- else }}
+<meta property="og:type" content="article">
+{{- end }}
+<meta name="description" content="{{ $summary }}" />
+<meta name="twitter:card" content="{{ if $s.largeTwitterCard }}summary_large_image{{ else }}summary{{ end }}" />
+<meta name="twitter:creator" content="{{ $s.twitter }}">
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:image" content="{{ $image }}"/>
+<meta property="og:url" content="{{ $permalink }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $summary }}" />
+<meta property="og:image" content="{{ $image }}" />
+{{- $mergedKeywords := slice }}
+{{- with $s.keywords }}
+  {{- range . }}
+    {{- $mergedKeywords = $mergedKeywords | append . }}
+  {{- end }}
+{{- end }}
+{{- with $p.keywords }}
+  {{- range . }}
+    {{- $mergedKeywords = $mergedKeywords | append . }}
+  {{- end }}
+{{- end }}
+{{- with $s.tags }}
+  {{- range . }}
+    {{- $mergedKeywords = $mergedKeywords | append . }}
+  {{- end }}
+{{- end }}
+{{- with $p.tags }}
+  {{- range . }}
+    {{- $mergedKeywords = $mergedKeywords | append . }}
+  {{- end }}
+{{- end }}
+{{- $mergedKeywordsString := delimit $mergedKeywords "," }}
+{{- with $mergedKeywordsString }}
+  <meta name="keywords" content="{{ $mergedKeywordsString }}" />
+{{- end }}
+{{- if eq .Section $s.blogDir -}}
+  {{- $date := ( .Date.Format "2006-02-01") -}}
+  {{- $date := (time .Date) }}
+  {{- $lastMod := (time .Lastmod) }}
+  {{- $categories := slice }}
+  {{- with $s.categories }}
+    {{- range . }}
+      {{- $categories = $categories | append . }}
+    {{- end }}
+  {{- end }}
+  {{- with $p.categories }}
+    {{- range . }}
+      {{- $categories = $categories | append . }}
+    {{- end }}
+  {{- end }}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage":"{{ $permalink }}",
+      "name": "{{ $site }}",
+      "headline": {{ $title }},
+      "description": {{ $summary }},
+      "url": "{{ $permalink }}",
+      "datePublished": {{ $date  }},
+      "dateModified": {{ $lastMod }},
+      "keywords": {{ $mergedKeywords }},
+      {{- with $categories }}
+        "articleSection": {{ $categories }},
+      {{- end }}
+      "author": {
+        "@type": "Person",
+        "name": "{{ $author }}"
+      },
+      "image":{
+        "@type":"ImageObject",
+        "url": "{{ $image }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "logo": {
+          "@type":"ImageObject",
+          "url": "{{ $logo }}"
+        },
+        "name": "{{ $site }}"
+      }
+    }
+  </script>
+{{- end }}

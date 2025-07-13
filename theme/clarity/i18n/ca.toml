@@ -1,0 +1,72 @@
+[read_more]
+other = "Llegiu més"
+
+[copyright]
+other = "Drets d'autor"
+
+[all_rights]
+other = "Tots els drets reservats"
+
+[share_on]
+other = "Compartiu a"
+
+[featured_posts]
+other = "Entrades destacades"
+
+[recent_posts]
+other = "Entrades recents"
+
+[404_title]
+other = "Perdut"
+
+[could_not_find]
+other = "No podem trobar la pàgina que cerqueu"
+
+[go_back]
+other = "Vés enrere"
+
+[translations]
+other = "Traduccions"
+
+[categories]
+other = "Categories"
+
+[tags]
+other = "Etiquetes"
+
+[series]
+other = "Sèries"
+
+[all_categories]
+other = "Totes les categories"
+
+[all_tags]
+other = "Totes les etiquetes"
+
+[all_series]
+other = "Totes les sèries"
+
+[overview]
+other = "Resum"
+
+[reading_time]
+other = "{{ .ReadingTime }} min lectura"
+
+[series_posts]
+other = "Publicacions d'aquesta sèrie"
+
+# search
+[quick_links]
+  other = "Resultats"
+[no_matches]
+  other = "No s'han trobat resultats"
+[search_field_placeholder]
+  other = "Cerca la base de coneixements"
+[blog_search_field_placeholder]
+  other = "Cerca..."
+[search_results_label]
+  other = "Resultats de la cerca"
+[short_search_query]
+  other = "La consulta és massa curta"
+[type_to_search]
+  other = "Escriu per cercar"

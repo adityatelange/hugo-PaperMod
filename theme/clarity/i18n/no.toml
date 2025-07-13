@@ -1,0 +1,72 @@
+[read_more]
+other = "Les mer"
+
+[copyright]
+other = "Opphavsrett"
+
+[all_rights]
+other = "Alle rettigheter forbeholdt"
+
+[share_on]
+other = "Del på"
+
+[featured_posts]
+other = "Utvalgte innlegg"
+
+[recent_posts]
+other = "Nye innlegg"
+
+[404_title]
+other = "Tapt"
+
+[could_not_find]
+other = "Vi kunne ikke finne det du ser etter"
+
+[go_back]
+other = "Gå Tilbake"
+
+[translations]
+other = "Oversettelser"
+
+[categories]
+other = "Kategori"
+
+[tags]
+other = "Stikkord"
+
+[series]
+other = "Serier"
+
+[all_categories]
+other = "Alle Kategorier"
+
+[all_tags]
+other = "Alle stikkord"
+
+[all_series]
+other = "Alle Serier"
+
+[overview]
+other = "Oversikt"
+
+[reading_time]
+other = "{{ .ReadingTime }} min lesing"
+
+[series_posts]
+other = "Flere innlegg i denne serien"
+
+# search
+[quick_links]
+  other = "Resultater"
+[no_matches]
+  other = "Ingen resultater funnet"
+[search_field_placeholder]
+  other = "Søk i kunnskapsbasen"
+[blog_search_field_placeholder]
+  other = "Søk..."
+[search_results_label]
+  other = "Søkeresultater"
+[short_search_query]
+  other = "Søket er for kort"
+[type_to_search]
+  other = "Skriv for å søke"

@@ -1,0 +1,239 @@
+@keyframes pulse
+  0%
+    opacity: 1
+  75%
+    opacity: 0.1
+  100%
+    opacity: 1
+
+code
+  font-size: 85%
+  font-weight: 400
+  overflow-y: hidden
+  display: block
+  font-family: 'Monaco', monospace
+  word-break: break-all
+  &.noClass
+    --inlineColor: rgb(194, 29, 0)
+    color: var(--inlineColor)
+    display: inline
+    line-break: anywhere
+.windows .highlight
+  overflow-x: hidden
+  &:hover
+    overflow-x: auto
+
+.highlight
+  display: grid
+  width: 100%
+  border-radius: 0 0.2rem 0.2rem 0
+  overflow-x: auto
+  // @media screen and (min-width: 1240px)
+  //   overflow-x: hidden
+  //   &:hover
+  //     overflow-x: auto
+  position: relative
+  &_wrap
+    background: var(--code-bg) !important
+    border-radius: 0.5rem
+    position: relative
+    padding: 0 1rem
+    margin: 1.5rem auto 1rem auto
+    & + &
+      margin-top: 2.25rem
+    &:hover > div
+      opacity: 1
+    .lang
+      position: absolute
+      // background-color: var(--bg)
+      top: 0
+      right: 0
+      text-align: right
+      width: 7.5rem
+      padding: 0.5rem 1rem
+      font-style: italic
+      text-transform: uppercase
+      font-size: 67%
+      opacity: 0.5
+      color: var(--light)
+    &:hover .lang
+      opacity: 0.1
+  & &
+    margin: 0
+  pre
+    color: var(--light) !important
+    border-radius: 4px
+    font-family: 'Monaco', monospace
+    padding-top: 1.5rem
+    padding-bottom: 2rem
+
+  table
+    display: grid
+    max-width: 100%
+    margin-bottom: 0
+    background: transparent
+  td, th
+    padding: 0
+
+  .lntd
+    width: 100%
+    border: none
+    &:first-child
+      &, pre
+        width: 2.5rem !important
+        padding-left: 0
+        padding-right: 0
+        color: rgba(255,255,255,0.5)
+        user-select: none
+
+      pre
+        width: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+
+.err
+  color: #a61717
+  background-color: #e3d2d2
+.hl
+  width: 100%
+  background-color: rgba(255,255,255,0.25)
+.ln, .lnt
+  margin-right: 0.75rem
+  padding: 0
+  transition: opacity 0.3s var(--ease)
+  &, span
+    color: hsla(0,0%,100%,0.5)
+    user-select: none
+
+.k, .kc, .kd, .kn, .kp, .kr, .kt, .nt  
+  color: #6ab825
+  font-weight: 500
+
+.kn, .kp
+  font-weight: 400
+
+.nb, .no, .nv
+  color: #24909d
+
+.nc, .nf, .nn
+  color: #447fcf
+
+.s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss
+  color: #ed9d13
+
+.m, .mb, .mf, .mh, .mi, .il, .mo
+  color: #3677a9
+
+.ow
+  color: #6ab825
+  font-weight: 500
+
+.c, .ch, .cm, .c1
+  color: #999
+  font-style: italic
+
+.cs
+  color: #e50808
+  background-color: #520000
+  font-weight: 500
+
+.cp, .cpf
+  color: #cd2828
+  font-weight: 500
+
+.gd, .gr
+  color: #d22323
+
+.ge
+  font-style: italic
+
+.gh, .gu, .nd, .na, .ne
+  color: #ffa500
+  font-weight: 500
+
+.gi
+  color: #589819
+
+.go
+  color: #ccc
+
+.gp
+  color: #aaa
+
+.gs
+  font-weight: 500
+
+.gt
+  color: #d22323
+.w
+  color: #666
+
+.hljs
+  &-string
+    color: #6ab825
+  &-attr
+    color: #ed9d13
+  .p &-attr
+    color: var(--light)
+
+.pre
+  &_wrap
+    white-space: pre-wrap
+    white-space: -moz-pre-wrap
+    white-space: -pre-wrap
+    white-space: -o-pre-wrap
+    word-wrap: break-word
+
+  &_nolines.line .ln
+    display: none
+
+// crayon-like widget styles
+.panel
+  &_box
+    display: inline-flex
+    // grid-template-columns: repeat(3, 1fr)
+    // max-width: 10rem
+    perspective: 300px
+    grid-gap: 0.5rem
+    transition: opacity 0.3s var(--easing)
+    background: var(--code-bg)
+    padding: 0.5rem 1.5rem
+    border-radius: 2rem
+    align-items: center
+    position: absolute
+    right: 0rem
+    top: -2.5rem
+    opacity: 0
+  &_icon
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    // transition: opacity 0.3s var(--easing)
+    padding: 0.1rem
+    transform-origin: 50% 50%
+    // opacity: 0.7
+    background-size: 100%
+    background-repeat: no-repeat
+    &.active
+      animation: pulse 0.1s linear
+    svg
+      fill: var(--light)
+      width: 1.5rem
+      height: 1.5rem
+  &_hide
+    // hide icon if not needed
+    display: none
+  &_from
+    position: absolute
+    color: var(--theme)
+    bottom: 0
+    font-size: 1.5rem
+    font-weight: 500
+    padding: 0.5rem 0
+    cursor: pointer
+    letter-spacing: 0.1px
+    z-index: 19
+  &_expanded &_from
+    display: none
