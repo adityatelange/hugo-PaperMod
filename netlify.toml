@@ -1,26 +1,59 @@
-# ========== Netlify Build Settings ==========
-[build]
-  publish = "public"
-  command = "hugo"
+baseURL = "https://www.catalystedge.org/"
+languageCode = "en-us"
+title = "Catalyst Edge"
+theme = "clarity"
+enableRobotsTXT = true
+canonifyURLs = true
 
-[context.production.environment]
-  HUGO_VERSION = "0.146.0"  # Stable & fast
+[pagination]
+  pagerSize = 10
 
-# Optional: Only needed if you're using Hugo modules
-# GO_VERSION = "1.20"
+[params]
+  author = "Catalyst Edge"
+  description = "Professional learning programs for mid-to-senior finance professionals and CXOs."
+  favicon = "favicon.ico"
+  logo = "/images/logo.png"
+  dateFormat = "Jan 2, 2006"
+  mainSections = ["blog"]
+  og_image = "/images/og-image.jpg"
+  twitterSite = "@catalystedge"
+  twitterCreator = "@catalystedge"
 
-# ========== Redirects (optional, good for SEO & user flow) ==========
-[[redirects]]
-  from = "https://catalystedge.netlify.app/*"
-  to = "https://www.catalystedge.org/:splat"
-  status = 301
-  force = true
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
-# ========== Headers (optional: add CSP, security, etc.) ==========
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "no-referrer-when-downgrade"
+[permalinks]
+  blog = "/blog/:slug/"
+  courses = "/courses/:slug/"
+  resources = "/resources/:slug/"
+  pages = "/:slug/"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Courses"
+    url = "/courses/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Resources"
+    url = "/resour
