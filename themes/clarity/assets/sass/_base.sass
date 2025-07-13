@@ -1,0 +1,157 @@
+*
+  box-sizing: border-box
+  -webkit-appearance: none
+  margin: 0
+  padding: 0
+
+body, html
+  scroll-behavior: smooth
+  -webkit-text-size-adjust: 100%
+  font-kerning: normal
+  -webkit-font-feature-settings: "kern" 1
+  text-rendering: optimizeLegibility
+  text-rendering: geometricPrecision
+  -webkit-text-size-adjust: 100%
+  font-size: 100%
+  scroll-padding-top: 4.5rem
+  &::-webkit-scrollbar-corner
+    background-color: transparent
+body
+  font-family: var(--font)
+  background: var(--choice-bg)
+  color: var(--text)
+  font-size: 1.1rem
+  line-height: 1.5
+  max-width: 1920px
+  margin: 0 auto
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100vh
+  font-kerning: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+a
+  text-decoration: none
+  color: inherit
+  &:focus, &:focus-within
+    outline: none !important
+
+h1,h2,h3,h4,h5
+  font-family: inherit
+  font-weight: 300
+  padding: 5px 0
+  margin: 15px 0
+  color: var(--header-text)
+  line-height: 1.35
+  &:hover .link
+    opacity: 1
+
+h1
+  font-size: 200%
+  font-weight: 400
+h2
+  font-size: 175%
+h3
+  font-size: 150%
+h4
+  font-size: 125%
+h5
+  font-size: 120%
+h6
+  font-size: 100%
+img, svg
+  max-width: 100%
+  vertical-align: middle
+img
+  height: auto
+  margin: 1rem auto
+  padding: 0
+  &:focus, &:focus-within
+    outline: none !important
+    border: none !important
+
+main
+  flex: 1
+
+ul
+  list-style: none
+  -webkit-padding-start: 0
+  -moz-padding-start: 0
+
+em
+  font-weight: 500
+
+b, strong
+  font-weight: 700
+
+hr 
+  border: none
+  padding: 1px
+  background: darken($haze, 7.5%)
+  opacity: 0.5
+  margin: 1rem 0
+  @media (prefers-color-scheme: dark)
+    background: var(--theme)
+
+aside
+  h3
+    position: relative
+    margin: 0 !important
+  ul
+    list-style: initial
+    padding-left: 1rem
+  li
+    padding: 0.25rem 0
+
+table
+  width: 100%
+  border-collapse: collapse
+  background: var(--table-haze)
+  // border-style: hidden
+  margin-bottom: 1.5rem
+  &:not(.ln-table) t
+    background: var(--table-bg)
+
+td, th
+  padding: 0.5rem 1rem
+  border: 1px solid var(--table-border)
+
+td,
+th
+  padding: 0.5rem 1rem
+  font-weight: 400
+  &:not(:first-child)
+    padding-left: 1.5rem
+
+th
+  font-weight: 700
+
+tbody
+  padding: 0
+  tr
+    &:nth-child(even)
+      background-color: var(--table-haze)
+    &:nth-child(odd)
+      background-color: var(--table-bg)
+
+blockquote
+  margin: 25px auto
+  quotes: '\201C''\201D''\2018''\2019'
+  padding: 1.5rem
+  color: #555555
+  padding: 1rem 1.5rem
+  border-left: 0.2rem solid $theme
+  position: relative
+  background: var(--haze)
+  + .highlight_wrap
+    margin-top: 2.25rem
+p
+  padding: 0.8rem 0
+  &:empty
+    padding: 0
+
+picture
+  display: block
+  width: 100%
