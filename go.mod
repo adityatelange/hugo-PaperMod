@@ -1,3 +1,3 @@
-module github.com/adityatelange/hugo-PaperMod
+hugo mod init github.com/chipzoller/hugo-clarity
 
-go 1.12
+hugo mod get
