@@ -1,0 +1,179 @@
+# enable search
+enableSearch = true
+
+# socials
+twitter = "@janedoe"
+largeTwitterCard = false                                                                          # set to true if you want to show a large twitter card image. The default is a small twitter card image
+introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
+# introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
+# description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
+# keywords = ["design", "clarity", "hugo theme"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
+
+# showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
+
+# Google analytics Id
+ga_analytics = ""
+
+# Google tag manager
+google_tag_manager_id = ""
+
+# Baidu analytics Id
+# baidu_analytics = "XXXXXXXX"
+
+# limit the number of taxonomies links shown on the sidebar of each page by default.
+numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+
+# Whether to default to storing images and other assets in the `static` directory, or use Hugo page bundles.
+# Switch to `true` if you'd like to group assets with the post itself (as a "leaf bundle").
+# This can be overridden at the page level; what is set below acts as the default if no page variable is set.
+# Details on page bundles: https://gohugo.io/content-management/page-bundles/#leaf-bundles
+usePageBundles = false
+
+# Path variables
+#
+# By default, each of these directories are children of the `static` directory.
+#
+# In some Apache server installs, these directory names could conflict and you
+# may want to change them. See:
+# https://github.com/chipzoller/hugo-clarity/issues/74
+#
+# If you change the names of these directories, be sure to copy the contents of
+# the originals to get the files included with Hugo Clarity.
+#
+# Images:
+imagesDir = "images/" # without a leading forward slash
+# Icons:
+iconsDir = "icons/" # without a leading forward slash
+# Fonts:
+fontsDir = "fonts/" # without a leading forward slash
+
+# Social media sharing image: Will be used on Twitter, Facebook, LinkedIn, etc.
+# when a given page has no other image present.
+fallBackOgImage = "images/thumbnail.png"
+
+# Logo image
+logo = "logos/logo.png"
+
+# center logo on navbar
+centerLogo = false # Set to "true" for centering or "false" for left aligned.
+
+# sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
+codeMaxLines = 7
+
+# disable showing line numbers by default. Switch to `true` if you'd rather have them on.
+codeLineNumbers = false
+
+# enable math notation. Switch to `true` to enable mathjax in your site.
+enableMathNotation = false
+
+# directory(s) where your articles are located
+mainSections = [
+  "post",
+] # see config details here https://gohugo.io/functions/where/#mainsections
+
+# Label Non inline images on an article body
+figurePositionShow = false # toggle on or off globally
+# you can toggle this behaviour on or off on per page using the same variable inside your articles frontmatter
+figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
+
+# Set the collapsed mobile navigation to either appear from the left or the right
+mobileNavigation = "left" # if you prefer right change to 'right'
+
+# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
+
+# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you prioritise it over the other (by setting it to true). enforceDarkMode will be commented out
+
+# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
+
+enforceLightMode = false
+# enforceDarkMode = false
+
+# customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
+# footerLogo = "icons/copy.svg"
+
+# Customize Sidebar Disclaimer Text
+# sidebardisclaimer = true
+# disclaimerText = "The opinions expressed on this site are my own personal opinions and do not represent my employer’s view in any way."
+
+# Text for the languages menu.
+languageMenuName = "🌐"
+
+# Title separator, default to |.
+# titleSeparator = "|"
+
+# Enable or disable comments globally. Default to true.
+# comments = false
+
+# Activate meta ld+json for blog
+blogDir = "post"
+
+# Enable or disable Utterances (https://github.com/utterance/utterances) Github Issue-Based Commenting
+# utterances = true  # Run the utterances script in the single.html layout to load https://utteranc.es comments
+# utterancesRepo = "GHUsername/Repository.Name" # Utterances is enabled when this param is set
+# utterancesLabel = "blog comments ✨💬✨" # The label needs to be manually added to your Github repository issues before configuring here
+# utterancesTheme = "github-light" # Default: github-dark
+# utterancesIssueTerm = "pathname" # Default: pathname
+
+# Enable or disable Giscus comments globally. Default to false.
+# giscus = true
+# giscusRepo = "GHUsername/Repository.Name" # Giscus is enabled when this param is set
+# giscusRepoId = "RepositoryID" # Required for Giscus to work
+# giscusCategory = "Blog"
+# giscusCategoryId = "CategoryID" # Required for Giscus to work
+# giscusMapping = "pathname" # Default: pathname
+# giscusReactionsEnabled = "1" # Default: 1 = true
+# giscusTheme = "dark_protanopia" # Default: dark_dimmed
+# giscusLang = "en" # Default: en
+
+
+# Maximum number of recent posts. (default: 8)
+# numberOfRecentPosts = 8
+
+# Maximum number of featured posts. (default: 8)
+# numberOfFeaturedPosts = 8
+
+# Pin featured posts in list.
+# pinFeatured = true
+
+# Maximum number of pinned featured posts. (default: 8)
+# numberOfPinnedPosts = 8
+
+# Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
+# dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
+# customFonts = false # toggle to true if you want to use custom fonts only.
+
+# The year when this website was created, this value is used in the copyright
+# notice of the footer.
+# since = 2016
+
+# Show related content at the end of an article or in the sidebar, based on the 'series' taxonomy.
+# Both parameters can be overridden in the post's front matter.
+# showRelatedInArticle = false
+# showRelatedInSidebar = false
+
+# website author
+[author]
+name = "Jane Doe"
+# photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
+
+[plausible_analytics]
+enable = false                # to enable plausible analytics set to true.
+websiteDomain = "example.com" # domain name of your website, most cases same as your base url
+# plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is self hosted
+# scriptName = "plausible" # default is set to plausible, only required if using a custom name for script
+
+[matomo_analytics]
+enable = false                      # To enable matomo analytics change to `true`.
+websiteDomain = "example.com"       # Set the domain name of your website, in most cases same as your base URL this is required.
+matomoDomain = "matomo.example.com" # Set to Matomo domain
+matomoSiteID = "1"                  # Default is set to 1, change this to the siteid being tracked
+
+# Umami Analytics -- https://umami.is/
+# umami_data_website_id = "GUID-8-4-4-4-12" # Umami Analytics data website id - GUID format (8-4-4-4-12)
+# umami_script_url = "https://cloud.umami.is/script.js" # Umami Analytics script URL
+
+[cdn] # a CDN shortcode to generate links for your images and files in buckets such as B2, S3, etc.  
+url = "https://some.url.scheme/"  # your base CDN url such as "https://images.site.com/" (including the trailing slash)
+imagesdir = "images/"             # Include trailing slash -- this is where you store images
+filesdir = "files/"               # Include trailing slash -- this is where you store files to be downloaded
+hotlinkdir = "images/hotlink-ok/" # Include trailing slash -- this is where you store images that are allowed to be hotlinked

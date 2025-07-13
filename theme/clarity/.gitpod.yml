@@ -1,0 +1,9 @@
+# Hugo template via https://github.com/gitpod-io/template-hugo/blob/main/.gitpod.yml
+tasks:
+  - name: Install and start hugo
+    before: brew install hugo
+    init: echo "Your version of Hugo is `hugo version`"
+    command: cd exampleSite && hugo server -D -F --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0 --themesDir ../..
+ports:
+  - port: 1313
+    onOpen: open-preview

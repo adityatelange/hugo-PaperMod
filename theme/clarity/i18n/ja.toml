@@ -1,0 +1,72 @@
+[read_more]
+other = "続きを読む"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "All Rights Reserved"
+
+[share_on]
+other = "共有する"
+
+[featured_posts]
+other = "おすすめの投稿"
+
+[recent_posts]
+other = "最近の投稿"
+
+[404_title]
+other = "存在しません"
+
+[could_not_find]
+other = "お探しのページを見つけることができませんでした"
+
+[go_back]
+other = "戻る"
+
+[translations]
+other = "翻訳"
+
+[categories]
+other = "カテゴリ"
+
+[tags]
+other = "タグ"
+
+[series]
+other = "シリーズ"
+
+[all_categories]
+other = "全てのカテゴリ"
+
+[all_tags]
+other = "全てのタグ"
+
+[all_series]
+other = "全てのシリーズ"
+
+[overview]
+other = "概要"
+
+[reading_time]
+other = "{{ .ReadingTime }} 分で読了"
+
+[series_posts]
+other = "このシリーズの投稿"
+
+# search
+[quick_links]
+  other = "結果"
+[no_matches]
+  other = "結果が存在しません"
+[search_field_placeholder]
+  other = "ナレッジベース内を検索"
+[blog_search_field_placeholder]
+  other = "検索..."
+[search_results_label]
+  other = "検索結果"
+[short_search_query]
+  other = "検索文字列が短すぎます"
+[type_to_search]
+  other = "入力して検索"

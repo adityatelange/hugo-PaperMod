@@ -1,0 +1,72 @@
+[read_more]
+other = "閱讀更多"
+
+[copyright]
+other = "版權"
+
+[all_rights]
+other = "版權所有"
+
+[share_on]
+other = "分享到"
+
+[featured_posts]
+other = "精選文章"
+
+[recent_posts]
+other = "最新文章"
+
+[404_title]
+other = "頁面不見了"
+
+[could_not_find]
+other = "頁面不存在或已被删除"
+
+[go_back]
+other = "返回"
+
+[translations]
+other = "翻譯"
+
+[categories]
+other = "分類"
+
+[tags]
+other = "標籤"
+
+[series]
+other = "專欄"
+
+[all_categories]
+other = "所有分類"
+
+[all_tags]
+other = "所有標籤"
+
+[all_series]
+other = "所有專欄"
+
+[overview]
+other = "文章目錄"
+
+[reading_time]
+other = "{{ .ReadingTime }} 分鐘閱讀"
+
+[series_posts]
+other = "相關係列文章"
+
+# search
+[quick_links]
+  other = "搜尋到的結果"
+[no_matches]
+  other = "未找到結果"
+[search_field_placeholder]
+  other = "搜尋知識庫"
+[blog_search_field_placeholder]
+  other = "搜尋內容..."
+[search_results_label]
+  other = "搜尋到的結果"
+[short_search_query]
+  other = "搜尋字元太短"
+[type_to_search]
+  other = "請輸入內容尋找"

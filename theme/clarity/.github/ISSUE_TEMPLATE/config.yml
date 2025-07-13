@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask questions and get support
+    url: https://github.com/chipzoller/hugo-clarity/discussions
+    about:
+      If you have a question, want general support that isn't about a bug in the
+      theme, or want to discuss new ideas without making a specific feature
+      request, please use GitHub Discussions. This keeps our issue queue focused
+      on actionable items. Thanks!
+  - name: Read Hugo Clarity documentation
+    url: https://github.com/chipzoller/hugo-clarity/blob/master/README.md
+    about:
+      If you're new to Hugo Clarity, check our docs for configuration details and 
+      other information.
+  - name: Theme contribution guide
+    url: https://github.com/chipzoller/hugo-clarity/blob/master/CONTRIBUTING.md
+    about: Help us make this theme great!

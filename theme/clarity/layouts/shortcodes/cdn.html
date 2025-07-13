@@ -1,0 +1,37 @@
+<!-- This shortcode is used to load images and files from the CDN. -->
+<!-- Get the remote resource -->
+{{ $cdn := site.Params.cdn }}
+{{ if isset $cdn "url" }}
+  {{ $cdnUrl := $cdn.url }}
+  {{ $imagesdir := $cdn.imagesdir }}
+  {{ $filesdir := $cdn.filesdir }}
+  {{ $hotlinkdir := $cdn.hotlinkdir }}
+  {{ $linktype := .Get 0 }}
+  {{ $filename := .Get 1 }}
+  {{ $alt := .Get 2 }}
+
+  {{ if eq $linktype "img" }}
+    <!-- Load the image from the CDN -->
+    <figure>
+      <picture>
+      <img loading="lazy" class="image_figure image_internal image_unprocessed" src="{{ $cdnUrl }}{{ $imagesdir }}{{ $filename }}" alt="{{ $alt }}">
+      <figcaption class="img_alt">{{ $alt }}</figcaption>
+      </picture>
+    </figure>
+  {{ else if eq $linktype "file" }}
+    <!-- Load the file from the CDN -->
+    <a href="{{ $cdnUrl }}{{ $filesdir }}{{ $filename }}">{{ $alt }}</a>
+  {{ else if eq $linktype "hlimg" }}
+    <!-- Load a hotlinkable image from the CDN -->
+    <figure>
+      <picture>
+      <img loading="lazy" class="image_figure image_internal image_unprocessed" src="{{ $cdnUrl }}{{ $hotlinkdir }}{{ $filename }}" alt="{{ $alt }}">
+      <figcaption class="img_alt">{{ $alt }}</figcaption>
+      </picture>
+    </figure>
+  {{ end }}
+  
+{{ else }}
+  <!-- If the CDN is not configured, display a message -->
+  <p><b>Please Configure the CDN Parameters!</b></p>
+{{ end }}
