@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <h1>Empowering Finance Leaders Through Strategic Learning</h1>
+    <p>Micro-courses, CXO-level insights, and tools that work in the real world.</p>
+    <a href="https://learn.catalystedge.org" class="btn">Explore Learning Portal</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Catalyst Edge?</h2>
+  <ul>
+    <li>✅ Built by finance experts, for finance leaders</li>
+    <li>✅ Action-oriented formats</li>
+    <li>✅ 100% online & mobile-friendly</li>
+  </ul>
+</section>
+
+<section class="courses">
+  <h2>Featured Courses</h2>
+  {{ range first 3 (where .Site.RegularPages "Section" "courses") }}
+    <div class="course-card">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Params.description }}</p>
+    </div>
+  {{ end }}
+  <a href="/courses" class="btn">View All Courses</a>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Learners Say</h2>
+  <blockquote>“Catalyst Edge helped me rethink strategy in a practical, zero-fluff way.”</blockquote>
+</section>
+
+<section class="about">
+  <p>We help mid-to-senior finance professionals simplify complexity, stay relevant, and lead with confidence.</p>
+  <a href="/about" class="btn">Learn More About Us</a>
+</section>
+{{ end }}
