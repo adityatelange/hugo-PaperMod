@@ -4,7 +4,7 @@
   command = "hugo"
 
 [context.production.environment]
-  HUGO_VERSION = "0.148.1"  # Stable & fast
+  HUGO_VERSION = "0.146.0"  # Stable & fast
 
 # Optional: Only needed if you're using Hugo modules
 # GO_VERSION = "1.20"
