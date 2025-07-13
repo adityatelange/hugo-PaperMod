@@ -1,7 +1,10 @@
 baseURL = "https://www.catalystedge.org/"
 languageCode = "en-us"
 title = "Catalyst Edge"
-theme = "clarity" # Update if using a different theme
+[module]
+  [[module.imports]]
+    path = "github.com/chipzoller/hugo-clarity"
+ # Update if using a different theme
 enableRobotsTXT = true
 canonifyURLs = true
 paginate = 10
