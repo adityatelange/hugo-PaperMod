@@ -7,8 +7,9 @@ title = "Catalyst Edge"
  # Update if using a different theme
 enableRobotsTXT = true
 canonifyURLs = true
-paginate = 10
-
+- paginate = 10
++ [pagination]
++  pagerSize = 10
 # Enable Google Analytics later (optional)
 # googleAnalytics = "UA-XXXXXXXXX-X"
 
