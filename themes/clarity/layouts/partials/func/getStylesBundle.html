@@ -1,0 +1,6 @@
+<!-- styles definition-->
+{{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") }}
+{{ $mainSassFile :=  "sass/main.sass" }}
+{{ $styles := resources.Get $mainSassFile | resources.ExecuteAsTemplate $mainSassFile . | css.Sass $options | resources.Fingerprint "sha512" }}
+
+{{ return $styles }}

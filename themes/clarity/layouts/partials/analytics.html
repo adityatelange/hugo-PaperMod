@@ -1,0 +1,57 @@
+{{- $config := site.Params }}
+{{- with $config.ga_analytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{- end -}}
+
+{{- with $config.baidu_analytics }}
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?{{ . }}";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+{{- end }}
+
+{{ $plausible := $config.plausible_analytics }}
+{{- if $plausible.enable }}
+<script async defer data-domain="{{ $plausible.websiteDomain }}"
+src='https://{{ default "plausible.io" $plausible.plausibleDomain }}/js/{{ default "plausible" $plausible.scritpName }}.js'>
+</script>
+{{- end }}
+
+{{- $matomo := $config.matomo_analytics }}
+{{- if ($matomo.enable) }}
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.{{ $matomo.websiteDomain }}"]);
+  _paq.push(["setDomains", ["*.{{ $matomo.websiteDomain }}"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//{{ $matomo.matomoDomain }}/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '{{ default 1 $matomo.matomoSiteID }}']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//{{ $matomo.matomoDomain }}/matomo.php?idsite={{ default 1 $matomo.matomoSiteID }}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+{{- end }}
+
+{{- with $config.umami_data_website_id }}
+<script defer src="{{ $config.umami_script_url }}" data-website-id="{{ . }}"></script>
+{{- end }}

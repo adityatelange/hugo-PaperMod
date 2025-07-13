@@ -1,0 +1,18 @@
+{{ if .Site.Params.giscus }}
+<script src="https://giscus.app/client.js"
+        data-repo="{{.Site.Params.giscusRepo}}"
+        data-repo-id="{{.Site.Params.giscusRepoId}}"
+        data-category="{{.Site.Params.giscusCategory}}"
+        data-category-id="{{.Site.Params.giscusCategoryId}}"
+        data-mapping="{{.Site.Params.giscusMapping | default "pathname"}}"
+        data-strict="0"
+        data-reactions-enabled="{{.Site.Params.giscusReactionsEnabled | default "1"}}"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="{{.Site.Params.giscusTheme | default "dark-dimmed"}}"
+        data-lang="{{.Site.Params.giscusLang | default "en"}}"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script> 
+ {{ end }}
