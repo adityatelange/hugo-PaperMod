@@ -1,0 +1,72 @@
+[read_more]
+other = "Lire la suite…"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "Tous droits réservés"
+
+[share_on]
+other = "Partager sur"
+
+[featured_posts]
+other = "Billets en vedette"
+
+[recent_posts]
+other = "Billets récents"
+
+[404_title]
+other = "Perdu"
+
+[could_not_find]
+other = "Nous ne trouvons pas la page que vous recherchez"
+
+[go_back]
+other = "Revenir en arrière…"
+
+[translations]
+other = "Traductions"
+
+[categories]
+other = "Catégories"
+
+[tags]
+other = "Tags"
+
+[series]
+other = "Séries"
+
+[all_categories]
+other = "Toutes les catégories"
+
+[all_tags]
+other = "Tous les tags"
+
+[all_series]
+other = "Toutes les séries"
+
+[overview]
+other = "Sommaire"
+
+[reading_time]
+other = "{{ .ReadingTime }} mins de lecture"
+
+[series_posts]
+other = "Articles dans cette série"
+
+# search
+[quick_links]
+  other = "Résultats"
+[no_matches]
+  other = "Aucun résultat trouvé"
+[search_field_placeholder]
+  other = "Rechercher dans la base de connaissances"
+[blog_search_field_placeholder]
+  other = "Rechercher..."
+[search_results_label]
+  other = "Résultats de la recherche"
+[short_search_query]
+  other = "La requête est trop courte"
+[type_to_search]
+  other = "Tapez pour rechercher"

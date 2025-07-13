@@ -1,0 +1,17 @@
+[goldmark]
+  [goldmark.renderer]
+    hardWraps = false
+    unsafe = true # change to false to disable inclusion of rawHTML and math functions
+    xhtml = false
+  [goldmark.extensions]
+    typographer = false
+  [highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = "--"
+    lineNoStart = 1
+    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+    noClasses = false
+    # style = "monokai"
+    tabWidth = 2

@@ -1,0 +1,72 @@
+[read_more]
+other = "Okumaya Devam Et"
+
+[copyright]
+other = "Telif Hakkı"
+
+[all_rights]
+other = "Tüm Hakları Saklıdır"
+
+[share_on]
+other = "Paylaş:"
+
+[featured_posts]
+other = "Seçkin Makaleler"
+
+[recent_posts]
+other = "En Son Makaleler"
+
+[404_title]
+other = "Kayıp"
+
+[could_not_find]
+other = "Aradığınız sayfayı bulamadık"
+
+[go_back]
+other = "Geri Git"
+
+[translations]
+other = "Çeviriler"
+
+[categories]
+other = "Kategoriler"
+
+[tags]
+other = "Etiketler"
+
+[series]
+other = "Seriler"
+
+[all_categories]
+other = "Tüm Kategoriler"
+
+[all_tags]
+other = "Tüm Etiketler"
+
+[all_series]
+other = "Tüm Seriler"
+
+[overview]
+other = "Overview"
+
+[reading_time]
+other = "{{ .ReadingTime }} min read"
+
+[series_posts]
+other = "Posts in this series"
+
+# search
+[quick_links]
+  other = "Sonuçlar"
+[no_matches]
+  other = "Sonuç bulunamadı"
+[search_field_placeholder]
+  other = "Bilgi tabanında ara"
+[blog_search_field_placeholder]
+  other = "Ara..."
+[search_results_label]
+  other = "Arama Sonuçları"
+[short_search_query]
+  other = "Sorgu çok kısa"
+[type_to_search]
+  other = "Aramak için yazın"

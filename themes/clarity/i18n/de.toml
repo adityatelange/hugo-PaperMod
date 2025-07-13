@@ -1,0 +1,72 @@
+[read_more]
+other = "Weiterlesen"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "All Rights Reserved"
+
+[share_on]
+other = "Teilen"
+
+[featured_posts]
+other = "Empfohlene Artikel"
+
+[recent_posts]
+other = "Neueste Artikel"
+
+[404_title]
+other = "Verirrt"
+
+[could_not_find]
+other = "Die gesuchte Seite konnte nicht gefunden werden"
+
+[go_back]
+other = "Zurück"
+
+[translations]
+other = "Übersetzungen"
+
+[categories]
+other = "Kategorien"
+
+[tags]
+other = "Tags"
+
+[series]
+other = "Serien"
+
+[all_categories]
+other = "Alle Kategorien"
+
+[all_tags]
+other = "Alle Tags"
+
+[all_series]
+other = "Alle Serien"
+
+[overview]
+other = "Inhalt"
+
+[reading_time]
+other = "Lesezeit {{ .ReadingTime }} Min."
+
+[series_posts]
+other = "Beiträge in dieser Serie"
+
+# search
+[quick_links]
+  other = "Ergebnisse"
+[no_matches]
+  other = "Keine Ergebnisse gefunden"
+[search_field_placeholder]
+  other = "Wissensdatenbank durchsuchen"
+[blog_search_field_placeholder]
+  other = "Suchen..."
+[search_results_label]
+  other = "Suchergebnisse"
+[short_search_query]
+  other = "Abfrage ist zu kurz"
+[type_to_search]
+  other = "Zum Suchen eingeben"
