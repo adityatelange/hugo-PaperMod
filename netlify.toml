@@ -8,6 +8,13 @@ canonifyURLs = true
 [pagination]
   pagerSize = 10
 
+[build]
+  publish = "public"
+  command = "hugo"
+
+[context.production.environment]
+  HUGO_VERSION = "0.146.1"
+
 [params]
   author = "Catalyst Edge"
   description = "Professional learning programs for mid-to-senior finance professionals and CXOs."
