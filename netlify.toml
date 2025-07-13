@@ -1,6 +1,26 @@
+# ========== Netlify Build Settings ==========
 [build]
   publish = "public"
   command = "hugo"
 
-[build.environment]
-  HUGO_VERSION = "0.148.1"  # or latest stable version
+[context.production.environment]
+  HUGO_VERSION = "0.148.1"  # Stable & fast
+
+# Optional: Only needed if you're using Hugo modules
+# GO_VERSION = "1.20"
+
+# ========== Redirects (optional, good for SEO & user flow) ==========
+[[redirects]]
+  from = "https://catalystedge.netlify.app/*"
+  to = "https://www.catalystedge.org/:splat"
+  status = 301
+  force = true
+
+# ========== Headers (optional: add CSP, security, etc.) ==========
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
