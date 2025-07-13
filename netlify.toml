@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+  command = "hugo"
+
+[build.environment]
+  HUGO_VERSION = "0.148.1"  # or latest stable version
