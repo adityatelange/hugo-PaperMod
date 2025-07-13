@@ -1,7 +1,7 @@
 baseURL = "https://www.catalystedge.org/"
 languageCode = "en-us"
 title = "Catalyst Edge"
-theme = "Hugo"
+theme = "clarity"
 enableRobotsTXT = true
 canonifyURLs = true
 
