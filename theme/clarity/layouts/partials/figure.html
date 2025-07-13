@@ -1,0 +1,75 @@
+{{/*
+  If Hugo has been able to access the image, it's loaded at .image, and we have
+  access to additional attributes.
+
+  If Hugo hasn't been able to access the image, it's loaded at .file, with only
+  its path available.
+
+  We set the Hugo variables to strings to allow for logical operations and
+  replacements.
+*/}}
+
+{{- $file := .file -}}
+{{- $image := .image -}}
+{{- $diskPath := .diskPath -}}
+{{- $webPath := .webPath -}}
+{{- $alt := .alt -}}
+{{- $cap := .cap -}}
+{{- $classes := .classes -}}
+{{- $bundle := .bundle -}}
+
+{{- $fileWeb := .file -}}
+{{- if eq $bundle true -}}
+  {{ $fileWeb = path.Join $webPath $file }}
+  {{ if in $classes "image_svg" }}
+    {{ if strings.HasPrefix $file "http" }}
+      {{ $fileWeb = $file }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<figure>
+  <picture>
+
+    {{/* Generate alternate image format tags. */}}
+    {{- with $file -}}
+      {{ $name := replace $file (path.Ext $file) "" }}
+      {{ $ext := slice "avif" "webp" "jxl" }}
+      {{- range $ext -}}
+        {{ $item := printf "%s" . | printf "%s%s" "." | printf "%s%s" $name | printf "%s" }}
+        {{ $itemDisk := path.Join $diskPath $item }}
+        {{ $itemWeb := path.Join $webPath $item }}
+        {{- if fileExists $itemDisk -}}
+          <source srcset="{{ $itemWeb }}" type="image/{{ . }}">
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{/* Render image and attributes. */}}
+    <img
+      loading="lazy"
+      decoding="async"
+      alt="{{ htmlEscape $alt }}"
+      {{ with $image }}
+        class="{{ $classes }} image_processed"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+        src="{{ .RelPermalink | absURL }}"
+      {{ else }}
+        class="{{ $classes }} image_unprocessed"
+        src="{{ $fileWeb | absURL }}"
+      {{ end }}
+      {{ with $cap }}
+        title="{{ safeHTML $cap }}"
+      {{ end }}
+    />
+
+    {{/* Provide caption based on image title, if it is set. */}}
+    {{- with $cap -}}
+      {{- if not (eq $cap " ") -}}
+        <figcaption class="{{ replace $classes "image" "caption" }}">{{ $cap | safeHTML }}</figcaption>
+      {{- end -}}
+    {{- end -}}
+
+  </picture>
+</figure>

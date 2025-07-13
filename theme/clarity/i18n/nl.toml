@@ -1,0 +1,72 @@
+[read_more]
+other = "Lees meer"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "Alle rechten gereserveerd"
+
+[share_on]
+other = "Delen op"
+
+[featured_posts]
+other = "Uitgelichte berichten"
+
+[recent_posts]
+other = "Recente berichten"
+
+[404_title]
+other = "Verdwaald!"
+
+[could_not_find]
+other = "We hebben de pagina die je zocht niet gevonden"
+
+[go_back]
+other = "Ga terug"
+
+[translations]
+other = "Vertalingen"
+
+[categories]
+other = "categoriën"
+
+[tags]
+other = "Tags"
+
+[series]
+other = "Series"
+
+[all_categories]
+other = "Alle categoriën"
+
+[all_tags]
+other = "Alle tags"
+
+[all_series]
+other = "Alle series"
+
+[overview]
+other = "Overzicht"
+
+[reading_time]
+other = "{{ .ReadingTime }} min leestijd"
+
+[series_posts]
+other = "Berichten in deze serie"
+
+# search
+[quick_links]
+  other = "Resultaten"
+[no_matches]
+  other = "Geen resultaten gevonden"
+[search_field_placeholder]
+  other = "Doorzoek de knowledge base"
+[blog_search_field_placeholder]
+  other = "Zoeken..."
+[search_results_label]
+  other = "Zoekresultaten"
+[short_search_query]
+  other = "Zoekopdracht is te kort"
+[type_to_search]
+  other = "Type om te zoeken"

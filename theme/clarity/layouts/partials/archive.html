@@ -1,0 +1,24 @@
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+  {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ end }}
+
+{{ if eq site.Params.pinFeatured true }}
+  {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
+  {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
+  {{ $normalPosts := $pages | symdiff $featuredPosts }}
+  {{ $pages = $featuredPosts | append $normalPosts }}
+{{ end }}
+<div class="grid-inverse wrap content">
+  <div>
+    <ul class="posts" id="posts">
+      {{- range (.Paginate $pages).Pages }}
+        {{ partial "excerpt" . }}
+      {{- end }}
+      <li>
+        {{- template "_internal/pagination.html" . }}
+      </li>
+    </ul>
+  </div>
+  {{- partial "sidebar" . }}
+</div>

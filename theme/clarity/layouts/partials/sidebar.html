@@ -1,0 +1,123 @@
+{{ $s := site.Params }}
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    <br>
+    {{ partial "search/widget" . }}
+    {{- $introDescription := $s.introDescription }}
+    {{- with .Params.introDescription }}
+      {{- $introDescription = . }}
+    {{- end }}
+    {{- if $introDescription }}
+      {{- $author := $s.Author  }}
+      {{- $showAuthorPhoto := false }}
+      {{- $fullAuthor := reflect.IsMap $author }}
+      {{- if $fullAuthor }}
+        {{-  if $author.photo }}
+          {{- $showAuthorPhoto = true }}
+        {{- end }}
+      {{- end }}
+      {{- if $showAuthorPhoto }}
+        <div class="author_header">
+          <img src="{{ absURL $author.photo }}" alt="{{ $author.name }} photo">
+          <h2>{{  $author.name }}</h2>
+        </div>
+      {{- else }}
+        <h2>{{  if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
+      {{- end }}
+      <div class="author_bio">
+        {{ markdownify $introDescription }}
+      </div>
+      {{- if ( ne $s.introURL false ) }}
+      {{- $r := T "read_more" }}
+      <a href='{{ absLangURL (default "about/" $s.introURL) }}' class="button mt-1" role="button" title='{{ $r }}'>{{ $r }}</a>
+      {{- end }}
+    {{- end }}
+
+    {{ if .Site.Params.sidebardisclaimer }}
+      <div class="sidebardisclaimer">
+        <h2 class="mt-4">Disclaimer</h2>
+        {{ .Site.Params.disclaimerText }}
+      </div>
+    {{ end }}
+
+    {{- $showRelatedInSidebar := $s.showRelatedInSidebar }}
+    {{- if eq .Params.showRelatedInSidebar true }}
+      {{- $showRelatedInSidebar = true }}
+    {{- else if eq .Params.showRelatedInSidebar false }}
+      {{- $showRelatedInSidebar = false }}
+    {{- end }}
+    {{- if (and ($showRelatedInSidebar) (isset .Params "series")) }}
+      {{$related := where .Site.RegularPages ".Params.series" "eq" .Params.series }}
+      <h2 class="mt-4">{{ T "series_posts" }}</h2>
+      <ul>
+        {{ range sort $related "Date" }}
+        <li>
+          <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    {{- end }}
+
+    {{- $posts := where .Site.RegularPages "Type" "in" $s.mainSections }}
+    {{- $featured := default 8 $s.numberOfFeaturedPosts }}
+    {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
+    {{- with $featuredPosts }}
+    <h2 class="mt-4">{{ T "featured_posts" }}</h2>
+    <ul>
+      {{- range . }}
+      <li>
+        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    <h2 class="mt-4">{{ T "recent_posts" }}</h2>
+    <ul class="flex-column">
+      {{- $recent := default 8 $s.numberOfRecentPosts }}
+      {{- range first $recent ($posts | symdiff $featuredPosts) }}
+      <li>
+        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
+    {{- range $key, $value := .Site.Taxonomies }}
+    {{- if gt $value 0 }}
+    <div>
+      <h2 class="mt-4 taxonomy" id="{{ $key }}-section">{{ T $key }}</h2>
+      <nav class="tags_nav">
+        {{- $onPageTags := $.Page.Params.tags }}
+        {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
+        {{- range $slicedTags }}
+        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="post_tag button button_translucent" title="{{ .Name }}">
+          {{ upper .Name }}
+          <span class="button_tally">{{ .Count }}</span>
+        </a>
+        {{ end }}
+        {{ if gt (len $value.ByCount) $tagsLimit }}
+        <br>
+        <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $key)) }}</div>
+        {{- $tagsInfo := newScratch }}
+        <div class="post_tags">
+          <div class="tags_list">
+            {{- range $value.Alphabetical }}
+            {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
+            <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
+              {{- upper .Name -}}
+              <span class="button_tally">{{ .Count }}</span>
+            </a>
+            {{ end }}
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+        {{- end }}
+      </nav>
+    </div>
+    {{- end }}
+    {{- end }}
+  </section>
+</aside>

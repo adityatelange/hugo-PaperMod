@@ -1,0 +1,50 @@
+{{- $params := site.Params }}
+{{- $separator := default "|" $params.titleSeparator }}
+{{- $title := "" }}
+{{- if and .Title (ne (trim (lower .Site.Title) "") (trim (lower .Title) "")) }}
+  {{- if eq .Kind "taxonomy" }}
+    {{- $title = default .Title ( T (lower .Title) ) }}
+  {{- else }}
+    {{- $title = .Title }}
+  {{- end }}
+{{- end }}
+<title>{{ with $title }}{{ . }} {{ $separator }} {{ end }}{{ .Site.Title }}</title>
+<meta charset="utf-8">
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex" />
+{{ end }}
+{{- with $params.ga_verify }}
+  <meta name="google-site-verification" content="{{ . }}">
+{{- end }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{{- if (ne hugo.Environment "development") }}
+  {{- partialCached "analytics" . }}
+{{- end }}
+{{- partial "opengraph" . }}
+{{- partialCached "favicon" . }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+<!-- preload assets declaration -->
+<!-- preload main css file -->
+{{ $styles := partialCached "func/getStylesBundle" . }}
+<link rel="preload" href="{{ $styles.Permalink }}" integrity = "{{ $styles.Data.Integrity }}" as="style" crossorigin="anonymous">
+
+<!-- preload main javascript file -->
+{{ $bundle := partialCached "func/getJavascriptBundle" . }}
+<link rel="preload" href="{{ $bundle.Permalink }}" as="script" integrity=
+"{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
+
+<!-- link main css file -->
+<link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+<!-- load all custom css files -->
+{{- with $params.customCSS }}
+  {{- range . -}}
+  <link rel="stylesheet" href="{{ relURL . }}">
+  {{- end }}
+{{- end }}
+
+{{- partial "scripts/google/tag-manager" (dict "noscript" false) }}

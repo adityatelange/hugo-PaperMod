@@ -1,0 +1,124 @@
+$light: #fff
+$haze: #fafafa
+$xhaze: darken($haze, 11%)
+$bg: #002538
+$theme: #0077b8
+$mobile-menu-breakpoint: 769px
+$single-column-breakpoint: 42rem
+
+@mixin  content()
+  --maxWidth: 1440px
+  max-width: var(--maxWidth)
+  margin-left: auto
+  margin-right: auto
+
+@mixin viewport($width: 1024px, $margin: 25px)
+  max-width: $width
+  margin: $margin auto
+  @content
+
+@mixin shadow($opacity: 0.17)
+  box-shadow: 0 0 3rem rgba(0,0,0,$opacity)
+  &:hover
+    box-shadow: 0 0 5rem rgba(0,0,0, (1.5 * $opacity))
+
+html
+  --color-mode: 'lit'
+  --light: #fff
+  --dark: #000
+  --bg: #002538
+  --haze: #f2f2f2
+  --gray: #020202
+  --accent: var(--gray)
+  --text: #575757
+  --text-hover: var(--gray)
+  --header-text: var(--dark)
+  --font: Metropolis, sans-serif
+  --theme: #0077b8
+  --ease: cubic-bezier(.19,1,.22,1)
+  --code-bg: var(--bg)
+  --table-bg: var(--light)
+  --table-haze: var(--haze)
+  --table-border: #dedede
+  --footer-bg: var(--haze)
+  --shadow: rgba(0,0,0,0.12)
+  --translucent: rgba(0,0,0,0.05)
+  --translucent-light: rgba(255,255,255,0.05)
+  --post-bg: var(--light)
+  --choice-bg: var(--haze)
+  --ease: cubic-bezier(0.39, 0.575, 0.565, 1)
+  --easing: cubic-bezier(.19,1,.22,1)
+  --notice-code-bg: #0D3042
+  --notice-info-border-color: #6AB0DE
+  --notice-info-background: #E7F2FA
+  --notice-note-border-color: #F0B37E
+  --notice-note-background: #FFF2DB
+  --notice-tip-border-color: rgba(92, 184, 92, 0.8)
+  --notice-tip-background: #E6F9E6
+  --notice-warning-border-color: rgba(217, 83, 79, 0.8)
+  --notice-warning-background: #FAE2E2
+
+  &.page
+    --choice-bg: var(--light)
+  @mixin darkmode
+    --light: hsla(0,0%,100%,0.87)
+    --color-mode: 'dim'
+    --text: var(--light)
+    --text-hover: var(--haze)
+    --accent: var(--bubble)
+    --choice-bg: var(--bg)
+    --code-bg: var(--translucent-light)
+    --header-text: var(--light)
+    --table-bg: var(--code-bg)
+    --table-haze: rgba(255,255,255,0.1)
+    --table-border: var(--code-bg)
+    --footer-bg: var(--bg)
+    --post-bg: var(--translucent-light)
+    *
+      // box-shadow: none !important
+
+  &[data-mode="dim"]
+    @include darkmode
+    blockquote
+      background: var(--translucent-light)
+      color: #dedede
+    svg.icon
+      fill: var(--light)
+    .icon
+      img
+        background: none
+      svg
+        fill: #fafafa
+    .sidebar
+      &_inner
+        &::before
+          display: none
+    .color
+      &_choice
+        &::after
+          background-image: url("#{$imagesPath}night-moon.jpg")
+          transform: translateX(1.4rem)
+
+  @media (prefers-color-scheme: dark)
+
+    &:not([data-mode="lit"])
+      @include darkmode
+      blockquote
+        background: var(--translucent-light)
+        color: #dedede
+      svg.icon
+        fill: var(--light)
+      .icon
+        img
+          background: none
+        svg
+          fill: #fafafa 
+      .sidebar
+        &_inner
+          &::before
+            display: none
+      .color
+        &_choice
+          &::after
+            background-image: url("#{$imagesPath}night-moon.jpg")
+            transform: translateX(1.4rem)
