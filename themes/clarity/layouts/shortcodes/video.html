@@ -1,8 +1,0 @@
-{{- $youtubeHost := "https://www.youtube.com/watch?v=" }}
-{{- $url := .Get 0 }}
-{{- if in $url $youtubeHost }}
-  {{- $url = strings.TrimPrefix $youtubeHost $url }}
-{{- end }}
-<div class="video">
-  <iframe src="https://www.youtube.com/embed/{{ $url }}?controls=1&rel=0" loading="lazy"></iframe>
-</div>
