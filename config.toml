@@ -1,17 +1,12 @@
 baseURL = "https://www.catalystedge.org/"
 languageCode = "en-us"
 title = "Catalyst Edge"
-[module]
-  [[module.imports]]
-    path = "github.com/chipzoller/hugo-clarity"
- # Update if using a different theme
+theme = "clarity"
 enableRobotsTXT = true
 canonifyURLs = true
-- paginate = 10
-+ [pagination]
-+  pagerSize = 10
-# Enable Google Analytics later (optional)
-# googleAnalytics = "UA-XXXXXXXXX-X"
+
+[pagination]
+  pagerSize = 10
 
 [params]
   author = "Catalyst Edge"
@@ -20,41 +15,31 @@ canonifyURLs = true
   logo = "/images/logo.png"
   dateFormat = "Jan 2, 2006"
   mainSections = ["blog"]
-
-  # Social sharing / Open Graph
   og_image = "/images/og-image.jpg"
-  twitterSite = "@catalystedge"  # Optional
-  twitterCreator = "@catalystedge"
 
-# Sitemap
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
 
-# Permalinks for clean URLs
 [permalinks]
   blog = "/blog/:slug/"
   courses = "/courses/:slug/"
   resources = "/resources/:slug/"
   pages = "/:slug/"
 
-# Enable syntax highlighting (optional for blog)
 [markup]
   [markup.highlight]
     noClasses = false
   [markup.goldmark.renderer]
     unsafe = true
 
-# Enable asset minification
 [minify]
   disableXML = true
 
-# Enable outputs for SEO
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# Menu setup (you can add dropdowns here too)
 [menu]
   [[menu.main]]
     name = "Home"
@@ -90,5 +75,3 @@ canonifyURLs = true
     name = "Learning Portal"
     url = "https://learn.catalystedge.org"
     weight = 7
-    pre = "🌐"
-
