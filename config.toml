@@ -1,0 +1,90 @@
+baseURL = "https://www.catalystedge.org/"
+languageCode = "en-us"
+title = "Catalyst Edge"
+theme = "clarity" # Update if using a different theme
+enableRobotsTXT = true
+canonifyURLs = true
+paginate = 10
+
+# Enable Google Analytics later (optional)
+# googleAnalytics = "UA-XXXXXXXXX-X"
+
+[params]
+  author = "Catalyst Edge"
+  description = "Professional learning programs for mid-to-senior finance professionals and CXOs."
+  favicon = "favicon.ico"
+  logo = "/images/logo.png"
+  dateFormat = "Jan 2, 2006"
+  mainSections = ["blog"]
+
+  # Social sharing / Open Graph
+  og_image = "/images/og-image.jpg"
+  twitterSite = "@catalystedge"  # Optional
+  twitterCreator = "@catalystedge"
+
+# Sitemap
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# Permalinks for clean URLs
+[permalinks]
+  blog = "/blog/:slug/"
+  courses = "/courses/:slug/"
+  resources = "/resources/:slug/"
+  pages = "/:slug/"
+
+# Enable syntax highlighting (optional for blog)
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+# Enable asset minification
+[minify]
+  disableXML = true
+
+# Enable outputs for SEO
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Menu setup (you can add dropdowns here too)
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Courses"
+    url = "/courses/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 6
+
+  [[menu.main]]
+    name = "Learning Portal"
+    url = "https://learn.catalystedge.org"
+    weight = 7
+    pre = "🌐"
+
