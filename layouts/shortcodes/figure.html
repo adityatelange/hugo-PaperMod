@@ -1,3 +1,5 @@
+
+
 <figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
@@ -5,7 +7,16 @@
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
-    <img loading="lazy" src="{{ .Get "src" }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
+        
+    {{- $u := urls.Parse (.Get "src") -}}
+    {{- $src := $u.String -}}
+    {{- if not $u.IsAbs -}}
+      {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+        {{- $src = .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+
+    <img loading="lazy" src="{{ $src }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
