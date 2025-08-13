@@ -16,6 +16,7 @@
     {{- if not $image -}}
         {{- $image = resources.Get (.Get "src") -}}
     {{- end -}}
+    {{- $imageSrc := $image.RelPermalink | default ( .Get "src" ) -}}
 
     {{- $linkURL := .Get "link" -}}
     {{- $linkFullImage := .Get "linkFullImage" | default "false" | eq "true" -}}
@@ -49,7 +50,7 @@
         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     />
     {{- else }}
-    <img loading="lazy" src="{{ $image.RelPermalink }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
+    <img loading="lazy" src="{{ $imageSrc }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
