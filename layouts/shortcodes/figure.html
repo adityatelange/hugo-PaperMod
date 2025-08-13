@@ -20,7 +20,7 @@
     {{- $linkURL := .Get "link" -}}
     {{- $linkFullImage := .Get "linkFullImage" | default "false" | eq "true" -}}
     {{- if and $linkFullImage (not $linkURL) $image -}}
-        {{- $linkURL = $image.Permalink -}}
+        {{- $linkURL = $image.RelPermalink -}}
     {{- end -}}
 
     {{- $responsive := .Get "responsive" | default "false" | eq "true" -}}
@@ -36,11 +36,11 @@
     <img loading="lazy" 
         srcset='{{- range $size := $sizes -}}
                     {{- if (ge $image.Width (int $size)) }}
-                        {{- printf "%s %s" (($image.Resize (printf "%sx" $size)).Permalink) (printf "%sw," $size) }}
+                        {{- printf "%s %s" (($image.Resize (printf "%sx" $size)).RelPermalink) (printf "%sw," $size) }}
                     {{- end }}
                 {{- end }}
-                {{- printf "%s %dw" ($image.Permalink) ($image.Width) }}'
-        src="{{ $image.Permalink }}"
+                {{- printf "%s %dw" ($image.RelPermalink) ($image.Width) }}'
+        src="{{ $image.RelPermalink }}"
         sizes="(min-width: 768px) 720px, 100vw"
         {{- if or (.Get "alt") (.Get "caption") }}
         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
@@ -49,7 +49,7 @@
         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     />
     {{- else }}
-    <img loading="lazy" src="{{ .Get "src" }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
+    <img loading="lazy" src="{{ $image.RelPermalink }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
