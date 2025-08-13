@@ -2,17 +2,63 @@
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
 {{- end -}}>
-    {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+
+    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+    {{- if hugo.IsExtended -}}
+        {{- $processableFormats = $processableFormats | append "webp" -}}
+    {{- end -}}
+
+    {{- $image := "" -}}
+    {{- if $.Page.Resources -}}
+        {{- $image = $.Page.Resources.Get (.Get "src") -}}
+    {{- end -}}
+    {{- if not $image -}}
+        {{- $image = resources.Get (.Get "src") -}}
+    {{- end -}}
+
+    {{- $linkURL := .Get "link" -}}
+    {{- $linkFullImage := .Get "linkFullImage" | default "false" | eq "true" -}}
+    {{- if and $linkFullImage (not $linkURL) $image -}}
+        {{- $linkURL = $image.Permalink -}}
+    {{- end -}}
+
+    {{- $responsive := .Get "responsive" | default "false" | eq "true" -}}
+
+    {{- $responsive = and $prod $image $responsive ( in $processableFormats $image.MediaType.SubType )  -}}
+
+    {{- if $linkURL -}}
+        <a href="{{ $linkURL }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
+
+    {{- if $responsive }}
+    {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
+    <img loading="lazy" 
+        srcset='{{- range $size := $sizes -}}
+                    {{- if (ge $image.Width (int $size)) }}
+                        {{- printf "%s %s" (($image.Resize (printf "%sx" $size)).Permalink) (printf "%sw," $size) }}
+                    {{- end }}
+                {{- end }}
+                {{- printf "%s %dw" ($image.Permalink) ($image.Width) }}'
+        src="{{ $image.Permalink }}"
+        sizes="(min-width: 768px) 720px, 100vw"
+        {{- if or (.Get "alt") (.Get "caption") }}
+        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+        {{- end -}}
+        {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+        {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    />
+    {{- else }}
     <img loading="lazy" src="{{ .Get "src" }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
          {{- with .Get "width" }} width="{{ . }}"{{ end -}}
          {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-    /> <!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
+    />
+    {{- end }}
+
+    {{- if $linkURL }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}
