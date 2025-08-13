@@ -1,3 +1,24 @@
+{{/*
+    Usage:
+    {{< figure 
+        class="specificclass"
+        align="center"              // this adds "center" to the class of the image
+        src="sourceImage"           //  Image location. May be in the page bundle, in the site resources, or be external to the site (eg: https://other.site/image.png)
+        link="targetOfTheImageLink" //  Makes the image into a link
+        linkFullImage="false        //  If link is NOT provided, AND this parameter is "true",
+                                    //  then makes the image into a link to the full size image
+        responsive="false"          //  If the image is found in the page bundle or in the site resources
+                                    //  AND if the environment is "production"
+                                    //  AND if the image is in a processable format
+                                    //  AND if this parameter is "true", then smaller images are created,
+                                    //              responsiveness is provided by way of srcset, the browser chooses the image size
+        title="Title of the image"
+        alt="Alternative text"
+        caption="Text to appear below the image"
+        attr="End text of the caption"
+        attrlink="targetURLForAttr" // If provided, turns the end text of the caption into a link
+    >}}
+*/}}
 <figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
@@ -9,31 +30,31 @@
         {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
+    {{- /* Find the image in the page bundle or in the site resources */ -}}
     {{- $image := "" -}}
-    {{- if $.Page.Resources -}}
-        {{- $image = $.Page.Resources.Get (.Get "src") -}}
+    {{- $imageURL := urls.Parse (.Get "src") -}}
+    {{- $imageSrc := $imageURL.String -}}
+    {{- if not $imageURL.IsAbs -}}
+        {{- $image = or (.Page.Resources.Get $imageURL.Path) (resources.Get $imageURL.Path) -}}
+        {{- $imageSrc = $image.RelPermalink -}}
     {{- end -}}
-    {{- if not $image -}}
-        {{- $image = resources.Get (.Get "src") -}}
-    {{- end -}}
-    {{- $imageSrc := $image.RelPermalink | default ( .Get "src" ) -}}
 
+    {{/* Make the image into a link, provided by the developer, or a link into itself in its original size */}}
     {{- $linkURL := .Get "link" -}}
     {{- $linkFullImage := .Get "linkFullImage" | default "false" | eq "true" -}}
     {{- if and $linkFullImage (not $linkURL) $image -}}
         {{- $linkURL = $image.RelPermalink -}}
     {{- end -}}
 
-    {{- $responsive := .Get "responsive" | default "false" | eq "true" -}}
-
-    {{- $responsive = and $prod $image $responsive ( in $processableFormats $image.MediaType.SubType )  -}}
-
     {{- if $linkURL -}}
         <a href="{{ $linkURL }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
 
+    {{- $responsive := .Get "responsive" | default "false" | eq "true" -}}
+    {{- $responsive = and $prod $image $responsive ( in $processableFormats $image.MediaType.SubType )  -}}
+
     {{- if $responsive }}
-    {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
+        {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
     <img loading="lazy" 
         srcset='{{- range $size := $sizes -}}
                     {{- if (ge $image.Width (int $size)) }}
