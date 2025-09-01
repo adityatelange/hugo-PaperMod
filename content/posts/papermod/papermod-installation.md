@@ -1,6 +1,6 @@
 ---
 title: "Install / Update PaperMod"
-summary: Read aboout Install and Update instructions and sampled configuration templates
+summary: Read about Install and Update instructions and sampled configuration templates
 date: 2021-01-20
 series: ["PaperMod"]
 weight: 1
@@ -59,7 +59,7 @@ git pull
 
 {{</ collapse >}}
 
-> {{< collapse summary="**Expand Method 2 - Git Submodule (recomended)**" >}}
+> {{< collapse summary="**Expand Method 2 - Git Submodule (recommended)**" >}}
 
 **INSTALL** : Inside the folder of your Hugo site `MyFreshWebsite`, run:
 
@@ -102,7 +102,7 @@ Direct Links:
 
 - Install [Go programming language](https://go.dev/doc/install) in your operating system.
 
-- Intialize your own hugo mod
+- Initialize your own hugo mod
 
 ```
 hugo mod init YOUR_OWN_GIT_REPOSITORY

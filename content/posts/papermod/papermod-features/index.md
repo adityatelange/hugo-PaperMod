@@ -315,7 +315,7 @@ params:
   ShowBreadCrumbs: true
 ```
 
-Can be diabled for particular page's front-matter
+Can be disabled for particular page's front-matter
 
 ```yml
 ---
