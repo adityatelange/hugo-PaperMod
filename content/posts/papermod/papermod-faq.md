@@ -1,6 +1,6 @@
 ---
 title: "FAQs / How To's Guide"
-summary: We'll try to answer frequently asked qestions by users.
+summary: We'll try to answer frequently asked questions by users.
 date: 2021-01-20
 aliases: ["/papermod-how-to-guide"]
 tags: ["PaperMod", "Docs"]
@@ -288,7 +288,7 @@ Why? Take a look at [fastsearch.js#L35](https://github.com/adityatelange/hugo-Pa
 
 We fetch the `index.json` (where the search function looks for the keywords typed) one level up of the website `search.min.js` is hosted on.
 
-We have used this insted of assigning `baseURL` so as to work with multilingual websites ex. `example.com/fr/` and websites being placed under a subdirectory ex. `example.com/blog/`.
+We have used this instead of assigning `baseURL` so as to work with multilingual websites ex. `example.com/fr/` and websites being placed under a subdirectory ex. `example.com/blog/`.
 
 To fix for _single_ language websites hosting assets from CDN, this you may [override](#override-theme-template) [fastsearch.js#L35](https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35) and placing appropriate URL as in
 
