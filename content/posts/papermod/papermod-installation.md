@@ -108,7 +108,7 @@ Direct Links:
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
-- Add PaperMod in your `config.yml` file
+- Add PaperMod in your `hugo.yml` file
 
 ```go {linenos=true}
 module:
@@ -128,7 +128,7 @@ Read more : [Hugo Docs's - HUGO MODULES](https://gohugo.io/hugo-modules/use-modu
 
 ### Finally set theme as PaperMod in your site config
 
-In `config.yml` add:
+In `hugo.yml` add:
 
 ```yml {linenos=true}
 theme: ["PaperMod"]
@@ -173,7 +173,7 @@ You can go through few videos which are available on YouTube for getting to know
 
 ---
 
-## Sample `config.yml`
+## Sample `hugo.yml`
 
 > **Example Site Structure is present here**: [exampleSite](https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/)
 
