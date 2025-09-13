@@ -5,8 +5,8 @@ date: 2021-01-20
 weight: 2
 aliases: ["/papermod-features"]
 tags: ["PaperMod", "Docs"]
-author: ["Aditya Telange"]
 params:
+  author: ["Aditya Telange"]
   social:
     fediverse_creator: "@adityatelange@mastodon.social"
 ---
