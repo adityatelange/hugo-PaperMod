@@ -6,8 +6,9 @@ weight: 2
 aliases: ["/papermod-features"]
 tags: ["PaperMod", "Docs"]
 author: ["Aditya Telange"]
-social:
-  fediverse_creator: "@adityatelange@mastodon.social"
+params:
+  social:
+    fediverse_creator: "@adityatelange@mastodon.social"
 ---
 
 ### Intro
