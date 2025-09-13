@@ -17,6 +17,9 @@
 .breadcrumbs {
     color: var(--secondary);
     font-size: 14px;
+}
+
+.breadcrumbs {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
