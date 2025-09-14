@@ -10,8 +10,7 @@ Read Wiki => [hugo-PaperMod - Installation](https://github.com/adityatelange/hug
 
 ```
 .(site root)
-├── configTaxo.yml
-├── config.yml
+├── hugo.yml
 ├── content
 │   ├── archives.fr.md
 │   ├── archives.md
