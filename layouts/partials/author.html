@@ -2,8 +2,8 @@
 {{- $author := (.Params.author | default site.Params.author) }}
 {{- $author_type := (printf "%T" $author) }}
 {{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
-{{- (delimit $author ", " ) }}
+{{- (delimit $author ", " ) | markdownify }}
 {{- else }}
-{{- $author }}
+{{- $author | markdownify }}
 {{- end }}
 {{- end -}}
