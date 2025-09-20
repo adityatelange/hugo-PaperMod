@@ -73,11 +73,15 @@
     font-size: 12px;
 }
 
-.post-content a,
-.toc a:hover {
-    box-shadow: 0 1px 0;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    position: relative;
+    display: inline-block;
 }
 
 .post-content a code {
@@ -360,11 +364,38 @@ h3:hover .anchor,
 h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
+    position: absolute;
     display: inline-flex;
     color: var(--secondary);
     margin-inline-start: 8px;
     font-weight: 500;
     user-select: none;
+    padding-left: 30px;
+    margin-left: -25px;
+}
+
+h1:hover .anchor::after,
+h2:hover .anchor::after,
+h3:hover .anchor::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 50%;
+    height: 1px;
+    background-color: var(--secondary);
+}
+
+h4:hover .anchor::after,
+h5:hover .anchor::after,
+h6:hover .anchor::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 29px;
+    width: 25%;
+    height: 1px;
+    background-color: var(--secondary);
 }
 
 .paginav {
