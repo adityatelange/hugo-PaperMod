@@ -257,7 +257,7 @@
 }
 
 .toc {
-    margin: 0 2px 40px 2px;
+    margin-bottom: var(--content-gap);
     border: 1px solid var(--border);
     background: var(--code-bg);
     border-radius: var(--radius);
@@ -298,7 +298,7 @@
 }
 
 .post-footer {
-    margin-top: 56px;
+    margin-top: var(--content-gap);
 }
 
 .post-footer>* {
