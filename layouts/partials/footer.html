@@ -19,6 +19,16 @@
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
+
+    {{- with .Site.Menus.footer }}
+        <nav class="footer-menu">
+            {{- $last := sub (len .) 1 }}
+            {{- range $i, $e := . }}
+                <a href="{{ $e.URL | relLangURL }}">{{ $e.Name }}</a>
+                {{- if lt $i $last }} · {{- end }}
+            {{- end }}
+        </nav>
+    {{- end }}
 </footer>
 {{- end }}
 
