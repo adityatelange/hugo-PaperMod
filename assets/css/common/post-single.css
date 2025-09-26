@@ -26,7 +26,7 @@
 }
 
 .i18n_list {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .post-meta .i18n_list li {
