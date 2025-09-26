@@ -38,6 +38,7 @@
 
 .post-content {
     color: var(--content);
+    margin: 30px 0;
 }
 
 .post-content h3,
