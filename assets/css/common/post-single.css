@@ -25,11 +25,13 @@
     align-items: center;
 }
 
+.i18n_list {
+    display: inline-block;
+}
+
 .post-meta .i18n_list li {
-    display: inline-flex;
     list-style: none;
     margin: auto 3px;
-    box-shadow: 0 1px 0 var(--secondary);
 }
 
 .breadcrumbs a {
@@ -75,6 +77,7 @@
 }
 
 .post-content a,
+.post-meta .i18n_list li a,
 .toc a:hover {
     box-shadow: 0 1px 0;
     box-decoration-break: clone;
