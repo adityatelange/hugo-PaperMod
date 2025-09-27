@@ -111,7 +111,9 @@
     margin-top: 5px;
 }
 
-.post-content li p {
+.post-content li ol,
+.post-content li p,
+.post-content li ul {
     margin-bottom: 0;
 }
 
