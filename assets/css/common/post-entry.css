@@ -102,6 +102,5 @@
 }
 
 .entry-cover a {
-    color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
 }
