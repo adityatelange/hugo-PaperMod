@@ -90,6 +90,41 @@
     box-shadow: 0 -1px 0 var(--primary) inset;
 }
 
+.post-content a.external-link::after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  clip-path: polygon(
+    60% 5%,
+    60% 0%,
+    100% 0%,
+    100% 5%,
+    100% 40%,
+    94.98% 40%,
+    94.98% 5%,
+    94.98% 9.59%,
+    42.41% 59.2%,
+    38.1% 54.64%,
+    90.7% 5%,
+    60% 5%,
+    50% 8%,
+    13% 8%,
+    8% 8%,
+    8% 92%,
+    92% 92%,
+    92% 50%,
+    87% 50%,
+    87% 87%,
+    13% 87%,
+    13% 13%,
+    50% 13%,
+    50% 8%
+  );
+  background-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
 .post-content del {
     text-decoration: line-through;
 }
