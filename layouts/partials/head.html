@@ -69,9 +69,9 @@
 
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink | absURL }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
 {{- else }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink | absURL }}" rel="preload stylesheet" as="style">
 {{- end }}
 
 {{- /* Search */}}
@@ -82,10 +82,10 @@
 {{- $license_js := resources.Get "js/license.js" }}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink | absURL }}" integrity="{{ $search.Data.Integrity }}"></script>
 {{- else }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink | absURL }}"></script>
 {{- end }}
 {{- end -}}
 
