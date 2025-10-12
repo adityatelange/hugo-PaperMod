@@ -1,0 +1,30 @@
+/* Setup grid for Categories */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+/* Setup grid on mobile */
+@media (max-width: 480px) {
+  .categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* CSS for Category Blocks */
+.category-entry {
+  position: relative;
+  background: var(--entry);
+  border-radius: var(--radius);
+  transition: transform 0.1s;
+  padding: 20px 30px;
+}
+
+/* Increase size slightly on hover */
+.category-entry:hover {
+  transform: scale(1.04);
+}
+.category-entry:active {
+  transform: scale(1);
+}
