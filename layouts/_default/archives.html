@@ -56,7 +56,8 @@
       {{- if eq .Kind "page" }}
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">
-          {{- .Title | markdownify }}
+          <!-- This link makes the title text clickable in text mode -->
+          <a aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title | markdownify }}</a>
           {{- if .Draft }}
           <span class="entry-hint" title="Draft">
             <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" fill="currentColor">
@@ -69,6 +70,7 @@
         <div class="archive-meta">
           {{- partial "post_meta.html" . -}}
         </div>
+        <!-- This link makes the entire entry clickable in a graphical browser -->
         <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </div>
       {{- end }}

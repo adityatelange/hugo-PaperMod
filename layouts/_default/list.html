@@ -68,7 +68,8 @@
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      {{- .Title }}
+      <!-- This link makes the title text clickable in text mode -->
+      <a aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">{{- .Title }}</a>
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
@@ -89,6 +90,7 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
+  <!-- This link makes the entire entry clickable in a graphical browser -->
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
