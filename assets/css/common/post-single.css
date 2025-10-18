@@ -415,3 +415,73 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+.comment-reply-link {
+    box-shadow: 0 1px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+.fediverse-comment {
+  background-color: var(--code-bg);
+  border-radius: var(--radius);
+  border: 1px var(--border) solid;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--content);
+}
+.fediverse-comment p {
+  margin-bottom: 0px;
+}
+.fediverse-comment .author {
+  padding-top:0;
+  display:flex;
+}
+.fediverse-comment .author a {
+  text-decoration: none;
+}
+.fediverse-comment .author .avatar img {
+  margin-right:1rem;
+  min-width:60px;
+  border-radius: 5px;
+}
+.fediverse-comment .author .details {
+  display: flex;
+  flex-direction: column;
+}
+.fediverse-comment .author .details .name {
+  font-weight: bold;
+}
+.fediverse-comment .author .details .user {
+  color: #5d686f;
+  font-size: medium;
+}
+.fediverse-comment .author .date {
+  margin-left: auto;
+  font-size: small;
+}
+.fediverse-comment .content {
+  margin: 15px 20px;
+}
+.fediverse-comment .content p:first-child {
+  margin-top:0;
+  margin-bottom:0;
+}
+.fediverse-comment .status > div {
+  display: inline-block;
+  margin-right: 15px;
+}
+.fediverse-comment .status a {
+  color: #5d686f;
+  text-decoration: none;
+}
+.fediverse-comment .status .replies.active a {
+  color: #003eaa;
+}
+.fediverse-comment .status .reblogs.active a {
+  color: #8c8dff;
+}
+.fediverse-comment .status .favourites.active a {
+  color: #ca8f04;
+}

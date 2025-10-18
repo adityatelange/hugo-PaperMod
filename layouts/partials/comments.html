@@ -1,3 +1,4 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+{{- if (.Params.comments.fediverse) }} {{- partial "comments-fediverse.html" . }} {{- end }}
 {{- /* Comments area end */ -}}
