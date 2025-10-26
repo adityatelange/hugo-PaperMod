@@ -15,9 +15,10 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    color-scheme: light;
 }
 
-.dark {
+:root[data-theme="dark"] {
     --theme: rgb(29, 30, 32);
     --entry: rgb(46, 46, 51);
     --primary: rgb(218, 218, 219);
@@ -27,12 +28,13 @@
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    color-scheme: dark;
 }
 
 .list {
     background: var(--code-bg);
 }
 
-.dark.list {
+[data-theme="dark"] .list {
     background: var(--theme);
 }

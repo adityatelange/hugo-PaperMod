@@ -268,7 +268,7 @@
     padding: 0.4em;
 }
 
-.dark .toc {
+[data-theme="dark"] .toc {
     background: var(--entry);
 }
 
