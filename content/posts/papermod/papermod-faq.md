@@ -1,12 +1,13 @@
 ---
 title: "FAQs / How To's Guide"
-summary: We'll try to answer frequently asked qestions by users.
+summary: We'll try to answer frequently asked questions by users.
 date: 2021-01-20
-aliases: ["/papermod-how-to-guide"]
+aliases: 
+- /papermod-how-to-guide"
+- /posts/papermod/papermod-how-to
 tags: ["PaperMod", "Docs"]
 author: ["PaperMod Contributors"]
 draft: true
-aliases: [/posts/papermod/papermod-how-to]
 weight: 3
 ---
 
@@ -58,7 +59,7 @@ Why was the `asset` not loading ? : [How_browsers_handle_Subresource_Integrity](
 
 **Solution:**
 
-Set the following in `config.yml`
+Set the following in `hugo.yml`
 
 ```yml {linenos=true}
 params:
@@ -78,11 +79,11 @@ Linked Issues:
 
 - For adding custom css to be bundled inside one minimized css
 
-Create folder in yout project directory as
+Create folder in your project directory as
 
 ```
 .(site root)
-├── config.yml
+├── hugo.yml
 ├── content/
 ├── theme/hugo-PaperMod/
 └── assets/
@@ -108,7 +109,7 @@ Custom css/js can be added by way mentioned below.
 
 ```
 .(site root)
-├── config.yml
+├── hugo.yml
 ├── content/
 ├── theme/hugo-PaperMod/
 └── layouts
@@ -131,7 +132,7 @@ and contents of `extend_footer.html` will be added to bottom of page.
 
 You can add menu entries which will appear in the header of every page.
 
-To do so, add a `menu` section to your site's `config.yml`:
+To do so, add a `menu` section to your site's `hugo.yml`:
 
 ```yml {linenos=true}
 menu:
@@ -243,7 +244,7 @@ use `align=center` to center image with captions
 
 ## Using Hugo's Syntax highlighter "chroma"
 
-1. Disable Highlight.js in site `config.yml`
+1. Disable Highlight.js in site `hugo.yml`
 
    ```yml {linenos=true}
    params:
@@ -251,7 +252,7 @@ use `align=center` to center image with captions
        disableHLJS: true
    ```
 
-2. Set hugo's markdown styling in site `config.yml`
+2. Set hugo's markdown styling in site `hugo.yml`
 
    ```yml {linenos=true}
    markup:
@@ -288,7 +289,7 @@ Why? Take a look at [fastsearch.js#L35](https://github.com/adityatelange/hugo-Pa
 
 We fetch the `index.json` (where the search function looks for the keywords typed) one level up of the website `search.min.js` is hosted on.
 
-We have used this insted of assigning `baseURL` so as to work with multilingual websites ex. `example.com/fr/` and websites being placed under a subdirectory ex. `example.com/blog/`.
+We have used this instead of assigning `baseURL` so as to work with multilingual websites ex. `example.com/fr/` and websites being placed under a subdirectory ex. `example.com/blog/`.
 
 To fix for _single_ language websites hosting assets from CDN, this you may [override](#override-theme-template) [fastsearch.js#L35](https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35) and placing appropriate URL as in
 
