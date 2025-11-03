@@ -31,3 +31,9 @@
 
 - id: code_copied
   translation: "已复制！"
+  
+- id: Series
+  translation: "合集"
+
+- id: Tags
+  translation: "标签"
