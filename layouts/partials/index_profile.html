@@ -13,7 +13,7 @@
             {{- end -}}
             {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
             {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                {{- if and .imageWidth .imageHeight }}
                     {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
                 {{- else if .imageHeight }}
                     {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
