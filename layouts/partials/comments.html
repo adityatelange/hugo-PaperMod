@@ -1,3 +1,6 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+{{- if site.Config.Services.Disqus.Shortname }}
+{{ template "_internal/disqus.html" . }}
+{{- end}}
 {{- /* Comments area end */ -}}
