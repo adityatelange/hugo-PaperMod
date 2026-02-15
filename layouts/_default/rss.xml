@@ -38,6 +38,7 @@
 {{- else }}
 {{- $pages = $pctx.Pages }}
 {{- end }}
+{{- $pages = where $pages "Params.rss.exclude" "!=" true -}}
 {{- $limit := site.Config.Services.RSS.Limit }}
 {{- if ge $limit 1 }}
 {{- $pages = $pages | first $limit }}
