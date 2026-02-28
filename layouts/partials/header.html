@@ -83,28 +83,41 @@
         {{- $currentPage := . }}
         <ul id="menu">
             {{- range site.Menus.main }}
-            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-            {{- $page_url:= $currentPage.Permalink | absLangURL }}
-            {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
-            <li>
-                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
-                {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
-                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
-                        {{- .Pre }}
-                        {{- .Name -}}
-                        {{ .Post -}}
-                    </span>
-                    {{- if (findRE "://" .URL) }}&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                    {{- end }}
-                </a>
-            </li>
+            {{- $is_external := gt (len (findRE `^(https?:)?//` .URL)) 0 }}
+            {{- $base_path := strings.TrimPrefix "/" ((urls.Parse site.BaseURL).Path) }}
+            {{- $menu_path := strings.TrimPrefix "/" .URL }}
+            {{- $menu_path = strings.TrimPrefix $base_path $menu_path }}
+            {{- $menu_path = cond (strings.HasSuffix $menu_path "/") $menu_path (printf "%s/" $menu_path) }}
+            {{- $href := cond $is_external .URL (printf "%s%s" site.Home.RelPermalink $menu_path) }}
+
+            {{- $menu_item_url := "" }}
+            {{- if not $is_external }}
+            {{- $menu_item_url = $href }}
             {{- end }}
+            {{- $page_url := $currentPage.RelPermalink }}
+
+            {{- $is_search := false }}
+            {{- with site.GetPage .KeyName }}
+            {{- $is_search = eq .Layout "search" }}
+            {{- end }}
+
+            <li>
+            <a href="{{ $href }}" title="{{ .Title | default .Name }}{{ cond $is_search " (Alt + /)" "" }}"
+                {{ if $is_search }} accesskey="/"{{ end }}>
+                <span{{ if and (not $is_external) (eq (strings.TrimSuffix "/" $menu_item_url) (strings.TrimSuffix "/" $page_url)) }} class="active"{{ end }}>
+                {{- .Pre }}{{ .Name }}{{ .Post -}}
+                </span>
+                {{- if $is_external }}&nbsp;
+                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14L21 3"></path>
+                </svg>
+                {{- end }}
+            </a>
+            </li>
+        {{- end }}
         </ul>
     </nav>
 </header>
