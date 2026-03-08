@@ -4,7 +4,7 @@ title: "Code Syntax Guide"
 date: "2019-03-10"
 description: "Sample article showcasing basic code syntax and formatting for HTML elements."
 summary: "Sample article showcasing basic code syntax and formatting for HTML elements."
-tags: ["markdown", "syntax", "code", "gist"]
+tags: ["markdown", "syntax", "code",]
 categories: ["themes", "syntax"]
 series: ["Themes Guide"]
 ShowToc: true
@@ -149,7 +149,3 @@ This is pre text
 </body>
 </html>
 {{< /highlight >}}
-
-### Github Gist
-
-{{< gist adityatelange 376cd56ee2c94aaa2e8b93200f2ba8b5 >}}
