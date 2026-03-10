@@ -53,13 +53,13 @@ social:
 | `analytics.bing.SiteVerificationTag`   | string        | "XYZabc"                  | Site Verification Tag for Bing                                                            |
 | `analytics.yandex.SiteVerificationTag` | string        | "XYZabc"                  | Site Verification Tag for Yandex                                                          |
 | `schema`                               | -             | -                         | [Details](#schema)                                                                        |
-| `fuseOpts`                             | -             | -                         | [Details](#fuseOpts)                                                                      |
-| `socialIcons`                          | -             | -                         | [Details](#socialIcons)                                                                   |
+| `fuseOpts`                             | -             | -                         | [Details](#fuseopts)                                                                      |
+| `socialIcons`                          | -             | -                         | [Details](#socialicons)                                                                   |
 | `label`                                | -             | -                         | [Details](#label)                                                                         |
 | `assets`                               | -             | -                         | [Details](#assets)                                                                        |
 | `cover`                                | -             | -                         | [Details](#cover)                                                                         |
 | `profileMode`                          | -             | -                         | [Details](#profilemode)                                                                   |
-| `editPost`                             | -             | -                         | [Details](#editPost)                                                                      |
+| `editPost`                             | -             | -                         | [Details](#editpost)                                                                      |
 
 ### Site Variables
 
@@ -86,7 +86,7 @@ social:
 | `profileMode.imageWidth ` | string  | "150"                                          | Width of image                                       |
 | `profileMode.imageHeight` | string  | "150"                                          | Height of image                                      |
 | `profileMode.imageTitle`  | string  | "This image is a picture of .."                | Title of image                                       |
-| `profileMode.buttons`     | -       | -                                              | [Details](#profileModebuttons)                       |
+| `profileMode.buttons`     | -       | -                                              | [Details](#profilemodebuttons)                       |
 
 ##### profileMode.buttons
 
