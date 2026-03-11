@@ -27,15 +27,11 @@ defaults:
   run:
     shell: bash
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   # Build job
   build:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.146.0' }}
@@ -66,6 +62,9 @@ jobs:
           path: ./public
   # Deployment job
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
