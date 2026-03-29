@@ -16,7 +16,11 @@
     </h1>
     {{- if .Description }}
     <div class="post-description">
-      {{ .Description }}
+      {{- if (.Param "markdownifyDescription") }}
+        {{ .Description | markdownify }}
+      {{- else }}
+        {{ .Description }}
+      {{- end }}
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
