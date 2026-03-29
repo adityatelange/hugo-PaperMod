@@ -5,7 +5,11 @@
     <h1>{{ .Title }}</h1>
     {{- if .Description }}
     <div class="post-description">
-        {{ .Description }}
+        {{- if (.Param "markdownifyDescription") }}
+            {{ .Description | markdownify }}
+        {{- else }}
+            {{ .Description }}
+        {{- end }}
     </div>
     {{- end }}
 </header>
