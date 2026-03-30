@@ -64,9 +64,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": {{ .Title | plainify}},
+  "headline": {{ .Title | plainify }},
   "name": "{{ .Title | plainify }}",
-  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end -}},
+  {{- $markdownify := .Param "markdownifyDescription" }}
+  "description": {{ with .Description }}{{ if $markdownify }}{{ . | markdownify | plainify }}{{ else }}{{ . | plainify }}{{ end }}{{ else }}{{ .Summary | plainify }}{{ end -}},
   "keywords": [
     {{- if .Params.keywords }}
     {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
