@@ -35,6 +35,7 @@
 
 .home-info .entry-content {
     -webkit-line-clamp: unset;
+    margin: 0;
 }
 
 .post-entry {
@@ -69,6 +70,11 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+
+.home-info .entry-content p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
 .entry-footer {
