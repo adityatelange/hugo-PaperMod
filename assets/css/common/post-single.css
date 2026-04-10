@@ -415,3 +415,19 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+mark {
+    border-radius: 2px;
+    padding: 0 2px;
+}
+
+audio {
+    width: stretch;
+    max-width: 100%;
+}
+
+video {
+    border: 1px solid var(--code-bg);
+    border-radius: var(--radius);
+    max-width: 100%;
+}
