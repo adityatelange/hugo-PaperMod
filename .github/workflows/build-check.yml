@@ -17,13 +17,20 @@ on:
     branches:
       - master
       - exampleSite
+  workflow_dispatch:
+    # manual run
+    inputs:
+      hugoVersion:
+        description: "Hugo Version"
+        required: false
+        default: "0.146.0"
 
 defaults:
   run:
     shell: bash
 
 jobs:
-  build:
+  build-check:
     runs-on: ubuntu-latest
     env:
       # min_version from theme.toml
