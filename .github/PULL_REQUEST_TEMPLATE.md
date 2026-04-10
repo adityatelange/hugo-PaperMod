@@ -26,7 +26,7 @@ Please do not add 2 unrelated changes in a single PR as it is difficult to track
 **Was the change discussed in an issue or in the Discussions before?**
 
 <!--
-Link issues and relevant Discussions posts here.
+Link issues and relevant Discussions posts here. Please create an issue or start a Discussion before opening a PR if you have not done so already.
 
 If this PR resolves an issue on GitHub, use "Closes #1234" so that the issue
 is closed automatically when this PR is merged.
