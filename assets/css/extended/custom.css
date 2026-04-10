@@ -1,15 +1,7 @@
 /* Custom styles added to demo */
 
-.twitter-tweet {
-    margin: auto;
-}
-
 iframe {
     border-radius: var(--radius) !important;
-}
-
-.home-info ul {
-    padding-inline-start: 20px;
 }
 
 .entry-cover img {
