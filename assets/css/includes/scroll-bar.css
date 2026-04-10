@@ -22,16 +22,16 @@
 }
 
 /* from post-single */
-.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+.md-content .highlighttable td .highlight pre code::-webkit-scrollbar {
     display: none;
 }
 
-.post-content :not(table) ::-webkit-scrollbar-thumb {
+.md-content :not(table) ::-webkit-scrollbar-thumb {
     border: 2px solid var(--code-block-bg);
     background: rgb(113, 113, 117);
 }
 
-.post-content :not(table) ::-webkit-scrollbar-thumb:hover {
+.md-content :not(table) ::-webkit-scrollbar-thumb:hover {
     background: rgb(163, 163, 165);
 }
 
@@ -44,7 +44,7 @@
     background: rgb(112, 112, 112);
 }
 
-.post-content table::-webkit-scrollbar-thumb {
+.md-content table::-webkit-scrollbar-thumb {
     border-width: 2px;
 }
 
