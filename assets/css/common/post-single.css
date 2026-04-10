@@ -86,6 +86,11 @@
     outline: 0;
 }
 
+.post-content {
+    color: var(--content);
+    margin: 30px 0;
+}
+
 .post-footer {
     margin-top: var(--content-gap);
 }
