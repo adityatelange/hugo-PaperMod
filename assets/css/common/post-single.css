@@ -45,10 +45,15 @@
     margin: auto 3px;
 }
 
-.post-meta .i18n_list li a,
+.post-meta a,
 .toc a:hover {
-    text-underline-offset: 0.2rem;
+    text-underline-offset: 0.3rem;
     text-decoration: underline;
+}
+
+.post-meta a {
+    color: var(--secondary);
+    text-decoration-style: dotted;
 }
 
 details.toc {
