@@ -11,6 +11,7 @@ ShowToc: true
 TocOpen: true
 social:
   fediverse_creator: "@adityatelange@mastodon.social"
+weight: 3
 ---
 
 ### Inline Code
