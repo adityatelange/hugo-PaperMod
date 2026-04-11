@@ -143,13 +143,12 @@
     margin-bottom: 0;
 }
 
-.md-content code {
-    margin: auto 4px;
-    padding: 4px 6px;
+.post-content code {
+    padding: 0.2rem 0.3rem;
     font-size: 0.78em;
     line-height: 1.5;
     background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 0.2rem;
 }
 
 .md-content pre code {
