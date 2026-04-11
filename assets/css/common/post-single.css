@@ -82,10 +82,6 @@
     margin-inline-start: var(--gap);
 }
 
-.toc summary:focus {
-    outline: 0;
-}
-
 .post-content {
     color: var(--content);
     margin: 30px 0;

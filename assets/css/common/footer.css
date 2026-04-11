@@ -53,8 +53,3 @@
 .top-link:hover {
     color: var(--primary);
 }
-
-.top-link:focus,
-#theme-toggle:focus {
-    outline: 0;
-}
