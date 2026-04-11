@@ -108,6 +108,10 @@
     font-size: 14px;
     margin-bottom: var(--gap);
     text-align: center;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .entry-cover img {
