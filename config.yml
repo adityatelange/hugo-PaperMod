@@ -20,7 +20,7 @@ minify:
 
 pagination:
   disableAliases: false
-  pagerSize: 5
+  pagerSize: 3
 
 languages:
   en:
