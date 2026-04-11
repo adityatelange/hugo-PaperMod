@@ -23,6 +23,15 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 0.2rem;
+}
+
+.breadcrumbs a {
+    font-size: 16px;
+}
+
+.breadcrumbs svg {
+    height: 1em;
 }
 
 .i18n_list {
@@ -32,10 +41,6 @@
 .post-meta .i18n_list li {
     list-style: none;
     margin: auto 3px;
-}
-
-.breadcrumbs a {
-    font-size: 16px;
 }
 
 .post-meta .i18n_list li a,
