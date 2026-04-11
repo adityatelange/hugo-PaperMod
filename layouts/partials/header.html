@@ -60,9 +60,9 @@
                 
                 {{- if (not site.Params.disableLangToggle) }}
                     {{- $lang := .Lang}}
+                    {{- with site.Home.Translations }}
                     {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
                     {{- if $separator }}<span>|</span>{{ end }}
-                    {{- with site.Home.Translations }}
                     <ul class="lang-menu">
                         {{- range . -}}
                         {{- if ne $lang .Lang }}
