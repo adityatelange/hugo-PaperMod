@@ -171,9 +171,9 @@
 }
 
 .md-content blockquote {
-    margin: 20px 0;
-    padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
+    margin: 1rem 0;
+    padding-inline-start: 1rem;
+    border-inline-start: 0.3rem solid var(--primary);
 }
 
 .md-content hr {
