@@ -4,13 +4,15 @@
 }
 
 .post-title {
-    margin-bottom: 2px;
     font-size: 40px;
 }
 
 .post-description {
     margin-top: 10px;
-    margin-bottom: 5px;
+}
+
+.post-meta {
+    margin-top: 5px;
 }
 
 .post-meta,
