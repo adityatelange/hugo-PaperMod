@@ -31,6 +31,9 @@
                 {{- $label_text -}}
             </a>
             {{- end }}
+
+            {{- $lsenabled := (or (not site.Params.disableThemeToggle) (not site.Params.disableLangToggle))}}
+            {{- if $lsenabled }}
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -79,6 +82,7 @@
                     {{- end }}
                 {{- end }}
             </div>
+            {{- end }}
         </div>
         {{- $currentPage := . }}
         <ul id="menu" class="menu">
