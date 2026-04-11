@@ -115,7 +115,7 @@
 }
 
 .md-content .highlight:not(table) {
-    margin: 10px auto;
+    margin-bottom: var(--content-gap);
     background: var(--code-block-bg) !important;
     border-radius: var(--radius);
     direction: ltr;
@@ -188,7 +188,7 @@
 }
 
 .md-content img {
-    border-radius: 4px;
+    border-radius: var(--radius);
     margin: 1rem 0;
 }
 
@@ -213,12 +213,12 @@
     font-weight: normal;
 }
 
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
+.md-content h1:hover .anchor,
+.md-content h2:hover .anchor,
+.md-content h3:hover .anchor,
+.md-content h4:hover .anchor,
+.md-content h5:hover .anchor,
+.md-content h6:hover .anchor {
     display: inline-flex;
     color: var(--secondary);
     margin-inline-start: 8px;
@@ -227,7 +227,7 @@ h6:hover .anchor {
 }
 
 
-img.in-text {
+.md-content img.in-text {
     display: inline;
     margin: auto;
 }
