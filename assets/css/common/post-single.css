@@ -47,9 +47,8 @@
 
 .post-meta .i18n_list li a,
 .toc a:hover {
-    box-shadow: 0 1px 0;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
+    text-underline-offset: 0.2rem;
+    text-decoration: underline;
 }
 
 details.toc {

@@ -23,11 +23,8 @@
 
 .footer a {
     color: inherit;
-    border-bottom: 1px solid var(--secondary);
-}
-
-.footer a:hover {
-    border-bottom: 1px solid var(--primary);
+    text-underline-offset: 0.2rem;
+    text-decoration: underline;
 }
 
 .top-link {
