@@ -5,18 +5,21 @@ name = "PaperMod"
 license = "MIT"
 licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
 description = "A fast, clean, responsive Hugo theme"
-homepage = "https://adityatelange.github.io/hugo-PaperMod/"
+homepage = "https://github.com/adityatelange/hugo-PaperMod/"
 demosite = "https://adityatelange.github.io/hugo-PaperMod/"
 tags = [
   "responsive",
-  "simple",
+  "blog",
   "clean",
+  "minimal",
   "light",
   "dark",
-  "blog",
-  "minimalist",
-  "highlight.js",
-  "search"
+  "fast",
+  "multilingual",
+  "search",
+  "seo",
+  "chroma",
+  "personal"
 ]
 features = [
   "responsive",
@@ -25,7 +28,7 @@ features = [
   "cover-image",
   "table-of-contents",
   "opengraph",
-  "highlight.js",
+  "twitter-cards",
   "favicon",
   "archive",
   "share-icons",
@@ -36,13 +39,26 @@ features = [
   "theme-toggle",
   "menu-location-indicator",
   "scroll-to-top",
-  "search"
+  "search",
+  "breadcrumbs",
+  "reading-time",
+  "word-count",
+  "code-copy",
+  "comments",
+  "edit-post",
+  "canonical-link",
+  "profile-mode",
+  "home-info-mode",
+  "related-posts",
+  "rss",
+  "multiple-authors",
+  "post-nav-links"
 ]
 min_version = "0.146.0"
 
 [author]
   name = "Aditya Telange"
-  homepage = "https://github.com/adityatelange/"
+  homepage = "https://github.com/adityatelange"
 
 # If porting an existing theme
 [original]
