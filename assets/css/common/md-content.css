@@ -230,8 +230,17 @@ mark {
 }
 
 audio {
-    width: stretch;
-    max-width: 100%;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 2.5rem;
+    margin-bottom: var(--content-gap);
+}
+
+audio::-webkit-media-controls-enclosure {
+    border-radius: 0;
 }
 
 video {
