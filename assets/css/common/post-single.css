@@ -45,40 +45,60 @@
     -webkit-box-decoration-break: clone;
 }
 
-.toc {
+details.toc {
     margin-bottom: var(--content-gap);
-    border: 1px solid var(--border);
     background: var(--code-bg);
     border-radius: var(--radius);
-    padding: 0.4em;
+    border: 1px solid var(--border);
 }
 
-[data-theme="dark"] .toc {
+[data-theme="dark"] details.toc {
     background: var(--entry);
 }
 
-.toc details summary {
-    cursor: zoom-in;
-    margin-inline-start: 10px;
+details.toc summary {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius);
+}
+
+details summary {
+    cursor: pointer;
+    display: list-item;
+    width: 100%;
+    margin-inline-start: 0;
     user-select: none;
 }
 
-.toc details[open] summary {
-    cursor: zoom-out;
-}
-
-.toc .details {
+details .title {
     display: inline;
     font-weight: 500;
+    margin-inline-start: 0.2rem;
 }
 
-.toc .inner {
-    margin: 5px 20px;
-    padding: 0 10px;
-    opacity: 0.9;
+details {
+    interpolate-size: allow-keywords;
 }
 
-.toc li ul {
+details::details-content {
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+    transition: height 150ms ease,
+        opacity 150ms ease,
+        content-visibility 150ms allow-discrete;
+}
+
+details[open]::details-content {
+    height: auto;
+    opacity: 1;
+}
+
+details .inner {
+    margin: 0 2.4rem;
+    padding-bottom: 0.6rem;
+}
+
+details li ul {
     margin-inline-start: var(--gap);
 }
 
