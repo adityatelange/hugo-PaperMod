@@ -173,29 +173,28 @@ details li ul {
 
 .paginav {
     display: flex;
-    line-height: 30px;
-}
-
-.paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
-    border-radius: var(--radius);
+    line-height: 1.2;
 }
 
 .paginav .title {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: small;
+    font-size: 0.8rem;
     color: var(--secondary);
 }
 
-.paginav .prev,
-.paginav .next {
+.paginav a {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border-radius: var(--radius);
 }
 
 .paginav span:hover:not(.title) {
-    box-shadow: 0 1px 0;
+    text-underline-offset: 0.2rem;
+    text-decoration: underline;
 }
 
 .paginav .next {
