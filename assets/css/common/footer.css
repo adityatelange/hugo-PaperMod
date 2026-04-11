@@ -31,17 +31,21 @@
 }
 
 .top-link {
-    visibility: hidden;
     position: fixed;
-    bottom: 60px;
-    right: 30px;
+    bottom: 4rem;
+    right: 2rem;
     z-index: 99;
     background: var(--tertiary);
-    width: 42px;
-    height: 42px;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 10px;
     border-radius: 64px;
     transition: visibility .3s, opacity .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .top-link,
