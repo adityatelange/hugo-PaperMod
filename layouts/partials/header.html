@@ -32,7 +32,7 @@
             </a>
             {{- end }}
 
-            {{- $lsenabled := (or (not site.Params.disableThemeToggle) (not site.Params.disableLangToggle))}}
+            {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
             {{- if $lsenabled }}
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
