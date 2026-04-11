@@ -13,7 +13,7 @@
 }
 
 .logo,
-#menu {
+.menu {
     display: flex;
     margin: auto var(--gap);
 }
@@ -36,35 +36,35 @@
     margin-inline-end: 8px;
 }
 
-button#theme-toggle {
+.theme-toggle {
     font-size: 26px;
     margin: auto 4px;
 }
 
-[data-theme="dark"] #moon {
+[data-theme="dark"] .moon {
     display: none;
 }
 
-[data-theme="light"] #sun {
+[data-theme="light"] .sun {
     display: none;
 }
 
-#menu {
+.menu {
     list-style: none;
     word-break: keep-all;
     overflow-x: auto;
     white-space: nowrap;
 }
 
-#menu li + li {
+.menu li + li {
     margin-inline-start: var(--gap);
 }
 
-#menu a {
+.menu a {
     font-size: 16px;
 }
 
-#menu .active {
+.menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor;
 }

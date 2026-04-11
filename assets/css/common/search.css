@@ -1,4 +1,4 @@
-#searchbox input {
+.searchbox input {
     padding: 4px 10px;
     width: 100%;
     color: var(--primary);
@@ -7,11 +7,11 @@
     border-radius: var(--radius);
 }
 
-#searchbox input:focus {
+.searchbox input:focus {
     border-color: var(--secondary);
 }
 
-#searchResults li {
+.searchResults li {
     list-style: none;
     border-radius: var(--radius);
     padding: 10px;
@@ -20,17 +20,17 @@
     font-weight: 500;
 }
 
-#searchResults {
+.searchResults {
     margin: 10px 0;
     width: 100%;
 }
 
-#searchResults li:active {
+.searchResults li:active {
     transition: transform 0.1s;
     transform: scale(0.98);
 }
 
-#searchResults a {
+.searchResults a {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -38,7 +38,7 @@
     left: 0px;
 }
 
-#searchResults .focus {
+.searchResults .focus {
     transform: scale(0.98);
     border: 2px solid var(--tertiary);
 }
