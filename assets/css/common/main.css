@@ -33,10 +33,6 @@
     padding: 10px;
 }
 
-.social-icons a:first-of-type {
-    padding-inline-start: 0;
-}
-
 .social-icons a svg {
     height: 26px;
     width: 26px;

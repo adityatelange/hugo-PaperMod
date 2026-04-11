@@ -38,6 +38,11 @@
     margin: 0;
 }
 
+.home-info .social-icons a:first-of-type {
+    padding-inline-start: 0;
+}
+
+
 .post-entry {
     position: relative;
     margin-bottom: var(--gap);
