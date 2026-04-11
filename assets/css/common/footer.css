@@ -39,9 +39,9 @@
     background: var(--tertiary);
     width: 42px;
     height: 42px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 64px;
-    transition: visibility 0.5s, opacity 0.8s linear;
+    transition: visibility .3s, opacity .3s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .top-link,
