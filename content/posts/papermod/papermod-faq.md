@@ -77,7 +77,7 @@ Linked Issues:
 
 - For adding custom css to be bundled inside one minimized css
 
-Create folder in yout project directory as
+Create folder in your project directory as
 
 ```
 .(site root)
