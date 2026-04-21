@@ -3,11 +3,12 @@ title: "Variables | Front Matter"
 summary: List of Front Matter variables used by PaperMod
 date: 2021-01-20
 tags: ["PaperMod", "Docs"]
-author: ["Aditya Telange"]
 draft: true
 weight: 5
-social:
-  fediverse_creator: "@adityatelange@mastodon.social"
+params:
+  author: ["Aditya Telange"]
+  social:
+    fediverse_creator: "@adityatelange@mastodon.social"
 ---
 
 **Below are variables used with this theme...**
