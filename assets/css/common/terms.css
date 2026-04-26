@@ -1,7 +1,7 @@
 .terms-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1em;
     margin-top: var(--content-gap);
 }
 
@@ -14,11 +14,6 @@
     display: block;
     padding: 4px 10px;
     background: var(--tertiary);
-    border-radius: 6px;
+    border-radius: var(--radius);
     transition: transform 0.1s;
-}
-
-.terms-tags a:active {
-    background: var(--tertiary);
-    transform: scale(0.96);
 }
