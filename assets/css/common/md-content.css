@@ -31,7 +31,7 @@
     font-size: 12px;
 }
 
-.md-content a {
+.md-content a:not(.anchor) {
     text-underline-offset: 0.3rem;
     text-decoration: underline;
 }
@@ -213,11 +213,14 @@
 .md-content h6:hover .anchor {
     display: inline-flex;
     color: var(--secondary);
-    margin-inline-start: 8px;
+    margin-inline-start: 0.5em;
     font-weight: 500;
     user-select: none;
 }
 
+.anchor:hover {
+    color: var(--content) !important;
+}
 
 .md-content img.in-text {
     display: inline;
