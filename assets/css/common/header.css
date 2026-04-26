@@ -91,5 +91,7 @@
 
 .menu .active {
     font-weight: 500;
-    border-bottom: 2px solid currentColor;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 2px;
 }
