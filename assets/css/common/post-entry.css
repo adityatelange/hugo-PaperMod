@@ -93,6 +93,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    border-radius: var(--radius);
 }
 
 .entry-hint {
@@ -108,7 +109,6 @@
     font-size: 14px;
     margin-bottom: var(--gap);
     text-align: center;
-    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     gap: .5rem;
