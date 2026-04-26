@@ -79,7 +79,7 @@ sInput.onkeyup = function (e) {
     if (fuse) {
         let results;
         if (params.fuseOpts) {
-            results = fuse.search(this.value.trim(), {limit: params.fuseOpts.limit}); // the actual query being run using fuse.js along with options
+            results = fuse.search(this.value.trim(), { limit: params.fuseOpts.limit }); // the actual query being run using fuse.js along with options
         } else {
             results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
         }
@@ -88,8 +88,12 @@ sInput.onkeyup = function (e) {
             let resultSet = ''; // our results bucket
 
             for (let item in results) {
-                resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
-                    `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+                resultSet +=
+                    `<li>` +
+                    `${results[item].item.title}` +
+                    `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>` +
+                    `<a class="entry-link" href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a>` +
+                    `</li>`
             }
 
             resList.innerHTML = resultSet;
