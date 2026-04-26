@@ -40,21 +40,21 @@
     text-decoration: line-through;
 }
 
-.md-content dl,
-.md-content ol,
-.md-content p,
-.md-content figure,
-.md-content ul {
+.md-content dl:not(:last-child),
+.md-content ol:not(:last-child),
+.md-content p:not(:last-child),
+.md-content figure:not(:last-child),
+.md-content ul:not(:last-child) {
     margin-bottom: var(--content-gap);
 }
 
 .md-content ol,
 .md-content ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 1.25rem;
 }
 
 .md-content li {
-    margin-top: 5px;
+    margin-top: 0.3rem;
 }
 
 .md-content li p {
@@ -165,7 +165,7 @@
 .md-content blockquote {
     margin: 1rem 0;
     padding-inline-start: 1rem;
-    border-inline-start: 0.3rem solid var(--primary);
+    border-inline-start: 0.3rem solid var(--content);
 }
 
 .md-content hr {
