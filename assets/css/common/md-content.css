@@ -90,9 +90,9 @@
 .md-content table th,
 .md-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 80px;
-    padding: 8px 5px;
+    padding: 6px 13px;
     line-height: 1.5;
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
 }
 
 .md-content table th {
