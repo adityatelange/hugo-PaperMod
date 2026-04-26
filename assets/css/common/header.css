@@ -3,9 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    margin: auto;
     line-height: var(--header-height);
+    padding: 0 var(--gap);
+    column-gap: var(--gap);
 }
 
 .header-nav a {
@@ -15,7 +16,6 @@
 .logo,
 .menu {
     display: flex;
-    margin: auto var(--gap);
 }
 
 .logo {
@@ -82,10 +82,7 @@
     word-break: keep-all;
     overflow-x: auto;
     white-space: nowrap;
-}
-
-.menu li+li {
-    margin-inline-start: var(--gap);
+    column-gap: var(--gap);
 }
 
 .menu a {
