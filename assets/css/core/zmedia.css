@@ -48,8 +48,8 @@
     .button:active,
     .post-entry:active,
     .top-link,
-    #searchResults .focus,
-    #searchResults li:active {
+    .searchResults .focus,
+    .searchResults li:active {
         transform: none;
     }
 }

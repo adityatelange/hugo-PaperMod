@@ -1,0 +1,56 @@
+name: Build Check
+
+on:
+  push:
+    paths-ignore:
+      - "images/**"
+      - "LICENSE"
+      - "README.md"
+    branches:
+      - master
+      - exampleSite
+  pull_request:
+    paths-ignore:
+      - "images/**"
+      - "LICENSE"
+      - "README.md"
+    branches:
+      - master
+      - exampleSite
+  workflow_dispatch:
+    # manual run
+    inputs:
+      hugoVersion:
+        description: "Hugo Version"
+        required: false
+        default: "0.146.0"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    env:
+      # min_version from theme.toml
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.146.0' }}
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: exampleSite
+
+      - name: Get Theme
+        run: git submodule update --init --recursive
+
+      - name: Update theme to Latest commit
+        run: git submodule update --remote --merge
+
+      - name: Build with Hugo
+        run: hugo --buildDrafts --gc

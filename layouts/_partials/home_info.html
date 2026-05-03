@@ -3,8 +3,9 @@
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
-    <div class="entry-content">
-        {{ .Content | markdownify }}
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
     </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}

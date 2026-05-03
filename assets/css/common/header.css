@@ -1,92 +1,101 @@
-.nav {
+.header-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    margin: auto;
     line-height: var(--header-height);
+    padding: 0 var(--gap);
+    column-gap: var(--gap);
 }
 
-.nav a {
+.header-nav a {
     display: block;
 }
 
 .logo,
-#menu {
+.menu {
     display: flex;
-    margin: auto var(--gap);
 }
 
 .logo {
-    flex-wrap: inherit;
+    align-items: center;
+    column-gap: 0.55rem;
+    flex-wrap: wrap;
 }
 
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    column-gap: 0.55rem;
 }
 
-.logo a img, .logo a svg {
-    display: inline;
-    vertical-align: middle;
+.logo a img,
+.logo a svg {
     pointer-events: none;
-    transform: translate(0, -10%);
     border-radius: 6px;
-    margin-inline-end: 8px;
 }
 
-button#theme-toggle {
-    font-size: 26px;
-    margin: auto 4px;
+.theme-toggle {
+    padding: 0 0.4rem;
 }
 
-[data-theme="dark"] #moon {
+[data-theme="dark"] .moon {
     display: none;
 }
 
-[data-theme="light"] #sun {
+[data-theme="light"] .sun {
     display: none;
 }
 
-#menu {
+.logo-switches {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: inherit;
+    min-height: stretch;
+    flex-wrap: inherit;
+}
+
+.logo-switches>* {
+    min-height: inherit;
+    align-items: center;
+    display: inline-flex;
+}
+
+.nav-sep {
+    color: var(--secondary);
+}
+
+.lang-menu * {
+    display: inherit;
+    min-height: inherit;
+    align-items: inherit;
+}
+
+.lang-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 0.4rem;
+    display: inline-flex
+}
+
+.menu {
     list-style: none;
     word-break: keep-all;
     overflow-x: auto;
     white-space: nowrap;
+    column-gap: var(--gap);
 }
 
-#menu li + li {
-    margin-inline-start: var(--gap);
-}
-
-#menu a {
+.menu a {
     font-size: 16px;
 }
 
-#menu .active {
+.menu .active {
     font-weight: 500;
-    border-bottom: 2px solid currentColor;
-}
-
-.lang-switch li,
-.lang-switch ul,
-.logo-switches {
-    display: inline-flex;
-    margin: auto 4px;
-}
-
-.lang-switch {
-    display: flex;
-    flex-wrap: inherit;
-}
-
-.lang-switch a {
-    margin: auto 3px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.logo-switches {
-    flex-wrap: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 2px;
 }

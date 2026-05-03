@@ -1,5 +1,5 @@
 <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
@@ -31,15 +31,18 @@
                 {{- $label_text -}}
             </a>
             {{- end }}
+
+            {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
+            {{- if $lsenabled }}
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -57,10 +60,10 @@
                 
                 {{- if (not site.Params.disableLangToggle) }}
                     {{- $lang := .Lang}}
-                    {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
                     {{- with site.Home.Translations }}
-                    <ul class="lang-switch">
-                        {{- if $separator }}<li>|</li>{{ end }}
+                    {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
+                    {{- if $separator }}<span class="nav-sep">|</span>{{ end }}
+                    <ul class="lang-menu">
                         {{- range . -}}
                         {{- if ne $lang .Lang }}
                         <li>
@@ -79,9 +82,10 @@
                     {{- end }}
                 {{- end }}
             </div>
+            {{- end }}
         </div>
         {{- $currentPage := . }}
-        <ul id="menu">
+        <ul id="menu" class="menu">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}

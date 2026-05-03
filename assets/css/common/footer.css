@@ -23,25 +23,26 @@
 
 .footer a {
     color: inherit;
-    border-bottom: 1px solid var(--secondary);
-}
-
-.footer a:hover {
-    border-bottom: 1px solid var(--primary);
+    text-underline-offset: 0.25rem;
+    text-decoration: underline;
 }
 
 .top-link {
-    visibility: hidden;
     position: fixed;
-    bottom: 60px;
-    right: 30px;
+    bottom: 4rem;
+    right: 2rem;
     z-index: 99;
     background: var(--tertiary);
-    width: 42px;
-    height: 42px;
-    padding: 12px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 10px;
     border-radius: 64px;
-    transition: visibility 0.5s, opacity 0.8s linear;
+    transition: visibility .3s, opacity .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .top-link,
@@ -52,9 +53,4 @@
 .footer a:hover,
 .top-link:hover {
     color: var(--primary);
-}
-
-.top-link:focus,
-#theme-toggle:focus {
-    outline: 0;
 }
