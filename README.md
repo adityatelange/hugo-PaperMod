@@ -91,9 +91,3 @@ PaperMod consistently scores near-perfect results on [Pagespeed Insights](https:
 - [Feather Icons](https://github.com/feathericons/feather)
 - [Simple Icons](https://github.com/simple-icons/simple-icons)
 - All contributors and supporters
-
----
-
-## Stargazers 📈
-
-[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg?background=%23ffffff00&axis=%23858585&line=%236b63ff)](https://starchart.cc/adityatelange/hugo-PaperMod)
