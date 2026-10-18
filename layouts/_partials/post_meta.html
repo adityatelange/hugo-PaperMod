@@ -1,7 +1,7 @@
 {{- $meta := slice }}
 
 {{- if not .Date.IsZero -}}
-    {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat))) }}
+    {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" (.Date | time.Format "2006-01-02T15:04:05-07:00") (.Date | time.Format (default ":date_long" site.Params.DateFormat))) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
