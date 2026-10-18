@@ -118,10 +118,6 @@
     margin-inline-end: 0;
 }
 
-.md-content ul pre {
-    margin-inline-start: calc(var(--gap) * -2);
-}
-
 .md-content .highlight pre {
     margin: 0;
 }
