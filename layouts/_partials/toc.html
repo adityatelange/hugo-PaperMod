@@ -21,11 +21,11 @@
 
         {{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}}
 
-        {{- $.Scratch.Set "bareul" slice -}}
+        {{- $bareul := slice -}}
         <ul>
             {{- range seq (sub $firstHeaderLevel $largest) -}}
             <ul>
-                {{- $.Scratch.Add "bareul" (sub (add $largest .) 1) -}}
+                {{- $bareul = $bareul | append (sub (add $largest .) 1) -}}
                 {{- end -}}
                 {{- range $i, $header := $headers -}}
                 {{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}
@@ -46,22 +46,17 @@
                 <ul>
                     {{/* the first should not be recorded */}}
                     {{- if ne $prevHeaderLevel . -}}
-                    {{- $.Scratch.Add "bareul" . -}}
+                    {{- $bareul = $bareul | append . -}}
                     {{- end -}}
                     {{- end -}}
                     {{- else -}}
                     </li>
                     {{- if lt $headerLevel $prevHeaderLevel -}}
                     {{- range seq (sub $prevHeaderLevel 1) -1 $headerLevel -}}
-                    {{- if in ($.Scratch.Get "bareul") . -}}
+                    {{- if in $bareul . -}}
                 </ul>
                 {{/* manually do pop item */}}
-                {{- $tmp := $.Scratch.Get "bareul" -}}
-                {{- $.Scratch.Delete "bareul" -}}
-                {{- $.Scratch.Set "bareul" slice}}
-                {{- range seq (sub (len $tmp) 1) -}}
-                {{- $.Scratch.Add "bareul" (index $tmp (sub . 1)) -}}
-                {{- end -}}
+                {{- $bareul = first (sub (len $bareul) 1) $bareul -}}
                 {{- else -}}
             </ul>
             </li>
@@ -81,7 +76,7 @@
                 {{- $lastHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers (sub (len $headers) 1)) 1) 0)) }}
             </li>
             {{- range seq (sub $lastHeaderLevel $firstHeaderLevel) -}}
-            {{- if in ($.Scratch.Get "bareul") (add . $firstHeaderLevel) }}
+            {{- if in $bareul (add . $firstHeaderLevel) }}
         </ul>
         {{- else }}
         </ul>

@@ -26,7 +26,7 @@
 {{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
 
-{{- $scratch := newScratch }}
+{{- $path := "" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,8 +34,8 @@
   "itemListElement": [
   {{- range $index, $element := $bc_list }}
 
-    {{- $scratch.Add "path" (printf "%s/" $element ) | safeJS }}
-    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
+    {{- $path = printf "%s%s/" $path $element }}
+    {{- $bc_pg := site.GetPage $path -}}
 
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
     {{- if (and $index)}}, {{end }}
