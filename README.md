@@ -3,7 +3,7 @@
 **A fast, clean, and responsive theme for [Hugo](https://gohugo.io/).**
 
 [![hugo-papermod](https://img.shields.io/badge/Hugo--Themes-@PaperMod-blue)](https://themes.gohugo.io/themes/hugo-papermod/)
-[![Minimum Hugo Version](https://img.shields.io/static/v1?label=Hugo&message=v0.146.0%2B&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.146.0)
+[![Minimum Hugo Version](https://img.shields.io/static/v1?label=Hugo&message=v0.158.0%2B&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.158.0)
 [![Discord](https://img.shields.io/discord/971046860317921340?label=Discord&logo=discord)](https://discord.gg/ahpmTvhVmp)
 
 > Based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3), with additional features and customization options.

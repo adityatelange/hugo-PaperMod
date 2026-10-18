@@ -9,8 +9,8 @@
         {{- range .Translations }}
         <li>
             <a href="{{ .Permalink }}">
-                {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
-                {{- .Language.LanguageName | emojify -}}
+                {{- if (and site.Params.displayFullLangName (.Language.Label)) }}
+                {{- .Language.Label | emojify -}}
                 {{- else }}
                 {{- .Lang | title -}}
                 {{- end -}}
