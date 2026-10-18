@@ -14,10 +14,7 @@
     {{- /* If we have the image in pageBundle or globalResources we can process the image */}}
 
     {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
-    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-    {{- if hugo.IsExtended -}}
-        {{- $processableFormats = $processableFormats | append "webp" -}}
-    {{- end -}}
+    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif" "webp") -}}
 
     {{- $imgdl := (.Params.cover.image) | absURL }}
     {{- if $cover -}}
