@@ -88,7 +88,7 @@
 }
 
 .md-content table th,
-.md-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+.md-content table:not(.highlight table, .gist .highlight) td {
     min-width: 80px;
     padding: 6px 13px;
     line-height: 1.5;
@@ -99,7 +99,7 @@
     text-align: start;
 }
 
-.md-content table:not(.highlighttable) td code:only-child {
+.md-content table td code:only-child {
     margin: auto 0;
 }
 
@@ -114,29 +114,8 @@
     direction: ltr;
 }
 
-.md-content li>.highlight {
-    margin-inline-end: 0;
-}
-
 .md-content .highlight pre {
     margin: 0;
-}
-
-.md-content .highlighttable {
-    table-layout: fixed;
-}
-
-.md-content .highlighttable td:first-child {
-    width: 40px;
-}
-
-.md-content .highlighttable td .linenodiv {
-    padding-inline-end: 0 !important;
-}
-
-.md-content .highlighttable td .highlight,
-.md-content .highlighttable td .linenodiv pre {
-    margin-bottom: 0;
 }
 
 .post-content code {
